@@ -1,0 +1,10 @@
+client_annonces_index:
+    path:     /
+    defaults: { _controller: "FrontBundle:Annonces:index" }
+    methods:  GET
+
+client_annonces_show:
+    path:     /{id}/show
+    defaults: { _controller: "FrontBundle:Annonces:show" }
+    methods:  GET
+

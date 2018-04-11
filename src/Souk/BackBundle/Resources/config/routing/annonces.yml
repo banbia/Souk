@@ -1,0 +1,24 @@
+annonces_index:
+    path:     /
+    defaults: { _controller: "BackBundle:Annonces:index" }
+    methods:  GET
+
+annonces_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackBundle:Annonces:show" }
+    methods:  GET
+
+annonces_new:
+    path:     /new
+    defaults: { _controller: "BackBundle:Annonces:new" }
+    methods:  [GET, POST]
+
+annonces_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackBundle:Annonces:edit" }
+    methods:  [GET, POST]
+
+annonces_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackBundle:Annonces:delete" }
+    methods:  DELETE

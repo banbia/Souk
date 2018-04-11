@@ -88,6 +88,15 @@ class Annonces
      * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\SignalsAnc", mappedBy="annonce")
      */
     private $signals;
+
+    public function __construct()
+    {
+        $this->signals = new ArrayCollection();
+        $this->commentaires = new ArrayCollection();
+        $this->commandes = new ArrayCollection();
+        $this->images = new ArrayCollection();
+    }
+
     /**
      * @return Collection|SignalsAnc[]
      */
