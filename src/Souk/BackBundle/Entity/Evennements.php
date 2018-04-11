@@ -113,7 +113,12 @@ class Evennements
      * @ORM\Column(name="etat", type="integer")
      */
     private $etat;
-
+    public function __construct()
+    {
+        $this->signals = new ArrayCollection();
+        $this->reservations = new ArrayCollection();
+        $this->commentaires = new ArrayCollection();
+    }
     /**
      * @return Collection|SignalsEvs[]
      */

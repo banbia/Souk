@@ -34,7 +34,10 @@ class Categories
      * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\Annonces", mappedBy="categorie")
      */
     private $annonces;
-
+    public function __construct()
+    {
+        $this->annonces = new ArrayCollection();
+    }
     /**
      * @return Collection|Annonces[]
      */
