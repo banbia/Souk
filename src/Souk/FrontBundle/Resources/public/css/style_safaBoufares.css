@@ -1,0 +1,31 @@
+.thumbnail {
+  padding:0px;
+}
+.panel {
+  position:relative;
+}
+.panel>.panel-heading:after,.panel>.panel-heading:before{
+  position:absolute;
+  top:11px;left:-16px;
+  right:100%;
+  width:0;
+  height:0;
+  display:block;
+  content:" ";
+  pointer-events:none;
+}
+.panel>.panel-heading:after{
+  border-width:7px;
+  margin-top:1px;
+  margin-left:2px;
+}
+.panel>.panel-heading:before{
+  border-width:8px;
+}
+.fa-trash-o:before {
+  content: "\f014";
+  padding-left: 100px;
+  padding-right: 10px;
+}
+.comment{width:100%;margin-bottom:5px;}
+.sign{margin-bottom:15px;}

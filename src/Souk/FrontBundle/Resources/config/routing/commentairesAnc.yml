@@ -1,0 +1,10 @@
+commentairesAnc_new:
+    path:     /annonce/{annonce}
+    defaults: { _controller: FrontBundle:CommentairesAnc:new}
+
+commentairesAnc_delete:
+    path:     /delete_com
+    defaults: { _controller: FrontBundle:CommentairesAnc:delete}
+commentairesAnc_liste:
+    path:     /all_com
+    defaults: { _controller: FrontBundle:CommentairesAnc:all}

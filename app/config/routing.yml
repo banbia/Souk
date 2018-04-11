@@ -32,7 +32,9 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
-
+client_commentairesAnc:
+    resource: "@FrontBundle/Resources/config/routing/commentairesAnc.yml"
+    prefix:   /client/commentairesAnc
 
 fos_message:
     resource: "@FOSMessageBundle/Resources/config/routing.xml"

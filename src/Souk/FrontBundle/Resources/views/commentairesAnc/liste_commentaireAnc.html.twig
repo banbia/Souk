@@ -1,0 +1,52 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        <!-- /row -->
+        <div class="col-md-12">
+            <input type="text" id="lname" name="lname" >
+            <button type="submit" class="btn btn-success"><i class="fa fa-commenting-o
+                "></i> Send </button>
+            <br>
+            <br>
+        </div>
+        <div class="row">
+    {% for CommentairesAnc in CommentairesAnc %}
+            <div class="col-md-12">
+
+                <div class="one-comment">
+                    <div class="col-sm-1">
+                        <div class="thumbnail">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                        </div>
+                        <!-- /thumbnail -->
+                    </div>
+                    <!-- /col-sm-1 -->
+
+                    <div class="col-sm-5">
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">
+                                <strong>{{ CommentairesAnc.nom }}</strong> <span class="text-muted"> commented {{ CommentairesAnc.dateCmt }} </span>
+                                <a href="{{ path('commentairesAnc_delete') }}"><i class="fa fa-trash-o"></i></a>
+                                <a href=""><i class="fa fa-edit"></i></a>
+                            </div>
+                            <div class="panel-body">
+                                {{ CommentairesAnc.contenu }}
+                            </div>
+                            <!-- /panel-body -->
+                        </div>
+                        <!-- /panel panel-default -->
+                    </div>
+                    <!-- /col-sm-5 -->
+                </div>
+            </div>
+    {% endfor %}
+
+        </div>
+        <!-- /row -->
+
+    </div>
+    <!-- /container -->
+{% endblock %}

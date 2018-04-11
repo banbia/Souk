@@ -307,6 +307,24 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        elseif (0 === strpos($pathinfo, '/client/commentairesAnc')) {
+            // commentairesAnc_new
+            if (0 === strpos($pathinfo, '/client/commentairesAnc/annonce') && preg_match('#^/client/commentairesAnc/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::newAction',));
+            }
+
+            // commentairesAnc_liste
+            if ('/client/commentairesAnc/all_com' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::allAction',  '_route' => 'commentairesAnc_liste',);
+            }
+
+            // commentairesAnc_delete
+            if ('/client/commentairesAnc/delete_com' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::deleteAction',  '_route' => 'commentairesAnc_delete',);
+            }
+
+        }
+
         elseif (0 === strpos($pathinfo, '/messages')) {
             // fos_message_inbox
             if ('/messages' === $trimmedPathinfo) {

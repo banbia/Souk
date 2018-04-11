@@ -73,9 +73,9 @@ class Annonces
     /**
      *
      * @ORM\ManyToOne(targetEntity="Souk\UserBundle\Entity\User",inversedBy="id")
-     * @ORM\JoinColumn(name="client",referencedColumnName="id",onDelete="CASCADE")
+     * @ORM\JoinColumn(name="commercial",referencedColumnName="id",onDelete="CASCADE")
      */
-    private $client;
+    private $commercial;
     /**
      * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\Commandes", mappedBy="annonce")
      */
@@ -120,17 +120,17 @@ class Annonces
     /**
      * @return mixed
      */
-    public function getClient()
+    public function getCommercial()
     {
-        return $this->client;
+        return $this->commercial;
     }
 
     /**
-     * @param mixed $client
+     * @param mixed $commercial
      */
-    public function setClient($client)
+    public function setCommercial($commercial)
     {
-        $this->client = $client;
+        $this->client = $commercial;
     }
 
     /**

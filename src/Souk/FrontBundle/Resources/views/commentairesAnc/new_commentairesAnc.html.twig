@@ -1,0 +1,56 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+
+{% block body %}
+<div class="">
+
+	<!-- /row -->
+	<div class="row">
+		<div class="col-md-6">
+			<textarea class="comment form-control" name="lname" ></textarea>
+			<button type="submit" class="btn sign pull-right"><i class="fa fa-commenting-o
+	"></i> Send </button>
+			<br>
+			<br>
+		</div>
+	</div>
+	<div class="row">
+
+        {% for com in coms %}
+			<div class="col-md-12">
+
+				<div class="one-comment">
+					<div class="col-sm-1">
+						<div class="thumbnail">
+							<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+						</div>
+						<!-- /thumbnail -->
+					</div>
+					<!-- /col-sm-1 -->
+
+					<div class="col-sm-5">
+						<div class="panel panel-default">
+
+							<div class="panel-heading">
+								<strong>{{ com.client.username }}</strong> <label class="text-muted text-right"> commenté le {{ com.dateCmt|date('D-M-Y') }} </label>
+								{% if app.user.id  == com.client.id %}
+									<a href="{{ path('commentairesAnc_delete') }}"><i class="fa fa-trash-o"></i></a>
+									<a href=""><i class="fa fa-edit"></i></a>
+								{% endif %}
+							</div>
+							<div class="panel-body">
+                                {{ com.contenu }}
+							</div>
+							<!-- /panel-body -->
+						</div>
+						<!-- /panel panel-default -->
+					</div>
+					<!-- /col-sm-5 -->
+				</div>
+			</div>
+        {% endfor %}
+	</div>
+
+
+</div>
+<!-- /row -->
+{% endblock %}
