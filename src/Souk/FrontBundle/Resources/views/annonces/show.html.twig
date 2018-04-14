@@ -1,7 +1,7 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
 {% block body %}
-    <h1>Annonce</h1>
+   {# <h1>Annonce</h1>
 
     <table>
         <tbody>
@@ -32,5 +32,48 @@
         </tbody>
     </table>
 
+#}
+    <div class="row">
+        <div class="col-xs-12 col-sm-7">
+            <div class="panel panel-body">
+                <div class="profile-about">
+                    <div class="profile-photo">
+                        <a href="{{ asset('bundles/front/images/pic1.jpg') }}"  data-fancybox data-caption="image">
+                            <img  src="{{ asset('bundles/front/images/pic1.jpg') }}" alt="image"/>
+                        </a>
+                    </div>
+                    <div class="profile-description">
+                        <p>
+                            {{ annonce.description|raw }}
+                        </p>
+                    </div>
+                    <hr>
+                </div>
 
+                <div class="profile-address">
+                    <h3>Adresse</h3>
+                    {{ profile.address ? profile.address ~ ',' : '' }} {{ profile.district }}, {{ profile.province }}
+                </div>
+                {% if profile.tags|length > 0 %}
+                    <div class="profile-tags">
+                        <h3>Expertises</h3>
+                        {% for tag in profile.tags %}
+                            <a class="btn btn-default" href="{{ path('profiles_by_district_tag', {
+                                'province_slug': profile.province.slug,
+                                'district_slug': profile.district.slug,
+                                'tag_slug': tag.slug
+                            }) }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <hr>
+                {% if profile.phone %}<span class="phone"><i class="glyphicon glyphicon-phone-alt"></i> {{ profile.phone }}</span>{% endif %}
+                {% if profile.mobile %}<span class="phone"><i class="glyphicon glyphicon-earphone"></i> {{ profile.mobile }}</span>{% endif %}
+                {% if profile.email %}<span class="phone"><i class="glyphicon glyphicon-envelope"></i> {{ profile.email }}</span>{% endif %}
+            </div>
+        </div>
+        <div id="sidebar" class="col-xs-12 col-sm-5">
+            <div id="map"><i class="glyphicon glyphicon-info-sign"></i> Carte non disponible</div>
+        </div>
+    </div>
 {% endblock %}

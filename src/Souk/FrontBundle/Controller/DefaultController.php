@@ -13,8 +13,10 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        // replace this example code with whatever you need
-        return $this->render('FrontBundle:default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $annonces = $em->getRepository('BackBundle:Annonces')->findAll();
+        return $this->render('FrontBundle:default:index.html.twig',array(
+            'annonces' => $annonces,));
     }
 
 }

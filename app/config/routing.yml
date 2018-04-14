@@ -36,13 +36,9 @@ client_commentairesAnc:
     resource: "@FrontBundle/Resources/config/routing/commentairesAnc.yml"
     prefix:   /client/commentairesAnc
 
-commercial_annonces:
-    resource: "@BackBundle/Resources/config/routing/annonces.yml"
-    prefix:   /commercial/annonces
-
-client_annonces:
+annonces:
     resource: "@FrontBundle/Resources/config/routing/annonces.yml"
-    prefix:   /client/annonces
+    prefix:  /annonces
 
 fos_message:
     resource: "@FOSMessageBundle/Resources/config/routing.xml"
