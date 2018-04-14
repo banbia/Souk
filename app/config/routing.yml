@@ -35,7 +35,9 @@ fos_user_change_password:
 client_commentairesAnc:
     resource: "@FrontBundle/Resources/config/routing/commentairesAnc.yml"
     prefix:   /client/commentairesAnc
-
+client_commentairesEvs:
+    resource: "@FrontBundle/Resources/config/routing/commentairesEvs.yml"
+    prefix:   /client/commentairesEvs
 commercial_annonces:
     resource: "@BackBundle/Resources/config/routing/annonces.yml"
     prefix:   /commercial/annonces

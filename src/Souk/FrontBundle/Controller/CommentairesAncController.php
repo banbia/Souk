@@ -40,6 +40,7 @@ class CommentairesAncController extends Controller
             $com_Anc->setAnnonce($anonnces);
             $cm->persist($com_Anc);
             $cm->flush();
+            return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
         }
 
 
@@ -47,16 +48,16 @@ class CommentairesAncController extends Controller
     }
 
     /**
-     * @Route("/delete_com/{id_Anc}", name="commentairesAnc_delete")
+     * @Route("/delete_com/{id_Anc}/{$annonce}", name="commentairesAnc_delete")
      */
-    public function deleteAction($id_Anc)
+    public function deleteAction($id_Anc,$annonce)
     {
         $em = $this->getDoctrine()->getManager();
         $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($id_Anc);
         $em->remove($comm);
         $em->flush();
 
-        return $this->redirectToRoute('commentairesAnc_new');
+        return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
 
     }
 
