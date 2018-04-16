@@ -16,13 +16,48 @@ class CommandesController extends Controller
      * Lists all commande entities.
      *
      */
-    public function indexAction()
+    public function indexAction( )
     {
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
-        $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>1));
-        $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>0));
-        $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
+
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_CLIENT')) {
+
+            $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>1));
+            $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>0));
+            $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
+
+        }else if ($this->get('security.authorization_checker')->isGranted('ROLE_COM')) {
+            $commandes_attente = $em
+                ->createQueryBuilder('c')
+                ->from('AppBundle:Commandes','c')
+                ->join('AppBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 0')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+            $commandes_confirme = $em
+                ->createQueryBuilder('c')
+                ->from('AppBundle:Commandes','c')
+                ->join('AppBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 1')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+            $commandes=$em
+                ->createQueryBuilder('c')
+                ->from('AppBundle:Commandes','c')
+                ->join('AppBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 1')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+
+        }
+
         $em->flush();
         return $this->render('FrontBundle:commandes:index.html.twig', array(
             'commandes' => $commandes,
@@ -96,7 +131,19 @@ class CommandesController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
+    /**
+     * valid a command
+     *
+     */
+    public function validAction(Request $request, Commandes $commande)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commande = $em->getRepository('BackBundle:Commandes')->find($commande);
+        $commande->setEtat(1);
+        $em->persist($commande);
+        return $this->redirectToRoute('commandes_index');
 
+    }
     /**
      * Deletes a commande entity.
      *
