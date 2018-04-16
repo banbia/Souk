@@ -23,306 +23,345 @@ class __TwigTemplate_ec51157190c0e767df5ef9aa101520c868e1edb69a21a8fda137d516c40
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_107b2eadabeaa3503757c2fa5064f8165e98070225f85c438ecf8c1c6ecb9a87 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_107b2eadabeaa3503757c2fa5064f8165e98070225f85c438ecf8c1c6ecb9a87->enter($__internal_107b2eadabeaa3503757c2fa5064f8165e98070225f85c438ecf8c1c6ecb9a87_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:commandes:index.html.twig"));
+        $__internal_cccee8d540c93d5d9901e152a6e5121caa5f680c78a02a9d4b57d51390533dfb = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_cccee8d540c93d5d9901e152a6e5121caa5f680c78a02a9d4b57d51390533dfb->enter($__internal_cccee8d540c93d5d9901e152a6e5121caa5f680c78a02a9d4b57d51390533dfb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:commandes:index.html.twig"));
 
-        $__internal_31fff5bbe32918c9f4a38f86070a88cf64abb3324aa97e8bb3bd835e0ea8c0a4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_31fff5bbe32918c9f4a38f86070a88cf64abb3324aa97e8bb3bd835e0ea8c0a4->enter($__internal_31fff5bbe32918c9f4a38f86070a88cf64abb3324aa97e8bb3bd835e0ea8c0a4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:commandes:index.html.twig"));
+        $__internal_bbecedc2c554d0a5f2bfad10bd71a75b303fcb9f6ea3329b8445f5c082f2602a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_bbecedc2c554d0a5f2bfad10bd71a75b303fcb9f6ea3329b8445f5c082f2602a->enter($__internal_bbecedc2c554d0a5f2bfad10bd71a75b303fcb9f6ea3329b8445f5c082f2602a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:commandes:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_107b2eadabeaa3503757c2fa5064f8165e98070225f85c438ecf8c1c6ecb9a87->leave($__internal_107b2eadabeaa3503757c2fa5064f8165e98070225f85c438ecf8c1c6ecb9a87_prof);
+        $__internal_cccee8d540c93d5d9901e152a6e5121caa5f680c78a02a9d4b57d51390533dfb->leave($__internal_cccee8d540c93d5d9901e152a6e5121caa5f680c78a02a9d4b57d51390533dfb_prof);
 
         
-        $__internal_31fff5bbe32918c9f4a38f86070a88cf64abb3324aa97e8bb3bd835e0ea8c0a4->leave($__internal_31fff5bbe32918c9f4a38f86070a88cf64abb3324aa97e8bb3bd835e0ea8c0a4_prof);
+        $__internal_bbecedc2c554d0a5f2bfad10bd71a75b303fcb9f6ea3329b8445f5c082f2602a->leave($__internal_bbecedc2c554d0a5f2bfad10bd71a75b303fcb9f6ea3329b8445f5c082f2602a_prof);
 
     }
 
     // line 2
     public function block_style($context, array $blocks = array())
     {
-        $__internal_f9f02914448d67fe2b24b591d52db1faff11507574a148ef85cd47c65dd356fe = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f9f02914448d67fe2b24b591d52db1faff11507574a148ef85cd47c65dd356fe->enter($__internal_f9f02914448d67fe2b24b591d52db1faff11507574a148ef85cd47c65dd356fe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
+        $__internal_cc585b998130706e8a9f98812d2d89b3b99add3b768d9c16712060cbb5be07a3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_cc585b998130706e8a9f98812d2d89b3b99add3b768d9c16712060cbb5be07a3->enter($__internal_cc585b998130706e8a9f98812d2d89b3b99add3b768d9c16712060cbb5be07a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
 
-        $__internal_60c765bf4b51d0e1d49978ac83c6b88f7a415ed8883014b8957fde8304c88e83 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_60c765bf4b51d0e1d49978ac83c6b88f7a415ed8883014b8957fde8304c88e83->enter($__internal_60c765bf4b51d0e1d49978ac83c6b88f7a415ed8883014b8957fde8304c88e83_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
+        $__internal_b37f216046d8204102fe4ed5aeb1d68dbf8ad8eb695abb1703023a2002dce6c8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b37f216046d8204102fe4ed5aeb1d68dbf8ad8eb695abb1703023a2002dce6c8->enter($__internal_b37f216046d8204102fe4ed5aeb1d68dbf8ad8eb695abb1703023a2002dce6c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
 
         // line 3
-        echo "    <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
-    <link rel=\"stylesheet\" href=\"/resources/demos/style.css\">
-    <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>
-    <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>
-    <link href=\"";
-        // line 7
+        echo "    <link href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/css/style_Nour.css"), "html", null, true);
         echo "\" rel=\"stylesheet\"/>
 ";
         
-        $__internal_60c765bf4b51d0e1d49978ac83c6b88f7a415ed8883014b8957fde8304c88e83->leave($__internal_60c765bf4b51d0e1d49978ac83c6b88f7a415ed8883014b8957fde8304c88e83_prof);
+        $__internal_b37f216046d8204102fe4ed5aeb1d68dbf8ad8eb695abb1703023a2002dce6c8->leave($__internal_b37f216046d8204102fe4ed5aeb1d68dbf8ad8eb695abb1703023a2002dce6c8_prof);
 
         
-        $__internal_f9f02914448d67fe2b24b591d52db1faff11507574a148ef85cd47c65dd356fe->leave($__internal_f9f02914448d67fe2b24b591d52db1faff11507574a148ef85cd47c65dd356fe_prof);
+        $__internal_cc585b998130706e8a9f98812d2d89b3b99add3b768d9c16712060cbb5be07a3->leave($__internal_cc585b998130706e8a9f98812d2d89b3b99add3b768d9c16712060cbb5be07a3_prof);
 
     }
 
-    // line 9
+    // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fcae653d241a76b9a6c5bfbcbdca0ed8895768f51bb42d70da721c305c0fa198 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_fcae653d241a76b9a6c5bfbcbdca0ed8895768f51bb42d70da721c305c0fa198->enter($__internal_fcae653d241a76b9a6c5bfbcbdca0ed8895768f51bb42d70da721c305c0fa198_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0452196663e1d86b584b2346d1e37ce87b9864b52b4c1f104e1da35a234e6f06 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_0452196663e1d86b584b2346d1e37ce87b9864b52b4c1f104e1da35a234e6f06->enter($__internal_0452196663e1d86b584b2346d1e37ce87b9864b52b4c1f104e1da35a234e6f06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_055d4f118f5a952149d4dfd1ebc7460e82e2a36097ddea5797ee49a1ff8187f0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_055d4f118f5a952149d4dfd1ebc7460e82e2a36097ddea5797ee49a1ff8187f0->enter($__internal_055d4f118f5a952149d4dfd1ebc7460e82e2a36097ddea5797ee49a1ff8187f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1c786b013f2f4bb4e8da31b612bda54325eecfa8991f499e677d3b856a87dbce = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1c786b013f2f4bb4e8da31b612bda54325eecfa8991f499e677d3b856a87dbce->enter($__internal_1c786b013f2f4bb4e8da31b612bda54325eecfa8991f499e677d3b856a87dbce_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 10
+        // line 6
         echo "    <div class=\"wrap\">
         <h1 align=\"center\">Mes demandes</h1>
-        <ul class=\"tabs group\">
-            <li><a class=\"active\" href=\"#one\">Tous</a></li>
-            <li><a href=\"#two\">En attente</a></li>
-            <li><a href=\"#three\">Confirmés</a></li>
-        </ul>
+        <div class=\"tab\">
+            <button class=\"tablinks active\" onclick=\"openCity(event, 'Tous')\">Tous</button>
+            <button class=\"tablinks\" onclick=\"openCity(event, 'Attente')\">En attente</button>
+            <button class=\"tablinks\" onclick=\"openCity(event, 'Confirme')\">Confirmés</button>
+        </div>
+
         <div id=\"panels\">
-            <p id=\"one\">
-            <table>
-                <thead>
-                <tr>
-                    <th>Date commande</th>
-                    <th>Titre Annonce</th>
-                    <th>Catégorie Annonce</th>
-                    <th>Quantite</th>
-                    <th>Etat</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                ";
-        // line 31
+            <div id=\"Tous\" class=\"tabcontent\">
+                <h3 align=\"center\">Tous les commandes</h3>
+                <table class=\"table table-striped\">
+                    <thead>
+                    <tr class=\"table-light\">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
+                        <th>Etat</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    ";
+        // line 29
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["commandes"] ?? $this->getContext($context, "commandes")));
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-            // line 32
-            echo "                    <tr>
-                        <td>";
-            // line 33
+            // line 30
+            echo "                        <tr>
+                            <td>";
+            // line 31
             if ($this->getAttribute($context["commande"], "dateCom", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["commande"], "dateCom", array()), "d-m-Y"), "html", null, true);
             }
             echo "</td>
-                        <td>";
-            // line 34
+                            <td>";
+            // line 32
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["commande"], "annonce", array()), "titre", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 35
+                            <td>";
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["commande"], "annonce", array()), "categorie", array()), "designation", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 36
+                            <td>";
+            // line 34
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "quantite", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 37
-            echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "etat", array()), "html", null, true);
-            echo "</td>
-                        <td>
-                            ";
-            // line 39
-            if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
-                // line 40
-                echo "                                <ul>
-                                    <li>
-                                        <a href=\"";
-                // line 42
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_show", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
-                echo "\">show</a>
-                                    </li>
-                                    <li>
-                                        <a href=\"";
-                // line 45
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_edit", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
-                echo "\">edit</a>
-                                    </li>
-                                </ul>
-
-                            ";
-            } elseif ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
-                // line 50
-                echo "
-                            ";
+                            <td>";
+            // line 35
+            if (($this->getAttribute($context["commande"], "etat", array()) == 0)) {
+                echo " En attente ";
+            } else {
+                echo " Confirmée";
             }
-            // line 52
-            echo "                        </td>
-                    </tr>
-                ";
+            echo "</td>
+                            <td>
+
+                                ";
+            // line 38
+            if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
+                // line 39
+                echo "                                    ";
+                if (($this->getAttribute($context["commande"], "etat", array()) == 0)) {
+                    // line 40
+                    echo "                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"";
+                    // line 42
+                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_edit", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
+                    echo "\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                    ";
+                } else {
+                    // line 48
+                    echo "                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noEdit\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                    ";
+                }
+                // line 56
+                echo "
+
+                                ";
+            } elseif ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
+                // line 59
+                echo "                                    ";
+                if (($this->getAttribute($context["commande"], "etat", array()) == 0)) {
+                    // line 60
+                    echo "                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"";
+                    // line 62
+                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_edit", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
+                    echo "\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    ";
+                } else {
+                    // line 68
+                    echo "                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noValid\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    ";
+                }
+                // line 76
+                echo "                                ";
+            }
+            // line 77
+            echo "                            </td>
+                        </tr>
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
-        echo "                </tbody>
-            </table>
-            </p>
-            <p id=\"two\">
-            <table>
-                <thead>
-                <tr>
-                    <th>Date commande</th>
-                    <th>Titre Annonce</th>
-                    <th>Catégorie Annonce</th>
-                    <th>Quantite</th>
-                    <th>Etat</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                ";
-        // line 71
+        // line 80
+        echo "                    </tbody>
+                </table>
+            </div>
+            <div id=\"Attente\" class=\"tabcontent\">
+                <h3 align=\"center\">Les commandes en attente</h3>
+                <table class=\"table table-striped\">
+                    <thead>
+                    <tr class=\"table-light\">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    ";
+        // line 96
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["commandes_attente"] ?? $this->getContext($context, "commandes_attente")));
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-            // line 72
-            echo "                    <tr>
-                        <td>";
-            // line 73
+            // line 97
+            echo "                        <tr>
+                            <td>";
+            // line 98
             if ($this->getAttribute($context["commande"], "dateCom", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["commande"], "dateCom", array()), "d-m-Y"), "html", null, true);
             }
             echo "</td>
-                        <td>";
-            // line 74
+                            <td>";
+            // line 99
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["commande"], "annonce", array()), "titre", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 75
+                            <td>";
+            // line 100
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["commande"], "annonce", array()), "categorie", array()), "designation", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 76
+                            <td>";
+            // line 101
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "quantite", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 77
-            echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "etat", array()), "html", null, true);
-            echo "</td>
-                        <td>
-                            ";
-            // line 79
-            if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
-                // line 80
-                echo "                                <ul>
-                                    <li>
-                                        <a href=\"";
-                // line 82
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_show", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
-                echo "\">show</a>
-                                    </li>
-                                    <li>
-                                        <a href=\"";
-                // line 85
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_edit", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
-                echo "\">edit</a>
-                                    </li>
-                                </ul>
+                            <td>
 
-                            ";
-            } elseif ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
-                // line 90
+                                ";
+            // line 104
+            if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
+                // line 105
                 echo "
-                            ";
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"";
+                // line 108
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_edit", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
+                echo "\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"";
+                // line 115
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_delete", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
+                echo "\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Annuler</span>
+                                            </a>
+                                        </div>
+
+
+
+                                ";
+            } elseif ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
+                // line 124
+                echo "                                    ";
+                if (($this->getAttribute($context["commande"], "etat", array()) == 0)) {
+                    // line 125
+                    echo "                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"";
+                    // line 127
+                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_valid", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
+                    echo "\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    ";
+                } else {
+                    // line 133
+                    echo "                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noValid\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    ";
+                }
+                // line 141
+                echo "                                ";
             }
-            // line 92
-            echo "                        </td>
-                    </tr>
-                ";
+            // line 142
+            echo "                            </td>
+                        </tr>
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 95
-        echo "                </tbody>
-            </table>
-            </p>
-            <p id=\"three\">
-            <table>
-                <thead>
-                <tr>
-                    <th>Date commande</th>
-                    <th>Titre Annonce</th>
-                    <th>Catégorie Annonce</th>
-                    <th>Quantite</th>
-                    <th>Etat</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                ";
-        // line 111
+        // line 145
+        echo "                    </tbody>
+                </table>
+            </div>
+            <div id=\"Confirme\" class=\"tabcontent\">
+                <h3 align=\"center\">Les commandes confirmées</h3>
+                <table class=\"table table-striped\">
+                    <thead>
+                    <tr class=\"table-light\">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    ";
+        // line 160
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["commandes_confirme"] ?? $this->getContext($context, "commandes_confirme")));
         foreach ($context['_seq'] as $context["_key"] => $context["commande"]) {
-            // line 112
-            echo "                    <tr>
-                        <td>";
-            // line 113
+            // line 161
+            echo "                        <tr>
+                            <td>";
+            // line 162
             if ($this->getAttribute($context["commande"], "dateCom", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["commande"], "dateCom", array()), "d-m-Y"), "html", null, true);
             }
             echo "</td>
-                        <td>";
-            // line 114
+                            <td>";
+            // line 163
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["commande"], "annonce", array()), "titre", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 115
+                            <td>";
+            // line 164
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["commande"], "annonce", array()), "categorie", array()), "designation", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 116
+                            <td>";
+            // line 165
             echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "quantite", array()), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 117
-            echo twig_escape_filter($this->env, $this->getAttribute($context["commande"], "etat", array()), "html", null, true);
-            echo "</td>
-                        <td>
-                            ";
-            // line 119
-            if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
-                // line 120
-                echo "                                <ul>
-                                    <li>
-                                        <a href=\"";
-                // line 122
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_show", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
-                echo "\">show</a>
-                                    </li>
-                                    <li>
-                                        <a href=\"";
-                // line 125
-                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_edit", array("id" => $this->getAttribute($context["commande"], "id", array()))), "html", null, true);
-                echo "\">edit</a>
-                                    </li>
-                                </ul>
 
-                            ";
-            } elseif ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
-                // line 130
-                echo "
-                            ";
-            }
-            // line 132
-            echo "                        </td>
-                    </tr>
-                ";
+                        </tr>
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 135
-        echo "                </tbody>
-            </table>
-            </p>
+        // line 169
+        echo "                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -332,49 +371,107 @@ class __TwigTemplate_ec51157190c0e767df5ef9aa101520c868e1edb69a21a8fda137d516c40
 
 
 
+    <!-- Modal no edit -->
+    <div id=\"noEdit\" class=\"modal fade\" role=\"dialog\">
+        <div class=\"modal-dialog\">
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                    <h4 class=\"modal-title\">Edition Commande </h4>
+                </div>
 
+                <div class=\"modal-body\">
+
+                    <div class=\"col-md-12\">
+                        <p>Vous ne pouvez pas modifier une commande <b>confirmée</b>.</p>
+                    </div>
+
+                </div>
+                <div class=\"modal-footer\">
+
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal no valide -->
+    <div id=\"noVAlid\" class=\"modal fade\" role=\"dialog\">
+        <div class=\"modal-dialog\">
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                    <h4 class=\"modal-title\">Validation Commande </h4>
+                </div>
+
+                <div class=\"modal-body\">
+
+                    <div class=\"col-md-12\">
+                        <p>Vous avez déjà validé cette commande.</p>
+                    </div>
+
+                </div>
+                <div class=\"modal-footer\">
+
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 ";
         
-        $__internal_055d4f118f5a952149d4dfd1ebc7460e82e2a36097ddea5797ee49a1ff8187f0->leave($__internal_055d4f118f5a952149d4dfd1ebc7460e82e2a36097ddea5797ee49a1ff8187f0_prof);
+        $__internal_1c786b013f2f4bb4e8da31b612bda54325eecfa8991f499e677d3b856a87dbce->leave($__internal_1c786b013f2f4bb4e8da31b612bda54325eecfa8991f499e677d3b856a87dbce_prof);
 
         
-        $__internal_fcae653d241a76b9a6c5bfbcbdca0ed8895768f51bb42d70da721c305c0fa198->leave($__internal_fcae653d241a76b9a6c5bfbcbdca0ed8895768f51bb42d70da721c305c0fa198_prof);
+        $__internal_0452196663e1d86b584b2346d1e37ce87b9864b52b4c1f104e1da35a234e6f06->leave($__internal_0452196663e1d86b584b2346d1e37ce87b9864b52b4c1f104e1da35a234e6f06_prof);
 
     }
 
-    // line 149
+    // line 235
     public function block_js($context, array $blocks = array())
     {
-        $__internal_8dd249a3c06df8348b39680d7d87b1fa0711822efb9be7f230d757bfd20c5d50 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8dd249a3c06df8348b39680d7d87b1fa0711822efb9be7f230d757bfd20c5d50->enter($__internal_8dd249a3c06df8348b39680d7d87b1fa0711822efb9be7f230d757bfd20c5d50_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
+        $__internal_464f686a759651f7f9b2045e9fe3f72e195a5cc38ecb0192fcf38ac7059685c3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_464f686a759651f7f9b2045e9fe3f72e195a5cc38ecb0192fcf38ac7059685c3->enter($__internal_464f686a759651f7f9b2045e9fe3f72e195a5cc38ecb0192fcf38ac7059685c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        $__internal_2c90264e4a491b1bef1778b0801b7b46948c4bcd03163d644327cd9e2b4b60ea = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2c90264e4a491b1bef1778b0801b7b46948c4bcd03163d644327cd9e2b4b60ea->enter($__internal_2c90264e4a491b1bef1778b0801b7b46948c4bcd03163d644327cd9e2b4b60ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
+        $__internal_b62441736e529eba6a69e48c5aa672c9c748ae81ba7e92aa2c2706db8eedc6cf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b62441736e529eba6a69e48c5aa672c9c748ae81ba7e92aa2c2706db8eedc6cf->enter($__internal_b62441736e529eba6a69e48c5aa672c9c748ae81ba7e92aa2c2706db8eedc6cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 150
-        echo "    <link href=\"http://www.jqueryscript.net/css/jquerysctipttop.css\" rel=\"stylesheet\" type=\"text/css\">
+        // line 236
+        echo "<script>
+    function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
 
-    <script>
-    (function(\$) {
+        // Get all elements with class=\"tabcontent\" and hide them
+        tabcontent = document.getElementsByClassName(\"tabcontent\");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = \"none\";
+        }
 
-        var tabs =  \$(\".tabs li a\");
+        // Get all elements with class=\"tablinks\" and remove the class \"active\"
+        tablinks = document.getElementsByClassName(\"tablinks\");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(\" active\", \"\");
+        }
 
-        tabs.click(function() {
-            var panels = this.hash.replace('/','');
-            tabs.removeClass(\"active\");
-            \$(this).addClass(\"active\");
-            \$(\"#panels\").find('p').hide();
-            \$(panels).fadeIn(200);
-        });
+        // Show the current tab, and add an \"active\" class to the button that opened the tab
+        document.getElementById(cityName).style.display = \"block\";
+        evt.currentTarget.className += \" active\";
+    }
 
-    })(jQuery);
 </script>
 ";
         
-        $__internal_2c90264e4a491b1bef1778b0801b7b46948c4bcd03163d644327cd9e2b4b60ea->leave($__internal_2c90264e4a491b1bef1778b0801b7b46948c4bcd03163d644327cd9e2b4b60ea_prof);
+        $__internal_b62441736e529eba6a69e48c5aa672c9c748ae81ba7e92aa2c2706db8eedc6cf->leave($__internal_b62441736e529eba6a69e48c5aa672c9c748ae81ba7e92aa2c2706db8eedc6cf_prof);
 
         
-        $__internal_8dd249a3c06df8348b39680d7d87b1fa0711822efb9be7f230d757bfd20c5d50->leave($__internal_8dd249a3c06df8348b39680d7d87b1fa0711822efb9be7f230d757bfd20c5d50_prof);
+        $__internal_464f686a759651f7f9b2045e9fe3f72e195a5cc38ecb0192fcf38ac7059685c3->leave($__internal_464f686a759651f7f9b2045e9fe3f72e195a5cc38ecb0192fcf38ac7059685c3_prof);
 
     }
 
@@ -390,7 +487,7 @@ class __TwigTemplate_ec51157190c0e767df5ef9aa101520c868e1edb69a21a8fda137d516c40
 
     public function getDebugInfo()
     {
-        return array (  355 => 150,  346 => 149,  323 => 135,  315 => 132,  311 => 130,  303 => 125,  297 => 122,  293 => 120,  291 => 119,  286 => 117,  282 => 116,  278 => 115,  274 => 114,  268 => 113,  265 => 112,  261 => 111,  243 => 95,  235 => 92,  231 => 90,  223 => 85,  217 => 82,  213 => 80,  211 => 79,  206 => 77,  202 => 76,  198 => 75,  194 => 74,  188 => 73,  185 => 72,  181 => 71,  163 => 55,  155 => 52,  151 => 50,  143 => 45,  137 => 42,  133 => 40,  131 => 39,  126 => 37,  122 => 36,  118 => 35,  114 => 34,  108 => 33,  105 => 32,  101 => 31,  78 => 10,  69 => 9,  57 => 7,  51 => 3,  42 => 2,  11 => 1,);
+        return array (  446 => 236,  437 => 235,  362 => 169,  352 => 165,  348 => 164,  344 => 163,  338 => 162,  335 => 161,  331 => 160,  314 => 145,  306 => 142,  303 => 141,  293 => 133,  284 => 127,  280 => 125,  277 => 124,  265 => 115,  255 => 108,  250 => 105,  248 => 104,  242 => 101,  238 => 100,  234 => 99,  228 => 98,  225 => 97,  221 => 96,  203 => 80,  195 => 77,  192 => 76,  182 => 68,  173 => 62,  169 => 60,  166 => 59,  161 => 56,  151 => 48,  142 => 42,  138 => 40,  135 => 39,  133 => 38,  123 => 35,  119 => 34,  115 => 33,  111 => 32,  105 => 31,  102 => 30,  98 => 29,  73 => 6,  64 => 5,  51 => 3,  42 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -405,141 +502,175 @@ class __TwigTemplate_ec51157190c0e767df5ef9aa101520c868e1edb69a21a8fda137d516c40
     {
         return new Twig_Source("{% extends 'FrontBundle::layout.html.twig' %}
 {% block style %}
-    <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
-    <link rel=\"stylesheet\" href=\"/resources/demos/style.css\">
-    <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>
-    <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>
     <link href=\"{{ asset('bundles/front/css/style_Nour.css') }}\" rel=\"stylesheet\"/>
 {% endblock style %}
 {% block body %}
     <div class=\"wrap\">
         <h1 align=\"center\">Mes demandes</h1>
-        <ul class=\"tabs group\">
-            <li><a class=\"active\" href=\"#one\">Tous</a></li>
-            <li><a href=\"#two\">En attente</a></li>
-            <li><a href=\"#three\">Confirmés</a></li>
-        </ul>
+        <div class=\"tab\">
+            <button class=\"tablinks active\" onclick=\"openCity(event, 'Tous')\">Tous</button>
+            <button class=\"tablinks\" onclick=\"openCity(event, 'Attente')\">En attente</button>
+            <button class=\"tablinks\" onclick=\"openCity(event, 'Confirme')\">Confirmés</button>
+        </div>
+
         <div id=\"panels\">
-            <p id=\"one\">
-            <table>
-                <thead>
-                <tr>
-                    <th>Date commande</th>
-                    <th>Titre Annonce</th>
-                    <th>Catégorie Annonce</th>
-                    <th>Quantite</th>
-                    <th>Etat</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for commande in commandes %}
-                    <tr>
-                        <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
-                        <td>{{ commande.annonce.titre }}</td>
-                        <td>{{ commande.annonce.categorie.designation }}</td>
-                        <td>{{ commande.quantite }}</td>
-                        <td>{{ commande.etat }}</td>
-                        <td>
-                            {% if is_granted('ROLE_CLIENT') %}
-                                <ul>
-                                    <li>
-                                        <a href=\"{{ path('commandes_show', { 'id': commande.id }) }}\">show</a>
-                                    </li>
-                                    <li>
-                                        <a href=\"{{ path('commandes_edit', { 'id': commande.id }) }}\">edit</a>
-                                    </li>
-                                </ul>
-
-                            {% elseif is_granted('ROLE_COM') %}
-
-                            {% endif %}
-                        </td>
+            <div id=\"Tous\" class=\"tabcontent\">
+                <h3 align=\"center\">Tous les commandes</h3>
+                <table class=\"table table-striped\">
+                    <thead>
+                    <tr class=\"table-light\">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
+                        <th>Etat</th>
+                        <th>Actions</th>
                     </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-            </p>
-            <p id=\"two\">
-            <table>
-                <thead>
-                <tr>
-                    <th>Date commande</th>
-                    <th>Titre Annonce</th>
-                    <th>Catégorie Annonce</th>
-                    <th>Quantite</th>
-                    <th>Etat</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for commande in commandes_attente %}
-                    <tr>
-                        <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
-                        <td>{{ commande.annonce.titre }}</td>
-                        <td>{{ commande.annonce.categorie.designation }}</td>
-                        <td>{{ commande.quantite }}</td>
-                        <td>{{ commande.etat }}</td>
-                        <td>
-                            {% if is_granted('ROLE_CLIENT') %}
-                                <ul>
-                                    <li>
-                                        <a href=\"{{ path('commandes_show', { 'id': commande.id }) }}\">show</a>
-                                    </li>
-                                    <li>
-                                        <a href=\"{{ path('commandes_edit', { 'id': commande.id }) }}\">edit</a>
-                                    </li>
-                                </ul>
+                    </thead>
+                    <tbody>
+                    {% for commande in commandes %}
+                        <tr>
+                            <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                            <td>{{ commande.annonce.titre }}</td>
+                            <td>{{ commande.annonce.categorie.designation }}</td>
+                            <td>{{ commande.quantite }}</td>
+                            <td>{% if commande.etat == 0 %} En attente {%  else %} Confirmée{% endif %}</td>
+                            <td>
 
-                            {% elseif is_granted('ROLE_COM') %}
+                                {% if is_granted('ROLE_CLIENT') %}
+                                    {% if commande.etat==0 %}
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"{{ path('commandes_edit',{'id':commande.id}) }}\" class=\"btn left\">
 
-                            {% endif %}
-                        </td>
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                    {% else %}
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noEdit\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+
+
+                                {% elseif is_granted('ROLE_COM') %}
+                                    {% if commande.etat==0 %}
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"{{ path('commandes_edit',{'id':commande.id}) }}\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    {% else %}
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noValid\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div id=\"Attente\" class=\"tabcontent\">
+                <h3 align=\"center\">Les commandes en attente</h3>
+                <table class=\"table table-striped\">
+                    <thead>
+                    <tr class=\"table-light\">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
+                        <th>Actions</th>
                     </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-            </p>
-            <p id=\"three\">
-            <table>
-                <thead>
-                <tr>
-                    <th>Date commande</th>
-                    <th>Titre Annonce</th>
-                    <th>Catégorie Annonce</th>
-                    <th>Quantite</th>
-                    <th>Etat</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for commande in commandes_confirme %}
-                    <tr>
-                        <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
-                        <td>{{ commande.annonce.titre }}</td>
-                        <td>{{ commande.annonce.categorie.designation }}</td>
-                        <td>{{ commande.quantite }}</td>
-                        <td>{{ commande.etat }}</td>
-                        <td>
-                            {% if is_granted('ROLE_CLIENT') %}
-                                <ul>
-                                    <li>
-                                        <a href=\"{{ path('commandes_show', { 'id': commande.id }) }}\">show</a>
-                                    </li>
-                                    <li>
-                                        <a href=\"{{ path('commandes_edit', { 'id': commande.id }) }}\">edit</a>
-                                    </li>
-                                </ul>
+                    </thead>
+                    <tbody>
+                    {% for commande in commandes_attente %}
+                        <tr>
+                            <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                            <td>{{ commande.annonce.titre }}</td>
+                            <td>{{ commande.annonce.categorie.designation }}</td>
+                            <td>{{ commande.quantite }}</td>
+                            <td>
 
-                            {% elseif is_granted('ROLE_COM') %}
+                                {% if is_granted('ROLE_CLIENT') %}
 
-                            {% endif %}
-                        </td>
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"{{ path('commandes_edit',{'id':commande.id}) }}\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"{{ path('commandes_delete',{'id':commande.id}) }}\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Annuler</span>
+                                            </a>
+                                        </div>
+
+
+
+                                {% elseif is_granted('ROLE_COM') %}
+                                    {% if commande.etat==0 %}
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"{{ path('commandes_valid',{'id':commande.id}) }}\" class=\"btn left\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    {% else %}
+                                        <div class=\"content\">
+                                            <!-- Nour's work -->
+                                            <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noValid\">
+
+                                                <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div id=\"Confirme\" class=\"tabcontent\">
+                <h3 align=\"center\">Les commandes confirmées</h3>
+                <table class=\"table table-striped\">
+                    <thead>
+                    <tr class=\"table-light\">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
                     </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-            </p>
+                    </thead>
+                    <tbody>
+                    {% for commande in commandes_confirme %}
+                        <tr>
+                            <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                            <td>{{ commande.annonce.titre }}</td>
+                            <td>{{ commande.annonce.categorie.designation }}</td>
+                            <td>{{ commande.quantite }}</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -549,25 +680,83 @@ class __TwigTemplate_ec51157190c0e767df5ef9aa101520c868e1edb69a21a8fda137d516c40
 
 
 
+    <!-- Modal no edit -->
+    <div id=\"noEdit\" class=\"modal fade\" role=\"dialog\">
+        <div class=\"modal-dialog\">
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                    <h4 class=\"modal-title\">Edition Commande </h4>
+                </div>
 
+                <div class=\"modal-body\">
+
+                    <div class=\"col-md-12\">
+                        <p>Vous ne pouvez pas modifier une commande <b>confirmée</b>.</p>
+                    </div>
+
+                </div>
+                <div class=\"modal-footer\">
+
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal no valide -->
+    <div id=\"noVAlid\" class=\"modal fade\" role=\"dialog\">
+        <div class=\"modal-dialog\">
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                    <h4 class=\"modal-title\">Validation Commande </h4>
+                </div>
+
+                <div class=\"modal-body\">
+
+                    <div class=\"col-md-12\">
+                        <p>Vous avez déjà validé cette commande.</p>
+                    </div>
+
+                </div>
+                <div class=\"modal-footer\">
+
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 {% endblock %}
 {% block js %}
-    <link href=\"http://www.jqueryscript.net/css/jquerysctipttop.css\" rel=\"stylesheet\" type=\"text/css\">
+<script>
+    function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
 
-    <script>
-    (function(\$) {
+        // Get all elements with class=\"tabcontent\" and hide them
+        tabcontent = document.getElementsByClassName(\"tabcontent\");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = \"none\";
+        }
 
-        var tabs =  \$(\".tabs li a\");
+        // Get all elements with class=\"tablinks\" and remove the class \"active\"
+        tablinks = document.getElementsByClassName(\"tablinks\");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(\" active\", \"\");
+        }
 
-        tabs.click(function() {
-            var panels = this.hash.replace('/','');
-            tabs.removeClass(\"active\");
-            \$(this).addClass(\"active\");
-            \$(\"#panels\").find('p').hide();
-            \$(panels).fadeIn(200);
-        });
+        // Show the current tab, and add an \"active\" class to the button that opened the tab
+        document.getElementById(cityName).style.display = \"block\";
+        evt.currentTarget.className += \" active\";
+    }
 
-    })(jQuery);
 </script>
 {% endblock js %}", "FrontBundle:commandes:index.html.twig", "/opt/lampp/htdocs/dev/souk/src/Souk/FrontBundle/Resources/views/commandes/index.html.twig");
     }
