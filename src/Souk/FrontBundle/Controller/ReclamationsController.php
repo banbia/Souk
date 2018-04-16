@@ -23,7 +23,7 @@ class ReclamationsController extends Controller
 
         $reclamations = $em->getRepository('BackBundle:Reclamations')->findAll();
 
-        return $this->render('FrontBundle/reclamations/index.html.twig', array(
+        return $this->render('FrontBundle:reclamations:index.html.twig', array(
             'reclamations' => $reclamations,
         ));
     }
