@@ -5,3 +5,7 @@ front_homepage:
 front_commandes:
     resource: "@FrontBundle/Resources/config/routing/commandes.yml"
     prefix:   /commandes
+
+front_abonnemnts:
+    resource: "@FrontBundle/Resources/config/routing/ComAbonnements.yml"
+    prefix:   /abonnements
