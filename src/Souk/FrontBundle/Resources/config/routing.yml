@@ -5,3 +5,6 @@ front_homepage:
 front_commandes:
     resource: "@FrontBundle/Resources/config/routing/commandes.yml"
     prefix:   /commandes
+front_evennements:
+    resource: "@FrontBundle/Resources/config/routing/evennements.yml"
+    prefix:   /evennements

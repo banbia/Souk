@@ -1,6 +1,3 @@
-back_evennements:
-    resource: "@BackBundle/Resources/config/routing/evennements.yml"
-    prefix:   /evennements
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Souk\BackBundle\Controller;
+namespace Souk\FrontBundle\Controller;
 
 use Souk\BackBundle\Entity\Evennements;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -22,7 +22,7 @@ class EvennementsController extends Controller
 
         $evennements = $em->getRepository('BackBundle:Evennements')->findAll();
 
-        return $this->render('evennements/index.html.twig', array(
+        return $this->render('FrontBundle:evennements:index.html.twig', array(
             'evennements' => $evennements,
         ));
     }
@@ -45,7 +45,7 @@ class EvennementsController extends Controller
             return $this->redirectToRoute('evennements_show', array('id' => $evennement->getId()));
         }
 
-        return $this->render('evennements/new.html.twig', array(
+        return $this->render('FrontBundle:evennements:new.html.twig', array(
             'evennement' => $evennement,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class EvennementsController extends Controller
     {
         $deleteForm = $this->createDeleteForm($evennement);
 
-        return $this->render('evennements/show.html.twig', array(
+        return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -81,7 +81,7 @@ class EvennementsController extends Controller
             return $this->redirectToRoute('evennements_edit', array('id' => $evennement->getId()));
         }
 
-        return $this->render('evennements/edit.html.twig', array(
+        return $this->render('FrontBundle:evennements:edit.html.twig', array(
             'evennement' => $evennement,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
