@@ -15,11 +15,19 @@ class __TwigTemplate_6447e9b418f962861a2137008bad98b540edd09e3cc5ce657b3610951c1
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+<<<<<<< HEAD:var/cache/dev/twig/ef/ef4036d3b7014d38062cf007ad3af41e24adaf5b4479b85202ba765d29cf800e.php
         $__internal_d5faf4af558288cfe44f0c824366d39e37d4ad38f4d8f0d297259ebdbe009c73 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
         $__internal_d5faf4af558288cfe44f0c824366d39e37d4ad38f4d8f0d297259ebdbe009c73->enter($__internal_d5faf4af558288cfe44f0c824366d39e37d4ad38f4d8f0d297259ebdbe009c73_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
 
         $__internal_1a5d9a9d9254037d6be60c3e742e6b6fd17b4d33a98b5981868c42c912cbf8ec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_1a5d9a9d9254037d6be60c3e742e6b6fd17b4d33a98b5981868c42c912cbf8ec->enter($__internal_1a5d9a9d9254037d6be60c3e742e6b6fd17b4d33a98b5981868c42c912cbf8ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
+=======
+        $__internal_cfb6fe34baa9e907d2516f239ee2c3b39ceedfcb9f19e5ed766bb41a88420c73 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_cfb6fe34baa9e907d2516f239ee2c3b39ceedfcb9f19e5ed766bb41a88420c73->enter($__internal_cfb6fe34baa9e907d2516f239ee2c3b39ceedfcb9f19e5ed766bb41a88420c73_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
+
+        $__internal_e7a07882eacbadcd245aaebe43b8f9c2e548f51120a5d785b3c96e35a9588d1b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e7a07882eacbadcd245aaebe43b8f9c2e548f51120a5d785b3c96e35a9588d1b->enter($__internal_e7a07882eacbadcd245aaebe43b8f9c2e548f51120a5d785b3c96e35a9588d1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/ef/ef4036d3b7014d38062cf007ad3af41e24adaf5b4479b85202ba765d29cf800e.php
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -31,10 +39,17 @@ class __TwigTemplate_6447e9b418f962861a2137008bad98b540edd09e3cc5ce657b3610951c1
 </svg>
 ";
         
+<<<<<<< HEAD:var/cache/dev/twig/ef/ef4036d3b7014d38062cf007ad3af41e24adaf5b4479b85202ba765d29cf800e.php
         $__internal_d5faf4af558288cfe44f0c824366d39e37d4ad38f4d8f0d297259ebdbe009c73->leave($__internal_d5faf4af558288cfe44f0c824366d39e37d4ad38f4d8f0d297259ebdbe009c73_prof);
 
         
         $__internal_1a5d9a9d9254037d6be60c3e742e6b6fd17b4d33a98b5981868c42c912cbf8ec->leave($__internal_1a5d9a9d9254037d6be60c3e742e6b6fd17b4d33a98b5981868c42c912cbf8ec_prof);
+=======
+        $__internal_cfb6fe34baa9e907d2516f239ee2c3b39ceedfcb9f19e5ed766bb41a88420c73->leave($__internal_cfb6fe34baa9e907d2516f239ee2c3b39ceedfcb9f19e5ed766bb41a88420c73_prof);
+
+        
+        $__internal_e7a07882eacbadcd245aaebe43b8f9c2e548f51120a5d785b3c96e35a9588d1b->leave($__internal_e7a07882eacbadcd245aaebe43b8f9c2e548f51120a5d785b3c96e35a9588d1b_prof);
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/ef/ef4036d3b7014d38062cf007ad3af41e24adaf5b4479b85202ba765d29cf800e.php
 
     }
 
@@ -65,6 +80,10 @@ class __TwigTemplate_6447e9b418f962861a2137008bad98b540edd09e3cc5ce657b3610951c1
     C9.3,4,9,4.3,9,4.6V11.4z M9,16.4C9,16.7,9.3,17,9.6,17h1.8c0.3,0,0.6-0.3,0.6-0.6v-1.8c0-0.3-0.3-0.6-0.6-0.6H9.6
     C9.3,14,9,14.3,9,14.6V16.4z\"/>
 </svg>
+<<<<<<< HEAD:var/cache/dev/twig/ef/ef4036d3b7014d38062cf007ad3af41e24adaf5b4479b85202ba765d29cf800e.php
 ", "@WebProfiler/Icon/logger.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
+=======
+", "@WebProfiler/Icon/logger.svg", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/ef/ef4036d3b7014d38062cf007ad3af41e24adaf5b4479b85202ba765d29cf800e.php
     }
 }

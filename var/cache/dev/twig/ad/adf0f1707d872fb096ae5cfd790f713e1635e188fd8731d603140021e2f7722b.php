@@ -15,11 +15,19 @@ class __TwigTemplate_e7f1efac945d4a48d15c8b8ef3e5671f3d4fc03e8ac018001a5a8f1bb5e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+<<<<<<< HEAD:var/cache/dev/twig/ad/adf0f1707d872fb096ae5cfd790f713e1635e188fd8731d603140021e2f7722b.php
         $__internal_d22e51ad5aaacdcef0256cd925362c744238dde0b0086fe8561a10df1a3edf5d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
         $__internal_d22e51ad5aaacdcef0256cd925362c744238dde0b0086fe8561a10df1a3edf5d->enter($__internal_d22e51ad5aaacdcef0256cd925362c744238dde0b0086fe8561a10df1a3edf5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/form.svg"));
 
         $__internal_23425d9ddcf6ac3d63e4438f319f8a3852275e9fe0f85074135a8c0686b17255 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_23425d9ddcf6ac3d63e4438f319f8a3852275e9fe0f85074135a8c0686b17255->enter($__internal_23425d9ddcf6ac3d63e4438f319f8a3852275e9fe0f85074135a8c0686b17255_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/form.svg"));
+=======
+        $__internal_a45f7db27ba64914f6f653701de91416a3b9feafdec3d6ad647a445dd8c3e9c3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a45f7db27ba64914f6f653701de91416a3b9feafdec3d6ad647a445dd8c3e9c3->enter($__internal_a45f7db27ba64914f6f653701de91416a3b9feafdec3d6ad647a445dd8c3e9c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/form.svg"));
+
+        $__internal_47fe9ab4d8b85c7c771c606366b90923fad1712f6caae80e6f7532fcc6b857c1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_47fe9ab4d8b85c7c771c606366b90923fad1712f6caae80e6f7532fcc6b857c1->enter($__internal_47fe9ab4d8b85c7c771c606366b90923fad1712f6caae80e6f7532fcc6b857c1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/form.svg"));
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/ad/adf0f1707d872fb096ae5cfd790f713e1635e188fd8731d603140021e2f7722b.php
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -30,10 +38,17 @@ class __TwigTemplate_e7f1efac945d4a48d15c8b8ef3e5671f3d4fc03e8ac018001a5a8f1bb5e
 </svg>
 ";
         
+<<<<<<< HEAD:var/cache/dev/twig/ad/adf0f1707d872fb096ae5cfd790f713e1635e188fd8731d603140021e2f7722b.php
         $__internal_d22e51ad5aaacdcef0256cd925362c744238dde0b0086fe8561a10df1a3edf5d->leave($__internal_d22e51ad5aaacdcef0256cd925362c744238dde0b0086fe8561a10df1a3edf5d_prof);
 
         
         $__internal_23425d9ddcf6ac3d63e4438f319f8a3852275e9fe0f85074135a8c0686b17255->leave($__internal_23425d9ddcf6ac3d63e4438f319f8a3852275e9fe0f85074135a8c0686b17255_prof);
+=======
+        $__internal_a45f7db27ba64914f6f653701de91416a3b9feafdec3d6ad647a445dd8c3e9c3->leave($__internal_a45f7db27ba64914f6f653701de91416a3b9feafdec3d6ad647a445dd8c3e9c3_prof);
+
+        
+        $__internal_47fe9ab4d8b85c7c771c606366b90923fad1712f6caae80e6f7532fcc6b857c1->leave($__internal_47fe9ab4d8b85c7c771c606366b90923fad1712f6caae80e6f7532fcc6b857c1_prof);
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/ad/adf0f1707d872fb096ae5cfd790f713e1635e188fd8731d603140021e2f7722b.php
 
     }
 
@@ -63,6 +78,10 @@ class __TwigTemplate_e7f1efac945d4a48d15c8b8ef3e5671f3d4fc03e8ac018001a5a8f1bb5e
     V20z M17,11c0,0.6-0.4,1-1,1H8c-0.6,0-1-0.4-1-1s0.4-1,1-1h8C16.6,10,17,10.4,17,11z M17,14c0,0.6-0.4,1-1,1H8c-0.6,0-1-0.4-1-1
     s0.4-1,1-1h8C16.6,13,17,13.4,17,14z M13,17c0,0.6-0.4,1-1,1H8c-0.6,0-1-0.4-1-1s0.4-1,1-1h4C12.6,16,13,16.4,13,17z\"/>
 </svg>
+<<<<<<< HEAD:var/cache/dev/twig/ad/adf0f1707d872fb096ae5cfd790f713e1635e188fd8731d603140021e2f7722b.php
 ", "@WebProfiler/Icon/form.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\form.svg");
+=======
+", "@WebProfiler/Icon/form.svg", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\form.svg");
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/ad/adf0f1707d872fb096ae5cfd790f713e1635e188fd8731d603140021e2f7722b.php
     }
 }

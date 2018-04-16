@@ -1,3 +1,56 @@
+<<<<<<< HEAD
+1f08a7,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705205,f14a63,200
+f14a63,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705205,,500
+88a1d2,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705313,f23593,200
+f23593,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705314,,500
+c5ff87,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705333,78398a,200
+78398a,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705333,,500
+e2ebc0,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705520,,200
+34bb40,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705537,,200
+5263a4,127.0.0.1,GET,http://localhost:8000/register,1523705544,,301
+568b76,127.0.0.1,GET,http://localhost:8000/register/,1523705548,,200
+7b36d9,127.0.0.1,POST,http://localhost:8000/register/,1523705602,,302
+8ad96c,127.0.0.1,GET,http://localhost:8000/register/confirmed,1523705604,,200
+f0e12b,127.0.0.1,GET,http://localhost:8000/logout,1523705613,,302
+c89a05,127.0.0.1,GET,http://localhost:8000/,1523705615,,200
+3ceac2,127.0.0.1,GET,http://localhost:8000/register/,1523705621,,200
+6b3242,127.0.0.1,POST,http://localhost:8000/register/,1523705663,,302
+c92aa5,127.0.0.1,GET,http://localhost:8000/register/confirmed,1523705665,,200
+6600d8,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705682,,200
+c3b212,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523705705,,200
+851012,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523707240,,200
+02493b,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523707420,,200
+25b30a,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523707483,,200
+02259d,127.0.0.1,GET,http://localhost:8000/reclamations/new,1523707545,e02264,200
+e02264,127.0.0.1,POST,http://localhost:8000/reclamations/new,1523707545,,500
+8ff024,127.0.0.1,POST,http://localhost:8000/reclamations/new,1523707673,,302
+6a5e05,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707677,ca2f01,200
+ca2f01,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707677,,500
+a555bb,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707856,bce7c3,200
+bce7c3,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707856,,500
+09bc68,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707890,0cc67c,200
+0cc67c,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707890,,500
+b50f10,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707935,6adcb1,200
+6adcb1,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707935,,500
+6ac88c,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1523707987,,200
+b78b78,127.0.0.1,GET,http://localhost:8001/,1523902143,,200
+afe909,127.0.0.1,GET,http://localhost:8001/login,1523902163,,200
+3bac0b,127.0.0.1,POST,http://localhost:8001/login_check,1523902190,,302
+c55874,127.0.0.1,GET,http://localhost:8001/,1523902193,,200
+bc8af1,127.0.0.1,GET,http://localhost:8001/reclamations/new,1523902339,,200
+71830c,127.0.0.1,GET,http://localhost:8001/reclamations,1523903952,,301
+3f8603,127.0.0.1,GET,http://localhost:8001/reclamations/,1523903958,8bef94,200
+8bef94,127.0.0.1,GET,http://localhost:8001/reclamations/,1523903958,,500
+f1fc26,127.0.0.1,GET,http://localhost:8001/reclamations/,1523903963,bcd9c9,200
+bcd9c9,127.0.0.1,GET,http://localhost:8001/reclamations/,1523903963,,500
+b90dbc,127.0.0.1,GET,http://localhost:8001/reclamations/,1523903998,31a09e,200
+31a09e,127.0.0.1,GET,http://localhost:8001/reclamations/,1523903998,,500
+4b215c,127.0.0.1,GET,http://localhost:8001/reclamations/,1523904006,1880e6,200
+1880e6,127.0.0.1,GET,http://localhost:8001/reclamations/,1523904006,,500
+109142,127.0.0.1,GET,http://localhost:8001/reclamations/,1523904085,,200
+65c884,127.0.0.1,GET,http://localhost:8001/profile/,1523904107,,200
+5ccb4b,127.0.0.1,GET,http://localhost:8001/reclamations/new,1523904218,,200
+=======
 a665dd,127.0.0.1,GET,http://localhost:8000/,1522953664,,200
 c4a1eb,127.0.0.1,GET,http://localhost:8000/messages/,1522953671,,302
 45d041,127.0.0.1,GET,http://localhost:8000/login,1522953671,,200
@@ -537,6 +590,7 @@ c42933,127.0.0.1,GET,http://localhost:8000/profile/,1523902615,0130d1,200
 fc90ae,127.0.0.1,GET,http://localhost:8000/profile/,1523902673,,500
 2d7911,127.0.0.1,GET,http://localhost:8000/profile/,1523902688,,200
 341349,127.0.0.1,GET,http://localhost:8000/profile/,1523903025,,200
+<<<<<<< HEAD
 9a3c22,127.0.0.1,GET,http://localhost:8000/,1523903817,,200
 9f794b,127.0.0.1,GET,http://localhost:8000/,1523903849,,200
 ff3c36,127.0.0.1,GET,http://localhost:8000/login,1523904094,,200
@@ -571,3 +625,10 @@ d7519c,127.0.0.1,GET,http://localhost:8000/admin/abonnements/new,1523905628,9ae4
 52846f,127.0.0.1,GET,http://localhost:8000/admin/abonnements/,1523905792,,200
 05a34a,127.0.0.1,GET,http://localhost:8000/bundles/back/admin/assets/css/bootstrap.css.map,1523905963,426ed8,200
 426ed8,127.0.0.1,GET,http://localhost:8000/bundles/back/admin/assets/css/bootstrap.css.map,1523905963,,404
+=======
+<<<<<<< HEAD
+>>>>>>> be044d964401d0bba5c51632b5d29d82fb7c44ee
+=======
+2be544,127.0.0.1,GET,http://localhost:8000/,1523905350,,200
+>>>>>>> b7bbdb60c65e5f392ab7a344685dadf0fa4791ff
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e

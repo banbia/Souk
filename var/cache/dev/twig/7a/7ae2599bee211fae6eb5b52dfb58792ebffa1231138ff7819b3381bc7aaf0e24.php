@@ -15,11 +15,19 @@ class __TwigTemplate_3f8d80ce1bcf562c9ed66dd70df9f3bb86e2cd592f358596f3292dd55bf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+<<<<<<< HEAD:var/cache/dev/twig/7a/7ae2599bee211fae6eb5b52dfb58792ebffa1231138ff7819b3381bc7aaf0e24.php
         $__internal_d6196cda6e02801c004a56e3e3d07e42a3c5717d3e3eaa44696926a4be48de7f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
         $__internal_d6196cda6e02801c004a56e3e3d07e42a3c5717d3e3eaa44696926a4be48de7f->enter($__internal_d6196cda6e02801c004a56e3e3d07e42a3c5717d3e3eaa44696926a4be48de7f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/translation.svg"));
 
         $__internal_caa7414e698cc4167a5fca62cb539abc30fc45f4266420ee84cbf54a84529ed6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_caa7414e698cc4167a5fca62cb539abc30fc45f4266420ee84cbf54a84529ed6->enter($__internal_caa7414e698cc4167a5fca62cb539abc30fc45f4266420ee84cbf54a84529ed6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/translation.svg"));
+=======
+        $__internal_26ac690f1da867b0dbd5e79e3e3aeb133f431f1e5ac428fd1f5d2c8137ca4658 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_26ac690f1da867b0dbd5e79e3e3aeb133f431f1e5ac428fd1f5d2c8137ca4658->enter($__internal_26ac690f1da867b0dbd5e79e3e3aeb133f431f1e5ac428fd1f5d2c8137ca4658_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/translation.svg"));
+
+        $__internal_02bb26374502d3c40bc19d6f930e70335c6f668ee4bdaa3770b8e92610670a58 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_02bb26374502d3c40bc19d6f930e70335c6f668ee4bdaa3770b8e92610670a58->enter($__internal_02bb26374502d3c40bc19d6f930e70335c6f668ee4bdaa3770b8e92610670a58_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/translation.svg"));
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/7a/7ae2599bee211fae6eb5b52dfb58792ebffa1231138ff7819b3381bc7aaf0e24.php
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -37,10 +45,17 @@ class __TwigTemplate_3f8d80ce1bcf562c9ed66dd70df9f3bb86e2cd592f358596f3292dd55bf
 </svg>
 ";
         
+<<<<<<< HEAD:var/cache/dev/twig/7a/7ae2599bee211fae6eb5b52dfb58792ebffa1231138ff7819b3381bc7aaf0e24.php
         $__internal_d6196cda6e02801c004a56e3e3d07e42a3c5717d3e3eaa44696926a4be48de7f->leave($__internal_d6196cda6e02801c004a56e3e3d07e42a3c5717d3e3eaa44696926a4be48de7f_prof);
 
         
         $__internal_caa7414e698cc4167a5fca62cb539abc30fc45f4266420ee84cbf54a84529ed6->leave($__internal_caa7414e698cc4167a5fca62cb539abc30fc45f4266420ee84cbf54a84529ed6_prof);
+=======
+        $__internal_26ac690f1da867b0dbd5e79e3e3aeb133f431f1e5ac428fd1f5d2c8137ca4658->leave($__internal_26ac690f1da867b0dbd5e79e3e3aeb133f431f1e5ac428fd1f5d2c8137ca4658_prof);
+
+        
+        $__internal_02bb26374502d3c40bc19d6f930e70335c6f668ee4bdaa3770b8e92610670a58->leave($__internal_02bb26374502d3c40bc19d6f930e70335c6f668ee4bdaa3770b8e92610670a58_prof);
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/7a/7ae2599bee211fae6eb5b52dfb58792ebffa1231138ff7819b3381bc7aaf0e24.php
 
     }
 
@@ -77,6 +92,10 @@ class __TwigTemplate_3f8d80ce1bcf562c9ed66dd70df9f3bb86e2cd592f358596f3292dd55bf
     v0.8c0,0-0.6-0.1-1.1-0.1H17z M20.7,16.8c-1-1.1-1.6-1.9-2.3-3.6L19,13c0.5,1.1,0.8,1.7,1.4,2.4c0.3,0.3,0.5,0.5,0.8,0.9
     C21.1,16.4,20.9,16.6,20.7,16.8z\"/>
 </svg>
+<<<<<<< HEAD:var/cache/dev/twig/7a/7ae2599bee211fae6eb5b52dfb58792ebffa1231138ff7819b3381bc7aaf0e24.php
 ", "@WebProfiler/Icon/translation.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\translation.svg");
+=======
+", "@WebProfiler/Icon/translation.svg", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\translation.svg");
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/7a/7ae2599bee211fae6eb5b52dfb58792ebffa1231138ff7819b3381bc7aaf0e24.php
     }
 }

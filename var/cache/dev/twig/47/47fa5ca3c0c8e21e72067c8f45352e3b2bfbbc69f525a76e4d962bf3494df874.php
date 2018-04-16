@@ -21,6 +21,7 @@ class __TwigTemplate_fcb55e699072013c562485c9d3168399892f6402116de5583f2d25f38ab
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+<<<<<<< HEAD:var/cache/dev/twig/47/47fa5ca3c0c8e21e72067c8f45352e3b2bfbbc69f525a76e4d962bf3494df874.php
         $__internal_a86565ab759493c812333202a3bdb8f64527a176ac2c82bf63816334369e2fbd = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
         $__internal_a86565ab759493c812333202a3bdb8f64527a176ac2c82bf63816334369e2fbd->enter($__internal_a86565ab759493c812333202a3bdb8f64527a176ac2c82bf63816334369e2fbd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Security/login.html.twig"));
 
@@ -33,17 +34,39 @@ class __TwigTemplate_fcb55e699072013c562485c9d3168399892f6402116de5583f2d25f38ab
 
         
         $__internal_2aa5c8732dbc73b3a5181c231fb11f1ef30e52e3f560f1f716a849c67fb6024a->leave($__internal_2aa5c8732dbc73b3a5181c231fb11f1ef30e52e3f560f1f716a849c67fb6024a_prof);
+=======
+        $__internal_33ad3fb54b340788460146307796b2c174e19fb18077c07d2509f4030259987e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_33ad3fb54b340788460146307796b2c174e19fb18077c07d2509f4030259987e->enter($__internal_33ad3fb54b340788460146307796b2c174e19fb18077c07d2509f4030259987e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Security/login.html.twig"));
+
+        $__internal_f903f4e7b0feac2af2da795daaff4537f6b83c0db505583534a0cd1ae942e07c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f903f4e7b0feac2af2da795daaff4537f6b83c0db505583534a0cd1ae942e07c->enter($__internal_f903f4e7b0feac2af2da795daaff4537f6b83c0db505583534a0cd1ae942e07c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Security/login.html.twig"));
+
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_33ad3fb54b340788460146307796b2c174e19fb18077c07d2509f4030259987e->leave($__internal_33ad3fb54b340788460146307796b2c174e19fb18077c07d2509f4030259987e_prof);
+
+        
+        $__internal_f903f4e7b0feac2af2da795daaff4537f6b83c0db505583534a0cd1ae942e07c->leave($__internal_f903f4e7b0feac2af2da795daaff4537f6b83c0db505583534a0cd1ae942e07c_prof);
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/47/47fa5ca3c0c8e21e72067c8f45352e3b2bfbbc69f525a76e4d962bf3494df874.php
 
     }
 
     // line 4
     public function block_formulaire($context, array $blocks = array())
     {
+<<<<<<< HEAD:var/cache/dev/twig/47/47fa5ca3c0c8e21e72067c8f45352e3b2bfbbc69f525a76e4d962bf3494df874.php
         $__internal_f7237d553abe0b997dc87d08547d0a55c895a06d4e10c3d90ef9ebc0a5c64d32 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
         $__internal_f7237d553abe0b997dc87d08547d0a55c895a06d4e10c3d90ef9ebc0a5c64d32->enter($__internal_f7237d553abe0b997dc87d08547d0a55c895a06d4e10c3d90ef9ebc0a5c64d32_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "formulaire"));
 
         $__internal_2579a2b83aa3b9a9e5fd8d23ae88fd0d9b8820d75fb4fef2523acb95d97e8493 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_2579a2b83aa3b9a9e5fd8d23ae88fd0d9b8820d75fb4fef2523acb95d97e8493->enter($__internal_2579a2b83aa3b9a9e5fd8d23ae88fd0d9b8820d75fb4fef2523acb95d97e8493_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "formulaire"));
+=======
+        $__internal_2158c181085969bbee1660cacd56fb4940d2b63a958fc5468d344203641e27c7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2158c181085969bbee1660cacd56fb4940d2b63a958fc5468d344203641e27c7->enter($__internal_2158c181085969bbee1660cacd56fb4940d2b63a958fc5468d344203641e27c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "formulaire"));
+
+        $__internal_24b3d3984477cfd294444bf7f2cd46031df657e6638d5685c9f7077838294d58 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_24b3d3984477cfd294444bf7f2cd46031df657e6638d5685c9f7077838294d58->enter($__internal_24b3d3984477cfd294444bf7f2cd46031df657e6638d5685c9f7077838294d58_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "formulaire"));
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/47/47fa5ca3c0c8e21e72067c8f45352e3b2bfbbc69f525a76e4d962bf3494df874.php
 
         // line 5
         echo "
@@ -107,10 +130,17 @@ class __TwigTemplate_fcb55e699072013c562485c9d3168399892f6402116de5583f2d25f38ab
 
 ";
         
+<<<<<<< HEAD:var/cache/dev/twig/47/47fa5ca3c0c8e21e72067c8f45352e3b2bfbbc69f525a76e4d962bf3494df874.php
         $__internal_2579a2b83aa3b9a9e5fd8d23ae88fd0d9b8820d75fb4fef2523acb95d97e8493->leave($__internal_2579a2b83aa3b9a9e5fd8d23ae88fd0d9b8820d75fb4fef2523acb95d97e8493_prof);
 
         
         $__internal_f7237d553abe0b997dc87d08547d0a55c895a06d4e10c3d90ef9ebc0a5c64d32->leave($__internal_f7237d553abe0b997dc87d08547d0a55c895a06d4e10c3d90ef9ebc0a5c64d32_prof);
+=======
+        $__internal_24b3d3984477cfd294444bf7f2cd46031df657e6638d5685c9f7077838294d58->leave($__internal_24b3d3984477cfd294444bf7f2cd46031df657e6638d5685c9f7077838294d58_prof);
+
+        
+        $__internal_2158c181085969bbee1660cacd56fb4940d2b63a958fc5468d344203641e27c7->leave($__internal_2158c181085969bbee1660cacd56fb4940d2b63a958fc5468d344203641e27c7_prof);
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/47/47fa5ca3c0c8e21e72067c8f45352e3b2bfbbc69f525a76e4d962bf3494df874.php
 
     }
 
@@ -171,6 +201,10 @@ class __TwigTemplate_fcb55e699072013c562485c9d3168399892f6402116de5583f2d25f38ab
 
 
 {% endblock formulaire %}
+<<<<<<< HEAD:var/cache/dev/twig/47/47fa5ca3c0c8e21e72067c8f45352e3b2bfbbc69f525a76e4d962bf3494df874.php
 ", "@FOSUser/Security/login.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Security\\login.html.twig");
+=======
+", "@FOSUser/Security/login.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Security\\login.html.twig");
+>>>>>>> 569975356f977e993c9d01c74d1d22de51b5508e:var/cache/dev/twig/47/47fa5ca3c0c8e21e72067c8f45352e3b2bfbbc69f525a76e4d962bf3494df874.php
     }
 }
