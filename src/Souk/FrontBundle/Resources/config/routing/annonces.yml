@@ -6,5 +6,5 @@ client_annonces_index:
 client_annonces_show:
     path:     /{id}/show
     defaults: { _controller: "FrontBundle:Annonces:show" }
-    methods:  GET
+    methods:  [GET, POST]
 

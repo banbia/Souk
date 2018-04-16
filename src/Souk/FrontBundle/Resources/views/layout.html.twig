@@ -21,7 +21,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- Add fancyBox main JS and CSS files -->
     <script src="{{ asset('bundles/front/js/jquery.magnific-popup.js') }}" type="text/javascript"></script>
     <link href="{{ asset('bundles/front/css/magnific-popup.css') }}" rel="stylesheet" type="text/css">
-
+    {% block style %}
+    {% endblock style %}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -200,5 +201,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
+
+{% block js %}
+{% endblock js %}
 </body>
 </html>

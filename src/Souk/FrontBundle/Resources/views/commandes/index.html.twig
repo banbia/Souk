@@ -1,0 +1,259 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
+{% endblock style %}
+{% block body %}
+    <div class="wrap">
+        <h1 align="center">Mes demandes</h1>
+        <div class="tab">
+            <button class="tablinks active" onclick="openCity(event, 'Tous')">Tous</button>
+            <button class="tablinks" onclick="openCity(event, 'Attente')">En attente</button>
+            <button class="tablinks" onclick="openCity(event, 'Confirme')">Confirmés</button>
+        </div>
+
+        <div id="panels">
+            <div id="Tous" class="tabcontent">
+                <h3 align="center">Tous les commandes</h3>
+                <table class="table table-striped">
+                    <thead>
+                    <tr class="table-light">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
+                        <th>Etat</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for commande in commandes %}
+                        <tr>
+                            <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                            <td>{{ commande.annonce.titre }}</td>
+                            <td>{{ commande.annonce.categorie.designation }}</td>
+                            <td>{{ commande.quantite }}</td>
+                            <td>{% if commande.etat == 0 %} En attente {%  else %} Confirmée{% endif %}</td>
+                            <td>
+
+                                {% if is_granted('ROLE_CLIENT') %}
+                                    {% if commande.etat==0 %}
+                                        <div class="content">
+                                            <!-- Nour's work -->
+                                            <a href="{{ path('commandes_edit',{'id':commande.id}) }}" class="btn left">
+
+                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                    {% else %}
+                                        <div class="content">
+                                            <!-- Nour's work -->
+                                            <a href="#" class="btn left" data-toggle="modal" data-target="#noEdit">
+
+                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+
+
+                                {% elseif is_granted('ROLE_COM') %}
+                                    {% if commande.etat==0 %}
+                                        <div class="content">
+                                            <!-- Nour's work -->
+                                            <a href="{{ path('commandes_edit',{'id':commande.id}) }}" class="btn left">
+
+                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    {% else %}
+                                        <div class="content">
+                                            <!-- Nour's work -->
+                                            <a href="#" class="btn left" data-toggle="modal" data-target="#noValid">
+
+                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div id="Attente" class="tabcontent">
+                <h3 align="center">Les commandes en attente</h3>
+                <table class="table table-striped">
+                    <thead>
+                    <tr class="table-light">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for commande in commandes_attente %}
+                        <tr>
+                            <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                            <td>{{ commande.annonce.titre }}</td>
+                            <td>{{ commande.annonce.categorie.designation }}</td>
+                            <td>{{ commande.quantite }}</td>
+                            <td>
+
+                                {% if is_granted('ROLE_CLIENT') %}
+
+                                        <div class="content">
+                                            <!-- Nour's work -->
+                                            <a href="{{ path('commandes_edit',{'id':commande.id}) }}" class="btn left">
+
+                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Modifier</span>
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <!-- Nour's work -->
+                                            <a href="{{ path('commandes_delete',{'id':commande.id}) }}" class="btn left">
+
+                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Annuler</span>
+                                            </a>
+                                        </div>
+
+
+
+                                {% elseif is_granted('ROLE_COM') %}
+                                    {% if commande.etat==0 %}
+                                        <div class="content">
+                                            <!-- Nour's work -->
+                                            <a href="{{ path('commandes_valid',{'id':commande.id}) }}" class="btn left">
+
+                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    {% else %}
+                                        <div class="content">
+                                            <!-- Nour's work -->
+                                            <a href="#" class="btn left" data-toggle="modal" data-target="#noValid">
+
+                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Valider</span>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div id="Confirme" class="tabcontent">
+                <h3 align="center">Les commandes confirmées</h3>
+                <table class="table table-striped">
+                    <thead>
+                    <tr class="table-light">
+                        <th>Date commande</th>
+                        <th>Titre Annonce</th>
+                        <th>Catégorie Annonce</th>
+                        <th>Quantite</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for commande in commandes_confirme %}
+                        <tr>
+                            <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                            <td>{{ commande.annonce.titre }}</td>
+                            <td>{{ commande.annonce.categorie.designation }}</td>
+                            <td>{{ commande.quantite }}</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Modal no edit -->
+    <div id="noEdit" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edition Commande </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="col-md-12">
+                        <p>Vous ne pouvez pas modifier une commande <b>confirmée</b>.</p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal no valide -->
+    <div id="noVAlid" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Validation Commande </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="col-md-12">
+                        <p>Vous avez déjà validé cette commande.</p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+<script>
+    function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+</script>
+{% endblock js %}
