@@ -10,4 +10,10 @@ front_reclamations:
 front_commandes:
     resource: "@FrontBundle/Resources/config/routing/commandes.yml"
     prefix:   /commandes
+<<<<<<< HEAD
 >>>>>>> be044d964401d0bba5c51632b5d29d82fb7c44ee
+=======
+front_evennements:
+    resource: "@FrontBundle/Resources/config/routing/evennements.yml"
+    prefix:   /evennements
+>>>>>>> b7bbdb60c65e5f392ab7a344685dadf0fa4791ff

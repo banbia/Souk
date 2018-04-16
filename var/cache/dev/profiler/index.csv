@@ -590,4 +590,8 @@ c42933,127.0.0.1,GET,http://localhost:8000/profile/,1523902615,0130d1,200
 fc90ae,127.0.0.1,GET,http://localhost:8000/profile/,1523902673,,500
 2d7911,127.0.0.1,GET,http://localhost:8000/profile/,1523902688,,200
 341349,127.0.0.1,GET,http://localhost:8000/profile/,1523903025,,200
+<<<<<<< HEAD
 >>>>>>> be044d964401d0bba5c51632b5d29d82fb7c44ee
+=======
+2be544,127.0.0.1,GET,http://localhost:8000/,1523905350,,200
+>>>>>>> b7bbdb60c65e5f392ab7a344685dadf0fa4791ff
