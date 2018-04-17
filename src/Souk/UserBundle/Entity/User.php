@@ -80,7 +80,7 @@ class User extends BaseUser implements ParticipantInterface
      * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\Commandes", mappedBy="client")
      */
     private $commandes;
-    
+
 
     /**
      * @return Collection|Commandes[]
