@@ -50,12 +50,7 @@ class Abonnements
      * @ORM\Column(name="nb_mois", type="integer")
      */
     private $nbMois;
-    /**
-     *
-     * @ORM\ManyToOne(targetEntity="Souk\UserBundle\Entity\User",inversedBy="abonnements")
-     * @ORM\JoinColumn(nullable=true)
-     */
-    private $commercial;
+
 
     /**
      * Get id

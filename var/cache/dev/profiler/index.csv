@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 a665dd,127.0.0.1,GET,http://localhost:8000/,1522953664,,200
 c4a1eb,127.0.0.1,GET,http://localhost:8000/messages/,1522953671,,302
 45d041,127.0.0.1,GET,http://localhost:8000/login,1522953671,,200
@@ -539,3 +540,12 @@ fc90ae,127.0.0.1,GET,http://localhost:8000/profile/,1523902673,,500
 341349,127.0.0.1,GET,http://localhost:8000/profile/,1523903025,,200
 2be544,127.0.0.1,GET,http://localhost:8000/,1523905350,,200
 fec139,127.0.0.1,GET,http://127.0.0.1:8000/,1523993785,,200
+=======
+43543a,127.0.0.1,GET,http://localhost:8000/profile/,1523983483,33eb10,200
+33eb10,127.0.0.1,GET,http://localhost:8000/profile/,1523983483,,500
+a288dd,127.0.0.1,GET,http://localhost:8000/profile/,1523983621,c48d36,200
+c48d36,127.0.0.1,GET,http://localhost:8000/profile/,1523983621,,500
+825bb3,127.0.0.1,GET,http://localhost:8000/profile/,1523983700,f471fe,200
+f471fe,127.0.0.1,GET,http://localhost:8000/profile/,1523983700,,500
+b7ca88,127.0.0.1,GET,http://localhost:8000/profile/,1523983724,,200
+>>>>>>> e5a569eef6a44967ef5c7554dafea96400cecf2a

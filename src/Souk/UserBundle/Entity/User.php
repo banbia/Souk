@@ -80,26 +80,7 @@ class User extends BaseUser implements ParticipantInterface
      * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\Commandes", mappedBy="client")
      */
     private $commandes;
-    /**
-     * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\Abonnements", mappedBy="commercial")
-     */
-    private $abonnements;
 
-    /**
-     * @return mixed
-     */
-    public function getAbonnements()
-    {
-        return $this->abonnements;
-    }
-
-    /**
-     * @param mixed $abonnements
-     */
-    public function setAbonnements($abonnements)
-    {
-        $this->abonnements = $abonnements;
-    }
 
     /**
      * @return Collection|Commandes[]
@@ -137,7 +118,6 @@ class User extends BaseUser implements ParticipantInterface
         $this->evennements = new ArrayCollection();
         $this->commandes = new ArrayCollection();
         $this->reclamations = new ArrayCollection();
-        $this->abonnements = new ArrayCollection();
         // your own logic
     }
 
