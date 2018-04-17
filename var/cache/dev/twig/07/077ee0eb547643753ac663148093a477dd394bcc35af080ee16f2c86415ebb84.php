@@ -15,11 +15,11 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d0d844be8141cc23153b44c835bbcf8fc9ada957c360fd08db9ea73e2d167bfc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_d0d844be8141cc23153b44c835bbcf8fc9ada957c360fd08db9ea73e2d167bfc->enter($__internal_d0d844be8141cc23153b44c835bbcf8fc9ada957c360fd08db9ea73e2d167bfc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
+        $__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd->enter($__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
 
-        $__internal_03492aaacb05844ac100cbb828ccf81f1fbc1f009f7355ed9397f55df7c1629d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_03492aaacb05844ac100cbb828ccf81f1fbc1f009f7355ed9397f55df7c1629d->enter($__internal_03492aaacb05844ac100cbb828ccf81f1fbc1f009f7355ed9397f55df7c1629d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
+        $__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f->enter($__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
 
         // line 2
         echo "
@@ -91,10 +91,7 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
         // line 47
         echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "evennements", array())), "html", null, true);
         echo " Evennements</h3>
-                        <a href=\"";
-        // line 48
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("");
-        echo "\">Mes abonnements</a>
+                        <a href=\"\">Mes abonnements</a>
                     </div>
                 </div>
             </div>
@@ -107,10 +104,7 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
                         </div>
                     </div>
                     <div class=\"service-content\">
-                        <h3>";
-        // line 61
-        echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "abonnements", array())), "html", null, true);
-        echo " Abonnements</h3>
+                        <h3> Abonnements</h3>
                     </div>
                 </div>
             </div>
@@ -135,10 +129,10 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
 </div>
 ";
         
-        $__internal_d0d844be8141cc23153b44c835bbcf8fc9ada957c360fd08db9ea73e2d167bfc->leave($__internal_d0d844be8141cc23153b44c835bbcf8fc9ada957c360fd08db9ea73e2d167bfc_prof);
+        $__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd->leave($__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd_prof);
 
         
-        $__internal_03492aaacb05844ac100cbb828ccf81f1fbc1f009f7355ed9397f55df7c1629d->leave($__internal_03492aaacb05844ac100cbb828ccf81f1fbc1f009f7355ed9397f55df7c1629d_prof);
+        $__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f->leave($__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f_prof);
 
     }
 
@@ -154,7 +148,7 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
 
     public function getDebugInfo()
     {
-        return array (  128 => 74,  112 => 61,  96 => 48,  92 => 47,  61 => 18,  56 => 16,  53 => 15,  51 => 14,  44 => 10,  40 => 9,  34 => 6,  30 => 5,  25 => 2,);
+        return array (  122 => 74,  92 => 47,  61 => 18,  56 => 16,  53 => 15,  51 => 14,  44 => 10,  40 => 9,  34 => 6,  30 => 5,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -214,7 +208,7 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
                     </div>
                     <div class=\"service-content\">
                         <h3>{{ user.evennements|length }} Evennements</h3>
-                        <a href=\"{{ path('') }}\">Mes abonnements</a>
+                        <a href=\"\">Mes abonnements</a>
                     </div>
                 </div>
             </div>
@@ -227,7 +221,7 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
                         </div>
                     </div>
                     <div class=\"service-content\">
-                        <h3>{{ user.abonnements|length }} Abonnements</h3>
+                        <h3> Abonnements</h3>
                     </div>
                 </div>
             </div>
