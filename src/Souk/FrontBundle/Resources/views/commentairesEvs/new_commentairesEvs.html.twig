@@ -5,6 +5,12 @@
 
     <!-- /row -->
     <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <a href="#"><i class="fa fa-flag pull-right"></i></a>
+                <br/>
+            </div>
+        </div>
         <div class="col-md-6">
             {{ form_start(form) }}
             {{ form_errors(form.contenu) }}
@@ -36,8 +42,8 @@
                             <div class="panel-heading">
                                 <strong>{{ com.client.username }}</strong> <label class="text-muted text-right"> commenté le {{ com.dateCmt|date('D-M-Y') }} </label>
                                 {% if app.user.id  == com.client.id %}
-                                    <a href="{{ path('commentairesEvs_delete',{'id_Evs':com.id}) }}"><i class="fa fa-trash-o"></i></a>
-                                    <a href=""><i class="fa fa-edit"></i></a>
+                                    <a href="{{ path('commentairesEvs_delete',{'evennement':com.evennement.id,'com':com.id}) }}"><i class="fa fa-trash-o"></i></a>
+                                    <a href="{{ path('commentairesEvs_Edit',{'evennement':com.evennement.id,'com':com.id}) }}"><i class="fa fa-edit"></i></a>
                                 {% endif %}
                             </div>
                             <div class="panel-body">

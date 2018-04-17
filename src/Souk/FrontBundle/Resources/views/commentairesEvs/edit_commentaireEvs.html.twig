@@ -1,5 +1,18 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
 {% block body %}
-<p> bonjour </p>
+
+
+    <!-- /row -->
+    <div class="row">
+        <div class="col-md-6">
+            {{ form_start(form) }}
+            {{ form_errors(form.contenu) }}
+            {{ form_widget(form.contenu, {'attr': {'class': 'comment form-control'}}) }}
+            <button type="submit" class="btn sign pull-right"><i class="fa fa-commenting-o"></i> Modifier </button>
+            {{ form_end(form) }}
+            <br>
+            <br>
+        </div>
+    </div>
 {% endblock %}

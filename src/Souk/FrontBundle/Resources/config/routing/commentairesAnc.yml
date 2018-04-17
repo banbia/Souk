@@ -3,6 +3,17 @@ commentairesAnc_new:
     defaults: { _controller: FrontBundle:CommentairesAnc:new}
 
 commentairesAnc_delete:
-    path:     /delete_com/{id_Anc}
+    path:     /delete_com/{com}/{annonce}
     defaults: { _controller: FrontBundle:CommentairesAnc:delete}
-
+commentairesAnc_Edit:
+    path:     /edit_com/{com}/{annonce}
+    defaults: { _controller: FrontBundle:CommentairesAnc:edit}
+all:
+    path:     /commentaire/all
+    defaults: { _controller: FrontBundle:CommentairesAnc:all}
+find_commentaire:
+    path:     /commentaire/find/{id}
+    defaults: { _controller: FrontBundle:CommentairesAnc:find}
+create_commentaire:
+    path:     /commentaire/new_Anc/{annonce}
+    defaults: { _controller: FrontBundle:CommentairesAnc:newAnc}
