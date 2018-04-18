@@ -32,23 +32,12 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cd5bf77a6b5a313b6c6db6d487ed3353e156b3e8
 client_commentairesAnc:
     resource: "@FrontBundle/Resources/config/routing/commentairesAnc.yml"
-    prefix:   /client/commentairesAnc
-
-<<<<<<< HEAD
-=======
+    prefix:   /commentairesAnc
 client_commentairesEvs:
     resource: "@FrontBundle/Resources/config/routing/commentairesEvs.yml"
-    prefix:   /client/commentairesEvs
->>>>>>> cd5bf77a6b5a313b6c6db6d487ed3353e156b3e8
-
+    prefix:   /commentairesEvs
 commercial_annonces:
     resource: "@BackBundle/Resources/config/routing/annonces.yml"
     prefix:   /commercial/annonces
