@@ -5,3 +5,12 @@ ce7369,127.0.0.1,GET,http://localhost:8000/annonces/1/show,1524043802,,200
 d63b4e,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,,404
 29ad5f,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,1017f0,200
 1017f0,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,,404
+2042cf,127.0.0.1,GET,http://localhost:8000/annonces/1/show,1524078738,7e6685,200
+7e6685,127.0.0.1,GET,http://localhost:8000/annonces/1/show,1524078738,,500
+dc2a42,127.0.0.1,GET,http://localhost:8000/annonces/1/show,1524078761,,200
+b7231e,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524078761,cfb35f,200
+cfb35f,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524078761,,404
+9c79ef,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524078761,5bb97c,200
+5bb97c,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524078761,,404
+0ebab1,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524078761,09c9ae,200
+09c9ae,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524078761,,404

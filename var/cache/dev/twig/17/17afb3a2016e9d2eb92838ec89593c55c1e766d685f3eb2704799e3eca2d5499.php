@@ -23,29 +23,29 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_30f74c28d58fe197ed0165c16436d06d8cdee0b3e0a63918e1396d511004ab6d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_30f74c28d58fe197ed0165c16436d06d8cdee0b3e0a63918e1396d511004ab6d->enter($__internal_30f74c28d58fe197ed0165c16436d06d8cdee0b3e0a63918e1396d511004ab6d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:annonces:show.html.twig"));
+        $__internal_04bfb91094a3b356bedeb4bcfa845b3897ee825159d30a69584abb2a2e5ecfef = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_04bfb91094a3b356bedeb4bcfa845b3897ee825159d30a69584abb2a2e5ecfef->enter($__internal_04bfb91094a3b356bedeb4bcfa845b3897ee825159d30a69584abb2a2e5ecfef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:annonces:show.html.twig"));
 
-        $__internal_ec3a4b5bbede24ab3e452fb793c7133e30d2d7fcfc9e6eb7551a84d81b4314ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ec3a4b5bbede24ab3e452fb793c7133e30d2d7fcfc9e6eb7551a84d81b4314ee->enter($__internal_ec3a4b5bbede24ab3e452fb793c7133e30d2d7fcfc9e6eb7551a84d81b4314ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:annonces:show.html.twig"));
+        $__internal_8b4ba1eaefde9ead189b495820759afecb4ba5394698450d62d077fb26278367 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8b4ba1eaefde9ead189b495820759afecb4ba5394698450d62d077fb26278367->enter($__internal_8b4ba1eaefde9ead189b495820759afecb4ba5394698450d62d077fb26278367_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:annonces:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_30f74c28d58fe197ed0165c16436d06d8cdee0b3e0a63918e1396d511004ab6d->leave($__internal_30f74c28d58fe197ed0165c16436d06d8cdee0b3e0a63918e1396d511004ab6d_prof);
+        $__internal_04bfb91094a3b356bedeb4bcfa845b3897ee825159d30a69584abb2a2e5ecfef->leave($__internal_04bfb91094a3b356bedeb4bcfa845b3897ee825159d30a69584abb2a2e5ecfef_prof);
 
         
-        $__internal_ec3a4b5bbede24ab3e452fb793c7133e30d2d7fcfc9e6eb7551a84d81b4314ee->leave($__internal_ec3a4b5bbede24ab3e452fb793c7133e30d2d7fcfc9e6eb7551a84d81b4314ee_prof);
+        $__internal_8b4ba1eaefde9ead189b495820759afecb4ba5394698450d62d077fb26278367->leave($__internal_8b4ba1eaefde9ead189b495820759afecb4ba5394698450d62d077fb26278367_prof);
 
     }
 
     // line 2
     public function block_style($context, array $blocks = array())
     {
-        $__internal_35ff643db56d7af6a6ab0f43879d4da22ab11c9a863afe7c0ffcabcfe2bd5748 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_35ff643db56d7af6a6ab0f43879d4da22ab11c9a863afe7c0ffcabcfe2bd5748->enter($__internal_35ff643db56d7af6a6ab0f43879d4da22ab11c9a863afe7c0ffcabcfe2bd5748_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
+        $__internal_c3175e78daca87cebeed9845df96612deb3dfc8ad7851984a009870300debec3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c3175e78daca87cebeed9845df96612deb3dfc8ad7851984a009870300debec3->enter($__internal_c3175e78daca87cebeed9845df96612deb3dfc8ad7851984a009870300debec3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
 
-        $__internal_7c788582016ca90b2ef79a704176f06549a185b2e532300555a89b70bf94f5dd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7c788582016ca90b2ef79a704176f06549a185b2e532300555a89b70bf94f5dd->enter($__internal_7c788582016ca90b2ef79a704176f06549a185b2e532300555a89b70bf94f5dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
+        $__internal_55f2fde79877466eaa474da750cb19134d87059d8212594d97e167b287cf199f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_55f2fde79877466eaa474da750cb19134d87059d8212594d97e167b287cf199f->enter($__internal_55f2fde79877466eaa474da750cb19134d87059d8212594d97e167b287cf199f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
 
         // line 3
         echo "
@@ -59,21 +59,21 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
         echo "\" rel=\"stylesheet\"/>
 ";
         
-        $__internal_7c788582016ca90b2ef79a704176f06549a185b2e532300555a89b70bf94f5dd->leave($__internal_7c788582016ca90b2ef79a704176f06549a185b2e532300555a89b70bf94f5dd_prof);
+        $__internal_55f2fde79877466eaa474da750cb19134d87059d8212594d97e167b287cf199f->leave($__internal_55f2fde79877466eaa474da750cb19134d87059d8212594d97e167b287cf199f_prof);
 
         
-        $__internal_35ff643db56d7af6a6ab0f43879d4da22ab11c9a863afe7c0ffcabcfe2bd5748->leave($__internal_35ff643db56d7af6a6ab0f43879d4da22ab11c9a863afe7c0ffcabcfe2bd5748_prof);
+        $__internal_c3175e78daca87cebeed9845df96612deb3dfc8ad7851984a009870300debec3->leave($__internal_c3175e78daca87cebeed9845df96612deb3dfc8ad7851984a009870300debec3_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1b62ecb18e170ddd660be11c4c6ad990a94407bee3e5198c8991cc33348b7f40 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1b62ecb18e170ddd660be11c4c6ad990a94407bee3e5198c8991cc33348b7f40->enter($__internal_1b62ecb18e170ddd660be11c4c6ad990a94407bee3e5198c8991cc33348b7f40_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a47b7c995c76e26a492d37a1b63afbdfd1a6a88a983f74e637b6410f3f44a396 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a47b7c995c76e26a492d37a1b63afbdfd1a6a88a983f74e637b6410f3f44a396->enter($__internal_a47b7c995c76e26a492d37a1b63afbdfd1a6a88a983f74e637b6410f3f44a396_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_af8ee5b6fdfdde867119e391a98d8ab81e40d3829de1d0c1aabd1b6dabdf2dbe = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_af8ee5b6fdfdde867119e391a98d8ab81e40d3829de1d0c1aabd1b6dabdf2dbe->enter($__internal_af8ee5b6fdfdde867119e391a98d8ab81e40d3829de1d0c1aabd1b6dabdf2dbe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3d24bc287e404e2a2b5ac8d8762c1d88a2cb9e871b07e72a58dd153e76e44186 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3d24bc287e404e2a2b5ac8d8762c1d88a2cb9e871b07e72a58dd153e76e44186->enter($__internal_3d24bc287e404e2a2b5ac8d8762c1d88a2cb9e871b07e72a58dd153e76e44186_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
         echo "    <h1>Annonce</h1>
@@ -125,18 +125,32 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
         </tbody>
     </table>
 
-<div class=\"content\">
 <!-- Nour's work -->
-    <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#newCom\">
+<div class=\"content\">
+    ";
+        // line 41
+        if ((($context["com"] ?? $this->getContext($context, "com")) == 0)) {
+            // line 42
+            echo "    <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#newCom\">
 
         <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Commander</span>
     </a>
-</div>
-    <!-- Modal -->
+    ";
+        } else {
+            // line 47
+            echo "        <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noCom\">
+
+            <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Commander</span>
+        </a>
+    ";
+        }
+        // line 52
+        echo "</div>
+    <!-- Modal new com-->
     <div id=\"newCom\" class=\"modal fade\" role=\"dialog\">
         <div class=\"modal-dialog\">
             ";
-        // line 49
+        // line 56
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
         echo "
             <!-- Modal content-->
@@ -151,29 +165,29 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
                         <div class=\"col-md-12\">
                             <div class=\"form-group col-md-6\">
                                 ";
-        // line 61
+        // line 68
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dateCom", array()), 'label');
         echo "
                                 ";
-        // line 62
+        // line 69
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dateCom", array()), 'errors');
         echo "
                                 ";
-        // line 63
+        // line 70
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dateCom", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                             </div>
                             <div class=\"form-group col-md-6\">
                                 ";
-        // line 66
+        // line 73
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "quantite", array()), 'label');
         echo "
                                 ";
-        // line 67
+        // line 74
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "quantite", array()), 'errors');
         echo "
                                 ";
-        // line 68
+        // line 75
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "quantite", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                             </div>
@@ -189,30 +203,53 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
 
             </div>
             ";
-        // line 81
+        // line 88
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
         </div>
     </div>
+    <!-- Modal no com-->
+    <div id=\"noCom\" class=\"modal fade\" role=\"dialog\">
+        <div class=\"modal-dialog\">
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                    <h4 class=\"modal-title\">Nouvelle Commande </h4>
+                </div>
+
+                <div class=\"modal-body\">
+                    <p>Vus avez déjà une commande en attente pour cette annonce.</p>
+
+
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 ";
         
-        $__internal_af8ee5b6fdfdde867119e391a98d8ab81e40d3829de1d0c1aabd1b6dabdf2dbe->leave($__internal_af8ee5b6fdfdde867119e391a98d8ab81e40d3829de1d0c1aabd1b6dabdf2dbe_prof);
+        $__internal_3d24bc287e404e2a2b5ac8d8762c1d88a2cb9e871b07e72a58dd153e76e44186->leave($__internal_3d24bc287e404e2a2b5ac8d8762c1d88a2cb9e871b07e72a58dd153e76e44186_prof);
 
         
-        $__internal_1b62ecb18e170ddd660be11c4c6ad990a94407bee3e5198c8991cc33348b7f40->leave($__internal_1b62ecb18e170ddd660be11c4c6ad990a94407bee3e5198c8991cc33348b7f40_prof);
+        $__internal_a47b7c995c76e26a492d37a1b63afbdfd1a6a88a983f74e637b6410f3f44a396->leave($__internal_a47b7c995c76e26a492d37a1b63afbdfd1a6a88a983f74e637b6410f3f44a396_prof);
 
     }
 
-    // line 85
+    // line 115
     public function block_js($context, array $blocks = array())
     {
-        $__internal_233bda2d22e491e10e37fdaa8813ebda9e94e375903f729555204bec9af70e5b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_233bda2d22e491e10e37fdaa8813ebda9e94e375903f729555204bec9af70e5b->enter($__internal_233bda2d22e491e10e37fdaa8813ebda9e94e375903f729555204bec9af70e5b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
+        $__internal_b8446fefff92d36f68b0efbc2f921016150783afbf71834d978b8b5944f8a268 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_b8446fefff92d36f68b0efbc2f921016150783afbf71834d978b8b5944f8a268->enter($__internal_b8446fefff92d36f68b0efbc2f921016150783afbf71834d978b8b5944f8a268_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        $__internal_fc6c7524b2694e7c566ab31f483c1e70f0c2fb213403306a814621c710d0fcd0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fc6c7524b2694e7c566ab31f483c1e70f0c2fb213403306a814621c710d0fcd0->enter($__internal_fc6c7524b2694e7c566ab31f483c1e70f0c2fb213403306a814621c710d0fcd0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
+        $__internal_6e69fb3af6f7ca17c8209a22392692c580b7c932ddd00b210c32db000bf97c5b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6e69fb3af6f7ca17c8209a22392692c580b7c932ddd00b210c32db000bf97c5b->enter($__internal_6e69fb3af6f7ca17c8209a22392692c580b7c932ddd00b210c32db000bf97c5b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 86
+        // line 116
         echo "    <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
     <link rel=\"stylesheet\" href=\"/resources/demos/style.css\">
     <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>
@@ -227,10 +264,10 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
     </script>
 ";
         
-        $__internal_fc6c7524b2694e7c566ab31f483c1e70f0c2fb213403306a814621c710d0fcd0->leave($__internal_fc6c7524b2694e7c566ab31f483c1e70f0c2fb213403306a814621c710d0fcd0_prof);
+        $__internal_6e69fb3af6f7ca17c8209a22392692c580b7c932ddd00b210c32db000bf97c5b->leave($__internal_6e69fb3af6f7ca17c8209a22392692c580b7c932ddd00b210c32db000bf97c5b_prof);
 
         
-        $__internal_233bda2d22e491e10e37fdaa8813ebda9e94e375903f729555204bec9af70e5b->leave($__internal_233bda2d22e491e10e37fdaa8813ebda9e94e375903f729555204bec9af70e5b_prof);
+        $__internal_b8446fefff92d36f68b0efbc2f921016150783afbf71834d978b8b5944f8a268->leave($__internal_b8446fefff92d36f68b0efbc2f921016150783afbf71834d978b8b5944f8a268_prof);
 
     }
 
@@ -246,7 +283,7 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
 
     public function getDebugInfo()
     {
-        return array (  216 => 86,  207 => 85,  193 => 81,  177 => 68,  173 => 67,  169 => 66,  163 => 63,  159 => 62,  155 => 61,  140 => 49,  120 => 34,  109 => 30,  102 => 26,  95 => 22,  88 => 18,  79 => 11,  70 => 10,  58 => 8,  51 => 3,  42 => 2,  11 => 1,);
+        return array (  253 => 116,  244 => 115,  207 => 88,  191 => 75,  187 => 74,  183 => 73,  177 => 70,  173 => 69,  169 => 68,  154 => 56,  148 => 52,  141 => 47,  134 => 42,  132 => 41,  120 => 34,  109 => 30,  102 => 26,  95 => 22,  88 => 18,  79 => 11,  70 => 10,  58 => 8,  51 => 3,  42 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -297,14 +334,21 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
         </tbody>
     </table>
 
-<div class=\"content\">
 <!-- Nour's work -->
+<div class=\"content\">
+    {% if com==0 %}
     <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#newCom\">
 
         <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Commander</span>
     </a>
+    {% else %}
+        <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noCom\">
+
+            <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Commander</span>
+        </a>
+    {% endif %}
 </div>
-    <!-- Modal -->
+    <!-- Modal new com-->
     <div id=\"newCom\" class=\"modal fade\" role=\"dialog\">
         <div class=\"modal-dialog\">
             {{ form_start(form) }}
@@ -340,6 +384,29 @@ class __TwigTemplate_280f250e35200605d37d5d869c20a79d5fa7abe542663cbec5d38201f86
 
             </div>
             {{ form_end(form) }}
+        </div>
+    </div>
+    <!-- Modal no com-->
+    <div id=\"noCom\" class=\"modal fade\" role=\"dialog\">
+        <div class=\"modal-dialog\">
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                    <h4 class=\"modal-title\">Nouvelle Commande </h4>
+                </div>
+
+                <div class=\"modal-body\">
+                    <p>Vus avez déjà une commande en attente pour cette annonce.</p>
+
+
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i>  Fermer</button>
+
+                </div>
+
+            </div>
         </div>
     </div>
 {% endblock body %}
