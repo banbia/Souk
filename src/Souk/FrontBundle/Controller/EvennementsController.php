@@ -2,7 +2,6 @@
 
 namespace Souk\FrontBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Souk\BackBundle\Entity\CommentairesEvs;
 use Souk\BackBundle\Entity\Evennements;
 use Souk\BackBundle\Form\CommentairesEvsType;
@@ -36,7 +35,7 @@ class EvennementsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $evennement = new Evennement();
+        $evennement = new Evennements();
         $form = $this->createForm('Souk\BackBundle\Form\EvennementsType', $evennement);
         $form->handleRequest($request);
 
