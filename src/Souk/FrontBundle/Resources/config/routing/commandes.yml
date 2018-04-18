@@ -26,3 +26,12 @@ commandes_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontBundle:Commandes:delete" }
     methods:  DELETE
+liste_commandes:
+    path:     /commandes/liste
+    defaults: { _controller: "FrontBundle:Commandes:liste" }
+
+create_commande:
+    path:     /commandes/{annonce}/{date}/{quantite}/{client}
+    defaults: { _controller: "FrontBundle:Commandes:create" }
+
+

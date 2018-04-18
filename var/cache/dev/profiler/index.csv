@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 9908f6,127.0.0.1,GET,http://localhost:8000/,1524044703,,200
 231772,127.0.0.1,GET,http://localhost:8000/login,1524045175,,200
 89ed66,127.0.0.1,POST,http://localhost:8000/login_check,1524045191,,302
@@ -47,3 +48,16 @@ d87cb2,127.0.0.1,GET,http://localhost:8000/evennements/commentaire/find/11,15240
 4e02eb,127.0.0.1,GET,http://localhost:8000/evennements/evennement/1,1524049885,,200
 36e66e,127.0.0.1,GET,http://localhost:8000/bundles/front/css/bootstrap.css.map,1524050735,340ee7,200
 340ee7,127.0.0.1,GET,http://localhost:8000/bundles/front/css/bootstrap.css.map,1524050735,,404
+=======
+<<<<<<< HEAD
+75e4ba,127.0.0.1,GET,http://localhost:8000/,1524074455,,200
+=======
+ce7369,127.0.0.1,GET,http://localhost:8000/annonces/1/show,1524043802,,200
+4736f4,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,1e5381,200
+1e5381,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,,404
+00e4dc,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,d63b4e,200
+d63b4e,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,,404
+29ad5f,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,1017f0,200
+1017f0,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,,404
+>>>>>>> 8febc1997f9381e3b34c85c50b7a07745bd24673
+>>>>>>> 5ac144c5c652fdf0d3717d7636531bbc5f51eed9
