@@ -38,6 +38,28 @@ class CommentairesEvs
     private $dateCmt;
 
     /**
+     *
+     * @ORM\ManyToOne(targetEntity="Souk\UserBundle\Entity\User",inversedBy="id")
+     * @ORM\JoinColumn(name="client",referencedColumnName="id",onDelete="CASCADE")
+     */
+    private $client;
+
+    /**
+     * @return mixed
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * @param mixed $client
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
+    }
+    /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Evennements", inversedBy="commentaires")
      * @ORM\JoinColumn(nullable=true)
      */
