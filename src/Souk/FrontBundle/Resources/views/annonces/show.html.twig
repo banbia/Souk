@@ -1,14 +1,18 @@
 {% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
+{% endblock style %}
 {% block body %}
-   {# <h1>Annonce</h1>
+    <h1>Annonce</h1>
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ annonce.id }}</td>
-            </tr>
+
             <tr>
                 <th>Titre</th>
                 <td>{{ annonce.titre }}</td>
@@ -32,48 +36,63 @@
         </tbody>
     </table>
 
-#}
-    <div class="row">
-        <div class="col-xs-12 col-sm-7">
-            <div class="panel panel-body">
-                <div class="profile-about">
-                    <div class="profile-photo">
-                        <a href="{{ asset('bundles/front/images/pic1.jpg') }}"  data-fancybox data-caption="image">
-                            <img  src="{{ asset('bundles/front/images/pic1.jpg') }}" alt="image"/>
-                        </a>
-                    </div>
-                    <div class="profile-description">
-                        <p>
-                            {{ annonce.description|raw }}
-                        </p>
-                    </div>
-                    <hr>
+<div class="content">
+<!-- Nour's work -->
+    <a href="#" class="btn left" data-toggle="modal" data-target="#newCom">
+
+        <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Commander</span>
+    </a>
+</div>
+    <!-- Modal -->
+    <div id="newCom" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            {{ form_start(form) }}
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Nouvelle Commande </h4>
                 </div>
 
-                <div class="profile-address">
-                    <h3>Adresse</h3>
-                    {{ profile.address ? profile.address ~ ',' : '' }} {{ profile.district }}, {{ profile.province }}
+                <div class="modal-body">
+
+                        <div class="col-md-12">
+                            <div class="form-group col-md-6">
+                                {{ form_label(form.dateCom) }}
+                                {{ form_errors(form.dateCom) }}
+                                {{ form_widget(form.dateCom, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(form.quantite) }}
+                                {{ form_errors(form.quantite) }}
+                                {{ form_widget(form.quantite, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+
                 </div>
-                {% if profile.tags|length > 0 %}
-                    <div class="profile-tags">
-                        <h3>Expertises</h3>
-                        {% for tag in profile.tags %}
-                            <a class="btn btn-default" href="{{ path('profiles_by_district_tag', {
-                                'province_slug': profile.province.slug,
-                                'district_slug': profile.district.slug,
-                                'tag_slug': tag.slug
-                            }) }}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-                <hr>
-                {% if profile.phone %}<span class="phone"><i class="glyphicon glyphicon-phone-alt"></i> {{ profile.phone }}</span>{% endif %}
-                {% if profile.mobile %}<span class="phone"><i class="glyphicon glyphicon-earphone"></i> {{ profile.mobile }}</span>{% endif %}
-                {% if profile.email %}<span class="phone"><i class="glyphicon glyphicon-envelope"></i> {{ profile.email }}</span>{% endif %}
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default" ><i class="fa fa-check"></i>  Valider  </button>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>  Fermer</button>
+
+                </div>
+
             </div>
-        </div>
-        <div id="sidebar" class="col-xs-12 col-sm-5">
-            <div id="map"><i class="glyphicon glyphicon-info-sign"></i> Carte non disponible</div>
+            {{ form_end(form) }}
         </div>
     </div>
-{% endblock %}
+{% endblock body %}
+{% block js %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#souk_backbundle_commandes_dateCom" ).datepicker({
+                altField: "#souk_backbundle_commandes_dateCom",
+                altFormat: "yy-mm-dd"
+            });
+        } );
+    </script>
+{% endblock js %}

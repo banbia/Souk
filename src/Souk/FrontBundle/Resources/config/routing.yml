@@ -2,3 +2,6 @@ front_homepage:
     path:     /
     defaults: { _controller: FrontBundle:Default:index }
 
+front_commandes:
+    resource: "@FrontBundle/Resources/config/routing/commandes.yml"
+    prefix:   /commandes

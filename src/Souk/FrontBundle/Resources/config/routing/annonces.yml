@@ -1,28 +1,10 @@
-commercial_annonces_index:
-     path:     /
-     defaults: { _controller: "FrontBundle:Annonces:index" }
-     methods:  GET
-
 client_annonces_index:
     path:     /
     defaults: { _controller: "FrontBundle:Annonces:index" }
     methods:  GET
 
-annonces_show:
+client_annonces_show:
     path:     /{id}/show
     defaults: { _controller: "FrontBundle:Annonces:show" }
-    methods:  GET
-annonces_new:
-    path:     /new
-    defaults: { _controller: "FrontBundle:Annonces:new" }
     methods:  [GET, POST]
 
-annonces_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "FrontBundle:Annonces:edit" }
-    methods:  [GET, POST]
-
-annonces_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "FrontBundle:Annonces:delete" }
-    methods:  DELETE

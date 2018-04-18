@@ -1,0 +1,167 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
+{% endblock style %}
+{% block body %}
+    <div class="wrap">
+        <h1 align="center">Mes demandes</h1>
+        <ul class="tabs group">
+            <li><a class="active" href="#one">Tous</a></li>
+            <li><a href="#two">En attente</a></li>
+            <li><a href="#three">Confirmés</a></li>
+        </ul>
+        <div id="panels">
+            <p id="one">
+            <table>
+                <thead>
+                <tr>
+                    <th>Date commande</th>
+                    <th>Titre Annonce</th>
+                    <th>Catégorie Annonce</th>
+                    <th>Quantite</th>
+                    <th>Etat</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for commande in commandes %}
+                    <tr>
+                        <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                        <td>{{ commande.annonce.titre }}</td>
+                        <td>{{ commande.annonce.categorie.designation }}</td>
+                        <td>{{ commande.quantite }}</td>
+                        <td>{{ commande.etat }}</td>
+                        <td>
+                            {% if is_granted('ROLE_CLIENT') %}
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('commandes_show', { 'id': commande.id }) }}">show</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('commandes_edit', { 'id': commande.id }) }}">edit</a>
+                                    </li>
+                                </ul>
+
+                            {% elseif is_granted('ROLE_COM') %}
+
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            </p>
+            <p id="two">
+            <table>
+                <thead>
+                <tr>
+                    <th>Date commande</th>
+                    <th>Titre Annonce</th>
+                    <th>Catégorie Annonce</th>
+                    <th>Quantite</th>
+                    <th>Etat</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for commande in commandes_attente %}
+                    <tr>
+                        <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                        <td>{{ commande.annonce.titre }}</td>
+                        <td>{{ commande.annonce.categorie.designation }}</td>
+                        <td>{{ commande.quantite }}</td>
+                        <td>{{ commande.etat }}</td>
+                        <td>
+                            {% if is_granted('ROLE_CLIENT') %}
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('commandes_show', { 'id': commande.id }) }}">show</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('commandes_edit', { 'id': commande.id }) }}">edit</a>
+                                    </li>
+                                </ul>
+
+                            {% elseif is_granted('ROLE_COM') %}
+
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            </p>
+            <p id="three">
+            <table>
+                <thead>
+                <tr>
+                    <th>Date commande</th>
+                    <th>Titre Annonce</th>
+                    <th>Catégorie Annonce</th>
+                    <th>Quantite</th>
+                    <th>Etat</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for commande in commandes_confirme %}
+                    <tr>
+                        <td>{% if commande.dateCom %}{{ commande.dateCom|date('d-m-Y') }}{% endif %}</td>
+                        <td>{{ commande.annonce.titre }}</td>
+                        <td>{{ commande.annonce.categorie.designation }}</td>
+                        <td>{{ commande.quantite }}</td>
+                        <td>{{ commande.etat }}</td>
+                        <td>
+                            {% if is_granted('ROLE_CLIENT') %}
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('commandes_show', { 'id': commande.id }) }}">show</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('commandes_edit', { 'id': commande.id }) }}">edit</a>
+                                    </li>
+                                </ul>
+
+                            {% elseif is_granted('ROLE_COM') %}
+
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+{% endblock %}
+{% block js %}
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+    <script>
+    (function($) {
+
+        var tabs =  $(".tabs li a");
+
+        tabs.click(function() {
+            var panels = this.hash.replace('/','');
+            tabs.removeClass("active");
+            $(this).addClass("active");
+            $("#panels").find('p').hide();
+            $(panels).fadeIn(200);
+        });
+
+    })(jQuery);
+</script>
+{% endblock js %}

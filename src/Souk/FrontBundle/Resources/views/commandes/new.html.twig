@@ -1,0 +1,22 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+
+{% block body %}
+    <h1>Nouvelle Commande</h1>
+
+    {{ form_start(form) }}
+    <div class="col-md-12">
+        <div class="form-group col-md-6">
+            {{ form_label(form.dateCom) }}
+            {{ form_errors(form.dateCom) }}
+            {{ form_widget(form.dateCom, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form_label(form.quantite) }}
+            {{ form_errors(form.quantite) }}
+            {{ form_widget(form.quantite, {'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default" ><i class="fa fa-check"></i>  Valider  </button>
+    {{ form_end(form) }}
+
+{% endblock %}
