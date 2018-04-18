@@ -546,6 +546,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'client_annonces_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::showAction',));
                 }
                 not_client_annonces_show:
+<<<<<<< HEAD
 
                 // commentairesAnc_new
                 if (0 === strpos($pathinfo, '/client/annonces/annonce') && preg_match('#^/client/annonces/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
@@ -579,6 +580,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
 
                 }
+=======
+>>>>>>> 805f9bd6a7a39caffbafd4b25ddf13c50427e2f1
 
             }
 

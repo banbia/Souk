@@ -1,12 +1,20 @@
 front_homepage:
     path:     /
     defaults: { _controller: FrontBundle:Default:index }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 805f9bd6a7a39caffbafd4b25ddf13c50427e2f1
 front_reclamations:
     resource: "@FrontBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations
 front_commandes:
     resource: "@FrontBundle/Resources/config/routing/commandes.yml"
     prefix:   /commandes
+<<<<<<< HEAD
+=======
+
+>>>>>>> 805f9bd6a7a39caffbafd4b25ddf13c50427e2f1
 front_abonnemnts:
     resource: "@FrontBundle/Resources/config/routing/ComAbonnements.yml"
     prefix:   /abonnements
