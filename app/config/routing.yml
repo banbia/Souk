@@ -38,6 +38,7 @@ client_commentairesAnc:
 client_commentairesEvs:
     resource: "@FrontBundle/Resources/config/routing/commentairesEvs.yml"
     prefix:   /commentairesEvs
+    
 commercial_annonces:
     resource: "@FrontBundle/Resources/config/routing/annonces.yml"
     prefix:   /commercial/annonces
@@ -45,6 +46,7 @@ commercial_annonces:
 client_annonces:
     resource: "@FrontBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
+    
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
