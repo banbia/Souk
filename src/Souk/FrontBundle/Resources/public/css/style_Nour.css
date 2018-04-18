@@ -260,7 +260,7 @@ h1{
     padding: 20px;
     text-align: center;
     transition: all .5s ease;
-    background-color: #474747;
+    background-color: #dda1a6;
     backface-visibility:hidden;
     transform-style: preserve-3d;
     -webkit-transform: translateY(110px) rotateX(-90deg);
@@ -306,8 +306,8 @@ h1{
 }
 .yellow{background-color: #c7ff7e;}
 .orange{background-color: #831085;}
-.red{background-color: #4472e8;}
-.grey{background-color: #dda1a6;}
+.red{background-color: #3151a2;}
+.grey{background-color: #dd0f16;}
 .service-box:hover .service-icon{
     opacity: 0;
     -webkit-transform: translateY(-110px) rotateX(90deg);
