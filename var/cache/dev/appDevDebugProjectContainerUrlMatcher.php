@@ -500,6 +500,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_commandes_delete:
 
+                if (0 === strpos($pathinfo, '/commandes/commandes')) {
+                    // liste_commandes
+                    if ('/commandes/commandes/liste' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',  '_route' => 'liste_commandes',);
+                    }
+
+                    // create_commande
+                    if (preg_match('#^/commandes/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
+                    }
+
+                }
+
             }
 
             elseif (0 === strpos($pathinfo, '/commentairesEvs')) {
