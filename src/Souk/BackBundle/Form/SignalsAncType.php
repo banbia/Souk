@@ -3,6 +3,7 @@
 namespace Souk\BackBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +14,8 @@ class SignalsAncType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('contenu')->add('dateSg')->add('annonce')->add('client');
+        $builder->add('contenu',TextType::class);
+
     }/**
      * {@inheritdoc}
      */
