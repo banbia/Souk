@@ -77,9 +77,11 @@ class User extends BaseUser implements ParticipantInterface
      */
     private $reservations;
     /**
-     * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\Commandes", mappedBy="annonce")
+     * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\Commandes", mappedBy="client")
      */
     private $commandes;
+
+
     /**
      * @return Collection|Commandes[]
      */
@@ -112,6 +114,10 @@ class User extends BaseUser implements ParticipantInterface
     public function __construct()
     {
         parent::__construct();
+        $this->reservations = new ArrayCollection();
+        $this->evennements = new ArrayCollection();
+        $this->commandes = new ArrayCollection();
+        $this->reclamations = new ArrayCollection();
         // your own logic
     }
 

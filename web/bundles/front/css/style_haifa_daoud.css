@@ -1,3 +1,52 @@
+.profile-about {
+    display: flex;
+}
+
+.profile-info {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.profile-name-container {
+    padding: 5px 0 0 15px;
+}
+
+.profile-name {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.profile-spacialty {
+    color: #666;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.profile-avatar img {
+    max-width:100px;
+    max-height:100px;
+    width: auto;
+    height: auto;
+}
+
+.profile-photo img {
+    max-width:200px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+}
+
+.profile-description {
+    padding-left: 15px;
+}
+
+.profile-tags h3, .profile-address h3 {
+    font-size: 20px;
+}
 .phone {
     background-color: #fff;
     display: inline-block;
@@ -9,3 +58,4 @@
     border: 1px solid #ccc;
     border-radius: 4px
 }
+.breadcrumb a{ color:#2e337b; }

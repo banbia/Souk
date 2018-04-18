@@ -1,0 +1,46 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+{% bock style %}
+<link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
+
+{% endbock style %}
+{% block body %}
+    <h1>Reclamations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Contenu</th>
+                <th>Daterec</th>
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                <td><a href="{{ path('reclamations_show', { 'id': reclamation.id }) }}">{{ reclamation.id }}</a></td>
+                <td>{{ reclamation.contenu }}</td>
+                <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ reclamation.etat }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('reclamations_show', { 'id': reclamation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reclamations_new') }}">Create a new reclamation</a>
+        </li>
+    </ul>
+{% endblock %}

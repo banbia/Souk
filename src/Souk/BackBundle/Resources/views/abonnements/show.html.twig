@@ -1,0 +1,41 @@
+{% extends 'BackBundle::panel.html.twig' %}
+
+{% block body %}
+    <h1>Abonnement</h1>
+
+    <table>
+        <tbody>
+
+            <tr>
+                <th>Designation</th>
+                <td>{{ abonnement.designation }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ abonnement.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ abonnement.prix }}</td>
+            </tr>
+            <tr>
+                <th>Nbmois</th>
+                <td>{{ abonnement.nbMois }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('abonnements_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('abonnements_edit', { 'id': abonnement.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

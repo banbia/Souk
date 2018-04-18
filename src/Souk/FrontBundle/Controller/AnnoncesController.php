@@ -2,10 +2,17 @@
 
 namespace Souk\FrontBundle\Controller;
 
+use JMS\Serializer\SerializerBuilder;
 use Souk\BackBundle\Entity\Annonces;
 use Souk\BackBundle\Entity\Commandes;
+use Souk\BackBundle\Entity\CommentairesAnc;
+
+use Souk\BackBundle\Form\CommentairesAncType;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Annonce controller.
@@ -36,17 +43,21 @@ class AnnoncesController extends Controller
     {
         /* Nour's Work Start*/
         $commande = new Commandes();
+        $user = $this->getUser();
+        $em = $this->getDoctrine()->getManager();
         $form = $this->createForm('Souk\BackBundle\Form\CommandesType', $commande);
         $form->handleRequest($request);
-
+        $find_com = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"annonce"=>$annonce,"etat"=>0));
+        $com = count($find_com);
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+
+
             $commande->setAnnonce($annonce);
             //var_dump('<pre>'.$commande->getDateCom().'</pre>');die;
             $now = new \DateTime($commande->getDateCom());
             $commande->setDateCom($now);
             $commande->setEtat(0);//0 => en attente
-            $user = $this->getUser();
+
             $commande->setClient($user);
             $em->persist($commande);
 
@@ -66,87 +77,123 @@ class AnnoncesController extends Controller
             'annonce' => $annonce,
             'commande' => $commande,
             'form' => $form->createView(),
+            'com'=>$com
 
         ));
     }
+    // Safa Boufares  commentaire Anc
 
+    // Ajout des commentaires et les listees pour une annonce
     /**
-     * Creates a new annonce entity.
-     *
+     * @Route("/annonce/{$annonce}", name="commentairesAnc_new")
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request,$annonce)
     {
-        $annonce = new Annonce();
-        $form = $this->createForm('Souk\BackBundle\Form\AnnoncesType', $annonce);
+        //cnx bd
+        $cm = $this->getDoctrine()->getManager();
+        //extraire la liste des commentaires d'une annonce
+        $coms = $cm->getRepository('BackBundle:CommentairesAnc')->findBy(array("annonce"=>$annonce));
+        //ajout d'un noveau commentaire
+        $com_Anc =new CommentairesAnc();
+        ///récupérer annonce
+        $annonces = $cm->getRepository('BackBundle:Annonces')->find($annonce);
+        ///récupérer user
+        $user = $this->getUser();
+        $form = $this->createForm(CommentairesAncType::class,$com_Anc);
+
+        $formView=$form->createView();
+
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($annonce);
-            $em->flush();
-
-            return $this->redirectToRoute('annonces_show', array('id' => $annonce->getId()));
+        if ($form->isSubmitted()&& $form->isValid()) {
+            $com_Anc->setDateCmt(new \DateTime('now'));
+            $com_Anc->setClient($user);
+            $com_Anc->setAnnonce($annonces);
+            $cm->persist($com_Anc);
+            $cm->flush();
+            return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
         }
 
-        return $this->render('FrontBundle:annonces:new.html.twig', array(
-            'annonce' => $annonce,
-            'form' => $form->createView(),
-        ));
-    }
-    /**
-     * Displays a form to edit an existing annonce entity.
-     *
-     */
-    public function editAction(Request $request, Annonces $annonce)
-    {
-        $deleteForm = $this->createDeleteForm($annonce);
-        $editForm = $this->createForm('Souk\BackBundle\Form\AnnoncesType', $annonce);
-        $editForm->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('annonces_edit', array('id' => $annonce->getId()));
-        }
-
-        return $this->render('FrontBundle:annonces:edit.html.twig', array(
-            'annonce' => $annonce,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
+        return $this->render('FrontBundle:annonces:new_commentairesAnc.html.twig',array('coms'=>$coms,'form'=>$formView,'annonce'=>$annonces));
     }
 
+
+    // delete  des comm de l'Anc
     /**
-     * Deletes a annonce entity.
-     *
+     * @Route("/delete_com/{$com}/{$annonce}", name="commentairesAnc_delete")
      */
-    public function deleteAction(Request $request, Annonces $annonce)
+    public function deleteAction($com,$annonce)
     {
-        $form = $this->createDeleteForm($annonce);
+        $em = $this->getDoctrine()->getManager();
+        $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
+        $em->remove($comm);
+        $em->flush();
+
+        return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
+    }
+
+    // edit des comm de l'Anc
+
+    /**
+     * @Route("/Edit_com/{$com}/{$annonce}", name="commentairesAnc_Edit")
+     */
+    public function editAction(Request $request,$com,$annonce)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $com_Anc = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
+        $form=$this->createForm( CommentairesAncType::class,$com_Anc);
+        ///récupérer annonce
+        $annonces = $em->getRepository('BackBundle:Annonces')->find($annonce);
+        $formView=$form->createView();
         $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($annonce);
+        if ($form->isSubmitted()&& $form->isValid())
+        {
+            $em->persist($com_Anc);
             $em->flush();
-        }
 
-        return $this->redirectToRoute('annonces_index');
+            return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
+        }
+        return $this->render('FrontBundle:annonces:edit_commantaireAnc.html.twig',array('form'=>$formView,'annonce'=>$annonces));
+    }
+    // les services web des commentaires de l'Anc
+
+    public function allAction(Request $request){
+        $com_Anc = $this->getDoctrine()->getManager()
+            ->getRepository('BackBundle:CommentairesAnc')
+            ->findAll();
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($com_Anc, 'json');
+
+        return new JsonResponse($formatted);
     }
 
-    /**
-     * Creates a form to delete a annonce entity.
-     *
-     * @param Annonces $annonce The annonce entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Annonces $annonce)
+
+
+    public function findAction($id)
     {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('annonces_delete', array('id' => $annonce->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
+        $com_Anc = $this->getDoctrine()->getManager()
+            ->getRepository('BackBundle:CommentairesAnc')
+            ->find($id);
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($com_Anc, 'json');
+
+        return new JsonResponse($formatted);
+    }
+
+    public function newAncAction(Request $request,$annonce)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $com_Anc= new CommentairesAnc();
+        $user = $this->getUser();
+        $anonnces = $em->getRepository('BackBundle:Annonces')->find($annonce);
+        $com_Anc->setDateCmt(new \DateTime('now'));
+        $com_Anc->setClient($user);
+        $com_Anc->setAnnonce($anonnces);
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($com_Anc, 'json');
+
+        return new JsonResponse($formatted);
+
     }
 }
