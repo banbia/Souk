@@ -1,6 +1,6 @@
 <?php
 
-/* @FOSUser/Profile/show_content.html.twig */
+/* FOSUserBundle:Profile:show_content.html.twig */
 class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be54d6a extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,49 +15,48 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd->enter($__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
+        $__internal_8f0b2ade07a522ac2574238d52b772a2c098c68379e99a594b492cbb74a263e8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_8f0b2ade07a522ac2574238d52b772a2c098c68379e99a594b492cbb74a263e8->enter($__internal_8f0b2ade07a522ac2574238d52b772a2c098c68379e99a594b492cbb74a263e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
 
-        $__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f->enter($__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/Profile/show_content.html.twig"));
+        $__internal_d3eec5ee78ec9bf0d078acbb70cfef33cb4c641d40972cbf9c67be0ad04bcbf6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d3eec5ee78ec9bf0d078acbb70cfef33cb4c641d40972cbf9c67be0ad04bcbf6->enter($__internal_d3eec5ee78ec9bf0d078acbb70cfef33cb4c641d40972cbf9c67be0ad04bcbf6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Profile:show_content.html.twig"));
 
         // line 2
-        echo "
-<div class=\"fos_user_user_show\">
+        echo "<div class=\"fos_user_user_show\">
     <p >
         <label class=\"text-default\">";
-        // line 5
+        // line 4
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("profile.show.username", array(), "FOSUserBundle"), "html", null, true);
         echo ":</label>
         <label class=\"text-primary\">";
-        // line 6
+        // line 5
         echo twig_escape_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "username", array()), "html", null, true);
         echo "</label>
     </p>
     <p>
         <label class=\"text-default\">";
-        // line 9
+        // line 8
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("profile.show.email", array(), "FOSUserBundle"), "html", null, true);
         echo ":</label>
         <label class=\"text-primary\">";
-        // line 10
+        // line 9
         echo twig_escape_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "email", array()), "html", null, true);
         echo "</label>
 
     </p>
     <p>
         ";
-        // line 14
+        // line 13
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
-            // line 15
+            // line 14
             echo "            <label class=\"text-default\">Titre Commercial:</label>
             <label class=\"text-primary\">";
-            // line 16
+            // line 15
             echo twig_escape_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "TitreCommercial", array()), "html", null, true);
             echo "</label>
         ";
         }
-        // line 18
+        // line 17
         echo "    </p>
 
 
@@ -88,7 +87,7 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
                     </div>
                     <div class=\"service-content\">
                         <h3>";
-        // line 47
+        // line 46
         echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "evennements", array())), "html", null, true);
         echo " Evennements</h3>
                         <a href=\"\">Mes abonnements</a>
@@ -118,7 +117,7 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
                     </div>
                     <div class=\"service-content\">
                         <h3>";
-        // line 74
+        // line 73
         echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute(($context["user"] ?? $this->getContext($context, "user")), "reclamations", array())), "html", null, true);
         echo " Reclamations</h3>
                     </div>
@@ -129,16 +128,16 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
 </div>
 ";
         
-        $__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd->leave($__internal_7bc187cb344af53fa63f31f3e232bafc8e203dfb136cd0ddfc64f6073d1e40fd_prof);
+        $__internal_8f0b2ade07a522ac2574238d52b772a2c098c68379e99a594b492cbb74a263e8->leave($__internal_8f0b2ade07a522ac2574238d52b772a2c098c68379e99a594b492cbb74a263e8_prof);
 
         
-        $__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f->leave($__internal_244acd87440ea9a3554afacdf6df0fb80f93c09fde161638944f970b75e1022f_prof);
+        $__internal_d3eec5ee78ec9bf0d078acbb70cfef33cb4c641d40972cbf9c67be0ad04bcbf6->leave($__internal_d3eec5ee78ec9bf0d078acbb70cfef33cb4c641d40972cbf9c67be0ad04bcbf6_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@FOSUser/Profile/show_content.html.twig";
+        return "FOSUserBundle:Profile:show_content.html.twig";
     }
 
     public function isTraitable()
@@ -148,7 +147,7 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
 
     public function getDebugInfo()
     {
-        return array (  122 => 74,  92 => 47,  61 => 18,  56 => 16,  53 => 15,  51 => 14,  44 => 10,  40 => 9,  34 => 6,  30 => 5,  25 => 2,);
+        return array (  121 => 73,  91 => 46,  60 => 17,  55 => 15,  52 => 14,  50 => 13,  43 => 9,  39 => 8,  33 => 5,  29 => 4,  25 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -162,7 +161,6 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
     public function getSourceContext()
     {
         return new Twig_Source("{% trans_default_domain 'FOSUserBundle' %}
-
 <div class=\"fos_user_user_show\">
     <p >
         <label class=\"text-default\">{{ 'profile.show.username'|trans }}:</label>
@@ -241,6 +239,6 @@ class __TwigTemplate_9cb938f53246c09709c06a6f8bdca7d928923b0018733cd53108a9a14be
         </div>
     </div>
 </div>
-", "@FOSUser/Profile/show_content.html.twig", "/opt/lampp/htdocs/dev/souk/src/Souk/UserBundle/Resources/views/Profile/show_content.html.twig");
+", "FOSUserBundle:Profile:show_content.html.twig", "/opt/lampp/htdocs/dev/souk/src/Souk/UserBundle/Resources/views/Profile/show_content.html.twig");
     }
 }
