@@ -45,7 +45,9 @@ commercial_annonces:
 client_annonces:
     resource: "@FrontBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
-
+front_evennements:
+    resource: "@FrontBundle/Resources/config/routing/evennements.yml"
+    prefix:   /evennements
 fos_message:
     resource: "@FOSMessageBundle/Resources/config/routing.xml"
     prefix: /messages
