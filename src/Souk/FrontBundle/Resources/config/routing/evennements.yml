@@ -22,3 +22,6 @@ evennements_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontBundle:Evennements:delete" }
     methods:  DELETE
+commentairesEvs_new:
+    path:     /evennement/{evennement}
+    defaults: { _controller: FrontBundle:Evennements:newEvs}
