@@ -2,6 +2,7 @@
 
 namespace Souk\FrontBundle\Controller;
 
+use JMS\Serializer\SerializerBuilder;
 use Souk\BackBundle\Entity\Commandes;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -82,7 +83,7 @@ class CommandesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $commande->setAnnonce($annonce);
             $user = $this->getUser();
-            $commande->setUser($user);
+            $commande->setClient($user);
             $em->persist($commande);
             $em->flush();
 
@@ -176,5 +177,76 @@ class CommandesController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /******* crud mobile (web service) ***********************/
+    public function listeAction(Request $request, $id){
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_CLIENT')) {
+
+            $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>1));
+            $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>0));
+            $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
+
+        }else if ($this->get('security.authorization_checker')->isGranted('ROLE_COM')) {
+            $commandes_attente = $em
+                ->createQueryBuilder('c')
+                ->from('AppBundle:Commandes','c')
+                ->join('AppBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 0')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+            $commandes_confirme = $em
+                ->createQueryBuilder('c')
+                ->from('AppBundle:Commandes','c')
+                ->join('AppBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 1')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+            $commandes=$em
+                ->createQueryBuilder('c')
+                ->from('AppBundle:Commandes','c')
+                ->join('AppBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 1')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+
+        }
+
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($commandes, 'json');
+
+        return new JsonResponse($formatted);
+    }
+
+
+
+
+    public function createAction(Request $request,$annonce,$date,$quantite,$client)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commande= new Commandes();
+        $commande->setAnnonce($annonce);
+        $commande->setClient($client);
+        $commande->setQuantite($quantite);
+        $commande->setEtat(0);
+        $commande->setDateCom(new \DateTime($date));
+
+        $em->persist($commande);
+
+        $em->flush();
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($commande, 'json');
+
+        return new JsonResponse($formatted);
+
     }
 }

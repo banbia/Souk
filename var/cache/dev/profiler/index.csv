@@ -1,0 +1,7 @@
+ce7369,127.0.0.1,GET,http://localhost:8000/annonces/1/show,1524043802,,200
+4736f4,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,1e5381,200
+1e5381,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,,404
+00e4dc,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,d63b4e,200
+d63b4e,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,,404
+29ad5f,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,1017f0,200
+1017f0,127.0.0.1,GET,http://localhost:8000/resources/demos/style.css,1524043802,,404
