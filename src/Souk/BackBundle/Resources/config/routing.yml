@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+back_abonnements:
+    resource: "@BackBundle/Resources/config/routing/abonnements.yml"
+    prefix:   /abonnements
+
+
+
+
+>>>>>>> 9f7e300bc2d3b867684d6398c19d96cb1e417e1c
 back_homepage:
     path:     /
     defaults: { _controller: BackBundle:Default:index }

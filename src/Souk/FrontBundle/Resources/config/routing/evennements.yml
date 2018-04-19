@@ -22,3 +22,21 @@ evennements_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontBundle:Evennements:delete" }
     methods:  DELETE
+commentairesEvs_new:
+    path:     /evennement/{evennement}
+    defaults: { _controller: FrontBundle:Evennements:newEvs}
+commentairesEvs_delete:
+    path:     /delete_com_Evs/{evennement}/{com}
+    defaults: { _controller: FrontBundle:Evennements:deleteComEvs}
+commentairesEvs_Edit:
+    path:     /edit_com_Evs/{com}/{evennement}
+    defaults: { _controller: FrontBundle:Evennements:editComEvs}
+all:
+    path:     /commentaire/all
+    defaults: { _controller: FrontBundle:Evennements:all}
+find_commentaire:
+    path:     /commentaire/find/{id}
+    defaults: { _controller: FrontBundle:Evennements:find}
+create_commentaire:
+    path:     /commentaire/new_Evs/{evennement}
+    defaults: { _controller: FrontBundle:Evennements:newEvsS}

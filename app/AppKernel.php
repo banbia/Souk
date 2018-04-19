@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Souk\UserBundle\UserBundle(),
             new Souk\BackBundle\BackBundle(),
             new FOS\MessageBundle\FOSMessageBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

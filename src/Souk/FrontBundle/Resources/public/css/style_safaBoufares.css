@@ -29,3 +29,13 @@
 }
 .comment{width:100%;margin-bottom:5px;}
 .sign{margin-bottom:15px;}
+.fa-flag{
+  font-size:30px;
+  color:red;
+}
+.fa-trash-o{
+  color:red;
+}
+.fa-edit{
+color: rgb(255, 182, 30);
+}

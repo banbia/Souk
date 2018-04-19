@@ -1,0 +1,24 @@
+abonnements_index:
+    path:     /
+    defaults: { _controller: "BackBundle:Abonnements:index" }
+    methods:  GET
+
+abonnements_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackBundle:Abonnements:show" }
+    methods:  GET
+
+abonnements_new:
+    path:     /new
+    defaults: { _controller: "BackBundle:Abonnements:new" }
+    methods:  [GET, POST]
+
+abonnements_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackBundle:Abonnements:edit" }
+    methods:  [GET, POST]
+
+abonnements_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackBundle:Abonnements:delete" }
+    methods:  DELETE

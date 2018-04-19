@@ -2,6 +2,7 @@
 
 namespace Souk\FrontBundle\Controller;
 
+use JMS\Serializer\SerializerBuilder;
 use Souk\BackBundle\Entity\Commandes;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -51,7 +52,7 @@ class CommandesController extends Controller
                 ->from('AppBundle:Commandes','c')
                 ->join('AppBundle:Annonces','a')
                 ->select(array('c', 'a'))
-                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 1')
+                ->where('c.annonce=a.id and a.commercial= :user')
                 ->setParameter('user',$user)
                 ->getQuery()
                 ->getResult();
@@ -82,7 +83,7 @@ class CommandesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $commande->setAnnonce($annonce);
             $user = $this->getUser();
-            $commande->setUser($user);
+            $commande->setClient($user);
             $em->persist($commande);
             $em->flush();
 
@@ -176,5 +177,102 @@ class CommandesController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /******* crud mobile (web service) ***********************/
+    public function listeAction(Request $request, $id){
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('BackBundle:Commandes')->find($id);
+
+        if ($user->hasRole('ROLE_CLIENT')) {
+
+            $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
+
+        }else if ($user->hasRole('ROLE_COM')) {
+
+            $commandes=$em
+                ->createQueryBuilder('c')
+                ->from('AppBundle:Commandes','c')
+                ->join('AppBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+
+        }
+
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($commandes, 'json');
+
+        return new JsonResponse($formatted);
+    }
+
+
+
+
+    public function createAction(Request $request,$annonce,$date,$quantite,$client)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commande= new Commandes();
+        $commande->setAnnonce($annonce);
+        $commande->setClient($client);
+        $commande->setQuantite($quantite);
+        $commande->setEtat(0);
+        $commande->setDateCom(new \DateTime($date));
+
+        $em->persist($commande);
+
+        $em->flush();
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($commande, 'json');
+
+        return new JsonResponse($formatted);
+
+    }
+    public function modifAction(Request $request,$com,$date,$quantite)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commande= new Commandes();
+        $commande->setId($com);
+        $commande->setQuantite($quantite);
+        $commande->setDateCom(new \DateTime($date));
+        $em->persist($commande);
+
+        $em->flush();
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($commande, 'json');
+
+        return new JsonResponse($formatted);
+
+    }
+    public function annulerAction(Request $request,$com)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commande= new Commandes();
+        $commande->setId($com);
+        $em->remove($commande);
+
+        $em->flush();
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($commande, 'json');
+
+        return new JsonResponse($formatted);
+
+    }
+    public function confirmerAction(Request $request,$com)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commande= new Commandes();
+        $commande->setId($com);
+        $commande->setEtat(1);
+        $em->persist($commande);
+
+        $em->flush();
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($commande, 'json');
+
+        return new JsonResponse($formatted);
+
     }
 }
