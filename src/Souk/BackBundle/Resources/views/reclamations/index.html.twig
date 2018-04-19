@@ -1,0 +1,33 @@
+{% extends 'BackBundle::panel.html.twig' %}
+{% block body %}
+    <h1> Liste Reclamations</h1>
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <tr class="table-secondary">
+                <th>Contenu</th>
+                <th>Date de reclamation</th>
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+
+                <td>{{ reclamation.contenu }}</td>
+                <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if reclamation.etat == 0 %} encours
+                    {% elseif reclamation.etat == 1 %} accepter
+                    {% elseif reclamation.etat == 2 %}  rejeter
+                    {% endif %}
+                </td>
+                <td>
+
+                            <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"><i class="fa fa-edit"></i>  Marquer comme lue</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

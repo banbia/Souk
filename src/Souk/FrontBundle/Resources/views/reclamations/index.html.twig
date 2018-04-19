@@ -1,13 +1,12 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 {% block body %}
-    <h1>Reclamations list</h1>
+    <h1>Liste de votre reclamations</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
+    <table class="table table-striped">
+        <thead class="thead-light">
+        <tr class="table-secondary">
                 <th>Contenu</th>
-                <th>Daterec</th>
+                <th>Date de reclamation</th>
                 <th>Etat</th>
                 <th>Actions</th>
             </tr>
@@ -15,28 +14,22 @@
         <tbody>
         {% for reclamation in reclamations %}
             <tr>
-                <td><a href="{{ path('reclamations_show', { 'id': reclamation.id }) }}">{{ reclamation.id }}</a></td>
+
                 <td>{{ reclamation.contenu }}</td>
                 <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
-                <td>{{ reclamation.etat }}</td>
+                <td>{% if reclamation.etat == 0 %} encours
+                    {% elseif reclamation.etat == 1 %} accepter
+                    {% elseif reclamation.etat == 2 %}  rejeter
+                    {% endif %}
+                </td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('reclamations_show', { 'id': reclamation.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}">edit</a>
-                        </li>
-                    </ul>
+
+                    <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"><i class="fa fa-edit"></i> modifier </a>
+
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('reclamations_new') }}">Create a new reclamation</a>
-        </li>
-    </ul>
+    <a href="{{ path('reclamations_new') }}"><button type="submit" class="btn btn-success">  Create a new reclamation  </button></a>
 {% endblock %}

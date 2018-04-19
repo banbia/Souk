@@ -21,29 +21,29 @@ class __TwigTemplate_7103129a59730fe5062dd3c4dd96dc195730b48904c11d56c686522341e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9c6c6f70c766afcf06b19e29385ad77a50574de14245d597937268b99354f1b6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9c6c6f70c766afcf06b19e29385ad77a50574de14245d597937268b99354f1b6->enter($__internal_9c6c6f70c766afcf06b19e29385ad77a50574de14245d597937268b99354f1b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:reclamations:new.html.twig"));
+        $__internal_3f6a03c9a54db65b5bdf9fb313a4f36981f5d98219d03c537d3bd1d024b08f06 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_3f6a03c9a54db65b5bdf9fb313a4f36981f5d98219d03c537d3bd1d024b08f06->enter($__internal_3f6a03c9a54db65b5bdf9fb313a4f36981f5d98219d03c537d3bd1d024b08f06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:reclamations:new.html.twig"));
 
-        $__internal_5ab40459fa3dba536ff890ab50ecb1bb320f4c49795c68c70aa7b451e935992f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5ab40459fa3dba536ff890ab50ecb1bb320f4c49795c68c70aa7b451e935992f->enter($__internal_5ab40459fa3dba536ff890ab50ecb1bb320f4c49795c68c70aa7b451e935992f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:reclamations:new.html.twig"));
+        $__internal_18fedf4357df6a8c31d8a82ac4b1c4413900e4c87cd12ad6a11920413c465432 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_18fedf4357df6a8c31d8a82ac4b1c4413900e4c87cd12ad6a11920413c465432->enter($__internal_18fedf4357df6a8c31d8a82ac4b1c4413900e4c87cd12ad6a11920413c465432_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:reclamations:new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9c6c6f70c766afcf06b19e29385ad77a50574de14245d597937268b99354f1b6->leave($__internal_9c6c6f70c766afcf06b19e29385ad77a50574de14245d597937268b99354f1b6_prof);
+        $__internal_3f6a03c9a54db65b5bdf9fb313a4f36981f5d98219d03c537d3bd1d024b08f06->leave($__internal_3f6a03c9a54db65b5bdf9fb313a4f36981f5d98219d03c537d3bd1d024b08f06_prof);
 
         
-        $__internal_5ab40459fa3dba536ff890ab50ecb1bb320f4c49795c68c70aa7b451e935992f->leave($__internal_5ab40459fa3dba536ff890ab50ecb1bb320f4c49795c68c70aa7b451e935992f_prof);
+        $__internal_18fedf4357df6a8c31d8a82ac4b1c4413900e4c87cd12ad6a11920413c465432->leave($__internal_18fedf4357df6a8c31d8a82ac4b1c4413900e4c87cd12ad6a11920413c465432_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e2efba99d12fa8a7082ad1e89930511c44111b8f00096a00089b9777d3aaa994 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e2efba99d12fa8a7082ad1e89930511c44111b8f00096a00089b9777d3aaa994->enter($__internal_e2efba99d12fa8a7082ad1e89930511c44111b8f00096a00089b9777d3aaa994_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_517e4987d7cd2e57dca5603d26a0f3a4eda59736e2aa4fe371b188d63e44356f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_517e4987d7cd2e57dca5603d26a0f3a4eda59736e2aa4fe371b188d63e44356f->enter($__internal_517e4987d7cd2e57dca5603d26a0f3a4eda59736e2aa4fe371b188d63e44356f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_8d032c7f88eecb9d01bbe1e875e3149f34f9b5e1920a32b2a8e9b0ad506b3c3a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8d032c7f88eecb9d01bbe1e875e3149f34f9b5e1920a32b2a8e9b0ad506b3c3a->enter($__internal_8d032c7f88eecb9d01bbe1e875e3149f34f9b5e1920a32b2a8e9b0ad506b3c3a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b54c8f9366b369f580eaab2d788dcd2ca403d4890764c087baf4f3c60b367b29 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b54c8f9366b369f580eaab2d788dcd2ca403d4890764c087baf4f3c60b367b29->enter($__internal_b54c8f9366b369f580eaab2d788dcd2ca403d4890764c087baf4f3c60b367b29_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Crèer une reclamation</h1>
@@ -54,7 +54,7 @@ class __TwigTemplate_7103129a59730fe5062dd3c4dd96dc195730b48904c11d56c686522341e
         echo "
     <div class=\"col-md-12\">
 
-        <div class=\"form-group col-md-12\">
+        <div class=\"form-group col-md-8\">
             ";
         // line 10
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commercial", array()), 'label');
@@ -68,7 +68,7 @@ class __TwigTemplate_7103129a59730fe5062dd3c4dd96dc195730b48904c11d56c686522341e
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commercial", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
         </div>
-        <div class=\"form-group col-md-12\">
+        <div class=\"form-group col-md-8\">
             ";
         // line 15
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "contenu", array()), 'label');
@@ -84,17 +84,17 @@ class __TwigTemplate_7103129a59730fe5062dd3c4dd96dc195730b48904c11d56c686522341e
         </div>
 
     </div>
-    <button type=\"submit\" class=\"btn btn-default\" ><i class=\"fa fa-check\"></i>  Valider  </button>
+    <button type=\"submit\" class=\"btn btn-success\" ><i class=\"fa fa-check\"></i>  Valider  </button>
     ";
         // line 22
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 ";
         
-        $__internal_8d032c7f88eecb9d01bbe1e875e3149f34f9b5e1920a32b2a8e9b0ad506b3c3a->leave($__internal_8d032c7f88eecb9d01bbe1e875e3149f34f9b5e1920a32b2a8e9b0ad506b3c3a_prof);
+        $__internal_b54c8f9366b369f580eaab2d788dcd2ca403d4890764c087baf4f3c60b367b29->leave($__internal_b54c8f9366b369f580eaab2d788dcd2ca403d4890764c087baf4f3c60b367b29_prof);
 
         
-        $__internal_e2efba99d12fa8a7082ad1e89930511c44111b8f00096a00089b9777d3aaa994->leave($__internal_e2efba99d12fa8a7082ad1e89930511c44111b8f00096a00089b9777d3aaa994_prof);
+        $__internal_517e4987d7cd2e57dca5603d26a0f3a4eda59736e2aa4fe371b188d63e44356f->leave($__internal_517e4987d7cd2e57dca5603d26a0f3a4eda59736e2aa4fe371b188d63e44356f_prof);
 
     }
 
@@ -131,19 +131,19 @@ class __TwigTemplate_7103129a59730fe5062dd3c4dd96dc195730b48904c11d56c686522341e
     {{ form_start(form) }}
     <div class=\"col-md-12\">
 
-        <div class=\"form-group col-md-12\">
+        <div class=\"form-group col-md-8\">
             {{ form_label(form.commercial) }}
             {{ form_errors(form.commercial) }}
             {{ form_widget(form.commercial, {'attr': {'class': 'form-control'}}) }}
         </div>
-        <div class=\"form-group col-md-12\">
+        <div class=\"form-group col-md-8\">
             {{ form_label(form.contenu) }}
             {{ form_errors(form.contenu) }}
             {{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
         </div>
 
     </div>
-    <button type=\"submit\" class=\"btn btn-default\" ><i class=\"fa fa-check\"></i>  Valider  </button>
+    <button type=\"submit\" class=\"btn btn-success\" ><i class=\"fa fa-check\"></i>  Valider  </button>
     {{ form_end(form) }}
 {% endblock %}
 ", "FrontBundle:reclamations:new.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/reclamations/new.html.twig");

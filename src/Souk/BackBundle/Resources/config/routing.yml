@@ -1,6 +1,7 @@
-
-
-
 back_homepage:
     path:     /
     defaults: { _controller: BackBundle:Default:index }
+
+back_reclamations:
+    resource: "@BackBundle/Resources/config/routing/AdminReclamation.yml"
+    prefix:   /reclamations
