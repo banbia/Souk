@@ -1,0 +1,9 @@
+admin_reclamations_index:
+    path:     /
+    defaults: { _controller: "BackBundle:AdminReclamations:index" }
+    methods:  GET
+
+admin_reclamations_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackBundle:AdminReclamations:edit" }
+    methods:  [GET, POST]
