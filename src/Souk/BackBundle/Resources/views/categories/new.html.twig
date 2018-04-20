@@ -1,0 +1,24 @@
+{% extends 'BackBundle::panel.html.twig' %}
+
+{% block body %}
+<h3>Ajouter Categorie</h3>
+<div class="col-md-12">
+
+</div>
+{{ form_start(form) }}
+    <div class="col-md-12">
+            <div class="form-group col-md-3">
+                {{ form_label(form.designation) }}
+                {{ form_errors(form.designation) }}
+                {{ form_widget(form.designation, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+    </div>
+<div class="col-md-12">
+    <div class="form-group col-md-3">
+        <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i> Ajouter </button>
+    </div>
+</div>
+{{ form_end(form) }}
+
+{% endblock %}

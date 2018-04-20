@@ -6,35 +6,60 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
+
 {% endblock style %}
 {% block body %}
-    <h1>Annonce</h1>
 
-    <table>
-        <tbody>
 
-            <tr>
-                <th>Titre</th>
-                <td>{{ annonce.titre }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ annonce.description }}</td>
-            </tr>
-            <tr>
-                <th>Prix</th>
-                <td>{{ annonce.prix }}</td>
-            </tr>
-            <tr>
-                <th>Disponible</th>
-                <td>{% if annonce.disponible %}Yes{% else %}No{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Datecreation</th>
-                <td>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
+    {# dev-haifa#}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('front_homepage') }}">Annonce</a></li>
+        <li><a href="">{{ annonce.categorie.designation }}</a></li>
+        <li>{{ annonce.titre }}</li>
+
+
+    </ol>
+    <div class="row">
+        <div class="col-xs-12 col-sm-7">
+            <div class="panel panel-body">
+                <div class="profile-about">
+                    <div class="profile-photo">
+                        <a href="{{ asset('bundles/front/images/pic1.jpg') }}" data-fancybox data-caption="{{ profile.fullName }}">
+                            <img  src="{{ asset('bundles/front/images/pic1.jpg') }}"  alt="image"/>
+
+                        </a>
+                    </div>
+                    <div class="profile-description">
+                        <p>
+                            {{ annonce.description|raw }}
+                        </p>
+                    </div>
+                    <hr>
+                </div>
+
+                {% if annonce.commercial.adresse %}<span class="phone"><i class="fa fa-map-marker"></i> {{ annonce.commercial.adresse }}</span>{% endif %}
+                {% if annonce.commercial.mobile %}<span class="phone"><i class="fa fa-phone"></i> {{ annonce.commercial.mobile }}</span>{% endif %}
+                {% if annonce.commercial.email %}<span class="phone"><i class="fa fa-envelope"></i> {{ annonce.commercial.email }}</span>{% endif %}
+            </div>
+        </div>
+        <div id="sidebar" class="col-xs-12 col-sm-5">
+            <div id="map"><i class="glyphicon glyphicon-info-sign"></i> Carte non disponible</div>
+        </div>
+    </div>
+    <br>
+    {#
+         <tr>
+             <th>Disponible</th>
+             <td>{% if annonce.disponible %}Yes{% else %}No{% endif %}</td>
+         </tr>
+         <tr>
+             <th>Datecreation</th>
+             <td>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</td>
+         </tr>
+         </tbody>
+     </table>#}
+    {# dev-haifa#}
 
 <!-- Nour's work -->
 <div class="content">

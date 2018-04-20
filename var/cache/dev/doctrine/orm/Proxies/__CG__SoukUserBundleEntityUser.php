@@ -64,10 +64,10 @@ class User extends \Souk\UserBundle\Entity\User implements \Doctrine\ORM\Proxy\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', 'id', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'adresse', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'mobile', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'titre_commercial', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'date_fin_ab', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'evennements', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'reclamations', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'commandes', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'roles'];
+            return ['__isInitialized__', 'id', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'adresse', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'mobile', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'titre_commercial', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'date_fin_ab', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'evennements', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'reclamations', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'commandes', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'abonnements', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'roles'];
         }
 
-        return ['__isInitialized__', 'id', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'adresse', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'mobile', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'titre_commercial', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'date_fin_ab', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'evennements', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'reclamations', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'commandes', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'roles'];
+        return ['__isInitialized__', 'id', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'adresse', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'mobile', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'titre_commercial', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'date_fin_ab', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'evennements', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'reclamations', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'reservations', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'commandes', '' . "\0" . 'Souk\\UserBundle\\Entity\\User' . "\0" . 'abonnements', 'username', 'usernameCanonical', 'email', 'emailCanonical', 'enabled', 'salt', 'password', 'plainPassword', 'lastLogin', 'confirmationToken', 'passwordRequestedAt', 'groups', 'roles'];
     }
 
     /**
@@ -173,6 +173,28 @@ class User extends \Souk\UserBundle\Entity\User implements \Doctrine\ORM\Proxy\P
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getAbonnements()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAbonnements', []);
+
+        return parent::getAbonnements();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setAbonnements($abonnements)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAbonnements', [$abonnements]);
+
+        return parent::setAbonnements($abonnements);
+    }
+
     /**
      * {@inheritDoc}
      */
