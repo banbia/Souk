@@ -15,11 +15,19 @@ class __TwigTemplate_3b7762385b900c366d792a3cb8c07caaac3cd1bc151d564a13964e8df18
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+<<<<<<< HEAD
         $__internal_c92fd74590a3a87755a14e664c80a1207583f2f13079f3d7c50406bed1955466 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
         $__internal_c92fd74590a3a87755a14e664c80a1207583f2f13079f3d7c50406bed1955466->enter($__internal_c92fd74590a3a87755a14e664c80a1207583f2f13079f3d7c50406bed1955466_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Security/Collector/icon.svg"));
 
         $__internal_55cceec8c6d2212ca6a044a2cae32c78e7fbd2a284ce3beb6d69eb496340cd2a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_55cceec8c6d2212ca6a044a2cae32c78e7fbd2a284ce3beb6d69eb496340cd2a->enter($__internal_55cceec8c6d2212ca6a044a2cae32c78e7fbd2a284ce3beb6d69eb496340cd2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Security/Collector/icon.svg"));
+=======
+        $__internal_c57074718103634560f915bb3a6b18bdafa75f56cd6a5f028563681905e3fe47 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c57074718103634560f915bb3a6b18bdafa75f56cd6a5f028563681905e3fe47->enter($__internal_c57074718103634560f915bb3a6b18bdafa75f56cd6a5f028563681905e3fe47_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Security/Collector/icon.svg"));
+
+        $__internal_159d8f8091896dd29996b716bb0a360edf8dc7614445fa5d984d7100a8b716bd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_159d8f8091896dd29996b716bb0a360edf8dc7614445fa5d984d7100a8b716bd->enter($__internal_159d8f8091896dd29996b716bb0a360edf8dc7614445fa5d984d7100a8b716bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Security/Collector/icon.svg"));
+>>>>>>> 4ba455dae7cf86e7b86aaa319290c327594c8646
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -27,10 +35,17 @@ class __TwigTemplate_3b7762385b900c366d792a3cb8c07caaac3cd1bc151d564a13964e8df18
 </svg>
 ";
         
+<<<<<<< HEAD
         $__internal_c92fd74590a3a87755a14e664c80a1207583f2f13079f3d7c50406bed1955466->leave($__internal_c92fd74590a3a87755a14e664c80a1207583f2f13079f3d7c50406bed1955466_prof);
 
         
         $__internal_55cceec8c6d2212ca6a044a2cae32c78e7fbd2a284ce3beb6d69eb496340cd2a->leave($__internal_55cceec8c6d2212ca6a044a2cae32c78e7fbd2a284ce3beb6d69eb496340cd2a_prof);
+=======
+        $__internal_c57074718103634560f915bb3a6b18bdafa75f56cd6a5f028563681905e3fe47->leave($__internal_c57074718103634560f915bb3a6b18bdafa75f56cd6a5f028563681905e3fe47_prof);
+
+        
+        $__internal_159d8f8091896dd29996b716bb0a360edf8dc7614445fa5d984d7100a8b716bd->leave($__internal_159d8f8091896dd29996b716bb0a360edf8dc7614445fa5d984d7100a8b716bd_prof);
+>>>>>>> 4ba455dae7cf86e7b86aaa319290c327594c8646
 
     }
 
@@ -57,6 +72,10 @@ class __TwigTemplate_3b7762385b900c366d792a3cb8c07caaac3cd1bc151d564a13964e8df18
         return new Twig_Source("<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
     <path fill=\"#AAAAAA\" d=\"M21,20.4V22H3v-1.6c0-3.7,2.4-6.9,5.8-8c-1.7-1.1-2.9-3-2.9-5.2c0-3.4,2.7-6.1,6.1-6.1s6.1,2.7,6.1,6.1c0,2.2-1.2,4.1-2.9,5.2C18.6,13.5,21,16.7,21,20.4z\"/>
 </svg>
+<<<<<<< HEAD
 ", "@Security/Collector/icon.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle\\Resources\\views\\Collector\\icon.svg");
+=======
+", "@Security/Collector/icon.svg", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle\\Resources\\views\\Collector\\icon.svg");
+>>>>>>> 4ba455dae7cf86e7b86aaa319290c327594c8646
     }
 }

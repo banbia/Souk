@@ -43,17 +43,21 @@ class AnnoncesController extends Controller
     {
         /* Nour's Work Start*/
         $commande = new Commandes();
+        $user = $this->getUser();
+        $em = $this->getDoctrine()->getManager();
         $form = $this->createForm('Souk\BackBundle\Form\CommandesType', $commande);
         $form->handleRequest($request);
-
+        $find_com = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"annonce"=>$annonce,"etat"=>0));
+        $com = count($find_com);
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+
+
             $commande->setAnnonce($annonce);
             //var_dump('<pre>'.$commande->getDateCom().'</pre>');die;
             $now = new \DateTime($commande->getDateCom());
             $commande->setDateCom($now);
             $commande->setEtat(0);//0 => en attente
-            $user = $this->getUser();
+
             $commande->setClient($user);
             $em->persist($commande);
 
@@ -73,6 +77,7 @@ class AnnoncesController extends Controller
             'annonce' => $annonce,
             'commande' => $commande,
             'form' => $form->createView(),
+            'com'=>$com
 
         ));
     }
