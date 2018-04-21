@@ -1,0 +1,33 @@
+{% extends 'BackBundle::panel.html.twig' %}
+
+
+
+
+
+
+{% block body %}
+    <h3>Modifier Categorie</h3>
+    <div class="col-md-12">
+
+    </div>
+    {{ form_start(edit_form) }}
+
+    <div class="form-group col-md-3">
+        {{ form_label(edit_form.designation) }}
+        {{ form_errors(edit_form.designation) }}
+        {{ form_widget(edit_form.designation, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+
+
+    <div class="col-md-12">
+        <div class="form-group col-md-3">
+            <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i> Modifier </button>
+        </div>
+
+    </div>
+
+    {{ form_end(edit_form) }}
+
+{% endblock %}
+

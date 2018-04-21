@@ -3,6 +3,7 @@
 namespace Souk\BackBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,10 +15,10 @@ class AbonnementsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('designation')
-            ->add('description')
-            ->add('prix')
-            ->add('nbMois');
+            ->add('designation' ,TextType::class)
+            ->add('description',TextType::class)
+            ->add('prix',TextType::class)
+            ->add('nbMois' ,TextType::class);
 
     }/**
      * {@inheritdoc}

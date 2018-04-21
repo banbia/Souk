@@ -1,7 +1,6 @@
 <?php
 
 namespace Souk\FrontBundle\Controller;
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Souk\BackBundle\Entity\Reclamations;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -20,8 +19,8 @@ class ReclamationsController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
-        $reclamations = $em->getRepository('BackBundle:Reclamations')->findAll();
+        $user = $this->getUser();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client'=>$user));
 
         return $this->render('FrontBundle:reclamations:index.html.twig', array(
             'reclamations' => $reclamations,
@@ -92,7 +91,7 @@ class ReclamationsController extends Controller
 
         return $this->render('FrontBundle:reclamations:edit.html.twig', array(
             'reclamation' => $reclamation,
-            'edit_form' => $editForm->createView(),
+            'edit' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

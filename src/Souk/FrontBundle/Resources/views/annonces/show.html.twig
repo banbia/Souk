@@ -6,35 +6,104 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('bundles/front/css/flexslider.css') }}" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/front/css/rating.css') }}" />
+
 {% endblock style %}
 {% block body %}
-    <h1>Annonce</h1>
+    {# dev-haifa#}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('front_homepage') }}">Annonce</a></li>
+        <li><a href="">{{ annonce.categorie.designation }}</a></li>
+        <li>{{ annonce.titre }}</li>
 
-    <table>
-        <tbody>
 
-            <tr>
-                <th>Titre</th>
-                <td>{{ annonce.titre }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ annonce.description }}</td>
-            </tr>
-            <tr>
-                <th>Prix</th>
-                <td>{{ annonce.prix }}</td>
-            </tr>
-            <tr>
-                <th>Disponible</th>
-                <td>{% if annonce.disponible %}Yes{% else %}No{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Datecreation</th>
-                <td>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
+    </ol>
+    <div class="row">
+        <div class="col-md-5 single-right-left ">
+            <div  class="slider">
+
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="{{ asset('bundles/front/images/pic1.jpg') }}">
+                            <div class="thumb-image">
+                                <img src="{{ asset('bundles/front/images/pic1.jpg') }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                        </li>
+                        <li data-thumb="{{ asset('bundles/front/images/pic1.jpg') }}">
+                            <div class="thumb-image">
+                                <img src="{{ asset('bundles/front/images/pic1.jpg') }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                        </li>
+                        <li data-thumb="{{ asset('bundles/front/images/pic1.jpg') }}">
+                            <div class="thumb-image">
+                                <img src="{{ asset('bundles/front/images/pic1.jpg') }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                        </li>
+                    </ul>
+
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div id="sidebar" class="col-md-7 single-right-left simpleCart_shelfItem">
+
+            <h3>{{ annonce.titre }}</h3>
+            <div class="rating1">
+					<span class="starRating">
+						<input id="rating5" type="radio" name="rating" value="5">
+						<label for="rating5">5</label>
+						<input id="rating4" type="radio" name="rating" value="4">
+						<label for="rating4">4</label>
+						<input id="rating3" type="radio" name="rating" value="3" checked="">
+						<label for="rating3">3</label>
+						<input id="rating2" type="radio" name="rating" value="2">
+						<label for="rating2">2</label>
+						<input id="rating1" type="radio" name="rating" value="1">
+						<label for="rating1">1</label>
+					</span>
+            </div>
+            <p>
+                <span class="item_price">{{ annonce.prix }}</span>
+
+                <label>
+
+                    {% if annonce.disponible %}En stock{% else %}Repture  de stock{% endif %}</td>
+
+                </label>
+            </p>
+            <div class="single-infoagile">
+                <ul>
+                    <li>
+                        <i class="fa fa-hand-o-right" aria-hidden="true"></i> Livraison gratuite
+                    </li>
+                    <li>
+                        <i class="fa fa-hand-o-right" aria-hidden="true"></i> Paiement à la livraison admissible.
+                    </li>
+
+                </ul>
+            </div>
+            <div class="product-single-w3l">
+                <p>
+                    <i class="fa fa-hand-o-right" aria-hidden="true"></i>{{ annonce.description|raw }}
+                </p>
+            </div>
+             <div class="product-single-w3l">
+                <p>
+            {% if annonce.commercial.adresse %}<span class="phone"><i class="fa fa-map-marker"></i> {{ annonce.commercial.adresse }}</span>{% endif %}
+            {% if annonce.commercial.mobile %}<span class="phone"><i class="fa fa-phone"></i> {{ annonce.commercial.mobile }}</span>{% endif %}
+            {% if annonce.commercial.email %}<span class="phone"><i class="fa fa-envelope"></i> {{ annonce.commercial.email }}</span>{% endif %}
+                </p>
+             </div>
+       </div>
+        <div class="clearfix"> </div>
+    </div>
+    <br>
+
+
+
+    
+    {# dev-haifa#}
 
 <!-- Nour's work -->
 {% if annonce.commercial.id != app.user.id %}
@@ -126,5 +195,31 @@
                 altFormat: "yy-mm-dd"
             });
         } );
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/front/js/rating.js') }}"></script>
+    <script src="{{ asset('bundles/front/js/demo.css') }}"></script>
+    <script src="{{ asset('bundles/front/js/shCore.css') }}"></script>
+    <script src="{{ asset('bundles/front/js/jquery.mousewheel.css') }}"></script>
+
+    <!-- FlexSlider -->
+    <script defer src="../jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            SyntaxHighlighter.all();
+        });
+        $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails",
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+
+
     </script>
 {% endblock js %}

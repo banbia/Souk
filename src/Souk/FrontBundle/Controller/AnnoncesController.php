@@ -28,10 +28,12 @@ class AnnoncesController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $annonces = $em->getRepository('BackBundle:Annonces')->findAll();
+      $annonces = $em->getRepository('BackBundle:Annonces')->findAll();
+      $categories = $em->getRepository('BackBundle:Categories')->findAll();
 
         return $this->render('FrontBundle:annonces:index.html.twig', array(
             'annonces' => $annonces,
+            'categories' => $categories,
         ));
     }
 

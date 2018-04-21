@@ -104,75 +104,158 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         elseif (0 === strpos($pathinfo, '/a')) {
-            if (0 === strpos($pathinfo, '/admin/abonnements')) {
-                // abonnements_index
-                if ('/admin/abonnements' === $trimmedPathinfo) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_abonnements_index;
-                    }
+            if (0 === strpos($pathinfo, '/admin')) {
+                if (0 === strpos($pathinfo, '/admin/abonnements')) {
+                    // abonnements_index
+                    if ('/admin/abonnements' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_abonnements_index;
+                        }
 
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'abonnements_index');
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::indexAction',  '_route' => 'abonnements_index',);
+                    }
+                    not_abonnements_index:
+
+                    // abonnements_show
+                    if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_abonnements_show;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::showAction',));
+                    }
+                    not_abonnements_show:
+
+                    // abonnements_new
+                    if ('/admin/abonnements/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_abonnements_new;
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::newAction',  '_route' => 'abonnements_new',);
+                    }
+                    not_abonnements_new:
+
+                    // abonnements_edit
+                    if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_abonnements_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::editAction',));
+                    }
+                    not_abonnements_edit:
+
+                    // abonnements_delete
+                    if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if ('DELETE' !== $canonicalMethod) {
+                            $allow[] = 'DELETE';
+                            goto not_abonnements_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::deleteAction',));
+                    }
+                    not_abonnements_delete:
+
+                }
+
+                // back_homepage
+                if ('/admin' === $trimmedPathinfo) {
                     if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($rawPathinfo.'/', 'abonnements_index');
+                        return $this->redirect($rawPathinfo.'/', 'back_homepage');
                     }
 
-                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::indexAction',  '_route' => 'abonnements_index',);
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
                 }
-                not_abonnements_index:
 
-                // abonnements_show
-                if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_abonnements_show;
+                if (0 === strpos($pathinfo, '/admin/reclamations')) {
+                    // admin_reclamations_index
+                    if ('/admin/reclamations' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_reclamations_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'admin_reclamations_index');
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::indexAction',  '_route' => 'admin_reclamations_index',);
                     }
+                    not_admin_reclamations_index:
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::showAction',));
-                }
-                not_abonnements_show:
+                    // admin_reclamations_edit
+                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_reclamations_edit;
+                        }
 
-                // abonnements_new
-                if ('/admin/abonnements/new' === $pathinfo) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_abonnements_new;
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::editAction',));
                     }
+                    not_admin_reclamations_edit:
 
-                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::newAction',  '_route' => 'abonnements_new',);
                 }
-                not_abonnements_new:
 
-                // abonnements_edit
-                if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_abonnements_edit;
+                elseif (0 === strpos($pathinfo, '/admin/categories')) {
+                    // categories_index
+                    if ('/admin/categories' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_categories_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'categories_index');
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\CategoriesController::indexAction',  '_route' => 'categories_index',);
                     }
+                    not_categories_index:
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::editAction',));
-                }
-                not_abonnements_edit:
+                    // categories_new
+                    if ('/admin/categories/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_categories_new;
+                        }
 
-                // abonnements_delete
-                if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                    if ('DELETE' !== $canonicalMethod) {
-                        $allow[] = 'DELETE';
-                        goto not_abonnements_delete;
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\CategoriesController::newAction',  '_route' => 'categories_new',);
                     }
+                    not_categories_new:
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::deleteAction',));
+                    // categories_edit
+                    if (preg_match('#^/admin/categories/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_categories_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'categories_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\CategoriesController::editAction',));
+                    }
+                    not_categories_edit:
+
+                    // categories_delete
+                    if (preg_match('#^/admin/categories/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_categories_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'categories_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\CategoriesController::deleteAction',));
+                    }
+                    not_categories_delete:
+
                 }
-                not_abonnements_delete:
 
-            }
-
-            // back_homepage
-            if ('/admin' === $trimmedPathinfo) {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($rawPathinfo.'/', 'back_homepage');
-                }
-
-                return array (  '_controller' => 'Souk\\BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
             }
 
             // abonnements_com_new
@@ -196,16 +279,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_client_annonces_index:
 
-                // client_annonces_show
+                // annonces_show
                 if (preg_match('#^/annonces/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                         $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_client_annonces_show;
+                        goto not_annonces_show;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'client_annonces_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::showAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::showAction',));
                 }
-                not_client_annonces_show:
+                not_annonces_show:
 
                 // commentairesAnc_new
                 if (0 === strpos($pathinfo, '/annonces/annonce') && preg_match('#^/annonces/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
@@ -290,7 +373,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         goto not_reclamations_edit;
                     }
 
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'reclamations_edit')), array (  '_controller' => 'BackBundle:Reclamations:edit',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'reclamations_edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReclamationsController::editAction',));
                 }
                 not_reclamations_edit:
 
@@ -490,68 +573,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             if (preg_match('#^/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
             }
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/commercial/annonces')) {
-            // annonces_index
-            if ('/commercial/annonces' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_annonces_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($rawPathinfo.'/', 'annonces_index');
-                }
-
-                return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::indexAction',  '_route' => 'annonces_index',);
-            }
-            not_annonces_index:
-
-            // annonces_show
-            if (preg_match('#^/commercial/annonces/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_annonces_show;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::showAction',));
-            }
-            not_annonces_show:
-
-            // annonces_new
-            if ('/commercial/annonces/new' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_annonces_new;
-                }
-
-                return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::newAction',  '_route' => 'annonces_new',);
-            }
-            not_annonces_new:
-
-            // annonces_edit
-            if (preg_match('#^/commercial/annonces/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_annonces_edit;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::editAction',));
-            }
-            not_annonces_edit:
-
-            // annonces_delete
-            if (preg_match('#^/commercial/annonces/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_annonces_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::deleteAction',));
-            }
-            not_annonces_delete:
 
         }
 

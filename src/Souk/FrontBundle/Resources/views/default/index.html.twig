@@ -1,116 +1,36 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
 {% block body %}
-    <h3 class="m_1">New Products</h3>
+    {# dev-haifa#}
+    <h3 class="m_1">Les nouveaux produits</h3>
     <div class="content_grid">
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
+        {% for annonce in annonces %}
+            <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
+                <a href="">
+                    <div class="inner_content clearfix">
+                        <div class="product_image">
+                            <img  href="{{ path('annonces_show', { 'id': annonce.id }) }}" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
+
+
+                            <a href=""
+                               class="button item_add item_1"> </a>
+                            <div class="product_container">
+                                <div class="cart-left">
+                                    <p class="title">{{ annonce.titre }}</p>
+                                </div>
+                                <span class="amount item_price">{{ annonce.prix }}</span>
+                                <div class="clearfix"></div>
                             </div>
-                            <span class="amount item_price">$2300.00</span>
-                            <div class="clearfix"></div>
                         </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic2.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$1500.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic3.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$2000.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        {% endfor %}
+
         <div class="clearfix"></div>
     </div>
-    <div class="content_grid">
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic4.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$1700.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic5.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$800.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic6.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$199.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <h3 class="m_2">Top Products</h3>
+    {# dev-haifa#}
+    <h3 class="m_2">Top Produits</h3>
     <div class="content_grid">
         <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
             <a href="">
