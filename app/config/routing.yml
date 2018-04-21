@@ -50,6 +50,18 @@ client_annonces:
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
+admin_signals_Anc:
+    resource: "@BackBundle/Resources/config/routing/signalsAnc.yml"
+    prefix:   /signalsAnc
+admin_signals_Evs:
+    resource: "@BackBundle/Resources/config/routing/signalsEvs.yml"
+    prefix:   /signalsEvs
+client_signals_Evs:
+    resource: "@FrontBundle/Resources/config/routing/signalsEvs.yml"
+    prefix:   /signalsEvs
+client_signals_Anc:
+    resource: "@FrontBundle/Resources/config/routing/signalsAnc.yml"
+    prefix:   /signalsAnc
 fos_message:
     resource: "@FOSMessageBundle/Resources/config/routing.xml"
     prefix: /messages

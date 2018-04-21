@@ -1,0 +1,3 @@
+signalsAnc_all:
+    path:     /signalsAnc/{annonce}
+    defaults: { _controller: BackBundle:SignalsAnc:all}

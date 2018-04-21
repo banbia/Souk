@@ -1,0 +1,36 @@
+{% extends 'BackBundle::panel.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        {% for com in coms %}
+
+            <div class="col-md-12">
+
+                <div class="one-comment">
+                    <div class="col-sm-1">
+                        <div class="thumbnail">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                        </div>
+                        <!-- /thumbnail -->
+                    </div>
+                    <!-- /col-sm-1 -->
+
+                    <div class="col-sm-5">
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">
+                                <strong>{{ com.client.username }}</strong> <label class="text-muted text-right"> signalé le {{ com.dateSg|date('D-M-Y') }} </label>
+                            </div>
+                            <div class="panel-body">
+                                {{ com.contenu }}
+                            </div>
+                            <!-- /panel-body -->
+                        </div>
+                        <!-- /panel panel-default -->
+                    </div>
+                    <!-- /col-sm-5 -->
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -2,12 +2,11 @@
 
 {% block body %}
 
-
     <!-- /row -->
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-6">
-                <a href="#"><i class="fa fa-flag pull-right"></i></a>
+            <a href="{{ path('signalsEvsN_new', {'evennement' : evennement}) }}"><i class="fa fa-flag pull-right"></i></a>
                 <br/>
             </div>
         </div>
@@ -22,8 +21,8 @@
         </div>
     </div>
     <div class="row">
-
         {% for com in coms_Evs %}
+
 
             <div class="col-md-12">
 

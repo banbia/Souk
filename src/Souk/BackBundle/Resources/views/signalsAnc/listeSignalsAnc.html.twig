@@ -1,5 +1,7 @@
-<div class="row">
+{% extends 'BackBundle::panel.html.twig' %}
 
+{% block body %}
+<div class="row">
     {% for com in coms %}
 
         <div class="col-md-12">
@@ -17,7 +19,7 @@
                     <div class="panel panel-default">
 
                         <div class="panel-heading">
-                            <strong>{{ com.client.username }}</strong> <label class="text-muted text-right"> commenté le {{ com.dateCmt|date('D-M-Y') }} </label>
+                            <strong>{{ com.client.username }}</strong> <label class="text-muted text-right"> signalé le {{ com.dateSg|date('D-M-Y') }} </label>
                         </div>
                         <div class="panel-body">
                             {{ com.contenu }}
@@ -31,3 +33,4 @@
         </div>
     {% endfor %}
 </div>
+{% endblock %}

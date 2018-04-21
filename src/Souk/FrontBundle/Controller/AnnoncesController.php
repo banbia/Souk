@@ -158,16 +158,53 @@ class AnnoncesController extends Controller
     }
     // les services web des commentaires de l'Anc
 
-    public function allAction(Request $request){
-        $com_Anc = $this->getDoctrine()->getManager()
-            ->getRepository('BackBundle:CommentairesAnc')
-            ->findAll();
+    public function allAction(Request $request, $id){
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('BackBundle:CommentairesAnc')->find($id);
+
+        if ($user->hasRole('ROLE_CLIENT')) {
+
+            $com_Anc = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("client"=>$user));
+
+        }else if ($user->hasRole('ROLE_COM')) {
+
+            $com_Anc=$em
+                ->createQueryBuilder('c')
+                ->from('AppBundle:CommentairesAnc','c')
+                ->join('AppBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+
+        }
+
         $serializer = SerializerBuilder::create()->build();
         $formatted = $serializer->serialize($com_Anc, 'json');
 
         return new JsonResponse($formatted);
     }
 
+    public function createAction(Request $request,$annonce,$date,$quantite,$client)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commande= new Commandes();
+        $commande->setAnnonce($annonce);
+        $commande->setClient($client);
+        $commande->setQuantite($quantite);
+        $commande->setEtat(0);
+        $commande->setDateCom(new \DateTime($date));
+
+        $em->persist($commande);
+
+        $em->flush();
+        $serializer = SerializerBuilder::create()->build();
+        $formatted = $serializer->serialize($commande, 'json');
+
+        return new JsonResponse($formatted);
+
+    }
 
 
     public function findAction($id)

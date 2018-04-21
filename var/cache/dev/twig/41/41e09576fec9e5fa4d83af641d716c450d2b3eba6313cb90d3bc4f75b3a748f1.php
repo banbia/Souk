@@ -21,166 +21,91 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0267139de15856c9b791fbeffe366ca971677406accaf35a128a48b28ff6eb6b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0267139de15856c9b791fbeffe366ca971677406accaf35a128a48b28ff6eb6b->enter($__internal_0267139de15856c9b791fbeffe366ca971677406accaf35a128a48b28ff6eb6b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:default:index.html.twig"));
+        $__internal_7e07b6d5a237e351a467238261292cd286a417c9f3dbd5e0817b866cf2d1d7a2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7e07b6d5a237e351a467238261292cd286a417c9f3dbd5e0817b866cf2d1d7a2->enter($__internal_7e07b6d5a237e351a467238261292cd286a417c9f3dbd5e0817b866cf2d1d7a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:default:index.html.twig"));
 
-        $__internal_1651a033da7138278e1e7a86cc08de87fd5899294202aeda355785e5d56ff230 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1651a033da7138278e1e7a86cc08de87fd5899294202aeda355785e5d56ff230->enter($__internal_1651a033da7138278e1e7a86cc08de87fd5899294202aeda355785e5d56ff230_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:default:index.html.twig"));
+        $__internal_baabdcf0132874c0a6e8509525622ea7e1c181d4ca56cdf970c365b6d8fc5ef2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_baabdcf0132874c0a6e8509525622ea7e1c181d4ca56cdf970c365b6d8fc5ef2->enter($__internal_baabdcf0132874c0a6e8509525622ea7e1c181d4ca56cdf970c365b6d8fc5ef2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0267139de15856c9b791fbeffe366ca971677406accaf35a128a48b28ff6eb6b->leave($__internal_0267139de15856c9b791fbeffe366ca971677406accaf35a128a48b28ff6eb6b_prof);
+        $__internal_7e07b6d5a237e351a467238261292cd286a417c9f3dbd5e0817b866cf2d1d7a2->leave($__internal_7e07b6d5a237e351a467238261292cd286a417c9f3dbd5e0817b866cf2d1d7a2_prof);
 
         
-        $__internal_1651a033da7138278e1e7a86cc08de87fd5899294202aeda355785e5d56ff230->leave($__internal_1651a033da7138278e1e7a86cc08de87fd5899294202aeda355785e5d56ff230_prof);
+        $__internal_baabdcf0132874c0a6e8509525622ea7e1c181d4ca56cdf970c365b6d8fc5ef2->leave($__internal_baabdcf0132874c0a6e8509525622ea7e1c181d4ca56cdf970c365b6d8fc5ef2_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_cc2a29809c715e9d85d8899e286f60d38c68f6ad67339737e433e854201c5daa = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_cc2a29809c715e9d85d8899e286f60d38c68f6ad67339737e433e854201c5daa->enter($__internal_cc2a29809c715e9d85d8899e286f60d38c68f6ad67339737e433e854201c5daa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3d83f7f3924b9c50db977c524a09ee2421053ad4ba3844db200abc7356660e5f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_3d83f7f3924b9c50db977c524a09ee2421053ad4ba3844db200abc7356660e5f->enter($__internal_3d83f7f3924b9c50db977c524a09ee2421053ad4ba3844db200abc7356660e5f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_b7d57cc8199b17fba227a971232e5492466aaff6284b2ced880f50f7916ec8e7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b7d57cc8199b17fba227a971232e5492466aaff6284b2ced880f50f7916ec8e7->enter($__internal_b7d57cc8199b17fba227a971232e5492466aaff6284b2ced880f50f7916ec8e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7a77ea741f6e460943147190496d6c0b284b1764132d58133fe19303bcd744ca = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7a77ea741f6e460943147190496d6c0b284b1764132d58133fe19303bcd744ca->enter($__internal_7a77ea741f6e460943147190496d6c0b284b1764132d58133fe19303bcd744ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h3 class=\"m_1\">New Products</h3>
+        echo "    ";
+        // line 5
+        echo "    <h3 class=\"m_1\">Les nouveaux produits</h3>
     <div class=\"content_grid\">
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic1.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
+        ";
+        // line 7
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["annonces"]) ? $context["annonces"] : $this->getContext($context, "annonces")));
+        foreach ($context['_seq'] as $context["_key"] => $context["annonce"]) {
+            // line 8
+            echo "            <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
+                <a href=\"\">
+                    <div class=\"inner_content clearfix\">
+                        <div class=\"product_image\">
+                            <img  href=\"";
+            // line 12
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("client_annonces_show", array("id" => $this->getAttribute($context["annonce"], "id", array()))), "html", null, true);
+            echo "\" src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic1.jpg"), "html", null, true);
+            echo "\" class=\"img-responsive\" alt=\"\"/>
+
+
+                            <a href=\"\"
+                               class=\"button item_add item_1\"> </a>
+                            <div class=\"product_container\">
+                                <div class=\"cart-left\">
+                                    <p class=\"title\">";
+            // line 19
+            echo twig_escape_filter($this->env, $this->getAttribute($context["annonce"], "titre", array()), "html", null, true);
+            echo "</p>
+                                </div>
+                                <span class=\"amount item_price\">";
+            // line 21
+            echo twig_escape_filter($this->env, $this->getAttribute($context["annonce"], "prix", array()), "html", null, true);
+            echo "</span>
+                                <div class=\"clearfix\"></div>
                             </div>
-                            <span class=\"amount item_price\">\$2300.00</span>
-                            <div class=\"clearfix\"></div>
                         </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"";
-        // line 27
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic2.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$1500.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"";
-        // line 44
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic3.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$2000.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['annonce'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 29
+        echo "
         <div class=\"clearfix\"></div>
     </div>
+    ";
+        // line 33
+        echo "    <h3 class=\"m_2\">Top Produits</h3>
     <div class=\"content_grid\">
         <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
             <a href=\"\">
                 <div class=\"inner_content clearfix\">
                     <div class=\"product_image\">
                         <img src=\"";
-        // line 64
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic4.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$1700.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"";
-        // line 81
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic5.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$800.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"";
-        // line 98
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic6.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$199.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"clearfix\"></div>
-    </div>
-    <h3 class=\"m_2\">Top Products</h3>
-    <div class=\"content_grid\">
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"";
-        // line 119
+        // line 39
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic7.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"\"/>
                         <a href=\"\" class=\"button item_add item_1\"> </a>
@@ -200,7 +125,7 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
                 <div class=\"inner_content clearfix\">
                     <div class=\"product_image\">
                         <img src=\"";
-        // line 136
+        // line 56
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic8.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"\"/>
                         <a href=\"\" class=\"button item_add item_1\"> </a>
@@ -220,7 +145,7 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
                 <div class=\"inner_content clearfix\">
                     <div class=\"product_image\">
                         <img src=\"";
-        // line 153
+        // line 73
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic13.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"\"/>
                         <a href=\"\" class=\"button item_add item_1\"> </a>
@@ -244,7 +169,7 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
                 <div class=\"inner_content clearfix\">
                     <div class=\"product_image\">
                         <img src=\"";
-        // line 174
+        // line 94
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic10.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"\"/>
                         <a href=\"\" class=\"button item_add item_1\"> </a>
@@ -264,7 +189,7 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
                 <div class=\"inner_content clearfix\">
                     <div class=\"product_image\">
                         <img src=\"";
-        // line 191
+        // line 111
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic11.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"\"/>
                         <a href=\"\" class=\"button item_add item_1\"> </a>
@@ -284,7 +209,7 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
                 <div class=\"inner_content clearfix\">
                     <div class=\"product_image\">
                         <img src=\"";
-        // line 208
+        // line 128
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic12.jpg"), "html", null, true);
         echo "\" class=\"img-responsive\" alt=\"\"/>
                         <a href=\"\" class=\"button item_add item_1\"> </a>
@@ -303,10 +228,10 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
     </div>
 ";
         
-        $__internal_b7d57cc8199b17fba227a971232e5492466aaff6284b2ced880f50f7916ec8e7->leave($__internal_b7d57cc8199b17fba227a971232e5492466aaff6284b2ced880f50f7916ec8e7_prof);
+        $__internal_7a77ea741f6e460943147190496d6c0b284b1764132d58133fe19303bcd744ca->leave($__internal_7a77ea741f6e460943147190496d6c0b284b1764132d58133fe19303bcd744ca_prof);
 
         
-        $__internal_cc2a29809c715e9d85d8899e286f60d38c68f6ad67339737e433e854201c5daa->leave($__internal_cc2a29809c715e9d85d8899e286f60d38c68f6ad67339737e433e854201c5daa_prof);
+        $__internal_3d83f7f3924b9c50db977c524a09ee2421053ad4ba3844db200abc7356660e5f->leave($__internal_3d83f7f3924b9c50db977c524a09ee2421053ad4ba3844db200abc7356660e5f_prof);
 
     }
 
@@ -322,7 +247,7 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
 
     public function getDebugInfo()
     {
-        return array (  288 => 208,  268 => 191,  248 => 174,  224 => 153,  204 => 136,  184 => 119,  160 => 98,  140 => 81,  120 => 64,  97 => 44,  77 => 27,  57 => 10,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  213 => 128,  193 => 111,  173 => 94,  149 => 73,  129 => 56,  109 => 39,  101 => 33,  96 => 29,  82 => 21,  77 => 19,  65 => 12,  59 => 8,  55 => 7,  51 => 5,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -338,116 +263,36 @@ class __TwigTemplate_7f29bf969a57d450f1f4770f8da03ab09d77291b0ef7c552b4f9eaa4297
         return new Twig_Source("{% extends 'FrontBundle::layout.html.twig' %}
 
 {% block body %}
-    <h3 class=\"m_1\">New Products</h3>
+    {# dev-haifa#}
+    <h3 class=\"m_1\">Les nouveaux produits</h3>
     <div class=\"content_grid\">
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"{{ asset('bundles/front/images/pic1.jpg') }}\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
+        {% for annonce in annonces %}
+            <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
+                <a href=\"\">
+                    <div class=\"inner_content clearfix\">
+                        <div class=\"product_image\">
+                            <img  href=\"{{ path('client_annonces_show', { 'id': annonce.id }) }}\" src=\"{{ asset('bundles/front/images/pic1.jpg') }}\" class=\"img-responsive\" alt=\"\"/>
+
+
+                            <a href=\"\"
+                               class=\"button item_add item_1\"> </a>
+                            <div class=\"product_container\">
+                                <div class=\"cart-left\">
+                                    <p class=\"title\">{{ annonce.titre }}</p>
+                                </div>
+                                <span class=\"amount item_price\">{{ annonce.prix }}</span>
+                                <div class=\"clearfix\"></div>
                             </div>
-                            <span class=\"amount item_price\">\$2300.00</span>
-                            <div class=\"clearfix\"></div>
                         </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"{{ asset('bundles/front/images/pic2.jpg') }}\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$1500.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"{{ asset('bundles/front/images/pic3.jpg') }}\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$2000.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        {% endfor %}
+
         <div class=\"clearfix\"></div>
     </div>
-    <div class=\"content_grid\">
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"{{ asset('bundles/front/images/pic4.jpg') }}\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$1700.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"{{ asset('bundles/front/images/pic5.jpg') }}\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$800.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1\">
-            <a href=\"\">
-                <div class=\"inner_content clearfix\">
-                    <div class=\"product_image\">
-                        <img src=\"{{ asset('bundles/front/images/pic6.jpg') }}\" class=\"img-responsive\" alt=\"\"/>
-                        <a href=\"\" class=\"button item_add item_1\"> </a>
-                        <div class=\"product_container\">
-                            <div class=\"cart-left\">
-                                <p class=\"title\">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class=\"amount item_price\">\$199.00</span>
-                            <div class=\"clearfix\"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class=\"clearfix\"></div>
-    </div>
-    <h3 class=\"m_2\">Top Products</h3>
+    {# dev-haifa#}
+    <h3 class=\"m_2\">Top Produits</h3>
     <div class=\"content_grid\">
         <div class=\"col_1_of_3 span_1_of_3 simpleCart_shelfItem\">
             <a href=\"\">

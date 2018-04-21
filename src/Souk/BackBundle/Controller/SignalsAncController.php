@@ -2,6 +2,8 @@
 
 namespace Souk\BackBundle\Controller;
 
+use Souk\BackBundle\Entity\SignalsAnc;
+use Souk\BackBundle\Form\SignalsAncType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -9,11 +11,14 @@ use Symfony\Component\HttpFoundation\Request;
 class SignalsAncController extends Controller
 {
     /**
-     * @Route("/admin", name="admin_homepage")
+     * @Route("/signalsAnc/{$annonce}", name="signalsAnc_all")
      */
-    public function indexAction()
+    public function allAction(Request $request,$annonce)
     {
-        // replace this example code with whatever you need
-        return $this->render('BackBundle:admin:home.html.twig');
+        //cnx bd
+        $cm = $this->getDoctrine()->getManager();
+        //extraire la liste des signals d'une annonce
+        $coms = $cm->getRepository('BackBundle:SignalsAnc')->findBy(array("annonce"=>$annonce));
+        return $this->render('BackBundle:signalsAnc:listeSignalsAnc.html.twig',array('coms'=>$coms));
     }
 }
