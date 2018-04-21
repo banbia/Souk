@@ -46,7 +46,9 @@ commercial_annonces:
 client_annonces:
     resource: "@FrontBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
-    
+categorie_annonces:
+    resource: "@BackBundle/Resources/config/routing/categories.yml"
+    prefix:   /admin/categories
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
