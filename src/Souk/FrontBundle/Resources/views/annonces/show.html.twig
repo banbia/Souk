@@ -106,19 +106,21 @@
     {# dev-haifa#}
 
 <!-- Nour's work -->
-<div class="content">
-    {% if com==0 %}
-    <a href="#" class="btn left" data-toggle="modal" data-target="#newCom">
-
-        <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Commander</span>
-    </a>
-    {% else %}
-        <a href="#" class="btn left" data-toggle="modal" data-target="#noCom">
+{% if annonce.commercial.id != app.user.id %}
+    <div class="content">
+        {% if com==0 %}
+        <a href="#" class="btn left" data-toggle="modal" data-target="#newCom">
 
             <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Commander</span>
         </a>
-    {% endif %}
-</div>
+        {% else %}
+            <a href="#" class="btn left" data-toggle="modal" data-target="#noCom">
+
+                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Commander</span>
+            </a>
+        {% endif %}
+    </div>
+{% endif %}
     <!-- Modal new com-->
     <div id="newCom" class="modal fade" role="dialog">
         <div class="modal-dialog">

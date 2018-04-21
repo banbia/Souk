@@ -63,9 +63,22 @@ class AnnoncesController extends Controller
             $commande->setClient($user);
             $em->persist($commande);
 
-            $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>1));
-            $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>0));
-            $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
+            $commandes_confirme = array();
+            $commandes_attente = array();
+            $commandes = array();
+            if ($this->get('security.authorization_checker')->isGranted('ROLE_CLIENT')) {
+
+                $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>1));
+                $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>0));
+                $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
+
+            }else if ($this->get('security.authorization_checker')->isGranted('ROLE_COM')) {
+
+                $commandes_attente = $em->getRepository('BackBundle:Commandes')->attentesCommandesCommercial($user->getId());
+                $commandes_confirme = $em->getRepository('BackBundle:Commandes')->confirmesCommandesCommercial($user->getId());
+                $commandes=$em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($user->getId());
+
+            }
             $em->flush();
             return $this->render('FrontBundle:commandes:index.html.twig', array(
                 'commandes' => $commandes,

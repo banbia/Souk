@@ -22,7 +22,9 @@ class CommandesController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
-
+        $commandes_confirme = array();
+        $commandes_attente = array();
+        $commandes = array();
         if ($this->get('security.authorization_checker')->isGranted('ROLE_CLIENT')) {
 
             $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>1));
@@ -30,33 +32,10 @@ class CommandesController extends Controller
             $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
 
         }else if ($this->get('security.authorization_checker')->isGranted('ROLE_COM')) {
-            $commandes_attente = $em
-                ->createQueryBuilder('c')
-                ->from('AppBundle:Commandes','c')
-                ->join('AppBundle:Annonces','a')
-                ->select(array('c', 'a'))
-                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 0')
-                ->setParameter('user',$user)
-                ->getQuery()
-                ->getResult();
-            $commandes_confirme = $em
-                ->createQueryBuilder('c')
-                ->from('AppBundle:Commandes','c')
-                ->join('AppBundle:Annonces','a')
-                ->select(array('c', 'a'))
-                ->where('c.annonce=a.id and a.commercial= :user and c.etat = 1')
-                ->setParameter('user',$user)
-                ->getQuery()
-                ->getResult();
-            $commandes=$em
-                ->createQueryBuilder('c')
-                ->from('AppBundle:Commandes','c')
-                ->join('AppBundle:Annonces','a')
-                ->select(array('c', 'a'))
-                ->where('c.annonce=a.id and a.commercial= :user')
-                ->setParameter('user',$user)
-                ->getQuery()
-                ->getResult();
+
+            $commandes_attente = $em->getRepository('BackBundle:Commandes')->attentesCommandesCommercial($user->getId());
+            $commandes_confirme = $em->getRepository('BackBundle:Commandes')->confirmesCommandesCommercial($user->getId());
+            $commandes=$em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($user->getId());
 
         }
 
@@ -137,12 +116,14 @@ class CommandesController extends Controller
      * valid a command
      *
      */
-    public function validAction(Request $request, Commandes $commande)
+    public function validAction($id)
     {
+
         $em = $this->getDoctrine()->getManager();
-        $commande = $em->getRepository('BackBundle:Commandes')->find($commande);
-        $commande->setEtat(1);
-        $em->persist($commande);
+        $com = $em->getRepository('BackBundle:Commandes')->find($id);
+        $com->setEtat(1);
+        $em->persist($com);
+        $em->flush();
         return $this->redirectToRoute('commandes_index');
 
     }
@@ -184,17 +165,17 @@ class CommandesController extends Controller
     public function listeAction(Request $request, $id){
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository('BackBundle:Commandes')->find($id);
-
-        if ($user->hasRole('ROLE_CLIENT')) {
+        var_dump($user->get('security.role_hierarchy.roles'));
+        if ($user->isGranted('ROLE_CLIENT')) {
 
             $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
 
-        }else if ($user->hasRole('ROLE_COM')) {
+        }else if ($user->roles->contains('ROLE_COM')) {
 
             $commandes=$em
                 ->createQueryBuilder('c')
-                ->from('AppBundle:Commandes','c')
-                ->join('AppBundle:Annonces','a')
+                ->from('BackBundle:Commandes','c')
+                ->join('BackBundle:Annonces','a')
                 ->select(array('c', 'a'))
                 ->where('c.annonce=a.id and a.commercial= :user')
                 ->setParameter('user',$user)

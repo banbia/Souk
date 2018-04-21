@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 9ef074,127.0.0.1,GET,http://localhost:8000/evennements/evennement/1,1524232947,fcaa34,200
 fcaa34,127.0.0.1,GET,http://localhost:8000/evennements/evennement/1,1524232947,,500
 c6d6c0,127.0.0.1,GET,http://localhost:8000/login,1524233056,,200
@@ -392,3 +393,6 @@ b4c6a2,127.0.0.1,GET,http://localhost:8000/reclamations/new,1524173822,,200
 d79196,127.0.0.1,GET,http://localhost:8000/reclamations/3/show,1524173880,,200
 >>>>>>> fc32930e02bee66592221cc60045a97843f96015
 >>>>>>> a38d8097a11961a797e1a6d751c024c839f60869
+=======
+f20ee4,127.0.0.1,GET,http://localhost:8000/,1524308727,,200
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2

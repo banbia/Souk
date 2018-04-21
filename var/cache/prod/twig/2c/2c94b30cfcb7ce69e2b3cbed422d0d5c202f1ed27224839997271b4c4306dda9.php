@@ -1,0 +1,41 @@
+<?php
+
+/* @Framework/Form/url_widget.html.php */
+class __TwigTemplate_f0fedfec5693dd4eae8ae40e2141049d91482047faee62b9a2badb9b5b3f8f1d extends Twig_Template
+{
+    private $source;
+
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        // line 1
+        echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple', array('type' => isset(\$type) ? \$type : 'url')) ?>
+";
+    }
+
+    public function getTemplateName()
+    {
+        return "@Framework/Form/url_widget.html.php";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  23 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Twig_Source("", "@Framework/Form/url_widget.html.php", "/opt/lampp/htdocs/dev/souk/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/url_widget.html.php");
+    }
+}
