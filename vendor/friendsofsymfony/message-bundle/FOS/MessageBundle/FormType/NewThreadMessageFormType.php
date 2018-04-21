@@ -18,22 +18,16 @@ class NewThreadMessageFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('recipient', LegacyFormHelper::getType('FOS\UserBundle\Form\Type\UsernameFormType'), array('attr'  =>  array(
-            'class' => 'form-control',
-            'style' => 'margin:5px 0;')),array(
+            ->add('recipient', LegacyFormHelper::getType('FOS\UserBundle\Form\Type\UsernameFormType'), array(
                 'label' => 'recipient',
                 'translation_domain' => 'FOSMessageBundle',
             ))
-            ->add('subject', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\TextType'),array('attr'  =>  array(
-            'class' => 'form-control',
-            'style' => 'margin:5px 0;')), array(
+            ->add('subject', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\TextType'), array(
                 'label' => 'subject',
                 'translation_domain' => 'FOSMessageBundle',
             ))
-            ->add('body', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\TextareaType'),array('attr'  =>  array(
-            'class' => 'form-control',
-            'style' => 'margin:5px 0;')), array(
-                'label' => 'Contenu',
+            ->add('body', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\TextareaType'), array(
+                'label' => 'body',
                 'translation_domain' => 'FOSMessageBundle',
             ));
     }
