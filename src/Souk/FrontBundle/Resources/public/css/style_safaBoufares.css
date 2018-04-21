@@ -36,6 +36,6 @@
 .fa-trash-o{
   color:red;
 }
-.fa-edit{
-color: rgb(255, 182, 30);
+.panel .fa-edit{
+  color: rgb(255, 182, 30);
 }

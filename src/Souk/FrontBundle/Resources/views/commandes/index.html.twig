@@ -1,6 +1,7 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 {% block style %}
     <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
+
 {% endblock style %}
 {% block body %}
     <div class="wrap">
@@ -37,41 +38,37 @@
 
                                 {% if is_granted('ROLE_CLIENT') %}
                                     {% if commande.etat==0 %}
-                                        <div class="content">
                                             <!-- Nour's work -->
-                                            <a href="{{ path('commandes_edit',{'id':commande.id}) }}" class="btn left">
-
-                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Modifier</span>
+                                            <a href="{{ path('commandes_edit',{'id':commande.id}) }}" class="btn btn-warning outline">
+                                                <i class="fa fa-edit"></i>Modifier
                                             </a>
-                                        </div>
+                                            <!-- Nour's work -->
+                                            <a href="{{ path('commandes_delete',{'id':commande.id}) }}" class="btn btn-danger">
+
+                                                <i class="fa fa-times"></i>    Annuler
+                                            </a>
                                     {% else %}
-                                        <div class="content">
                                             <!-- Nour's work -->
-                                            <a href="#" class="btn left" data-toggle="modal" data-target="#noEdit">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#noEdit">
 
-                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Modifier</span>
+                                                <i class="fa fa-edit"></i>   Modifier
                                             </a>
-                                        </div>
                                     {% endif %}
 
 
                                 {% elseif is_granted('ROLE_COM') %}
                                     {% if commande.etat==0 %}
-                                        <div class="content">
                                             <!-- Nour's work -->
-                                            <a href="{{ path('commandes_edit',{'id':commande.id}) }}" class="btn left">
+                                            <a href="{{ path('commandes_valid',{'id':commande.id}) }}" class="btn btn-success">
 
-                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Valider</span>
+                                                <i class="fa fa-check"></i>    Valider
                                             </a>
-                                        </div>
                                     {% else %}
-                                        <div class="content">
                                             <!-- Nour's work -->
-                                            <a href="#" class="btn left" data-toggle="modal" data-target="#noValid">
+                                            <a href="#" class="btn btn-info" disabled data-toggle="modal" data-target="#noValid">
 
-                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Valider</span>
+                                                <i class="fa fa-ban"></i>    Valider</span>
                                             </a>
-                                        </div>
                                     {% endif %}
                                 {% endif %}
                             </td>
@@ -103,40 +100,30 @@
 
                                 {% if is_granted('ROLE_CLIENT') %}
 
-                                        <div class="content">
-                                            <!-- Nour's work -->
-                                            <a href="{{ path('commandes_edit',{'id':commande.id}) }}" class="btn left">
+                                    <a href="{{ path('commandes_edit',{'id':commande.id}) }}" class="btn btn-warning">
+                                        <i class="fa fa-edit"></i>Modifier
+                                    </a>
+                                    <!-- Nour's work -->
+                                    <a href="{{ path('commandes_delete',{'id':commande.id}) }}" class="btn btn-danger">
 
-                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Modifier</span>
-                                            </a>
-                                        </div>
-                                        <div class="content">
-                                            <!-- Nour's work -->
-                                            <a href="{{ path('commandes_delete',{'id':commande.id}) }}" class="btn left">
-
-                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Annuler</span>
-                                            </a>
-                                        </div>
+                                        <i class="fa fa-times"></i>    Annuler
+                                    </a>
 
 
 
                                 {% elseif is_granted('ROLE_COM') %}
                                     {% if commande.etat==0 %}
-                                        <div class="content">
-                                            <!-- Nour's work -->
-                                            <a href="{{ path('commandes_valid',{'id':commande.id}) }}" class="btn left">
+                                        <!-- Nour's work -->
+                                        <a href="{{ path('commandes_valid',{'id':commande.id}) }}" class="btn btn-success">
 
-                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Valider</span>
-                                            </a>
-                                        </div>
+                                            <i class="fa fa-check"></i>    Valider
+                                        </a>
                                     {% else %}
-                                        <div class="content">
-                                            <!-- Nour's work -->
-                                            <a href="#" class="btn left" data-toggle="modal" data-target="#noValid">
+                                        <!-- Nour's work -->
+                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#noValid">
 
-                                                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Valider</span>
-                                            </a>
-                                        </div>
+                                            <i class="fa fa-check"></i>    Valider</span>
+                                        </a>
                                     {% endif %}
                                 {% endif %}
                             </td>
@@ -206,7 +193,7 @@
     </div>
 
     <!-- Modal no valide -->
-    <div id="noVAlid" class="modal fade" role="dialog">
+    <div id="noValid" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
