@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 3867cc,127.0.0.1,GET,http://localhost:8000/evennements/new,1524075849,,200
 cf118f,127.0.0.1,GET,http://localhost:8000/bundles/front/css/bootstrap.css.map,1524076106,79f101,200
 79f101,127.0.0.1,GET,http://localhost:8000/bundles/front/css/bootstrap.css.map,1524076106,,404
@@ -30,3 +31,6 @@ aa364d,127.0.0.1,GET,http://localhost:8000/bundles/front/fonts/glyphicons-halfli
 c64feb,127.0.0.1,GET,http://localhost:8000/evennements/new,1524078104,,200
 4d4101,127.0.0.1,GET,http://localhost:8000/evennements/new,1524086010,e22b30,200
 e22b30,127.0.0.1,POST,http://localhost:8000/evennements/new,1524086010,,500
+=======
+f20ee4,127.0.0.1,GET,http://localhost:8000/,1524308727,,200
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2

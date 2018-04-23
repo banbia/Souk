@@ -45,15 +45,16 @@ class Commandes
     private $etat;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Annonces", inversedBy="commandes")
-     * @ORM\JoinColumn(nullable=true)
+     *
+     * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Annonces",inversedBy="commandes")
+     * @ORM\JoinColumn(name="annonce",referencedColumnName="id",onDelete="CASCADE")
      */
     private $annonce;
 
     /**
      *
-     * @ORM\ManyToOne(targetEntity="Souk\UserBundle\Entity\User",inversedBy="commandes")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\ManyToOne(targetEntity="Souk\UserBundle\Entity\User",inversedBy="reservations")
+     * @ORM\JoinColumn(name="client",referencedColumnName="id",onDelete="CASCADE")
      */
     private $client;
 

@@ -15,7 +15,7 @@ reclamations_new:
 
 reclamations_edit:
     path:     /{id}/edit
-    defaults: { _controller: "BackBundle:Reclamations:edit" }
+    defaults: { _controller: "FrontBundle:Reclamations:edit" }
     methods:  [GET, POST]
 
 reclamations_delete:

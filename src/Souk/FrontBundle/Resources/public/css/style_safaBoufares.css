@@ -33,3 +33,9 @@
   font-size:30px;
   color:red;
 }
+.fa-trash-o{
+  color:red;
+}
+.panel .fa-edit{
+  color: rgb(255, 182, 30);
+}

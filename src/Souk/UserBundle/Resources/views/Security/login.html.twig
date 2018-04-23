@@ -1,6 +1,9 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 {% trans_default_domain 'FOSUserBundle' %}
+{% block style %}
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
 
+{% endblock style %}
 {% block formulaire %}
 
     {% if error %}

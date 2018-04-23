@@ -1,41 +1,67 @@
 {% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
 
+    <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
+
+{% endblock style %}
 {% block body %}
-    <h1>Annonces list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Prix</th>
-                <th>Disponible</th>
-                <th>Datecreation</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for annonce in annonces %}
-            <tr>
-                <td><a href="{{ path('client_annonces_show', { 'id': annonce.id }) }}">{{ annonce.id }}</a></td>
-                <td>{{ annonce.titre }}</td>
-                <td>{{ annonce.description }}</td>
-                <td>{{ annonce.prix }}</td>
-                <td>{% if annonce.disponible %}Yes{% else %}No{% endif %}</td>
-                <td>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('client_annonces_show', { 'id': annonce.id }) }}">show</a>
-                        </li>
 
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="left-sidebar">
 
+                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                            {% for category in categories %}
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a href="#">{{  category.designation }}</a></h4>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+                        </div><!--/category-products-->
+
+
+
+
+                    </div>
+                </div>
+
+                <div class="col-sm-9 padding-right">
+                    <div class="features_items"><!--features_items-->
+                        {% for annonce in annonces %}
+                            <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
+                                <a href="">
+                                    <div class="inner_content clearfix">
+                                        <div class="product_image">
+                                            <img  href="{{ path('annonces_show', { 'id': annonce.id }) }}" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
+
+
+                                            <a href=""
+                                               class="button item_add item_1"> </a>
+                                            <div class="product_container">
+                                                <div class="cart-left">
+                                                    <p class="title">{{ annonce.titre }}</p>
+                                                </div>
+                                                <span class="amount item_price">{{ annonce.prix }}</span>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endfor %}
+
+                    </div><!--features_items-->
+
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
