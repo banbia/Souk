@@ -2,11 +2,7 @@
 
 namespace Souk\FrontBundle\Controller;
 
-<<<<<<< HEAD
-=======
-use JMS\Serializer\SerializerBuilder;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
->>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+
 use Souk\BackBundle\Entity\CommentairesEvs;
 use Souk\BackBundle\Entity\Evennements;
 use Souk\BackBundle\Form\CommentairesEvsType;
