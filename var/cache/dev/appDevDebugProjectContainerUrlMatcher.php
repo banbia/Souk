@@ -560,7 +560,23 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_commandes_delete;
                 }
 
+<<<<<<< HEAD
+                if (0 === strpos($pathinfo, '/commandes/commandes')) {
+                    // liste_commandes
+                    if ('/commandes/commandes/liste' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',  '_route' => 'liste_commandes',);
+                    }
+
+                    // create_commande
+                    if (preg_match('#^/commandes/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
+                    }
+
+                }
+
+=======
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::deleteAction',));
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
             }
             not_commandes_delete:
 

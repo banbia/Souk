@@ -756,8 +756,18 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>XBYiQ4jbupoK24nsA4LIlT</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\souk\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>SHT-DSLQplLUSIGI89wLdL</argument>
+      <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>KKka4PIUn2EVbFJiyX1XoI</argument>
+      <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -766,7 +776,15 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>XBYiQ4jbupoK24nsA4LIlT</argument>
+=======
+<<<<<<< HEAD
+      <argument>SHT-DSLQplLUSIGI89wLdL</argument>
+=======
+      <argument>KKka4PIUn2EVbFJiyX1XoI</argument>
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -3203,12 +3221,28 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
+<<<<<<< HEAD
       <argument>5ae0d356dfda48.08420909</argument>
+=======
+<<<<<<< HEAD
+      <argument>5ad78d32819795.95225210</argument>
+=======
+      <argument>5adb1af4bf8c52.36132084</argument>
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+<<<<<<< HEAD
       <argument>5ae0d356dfda48.08420909</argument>
+=======
+<<<<<<< HEAD
+      <argument>5ad78d32819795.95225210</argument>
+=======
+      <argument>5adb1af4bf8c52.36132084</argument>
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -5573,32 +5607,72 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>jNGYlDy1z2</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>XBYiQ4jbupoK24nsA4LIlT</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\souk\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>SHT-DSLQplLUSIGI89wLdL</argument>
+      <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>KKka4PIUn2EVbFJiyX1XoI</argument>
+      <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>W1cjN+z26z</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>XBYiQ4jbupoK24nsA4LIlT</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\souk\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>SHT-DSLQplLUSIGI89wLdL</argument>
+      <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>KKka4PIUn2EVbFJiyX1XoI</argument>
+      <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>DmRUlm38xs</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>XBYiQ4jbupoK24nsA4LIlT</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\souk\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>SHT-DSLQplLUSIGI89wLdL</argument>
+      <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>KKka4PIUn2EVbFJiyX1XoI</argument>
+      <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>gkBTVq0NoB</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>XBYiQ4jbupoK24nsA4LIlT</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\souk\var\cache\dev/pools</argument>
+=======
+<<<<<<< HEAD
+      <argument>SHT-DSLQplLUSIGI89wLdL</argument>
+      <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>KKka4PIUn2EVbFJiyX1XoI</argument>
+      <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
+>>>>>>> 3bab0c5a65e42b68f755d19d75b0b0dde7fc7cb2
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>

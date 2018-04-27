@@ -7,6 +7,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Date;
 
 class EvennementsType extends AbstractType
 {
@@ -20,8 +21,14 @@ class EvennementsType extends AbstractType
             ->add('dateDeb',DateType::class)
             ->add('dateFin',DateType::class)
             ->add('lieu',TextType::class)
+<<<<<<< HEAD
             ->add('prix',TextType::class)
             ->add('etat',TextType::class);
+=======
+            ->add('prix',TextType::class);
+
+
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
     }/**
      * {@inheritdoc}
      */
