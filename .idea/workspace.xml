@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6f566a1-b3f9-4b0d-8ab6-37a62d87442c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/BackBundle/Resources/public/admin/assets/css/SafaBoufares_css.css" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_17_04_18_19_03_c.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_17_04_18_19_04_s.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/Boufares.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/annotations.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerDeprecations.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/commentairesEvs/edit_commentaireEvs.html.twig" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php~a38d8097a11961a797e1a6d751c024c839f60869" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php~a38d8097a11961a797e1a6d751c024c839f60869" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/classes.php.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukBackBundleEntityCategories.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/04/ad/abad04" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/06/d9/48d906" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/07/2a/d32a07" afterPath="" />
@@ -495,7 +484,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundles/back" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundles/front" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundles/starrating" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/commentairesEvs/edit_commentaireEvs.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/edit_commentaireEvs.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Souk.iml" afterPath="$PROJECT_DIR$/.idea/Souk.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
@@ -520,8 +508,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/show.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/signalsEvs/signalEvs.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/signalsEvs/signalEvs.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/bootstrap.php.cache" afterPath="$PROJECT_DIR$/var/bootstrap.php.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/classes.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/classes.php.meta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukUserBundleEntityUser.php" afterPath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukUserBundleEntityUser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/translations/catalogue.fr.74ad548a14679603165a68a05f1f6a84f1ab7740.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/translations/catalogue.fr.74ad548a14679603165a68a05f1f6a84f1ab7740.php.meta" />
@@ -1782,12 +1778,12 @@
       <workItem from="1524309409896" duration="10978000" />
       <workItem from="1524642673473" duration="1990000" />
       <workItem from="1524675701323" duration="5588000" />
-      <workItem from="1524817715086" duration="13768000" />
+      <workItem from="1524817715086" duration="13794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32324000" />
+    <option name="totallyTimeSpent" value="32350000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
