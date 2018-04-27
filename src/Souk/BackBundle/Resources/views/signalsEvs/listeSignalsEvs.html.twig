@@ -1,7 +1,7 @@
 {% extends 'BackBundle::panel.html.twig' %}
 
 {% block body %}
-    <div class="row">
+   {# <div class="row">
         {% for com in coms %}
 
             <div class="col-md-12">
@@ -33,4 +33,27 @@
             </div>
         {% endfor %}
     </div>
+ #}
+    <h2>La liste des signaux</h2>
+    <br/>
+    <table  class="col-md-9 table table-condensed"  >
+        <tr>
+
+            <td><b>Client</b></td>
+            <td><b>Contenu</b> </td>
+            <td><b>Date du signale</b></td>
+            <td><b>Action</b></td>
+        </tr>
+
+    {% for com in coms %}
+
+        <tr>
+            <td>{{ com.client.username }}</td>
+            <td> {{ com.contenu }}</td>
+            <td>{{ com.dateSg|date('D-M-Y') }}</td>
+            <td></td>
+        </tr>
+    {% endfor %}
+    </table>
+
 {% endblock %}

@@ -3,28 +3,6 @@
 use Symfony\Component\Translation\MessageCatalogue;
 
 $catalogue = new MessageCatalogue('eo', array (
-  'validators' => 
-  array (
-    'fos_user.username.already_used' => 'Tiu ĉi uzantnomo estas jam okupita.',
-    'fos_user.username.blank' => 'Enmetu vian uzantnomo.',
-    'fos_user.username.short' => 'La uzantnomo estas tro mallonga.',
-    'fos_user.username.long' => 'La uzantnomo estas tro longa.',
-    'fos_user.email.already_used' => 'Tiu ĉi retpoŝtadreso jam estas registrita.',
-    'fos_user.email.blank' => 'Enmetu validan retpoŝtan adreson.',
-    'fos_user.email.short' => 'La retpoŝtadreso estas tro mallonga.',
-    'fos_user.email.long' => 'La retpoŝtadreso estas tro longa.',
-    'fos_user.email.invalid' => 'La retpoŝtadreso ne estas valida.',
-    'fos_user.password.blank' => 'Enmetu pasvorton.',
-    'fos_user.password.short' => 'La pasvorto estas tro mallonga.',
-    'fos_user.password.mismatch' => 'La pasvortoj ne samas.',
-    'fos_user.new_password.blank' => 'Bonvolu enmeti novan pasvorton.',
-    'fos_user.new_password.short' => 'La nova pasvorto estas tro mallonga.',
-    'fos_user.current_password.invalid' => 'La pasvorto estas nevalida.',
-    'fos_user.group.blank' => 'Bonvolu enmeti grupnomon.',
-    'fos_user.group.short' => 'La nomo estas tro mallonga.',
-    'fos_user.group.long' => 'La nomo estas tro longa.',
-    'fos_group.name.already_used' => 'La grupnomon estas jam okupita.',
-  ),
   'FOSUserBundle' => 
   array (
     'group.edit.submit' => 'Aktualigi',
@@ -88,6 +66,28 @@ la Teamo.
     'form.password_confirmation' => 'Retajpu pasvorton',
     'form.new_password' => 'Nova pasvorto',
     'form.new_password_confirmation' => 'Retajpu novan pasvorton',
+  ),
+  'validators' => 
+  array (
+    'fos_user.username.already_used' => 'Tiu ĉi uzantnomo estas jam okupita.',
+    'fos_user.username.blank' => 'Enmetu vian uzantnomo.',
+    'fos_user.username.short' => 'La uzantnomo estas tro mallonga.',
+    'fos_user.username.long' => 'La uzantnomo estas tro longa.',
+    'fos_user.email.already_used' => 'Tiu ĉi retpoŝtadreso jam estas registrita.',
+    'fos_user.email.blank' => 'Enmetu validan retpoŝtan adreson.',
+    'fos_user.email.short' => 'La retpoŝtadreso estas tro mallonga.',
+    'fos_user.email.long' => 'La retpoŝtadreso estas tro longa.',
+    'fos_user.email.invalid' => 'La retpoŝtadreso ne estas valida.',
+    'fos_user.password.blank' => 'Enmetu pasvorton.',
+    'fos_user.password.short' => 'La pasvorto estas tro mallonga.',
+    'fos_user.password.mismatch' => 'La pasvortoj ne samas.',
+    'fos_user.new_password.blank' => 'Bonvolu enmeti novan pasvorton.',
+    'fos_user.new_password.short' => 'La nova pasvorto estas tro mallonga.',
+    'fos_user.current_password.invalid' => 'La pasvorto estas nevalida.',
+    'fos_user.group.blank' => 'Bonvolu enmeti grupnomon.',
+    'fos_user.group.short' => 'La nomo estas tro mallonga.',
+    'fos_user.group.long' => 'La nomo estas tro longa.',
+    'fos_group.name.already_used' => 'La grupnomon estas jam okupita.',
   ),
 ));
 

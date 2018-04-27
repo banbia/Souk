@@ -3,6 +3,8 @@
 namespace Souk\BackBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +15,13 @@ class EvennementsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titre')->add('description')->add('dateDeb')->add('dateFin')->add('lieu')->add('prix')->add('etat')->add('client')->add('commercial');
+        $builder->add('titre',TextType::class)
+            ->add('description',TextType::class)
+            ->add('dateDeb',DateType::class)
+            ->add('dateFin',DateType::class)
+            ->add('lieu',TextType::class)
+            ->add('prix',TextType::class)
+            ->add('etat',TextType::class);
     }/**
      * {@inheritdoc}
      */

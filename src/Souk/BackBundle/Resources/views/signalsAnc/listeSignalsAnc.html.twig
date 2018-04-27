@@ -1,6 +1,8 @@
 {% extends 'BackBundle::panel.html.twig' %}
 
 {% block body %}
+
+    {#
 <div class="row">
     {% for com in coms %}
 
@@ -32,5 +34,30 @@
             </div>
         </div>
     {% endfor %}
-</div>
+</div> #}
+
+    <h2> La liste des signaux</h2>
+    <br/>
+
+    <table  class="col-md-9 table table-condensed"  >
+        <tr>
+
+            <td><b>Client</b></td>
+            <td><b>Contenu</b> </td>
+            <td><b>Date du signale</b></td>
+            <td><b>Action</b></td>
+        </tr>
+    {% for com in coms %}
+
+        <tr>
+
+            <td>{{ com.client.username }}</td>
+            <td> {{ com.contenu }}</td>
+            <td>{{ com.dateSg|date('D-M-Y') }}</td>
+          {#  <td><a href="{{ path('signalEvs_delete',{'com':com.id,'id':signalAnc.id}) }}"><i class="fa fa-trash-o"></i></a>#}
+
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
 {% endblock %}

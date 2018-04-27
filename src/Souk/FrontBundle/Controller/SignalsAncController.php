@@ -36,7 +36,7 @@ class SignalsAncController extends Controller
             $sig_Anc->setAnnonce($annonces);
             $cm->persist($sig_Anc);
             $cm->flush();
-            return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
+            return $this->redirectToRoute('annonces_show',array("id"=>$annonce));
         }
 
 

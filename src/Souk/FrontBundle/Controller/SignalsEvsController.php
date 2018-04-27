@@ -36,11 +36,11 @@ class SignalsEvsController extends Controller
             $sig_Evs->setEvennement($evennements);
             $cm->persist($sig_Evs);
             $cm->flush();
-            return $this->redirectToRoute('commentairesEvs_new',array("evennement"=>$evennement));
+            return $this->redirectToRoute('evennements_show',array("id"=>$evennement));
         }
 
 
-        return $this->render('FrontBundle:signalsEvs:signalEvs.html.twig',array('evennement'=>$evennements,'form'=>$form->createView()));
+        return $this->render('FrontBundle:signalsEvs:signalEvs.html.twig',array('evennement'=>$evennements,'formSignal'=>$form->createView()));
     }
 
 }

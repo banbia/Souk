@@ -126,7 +126,7 @@ class AnnoncesController extends Controller
             $com_Anc->setAnnonce($annonces);
             $cm->persist($com_Anc);
             $cm->flush();
-            return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
+            return $this->redirectToRoute('annonces_show',array("annonce"=>$annonce));
         }
 
 
@@ -145,7 +145,7 @@ class AnnoncesController extends Controller
         $em->remove($comm);
         $em->flush();
 
-        return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
+        return $this->redirectToRoute('annonces_show',array("id"=>$annonce));
     }
 
     // edit des comm de l'Anc
@@ -167,7 +167,7 @@ class AnnoncesController extends Controller
             $em->persist($com_Anc);
             $em->flush();
 
-            return $this->redirectToRoute('commentairesAnc_new',array("annonce"=>$annonce));
+            return $this->redirectToRoute('annonces_show',array("id"=>$annonce));
         }
         return $this->render('FrontBundle:annonces:edit_commantaireAnc.html.twig',array('form'=>$formView,'annonce'=>$annonces));
     }
