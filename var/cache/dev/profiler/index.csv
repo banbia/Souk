@@ -10,3 +10,12 @@ ff328a,127.0.0.1,GET,http://localhost:8000/login,1524925883,,500
 3a96c6,127.0.0.1,GET,http://localhost:8000/,1524925929,,200
 f3dc5f,127.0.0.1,GET,http://localhost:8000/profile/,1524925931,,200
 c7c60c,127.0.0.1,GET,http://localhost:8000/profile/,1524926127,,200
+4280af,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926293,f3bee1,200
+f3bee1,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926293,,500
+24d946,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926326,6b65d0,200
+6b65d0,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926326,,500
+f24795,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926338,,200
+99a070,127.0.0.1,GET,http://localhost:8000/bundles/front/css/soumaya_style.css,1524926338,03ec13,200
+03ec13,127.0.0.1,GET,http://localhost:8000/bundles/front/css/soumaya_style.css,1524926338,,404
+e20b32,127.0.0.1,GET,http://localhost:8000/bundles/front/css/soumaya_style.css,1524926338,2f7e1e,200
+2f7e1e,127.0.0.1,GET,http://localhost:8000/bundles/front/css/soumaya_style.css,1524926338,,404
