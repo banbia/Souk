@@ -7,37 +7,34 @@
        {# {{ form_widget(form) }} #}
     <div class="col-md-12">
         <div class="col-md-6">
-    {{ form_label(form.designation) }}
+            <label> Designation :</label>
     {{ form_errors(form.designation) }}
     {{ form_widget(form.designation, {'attr': {'class': 'comment form-control'}}) }}
         </div>
         <div class="col-md-6">
-    {{ form_label(form.description) }}
+            <label> Description :</label>
     {{ form_errors(form.description) }}
     {{ form_widget(form.description, {'attr': {'class': 'comment form-control'}}) }}
         </div>
     </div>
         <div class="col-md-12">
             <div class="col-md-6">
-    {{ form_label(form.prix) }}
+                <label> Prix :</label>
     {{ form_errors(form.prix) }}
     {{ form_widget(form.prix, {'attr': {'class': 'comment form-control'}}) }}
             </div>
             <div class="col-md-6">
-    {{ form_label(form.nbMois) }}
+                <label> Nombre de mois :</label>
     {{ form_errors(form.nbMois) }}
     {{ form_widget(form.nbMois, {'attr': {'class': 'comment form-control'}}) }}
             </div>
         </div>
-    {{ form_end(form) }}
 
-<div class="col-md-12">
-    <br/>
-    <input type="submit" class="btn btn-success pull-right" value="Create" />
+<div class="col-md-12" style="margin-top: 15px" >
+    <div class="col-md-6">
+    <a class ="btn btn-default" href="{{ path('abonnements_index') }}"><i class="fa fa-arrow-left"></i> Back to the list</a>
+    <button type="submit" class="btn btn-success " > Créer </button>
+    </div>
 </div>
-    <ul>
-        <li>
-            <a  href="{{ path('abonnements_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    {{ form_end(form) }}
 {% endblock %}
