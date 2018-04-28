@@ -10,4 +10,15 @@ namespace Souk\BackBundle\Repository;
  */
 class AnnoncesRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function signales()
+    {
+        return $this->createQueryBuilder('p')
+            // p.category refers to the "category" property on product
+            ->innerJoin('p.signals', 's')
+            // selects all the category data to avoid the query
+            ->addSelect('s')
+            ->andWhere('s.annonce = p.id')
+            ->getQuery()
+            ->getResult();
+    }
 }
