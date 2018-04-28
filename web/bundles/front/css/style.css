@@ -51,7 +51,11 @@ p {margin: 0;}
 .member {
 	background: #381c7b91;
 	color: #eee;
+<<<<<<< HEAD
 	margin-right: 35px;
+=======
+margin-right:35px;
+>>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90
 	text-align: center;
 	padding: 13px;
 }
@@ -3346,7 +3350,7 @@ ul {
 	border: 1px solid #fff;
 	overflow: hidden;
 	margin-right: 1%;
-	height: 49px;
+	height: 50px;
 	width: 55px;
 	position: absolute;
 	-webkit-transition: 1.3s cubic-bezier(0.15, 0, 0, 0.97);
@@ -3495,4 +3499,8 @@ ul {
 	-ms-transition:.5s all;
 	transition:.5s all;
 }
+<<<<<<< HEAD
 /*-- //menu --*/
+=======
+/*-- //menu --*/
+>>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90

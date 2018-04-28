@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ec8eee,127.0.0.1,GET,http://localhost:8000/logout,1524908913,,302
 8583df,127.0.0.1,GET,http://localhost:8000/,1524908915,,200
 5e0c18,127.0.0.1,GET,http://localhost:8000/bundles/front/css/bootstrap.css.map,1524908938,0efecd,200
@@ -113,3 +114,13 @@ a1980b,127.0.0.1,GET,http://localhost:8000/admin/signals,1524927524,,200
 57b7d2,127.0.0.1,GET,http://localhost:8000/admin/viewAnc/1,1524927939,,200
 658441,127.0.0.1,GET,http://localhost:8000/admin/viewAnc/1,1524927947,,200
 5a94b7,127.0.0.1,GET,http://localhost:8000/admin/viewAnc/1,1524927955,,200
+=======
+892448,127.0.0.1,GET,http://localhost:8000/,1524927663,,200
+87b88d,127.0.0.1,GET,http://localhost:8000/logout,1524927681,,302
+13e8ee,127.0.0.1,GET,http://localhost:8000/,1524927683,,200
+6aa756,127.0.0.1,GET,http://localhost:8000/login,1524927693,,200
+886795,127.0.0.1,POST,http://localhost:8000/login_check,1524927707,,302
+4d9e18,127.0.0.1,GET,http://localhost:8000/,1524927709,,200
+6844c8,127.0.0.1,GET,http://localhost:8000/reclamations/,1524927716,,200
+4d39d9,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1524927734,,200
+>>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90

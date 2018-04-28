@@ -12,6 +12,7 @@ front_commandes:
 front_abonnemnts:
     resource: "@FrontBundle/Resources/config/routing/ComAbonnements.yml"
     prefix:   /abonnements
+
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
