@@ -1,18 +1,23 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 {% block style %}
 <link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
-
 {% endblock style %}
 {% block body %}
-    <h1>Liste de votre reclamations</h1>
-
+<div class="row form-controlS">
+    <h1  style="text-align:center" >La liste de votre reclamations</h1>
+    <br>
+    <a   href="{{ path('reclamations_new') }}"  class="btn btn-success pull-right"> <i class="fa fa-plus" > </i> Create a new reclamation </a>
+    <br>
+    <br>
+    <br>
     <table class="table table-striped">
         <thead class="thead-light">
         <tr class="table-secondary">
-                <th>Contenu</th>
+                <th>Description</th>
+                <th>Commercial</th>
                 <th>Date de reclamation</th>
                 <th>Etat</th>
-                <th>Actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -20,10 +25,11 @@
             <tr>
 
                 <td>{{ reclamation.contenu }}</td>
+                <td> {{ reclamation.commercial.nom }}</td>
                 <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if reclamation.etat == 0 %} encours
                     {% elseif reclamation.etat == 1 %} accepter
-                    {% elseif reclamation.etat == 2 %}  rejeter
+                    {% elseif reclamation.etat == (-1) %}  rejeter
                     {% endif %}
                 </td>
                 <td>
@@ -35,5 +41,5 @@
         {% endfor %}
         </tbody>
     </table>
-    <a href="{{ path('reclamations_new') }}"><button type="submit" class="btn btn-success">  Create a new reclamation  </button></a>
+</div>
 {% endblock %}

@@ -1,9 +1,8 @@
-25ca99,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926447,6686a2,200
-6686a2,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926447,,500
-a9f6f6,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926472,7d174f,200
-7d174f,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926472,,500
-24f0dd,127.0.0.1,GET,http://localhost:8000/reclamations/,1524926487,,200
-419214,127.0.0.1,GET,http://localhost:8000/bundles/front/css/soumaya_style.css,1524926487,7a8bec,200
-7a8bec,127.0.0.1,GET,http://localhost:8000/bundles/front/css/soumaya_style.css,1524926487,,404
-bd9257,127.0.0.1,GET,http://localhost:8000/bundles/front/css/soumaya_style.css,1524926487,478139,200
-478139,127.0.0.1,GET,http://localhost:8000/bundles/front/css/soumaya_style.css,1524926487,,404
+892448,127.0.0.1,GET,http://localhost:8000/,1524927663,,200
+87b88d,127.0.0.1,GET,http://localhost:8000/logout,1524927681,,302
+13e8ee,127.0.0.1,GET,http://localhost:8000/,1524927683,,200
+6aa756,127.0.0.1,GET,http://localhost:8000/login,1524927693,,200
+886795,127.0.0.1,POST,http://localhost:8000/login_check,1524927707,,302
+4d9e18,127.0.0.1,GET,http://localhost:8000/,1524927709,,200
+6844c8,127.0.0.1,GET,http://localhost:8000/reclamations/,1524927716,,200
+4d39d9,127.0.0.1,GET,http://localhost:8000/reclamations/1/show,1524927734,,200

@@ -7,3 +7,13 @@ admin_reclamations_edit:
     path:     /{id}/edit
     defaults: { _controller: "BackBundle:AdminReclamations:edit" }
     methods:  [GET, POST]
+
+admin_reclamations_refuser:
+    path:     /{id}/refuser
+    defaults: { _controller: "BackBundle:AdminReclamations:refuser" }
+    methods:  [GET, POST]
+
+admin_reclamations_accepter:
+   path:     /{id}/accepter
+   defaults: { _controller: "BackBundle:AdminReclamations:accepter" }
+   methods:  [GET, POST]

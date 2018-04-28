@@ -203,6 +203,28 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
                     not_admin_reclamations_edit:
 
+                    // admin_reclamations_refuser
+                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/refuser$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_reclamations_refuser;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_refuser')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::refuserAction',));
+                    }
+                    not_admin_reclamations_refuser:
+
+                    // admin_reclamations_accepter
+                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/accepter$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_reclamations_accepter;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_accepter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::accepterAction',));
+                    }
+                    not_admin_reclamations_accepter:
+
                 }
 
                 elseif (0 === strpos($pathinfo, '/admin/categories')) {
