@@ -21,7 +21,7 @@ class CommentaireEvsController extends Controller
         //cnx bd
         $cm = $this->getDoctrine()->getManager();
         //extraire la liste des commentaires d'un Evs
-        $coms_Evs = $cm->getRepository('BackBundle:commentairesEvs')->findBy(array("evennement"=>$evennement));
+        $coms_Evs = $cm->getRepository('BackBundle:CommentairesEvs')->findBy(array("evennement"=>$evennement));
         //ajout d'un noveau commentaire Evs
         $com_Evs =new CommentairesEvs();
         ///récupérer Evs

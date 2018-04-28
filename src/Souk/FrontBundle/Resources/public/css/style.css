@@ -52,7 +52,7 @@ p {margin: 0;}
 	background: #381c7b91;
 	color: #eee;
 	text-align: center;
-	padding: 22px;
+	padding: 13px;
 }
 
 html, body{
@@ -480,7 +480,7 @@ ul.quick_access li.check{
 .dropdown ul{
 	position: absolute;
 	left: 0;
-	top: 44px;
+	top: 38px;
 	/* height: 100%; */
 	width: 100%;
 	list-style: none;
@@ -3337,3 +3337,161 @@ ul {
 
 
     .push-top{margin-top:20px;}
+/*-- menu --*/
+.menu {
+	display: inline-block;
+	box-sizing: border-box;
+	background: #8c5287;
+	border: 1px solid #fff;
+	overflow: hidden;
+	margin-right: 1%;
+	height: 49px;
+	width: 55px;
+	position: absolute;
+	-webkit-transition: 1.3s cubic-bezier(0.15, 0, 0, 0.97);
+	-moz-transition: 1.3s cubic-bezier(0.15, 0, 0, 0.97);
+	-o-transition: 1.3s cubic-bezier(0.15, 0, 0, 0.97);
+	-ms-transition: 1.3s cubic-bezier(0.15, 0, 0, 0.97);
+	transition: 1.3s cubic-bezier(0.15, 0, 0, 0.97);
+	right: 0;
+}
+.menu.open {
+	width: 100%;
+	overflow: inherit;
+}
+.dropdown-menu a.show-w3nav-link {
+	color: #fff;
+	font-size: .9em;
+}
+.w3nav {
+	opacity: 0;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	transition: opacity .3s;
+}
+.menu ul.dropdown-menu {
+	min-width: inherit;
+	top: 156%;
+	background-color: #4362ca;
+}
+.w3nav.show-w3nav {
+	opacity: 1;
+	padding: 1em 5em;
+	text-align: center;
+}
+.w3nav.show-w3nav li a.show-w3nav-link {
+	opacity: 1;
+}
+.menu ul.dropdown-menu li {
+	margin: 0;
+	display: block;
+}
+.menu ul.dropdown-menu li a {
+	padding: .5em 2em;
+	font-size: 1em;
+}
+.w3nav.show-w3nav li a.show-w3nav-link:nth-of-type(2) {
+	-webkit-transition-delay: .5s;
+	-moz-transition-delay: .5s;
+	-o-transition-delay: .5s;
+	-ms-transition-delay: .5s;
+	transition-delay: .5s;
+}
+.w3nav.show-w3nav li a.show-w3nav-link:nth-of-type(3) {
+	-webkit-transition-delay: .6s;
+	-moz-transition-delay: .6s;
+	-o-transition-delay: .6s;
+	-ms-transition-delay: .6s;
+	transition-delay: .6s;
+}
+.w3nav.show-w3nav li a.show-w3nav-link:nth-of-type(4) {
+	-webkit-transition-delay: .7s;
+	-moz-transition-delay: .7s;
+	-o-transition-delay: .7s;
+	-ms-transition-delay: .7s;
+	transition-delay: .7s;
+}
+.w3nav.show-w3nav li a.show-w3nav-link:nth-of-type(4) {
+	-webkit-transition-delay: .9s;
+	-moz-transition-delay: .9s;
+	-o-transition-delay: .9s;
+	-ms-transition-delay: .9s;
+	transition-delay: .9s;
+}
+.w3nav li {
+	display: inline-block;
+	margin-right: 3em;
+	position: relative;
+}
+.w3nav.show-w3nav li a {
+	opacity: 0;
+	color: #fff;
+	text-decoration: none;
+	transition: .3s;
+	font-size:1.1em;
+	-webkit-transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+	-moz-transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+	-o-transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+	-ms-transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+	transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+}
+.w3nav.show-w3nav li a:hover,.w3nav.show-w3nav li a.active{
+	color: #FF9800;
+	background-color: transparent;
+}
+.toggle {
+	position: relative;
+	height: 50px;
+	width: 55px;
+	cursor: pointer;
+}
+.toggle:after, .toggle:before {
+	content: '';
+	background: #fff;
+	width: 28px;
+	height: 4.5px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	-webkit-transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+	-moz-transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+	-o-transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+	-ms-transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+	transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+}
+.toggle:before {
+	top: -24%;
+}
+.toggle:after {
+	top: 28%;
+}
+.toggle.close:before {
+	-webkit-transform: rotate(-225deg);
+	-moz-transform: rotate(-225deg);
+	-o-transform: rotate(-225deg);
+	-ms-transform: rotate(-225deg);
+	transform: rotate(-225deg);
+	top: 0;
+}
+.toggle.close:after {
+	-webkit-transform: rotate(225deg);
+	-moz-transform: rotate(225deg);
+	-o-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	transform: rotate(225deg);
+	top: 0;
+}
+.toggle.close {
+	opacity: 1;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all;
+	transition:.5s all;
+}
+/*-- //menu --*/

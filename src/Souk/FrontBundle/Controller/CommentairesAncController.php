@@ -3,7 +3,6 @@
 namespace Souk\FrontBundle\Controller;
 
 use JMS\Serializer\SerializerBuilder;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Souk\BackBundle\Entity\CommentairesAnc;
 use Souk\BackBundle\Entity\Annonces;
 
@@ -11,6 +10,7 @@ use Souk\BackBundle\Form\CommentairesAncType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 

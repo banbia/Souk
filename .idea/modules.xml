@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Souk.iml" filepath="$PROJECT_DIR$/.idea/Souk.iml" />
+=======
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/souk.iml" filepath="$PROJECT_DIR$/.idea/souk.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Souk.iml" filepath="$PROJECT_DIR$/.idea/Souk.iml" />
+>>>>>>> 7dd3c9b56fd2adf2b0ff556e095d9fd71cd44e7e
+>>>>>>> 9e17d445cd6cc8e144fc827de2ff6f35022452c9
     </modules>
   </component>
 </project>

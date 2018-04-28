@@ -1,0 +1,3 @@
+signalsEvsN_new:
+    path:     /signalsEvsN/{evennement}
+    defaults: { _controller: FrontBundle:SignalsEvs:new}
