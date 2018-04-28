@@ -26,6 +26,7 @@ class EvennementsController extends Controller
 
         $evennements = $em->getRepository('BackBundle:Evennements')->findAll();
 
+
         return $this->render('FrontBundle:evennements:index.html.twig', array(
             'evennements' => $evennements,
         ));
@@ -61,11 +62,9 @@ class EvennementsController extends Controller
      */
     public function showAction(Evennements $evennement)
     {
-        $deleteForm = $this->createDeleteForm($evennement);
 
         return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -129,16 +128,13 @@ class EvennementsController extends Controller
     // Safa Boufares  commentaire Evs
 
     // Ajout des commentaires et les listees pour un Evs
-
-    /**
-     * @Route("/evennement/{$evennement}", name="commentairesEvs_new")
-     */
     public function newEvsAction(Request $request,$evennement)
     {
+
         //cnx bd
         $cm = $this->getDoctrine()->getManager();
         //extraire la liste des commentaires d'un Evs
-        $coms_Evs = $cm->getRepository('BackBundle:commentairesEvs')->findBy(array("evennement"=>$evennement));
+        $coms_Evs = $cm->getRepository('BackBundle:CommentairesEvs')->findBy(array("evennement"=>$evennement));
         //ajout d'un noveau commentaire Evs
         $com_Evs =new CommentairesEvs();
         ///récupérer Evs
@@ -152,16 +148,20 @@ class EvennementsController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted()&& $form->isValid()) {
+
             $com_Evs->setDateCmt(new \DateTime('now'));
             $com_Evs->setClient($user);
             $com_Evs->setEvennement($evennements);
+
+
             $cm->persist($com_Evs);
             $cm->flush();
-            return $this->redirectToRoute('commentairesEvs_new',array("evennement"=>$evennement));
+            return $this->redirectToRoute('evennements_show',array("id"=>$evennement));
         }
 
 
-        return $this->render('FrontBundle:evennements:new_commentairesEvs.html.twig',array('coms_Evs'=>$coms_Evs,'form'=>$formView));
+        return $this->render('FrontBundle:evennements:new_commentairesEvs.html.twig',array('coms_Evs'=>$coms_Evs,'formCommentaire'=>$formView, 'evennement' => $evennement));
+
     }
     // delete des comm de l'Evs
 
@@ -174,7 +174,7 @@ class EvennementsController extends Controller
         $comm_Evs = $em->getRepository('BackBundle:commentairesEvs')->find($com);
         $em->remove($comm_Evs);
         $em->flush();
-        return $this->redirectToRoute('commentairesEvs_new',array("evennement"=>$evennement));
+        return $this->redirectToRoute('evennements_show',array("id"=>$evennement));
 
     }
     // edit des comm de l'Anc
@@ -196,9 +196,9 @@ class EvennementsController extends Controller
             $em->persist($com_Evs);
             $em->flush();
 
-            return $this->redirectToRoute('commentairesEvs_new',array("evennement"=>$evennement));
+            return $this->redirectToRoute('evennements_show',array("id"=>$evennement));
         }
-        return $this->render('FrontBundle:commentairesEvs:edit_commentaireEvs.html.twig',array('form'=>$formView,'evennement'=>$evennements));
+        return $this->render('FrontBundle:evennements:edit_commentaireEvs.html.twig',array('form'=>$formView,'evennement'=>$evennements));
     }
 
     //services web pour comm Evs

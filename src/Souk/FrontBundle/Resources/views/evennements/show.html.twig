@@ -48,9 +48,12 @@
             <a href="{{ path('evennements_edit', { 'id': evennement.id }) }}">Edit</a>
         </li>
         <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
+            <a href="{{ path('evennements_delete', { 'id': evennement.id }) }}">Delete</a>
+
         </li>
     </ul>
+
+    {{ render(controller('FrontBundle:Evennements:newEvs', { 'evennement':evennement.id  })) }}
+
+
 {% endblock %}

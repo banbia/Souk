@@ -182,6 +182,8 @@
             </div>
         </div>
     </div>
+    {{ render(controller('FrontBundle:Annonces:new', { 'annonce':annonce.id  })) }}
+
 {% endblock body %}
 {% block js %}
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -222,4 +224,5 @@
 
 
     </script>
+
 {% endblock js %}

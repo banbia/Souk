@@ -6,11 +6,11 @@
     <!-- /row -->
     <div class="row">
         <div class="col-md-6">
-            {{ form_start(form) }}
-            {{ form_errors(form.contenu) }}
-            {{ form_widget(form.contenu, {'attr': {'class': 'comment form-control'}}) }}
-            <button type="submit" class="btn sign pull-right"><i class="fa fa-commenting-o"></i> Send </button>
-            {{ form_end(form) }}
+            {{ form_start(formSignal) }}
+            {{ form_errors(formSignal.contenu) }}
+            {{ form_widget(formSignal.contenu, {'attr': {'class': 'comment form-control'}}) }}
+            <button type="submit" class="btn btn-danger pull-right"><i class="fa fa-flag-o"></i> Signaler </button>
+            {{ form_end(formSignal) }}
             <br>
             <br>
         </div>

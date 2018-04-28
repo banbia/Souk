@@ -8,12 +8,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 class SignalsEvsController extends Controller
 {
+
     /**
-     * @Route("/admin", name="admin_homepage")
+     * @Route("/signalsEvs/{evennement}", name="signalsEvs_all")
      */
-    public function indexAction()
+    public function allAction(Request $request,$evennement)
     {
-        // replace this example code with whatever you need
-        return $this->render('BackBundle:admin:home.html.twig');
+        //cnx bd
+        $cm = $this->getDoctrine()->getManager();
+        //extraire la liste des signals d'un evennement
+        $coms = $cm->getRepository('BackBundle:SignalsEvs')->findBy(array("evennement"=>$evennement));
+        return $this->render('BackBundle:signalsEvs:listeSignalsEvs.html.twig',array('coms'=>$coms));
     }
 }

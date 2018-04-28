@@ -34,9 +34,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="header-top">
             <div class="logo">
-                <a href=""><h6>Souk El Medina</h6></a>
+                <a href="#"><img width="200" height="90" src="{{ asset('bundles/front/images/logo.png') }}"/></a></a>
+            </div>
+            <div class="menu">
+                <div class="toggle"></div>
+                <ul class="w3nav">
+                    <li><a href="index.html" class="active"> Home</a></li>
+                    <li><a href="about.html"> About</a></li>
+                    <li><a href="blog.html"> Blog</a></li>
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Short Codes <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="icons.html">Web Icons</a></li>
+                            <li><a href="codes.html">Short Codes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html"> Contact Us</a></li>
+                </ul>
+                <div class="clearfix"> </div>
             </div>
             <div class="header_right">
+
+
                 <div class="member">
                     <div class="dropdown">
                         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
@@ -205,5 +223,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 {% block js %}
 {% endblock js %}
+<script>
+    $('.toggle').on('click', function() {
+        $('.menu').toggleClass('open');
+        $('.w3nav').toggleClass('show-w3nav');
+        $('.w3nav a').toggleClass('show-w3nav-link');
+        $('.toggle').toggleClass('close');
+    });
+</script>
+<!-- //menu js -->
+<!-- start-smooth-scrolling -->
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+</script>
+<!-- //end-smooth-scrolling -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+        var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+        };
+        */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- desoslide-JavaScript -->
+<script>
+    $('#demo1_thumbs').desoSlide({
+        main: {
+            container: '#demo1_main_image',
+            cssClass: 'img-responsive'
+        },
+        effect: 'sideFade',
+        caption: true
+    });
+</script>
+
 </body>
 </html>
