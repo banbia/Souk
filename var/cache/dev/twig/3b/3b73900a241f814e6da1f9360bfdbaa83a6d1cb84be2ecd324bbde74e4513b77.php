@@ -16,11 +16,11 @@ class __TwigTemplate_e7bdd5819424eaf569645eb20f7c5649498d169079b8c0e8419a0204890
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f08b0840f06d8570a229702a9d78020f2c2788e3ba02de7cbef13cdac7905e7c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f08b0840f06d8570a229702a9d78020f2c2788e3ba02de7cbef13cdac7905e7c->enter($__internal_f08b0840f06d8570a229702a9d78020f2c2788e3ba02de7cbef13cdac7905e7c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle::panel.html.twig"));
+        $__internal_fda32461d29af6525035be4589772f45c98dca31dd77e068760889eb9a72f2e2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_fda32461d29af6525035be4589772f45c98dca31dd77e068760889eb9a72f2e2->enter($__internal_fda32461d29af6525035be4589772f45c98dca31dd77e068760889eb9a72f2e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle::panel.html.twig"));
 
-        $__internal_279aceffc23b38de44802223d1d89f5e8f9b5cbb92e5ba1d1fb47ceb39809f2d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_279aceffc23b38de44802223d1d89f5e8f9b5cbb92e5ba1d1fb47ceb39809f2d->enter($__internal_279aceffc23b38de44802223d1d89f5e8f9b5cbb92e5ba1d1fb47ceb39809f2d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle::panel.html.twig"));
+        $__internal_7cbb4604373743d93158e043f599bd67aed569074141a48edf53df3760b81c4a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7cbb4604373743d93158e043f599bd67aed569074141a48edf53df3760b81c4a->enter($__internal_7cbb4604373743d93158e043f599bd67aed569074141a48edf53df3760b81c4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle::panel.html.twig"));
 
         // line 1
         echo "﻿<!DOCTYPE html>
@@ -91,10 +91,12 @@ class __TwigTemplate_e7bdd5819424eaf569645eb20f7c5649498d169079b8c0e8419a0204890
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("abonnements_index");
         echo "\">Abonnements</a></li>
                             <li>
-                                <a href=\"#\" class=\"dropdown-toggle\" id=\"ddlmenuItem\" data-toggle=\"dropdown\">UI ELEMENTS <i class=\"fa fa-angle-down\"></i></a>
+                                    <a href=\"#\" class=\"dropdown-toggle\" id=\"ddlmenuItem\" data-toggle=\"dropdown\">Paramétrages <i class=\"fa fa-angle-down\"></i></a>
                                 <ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"ddlmenuItem\">
-                                    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"\">UI ELEMENTS</a></li>
-                                     <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"#\">EXAMPLE LINK</a></li>
+                                    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"";
+        // line 56
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("categories_index");
+        echo "\">Catégories</a></li>
                                 </ul>
                             </li>
                             <li><a href=\"\">TABS & PANELS</a></li>
@@ -123,9 +125,9 @@ class __TwigTemplate_e7bdd5819424eaf569645eb20f7c5649498d169079b8c0e8419a0204890
             <div class=\"row\">
 
               ";
-        // line 85
+        // line 84
         $this->displayBlock('body', $context, $blocks);
-        // line 87
+        // line 86
         echo "             
             </div>
             
@@ -150,17 +152,17 @@ class __TwigTemplate_e7bdd5819424eaf569645eb20f7c5649498d169079b8c0e8419a0204890
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src=\"";
-        // line 110
+        // line 109
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/back/admin/assets/js/jquery-1.10.2.js"), "html", null, true);
         echo "\"></script>
     <!-- BOOTSTRAP SCRIPTS  -->
     <script src=\"";
-        // line 112
+        // line 111
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/back/admin/assets/js/bootstrap.js"), "html", null, true);
         echo "\"></script>
       <!-- CUSTOM SCRIPTS  -->
     <script src=\"";
-        // line 114
+        // line 113
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/back/admin/assets/js/custom.js"), "html", null, true);
         echo "\"></script>
   
@@ -168,29 +170,29 @@ class __TwigTemplate_e7bdd5819424eaf569645eb20f7c5649498d169079b8c0e8419a0204890
 </html>
 ";
         
-        $__internal_f08b0840f06d8570a229702a9d78020f2c2788e3ba02de7cbef13cdac7905e7c->leave($__internal_f08b0840f06d8570a229702a9d78020f2c2788e3ba02de7cbef13cdac7905e7c_prof);
+        $__internal_fda32461d29af6525035be4589772f45c98dca31dd77e068760889eb9a72f2e2->leave($__internal_fda32461d29af6525035be4589772f45c98dca31dd77e068760889eb9a72f2e2_prof);
 
         
-        $__internal_279aceffc23b38de44802223d1d89f5e8f9b5cbb92e5ba1d1fb47ceb39809f2d->leave($__internal_279aceffc23b38de44802223d1d89f5e8f9b5cbb92e5ba1d1fb47ceb39809f2d_prof);
+        $__internal_7cbb4604373743d93158e043f599bd67aed569074141a48edf53df3760b81c4a->leave($__internal_7cbb4604373743d93158e043f599bd67aed569074141a48edf53df3760b81c4a_prof);
 
     }
 
-    // line 85
+    // line 84
     public function block_body($context, array $blocks = array())
     {
-        $__internal_a72bf395ac98995083217aa39033c6934a133e32fcb5ccc47662ffc9033ae9ba = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_a72bf395ac98995083217aa39033c6934a133e32fcb5ccc47662ffc9033ae9ba->enter($__internal_a72bf395ac98995083217aa39033c6934a133e32fcb5ccc47662ffc9033ae9ba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6b06241cca827b41b7d44c8b1acd74ef5c9fa5cda9d9782584559ce8031e3ec3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6b06241cca827b41b7d44c8b1acd74ef5c9fa5cda9d9782584559ce8031e3ec3->enter($__internal_6b06241cca827b41b7d44c8b1acd74ef5c9fa5cda9d9782584559ce8031e3ec3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_1b5961a38e49e3d0af32093b1426d1da46f27414043f79622f20e7991191ee72 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1b5961a38e49e3d0af32093b1426d1da46f27414043f79622f20e7991191ee72->enter($__internal_1b5961a38e49e3d0af32093b1426d1da46f27414043f79622f20e7991191ee72_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_afe322f62046c99cb0a55027a4f5fe7ecb62dd9f959f66ef1b21f8eb30a9b6a1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_afe322f62046c99cb0a55027a4f5fe7ecb62dd9f959f66ef1b21f8eb30a9b6a1->enter($__internal_afe322f62046c99cb0a55027a4f5fe7ecb62dd9f959f66ef1b21f8eb30a9b6a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 86
+        // line 85
         echo "              ";
         
-        $__internal_1b5961a38e49e3d0af32093b1426d1da46f27414043f79622f20e7991191ee72->leave($__internal_1b5961a38e49e3d0af32093b1426d1da46f27414043f79622f20e7991191ee72_prof);
+        $__internal_afe322f62046c99cb0a55027a4f5fe7ecb62dd9f959f66ef1b21f8eb30a9b6a1->leave($__internal_afe322f62046c99cb0a55027a4f5fe7ecb62dd9f959f66ef1b21f8eb30a9b6a1_prof);
 
         
-        $__internal_a72bf395ac98995083217aa39033c6934a133e32fcb5ccc47662ffc9033ae9ba->leave($__internal_a72bf395ac98995083217aa39033c6934a133e32fcb5ccc47662ffc9033ae9ba_prof);
+        $__internal_6b06241cca827b41b7d44c8b1acd74ef5c9fa5cda9d9782584559ce8031e3ec3->leave($__internal_6b06241cca827b41b7d44c8b1acd74ef5c9fa5cda9d9782584559ce8031e3ec3_prof);
 
     }
 
@@ -206,7 +208,7 @@ class __TwigTemplate_e7bdd5819424eaf569645eb20f7c5649498d169079b8c0e8419a0204890
 
     public function getDebugInfo()
     {
-        return array (  188 => 86,  179 => 85,  164 => 114,  159 => 112,  154 => 110,  129 => 87,  127 => 85,  91 => 52,  69 => 33,  50 => 17,  45 => 15,  40 => 13,  26 => 1,);
+        return array (  190 => 85,  181 => 84,  166 => 113,  161 => 111,  156 => 109,  131 => 86,  129 => 84,  98 => 56,  91 => 52,  69 => 33,  50 => 17,  45 => 15,  40 => 13,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -272,10 +274,9 @@ class __TwigTemplate_e7bdd5819424eaf569645eb20f7c5649498d169079b8c0e8419a0204890
                            
                             <li><a href=\"{{ path('abonnements_index') }}\">Abonnements</a></li>
                             <li>
-                                <a href=\"#\" class=\"dropdown-toggle\" id=\"ddlmenuItem\" data-toggle=\"dropdown\">UI ELEMENTS <i class=\"fa fa-angle-down\"></i></a>
+                                    <a href=\"#\" class=\"dropdown-toggle\" id=\"ddlmenuItem\" data-toggle=\"dropdown\">Paramétrages <i class=\"fa fa-angle-down\"></i></a>
                                 <ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"ddlmenuItem\">
-                                    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"\">UI ELEMENTS</a></li>
-                                     <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"#\">EXAMPLE LINK</a></li>
+                                    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"{{ path('categories_index') }}\">Catégories</a></li>
                                 </ul>
                             </li>
                             <li><a href=\"\">TABS & PANELS</a></li>

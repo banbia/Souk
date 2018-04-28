@@ -11,7 +11,7 @@
                 <th>Designation</th>
                 <th>Description</th>
                 <th>Prix</th>
-                <th>Nbmois</th>
+                <th>Nombre de mois </th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -23,15 +23,10 @@
                 <td>{{ abonnement.prix }}</td>
                 <td>{{ abonnement.nbMois }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('abonnements_show', { 'id': abonnement.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('abonnements_edit', { 'id': abonnement.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
+
+                    <a class ="btn btn-default" href="{{ path('abonnements_show', { 'id': abonnement.id }) }}"><i class="fa fa-file-text-o"></i> Show</a>
+                    <a class ="btn btn-default" href="{{ path('abonnements_edit', { 'id': abonnement.id }) }}"><i class="fa fa-edit"></i> Edit</a>
+
             </tr>
         {% endfor %}
         </tbody>

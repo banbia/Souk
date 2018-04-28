@@ -21,29 +21,29 @@ class __TwigTemplate_1d05f9a326351b45da6a7d16435402ddf0b16e7217a116c0a141a38f084
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_64d54b2df76a9f4cc9ee3b1f84cf28082ec0749b595b450f7ac66927d3bac68a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_64d54b2df76a9f4cc9ee3b1f84cf28082ec0749b595b450f7ac66927d3bac68a->enter($__internal_64d54b2df76a9f4cc9ee3b1f84cf28082ec0749b595b450f7ac66927d3bac68a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle:abonnements:new.html.twig"));
+        $__internal_9ae1ded4bb2f878d58dcdcebb7f77371bbe0effe312785d4c0d61334d37beb43 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9ae1ded4bb2f878d58dcdcebb7f77371bbe0effe312785d4c0d61334d37beb43->enter($__internal_9ae1ded4bb2f878d58dcdcebb7f77371bbe0effe312785d4c0d61334d37beb43_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle:abonnements:new.html.twig"));
 
-        $__internal_2478220037c180bed2f8c456f9f08a271614f535936eb60a8dad4c43fd825e3d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2478220037c180bed2f8c456f9f08a271614f535936eb60a8dad4c43fd825e3d->enter($__internal_2478220037c180bed2f8c456f9f08a271614f535936eb60a8dad4c43fd825e3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle:abonnements:new.html.twig"));
+        $__internal_ea883db5cff55a0840ca151fd534dc9d4ea84e76a14fa4c5372305965cd5b6cf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ea883db5cff55a0840ca151fd534dc9d4ea84e76a14fa4c5372305965cd5b6cf->enter($__internal_ea883db5cff55a0840ca151fd534dc9d4ea84e76a14fa4c5372305965cd5b6cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle:abonnements:new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_64d54b2df76a9f4cc9ee3b1f84cf28082ec0749b595b450f7ac66927d3bac68a->leave($__internal_64d54b2df76a9f4cc9ee3b1f84cf28082ec0749b595b450f7ac66927d3bac68a_prof);
+        $__internal_9ae1ded4bb2f878d58dcdcebb7f77371bbe0effe312785d4c0d61334d37beb43->leave($__internal_9ae1ded4bb2f878d58dcdcebb7f77371bbe0effe312785d4c0d61334d37beb43_prof);
 
         
-        $__internal_2478220037c180bed2f8c456f9f08a271614f535936eb60a8dad4c43fd825e3d->leave($__internal_2478220037c180bed2f8c456f9f08a271614f535936eb60a8dad4c43fd825e3d_prof);
+        $__internal_ea883db5cff55a0840ca151fd534dc9d4ea84e76a14fa4c5372305965cd5b6cf->leave($__internal_ea883db5cff55a0840ca151fd534dc9d4ea84e76a14fa4c5372305965cd5b6cf_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f6c4f84062860e32d8581a005a2e4046f3a3269e7375d5019a557e60997e2cf3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f6c4f84062860e32d8581a005a2e4046f3a3269e7375d5019a557e60997e2cf3->enter($__internal_f6c4f84062860e32d8581a005a2e4046f3a3269e7375d5019a557e60997e2cf3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_e6639a79900c893b4c775a7354e95ca38a1f24e8a91e5245bae6c3a5bc8f299a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e6639a79900c893b4c775a7354e95ca38a1f24e8a91e5245bae6c3a5bc8f299a->enter($__internal_e6639a79900c893b4c775a7354e95ca38a1f24e8a91e5245bae6c3a5bc8f299a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_b857e1835dc6605323321c647066e85668d2e56351e66ba6c3c728b602160362 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b857e1835dc6605323321c647066e85668d2e56351e66ba6c3c728b602160362->enter($__internal_b857e1835dc6605323321c647066e85668d2e56351e66ba6c3c728b602160362_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a4426b4280851060e26beaeb22a2ee17cdfacde36738eb4b0c2506c2ba1b0514 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a4426b4280851060e26beaeb22a2ee17cdfacde36738eb4b0c2506c2ba1b0514->enter($__internal_a4426b4280851060e26beaeb22a2ee17cdfacde36738eb4b0c2506c2ba1b0514_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Abonnement creation</h1>
@@ -56,10 +56,7 @@ class __TwigTemplate_1d05f9a326351b45da6a7d16435402ddf0b16e7217a116c0a141a38f084
         // line 8
         echo "    <div class=\"col-md-12\">
         <div class=\"col-md-6\">
-    ";
-        // line 10
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "designation", array()), 'label');
-        echo "
+            <label> Designation :</label>
     ";
         // line 11
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "designation", array()), 'errors');
@@ -70,10 +67,7 @@ class __TwigTemplate_1d05f9a326351b45da6a7d16435402ddf0b16e7217a116c0a141a38f084
         echo "
         </div>
         <div class=\"col-md-6\">
-    ";
-        // line 15
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'label');
-        echo "
+            <label> Description :</label>
     ";
         // line 16
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "description", array()), 'errors');
@@ -86,10 +80,7 @@ class __TwigTemplate_1d05f9a326351b45da6a7d16435402ddf0b16e7217a116c0a141a38f084
     </div>
         <div class=\"col-md-12\">
             <div class=\"col-md-6\">
-    ";
-        // line 22
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "prix", array()), 'label');
-        echo "
+                <label> Prix :</label>
     ";
         // line 23
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "prix", array()), 'errors');
@@ -100,10 +91,7 @@ class __TwigTemplate_1d05f9a326351b45da6a7d16435402ddf0b16e7217a116c0a141a38f084
         echo "
             </div>
             <div class=\"col-md-6\">
-    ";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nbMois", array()), 'label');
-        echo "
+                <label> Nombre de mois :</label>
     ";
         // line 28
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nbMois", array()), 'errors');
@@ -114,29 +102,26 @@ class __TwigTemplate_1d05f9a326351b45da6a7d16435402ddf0b16e7217a116c0a141a38f084
         echo "
             </div>
         </div>
+
+<div class=\"col-md-12\" style=\"margin-top: 15px\">
+    <div class=\"col-md-6\">
+    <a class =\"btn btn-default\" href=\"";
+        // line 35
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("abonnements_index");
+        echo "\"><i class=\"fa fa-arrow-left\"></i> Back to the list</a>
+    <button type=\"submit\" class=\"btn btn-success \" > Créer </button>
+    </div>
+</div>
     ";
-        // line 32
+        // line 39
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
-
-<div class=\"col-md-12\">
-    <br/>
-    <input type=\"submit\" class=\"btn btn-success pull-right\" value=\"Create\" />
-</div>
-    <ul>
-        <li>
-            <a  href=\"";
-        // line 40
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("abonnements_index");
-        echo "\">Back to the list</a>
-        </li>
-    </ul>
 ";
         
-        $__internal_b857e1835dc6605323321c647066e85668d2e56351e66ba6c3c728b602160362->leave($__internal_b857e1835dc6605323321c647066e85668d2e56351e66ba6c3c728b602160362_prof);
+        $__internal_a4426b4280851060e26beaeb22a2ee17cdfacde36738eb4b0c2506c2ba1b0514->leave($__internal_a4426b4280851060e26beaeb22a2ee17cdfacde36738eb4b0c2506c2ba1b0514_prof);
 
         
-        $__internal_f6c4f84062860e32d8581a005a2e4046f3a3269e7375d5019a557e60997e2cf3->leave($__internal_f6c4f84062860e32d8581a005a2e4046f3a3269e7375d5019a557e60997e2cf3_prof);
+        $__internal_e6639a79900c893b4c775a7354e95ca38a1f24e8a91e5245bae6c3a5bc8f299a->leave($__internal_e6639a79900c893b4c775a7354e95ca38a1f24e8a91e5245bae6c3a5bc8f299a_prof);
 
     }
 
@@ -152,7 +137,7 @@ class __TwigTemplate_1d05f9a326351b45da6a7d16435402ddf0b16e7217a116c0a141a38f084
 
     public function getDebugInfo()
     {
-        return array (  130 => 40,  119 => 32,  113 => 29,  109 => 28,  105 => 27,  99 => 24,  95 => 23,  91 => 22,  83 => 17,  79 => 16,  75 => 15,  69 => 12,  65 => 11,  61 => 10,  57 => 8,  53 => 6,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  117 => 39,  110 => 35,  101 => 29,  97 => 28,  90 => 24,  86 => 23,  77 => 17,  73 => 16,  66 => 12,  62 => 11,  57 => 8,  53 => 6,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -174,39 +159,36 @@ class __TwigTemplate_1d05f9a326351b45da6a7d16435402ddf0b16e7217a116c0a141a38f084
        {# {{ form_widget(form) }} #}
     <div class=\"col-md-12\">
         <div class=\"col-md-6\">
-    {{ form_label(form.designation) }}
+            <label> Designation :</label>
     {{ form_errors(form.designation) }}
     {{ form_widget(form.designation, {'attr': {'class': 'comment form-control'}}) }}
         </div>
         <div class=\"col-md-6\">
-    {{ form_label(form.description) }}
+            <label> Description :</label>
     {{ form_errors(form.description) }}
     {{ form_widget(form.description, {'attr': {'class': 'comment form-control'}}) }}
         </div>
     </div>
         <div class=\"col-md-12\">
             <div class=\"col-md-6\">
-    {{ form_label(form.prix) }}
+                <label> Prix :</label>
     {{ form_errors(form.prix) }}
     {{ form_widget(form.prix, {'attr': {'class': 'comment form-control'}}) }}
             </div>
             <div class=\"col-md-6\">
-    {{ form_label(form.nbMois) }}
+                <label> Nombre de mois :</label>
     {{ form_errors(form.nbMois) }}
     {{ form_widget(form.nbMois, {'attr': {'class': 'comment form-control'}}) }}
             </div>
         </div>
-    {{ form_end(form) }}
 
-<div class=\"col-md-12\">
-    <br/>
-    <input type=\"submit\" class=\"btn btn-success pull-right\" value=\"Create\" />
+<div class=\"col-md-12\" style=\"margin-top: 15px\">
+    <div class=\"col-md-6\">
+    <a class =\"btn btn-default\" href=\"{{ path('abonnements_index') }}\"><i class=\"fa fa-arrow-left\"></i> Back to the list</a>
+    <button type=\"submit\" class=\"btn btn-success \" > Créer </button>
+    </div>
 </div>
-    <ul>
-        <li>
-            <a  href=\"{{ path('abonnements_index') }}\">Back to the list</a>
-        </li>
-    </ul>
+    {{ form_end(form) }}
 {% endblock %}
 ", "BackBundle:abonnements:new.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/abonnements/new.html.twig");
     }

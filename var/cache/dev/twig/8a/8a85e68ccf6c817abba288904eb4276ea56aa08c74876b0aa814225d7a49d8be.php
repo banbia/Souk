@@ -21,29 +21,29 @@ class __TwigTemplate_cc7106d66a2d6a8194b7c51499a6a49b8571dba6efefc2580461800a4ed
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7508d654f8b66567ba2adf65e736caef319eb66d539aabcc3324c546b092b5a5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_7508d654f8b66567ba2adf65e736caef319eb66d539aabcc3324c546b092b5a5->enter($__internal_7508d654f8b66567ba2adf65e736caef319eb66d539aabcc3324c546b092b5a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle:abonnements:index.html.twig"));
+        $__internal_2fed7e0deaef601c7a0d3c2ce56cdf0c9504c4ec6dda9efd1e36df260633d6d3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2fed7e0deaef601c7a0d3c2ce56cdf0c9504c4ec6dda9efd1e36df260633d6d3->enter($__internal_2fed7e0deaef601c7a0d3c2ce56cdf0c9504c4ec6dda9efd1e36df260633d6d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle:abonnements:index.html.twig"));
 
-        $__internal_b82e1a4aa2a34e85c765591abc9b545ec355d107385e557ae4ebdd54e904965b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b82e1a4aa2a34e85c765591abc9b545ec355d107385e557ae4ebdd54e904965b->enter($__internal_b82e1a4aa2a34e85c765591abc9b545ec355d107385e557ae4ebdd54e904965b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle:abonnements:index.html.twig"));
+        $__internal_d348cd6d8cd16ab2f267958f21f4b3dd23b1daebcb45f641b1f10258e3708b22 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d348cd6d8cd16ab2f267958f21f4b3dd23b1daebcb45f641b1f10258e3708b22->enter($__internal_d348cd6d8cd16ab2f267958f21f4b3dd23b1daebcb45f641b1f10258e3708b22_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "BackBundle:abonnements:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7508d654f8b66567ba2adf65e736caef319eb66d539aabcc3324c546b092b5a5->leave($__internal_7508d654f8b66567ba2adf65e736caef319eb66d539aabcc3324c546b092b5a5_prof);
+        $__internal_2fed7e0deaef601c7a0d3c2ce56cdf0c9504c4ec6dda9efd1e36df260633d6d3->leave($__internal_2fed7e0deaef601c7a0d3c2ce56cdf0c9504c4ec6dda9efd1e36df260633d6d3_prof);
 
         
-        $__internal_b82e1a4aa2a34e85c765591abc9b545ec355d107385e557ae4ebdd54e904965b->leave($__internal_b82e1a4aa2a34e85c765591abc9b545ec355d107385e557ae4ebdd54e904965b_prof);
+        $__internal_d348cd6d8cd16ab2f267958f21f4b3dd23b1daebcb45f641b1f10258e3708b22->leave($__internal_d348cd6d8cd16ab2f267958f21f4b3dd23b1daebcb45f641b1f10258e3708b22_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f52bd95975b2d58a3682a0e2561863646af948e7530d071d881ac663263b8984 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_f52bd95975b2d58a3682a0e2561863646af948e7530d071d881ac663263b8984->enter($__internal_f52bd95975b2d58a3682a0e2561863646af948e7530d071d881ac663263b8984_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6cb3e767510a33888ebd0e2ceca4bf9eadff4eaadbffe78df754ff1748f752b4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6cb3e767510a33888ebd0e2ceca4bf9eadff4eaadbffe78df754ff1748f752b4->enter($__internal_6cb3e767510a33888ebd0e2ceca4bf9eadff4eaadbffe78df754ff1748f752b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_4870e6aad6a6c9c18bf1e6506a687585861f323a5294959e7f7c13b4474d6251 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4870e6aad6a6c9c18bf1e6506a687585861f323a5294959e7f7c13b4474d6251->enter($__internal_4870e6aad6a6c9c18bf1e6506a687585861f323a5294959e7f7c13b4474d6251_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d4ec7080a3824d66e73e039d67bbfc0fdc4c66f6c897985ba59ecb389b406793 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d4ec7080a3824d66e73e039d67bbfc0fdc4c66f6c897985ba59ecb389b406793->enter($__internal_d4ec7080a3824d66e73e039d67bbfc0fdc4c66f6c897985ba59ecb389b406793_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Abonnements list</h1>
@@ -59,7 +59,7 @@ class __TwigTemplate_cc7106d66a2d6a8194b7c51499a6a49b8571dba6efefc2580461800a4ed
                 <th>Designation</th>
                 <th>Description</th>
                 <th>Prix</th>
-                <th>Nbmois</th>
+                <th>Nombre de mois </th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -88,38 +88,33 @@ class __TwigTemplate_cc7106d66a2d6a8194b7c51499a6a49b8571dba6efefc2580461800a4ed
             echo twig_escape_filter($this->env, $this->getAttribute($context["abonnement"], "nbMois", array()), "html", null, true);
             echo "</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href=\"";
-            // line 28
+
+                    <a class =\"btn btn-default\" href=\"";
+            // line 27
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("abonnements_show", array("id" => $this->getAttribute($context["abonnement"], "id", array()))), "html", null, true);
-            echo "\">show</a>
-                        </li>
-                        <li>
-                            <a href=\"";
-            // line 31
+            echo "\"><i class=\"fa fa-file-text-o\"></i> Show</a>
+                    <a class =\"btn btn-default\" href=\"";
+            // line 28
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("abonnements_edit", array("id" => $this->getAttribute($context["abonnement"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
-                        </li>
-                    </ul>
-                </td>
+            echo "\"><i class=\"fa fa-edit\"></i> Edit</a>
+
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['abonnement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 32
         echo "        </tbody>
     </table>
 
 
 ";
         
-        $__internal_4870e6aad6a6c9c18bf1e6506a687585861f323a5294959e7f7c13b4474d6251->leave($__internal_4870e6aad6a6c9c18bf1e6506a687585861f323a5294959e7f7c13b4474d6251_prof);
+        $__internal_d4ec7080a3824d66e73e039d67bbfc0fdc4c66f6c897985ba59ecb389b406793->leave($__internal_d4ec7080a3824d66e73e039d67bbfc0fdc4c66f6c897985ba59ecb389b406793_prof);
 
         
-        $__internal_f52bd95975b2d58a3682a0e2561863646af948e7530d071d881ac663263b8984->leave($__internal_f52bd95975b2d58a3682a0e2561863646af948e7530d071d881ac663263b8984_prof);
+        $__internal_6cb3e767510a33888ebd0e2ceca4bf9eadff4eaadbffe78df754ff1748f752b4->leave($__internal_6cb3e767510a33888ebd0e2ceca4bf9eadff4eaadbffe78df754ff1748f752b4_prof);
 
     }
 
@@ -135,7 +130,7 @@ class __TwigTemplate_cc7106d66a2d6a8194b7c51499a6a49b8571dba6efefc2580461800a4ed
 
     public function getDebugInfo()
     {
-        return array (  113 => 37,  101 => 31,  95 => 28,  88 => 24,  84 => 23,  80 => 22,  76 => 21,  73 => 20,  69 => 19,  53 => 6,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  108 => 32,  98 => 28,  94 => 27,  88 => 24,  84 => 23,  80 => 22,  76 => 21,  73 => 20,  69 => 19,  53 => 6,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -161,7 +156,7 @@ class __TwigTemplate_cc7106d66a2d6a8194b7c51499a6a49b8571dba6efefc2580461800a4ed
                 <th>Designation</th>
                 <th>Description</th>
                 <th>Prix</th>
-                <th>Nbmois</th>
+                <th>Nombre de mois </th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -173,15 +168,10 @@ class __TwigTemplate_cc7106d66a2d6a8194b7c51499a6a49b8571dba6efefc2580461800a4ed
                 <td>{{ abonnement.prix }}</td>
                 <td>{{ abonnement.nbMois }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href=\"{{ path('abonnements_show', { 'id': abonnement.id }) }}\">show</a>
-                        </li>
-                        <li>
-                            <a href=\"{{ path('abonnements_edit', { 'id': abonnement.id }) }}\">edit</a>
-                        </li>
-                    </ul>
-                </td>
+
+                    <a class =\"btn btn-default\" href=\"{{ path('abonnements_show', { 'id': abonnement.id }) }}\"><i class=\"fa fa-file-text-o\"></i> Show</a>
+                    <a class =\"btn btn-default\" href=\"{{ path('abonnements_edit', { 'id': abonnement.id }) }}\"><i class=\"fa fa-edit\"></i> Edit</a>
+
             </tr>
         {% endfor %}
         </tbody>

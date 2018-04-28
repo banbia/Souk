@@ -103,41 +103,209 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // back_homepage
-        if ('/admin' === $trimmedPathinfo) {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($rawPathinfo.'/', 'back_homepage');
-            }
+        elseif (0 === strpos($pathinfo, '/a')) {
+            if (0 === strpos($pathinfo, '/admin')) {
+                if (0 === strpos($pathinfo, '/admin/abonnements')) {
+                    // abonnements_index
+                    if ('/admin/abonnements' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_abonnements_index;
+                        }
 
-            return array (  '_controller' => 'Souk\\BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
-        }
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'abonnements_index');
+                        }
 
-        if (0 === strpos($pathinfo, '/admin/reclamations')) {
-            // admin_reclamations_index
-            if ('/admin/reclamations' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_admin_reclamations_index;
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::indexAction',  '_route' => 'abonnements_index',);
+                    }
+                    not_abonnements_index:
+
+                    // abonnements_show
+                    if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_abonnements_show;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::showAction',));
+                    }
+                    not_abonnements_show:
+
+                    // abonnements_new
+                    if ('/admin/abonnements/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_abonnements_new;
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::newAction',  '_route' => 'abonnements_new',);
+                    }
+                    not_abonnements_new:
+
+                    // abonnements_edit
+                    if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_abonnements_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::editAction',));
+                    }
+                    not_abonnements_edit:
+
+                    // abonnements_delete
+                    if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if ('DELETE' !== $canonicalMethod) {
+                            $allow[] = 'DELETE';
+                            goto not_abonnements_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::deleteAction',));
+                    }
+                    not_abonnements_delete:
+
                 }
 
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($rawPathinfo.'/', 'admin_reclamations_index');
+                // back_homepage
+                if ('/admin' === $trimmedPathinfo) {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'back_homepage');
+                    }
+
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_homepage',);
                 }
 
-                return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::indexAction',  '_route' => 'admin_reclamations_index',);
-            }
-            not_admin_reclamations_index:
+                if (0 === strpos($pathinfo, '/admin/reclamations')) {
+                    // admin_reclamations_index
+                    if ('/admin/reclamations' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_admin_reclamations_index;
+                        }
 
-            // admin_reclamations_edit
-            if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_admin_reclamations_edit;
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'admin_reclamations_index');
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::indexAction',  '_route' => 'admin_reclamations_index',);
+                    }
+                    not_admin_reclamations_index:
+
+                    // admin_reclamations_edit
+                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_reclamations_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::editAction',));
+                    }
+                    not_admin_reclamations_edit:
+
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::editAction',));
+                elseif (0 === strpos($pathinfo, '/admin/categories')) {
+                    // categories_index
+                    if ('/admin/categories' === $trimmedPathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_categories_index;
+                        }
+
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($rawPathinfo.'/', 'categories_index');
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\CategoriesController::indexAction',  '_route' => 'categories_index',);
+                    }
+                    not_categories_index:
+
+                    // categories_new
+                    if ('/admin/categories/new' === $pathinfo) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_categories_new;
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\CategoriesController::newAction',  '_route' => 'categories_new',);
+                    }
+                    not_categories_new:
+
+                    // categories_edit
+                    if (preg_match('#^/admin/categories/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_categories_edit;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'categories_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\CategoriesController::editAction',));
+                    }
+                    not_categories_edit:
+
+                    // categories_delete
+                    if (preg_match('#^/admin/categories/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_categories_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'categories_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\CategoriesController::deleteAction',));
+                    }
+                    not_categories_delete:
+
+                }
+
             }
-            not_admin_reclamations_edit:
+
+            // abonnements_com_new
+            if ('/abonnements/new' === $pathinfo) {
+                return array (  '_controller' => 'FrontBundle:Abonnements:new',  '_route' => 'abonnements_com_new',);
+            }
+
+            if (0 === strpos($pathinfo, '/annonces')) {
+                // client_annonces_index
+                if ('/annonces' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_client_annonces_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'client_annonces_index');
+                    }
+
+                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::indexAction',  '_route' => 'client_annonces_index',);
+                }
+                not_client_annonces_index:
+
+                // annonces_show
+                if (preg_match('#^/annonces/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_annonces_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::showAction',));
+                }
+                not_annonces_show:
+
+                // commentairesAnc_new
+                if (0 === strpos($pathinfo, '/annonces/annonce') && preg_match('#^/annonces/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::newAction',));
+                }
+
+                // commentairesAnc_delete
+                if (0 === strpos($pathinfo, '/annonces/delete_com') && preg_match('#^/annonces/delete_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::deleteAction',));
+                }
+
+                // commentairesAnc_Edit
+                if (0 === strpos($pathinfo, '/annonces/edit_com') && preg_match('#^/annonces/edit_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::editAction',));
+                }
+
+            }
 
         }
 
@@ -325,274 +493,89 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/c')) {
-            if (0 === strpos($pathinfo, '/commandes')) {
-                // commandes_index
-                if ('/commandes' === $trimmedPathinfo) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_commandes_index;
-                    }
-
-                    if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($rawPathinfo.'/', 'commandes_index');
-                    }
-
-                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::indexAction',  '_route' => 'commandes_index',);
-                }
-                not_commandes_index:
-
-                // commandes_show
-                if (preg_match('#^/commandes/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_commandes_show;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::showAction',));
-                }
-                not_commandes_show:
-
-                // commandes_new
-                if (0 === strpos($pathinfo, '/commandes/new') && preg_match('#^/commandes/new/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_commandes_new;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::newAction',));
-                }
-                not_commandes_new:
-
-                // commandes_edit
-                if (preg_match('#^/commandes/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_commandes_edit;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::editAction',));
-                }
-                not_commandes_edit:
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                if (0 === strpos($pathinfo, '/commandes/commandes')) {
-                    // liste_commandes
-                    if ('/commandes/commandes/liste' === $pathinfo) {
-                        return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',  '_route' => 'liste_commandes',);
-                    }
-
-                    // create_commande
-                    if (preg_match('#^/commandes/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
-                    }
-
-                }
-
-=======
-=======
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::indexAction',  '_route' => 'commandes_index',);
->>>>>>> 4328f1d5f4241bfc2df09fdb610c353a05b18259
->>>>>>> 4ba455dae7cf86e7b86aaa319290c327594c8646
-            }
-            not_commandes_index:
-=======
-                // commandes_valid
-                if (preg_match('#^/commandes/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_commandes_valid;
-                    }
->>>>>>> fc32930e02bee66592221cc60045a97843f96015
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_valid')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::validAction',));
-                }
-                not_commandes_valid:
-
-                // commandes_delete
-                if (preg_match('#^/commandes/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                    if ('DELETE' !== $canonicalMethod) {
-                        $allow[] = 'DELETE';
-                        goto not_commandes_delete;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::deleteAction',));
-                }
-                not_commandes_delete:
-
-            }
-
-            elseif (0 === strpos($pathinfo, '/commercial/annonces')) {
-                // annonces_index
-                if ('/commercial/annonces' === $trimmedPathinfo) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_annonces_index;
-                    }
-
-                    if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($rawPathinfo.'/', 'annonces_index');
-                    }
-
-                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::indexAction',  '_route' => 'annonces_index',);
-                }
-                not_annonces_index:
-
-                // annonces_show
-                if (preg_match('#^/commercial/annonces/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_annonces_show;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::showAction',));
-                }
-                not_annonces_show:
-
-                // annonces_new
-                if ('/commercial/annonces/new' === $pathinfo) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_annonces_new;
-                    }
-
-                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::newAction',  '_route' => 'annonces_new',);
-                }
-                not_annonces_new:
-
-                // annonces_edit
-                if (preg_match('#^/commercial/annonces/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_annonces_edit;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_edit')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::editAction',));
-                }
-                not_annonces_edit:
-
-                // annonces_delete
-                if (preg_match('#^/commercial/annonces/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                    if ('DELETE' !== $canonicalMethod) {
-                        $allow[] = 'DELETE';
-                        goto not_annonces_delete;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AnnoncesController::deleteAction',));
-                }
-                not_annonces_delete:
-
-            }
-
-            elseif (0 === strpos($pathinfo, '/client/commentairesAnc')) {
-                // commentairesAnc_new
-                if (0 === strpos($pathinfo, '/client/commentairesAnc/annonce') && preg_match('#^/client/commentairesAnc/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::newAction',));
-                }
-
-                // commentairesAnc_liste
-                if ('/client/commentairesAnc/all_com' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::allAction',  '_route' => 'commentairesAnc_liste',);
-                }
-
-                // commentairesAnc_delete
-                if ('/client/commentairesAnc/delete_com' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::deleteAction',  '_route' => 'commentairesAnc_delete',);
-                }
-
-            }
-
-            elseif (0 === strpos($pathinfo, '/client/annonces')) {
-                // client_annonces_index
-                if ('/client/annonces' === $trimmedPathinfo) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_client_annonces_index;
-                    }
-
-                    if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($rawPathinfo.'/', 'client_annonces_index');
-                    }
-
-                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::indexAction',  '_route' => 'client_annonces_index',);
-                }
-                not_client_annonces_index:
-
-                // client_annonces_show
-                if (preg_match('#^/client/annonces/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_client_annonces_show;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'client_annonces_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::showAction',));
-                }
-                not_client_annonces_show:
-
-            }
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/evennements')) {
-            // evennements_index
-            if ('/evennements' === $trimmedPathinfo) {
+        elseif (0 === strpos($pathinfo, '/commandes')) {
+            // commandes_index
+            if ('/commandes' === $trimmedPathinfo) {
                 if ('GET' !== $canonicalMethod) {
                     $allow[] = 'GET';
-                    goto not_evennements_index;
+                    goto not_commandes_index;
                 }
 
                 if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($rawPathinfo.'/', 'evennements_index');
+                    return $this->redirect($rawPathinfo.'/', 'commandes_index');
                 }
 
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::indexAction',  '_route' => 'evennements_index',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::indexAction',  '_route' => 'commandes_index',);
             }
-            not_evennements_index:
+            not_commandes_index:
 
-            // evennements_show
-            if (preg_match('#^/evennements/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+            // commandes_show
+            if (preg_match('#^/commandes/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
                 if ('GET' !== $canonicalMethod) {
                     $allow[] = 'GET';
-                    goto not_evennements_show;
+                    goto not_commandes_show;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::showAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::showAction',));
             }
-            not_evennements_show:
+            not_commandes_show:
 
-            // evennements_new
-            if ('/evennements/new' === $pathinfo) {
+            // commandes_new
+            if (0 === strpos($pathinfo, '/commandes/new') && preg_match('#^/commandes/new/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                     $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_evennements_new;
+                    goto not_commandes_new;
                 }
 
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::newAction',  '_route' => 'evennements_new',);
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::newAction',));
             }
-            not_evennements_new:
+            not_commandes_new:
 
-            // evennements_edit
-            if (preg_match('#^/evennements/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+            // commandes_edit
+            if (preg_match('#^/commandes/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                     $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_evennements_edit;
+                    goto not_commandes_edit;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::editAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::editAction',));
             }
-            not_evennements_edit:
+            not_commandes_edit:
 
-            // evennements_delete
-            if (preg_match('#^/evennements/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+            // commandes_valid
+            if (preg_match('#^/commandes/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_commandes_valid;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_valid')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::validAction',));
+            }
+            not_commandes_valid:
+
+            // commandes_delete
+            if (preg_match('#^/commandes/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
                 if ('DELETE' !== $canonicalMethod) {
                     $allow[] = 'DELETE';
-                    goto not_evennements_delete;
+                    goto not_commandes_delete;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::deleteAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::deleteAction',));
             }
-            not_evennements_delete:
+            not_commandes_delete:
+
+            if (0 === strpos($pathinfo, '/commandes/commandes')) {
+                // liste_commandes
+                if ('/commandes/commandes/liste' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',  '_route' => 'liste_commandes',);
+                }
+
+                // create_commande
+                if (preg_match('#^/commandes/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
+                }
+
+            }
 
         }
 
@@ -669,6 +652,101 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'fos_user.change_password.controller:changePasswordAction',  '_route' => 'fos_user_change_password',);
             }
             not_fos_user_change_password:
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/evennements')) {
+            // evennements_index
+            if ('/evennements' === $trimmedPathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_evennements_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($rawPathinfo.'/', 'evennements_index');
+                }
+
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::indexAction',  '_route' => 'evennements_index',);
+            }
+            not_evennements_index:
+
+            // evennements_show
+            if (preg_match('#^/evennements/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_evennements_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::showAction',));
+            }
+            not_evennements_show:
+
+            // evennements_new
+            if ('/evennements/new' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_evennements_new;
+                }
+
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::newAction',  '_route' => 'evennements_new',);
+            }
+            not_evennements_new:
+
+            // evennements_edit
+            if (preg_match('#^/evennements/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_evennements_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::editAction',));
+            }
+            not_evennements_edit:
+
+            // evennements_delete
+            if (preg_match('#^/evennements/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ('DELETE' !== $canonicalMethod) {
+                    $allow[] = 'DELETE';
+                    goto not_evennements_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::deleteAction',));
+            }
+            not_evennements_delete:
+
+            // commentairesEvs_new
+            if (0 === strpos($pathinfo, '/evennements/evennement') && preg_match('#^/evennements/evennement/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesEvs_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::newEvsAction',));
+            }
+
+            // commentairesEvs_Edit
+            if (0 === strpos($pathinfo, '/evennements/edit_com_Evs') && preg_match('#^/evennements/edit_com_Evs/(?P<com>[^/]++)/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesEvs_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::editComEvsAction',));
+            }
+
+            // commentairesEvs_delete
+            if (0 === strpos($pathinfo, '/evennements/delete_com_Evs') && preg_match('#^/evennements/delete_com_Evs/(?P<evennement>[^/]++)/(?P<com>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesEvs_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::deleteComEvsAction',));
+            }
+
+            if (0 === strpos($pathinfo, '/evennements/commentaire')) {
+                // all
+                if ('/evennements/commentaire/all' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::allAction',  '_route' => 'all',);
+                }
+
+                // find_commentaire
+                if (0 === strpos($pathinfo, '/evennements/commentaire/find') && preg_match('#^/evennements/commentaire/find/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'find_commentaire')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::findAction',));
+                }
+
+                // create_commentaire
+                if (0 === strpos($pathinfo, '/evennements/commentaire/new_Evs') && preg_match('#^/evennements/commentaire/new_Evs/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commentaire')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::newEvsSAction',));
+                }
+
+            }
 
         }
 
