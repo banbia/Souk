@@ -1,0 +1,3 @@
+signalsAncN_new:
+    path:     /signalsAncN/{annonce}
+    defaults: { _controller: FrontBundle:SignalsAnc:new}

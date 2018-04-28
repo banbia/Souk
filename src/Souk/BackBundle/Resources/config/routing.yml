@@ -2,10 +2,6 @@
 back_abonnements:
     resource: "@BackBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements
-
-
-
-
 back_homepage:
     path:     /
     defaults: { _controller: BackBundle:Default:index }

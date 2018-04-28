@@ -1,0 +1,3 @@
+signalsEvs_all:
+    path:     /signalsEvs/{evennement}
+    defaults: { _controller: BackBundle:SignalsEvs:all}

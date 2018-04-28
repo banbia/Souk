@@ -4,8 +4,46 @@
     <h1>Evennement creation</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+       {#{{ form_widget(form) }}#}
+    <div class="col-md-12">
+        <div class="col-md-6">
+
+    {{ form_label(form.titre) }}
+    {{ form_errors(form.titre) }}
+    {{ form_widget(form.titre, {'attr': {'class': 'comment form-control'}}) }}
+        </div>
+            <div class="col-md-6">
+    {{ form_label(form.description) }}
+    {{ form_errors(form.description) }}
+    {{ form_widget(form.description, {'attr': {'class': 'comment form-control'}}) }}
+    {{ form_start(form) }}
+        </div>
+    </div>
+<div class="col-md-12">
+    <div class="col-md-6">
+    {{ form_label(form.dateDeb) }}
+    {{ form_errors(form.dateDeb) }}
+    {{ form_widget(form.dateDeb, {'attr': {'class': 'form-group input-group'}}) }}
+    </div>
+    <div class="col-md-6">
+    {{ form_label(form.dateFin) }}
+    {{ form_errors(form.dateFin) }}
+    {{ form_widget(form.dateFin, {'attr': {'class': 'form-group input-group'}}) }}
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6">
+    {{ form_label(form.lieu) }}
+    {{ form_errors(form.lieu) }}
+    {{ form_widget(form.lieu, {'attr': {'class': 'comment form-control'}}) }}
+    </div>
+    <div class="col-md-6">
+    {{ form_label(form.prix) }}
+    {{ form_errors(form.prix) }}
+    {{ form_widget(form.prix, {'attr': {'class': 'comment form-control'}}) }}
+    </div>
+</div>
+    <input type="submit" value="Create" />
     {{ form_end(form) }}
 
     <ul>

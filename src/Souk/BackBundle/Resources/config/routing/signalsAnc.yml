@@ -1,0 +1,6 @@
+signalsAnc_all:
+    path:     /signalsAnc/{annonce}
+    defaults: { _controller: BackBundle:SignalsAnc:all}
+signalEvs_delete:
+    path:     /delete_sig_Evs/{signalAnc}/{sig}
+    defaults: { _controller: BackBundle:SignalsAnc:delete}

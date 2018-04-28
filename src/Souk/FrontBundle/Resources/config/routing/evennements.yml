@@ -6,7 +6,7 @@ evennements_index:
 evennements_show:
     path:     /{id}/show
     defaults: { _controller: "FrontBundle:Evennements:show" }
-    methods:  GET
+
 
 evennements_new:
     path:     /new
@@ -23,8 +23,9 @@ evennements_delete:
     defaults: { _controller: "FrontBundle:Evennements:delete" }
     methods:  DELETE
 commentairesEvs_new:
-    path:     /evennement/{evennement}
+    path:     /new_com/{evennement}
     defaults: { _controller: FrontBundle:Evennements:newEvs}
+
 commentairesEvs_delete:
     path:     /delete_com_Evs/{evennement}/{com}
     defaults: { _controller: FrontBundle:Evennements:deleteComEvs}
