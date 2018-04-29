@@ -23,10 +23,6 @@ class AdminReclamationsController extends Controller
         ));
     }
 
-    //0=>en attente
-    //1=>confirme par admin
-    //-1=>rejeté
-
 
     /**
      * Displays a form to edit an existing reclamation entity.
@@ -47,6 +43,38 @@ class AdminReclamationsController extends Controller
             'reclamation' => $reclamation,
             'edit' => $editForm->createView(),
         ));
+    }
+
+
+    public function accepterAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->find($id);
+
+        $reclamations->setEtat(1);
+        $em->persist($reclamations);
+        $em->flush();
+
+        return $this->redirectToRoute('admin_reclamations_index');
+
+    }
+
+
+    /**
+     * @Route("/refuser/{id}", name="admin_reclamations_refuser")
+     */
+    public function refuserAction(Request $request,$id )
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->find($id);
+
+        $reclamations->setEtat(-1);
+        $em->persist($reclamations);
+        $em->flush();
+
+        return $this->redirectToRoute('admin_reclamations_index');
+
     }
 
 }

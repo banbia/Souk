@@ -5,6 +5,7 @@
         <thead class="thead-light">
             <tr class="table-secondary">
                 <th>Contenu</th>
+                <th>Commercial</th>
                 <th>Date de reclamation</th>
                 <th>Etat</th>
                 <th>Actions</th>
@@ -15,15 +16,17 @@
             <tr>
 
                 <td>{{ reclamation.contenu }}</td>
+                <td> {{ reclamation.commercial.nom }}</td>
                 <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
-                <td>{% if reclamation.etat == 0 %} encours
-                    {% elseif reclamation.etat == 1 %} accepter
-                    {% elseif reclamation.etat == 2 %}  rejeter
+                <td>
+                    {% if reclamation.etat == 0 %} encours
+                    {% elseif reclamation.etat == 1 %} acceptée
+                    {% elseif reclamation.etat == (-1) %}  rejetée
                     {% endif %}
                 </td>
                 <td>
-
-                            <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"><i class="fa fa-edit"></i>  Marquer comme lue</a>
+                    <a class="btn btn-success" href="{{ path('admin_reclamations_accepter', { 'id': reclamation.id } ) }}"> <i class="fa fa-check " ></i></a>
+                    <a class="btn btn-danger" href="{{ path('admin_reclamations_refuser', { 'id': reclamation.id } ) }}"> <i class="fa fa-times" ></i></a>
 
                 </td>
             </tr>
