@@ -120,7 +120,7 @@ class AbonnementsController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('abonnements_edit', array('id' => $abonnement->getId()));
+            return $this->redirectToRoute('abonnements_index', array('id' => $abonnement->getId()));
         }
 
         return $this->render('BackBundle:abonnements:edit.html.twig', array(
@@ -134,6 +134,7 @@ class AbonnementsController extends Controller
      * Deletes a abonnement entity.
      *
      */
+    /**
     public function deleteAction(Request $request, Abonnements $abonnement)
     {
         $form = $this->createDeleteForm($abonnement);
@@ -147,7 +148,16 @@ class AbonnementsController extends Controller
 
         return $this->redirectToRoute('abonnements_index');
     }
+     *  */
+    public function deleteAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $abonnement = $em->getRepository('BackBundle:Abonnements')->find($id);
 
+        $em->remove($abonnement);
+        $em->flush();
+        return $this->redirectToRoute('abonnements_index');
+    }
     /**
      * Creates a form to delete a abonnement entity.
      *
