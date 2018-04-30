@@ -165,6 +165,28 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
                     not_abonnements_delete:
 
+                    // abonnements_demandes
+                    if ('/admin/abonnements/demandes' === $pathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_abonnements_demandes;
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::demandesAction',  '_route' => 'abonnements_demandes',);
+                    }
+                    not_abonnements_demandes:
+
+                    // abonnements_valider
+                    if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/(?P<nb>[^/]++)/valider$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_abonnements_valider;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_valider')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::validerAction',));
+                    }
+                    not_abonnements_valider:
+
                 }
 
                 // back_homepage
@@ -543,7 +565,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             not_commandes_edit:
 
             // commandes_valid
-            if (preg_match('#^/commandes/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/commandes/(?P<id>[^/]++)/valid$#s', $pathinfo, $matches)) {
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                     $allow = array_merge($allow, array('GET', 'POST'));
                     goto not_commandes_valid;
@@ -564,17 +586,14 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_commandes_delete:
 
-            if (0 === strpos($pathinfo, '/commandes/commandes')) {
-                // liste_commandes
-                if ('/commandes/commandes/liste' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',  '_route' => 'liste_commandes',);
-                }
+            // liste_commandes
+            if (0 === strpos($pathinfo, '/commandes/liste') && preg_match('#^/commandes/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_commandes')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',));
+            }
 
-                // create_commande
-                if (preg_match('#^/commandes/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
-                }
-
+            // create_commande
+            if (preg_match('#^/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
             }
 
         }
@@ -673,14 +692,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             // evennements_show
             if (preg_match('#^/evennements/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_evennements_show;
-                }
-
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::showAction',));
             }
-            not_evennements_show:
 
             // evennements_new
             if ('/evennements/new' === $pathinfo) {
@@ -716,18 +729,18 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             not_evennements_delete:
 
             // commentairesEvs_new
-            if (0 === strpos($pathinfo, '/evennements/evennement') && preg_match('#^/evennements/evennement/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/evennements/new_com') && preg_match('#^/evennements/new_com/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesEvs_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::newEvsAction',));
-            }
-
-            // commentairesEvs_Edit
-            if (0 === strpos($pathinfo, '/evennements/edit_com_Evs') && preg_match('#^/evennements/edit_com_Evs/(?P<com>[^/]++)/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesEvs_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::editComEvsAction',));
             }
 
             // commentairesEvs_delete
             if (0 === strpos($pathinfo, '/evennements/delete_com_Evs') && preg_match('#^/evennements/delete_com_Evs/(?P<evennement>[^/]++)/(?P<com>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesEvs_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::deleteComEvsAction',));
+            }
+
+            // commentairesEvs_Edit
+            if (0 === strpos($pathinfo, '/evennements/edit_com_Evs') && preg_match('#^/evennements/edit_com_Evs/(?P<com>[^/]++)/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesEvs_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::editComEvsAction',));
             }
 
             if (0 === strpos($pathinfo, '/evennements/commentaire')) {
@@ -744,6 +757,40 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // create_commentaire
                 if (0 === strpos($pathinfo, '/evennements/commentaire/new_Evs') && preg_match('#^/evennements/commentaire/new_Evs/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commentaire')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::newEvsSAction',));
+                }
+
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/signals')) {
+            if (0 === strpos($pathinfo, '/signalsAnc/signalsAnc')) {
+                // signalsAnc_all
+                if (preg_match('#^/signalsAnc/signalsAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'signalsAnc_all')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsAncController::allAction',));
+                }
+
+                // signalsAncN_new
+                if (0 === strpos($pathinfo, '/signalsAnc/signalsAncN') && preg_match('#^/signalsAnc/signalsAncN/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'signalsAncN_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\SignalsAncController::newAction',));
+                }
+
+            }
+
+            // signalEvs_delete
+            if (0 === strpos($pathinfo, '/signalsAnc/delete_sig_Evs') && preg_match('#^/signalsAnc/delete_sig_Evs/(?P<signalAnc>[^/]++)/(?P<sig>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'signalEvs_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsAncController::deleteAction',));
+            }
+
+            if (0 === strpos($pathinfo, '/signalsEvs/signalsEvs')) {
+                // signalsEvs_all
+                if (preg_match('#^/signalsEvs/signalsEvs/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'signalsEvs_all')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsEvsController::allAction',));
+                }
+
+                // signalsEvsN_new
+                if (0 === strpos($pathinfo, '/signalsEvs/signalsEvsN') && preg_match('#^/signalsEvs/signalsEvsN/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'signalsEvsN_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\SignalsEvsController::newAction',));
                 }
 
             }
