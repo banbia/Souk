@@ -1,38 +1,51 @@
 {% extends 'FrontBundle::layout.html.twig' %}
-
+{% block style %}
+    <link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
+{% endblock style %}
 {% block body %}
-    <h1>Reclamation</h1>
+   <div class="row form-controlS">
 
-    <table class="w3-table-all w3-hoverable">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ reclamation.id }}</td>
-            </tr>
-            <tr>
-                <th>Contenu</th>
+   <div class="col-md-12" style="text-align:center "  >
+    <h1>Fiche reclamation  </h1>
+       <p class="pShow" >Bonjour , merci de nous contacter et votre reclamation sera traiter dans les plus brief délais  .</p>
+   </div>
+      <div class="col-md-6">
+
+          <img src='{{ asset('bundles/front/images/imgreclamation1.png') }}' class="img-responsive" alt=""/>
+
+      </div>
+
+
+     <div class="col-md-6" >
+        <table class="table table-striped">
+        <tbody class="thead-light">
+            <tr table-secondary>
+                <th>Contenu de reclamation </th>
                 <td>{{ reclamation.contenu }}</td>
             </tr>
             <tr>
-                <th>Daterec</th>
+                <th>Commercial</th>
+                <td>{{ reclamation.commercial.nom }}</td>
+            </tr>
+            <tr>
+                <th>Date de reclamation </th>
                 <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Etat</th>
-                <td>{{ reclamation.etat }}</td>
+                <td>{% if reclamation.etat == 0 %} encours
+                    {% elseif reclamation.etat == 1 %} accepter
+                    {% elseif reclamation.etat == 2 %}  rejeter
+                    {% endif %}
+                </td>
             </tr>
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('reclamations_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}">Edit</a>
-        </li>
-        <li>
+            <a class="btn btn-default" href="{{ path('reclamations_index') }}">  <i class="fa fa-arrow-left"></i> Back to the list </a>
 
-        </li>
-    </ul>
+            <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"> <i class="fa fa-edit"></i> Edit</a>
+    </div>
+    </div>
+</div>
 {% endblock %}

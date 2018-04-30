@@ -225,9 +225,62 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
                     not_admin_reclamations_edit:
 
+<<<<<<< HEAD
+                }
+
+                // index
+                if ('/admin/signals' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::indexAction',  '_route' => 'index',);
+                }
+
+                // show
+                if (0 === strpos($pathinfo, '/admin/viewEv') && preg_match('#^/admin/viewEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::showAction',));
+                }
+
+                // consulter
+                if (0 === strpos($pathinfo, '/admin/viewAnc') && preg_match('#^/admin/viewAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'consulter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::consulterAction',));
+                }
+
+                // delete_ev
+                if ('/admin/deleteEv' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteEvAction',  '_route' => 'delete_ev',);
+                }
+
+                // delete_anc
+                if ('/admin/deleteAnc' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteAncAction',  '_route' => 'delete_anc',);
+                }
+
+                if (0 === strpos($pathinfo, '/admin/categories')) {
+=======
+                    // admin_reclamations_refuser
+                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/refuser$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_reclamations_refuser;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_refuser')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::refuserAction',));
+                    }
+                    not_admin_reclamations_refuser:
+
+                    // admin_reclamations_accepter
+                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/accepter$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_reclamations_accepter;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_accepter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::accepterAction',));
+                    }
+                    not_admin_reclamations_accepter:
+
                 }
 
                 elseif (0 === strpos($pathinfo, '/admin/categories')) {
+>>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90
                     // categories_index
                     if ('/admin/categories' === $trimmedPathinfo) {
                         if ('GET' !== $canonicalMethod) {
