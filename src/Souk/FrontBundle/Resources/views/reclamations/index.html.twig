@@ -4,9 +4,9 @@
 {% endblock style %}
 {% block body %}
 <div class="row form-controlS">
-    <h1  style="text-align:center" >La liste de votre reclamations</h1>
+    <h1  style="text-align:center" > Liste de reclamations</h1>
     <br>
-    <a   href="{{ path('reclamations_new') }}"  class="btn btn-success pull-right"> <i class="fa fa-plus" > </i> Create a new reclamation </a>
+    <a   href="{{ path('reclamations_new') }}"  class="btn btn-success pull-right"> <i class="fa fa-plus" > </i> Ajouter une reclamation </a>
     <br>
     <br>
     <br>
@@ -27,14 +27,14 @@
                 <td>{{ reclamation.contenu }}</td>
                 <td> {{ reclamation.commercial.nom }}</td>
                 <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
-                <td>{% if reclamation.etat == 0 %} encours
-                    {% elseif reclamation.etat == 1 %} accepter
-                    {% elseif reclamation.etat == (-1) %}  rejeter
+                <td>{% if reclamation.etat == 0 %} Encours
+                    {% elseif reclamation.etat == 1 %} Accepter
+                    {% elseif reclamation.etat == (-1) %}  Rejeter
                     {% endif %}
                 </td>
                 <td>
 
-                    <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"><i class="fa fa-edit"></i> modifier </a>
+                    <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"><i class="fa fa-edit"></i> Modifier </a>
 
                 </td>
             </tr>
