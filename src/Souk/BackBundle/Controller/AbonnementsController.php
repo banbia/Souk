@@ -27,6 +27,48 @@ class AbonnementsController extends Controller
         ));
     }
 
+    public function demandesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $demandes = $em->getRepository('BackBundle:HistoriqueAbs')->findBy(array("etat"=>0));
+
+        return $this->render('BackBundle:abonnements:demandes.html.twig', array(
+            'demandes' => $demandes,
+        ));
+    }
+    public function validerAction(Request $request,$id,$nb)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $demande = $em->getRepository('BackBundle:HistoriqueAbs')->find($id);
+
+        $demande->setEtat(1);
+
+        $em->persist($demande);
+        $user = $em->getRepository('UserBundle:User')->find($demande->getCommercial());
+
+        if(is_null($user->getDateFinAb())){
+
+            date_default_timezone_set( 'Africa/Tunis' );
+            $date = new \DateTime('now');
+        }else{
+            $date = $user->getDateFinAb();
+
+        }
+        $nb = $nb+1;
+        $date = $date->format('Y-m-d');
+        $p = "+".$nb." months";
+        //var_dump($date);
+        $x = strtotime($p, strtotime($date));
+        $new = new \DateTime();
+        $new->format('Y-m-d');
+        $user->setDateFinAb($new);
+        $em->persist($user);
+        $em->flush();
+        return $this->redirectToRoute('abonnements_demandes');
+
+    }
     /**
      * Creates a new abonnement entity.
      *

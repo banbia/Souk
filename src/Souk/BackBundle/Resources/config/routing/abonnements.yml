@@ -22,3 +22,11 @@ abonnements_delete:
     path:     /{id}/delete
     defaults: { _controller: "BackBundle:Abonnements:delete" }
     methods:  DELETE
+abonnements_demandes:
+    path:     /demandes
+    defaults: { _controller: "BackBundle:Abonnements:demandes" }
+    methods:  GET
+abonnements_valider:
+    path:     /{id}/{nb}/valider
+    defaults: { _controller: "BackBundle:Abonnements:valider" }
+    methods:  GET
