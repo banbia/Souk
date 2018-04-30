@@ -46,12 +46,47 @@ class __TwigTemplate_fb0eb42e937bafec01819408f5919a18d9f52ab10fa284d822dbd250ac3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
+<<<<<<< HEAD
+        echo "    <h1>Abonnement edit</h1>
+=======
         echo "    <h1 class=\"text-warning\">Modification d'un Abonnement</h1>
+>>>>>>> 836158231e125c164df57be215e600d351e15952
 
     ";
         // line 6
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_start');
         echo "
+<<<<<<< HEAD
+        ";
+        // line 7
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'widget');
+        echo "
+        <input type=\"submit\" value=\"Edit\" />
+    ";
+        // line 9
+        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_end');
+        echo "
+
+    <ul>
+        <li>
+            <a href=\"";
+        // line 13
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("abonnements_index");
+        echo "\">Back to the list</a>
+        </li>
+        <li>
+            ";
+        // line 16
+        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_start');
+        echo "
+                <input type=\"submit\" value=\"Delete\">
+            ";
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_end');
+        echo "
+        </li>
+    </ul>
+=======
     <div class=\"col-md-12\">
         <div class=\"col-md-6\">
             <label> Designation :</label>
@@ -114,6 +149,7 @@ class __TwigTemplate_fb0eb42e937bafec01819408f5919a18d9f52ab10fa284d822dbd250ac3
         // line 38
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_end');
         echo "
+>>>>>>> 836158231e125c164df57be215e600d351e15952
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -135,7 +171,11 @@ class __TwigTemplate_fb0eb42e937bafec01819408f5919a18d9f52ab10fa284d822dbd250ac3
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
+        return array (  80 => 18,  75 => 16,  69 => 13,  62 => 9,  57 => 7,  53 => 6,  49 => 4,  40 => 3,  11 => 1,);
+=======
         return array (  115 => 38,  108 => 34,  99 => 28,  95 => 27,  88 => 23,  84 => 22,  75 => 16,  71 => 15,  64 => 11,  60 => 10,  53 => 6,  49 => 4,  40 => 3,  11 => 1,);
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -151,6 +191,27 @@ class __TwigTemplate_fb0eb42e937bafec01819408f5919a18d9f52ab10fa284d822dbd250ac3
         return new Twig_Source("{% extends 'BackBundle::panel.html.twig' %}
 
 {% block body %}
+<<<<<<< HEAD
+    <h1>Abonnement edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type=\"submit\" value=\"Edit\" />
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href=\"{{ path('abonnements_index') }}\">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type=\"submit\" value=\"Delete\">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
+", "BackBundle:abonnements:edit.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/abonnements/edit.html.twig");
+=======
     <h1 class=\"text-warning\">Modification d'un Abonnement</h1>
 
     {{ form_start(edit_form) }}
@@ -188,5 +249,6 @@ class __TwigTemplate_fb0eb42e937bafec01819408f5919a18d9f52ab10fa284d822dbd250ac3
     {{ form_end(edit_form) }}
 {% endblock %}
 ", "BackBundle:abonnements:edit.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/abonnements/edit.html.twig");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

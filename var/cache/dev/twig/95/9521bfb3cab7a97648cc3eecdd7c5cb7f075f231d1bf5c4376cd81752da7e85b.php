@@ -87,6 +87,10 @@ class __TwigTemplate_2800204c21e33d67adb9a25777cb7820686c4bcd036c97f644d28ec5015
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+", "@WebProfiler/Profiler/header.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\header.html.twig");
+=======
 ", "@WebProfiler/Profiler/header.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\header.html.twig");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

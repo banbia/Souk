@@ -2154,6 +2154,10 @@ table.logs .metadata {
         margin-left: 2px;
     }
 }
+<<<<<<< HEAD
+", "@WebProfiler/Profiler/profiler.css.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\profiler.css.twig");
+=======
 ", "@WebProfiler/Profiler/profiler.css.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\profiler.css.twig");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

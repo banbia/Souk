@@ -86,7 +86,7 @@ class ReclamationsController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('reclamations_edit', array('id' => $reclamation->getId()));
+            return $this->redirectToRoute('reclamations_index', array('id' => $reclamation->getId()));
         }
 
         return $this->render('FrontBundle:reclamations:edit.html.twig', array(
@@ -94,6 +94,7 @@ class ReclamationsController extends Controller
             'edit' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
+
     }
 
     /**

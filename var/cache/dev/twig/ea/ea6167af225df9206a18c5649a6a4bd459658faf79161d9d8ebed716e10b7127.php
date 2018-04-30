@@ -65,6 +65,10 @@ class __TwigTemplate_5a63fa1d2a14397266180a26fa4344caa682fc8622f3e947ea5cb52479c
     C9.3,4,9,4.3,9,4.6V11.4z M9,16.4C9,16.7,9.3,17,9.6,17h1.8c0.3,0,0.6-0.3,0.6-0.6v-1.8c0-0.3-0.3-0.6-0.6-0.6H9.6
     C9.3,14,9,14.3,9,14.6V16.4z\"/>
 </svg>
+<<<<<<< HEAD
+", "@WebProfiler/Icon/logger.svg", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
+=======
 ", "@WebProfiler/Icon/logger.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

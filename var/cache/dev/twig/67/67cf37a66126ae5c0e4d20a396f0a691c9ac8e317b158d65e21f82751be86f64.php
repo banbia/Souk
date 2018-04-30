@@ -65,6 +65,10 @@ class __TwigTemplate_5b513a8daca88fd64d3c72527bf5ab1240fca0a04270a5a0c1497c4de8b
         S16.01,0.357,11.61,0.357z M17.07,8.337c0,3.011-2.449,5.46-5.46,5.46c-3.011,0-5.46-2.449-5.46-5.46s2.449-5.46,5.46-5.46
         C14.62,2.877,17.07,5.326,17.07,8.337z\"/>
 </svg>
+<<<<<<< HEAD
+", "@WebProfiler/Icon/search.svg", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\search.svg");
+=======
 ", "@WebProfiler/Icon/search.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\search.svg");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }
