@@ -1,35 +1,39 @@
 {% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
 
+{% endblock style %}
 {% block body %}
 
-<h2>{% trans from 'FOSMessageBundle' %}Message{% endtrans %}</h2>
+<h2>{% trans from 'FOSMessageBundle' %}Messages{% endtrans %}</h2>
 <br/>
 <!------ Include the above in your HEAD tag ---------->
 
-<div class="row">
- <div class="mail-box">
-                  <aside class="sm-side">
-                      
-                      <div class="inbox-body">
-                          <a href="{{ url('fos_message_thread_new' )}}"  class="btn btn-compose">
-                              {% trans from 'FOSMessageBundle' %}send_new{% endtrans %}
-                          </a>                          
-                      </div>
-                      <ul class="inbox-nav inbox-divider">
-                          <li class="active">
-                              <a href="{{path('fos_message_inbox')}}"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right">{{fos_message_nb_unread(threads)}}</span></a>
+    <div class="container">
+        <div class="mail-box">
+            <aside class="sm-side">
 
-                          </li>
-                          <li>
-                              <a href="{{path('fos_message_sent')}}"><i class="fa fa-envelope-o"></i> Envoyés</a>
-                          </li>
-                         
-                          <li>
-                              <a href="{{path('fos_message_deleted')}}"><i class=" fa fa-trash-o"></i> Corbeille</a>
-                          </li>
-                      </ul>
-                    
-                  </aside>
+                <div class="inbox-body">
+                    <a href="{{ url('fos_message_thread_new' )}}"  class="btn btn-compose">
+                        {% trans from 'FOSMessageBundle' %}send_new{% endtrans %}
+                    </a>
+                </div>
+                <ul class="inbox-nav inbox-divider">
+                    <li class="active">
+                        <a href="{{path('fos_message_inbox')}}"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right">{{fos_message_nb_unread(threads)}}</span></a>
+
+                    </li>
+                    <li>
+                        <a href="{{path('fos_message_sent')}}"><i class="fa fa-envelope-o"></i> Envoyés</a>
+                    </li>
+
+
+                </ul>
+
+
+
+
+            </aside>
                   <aside class="lg-side">
                       <div class="inbox-head">
                           <h3>Inbox</h3>
@@ -44,18 +48,19 @@
                                 <div class="box-body no-padding">
                                     {% for message in thread.messages %}
                                   <div class="mailbox-read-info">
-                                    <h3>{{ thread.subject }}</h3>
+                                    <h3 class="text-default">Objet : {{ thread.subject }}</h3>
                                       <br/>
-                                    <h5>From: {{message.sender|e}} <span class="mailbox-read-time text-default pull-right">{{message.createdAt|date('d-M-Y h:m')}}</span></h5>
+                                    <h4 class="text-primary">From: {{message.sender|e}} <span class="mailbox-read-time text-default pull-right">{{message.createdAt|date('d-M-Y h:m')}}</span></h4>
                                   </div>
                                   
-                                  <div class="mailbox-read-message">
+                                  <div class="mailbox-read-message" style="padding-top: 25px;padding-left:4%">
                                       
                                     <p>{{ message.body }}</p>
                                   </div>
+                                        <br/>
                                 <div class="mailbox-controls with-border text-left">
                                     <br/>
-                                    <div class="btn-group ">
+                                    <div class="btn-group " style="width:100%">
                                       {% if fos_message_can_delete_thread(thread) %}
                                         {% if fos_message_deleted_by_participant(thread) %}
                                             {% set formAction %}{{ url('fos_message_thread_undelete', {'threadId': thread.id}) }}{% endset %}
@@ -64,8 +69,8 @@
                                             {% set formAction %}{{ url('fos_message_thread_delete', {'threadId': thread.id}) }}{% endset %}
                                             {% set submitValue %}{% trans from 'FOSMessageBundle' %}delete{% endtrans %}{% endset %}
                                         {% endif %}
-                                        <form action="{{ formAction }}" method="post">
-                                                <button class="btn-simple text-danger" type="submit" value="{{ submitValue }}" ><i class="fa fa-trash"></i></button>
+                                        <form  action="{{ formAction }}" method="post">
+                                                <button class="btn-simple text-danger pull-right" type="submit" value="{{ submitValue }}" ><i class="fa fa-trash"></i> Supprimer</button>
                                         </form>
                                     {% endif %}
                                     </div>
@@ -80,12 +85,19 @@
                           </div>
                             <div class="">
                                 <h3>{% trans from 'FOSMessageBundle' %}reply{% endtrans %}</h3>
+                                <br/>
+                                {{ form_start(form, {'method': 'post', 'action': url('fos_message_thread_view', {'threadId': thread.id}), 'attr': {'class': ''}}) }}
 
-                                <form style="width: 100%;" action="{{ url('fos_message_thread_view', {'threadId': thread.id}) }}" method="post">
-                                    {{ form_widget(form) }}
 
-                                    <input type="submit" class="sign" value="Envoyer" />
-                                </form>    
+
+                                {{ form_label(form.body,'Contenu') }}
+                                {{ form_errors(form.body) }}
+                                {{ form_widget(form.body, {'attr': {'class': 'form-control'}}) }}
+                                <br/>
+                                <br/>
+                                <input type="submit" class="sign" />
+                                {{ form_end(form) }}
+
                             </div>
                       </div>
                   </aside>

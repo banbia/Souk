@@ -1,6 +1,6 @@
 <?php
 
-namespace FOS\MessageBundle\FormType;
+namespace Souk\FrontBundle\Form;
 
 use FOS\MessageBundle\Util\LegacyFormHelper;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -16,21 +16,20 @@ class NewThreadMultipleMessageFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('recipients', LegacyFormHelper::getType('FOS\MessageBundle\FormType\RecipientsType'),array('attr'  =>  array(
-            'class' => 'form-control',
-            'style' => 'margin:5px 0;')), array(
-                'label' => 'recipients',
+            ->add('recipients', LegacyFormHelper::getType('FOS\MessageBundle\FormType\RecipientsType')
+                , array('attr'  =>  array(
+                    'class' => 'form-control',
+                    'style' => 'margin:5px 0;')),array(
+                    'label' => 'rrr',
+                    'translation_domain' => 'FOSMessageBundle',
+                ))
+            ->add('subject', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\TextType')
+                , array(
+                'label' => 'Sujet',
                 'translation_domain' => 'FOSMessageBundle',
             ))
-            ->add('subject', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\TextType'),array('attr'  =>  array(
-            'class' => 'form-control',
-            'style' => 'margin:5px 0;')), array(
-                'label' => 'subject',
-                'translation_domain' => 'FOSMessageBundle',
-            ))
-            ->add('body', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\TextareaType'),array('attr'  =>  array(
-            'class' => 'form-control',
-            'style' => 'margin:5px 0;')), array(
+            ->add('body', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\TextareaType')
+                , array(
                 'label' => 'Contenu',
                 'translation_domain' => 'FOSMessageBundle',
             ));

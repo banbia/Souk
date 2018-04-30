@@ -51,11 +51,6 @@ p {margin: 0;}
 .member {
 	background: #381c7b91;
 	color: #eee;
-<<<<<<< HEAD
-	margin-right: 35px;
-=======
-margin-right:35px;
->>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90
 	text-align: center;
 	padding: 13px;
 }
@@ -106,9 +101,10 @@ body a{
 .logo a:hover{
   text-decoration:none;
 }
-.header_right{
-	float:right;
-	width: 24%;
+.header_right {
+	float: right;
+	width: auto;
+	margin-top: 5%;
 }
 .lang_list{
 	float:left;
@@ -484,9 +480,8 @@ ul.quick_access li.check{
 /* DROP DOWN LIST */
 .dropdown ul{
 	position: absolute;
-	left: 0;
+	left: -50%;
 	top: 38px;
-	/* height: 100%; */
 	width: 100%;
 	list-style: none;
 	overflow: hidden;
@@ -601,7 +596,7 @@ ul.tags_links li a {
   padding: 5px 10px;
     text-decoration: none;
 }
-a:hov
+a:hover{}
 ul.tags_links li a:hover{
 	text-decoration:none;
 }
@@ -2956,7 +2951,7 @@ ul.list1 a {
 }
 
   .inbox-body {
-    background: #ddc5a18c;
+    background: #ffffff;
 }
     .mailbox-read-info {
     border-bottom: 1px solid #f4f4f4;
@@ -2992,7 +2987,7 @@ ul.list1 a {
     width: 25%;
 }
 .mail-box .lg-side {
-    background: none repeat scroll 0 0 #ddc4a1;
+    background: none repeat scroll 0 0 #ffffff;
     border-radius: 0 4px 4px 0;
     width: 75%;
 }
@@ -3349,7 +3344,7 @@ ul {
 	background: #8c5287;
 	border: 1px solid #fff;
 	overflow: hidden;
-	margin-right: 1%;
+	margin-right: 5.5%;;
 	height: 50px;
 	width: 55px;
 	position: absolute;
@@ -3499,8 +3494,4 @@ ul {
 	-ms-transition:.5s all;
 	transition:.5s all;
 }
-<<<<<<< HEAD
 /*-- //menu --*/
-=======
-/*-- //menu --*/
->>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90
