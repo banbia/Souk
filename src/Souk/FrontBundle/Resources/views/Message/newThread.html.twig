@@ -1,5 +1,8 @@
 {% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
 
+{% endblock style %}
 {% block body %}
 
 <h2>{% trans from 'FOSMessageBundle' %}Message{% endtrans %}</h2>
@@ -24,9 +27,7 @@
                               <a href="{{path('fos_message_sent')}}"><i class="fa fa-envelope-o"></i> Envoyés</a>
                           </li>
                          
-                          <li>
-                              <a href="{{path('fos_message_deleted')}}"><i class=" fa fa-trash-o"></i> Corbeille</a>
-                          </li>
+
                       </ul>
                     
                   </aside>
@@ -42,12 +43,24 @@
                                   <h3 class="box-title">Nouveau Message</h3>
                                 </div>
                                 <div class="box-body no-padding">
-                                    
-<form action="{{ url('fos_message_thread_new') }}" method="post">
-    {{ form_widget(form) }}
+            {{ form_start(form, {'method': 'post', 'action': path('fos_message_thread_new'), 'attr': {'class': ''}}) }}
 
-    <input type="submit" class="sign" />
-</form>
+                {{ form_label(form.recipient, 'Destinataire:') }}
+                {{ form_errors(form.recipient) }}
+                {{ form_widget(form.recipient, {'attr': {'class': 'form-control'}}) }}
+
+                {{ form_label(form.subject,'Sujet') }}
+                {{ form_errors(form.subject) }}
+                {{ form_widget(form.subject, {'attr': {'class': 'form-control'}}) }}
+
+                {{ form_label(form.body,'Contenu') }}
+                {{ form_errors(form.body) }}
+                {{ form_widget(form.body, {'attr': {'class': 'form-control'}}) }}
+                    <br/>
+                    <br/>
+                    <input type="submit" class="sign" />
+            {{ form_end(form) }}
+
                                         
                                 </div>
                                 <br/>

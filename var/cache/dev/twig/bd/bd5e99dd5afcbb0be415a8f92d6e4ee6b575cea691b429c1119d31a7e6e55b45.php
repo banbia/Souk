@@ -146,6 +146,10 @@ class __TwigTemplate_4c3020fd9dfd322a4c3d05902642840b7ca11933359f333f6492bf686f9
 </div>
 
 {% endblock %}
+<<<<<<< HEAD
 ", "BackBundle:admin:home.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/admin/home.html.twig");
+=======
+", "BackBundle:admin:home.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/admin/home.html.twig");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

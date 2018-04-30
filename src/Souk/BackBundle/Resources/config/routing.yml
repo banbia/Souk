@@ -1,9 +1,18 @@
 back_abonnements:
     resource: "@BackBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements
+
+<<<<<<< HEAD
 back_abonnements:
     resource: "@BackBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements
+
+back_abonnements:
+    resource: "@BackBundle/Resources/config/routing/abonnements.yml"
+    prefix:   /abonnements
+
+=======
+>>>>>>> e5bdbef946680d53bffe65a8774a219d5250023f
 back_homepage:
     path:     /
     defaults: { _controller: BackBundle:Default:index }
@@ -11,3 +20,22 @@ back_homepage:
 back_reclamations:
     resource: "@BackBundle/Resources/config/routing/AdminReclamation.yml"
     prefix:   /reclamations
+index:
+    path:     /signals
+    defaults: { _controller: BackBundle:Signals:index }
+
+show:
+    path:     /viewEv/{evennement}
+    defaults: { _controller: BackBundle:Signals:show }
+
+consulter:
+    path:     /viewAnc/{annonce}
+    defaults: { _controller: BackBundle:Signals:consulter }
+
+delete_ev:
+    path:     /deleteEv
+    defaults: { _controller: BackBundle:Signals:deleteEv }
+
+delete_anc:
+    path:     /deleteAnc
+    defaults: { _controller: BackBundle:Signals:deleteAnc }

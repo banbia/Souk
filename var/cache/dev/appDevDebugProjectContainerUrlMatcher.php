@@ -156,14 +156,36 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                     // abonnements_delete
                     if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                        if ('DELETE' !== $canonicalMethod) {
-                            $allow[] = 'DELETE';
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
                             goto not_abonnements_delete;
                         }
 
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_delete')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::deleteAction',));
                     }
                     not_abonnements_delete:
+
+                    // abonnements_demandes
+                    if ('/admin/abonnements/demandes' === $pathinfo) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_abonnements_demandes;
+                        }
+
+                        return array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::demandesAction',  '_route' => 'abonnements_demandes',);
+                    }
+                    not_abonnements_demandes:
+
+                    // abonnements_valider
+                    if (preg_match('#^/admin/abonnements/(?P<id>[^/]++)/(?P<nb>[^/]++)/valider$#s', $pathinfo, $matches)) {
+                        if ('GET' !== $canonicalMethod) {
+                            $allow[] = 'GET';
+                            goto not_abonnements_valider;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'abonnements_valider')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AbonnementsController::validerAction',));
+                    }
+                    not_abonnements_valider:
 
                 }
 
@@ -227,7 +249,32 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
-                elseif (0 === strpos($pathinfo, '/admin/categories')) {
+                // index
+                if ('/admin/signals' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::indexAction',  '_route' => 'index',);
+                }
+
+                // show
+                if (0 === strpos($pathinfo, '/admin/viewEv') && preg_match('#^/admin/viewEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::showAction',));
+                }
+
+                // consulter
+                if (0 === strpos($pathinfo, '/admin/viewAnc') && preg_match('#^/admin/viewAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'consulter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::consulterAction',));
+                }
+
+                // delete_ev
+                if ('/admin/deleteEv' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteEvAction',  '_route' => 'delete_ev',);
+                }
+
+                // delete_anc
+                if ('/admin/deleteAnc' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteAncAction',  '_route' => 'delete_anc',);
+                }
+
+                if (0 === strpos($pathinfo, '/admin/categories')) {
                     // categories_index
                     if ('/admin/categories' === $trimmedPathinfo) {
                         if ('GET' !== $canonicalMethod) {

@@ -112,6 +112,10 @@ class __TwigTemplate_1cec00e9cc962dc844c8cf736d735587d549500a48b964c42606a91c85e
 {% block formulaire %}
 {% include \"@FOSUser/Profile/show_content.html.twig\" %}
 {% endblock formulaire %}
+<<<<<<< HEAD
 ", "@FOSUser/Profile/show.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Profile\\show.html.twig");
+=======
+", "@FOSUser/Profile/show.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Profile\\show.html.twig");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

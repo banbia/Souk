@@ -1,0 +1,35 @@
+{% extends 'BackBundle::panel.html.twig' %}
+
+{% block body %}
+    <h1>Liste des demandes d'abonnements</h1>
+
+    <a class="btn btn-warning pull-right" href="{{ path('abonnements_index') }}"><i class="fa fa-arrow-left"></i> Liste abonnements</a>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Abonnement</th>
+            <th>Nombre de mois</th>
+            <th>Commercial</th>
+            <th>Date</th>
+            <th>Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for d in demandes %}
+            <tr>
+                <td>{{ d.abonnement.designation }}</td>
+                <td>{{ d.abonnement.nbMois }}</td>
+                <td>{{ d.commercial.titreCommercial }}</td>
+                <td>{{ d.dateAb|date('d-m-Y') }}</td>
+                <td>
+                    <a class="btn btn-default" href="{{ path('abonnements_valider',{'id':d.id,'nb':d.abonnement.nbMois}) }}"><i class="fa fa-check">   </i>Valider</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

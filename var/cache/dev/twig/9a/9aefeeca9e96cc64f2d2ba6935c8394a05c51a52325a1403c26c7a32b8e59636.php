@@ -73,6 +73,10 @@ class __TwigTemplate_520b535220ce9a78bea6817775ab98b671ba1ea73fa3a804b3a197e59f6
     c-0.5-0.1-1.1,0.3-1.1,0.9S13.9,3,14.4,3c3.3,0.5,5.8,3.4,5.8,6.8c0,0.5,0.5,1.2,1,1.2c0,0,0,0,0,0c0.6,0,1-0.7,1-1.2
     C22.2,5.5,19,1.6,14.7,1z\"/>
 </svg>
+<<<<<<< HEAD
 ", "@WebProfiler/Icon/event.svg", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\event.svg");
+=======
+", "@WebProfiler/Icon/event.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\event.svg");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

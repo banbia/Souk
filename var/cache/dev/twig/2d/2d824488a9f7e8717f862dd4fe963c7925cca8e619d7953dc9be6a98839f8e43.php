@@ -46,7 +46,11 @@ class __TwigTemplate_af1f453ca659b1a05a9803dacb22e1496ca07a0f2796535f3be7deeeaa8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
+<<<<<<< HEAD
         echo "    <h1>Abonnement creation</h1>
+=======
+        echo "    <h1 class=\"text-warning\">Création d'un Abonnement</h1>
+>>>>>>> 836158231e125c164df57be215e600d351e15952
 
     ";
         // line 6
@@ -108,7 +112,11 @@ class __TwigTemplate_af1f453ca659b1a05a9803dacb22e1496ca07a0f2796535f3be7deeeaa8
     <a class =\"btn btn-default\" href=\"";
         // line 35
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("abonnements_index");
+<<<<<<< HEAD
         echo "\"><i class=\"fa fa-arrow-left\"></i> Back to the list</a>
+=======
+        echo "\"><i class=\"fa fa-arrow-left\"></i> Retourner à la liste</a>
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     <button type=\"submit\" class=\"btn btn-success \" > Créer </button>
     </div>
 </div>
@@ -153,7 +161,11 @@ class __TwigTemplate_af1f453ca659b1a05a9803dacb22e1496ca07a0f2796535f3be7deeeaa8
         return new Twig_Source("{% extends 'BackBundle::panel.html.twig' %}
 
 {% block body %}
+<<<<<<< HEAD
     <h1>Abonnement creation</h1>
+=======
+    <h1 class=\"text-warning\">Création d'un Abonnement</h1>
+>>>>>>> 836158231e125c164df57be215e600d351e15952
 
     {{ form_start(form) }}
        {# {{ form_widget(form) }} #}
@@ -184,12 +196,20 @@ class __TwigTemplate_af1f453ca659b1a05a9803dacb22e1496ca07a0f2796535f3be7deeeaa8
 
 <div class=\"col-md-12\" style=\"margin-top: 15px\" >
     <div class=\"col-md-6\">
+<<<<<<< HEAD
     <a class =\"btn btn-default\" href=\"{{ path('abonnements_index') }}\"><i class=\"fa fa-arrow-left\"></i> Back to the list</a>
+=======
+    <a class =\"btn btn-default\" href=\"{{ path('abonnements_index') }}\"><i class=\"fa fa-arrow-left\"></i> Retourner à la liste</a>
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     <button type=\"submit\" class=\"btn btn-success \" > Créer </button>
     </div>
 </div>
     {{ form_end(form) }}
 {% endblock %}
+<<<<<<< HEAD
 ", "BackBundle:abonnements:new.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/abonnements/new.html.twig");
+=======
+", "BackBundle:abonnements:new.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/abonnements/new.html.twig");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

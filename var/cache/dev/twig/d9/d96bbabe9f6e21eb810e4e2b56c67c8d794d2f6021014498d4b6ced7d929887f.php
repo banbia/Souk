@@ -217,6 +217,10 @@ class __TwigTemplate_6c20d765eaa01f49d6eb6c3a4ec513778dca2cf74a8339f8cd8e871267e
         </div>
     </form>
 </div>
+<<<<<<< HEAD
 ", "@WebProfiler/Profiler/search.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\search.html.twig");
+=======
+", "@WebProfiler/Profiler/search.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\search.html.twig");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

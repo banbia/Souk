@@ -81,6 +81,10 @@ class __TwigTemplate_65e5e6fb666f032335467eee13879660041bef5463fe3e035a1c2ccb312
     c-0.6,0-1.2,0.5-1.2,1.2c0,0.6,0.5,1.2,1.1,1.2c0,0,0,0,0,0c-1.3,0-2.3-1.2-2.3-2.6c0-1.5,1-2.5,2.3-2.5c1.3,0,2.3,1.1,2.3,2.5
     C17.1,9.8,16.2,10.9,15,11z\"/>
 </svg>
+<<<<<<< HEAD
 ", "@WebProfiler/Icon/exception.svg", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\exception.svg");
+=======
+", "@WebProfiler/Icon/exception.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\exception.svg");
+>>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }
