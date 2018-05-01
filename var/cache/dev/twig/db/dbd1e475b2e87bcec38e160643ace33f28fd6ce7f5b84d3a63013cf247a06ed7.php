@@ -413,10 +413,6 @@ class __TwigTemplate_22c4d871a8d2a8b78e3d8cc6417a9bd57f8751fa2beef87c70f41e351a1
     });
 
 /*]]>*/</script>
-<<<<<<< HEAD
 ", "@Twig/base_js.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\base_js.html.twig");
-=======
-", "@Twig/base_js.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\base_js.html.twig");
->>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

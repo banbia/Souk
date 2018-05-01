@@ -191,10 +191,6 @@ $context["attrvalue"] === false)) {
         {%- endif -%}
     {%- endfor -%}
 {% endspaceless %}
-<<<<<<< HEAD
 {% endblock rating_widget_container_attributes %}", "StarRatingBundle::rating.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\blackknight467\\star-rating-bundle\\blackknight467\\StarRatingBundle/Resources/views/rating.html.twig");
-=======
-{% endblock rating_widget_container_attributes %}", "StarRatingBundle::rating.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\blackknight467\\star-rating-bundle\\blackknight467\\StarRatingBundle/Resources/views/rating.html.twig");
->>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

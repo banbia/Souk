@@ -171,10 +171,6 @@ class __TwigTemplate_c4000be004a50e9ef85a017eccd45ebbd6e73a33168cf9e21dc10e21a4a
         </div>
     </div>
 </div>
-<<<<<<< HEAD
 ", "@Twig/Exception/traces.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces.html.twig");
-=======
-", "@Twig/Exception/traces.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces.html.twig");
->>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

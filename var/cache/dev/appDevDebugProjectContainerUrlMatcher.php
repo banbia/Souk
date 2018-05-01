@@ -329,7 +329,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             // abonnements_com_new
             if ('/abonnements/new' === $pathinfo) {
-                return array (  '_controller' => 'FrontBundle:Abonnements:new',  '_route' => 'abonnements_com_new',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ComAbonnementsController::newAction',  '_route' => 'abonnements_com_new',);
             }
 
             if (0 === strpos($pathinfo, '/annonces')) {
@@ -851,27 +851,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->redirect($rawPathinfo.'/', 'fos_message_inbox');
                 }
 
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::inboxAction',  '_route' => 'fos_message_inbox',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::inboxAction',  '_route' => 'fos_message_inbox',);
             }
 
             // fos_message_sent
             if ('/messages/sent' === $pathinfo) {
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::sentAction',  '_route' => 'fos_message_sent',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::sentAction',  '_route' => 'fos_message_sent',);
             }
 
             // fos_message_search
             if ('/messages/search' === $pathinfo) {
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::searchAction',  '_route' => 'fos_message_search',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::searchAction',  '_route' => 'fos_message_search',);
             }
 
             // fos_message_deleted
             if ('/messages/deleted' === $pathinfo) {
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::deletedAction',  '_route' => 'fos_message_deleted',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deletedAction',  '_route' => 'fos_message_deleted',);
             }
 
             // fos_message_thread_new
             if ('/messages/new' === $pathinfo) {
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::newThreadAction',  '_route' => 'fos_message_thread_new',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::newThreadAction',  '_route' => 'fos_message_thread_new',);
             }
 
             // fos_message_thread_delete
@@ -881,7 +881,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_fos_message_thread_delete;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_delete')), array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::deleteAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deleteAction',));
             }
             not_fos_message_thread_delete:
 
@@ -892,13 +892,13 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_fos_message_thread_undelete;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_undelete')), array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::undeleteAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_undelete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::undeleteAction',));
             }
             not_fos_message_thread_undelete:
 
             // fos_message_thread_view
             if (preg_match('#^/messages/(?P<threadId>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_view')), array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::threadAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_view')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::threadAction',));
             }
 
         }

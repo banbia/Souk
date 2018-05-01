@@ -99,14 +99,10 @@ class __TwigTemplate_441b5953a9d6d4b37ead1858544b27f805b9466dc082ff686d478a3b26e
         echo "\">Catégories</a></li>
                                 </ul>
                             </li>
-<<<<<<< HEAD
                             <li><a href=\"";
         // line 59
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_index");
         echo "\">Reclamations</a></li>
-=======
-                            <li><a href=\"\">TABS & PANELS</a></li>
->>>>>>> 836158231e125c164df57be215e600d351e15952
                              <li><a href=\"\">TABLES</a></li>
                             <li><a href=\"\">BLANK PAGE</a></li>
 
@@ -215,11 +211,7 @@ class __TwigTemplate_441b5953a9d6d4b37ead1858544b27f805b9466dc082ff686d478a3b26e
 
     public function getDebugInfo()
     {
-<<<<<<< HEAD
         return array (  193 => 85,  184 => 84,  169 => 113,  164 => 111,  159 => 109,  134 => 86,  132 => 84,  104 => 59,  98 => 56,  91 => 52,  69 => 33,  50 => 17,  45 => 15,  40 => 13,  26 => 1,);
-=======
-        return array (  190 => 85,  181 => 84,  166 => 113,  161 => 111,  156 => 109,  131 => 86,  129 => 84,  98 => 56,  91 => 52,  69 => 33,  50 => 17,  45 => 15,  40 => 13,  26 => 1,);
->>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -290,11 +282,7 @@ class __TwigTemplate_441b5953a9d6d4b37ead1858544b27f805b9466dc082ff686d478a3b26e
                                     <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"{{ path('categories_index') }}\">Catégories</a></li>
                                 </ul>
                             </li>
-<<<<<<< HEAD
                             <li><a href=\"{{ path('admin_reclamations_index') }}\">Reclamations</a></li>
-=======
-                            <li><a href=\"\">TABS & PANELS</a></li>
->>>>>>> 836158231e125c164df57be215e600d351e15952
                              <li><a href=\"\">TABLES</a></li>
                             <li><a href=\"\">BLANK PAGE</a></li>
 
@@ -352,10 +340,6 @@ class __TwigTemplate_441b5953a9d6d4b37ead1858544b27f805b9466dc082ff686d478a3b26e
   
 </body>
 </html>
-<<<<<<< HEAD
 ", "BackBundle::panel.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/panel.html.twig");
-=======
-", "BackBundle::panel.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/panel.html.twig");
->>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }

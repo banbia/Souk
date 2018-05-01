@@ -1669,6 +1669,6 @@ class __TwigTemplate_bb9d52912c03de650bb4d50ff9bdffa0961eed1ea8f2768d77880e53730
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
     }
 }

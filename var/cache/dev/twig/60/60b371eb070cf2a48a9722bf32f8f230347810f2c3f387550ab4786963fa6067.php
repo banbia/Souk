@@ -132,10 +132,6 @@ class __TwigTemplate_011a2a02212651b47a916dfa2b2e1fad2a7cfc76191d7d5db45b062e685
         </tr>
     </tbody>
 </table>
-<<<<<<< HEAD
 ", "@Twig/Exception/traces_text.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces_text.html.twig");
-=======
-", "@Twig/Exception/traces_text.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces_text.html.twig");
->>>>>>> 836158231e125c164df57be215e600d351e15952
     }
 }
