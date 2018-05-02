@@ -645,41 +645,10 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/login')) {
-            // fos_user_security_login
-            if ('/login' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_fos_user_security_login;
-                }
-
-                return array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
-            }
-            not_fos_user_security_login:
-
-            // fos_user_security_check
-            if ('/login_check' === $pathinfo) {
-                if ('POST' !== $canonicalMethod) {
-                    $allow[] = 'POST';
-                    goto not_fos_user_security_check;
-                }
-
-                return array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
-            }
-            not_fos_user_security_check:
-
+        // pdf_show
+        if (0 === strpos($pathinfo, '/pdf') && preg_match('#^/pdf/(?P<commande>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'pdf_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\PDFController::pdfshowAction',));
         }
-
-        // fos_user_security_logout
-        if ('/logout' === $pathinfo) {
-            if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                $allow = array_merge($allow, array('GET', 'POST'));
-                goto not_fos_user_security_logout;
-            }
-
-            return array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
-        }
-        not_fos_user_security_logout:
 
         if (0 === strpos($pathinfo, '/profile')) {
             // fos_user_profile_show
@@ -721,7 +690,102 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/evennements')) {
+        elseif (0 === strpos($pathinfo, '/messages')) {
+            // fos_message_inbox
+            if ('/messages' === $trimmedPathinfo) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($rawPathinfo.'/', 'fos_message_inbox');
+                }
+
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::inboxAction',  '_route' => 'fos_message_inbox',);
+            }
+
+            // fos_message_sent
+            if ('/messages/sent' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::sentAction',  '_route' => 'fos_message_sent',);
+            }
+
+            // fos_message_search
+            if ('/messages/search' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::searchAction',  '_route' => 'fos_message_search',);
+            }
+
+            // fos_message_deleted
+            if ('/messages/deleted' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deletedAction',  '_route' => 'fos_message_deleted',);
+            }
+
+            // fos_message_thread_new
+            if ('/messages/new' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::newThreadAction',  '_route' => 'fos_message_thread_new',);
+            }
+
+            // fos_message_thread_delete
+            if (preg_match('#^/messages/(?P<threadId>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($requestMethod, array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_fos_message_thread_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deleteAction',));
+            }
+            not_fos_message_thread_delete:
+
+            // fos_message_thread_undelete
+            if (preg_match('#^/messages/(?P<threadId>[^/]++)/undelete$#s', $pathinfo, $matches)) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_fos_message_thread_undelete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_undelete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::undeleteAction',));
+            }
+            not_fos_message_thread_undelete:
+
+            // fos_message_thread_view
+            if (preg_match('#^/messages/(?P<threadId>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_view')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::threadAction',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/login')) {
+            // fos_user_security_login
+            if ('/login' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_security_login;
+                }
+
+                return array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
+            }
+            not_fos_user_security_login:
+
+            // fos_user_security_check
+            if ('/login_check' === $pathinfo) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_fos_user_security_check;
+                }
+
+                return array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
+            }
+            not_fos_user_security_check:
+
+        }
+
+        // fos_user_security_logout
+        if ('/logout' === $pathinfo) {
+            if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                $allow = array_merge($allow, array('GET', 'POST'));
+                goto not_fos_user_security_logout;
+            }
+
+            return array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
+        }
+        not_fos_user_security_logout:
+
+        if (0 === strpos($pathinfo, '/evennements')) {
             // evennements_index
             if ('/evennements' === $trimmedPathinfo) {
                 if ('GET' !== $canonicalMethod) {
@@ -840,65 +904,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'signalsEvsN_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\SignalsEvsController::newAction',));
                 }
 
-            }
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/messages')) {
-            // fos_message_inbox
-            if ('/messages' === $trimmedPathinfo) {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($rawPathinfo.'/', 'fos_message_inbox');
-                }
-
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::inboxAction',  '_route' => 'fos_message_inbox',);
-            }
-
-            // fos_message_sent
-            if ('/messages/sent' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::sentAction',  '_route' => 'fos_message_sent',);
-            }
-
-            // fos_message_search
-            if ('/messages/search' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::searchAction',  '_route' => 'fos_message_search',);
-            }
-
-            // fos_message_deleted
-            if ('/messages/deleted' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deletedAction',  '_route' => 'fos_message_deleted',);
-            }
-
-            // fos_message_thread_new
-            if ('/messages/new' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::newThreadAction',  '_route' => 'fos_message_thread_new',);
-            }
-
-            // fos_message_thread_delete
-            if (preg_match('#^/messages/(?P<threadId>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if (!in_array($requestMethod, array('POST', 'DELETE'))) {
-                    $allow = array_merge($allow, array('POST', 'DELETE'));
-                    goto not_fos_message_thread_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deleteAction',));
-            }
-            not_fos_message_thread_delete:
-
-            // fos_message_thread_undelete
-            if (preg_match('#^/messages/(?P<threadId>[^/]++)/undelete$#s', $pathinfo, $matches)) {
-                if ('POST' !== $canonicalMethod) {
-                    $allow[] = 'POST';
-                    goto not_fos_message_thread_undelete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_undelete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::undeleteAction',));
-            }
-            not_fos_message_thread_undelete:
-
-            // fos_message_thread_view
-            if (preg_match('#^/messages/(?P<threadId>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_view')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::threadAction',));
             }
 
         }

@@ -1,10 +1,1 @@
-9e74ee,127.0.0.1,GET,http://localhost:8000/admin/reclamations/,1525102169,4f32f3,200
-4f32f3,127.0.0.1,GET,http://localhost:8000/admin/reclamations/,1525102171,,500
-943725,127.0.0.1,GET,http://localhost:8000/admin/reclamations/,1525102239,,200
-ce7fc9,127.0.0.1,GET,http://localhost:8000/admin/abonnements/,1525102255,,200
-1d3d18,127.0.0.1,GET,http://localhost:8000/admin/abonnements/new,1525102270,,200
-aca471,127.0.0.1,POST,http://localhost:8000/admin/abonnements/new,1525102299,,302
-e8ca5e,127.0.0.1,GET,http://localhost:8000/admin/abonnements/1/show,1525102302,,200
-c2eb5b,127.0.0.1,GET,http://localhost:8000/admin/abonnements/1/edit,1525102312,,200
-8420a7,127.0.0.1,GET,http://localhost:8000/admin/abonnements/,1525102318,,200
-61dfc9,127.0.0.1,GET,http://localhost:8000/admin/abonnements/1/show,1525102324,,200
+22eac1,127.0.0.1,GET,http://localhost:8000/pdf/1,1525284344,,200

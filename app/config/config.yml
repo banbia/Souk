@@ -81,3 +81,16 @@ fos_message:
     thread_class: Souk\FrontBundle\Entity\Thread
     message_class: Souk\FrontBundle\Entity\Message
 
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\"" #for Windows users #/usr/local/bin/wkhtmltopdf
+        options:
+            no-outline: true
+            page-size: LETTER
+                    # Recommended to set UTF-8 as default encoding :)
+            encoding: UTF-8
+    image:
+        enabled:    true
+        binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\"" #for Windows users # /usr/local/bin/wkhtmltoimage
+        options:    []
