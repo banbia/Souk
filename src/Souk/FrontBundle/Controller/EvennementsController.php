@@ -9,6 +9,7 @@ use Souk\BackBundle\Form\CommentairesEvsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Evennement controller.
@@ -60,11 +61,39 @@ class EvennementsController extends Controller
      * Finds and displays a evennement entity.
      *
      */
-    public function showAction(Evennements $evennement)
+    public function showAction(Request $request, Evennements $evennement )
     {
+        /* safa Boufare Begin*/
+        //cnx bd
+        $cm = $this->getDoctrine()->getManager();
+        //extraire la liste des commentaires d'un Evs
+        $comsEvs = $cm->getRepository('BackBundle:CommentairesEvs')->findBy(array("evennement"=>$evennement->getId()));
+        //ajout d'un noveau commentaire Evs
 
+        $com_Evs =new CommentairesEvs();
+
+        $formC = $this->createForm(CommentairesEvsType::class,$com_Evs);
+
+        $formViewC=$formC->createView();
+
+        $formC->handleRequest($request);
+
+        if ($formC->isSubmitted()&& $formC->isValid()) {
+            ///récupérer user
+            $user = $this->getUser();
+            $com_Evs->setDateCmt(new \DateTime('now'));
+            $com_Evs->setClient($user);
+            $com_Evs->setEvennement($evennement);
+            $cm->persist($com_Evs);
+            $cm->flush();
+            return $this->redirectToRoute('evennements_show',array("id"=>$evennement->getId()));
+        }
+        /* safa Boufare End*/
         return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
+            '$com_Evs'=>$comsEvs,
+            'formC'=>$formViewC,
+
         ));
     }
 
@@ -83,6 +112,7 @@ class EvennementsController extends Controller
 
             return $this->redirectToRoute('evennements_edit', array('id' => $evennement->getId()));
         }
+
 
         return $this->render('FrontBundle:evennements:edit.html.twig', array(
             'evennement' => $evennement,
@@ -128,6 +158,7 @@ class EvennementsController extends Controller
     // Safa Boufares  commentaire Evs
 
     // Ajout des commentaires et les listees pour un Evs
+    /*
     public function newEvsAction(Request $request,$evennement)
     {
 
@@ -163,6 +194,7 @@ class EvennementsController extends Controller
         return $this->render('FrontBundle:evennements:new_commentairesEvs.html.twig',array('coms_Evs'=>$coms_Evs,'formCommentaire'=>$formView, 'evennement' => $evennement));
 
     }
+    */
     // delete des comm de l'Evs
 
     /**

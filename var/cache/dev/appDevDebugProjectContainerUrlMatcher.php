@@ -203,36 +203,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
                     not_admin_reclamations_edit:
 
-<<<<<<< HEAD
-                }
-
-                // index
-                if ('/admin/signals' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::indexAction',  '_route' => 'index',);
-                }
-
-                // show
-                if (0 === strpos($pathinfo, '/admin/viewEv') && preg_match('#^/admin/viewEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::showAction',));
-                }
-
-                // consulter
-                if (0 === strpos($pathinfo, '/admin/viewAnc') && preg_match('#^/admin/viewAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'consulter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::consulterAction',));
-                }
-
-                // delete_ev
-                if ('/admin/deleteEv' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteEvAction',  '_route' => 'delete_ev',);
-                }
-
-                // delete_anc
-                if ('/admin/deleteAnc' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteAncAction',  '_route' => 'delete_anc',);
-                }
-
-                if (0 === strpos($pathinfo, '/admin/categories')) {
-=======
                     // admin_reclamations_refuser
                     if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/refuser$#s', $pathinfo, $matches)) {
                         if (!in_array($canonicalMethod, array('GET', 'POST'))) {
@@ -257,8 +227,32 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
-                elseif (0 === strpos($pathinfo, '/admin/categories')) {
->>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90
+                // index
+                if ('/admin/signals' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::indexAction',  '_route' => 'index',);
+                }
+
+                // show
+                if (0 === strpos($pathinfo, '/admin/viewEv') && preg_match('#^/admin/viewEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::showAction',));
+                }
+
+                // consulter
+                if (0 === strpos($pathinfo, '/admin/viewAnc') && preg_match('#^/admin/viewAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'consulter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::consulterAction',));
+                }
+
+                // delete_ev
+                if (0 === strpos($pathinfo, '/admin/deleteEv') && preg_match('#^/admin/deleteEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_ev')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteEvAction',));
+                }
+
+                // delete_anc
+                if (0 === strpos($pathinfo, '/admin/deleteAnc') && preg_match('#^/admin/deleteAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_anc')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteAncAction',));
+                }
+
+                if (0 === strpos($pathinfo, '/admin/categories')) {
                     // categories_index
                     if ('/admin/categories' === $trimmedPathinfo) {
                         if ('GET' !== $canonicalMethod) {
