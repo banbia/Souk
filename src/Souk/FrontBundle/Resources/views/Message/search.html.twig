@@ -1,5 +1,8 @@
 {% extends 'FOSMessageBundle::layout.html.twig' %}
+{% block style %}
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
 
+{% endblock style %}
 {% block fos_message_content %}
 
 <h2>{% trans from 'FOSMessageBundle' %}search{% endtrans %}</h2>

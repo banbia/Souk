@@ -1,11 +1,14 @@
 {% extends 'BackBundle::panel.html.twig' %}
-
+{% block style %}
+<link href="{{ asset ('bundles/back/css/SafaBarka_css.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock style %}
 {% block body %}
-    <h1>Abonnements list</h1>
+    <h1 class="text-warning">Liste Des Abonnements</h1>
 
             <a class="btn btn-success" href="{{ path('abonnements_new') }}"><i class="fa fa-plus"></i> Nouvel abonnement</a>
+            <a class="btn btn-primary" href="{{ path('abonnements_demandes') }}"><i class="fa fa-list"></i> Demandes</a>
 
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Designation</th>
@@ -24,9 +27,9 @@
                 <td>{{ abonnement.nbMois }}</td>
                 <td>
 
-                    <a class ="btn btn-default" href="{{ path('abonnements_show', { 'id': abonnement.id }) }}"><i class="fa fa-file-text-o"></i> Show</a>
-                    <a class ="btn btn-default" href="{{ path('abonnements_edit', { 'id': abonnement.id }) }}"><i class="fa fa-edit"></i> Edit</a>
-
+                    <a class ="btn btn-default" href="{{ path('abonnements_show', { 'id': abonnement.id }) }}"><i class="fa fa-file-text-o"></i> Afficher</a>
+                    <a class ="btn btn-default" href="{{ path('abonnements_edit', { 'id': abonnement.id }) }}"><i class="fa fa-edit"></i> Modifier</a>
+                    <a class ="btn btn-default" href="{{ path('abonnements_delete', { 'id': abonnement.id }) }}"><i class="fa fa-trash-o"></i> Supprimer</a>
             </tr>
         {% endfor %}
         </tbody>

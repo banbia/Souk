@@ -1,5 +1,8 @@
 {% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
 
+{% endblock style %}
 {% block body %}
 
 <h2>{% trans from 'FOSMessageBundle' %}deleted{% endtrans %}</h2>
@@ -24,9 +27,7 @@
                               <a href="{{path('fos_message_sent')}}"><i class="fa fa-envelope-o"></i> Envoyés</a>
                           </li>
                          
-                          <li class="active">
-                              <a href="{{path('fos_message_deleted')}}"><i class=" fa fa-trash-o"></i> Corbeille</a>
-                          </li>
+
                       </ul>
                       
 
