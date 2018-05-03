@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+aba44c,127.0.0.1,GET,http://localhost:8000/evennements/1/show,1525343208,6b1caf,200
+6b1caf,127.0.0.1,GET,http://localhost:8000/evennements/1/show,1525343208,,404
+9cd0f3,127.0.0.1,GET,http://localhost:8000/evennements/1/show,1525345818,5c16c0,200
+5c16c0,127.0.0.1,GET,http://localhost:8000/evennements/1/show,1525345818,,404
+=======
+<<<<<<< HEAD
 4344d1,127.0.0.1,GET,http://localhost:8000/reclamations/,1524931297,,200
 a4564d,127.0.0.1,GET,http://localhost:8000/profile/,1524931361,,200
 fc8f2a,127.0.0.1,GET,http://localhost:8000/reclamations/,1524931370,,200
@@ -189,3 +195,4 @@ c6ca66,127.0.0.1,GET,http://localhost:8000/new,1525099962,,404
 7f4378,127.0.0.1,GET,http://localhost:8000/abonnements/new,1525099985,416d21,200
 416d21,127.0.0.1,GET,http://localhost:8000/abonnements/new,1525099986,,500
 >>>>>>> 836158231e125c164df57be215e600d351e15952
+>>>>>>> d4d7a388452eeab3122d0563146e20417b3a9247

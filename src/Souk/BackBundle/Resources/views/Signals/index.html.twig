@@ -9,7 +9,7 @@
 
     <div class="tab-content">
         <div id="evs" class="tab-pane fade in active">
-            <h3>EVS</h3>
+            <h3>Evnement </h3>
             <table class="table table-condensed">
                 <thead>
                 <tr>
@@ -32,7 +32,7 @@
                         <td>{{ a.dateFin|date("d/m/Y") }}</td>
                         <td>{{ a.lieu }}</td>
                         <td>{{ a.prix }}</td>
-                        <td><a href="{{ path('show',{'evennement':a.id}) }}"><i class="fa fa-trash-o"></i>Consulter Signals</a></td>
+                        <td><a href="{{ path('show',{'evennement':a.id}) }}" class="btn btn-info "><i class="fa fa-eye"></i></a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -60,7 +60,7 @@
                         <td>{{ a.prix }}</td>
                         <td>{{ a.disponible }}</td>
                         <td>{{ a.dateCreation|date("d/m/Y") }}</td>
-                       <td><a href="{{ path('consulter',{'annonce':a.id}) }}"><i class="fa fa-trash-o"></i>Consulter Signals </a></td>
+                       <td><a href="{{ path('consulter',{'annonce':a.id}) }}"  class="btn btn-info"><i class="fa fa-eye"></i></a></td>
 
                     </tr>
                 {% endfor %}

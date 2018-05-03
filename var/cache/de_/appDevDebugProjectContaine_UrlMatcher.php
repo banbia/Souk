@@ -227,7 +227,36 @@ class appDevDebugProjectContaine_UrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
+<<<<<<< HEAD:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
+                // index
+                if ('/admin/signals' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::indexAction',  '_route' => 'index',);
+                }
+
+                // show
+                if (0 === strpos($pathinfo, '/admin/viewEv') && preg_match('#^/admin/viewEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::showAction',));
+                }
+
+                // consulter
+                if (0 === strpos($pathinfo, '/admin/viewAnc') && preg_match('#^/admin/viewAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'consulter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::consulterAction',));
+                }
+
+                // delete_ev
+                if (0 === strpos($pathinfo, '/admin/deleteEv') && preg_match('#^/admin/deleteEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_ev')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteEvAction',));
+                }
+
+                // delete_anc
+                if (0 === strpos($pathinfo, '/admin/deleteAnc') && preg_match('#^/admin/deleteAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_anc')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteAncAction',));
+                }
+
+                if (0 === strpos($pathinfo, '/admin/categories')) {
+=======
                 elseif (0 === strpos($pathinfo, '/admin/categories')) {
+>>>>>>> d4d7a388452eeab3122d0563146e20417b3a9247:var/cache/de_/appDevDebugProjectContaine_UrlMatcher.php
                     // categories_index
                     if ('/admin/categories' === $trimmedPathinfo) {
                         if ('GET' !== $canonicalMethod) {

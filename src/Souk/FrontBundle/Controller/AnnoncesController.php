@@ -43,10 +43,14 @@ class AnnoncesController extends Controller
      */
     public function showAction(Request $request,Annonces $annonce)
     {
+
+
         /* Nour's Work Start*/
         $commande = new Commandes();
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
+        $annonce = $em->getRepository('BackBundle:Annonces')->find($annonce);
+
         $form = $this->createForm('Souk\BackBundle\Form\CommandesType', $commande);
         $form->handleRequest($request);
         $find_com = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"annonce"=>$annonce,"etat"=>0));
@@ -88,50 +92,47 @@ class AnnoncesController extends Controller
             //return $this->redirectToRoute('commandes_show', array('id' => $commande->getId()));
         }
         /* Nour's Work End*/
+        /* safa Boufare Begin*/
+        //extraire la liste des commentaires d'une annonce
+        $coms = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("annonce"=>$annonce->getId()));
+        //ajout d'un noveau commentaire
+
+        $com_Anc =new CommentairesAnc();
+
+        $formC = $this->createForm(CommentairesAncType::class,$com_Anc);
+
+        $formViewC=$formC->createView();
+
+        $formC->handleRequest($request);
+
+        if ($formC->isSubmitted()&& $formC->isValid()) {
+            ///récupérer user
+            $user = $this->getUser();
+            ///récupérer annonce
+            $com_Anc->setDateCmt(new \DateTime('now'));
+            $com_Anc->setClient($user);
+            $com_Anc->setAnnonce($annonce);
+            $em->persist($com_Anc);
+            $em->flush();
+            return $this->redirectToRoute('annonces_show',array("id"=>$annonce->getId()));
+        }
+        /* safa Boufare End*/
+
+
+
+
         return $this->render('FrontBundle:annonces:show.html.twig', array(
             'annonce' => $annonce,
             'commande' => $commande,
             'form' => $form->createView(),
-            'com'=>$com
+            'com'=>$com,
+            'coms'=>$coms,
+            'formC'=>$formViewC,
 
         ));
     }
-    // Safa Boufares  commentaire Anc
-
-    // Ajout des commentaires et les listees pour une annonce
-    /**
-     * @Route("/annonce/{$annonce}", name="commentairesAnc_new")
-     */
-    public function newAction(Request $request,$annonce)
-    {
-        //cnx bd
-        $cm = $this->getDoctrine()->getManager();
-        //extraire la liste des commentaires d'une annonce
-        $coms = $cm->getRepository('BackBundle:CommentairesAnc')->findBy(array("annonce"=>$annonce));
-        //ajout d'un noveau commentaire
-        $com_Anc =new CommentairesAnc();
-        ///récupérer annonce
-        $annonces = $cm->getRepository('BackBundle:Annonces')->find($annonce);
-        ///récupérer user
-        $user = $this->getUser();
-        $form = $this->createForm(CommentairesAncType::class,$com_Anc);
-
-        $formView=$form->createView();
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted()&& $form->isValid()) {
-            $com_Anc->setDateCmt(new \DateTime('now'));
-            $com_Anc->setClient($user);
-            $com_Anc->setAnnonce($annonces);
-            $cm->persist($com_Anc);
-            $cm->flush();
-            return $this->redirectToRoute('annonces_show',array("annonce"=>$annonce));
-        }
 
 
-        return $this->render('FrontBundle:annonces:new_commentairesAnc.html.twig',array('coms'=>$coms,'form'=>$formView,'annonce'=>$annonces));
-    }
 
 
     // delete  des comm de l'Anc

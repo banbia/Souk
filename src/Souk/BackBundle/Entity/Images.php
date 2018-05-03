@@ -32,7 +32,7 @@ class Images
 
     /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Annonces", inversedBy="images")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=true,onDelete="CASCADE")
      */
     private $annonce;
     /**
