@@ -132,64 +132,48 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
         // line 46
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
             // line 47
-            echo "    ";
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
             echo "
-        ";
+        <a class=\"btn btn-primary\" href=\"";
             // line 48
-            echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
-            echo "
-        <input class=\"btn btn-primary\" type=\"submit\" value=\"Participer\" />
-    ";
-            // line 50
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
-            echo "
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_reserver", array("id" => $this->getAttribute((isset($context["evennement"]) ? $context["evennement"] : $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
+            echo "\" >Participer />
     ";
         }
-        // line 52
+        // line 50
         echo "
 
     <a class=\"btn btn-success\" href=\"";
-        // line 54
+        // line 52
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_index");
         echo "\"><i class=\"fa fa-arrow-left\" > Back to the liste </i> </a>
 
     ";
-        // line 56
+        // line 54
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
-            // line 57
+            // line 55
             echo "        ";
             if (($this->getAttribute($this->getAttribute((isset($context["evennement"]) ? $context["evennement"] : $this->getContext($context, "evennement")), "commercial", array()), "id", array()) == $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "id", array()))) {
-                // line 58
+                // line 56
                 echo "            <a href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_parts", array("id" => $this->getAttribute((isset($context["evennement"]) ? $context["evennement"] : $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
                 echo "\" class=\"btn btn-info\"><i class=\"fa fa-list\"></i> Consulter liste des partciapants </a>
+            <a class=\"btn btn-warning\"  href=\"";
+                // line 57
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_edit", array("id" => $this->getAttribute((isset($context["evennement"]) ? $context["evennement"] : $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
+                echo "\"> <i class=\"fa fa-edit\"> Edit </i></a>
+            <a class=\"btn btn-danger\"  href=\"";
+                // line 58
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_delete", array("id" => $this->getAttribute((isset($context["evennement"]) ? $context["evennement"] : $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
+                echo "\"> <i class=\"fa fa-close\"></i> Delete</a>
+
         ";
             }
-            // line 60
-            echo "        ";
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
-            echo "
-        ";
             // line 61
-            echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
             echo "
-    <a class=\"btn btn-warning\"  href=\"";
-            // line 62
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_edit", array("id" => $this->getAttribute((isset($context["evennement"]) ? $context["evennement"] : $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
-            echo "\"> <i class=\"fa fa-edit\"> Edit </i></a>
-    <a class=\"btn btn-danger\"  href=\"";
-            // line 63
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_delete", array("id" => $this->getAttribute((isset($context["evennement"]) ? $context["evennement"] : $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
-            echo "\"> <i class=\"fa fa-close\"></i> Delete</a>
 
     ";
-            // line 65
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
-            echo "
-    ";
         }
-        // line 67
+        // line 64
         echo "
 </div>
 
@@ -199,7 +183,7 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
             <div class=\"col-md-12\">
                 <div class=\"col-md-6\">
                     <a href=\"";
-        // line 75
+        // line 72
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("signalsEvsN_new", array("evennement" => $this->getAttribute((isset($context["evennement"]) ? $context["evennement"] : $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
         echo "\"><i class=\"fa fa-flag pull-right\"></i></a>
                     <br/>
@@ -208,40 +192,40 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
             <div class=\"col-md-6\">
                 <!-- test si l'utilisateur est connecté -->
                 ";
-        // line 81
+        // line 78
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formC"]) ? $context["formC"] : $this->getContext($context, "formC")), 'form_start');
         echo "
                 ";
-        // line 82
+        // line 79
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formC"]) ? $context["formC"] : $this->getContext($context, "formC")), "contenu", array()), 'errors');
         echo "
                 ";
-        // line 83
+        // line 80
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["formC"]) ? $context["formC"] : $this->getContext($context, "formC")), "contenu", array()), 'widget', array("attr" => array("class" => "comment form-control")));
         echo "
 
                 ";
-        // line 85
+        // line 82
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 86
+            // line 83
             echo "                    ";
             if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
-                // line 87
+                // line 84
                 echo "                        <button type=\"submit\" class=\"btn sign pull-right\"><i class=\"fa fa-commenting-o\"></i> Commenter </button>
 
                     ";
             }
-            // line 90
+            // line 87
             echo "                ";
         } else {
-            // line 91
+            // line 88
             echo "                    <button type=\"button\" class=\"btn sign pull-right\" data-toggle=\"modal\" data-target=\"#noComment\">
 
                         <i class=\"fa fa-commenting-o\"></i> Commenter
                     </button>
                 ";
         }
-        // line 96
+        // line 93
         echo "               ";
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["formC"]) ? $context["formC"] : $this->getContext($context, "formC")), 'form_end');
         echo "
@@ -251,11 +235,11 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
         </div>
         <div class=\"row\">
             ";
-        // line 102
+        // line 99
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["comsEvs"]) ? $context["comsEvs"] : $this->getContext($context, "comsEvs")));
         foreach ($context['_seq'] as $context["_key"] => $context["com"]) {
-            // line 103
+            // line 100
             echo "
 
                 <div class=\"col-md-12\">
@@ -274,35 +258,35 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
 
                                 <div class=\"panel-heading\">
                                     <strong>";
-            // line 120
+            // line 117
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["com"], "client", array()), "username", array()), "html", null, true);
             echo "</strong> <label class=\"text-muted text-right\"> commenté le ";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["com"], "dateCmt", array()), "D-M-Y"), "html", null, true);
             echo " </label>
                                     ";
-            // line 121
+            // line 118
             if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-                // line 122
+                // line 119
                 echo "                                        ";
                 if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "id", array()) == $this->getAttribute($this->getAttribute($context["com"], "client", array()), "id", array()))) {
-                    // line 123
+                    // line 120
                     echo "                                            <a href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commentairesEvs_delete", array("evennement" => $this->getAttribute($this->getAttribute($context["com"], "evennement", array()), "id", array()), "com" => $this->getAttribute($context["com"], "id", array()))), "html", null, true);
                     echo "\"><i class=\"fa fa-trash-o\"></i></a>
                                             <a href=\"";
-                    // line 124
+                    // line 121
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commentairesEvs_Edit", array("evennement" => $this->getAttribute($this->getAttribute($context["com"], "evennement", array()), "id", array()), "com" => $this->getAttribute($context["com"], "id", array()))), "html", null, true);
                     echo "\"><i class=\"fa fa-edit\"></i></a>
                                         ";
                 }
-                // line 126
+                // line 123
                 echo "                                    ";
             }
-            // line 127
+            // line 124
             echo "                                </div>
                                 <div class=\"panel-body\">
                                     ";
-            // line 129
+            // line 126
             echo twig_escape_filter($this->env, $this->getAttribute($context["com"], "contenu", array()), "html", null, true);
             echo "
                                 </div>
@@ -318,7 +302,7 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['com'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 139
+        // line 136
         echo "        </div>
 
     <!-- /row -->
@@ -358,7 +342,7 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
 
     }
 
-    // line 170
+    // line 167
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -367,9 +351,8 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 171
+        // line 168
         echo "    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -391,7 +374,7 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
 
     public function getDebugInfo()
     {
-        return array (  371 => 171,  362 => 170,  322 => 139,  306 => 129,  302 => 127,  299 => 126,  294 => 124,  289 => 123,  286 => 122,  284 => 121,  278 => 120,  259 => 103,  255 => 102,  245 => 96,  238 => 91,  235 => 90,  230 => 87,  227 => 86,  225 => 85,  220 => 83,  216 => 82,  212 => 81,  203 => 75,  193 => 67,  188 => 65,  183 => 63,  179 => 62,  175 => 61,  170 => 60,  164 => 58,  161 => 57,  159 => 56,  154 => 54,  150 => 52,  145 => 50,  140 => 48,  135 => 47,  133 => 46,  127 => 42,  122 => 36,  115 => 32,  106 => 28,  97 => 24,  90 => 20,  83 => 16,  73 => 8,  64 => 7,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  355 => 168,  346 => 167,  306 => 136,  290 => 126,  286 => 124,  283 => 123,  278 => 121,  273 => 120,  270 => 119,  268 => 118,  262 => 117,  243 => 100,  239 => 99,  229 => 93,  222 => 88,  219 => 87,  214 => 84,  211 => 83,  209 => 82,  204 => 80,  200 => 79,  196 => 78,  187 => 72,  177 => 64,  172 => 61,  166 => 58,  162 => 57,  157 => 56,  154 => 55,  152 => 54,  147 => 52,  143 => 50,  138 => 48,  135 => 47,  133 => 46,  127 => 42,  122 => 36,  115 => 32,  106 => 28,  97 => 24,  90 => 20,  83 => 16,  73 => 8,  64 => 7,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -450,10 +433,8 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
    </div>
 
     {% if is_granted('ROLE_CLIENT') %}
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input class=\"btn btn-primary\" type=\"submit\" value=\"Participer\" />
-    {{ form_end(form) }}
+
+        <a class=\"btn btn-primary\" href=\"{{ path('evennements_reserver',{'id':evennement.id}) }}\" >Participer />
     {% endif %}
 
 
@@ -462,13 +443,12 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
     {% if is_granted('ROLE_COM') %}
         {% if evennement.commercial.id == app.user.id %}
             <a href=\"{{ path('evennements_parts',{'id':evennement.id}) }}\" class=\"btn btn-info\"><i class=\"fa fa-list\"></i> Consulter liste des partciapants </a>
-        {% endif  %}
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-    <a class=\"btn btn-warning\"  href=\"{{ path('evennements_edit', { 'id': evennement.id }) }}\"> <i class=\"fa fa-edit\"> Edit </i></a>
-    <a class=\"btn btn-danger\"  href=\"{{ path('evennements_delete', { 'id': evennement.id }) }}\"> <i class=\"fa fa-close\"></i> Delete</a>
+            <a class=\"btn btn-warning\"  href=\"{{ path('evennements_edit', { 'id': evennement.id }) }}\"> <i class=\"fa fa-edit\"> Edit </i></a>
+            <a class=\"btn btn-danger\"  href=\"{{ path('evennements_delete', { 'id': evennement.id }) }}\"> <i class=\"fa fa-close\"></i> Delete</a>
 
-    {{ form_end(form) }}
+        {% endif  %}
+
+
     {% endif %}
 
 </div>
@@ -575,7 +555,6 @@ class __TwigTemplate_3dd10c0925c48e37f3a5ae6fcb8342c42ccb3b75dfabc0f35f143af853c
 {% endblock %}
 {% block js %}
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 {% endblock js %}
 
 ", "FrontBundle:evennements:show.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/evennements/show.html.twig");

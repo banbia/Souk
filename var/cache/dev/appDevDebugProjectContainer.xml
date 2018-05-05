@@ -807,8 +807,13 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>kEZTMWsCA4YDPkvq3pKTJr</argument>
       <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>Khrs6fy8MWuYkXNih8sUhr</argument>
+      <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> 1ebcabb43ad362e13c556baf9f5d2be9147b32ff
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -817,7 +822,11 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>kEZTMWsCA4YDPkvq3pKTJr</argument>
+=======
+      <argument>Khrs6fy8MWuYkXNih8sUhr</argument>
+>>>>>>> 1ebcabb43ad362e13c556baf9f5d2be9147b32ff
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -3262,12 +3271,20 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
+<<<<<<< HEAD
       <argument>5aeda0a3e9b5b9.10218533</argument>
+=======
+      <argument>5aeda2c2af7a22.62713922</argument>
+>>>>>>> 1ebcabb43ad362e13c556baf9f5d2be9147b32ff
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+<<<<<<< HEAD
       <argument>5aeda0a3e9b5b9.10218533</argument>
+=======
+      <argument>5aeda2c2af7a22.62713922</argument>
+>>>>>>> 1ebcabb43ad362e13c556baf9f5d2be9147b32ff
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -5933,32 +5950,52 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>4EhsdbcdN7</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>kEZTMWsCA4YDPkvq3pKTJr</argument>
       <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>Khrs6fy8MWuYkXNih8sUhr</argument>
+      <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> 1ebcabb43ad362e13c556baf9f5d2be9147b32ff
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>1CckkSYalJ</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>kEZTMWsCA4YDPkvq3pKTJr</argument>
       <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>Khrs6fy8MWuYkXNih8sUhr</argument>
+      <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> 1ebcabb43ad362e13c556baf9f5d2be9147b32ff
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>vQVtf+LW0G</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>kEZTMWsCA4YDPkvq3pKTJr</argument>
       <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>Khrs6fy8MWuYkXNih8sUhr</argument>
+      <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> 1ebcabb43ad362e13c556baf9f5d2be9147b32ff
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>YPwBA2f-Xn</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>kEZTMWsCA4YDPkvq3pKTJr</argument>
       <argument>C:\Users\salsa\OneDrive\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>Khrs6fy8MWuYkXNih8sUhr</argument>
+      <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> 1ebcabb43ad362e13c556baf9f5d2be9147b32ff
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
