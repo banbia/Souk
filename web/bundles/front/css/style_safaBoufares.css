@@ -24,8 +24,13 @@
 }
 .fa-trash-o:before {
   content: "\f014";
+<<<<<<< HEAD
+  padding-left: 273px;
+  padding-right: 10px;
+=======
   padding-left: 100px;
  padding-right: 10px;
+>>>>>>> ceaa21feb88ad4691f3b62f607ca612711bdcb83
 }
 .comment{width:100%;margin-bottom:5px;}
 .sign{margin-bottom:15px;}
