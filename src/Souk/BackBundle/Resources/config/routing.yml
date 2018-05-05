@@ -9,6 +9,7 @@ back_homepage:
 back_reclamations:
     resource: "@BackBundle/Resources/config/routing/AdminReclamation.yml"
     prefix:   /reclamations
+
 index:
     path:     /signals
     defaults: { _controller: BackBundle:Signals:index }

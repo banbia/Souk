@@ -40,8 +40,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="toggle"></div>
                 <ul class="w3nav">
                     <li><a href="{{ path('front_homepage') }}" class="active"> Accueil</a></li>
-                    <li><a href="{{ path('evennements_index') }}"> Annonces</a></li>
-                    <li><a href="{{ path('client_annonces_index') }}"> Evennements</a></li>
+                    <li><a href="{{ path('client_annonces_index') }}"> Annonces</a></li>
+                    <li><a href="{{ path('evennements_index') }}"> Evennements</a></li>
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         <li><a href="{{ path('fos_message_inbox') }}">Mes Messages</a></li>
                         {% if is_granted('ROLE_COM') %}
