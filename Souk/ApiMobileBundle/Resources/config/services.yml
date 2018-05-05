@@ -1,0 +1,4 @@
+services:
+#    api_mobile.example:
+#        class: ApiMobileBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

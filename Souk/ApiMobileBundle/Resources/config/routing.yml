@@ -1,0 +1,3 @@
+api_mobile_homepage:
+    path:     /
+    defaults: { _controller: ApiMobileBundle:Default:index }

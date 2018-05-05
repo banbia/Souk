@@ -12,10 +12,15 @@ front_commandes:
 front_abonnemnts:
     resource: "@FrontBundle/Resources/config/routing/ComAbonnements.yml"
     prefix:   /abonnements
-<<<<<<< HEAD
 
-=======
->>>>>>> 9e17d445cd6cc8e144fc827de2ff6f35022452c9
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
+
+commercial_annonces:
+    resource: "@FrontBundle/Resources/config/routing/annoncesCommercial.yml"
+    prefix:   /
+
+client_annonces:
+    resource: "@FrontBundle/Resources/config/routing/annonces.yml"
+    prefix:   /annonces

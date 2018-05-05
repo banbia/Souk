@@ -6,11 +6,16 @@ use Doctrine\ORM\Mapping as ORM;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints\Image;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 /**
  * Images
  *
  * @ORM\Table(name="images")
  * @ORM\Entity(repositoryClass="Souk\BackBundle\Repository\ImagesRepository")
+ * @Vich\Uploadable
  */
 class Images
 {
@@ -23,12 +28,26 @@ class Images
      */
     private $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="src", type="string", length=255)
-     */
-    private $src;
+  /**
+   * NOTE: This is not a mapped field of entity metadata, just a simple property.
+   *
+   * @Vich\UploadableField(mapping="product_image", fileNameProperty="imageName")
+   *
+   * @var File
+   */
+  private $imageFile;
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="image_name", type="string", length=255, nullable=true)
+   */
+  private $imageName;
+  /**
+   * @var \DateTime
+   *
+   * @ORM\Column(name="update_at", type="datetime",nullable=true)
+   */
+  private $updateAt;
 
     /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Annonces", inversedBy="images")
@@ -61,28 +80,63 @@ class Images
         $this->annonce = $annonce;
     }
 
-    /**
-     * Set src
-     *
-     * @param string $src
-     *
-     * @return Images
-     */
-    public function setSrc($src)
-    {
-        $this->src = $src;
-
-        return $this;
+  public function setImageFile(File $image = null)
+  {
+    $this->imageFile = $image;
+    if ($image) {
+      $this->updatedAt = new \DateTime('now');
     }
+    return $this;
+  }
+  /**
+   * @return File|null
+   */
+  public function getImageFile()
+  {
+    return $this->imageFile;
+  }
+  /**
+   * Set imageName
+   *
+   * @param string $imageName
+   *
+   * @return Image
+   */
+  public function setImageName($imageName)
+  {
+    $this->imageName = $imageName;
+    return $this;
+  }
+  /**
+   * Get imageName
+   *
+   * @return string
+   */
+  public function getImageName()
+  {
+    return $this->imageName;
+  }
+  /**
+   * Set updateAt
+   *
+   * @param \DateTime $updateAt
+   *
+   * @return Image
+   */
+  public function setUpdateAt($updateAt)
+  {
+    $this->updateAt = $updateAt;
+    return $this;
+  }
+  /**
+   * Get updateAt
+   *
+   * @return \DateTime
+   */
+  public function getUpdateAt()
+  {
+    return $this->updateAt;
+  }
 
-    /**
-     * Get src
-     *
-     * @return string
-     */
-    public function getSrc()
-    {
-        return $this->src;
-    }
 }
 

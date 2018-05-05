@@ -1,7 +1,8 @@
+
+
 back:
     resource: "@BackBundle/Resources/config/routing.yml"
     prefix:   /admin
-
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /user
@@ -38,14 +39,6 @@ client_commentairesAnc:
 client_commentairesEvs:
     resource: "@FrontBundle/Resources/config/routing/commentairesEvs.yml"
     prefix:   /commentairesEvs
-    
-commercial_annonces:
-    resource: "@FrontBundle/Resources/config/routing/annonces.yml"
-    prefix:   /commercial/annonces
-
-client_annonces:
-    resource: "@FrontBundle/Resources/config/routing/annonces.yml"
-    prefix:   /annonces
 categorie_annonces:
     resource: "@BackBundle/Resources/config/routing/categories.yml"
     prefix:   /admin/categories
@@ -67,3 +60,6 @@ client_signals_Anc:
 fos_message:
     resource: "@FOSMessageBundle/Resources/config/routing.xml"
     prefix: /messages
+api_application:
+     resource: "@ApiBundle/Resources/config/routing.yml"
+     prefix: /api
