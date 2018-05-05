@@ -874,6 +874,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::showAction',));
             }
 
+            // evennements_reserver
+            if (preg_match('#^/evennements/(?P<id>[^/]++)/reserver$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_reserver')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::reserverAction',));
+            }
+
             // evennements_new
             if ('/evennements/new' === $pathinfo) {
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {

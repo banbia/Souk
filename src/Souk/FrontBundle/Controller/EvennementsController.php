@@ -97,23 +97,8 @@ class EvennementsController extends Controller
         $formC = $this->createForm(CommentairesEvsType::class,$com_Evs);
 
         $formViewC=$formC->createView();
-        $reservation = new Reservation();
-        $form = $this->createForm('Souk\BackBundle\Form\ReservationType', $reservation);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $client = $this->getUser();
 
-            $reservation->setClient($client);
-            $now = new \DateTime('NOW');
-            $reservation->setDateRes($now);
-            $reservation->setEvennement($evennement);
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($reservation);
-            $em->flush();
-
-            return $this->redirectToRoute('reservation_show', array('id' => $reservation->getId()));
-        }
         $formC->handleRequest($request);
          if ($formC->isSubmitted()&& $formC->isValid()) {
              ///récupérer user
@@ -129,16 +114,29 @@ class EvennementsController extends Controller
         return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
             'comsEvs'=>$comsEvs,
-            'reservation' => $reservation,
             'com_Evs'=>$comsEvs,
-            'form' => $form,
             'formC'=>$formViewC));
 
 
 
 
     }
+    public function reserver(Evennements $evennement){
+        $cm = $this->getDoctrine()->getManager();
+        $reservation = new Reservation();
+        $client = $this->getUser();
 
+        $reservation->setClient($client);
+        $now = new \DateTime('NOW');
+        $reservation->setDateRes($now);
+        $reservation->setEvennement($evennement);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($reservation);
+        $em->flush();
+
+        return $this->redirectToRoute('reservation_show', array('id' => $reservation->getId()));
+
+    }
     /**
      * Displays a form to edit an existing evennement entity.
      *
