@@ -85,36 +85,51 @@ class __TwigTemplate_6369439b3a6e078addaef93ffba0fa67cc9235309b0e34bd122d59656a3
             // line 22
             if (($this->getAttribute($context["reclamation"], "etat", array()) == 0)) {
                 echo " encours
+                    <td>
+                    <a class=\"btn btn-success\" href=\"";
+                // line 24
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_accepter", array("id" => $this->getAttribute($context["reclamation"], "id", array()))), "html", null, true);
+                echo "\"> <i class=\"fa fa-check \" ></i></a>
+                    <a class=\"btn btn-danger\" href=\"";
+                // line 25
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_refuser", array("id" => $this->getAttribute($context["reclamation"], "id", array()))), "html", null, true);
+                echo "\"> <i class=\"fa fa-times\" ></i></a>
+
+                    </td>
                     ";
-            } elseif (($this->getAttribute(            // line 23
+            } elseif (($this->getAttribute(            // line 28
 $context["reclamation"], "etat", array()) == 1)) {
                 echo " acceptée
+                        <td>
+                            <a class=\"btn btn-danger\" href=\"";
+                // line 30
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_refuser", array("id" => $this->getAttribute($context["reclamation"], "id", array()))), "html", null, true);
+                echo "\"> <i class=\"fa fa-times\" ></i></a>
+
+                        </td>
                     ";
-            } elseif (($this->getAttribute(            // line 24
+            } elseif (($this->getAttribute(            // line 33
 $context["reclamation"], "etat", array()) ==  -1)) {
                 echo "  rejetée
+                    <td>
+                        <a class=\"btn btn-success\" href=\"";
+                // line 35
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_accepter", array("id" => $this->getAttribute($context["reclamation"], "id", array()))), "html", null, true);
+                echo "\"> <i class=\"fa fa-check \" ></i></a>
+
+                    </td>
                     ";
             }
-            // line 26
+            // line 39
             echo "                </td>
-                <td>
-                    <a class=\"btn btn-success\" href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_accepter", array("id" => $this->getAttribute($context["reclamation"], "id", array()))), "html", null, true);
-            echo "\"> <i class=\"fa fa-check \" ></i></a>
-                    <a class=\"btn btn-danger\" href=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_refuser", array("id" => $this->getAttribute($context["reclamation"], "id", array()))), "html", null, true);
-            echo "\"> <i class=\"fa fa-times\" ></i></a>
 
-                </td>
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['reclamation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 43
         echo "        </tbody>
     </table>
 ";
@@ -138,7 +153,7 @@ $context["reclamation"], "etat", array()) ==  -1)) {
 
     public function getDebugInfo()
     {
-        return array (  118 => 34,  107 => 29,  103 => 28,  99 => 26,  94 => 24,  90 => 23,  86 => 22,  79 => 20,  75 => 19,  71 => 18,  67 => 16,  63 => 15,  49 => 3,  40 => 2,  11 => 1,);
+        return array (  133 => 43,  124 => 39,  117 => 35,  112 => 33,  106 => 30,  101 => 28,  95 => 25,  91 => 24,  86 => 22,  79 => 20,  75 => 19,  71 => 18,  67 => 16,  63 => 15,  49 => 3,  40 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -173,15 +188,24 @@ $context["reclamation"], "etat", array()) ==  -1)) {
                 <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
                 <td>
                     {% if reclamation.etat == 0 %} encours
-                    {% elseif reclamation.etat == 1 %} acceptée
-                    {% elseif reclamation.etat == (-1) %}  rejetée
-                    {% endif %}
-                </td>
-                <td>
+                    <td>
                     <a class=\"btn btn-success\" href=\"{{ path('admin_reclamations_accepter', { 'id': reclamation.id } ) }}\"> <i class=\"fa fa-check \" ></i></a>
                     <a class=\"btn btn-danger\" href=\"{{ path('admin_reclamations_refuser', { 'id': reclamation.id } ) }}\"> <i class=\"fa fa-times\" ></i></a>
 
+                    </td>
+                    {% elseif reclamation.etat == 1 %} acceptée
+                        <td>
+                            <a class=\"btn btn-danger\" href=\"{{ path('admin_reclamations_refuser', { 'id': reclamation.id } ) }}\"> <i class=\"fa fa-times\" ></i></a>
+
+                        </td>
+                    {% elseif reclamation.etat == (-1) %}  rejetée
+                    <td>
+                        <a class=\"btn btn-success\" href=\"{{ path('admin_reclamations_accepter', { 'id': reclamation.id } ) }}\"> <i class=\"fa fa-check \" ></i></a>
+
+                    </td>
+                    {% endif %}
                 </td>
+
             </tr>
         {% endfor %}
         </tbody>

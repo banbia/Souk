@@ -400,8 +400,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             if (0 === strpos($pathinfo, '/reclamations')) {
                 // reclamations_index
                 if ('/reclamations' === $trimmedPathinfo) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
                         goto not_reclamations_index;
                     }
 
@@ -456,6 +456,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'reclamations_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReclamationsController::deleteAction',));
                 }
                 not_reclamations_delete:
+
+                // index_reclamations
+                if ('/reclamations/index' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReclamationsController::indexMobileAction',  '_route' => 'index_reclamations',);
+                }
+
+                // new_reclamations
+                if (preg_match('#^/reclamations/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'new_reclamations')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReclamationsController::newMobileAction',));
+                }
 
             }
 

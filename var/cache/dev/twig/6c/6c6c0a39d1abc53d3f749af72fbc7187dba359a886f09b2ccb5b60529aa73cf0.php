@@ -1,6 +1,6 @@
 <?php
 
-/* @Front/reclamations/new.html.twig */
+/* FrontBundle:reclamations:new.html.twig */
 class __TwigTemplate_e004aae646d6011124cbc7931185ff3f22b2365a274128c44db64463d8499138 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_e004aae646d6011124cbc7931185ff3f22b2365a274128c44db64463d84
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("FrontBundle::layout.html.twig", "@Front/reclamations/new.html.twig", 1);
+        $this->parent = $this->loadTemplate("FrontBundle::layout.html.twig", "FrontBundle:reclamations:new.html.twig", 1);
         $this->blocks = array(
             'style' => array($this, 'block_style'),
             'body' => array($this, 'block_body'),
@@ -23,10 +23,10 @@ class __TwigTemplate_e004aae646d6011124cbc7931185ff3f22b2365a274128c44db64463d84
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Front/reclamations/new.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:reclamations:new.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Front/reclamations/new.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:reclamations:new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -126,7 +126,7 @@ class __TwigTemplate_e004aae646d6011124cbc7931185ff3f22b2365a274128c44db64463d84
 
     public function getTemplateName()
     {
-        return "@Front/reclamations/new.html.twig";
+        return "FrontBundle:reclamations:new.html.twig";
     }
 
     public function isTraitable()
@@ -178,6 +178,6 @@ class __TwigTemplate_e004aae646d6011124cbc7931185ff3f22b2365a274128c44db64463d84
 </div>
     {{ form_end(form) }}
 {% endblock %}
-", "@Front/reclamations/new.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle\\Resources\\views\\reclamations\\new.html.twig");
+", "FrontBundle:reclamations:new.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle\\Resources\\views\\reclamations\\new.html.twig");
     }
 }

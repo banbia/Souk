@@ -37,7 +37,7 @@ class __TwigTemplate_dc17180d5b53b19253207cbac1147549ac3f3919d96b0ab9f93f1145d17
 
     }
 
-    // line 2
+    // line 3
     public function block_style($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -46,10 +46,14 @@ class __TwigTemplate_dc17180d5b53b19253207cbac1147549ac3f3919d96b0ab9f93f1145d17
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
 
-        // line 3
-        echo "<link href=\"";
+        // line 4
+        echo "    <link href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/css/soumaya_style.css"), "html", null, true);
         echo "\" rel='stylesheet' type='text/css' />
+    <link href=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/css/style_Nour.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\"/>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -59,7 +63,7 @@ class __TwigTemplate_dc17180d5b53b19253207cbac1147549ac3f3919d96b0ab9f93f1145d17
 
     }
 
-    // line 5
+    // line 9
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -68,12 +72,12 @@ class __TwigTemplate_dc17180d5b53b19253207cbac1147549ac3f3919d96b0ab9f93f1145d17
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 10
         echo "<div class=\"row form-controlS\">
     <h1  style=\"text-align:center\" > Liste de reclamations</h1>
     <br>
     <a   href=\"";
-        // line 9
+        // line 13
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reclamations_new");
         echo "\"  class=\"btn btn-success pull-right\"> <i class=\"fa fa-plus\" > </i> Ajouter une reclamation </a>
     <br>
@@ -91,47 +95,47 @@ class __TwigTemplate_dc17180d5b53b19253207cbac1147549ac3f3919d96b0ab9f93f1145d17
         </thead>
         <tbody>
         ";
-        // line 24
+        // line 28
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["reclamations"]) ? $context["reclamations"] : $this->getContext($context, "reclamations")));
         foreach ($context['_seq'] as $context["_key"] => $context["reclamation"]) {
-            // line 25
+            // line 29
             echo "            <tr>
 
                 <td>";
-            // line 27
+            // line 31
             echo twig_escape_filter($this->env, $this->getAttribute($context["reclamation"], "contenu", array()), "html", null, true);
             echo "</td>
                 <td> ";
-            // line 28
+            // line 32
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["reclamation"], "commercial", array()), "nom", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 29
+            // line 33
             if ($this->getAttribute($context["reclamation"], "dateRec", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["reclamation"], "dateRec", array()), "Y-m-d"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 30
+            // line 34
             if (($this->getAttribute($context["reclamation"], "etat", array()) == 0)) {
                 echo " Encours
                     ";
-            } elseif (($this->getAttribute(            // line 31
+            } elseif (($this->getAttribute(            // line 35
 $context["reclamation"], "etat", array()) == 1)) {
                 echo " Accepter
                     ";
-            } elseif (($this->getAttribute(            // line 32
+            } elseif (($this->getAttribute(            // line 36
 $context["reclamation"], "etat", array()) ==  -1)) {
                 echo "  Rejeter
                     ";
             }
-            // line 34
+            // line 38
             echo "                </td>
                 <td>
 
                     <a  href=\"";
-            // line 37
+            // line 41
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reclamations_edit", array("id" => $this->getAttribute($context["reclamation"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-warning outline\" >
                         <i class=\"fa fa-edit\"></i> Modifier </a>
@@ -143,7 +147,7 @@ $context["reclamation"], "etat", array()) ==  -1)) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['reclamation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 47
         echo "        </tbody>
     </table>
 </div>
@@ -168,7 +172,7 @@ $context["reclamation"], "etat", array()) ==  -1)) {
 
     public function getDebugInfo()
     {
-        return array (  147 => 43,  135 => 37,  130 => 34,  125 => 32,  121 => 31,  117 => 30,  111 => 29,  107 => 28,  103 => 27,  99 => 25,  95 => 24,  77 => 9,  72 => 6,  63 => 5,  50 => 3,  41 => 2,  11 => 1,);
+        return array (  151 => 47,  139 => 41,  134 => 38,  129 => 36,  125 => 35,  121 => 34,  115 => 33,  111 => 32,  107 => 31,  103 => 29,  99 => 28,  81 => 13,  76 => 10,  67 => 9,  55 => 5,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -182,9 +186,13 @@ $context["reclamation"], "etat", array()) ==  -1)) {
     public function getSourceContext()
     {
         return new Twig_Source("{% extends 'FrontBundle::layout.html.twig' %}
+
 {% block style %}
-<link href=\"{{ asset('bundles/front/css/soumaya_style.css') }}\" rel='stylesheet' type='text/css' />
+    <link href=\"{{ asset('bundles/front/css/soumaya_style.css') }}\" rel='stylesheet' type='text/css' />
+    <link href=\"{{ asset('bundles/front/css/style_Nour.css') }}\" rel=\"stylesheet\"/>
 {% endblock style %}
+
+
 {% block body %}
 <div class=\"row form-controlS\">
     <h1  style=\"text-align:center\" > Liste de reclamations</h1>

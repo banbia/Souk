@@ -1,11 +1,23 @@
-<h1>Commande</h1>
+{% block style %}
+    <link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
+{% endblock style %}
 
-<table>
-    <tbody>
+<div class="row form-controlS">
+
+    <div class="col-md-12" style="text-align:center "  >
+
+        <h1>Commande</h1>
+        <p>looooooooooooooool</p>
+    </div>
+
+    <div class="logo">
+        <a href="#"><img width="200" height="90" src="{{ asset('bundles/front/images/logo.png') }}"/></a></a>
+    </div>
+
+    <div class="col-md-12" >
+<table class="table table-striped">
+    <tbody class="thead-light">
     <tr>
-        <th>Id</th>
-        <td>{{ commande.id }}</td>
-    </tr>
     <tr>
         <th>Datecom</th>
         <td>{% if commande.dateCom %}{{ commande.dateCom|date('Y-m-d') }}{% endif %}</td>
@@ -15,8 +27,18 @@
         <td>{{ commande.quantite }}</td>
     </tr>
     <tr>
+        <th>Titre Annonce</th>
+        <td>{{ commande.annonce.titre }}</td>
+    </tr>
+    <tr>
+        <th>Categorie Annonce</th>
+        <td>{{ commande.annonce.categorie.designation }}</td>
+    </tr>
+    <tr>
         <th>Etat</th>
-        <td>{{ commande.etat }}</td>
+        <td>{% if commande.etat == 0 %} En attente {%  else %} Confirmée{% endif %}</td>
     </tr>
     </tbody>
 </table>
+</div>
+</div>

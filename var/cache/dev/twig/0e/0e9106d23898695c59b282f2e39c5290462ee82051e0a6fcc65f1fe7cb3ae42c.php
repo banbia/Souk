@@ -1,6 +1,6 @@
 <?php
 
-/* @Front/commandes/index.html.twig */
+/* FrontBundle:commandes:index.html.twig */
 class __TwigTemplate_9b186dc8a69fa7cbcbacc34efb57982f9ee6d095d5a39cdb6012557c827c6b6e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_9b186dc8a69fa7cbcbacc34efb57982f9ee6d095d5a39cdb6012557c827
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("FrontBundle::layout.html.twig", "@Front/commandes/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("FrontBundle::layout.html.twig", "FrontBundle:commandes:index.html.twig", 1);
         $this->blocks = array(
             'style' => array($this, 'block_style'),
             'body' => array($this, 'block_body'),
@@ -24,10 +24,10 @@ class __TwigTemplate_9b186dc8a69fa7cbcbacc34efb57982f9ee6d095d5a39cdb6012557c827
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Front/commandes/index.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:commandes:index.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Front/commandes/index.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:commandes:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -467,7 +467,7 @@ class __TwigTemplate_9b186dc8a69fa7cbcbacc34efb57982f9ee6d095d5a39cdb6012557c827
 
     public function getTemplateName()
     {
-        return "@Front/commandes/index.html.twig";
+        return "FrontBundle:commandes:index.html.twig";
     }
 
     public function isTraitable()
@@ -735,6 +735,6 @@ class __TwigTemplate_9b186dc8a69fa7cbcbacc34efb57982f9ee6d095d5a39cdb6012557c827
     }
 
 </script>
-{% endblock js %}", "@Front/commandes/index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle\\Resources\\views\\commandes\\index.html.twig");
+{% endblock js %}", "FrontBundle:commandes:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle\\Resources\\views\\commandes\\index.html.twig");
     }
 }

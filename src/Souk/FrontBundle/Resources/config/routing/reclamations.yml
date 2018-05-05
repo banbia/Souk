@@ -1,7 +1,7 @@
 reclamations_index:
     path:     /
     defaults: { _controller: "FrontBundle:Reclamations:index" }
-    methods:  GET
+    methods:  [GET, POST]
 
 reclamations_show:
     path:     /{id}/show
@@ -22,3 +22,14 @@ reclamations_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontBundle:Reclamations:delete" }
     methods:  DELETE
+
+
+#web service
+
+index_reclamations:
+    path:     /index
+    defaults: { _controller: "FrontBundle:Reclamations:indexMobile" }
+
+new_reclamations:
+    path:     /{annonce}/{date}/{quantite}/{client}
+    defaults: { _controller: "FrontBundle:Reclamations:newMobile" }

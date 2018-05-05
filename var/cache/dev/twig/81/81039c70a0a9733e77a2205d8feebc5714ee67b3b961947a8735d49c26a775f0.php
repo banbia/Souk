@@ -1,6 +1,6 @@
 <?php
 
-/* @StarRating/rating.html.twig */
+/* StarRatingBundle::rating.html.twig */
 class __TwigTemplate_5742c3e683c03abdc509f2d9456f54cfd9f8bb8c2f039968a38f9d73a44c6e11 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -18,10 +18,10 @@ class __TwigTemplate_5742c3e683c03abdc509f2d9456f54cfd9f8bb8c2f039968a38f9d73a44
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@StarRating/rating.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "StarRatingBundle::rating.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@StarRating/rating.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "StarRatingBundle::rating.html.twig"));
 
         // line 2
         $this->displayBlock('rating_widget', $context, $blocks);
@@ -144,7 +144,7 @@ $context["attrvalue"] === false)) {
 
     public function getTemplateName()
     {
-        return "@StarRating/rating.html.twig";
+        return "StarRatingBundle::rating.html.twig";
     }
 
     public function getDebugInfo()
@@ -191,6 +191,6 @@ $context["attrvalue"] === false)) {
         {%- endif -%}
     {%- endfor -%}
 {% endspaceless %}
-{% endblock rating_widget_container_attributes %}", "@StarRating/rating.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\blackknight467\\star-rating-bundle\\blackknight467\\StarRatingBundle\\Resources\\views\\rating.html.twig");
+{% endblock rating_widget_container_attributes %}", "StarRatingBundle::rating.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\blackknight467\\star-rating-bundle\\blackknight467\\StarRatingBundle\\Resources\\views\\rating.html.twig");
     }
 }
