@@ -3,8 +3,6 @@
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
     <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
     <link href="{{ asset('bundles/front/css/flexslider.css') }}" rel="stylesheet"/>
@@ -174,7 +172,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>Vus avez déjà une commande en attente pour cette annonce.</p>
+                    <p>Vous avez déjà une commande en attente pour cette annonce.</p>
 
 
                 </div>
@@ -290,18 +288,8 @@
 {% block js %}
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $( function() {
-            $( "#souk_backbundle_commandes_dateCom" ).datepicker({
-                altField: "#souk_backbundle_commandes_dateCom",
-                altFormat: "yy-mm-dd"
-            });
-        } );
-    </script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
     <script src="{{ asset('bundles/front/js/rating.js') }}"></script>
     <script src="{{ asset('bundles/front/js/demo.css') }}"></script>
     <script src="{{ asset('bundles/front/js/shCore.css') }}"></script>
@@ -326,6 +314,15 @@
 
 
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+        <script>
+        $( function() {
+            $( "#souk_backbundle_commandes_dateCom" ).datepicker({
+                altField: "#souk_backbundle_commandes_dateCom",
+                altFormat: "yy-mm-dd"
+            });
+        } );
+    </script>
 {% endblock js %}

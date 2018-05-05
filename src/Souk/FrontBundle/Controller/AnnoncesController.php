@@ -68,11 +68,7 @@ class AnnoncesController extends Controller
 
             }
             $em->flush();
-            return $this->render('FrontBundle:commandes:index.html.twig', array(
-                'commandes' => $commandes,
-                'commandes_attente' => $commandes_attente,
-                'commandes_confirme' => $commandes_confirme,
-            ));
+            return $this->redirectToRoute('commandes_index');
             //return $this->redirectToRoute('commandes_show', array('id' => $commande->getId()));
         }
         /* Nour's Work End*/

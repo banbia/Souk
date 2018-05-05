@@ -709,6 +709,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_commandes_edit:
 
+            // commandes_modif
+            if ('/commandes/modif' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_commandes_modif;
+                }
+
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::modifierAction',  '_route' => 'commandes_modif',);
+            }
+            not_commandes_modif:
+
             // commandes_valid
             if (preg_match('#^/commandes/(?P<id>[^/]++)/valid$#s', $pathinfo, $matches)) {
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {

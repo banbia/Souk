@@ -17,6 +17,11 @@ commandes_edit:
     path:     /{id}/edit
     defaults: { _controller: "FrontBundle:Commandes:edit" }
     methods:  [GET, POST]
+
+commandes_modif:
+    path:     /modif
+    defaults: { _controller: "FrontBundle:Commandes:modifier" }
+    methods:  [GET, POST]
 commandes_valid:
     path:     /{id}/valid
     defaults: { _controller: "FrontBundle:Commandes:valid" }

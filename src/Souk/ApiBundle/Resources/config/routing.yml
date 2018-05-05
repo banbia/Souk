@@ -4,3 +4,11 @@ api_homepage:
 get_User:
     path:     /user/{login}/{password}
     defaults: { _controller: ApiBundle:UserApi:getUser}
+#web service Nour Banbia
+liste_commandes:
+    path:     /liste/{id}
+    defaults: { _controller: "FrontBundle:Commandes:liste" }
+
+create_commande:
+    path:     /{annonce}/{date}/{quantite}/{client}
+    defaults: { _controller: "FrontBundle:Commandes:create" }

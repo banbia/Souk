@@ -1,8 +1,0 @@
-#web service nour
-liste_commandes:
-    path:     /liste/{id}
-    defaults: { _controller: "FrontBundle:Commandes:liste" }
-
-create_commande:
-    path:     /{annonce}/{date}/{quantite}/{client}
-    defaults: { _controller: "FrontBundle:Commandes:create" }
