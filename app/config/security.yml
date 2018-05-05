@@ -29,6 +29,8 @@ security:
             pattern: ^/
             form_login:
                 provider: fos_userbundle
+                login_path: login
+                success_handler: redirect.after.login
                 #csrf_token_generator: security.csrf.token_manager # Use form.csrf_provider instead for Symfony <2.4
             logout:       true
             anonymous:    true

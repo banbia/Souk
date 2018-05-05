@@ -1,6 +1,9 @@
 front_homepage:
     path:     /
     defaults: { _controller: FrontBundle:Default:index }
+front_reservation:
+    resource: "@FrontBundle/Resources/config/routing/reservation.yml"
+    prefix:   /reservations
 
 front_reclamations:
     resource: "@FrontBundle/Resources/config/routing/reclamations.yml"
@@ -17,6 +20,7 @@ front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
 
+<<<<<<< HEAD
 commercial_annonces:
     resource: "@FrontBundle/Resources/config/routing/annoncesCommercial.yml"
     prefix:   /
@@ -24,3 +28,5 @@ commercial_annonces:
 client_annonces:
     resource: "@FrontBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
+=======
+>>>>>>> origin/master

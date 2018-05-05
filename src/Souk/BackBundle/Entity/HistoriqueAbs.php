@@ -29,7 +29,12 @@ class HistoriqueAbs
      * @ORM\Column(name="date_ab", type="date")
      */
     private $dateAb;
-
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="etat", type="integer")
+     */
+    private $etat;
     /**
      *
      * @ORM\ManyToOne(targetEntity="Souk\UserBundle\Entity\User",inversedBy="id")
@@ -42,6 +47,22 @@ class HistoriqueAbs
      * @ORM\JoinColumn(name="abonnement",referencedColumnName="id",onDelete="CASCADE")
      */
     private $abonnement;
+
+    /**
+     * @return int
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param int $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
 
     /**
      * @return mixed

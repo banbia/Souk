@@ -39,21 +39,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="menu">
                 <div class="toggle"></div>
                 <ul class="w3nav">
-                    <li><a href="index.html" class="active"> Home</a></li>
-                    <li><a href="about.html"> About</a></li>
-                    <li><a href="blog.html"> Blog</a></li>
-                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Short Codes <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="icons.html">Web Icons</a></li>
-                            <li><a href="codes.html">Short Codes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html"> Contact Us</a></li>
+                    <li><a href="{{ path('front_homepage') }}" class="active"> Accueil</a></li>
+                    <li><a href="{{ path('evennements_index') }}"> Annonces</a></li>
+                    <li><a href="{{ path('client_annonces_index') }}"> Evennements</a></li>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <li><a href="{{ path('fos_message_inbox') }}">Mes Messages</a></li>
+                        {% if is_granted('ROLE_COM') %}
+
+                            <li><a href="">Mes Abonnements</a></li>
+                        {% endif %}
+                    {% endif %}
+                    <li><a href="{{ path('reclamations_index') }}"> Réclamations</a></li>
                 </ul>
                 <div class="clearfix"> </div>
             </div>
             <div class="header_right">
-
+                <div class="clearfix"> </div>
 
                 <div class="member">
                     <div class="dropdown">
