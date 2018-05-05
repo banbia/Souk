@@ -3,6 +3,7 @@
 namespace Souk\FrontBundle\Controller;
 
 
+use JMS\Serializer\SerializerBuilder;
 use Souk\BackBundle\Entity\CommentairesEvs;
 use Souk\BackBundle\Entity\Evennements;
 use Souk\BackBundle\Form\CommentairesEvsType;
@@ -64,6 +65,7 @@ class EvennementsController extends Controller
     public function showAction(Request $request, Evennements $evennement )
     {
         /* safa Boufare Begin*/
+        // Ajout des commentaires et les listees pour un Evs
         //cnx bd
         $cm = $this->getDoctrine()->getManager();
         //extraire la liste des commentaires d'un Evs
@@ -91,7 +93,7 @@ class EvennementsController extends Controller
         /* safa Boufare End*/
         return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
-            '$com_Evs'=>$comsEvs,
+            'comsEvs'=>$comsEvs,
             'formC'=>$formViewC,
 
         ));
@@ -157,44 +159,7 @@ class EvennementsController extends Controller
 
     // Safa Boufares  commentaire Evs
 
-    // Ajout des commentaires et les listees pour un Evs
-    /*
-    public function newEvsAction(Request $request,$evennement)
-    {
 
-        //cnx bd
-        $cm = $this->getDoctrine()->getManager();
-        //extraire la liste des commentaires d'un Evs
-        $coms_Evs = $cm->getRepository('BackBundle:CommentairesEvs')->findBy(array("evennement"=>$evennement));
-        //ajout d'un noveau commentaire Evs
-        $com_Evs =new CommentairesEvs();
-        ///récupérer Evs
-        $evennements = $cm->getRepository('BackBundle:Evennements')->find($evennement);
-        ///récupérer user
-        $user = $this->getUser();
-        $form = $this->createForm(CommentairesEvsType::class,$com_Evs);
-
-        $formView=$form->createView();
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted()&& $form->isValid()) {
-
-            $com_Evs->setDateCmt(new \DateTime('now'));
-            $com_Evs->setClient($user);
-            $com_Evs->setEvennement($evennements);
-
-
-            $cm->persist($com_Evs);
-            $cm->flush();
-            return $this->redirectToRoute('evennements_show',array("id"=>$evennement));
-        }
-
-
-        return $this->render('FrontBundle:evennements:new_commentairesEvs.html.twig',array('coms_Evs'=>$coms_Evs,'formCommentaire'=>$formView, 'evennement' => $evennement));
-
-    }
-    */
     // delete des comm de l'Evs
 
     /**
