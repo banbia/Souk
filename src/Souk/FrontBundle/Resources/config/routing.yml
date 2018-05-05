@@ -5,10 +5,6 @@ front_reservation:
     resource: "@FrontBundle/Resources/config/routing/reservation.yml"
     prefix:   /reservations
 
-api_souk:
-    resource: "@FrontBundle/Resources/config/routing/api.yml"
-    prefix:   /mobile
-
 front_reclamations:
     resource: "@FrontBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations
@@ -23,6 +19,7 @@ front_abonnemnts:
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
+
 
 commercial_annonces:
     resource: "@FrontBundle/Resources/config/routing/annoncesCommercial.yml"

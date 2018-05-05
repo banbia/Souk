@@ -6,10 +6,12 @@ use JMS\Serializer\SerializerBuilder;
 use Souk\BackBundle\Entity\Commandes;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
+<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+=======
+>>>>>>> 59062ae337db9e3978c834462c51e99dd90cc5c3
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Serializer\Serializer;
 
 /**
  * Commande controller.
@@ -217,23 +219,30 @@ class CommandesController extends Controller
     /******* crud mobile (web service) ***********************/
     public function listeAction(Request $request, $id){
         $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('UserBundle:User')->find($id);
+        $user = $em->getRepository('BackBundle:Commandes')->find($id);
+        var_dump($user->get('security.role_hierarchy.roles'));
+        if ($user->isGranted('ROLE_CLIENT')) {
 
-        if($user->hasRole('ROLE_COM')){
-            $commandes=$em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($id);
-
-        }else{
             $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
 
+        }else if ($user->roles->contains('ROLE_COM')) {
+
+            $commandes=$em
+                ->createQueryBuilder('c')
+                ->from('BackBundle:Commandes','c')
+                ->join('BackBundle:Annonces','a')
+                ->select(array('c', 'a'))
+                ->where('c.annonce=a.id and a.commercial= :user')
+                ->setParameter('user',$user)
+                ->getQuery()
+                ->getResult();
+
         }
-        $em->flush();
 
         $serializer = SerializerBuilder::create()->build();
         $formatted = $serializer->serialize($commandes, 'json');
 
         return new JsonResponse($formatted);
-
-
     }
 
 

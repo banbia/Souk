@@ -14,7 +14,21 @@ use Doctrine\Common\Collections\Collection;
  */
 class Evennements
 {
+    /**
+     * @return int
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
 
+    /**
+     * @param int $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
     /**
      * @var int
      *
@@ -92,21 +106,7 @@ class Evennements
      * @ORM\OneToMany(targetEntity="Souk\BackBundle\Entity\SignalsEvs", mappedBy="evennement")
      */
     private $signals;
-    /**
-     * @return int
-     */
-    public function getEtat()
-    {
-        return $this->etat;
-    }
-
-    /**
-     * @param int $etat
-     */
-    public function setEtat($etat)
-    {
-        $this->etat = $etat;
-    }
+    
     /**
      * @var int
      *

@@ -386,16 +386,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             elseif (0 === strpos($pathinfo, '/api')) {
-                // liste_commandes
-                if (0 === strpos($pathinfo, '/api/liste') && preg_match('#^/api/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_commandes')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',));
-                }
-
-                // create_commande
-                if (preg_match('#^/api/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
-                }
-
                 // api_homepage
                 if ('/api' === $trimmedPathinfo) {
                     if (substr($pathinfo, -1) !== '/') {
@@ -408,6 +398,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // get_User
                 if (0 === strpos($pathinfo, '/api/user') && preg_match('#^/api/user/(?P<login>[^/]++)/(?P<password>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_User')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\UserApiController::getUserAction',));
+                }
+
+                // get_All_Annonces
+                if ('/api/allAnnonces' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getAllAnnoncesAction',  '_route' => 'get_All_Annonces',);
                 }
 
             }
@@ -742,6 +737,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_commandes_delete:
 
+            // liste_commandes
+            if (0 === strpos($pathinfo, '/commandes/liste') && preg_match('#^/commandes/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_commandes')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',));
+            }
+
+            // create_commande
+            if (preg_match('#^/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
+            }
+
         }
 
         elseif (0 === strpos($pathinfo, '/commentairesAnc')) {
@@ -883,11 +888,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             // evennements_show
             if (preg_match('#^/evennements/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::showAction',));
-            }
-
-            // evennements_reserver
-            if (preg_match('#^/evennements/(?P<id>[^/]++)/reserver$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_reserver')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::reserverAction',));
             }
 
             // evennements_new

@@ -1,3 +1,11 @@
+
+back_abonnements:
+    resource: "@BackBundle/Resources/config/routing/abonnements.yml"
+    prefix:   /abonnements
+
+
+
+
 back_abonnements:
     resource: "@BackBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements

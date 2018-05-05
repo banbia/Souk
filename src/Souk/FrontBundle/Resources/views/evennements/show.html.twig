@@ -44,8 +44,10 @@
    </div>
 
     {% if is_granted('ROLE_CLIENT') %}
-
-        <a class="btn btn-primary" href="{{ path('evennements_reserver',{'id':evennement.id}) }}" >Participer </a>
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="btn btn-primary" type="submit" value="Participer" />
+    {{ form_end(form) }}
     {% endif %}
 
 
@@ -54,22 +56,24 @@
     {% if is_granted('ROLE_COM') %}
         {% if evennement.commercial.id == app.user.id %}
             <a href="{{ path('evennements_parts',{'id':evennement.id}) }}" class="btn btn-info"><i class="fa fa-list"></i> Consulter liste des partciapants </a>
-            <a class="btn btn-warning"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"> Edit </i></a>
-            <a class="btn btn-danger"  href="{{ path('evennements_delete', { 'id': evennement.id }) }}"> <i class="fa fa-close"></i> Delete</a>
-
         {% endif  %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+    <a class="btn btn-warning"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"> Edit </i></a>
+    <a class="btn btn-danger"  href="{{ path('evennements_delete', { 'id': evennement.id }) }}"> <i class="fa fa-close"></i> Delete</a>
 
-
+    {{ form_end(form) }}
     {% endif %}
+    {{ render(controller('FrontBundle:Evennements:newEvs', { 'evennement':evennement.id  })) }}
 
 </div>
-
+=======
     <!--- safa Boufares's work start-->
         <!-- /row -->
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-6">
-                    <a href="{{ path('signalsEvsN_new', {'evennement' : evennement.id}) }}"><i class="fa fa-flag pull-right"></i></a>
+                    <a href="{{ path('signalsEvsN_new', {'evennement' : evennement}) }}"><i class="fa fa-flag pull-right"></i></a>
                     <br/>
                 </div>
             </div>
@@ -166,5 +170,6 @@
 {% endblock %}
 {% block js %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 {% endblock js %}
 

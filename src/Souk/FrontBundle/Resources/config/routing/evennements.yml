@@ -10,9 +10,6 @@ evennements_parts:
 evennements_show:
     path:     /{id}/show
     defaults: { _controller: "FrontBundle:Evennements:show" }
-evennements_reserver:
-    path:     /{id}/reserver
-    defaults: { _controller: "FrontBundle:Evennements:reserver" }
 
 
 evennements_new:
