@@ -18,11 +18,12 @@
                             {% set formAction %}{{ url('fos_message_thread_delete', {'threadId': thread.id}) }}{% endset %}
                             {% set submitValue %}{% trans from 'FOSMessageBundle' %}delete{% endtrans %}{% endset %}
                         {% endif %}
-                        <form action="{{ formAction }}" method="post">
-                                <button class="btn-simple text-danger" type="submit" value="{{ submitValue }}" ><i class="fa fa-trash"></i></button>
-                        </form>
-                      <a class=" text-success" href="{{ path('fos_message_thread_view', {'threadId': thread.id}) }}">  <i class="fa fa-eye"></i></a>
-                    {% endif %}
+
+                        <a style="margin-left:5px;" class="btn-simple text-success" href="{{ path('fos_message_thread_view', {'threadId': thread.id}) }}">  <i class="fa fa-eye"></i></a>
+                          <form action="{{ formAction }}" method="post">
+                              <button class="btn-simple text-danger" type="submit" value="{{ submitValue }}" ><i class="fa fa-trash"></i></button>
+                          </form>
+                  {% endif %}
                   </td>
                   <td class="view-message  dont-show">{{thread.lastMessage.sender|e }}</td>
                   <td class="view-message  dont-show">{{thread.subject }}</td>

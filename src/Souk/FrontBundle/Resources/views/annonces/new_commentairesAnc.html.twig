@@ -4,12 +4,12 @@
 	<!-- /row -->
 	<div class="row">
 	<div class="col-md-12">
-		<div class="col-md-5">
+		<div class="col-md-6">
 			<a href="{{ path('signalsAncN_new',{'annonce':annonce.id}) }}"><i class="fa fa-flag pull-right"></i></a>
 		<br/>
 		</div>
 	</div>
-		<div class="col-md-5">
+		<div class="col-md-6">
                 {{ form_start(form) }}
                     {{ form_errors(form.contenu) }}
                     {{ form_widget(form.contenu, {'attr': {'class': 'comment form-control'}}) }}
@@ -34,7 +34,7 @@
 					</div>
 					<!-- /col-sm-1 -->
 
-					<div class="col-sm-4">
+					<div class="col-sm-5">
 						<div class="panel panel-default">
 
 							<div class="panel-heading">

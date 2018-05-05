@@ -1,0 +1,73 @@
+{% extends "BackBundle::panel.html.twig" %}
+
+
+{% block body %}
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#evs">Evennemnts</a></li>
+        <li><a data-toggle="tab" href="#anc">Annonces</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="evs" class="tab-pane fade in active">
+            <h3>Evnement </h3>
+            <table class="table table-condensed">
+                <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>Date de debut</th>
+                    <th>Date de Fin</th>
+                    <th>Lieu</th>
+                    <th>Prix</th>
+                    <th>Action</th>
+               </tr>
+
+                </thead>
+                <tbody>
+                {% for a in ev %}
+                    <tr>
+                        <td>{{ a.titre }}</td>
+                        <td>{{ a.description }}</td>
+                        <td>{{ a.dateDeb|date("d/m/Y") }}</td>
+                        <td>{{ a.dateFin|date("d/m/Y") }}</td>
+                        <td>{{ a.lieu }}</td>
+                        <td>{{ a.prix }}</td>
+                        <td><a href="{{ path('show',{'evennement':a.id}) }}" class="btn btn-info "><i class="fa fa-eye"></i></a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div id="anc" class="tab-pane fade">
+            <h3>Anc</h3>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                        <th>disponible</th>
+                        <th>Date deCreation</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                {% for a in anc %}
+                    <tr>
+                        <td>{{ a.titre }}</td>
+                        <td>{{ a.description }}</td>
+                        <td>{{ a.prix }}</td>
+                        <td>{{ a.disponible }}</td>
+                        <td>{{ a.dateCreation|date("d/m/Y") }}</td>
+                       <td><a href="{{ path('consulter',{'annonce':a.id}) }}"  class="btn btn-info"><i class="fa fa-eye"></i></a></td>
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+{% endblock %}

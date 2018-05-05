@@ -32,6 +32,8 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+
 client_commentairesAnc:
     resource: "@FrontBundle/Resources/config/routing/commentairesAnc.yml"
     prefix:   /commentairesAnc
@@ -65,6 +67,8 @@ client_signals_Evs:
 client_signals_Anc:
     resource: "@FrontBundle/Resources/config/routing/signalsAnc.yml"
     prefix:   /signalsAnc
+
+
 fos_message:
     resource: "@FOSMessageBundle/Resources/config/routing.xml"
     prefix: /messages

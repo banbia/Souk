@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new FOS\MessageBundle\FOSMessageBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new blackknight467\StarRatingBundle\StarRatingBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

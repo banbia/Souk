@@ -1,18 +1,23 @@
 {% extends 'FrontBundle::layout.html.twig' %}
-{% bock style %}
+{% block style %}
 <link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
-
-{% endbock style %}
+{% endblock style %}
 {% block body %}
-    <h1>Liste de votre reclamations</h1>
-
+<div class="row form-controlS">
+    <h1  style="text-align:center" > Liste de reclamations</h1>
+    <br>
+    <a   href="{{ path('reclamations_new') }}"  class="btn btn-success pull-right"> <i class="fa fa-plus" > </i> Ajouter une reclamation </a>
+    <br>
+    <br>
+    <br>
     <table class="table table-striped">
         <thead class="thead-light">
         <tr class="table-secondary">
-                <th>Contenu</th>
+                <th>Description</th>
+                <th>Commercial</th>
                 <th>Date de reclamation</th>
                 <th>Etat</th>
-                <th>Actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -20,20 +25,21 @@
             <tr>
 
                 <td>{{ reclamation.contenu }}</td>
+                <td> {{ reclamation.commercial.nom }}</td>
                 <td>{% if reclamation.dateRec %}{{ reclamation.dateRec|date('Y-m-d') }}{% endif %}</td>
-                <td>{% if reclamation.etat == 0 %} encours
-                    {% elseif reclamation.etat == 1 %} accepter
-                    {% elseif reclamation.etat == 2 %}  rejeter
+                <td>{% if reclamation.etat == 0 %} Encours
+                    {% elseif reclamation.etat == 1 %} Accepter
+                    {% elseif reclamation.etat == (-1) %}  Rejeter
                     {% endif %}
                 </td>
                 <td>
 
-                    <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"><i class="fa fa-edit"></i> modifier </a>
+                    <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"><i class="fa fa-edit"></i> Modifier </a>
 
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-    <a href="{{ path('reclamations_new') }}"><button type="submit" class="btn btn-success">  Create a new reclamation  </button></a>
+</div>
 {% endblock %}

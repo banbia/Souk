@@ -80,3 +80,4 @@ fos_message:
     db_driver: orm
     thread_class: Souk\FrontBundle\Entity\Thread
     message_class: Souk\FrontBundle\Entity\Message
+

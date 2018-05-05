@@ -1,7 +1,7 @@
 {% extends 'BackBundle::panel.html.twig' %}
 
 {% block body %}
-    <h1>Abonnement creation</h1>
+    <h1 class="text-warning">Création d'un Abonnement</h1>
 
     {{ form_start(form) }}
        {# {{ form_widget(form) }} #}
@@ -32,7 +32,7 @@
 
 <div class="col-md-12" style="margin-top: 15px" >
     <div class="col-md-6">
-    <a class ="btn btn-default" href="{{ path('abonnements_index') }}"><i class="fa fa-arrow-left"></i> Back to the list</a>
+    <a class ="btn btn-default" href="{{ path('abonnements_index') }}"><i class="fa fa-arrow-left"></i> Retourner à la liste</a>
     <button type="submit" class="btn btn-success " > Créer </button>
     </div>
 </div>
