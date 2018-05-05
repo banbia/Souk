@@ -52,6 +52,7 @@ categorie_annonces:
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
+
 admin_signals_Anc:
     resource: "@BackBundle/Resources/config/routing/signalsAnc.yml"
     prefix:   /signalsAnc

@@ -24,11 +24,7 @@
 }
 .fa-trash-o:before {
   content: "\f014";
-<<<<<<< HEAD
-  padding-left: 100px;
-=======
   padding-left: 273px;
->>>>>>> ed7e159abea6328cdd31ee24d84121cabf2d2518
   padding-right: 10px;
 }
 .comment{width:100%;margin-bottom:5px;}

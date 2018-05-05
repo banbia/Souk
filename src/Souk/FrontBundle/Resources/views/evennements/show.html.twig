@@ -1,15 +1,17 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
-{% block body %}
-    <h1>Evennement</h1>
+{% block style %}
+<link href="{{ asset('bundle/front/css/style_Salsabil.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock style %}
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ evennement.id }}</td>
-            </tr>
-            <tr>
+{% block body %}
+    <h1> Evenement </h1>
+<div class="row form-groupEvent">
+   <div class="col-md-12">
+    <table  class="table table-striped">
+        <tbody class="thead-light">
+
+            <tr >
                 <th>Titre</th>
                 <td>{{ evennement.titre }}</td>
             </tr>
@@ -18,11 +20,11 @@
                 <td>{{ evennement.description }}</td>
             </tr>
             <tr>
-                <th>Datedeb</th>
+                <th>Date debut</th>
                 <td>{% if evennement.dateDeb %}{{ evennement.dateDeb|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Datefin</th>
+                <th>Date fin</th>
                 <td>{% if evennement.dateFin %}{{ evennement.dateFin|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
@@ -31,29 +33,38 @@
             </tr>
             <tr>
                 <th>Prix</th>
-                <td>{{ evennement.prix }}</td>
+                <td>{{ evennement.prix}} DT </td>
             </tr>
-            <tr>
+            {#<tr>
                 <th>Etat</th>
                 <td>{{ evennement.etat }}</td>
-            </tr>
+            </tr>#}
         </tbody>
     </table>
+   </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('evennements_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('evennements_edit', { 'id': evennement.id }) }}">Edit</a>
-        </li>
-        <li>
-            <a href="{{ path('evennements_delete', { 'id': evennement.id }) }}">Delete</a>
+    {% if is_granted('ROLE_CLIENT') %}
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="btn btn-primary" type="submit" value="Participer" />
+    {{ form_end(form) }}
+    {% endif %}
 
-        </li>
-    </ul>
 
+    <a class="btn btn-success" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to the liste </i> </a>
+
+    {% if is_granted('ROLE_COM') %}
+        {% if evennement.commercial.id == app.user.id %}
+            <a href="{{ path('evennements_parts',{'id':evennement.id}) }}" class="btn btn-info"><i class="fa fa-list"></i> Consulter liste des partciapants </a>
+        {% endif  %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+    <a class="btn btn-warning"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"> Edit </i></a>
+    <a class="btn btn-danger"  href="{{ path('evennements_delete', { 'id': evennement.id }) }}"> <i class="fa fa-close"></i> Delete</a>
+
+    {{ form_end(form) }}
+    {% endif %}
     {{ render(controller('FrontBundle:Evennements:newEvs', { 'evennement':evennement.id  })) }}
 
-
+</div>
 {% endblock %}
