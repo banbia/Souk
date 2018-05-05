@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> ceaa21feb88ad4691f3b62f607ca612711bdcb83
-back_abonnements:
-    resource: "@BackBundle/Resources/config/routing/abonnements.yml"
-    prefix:   /abonnements
-
-<<<<<<< HEAD
-=======
-back_abonnements:
-    resource: "@BackBundle/Resources/config/routing/abonnements.yml"
-    prefix:   /abonnements
-
->>>>>>> ceaa21feb88ad4691f3b62f607ca612711bdcb83
 back_abonnements:
     resource: "@BackBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements
