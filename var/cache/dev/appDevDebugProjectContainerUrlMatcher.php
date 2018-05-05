@@ -225,7 +225,28 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
                     not_admin_reclamations_edit:
 
-<<<<<<< HEAD
+                    // admin_reclamations_refuser
+                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/refuser$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_reclamations_refuser;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_refuser')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::refuserAction',));
+                    }
+                    not_admin_reclamations_refuser:
+
+                    // admin_reclamations_accepter
+                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/accepter$#s', $pathinfo, $matches)) {
+                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                            $allow = array_merge($allow, array('GET', 'POST'));
+                            goto not_admin_reclamations_accepter;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_accepter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::accepterAction',));
+                    }
+                    not_admin_reclamations_accepter:
+
                 }
 
                 // index
@@ -254,33 +275,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 if (0 === strpos($pathinfo, '/admin/categories')) {
-=======
-                    // admin_reclamations_refuser
-                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/refuser$#s', $pathinfo, $matches)) {
-                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                            $allow = array_merge($allow, array('GET', 'POST'));
-                            goto not_admin_reclamations_refuser;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_refuser')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::refuserAction',));
-                    }
-                    not_admin_reclamations_refuser:
-
-                    // admin_reclamations_accepter
-                    if (preg_match('#^/admin/reclamations/(?P<id>[^/]++)/accepter$#s', $pathinfo, $matches)) {
-                        if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                            $allow = array_merge($allow, array('GET', 'POST'));
-                            goto not_admin_reclamations_accepter;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_reclamations_accepter')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\AdminReclamationsController::accepterAction',));
-                    }
-                    not_admin_reclamations_accepter:
-
-                }
-
-                elseif (0 === strpos($pathinfo, '/admin/categories')) {
->>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90
                     // categories_index
                     if ('/admin/categories' === $trimmedPathinfo) {
                         if ('GET' !== $canonicalMethod) {
@@ -338,7 +332,20 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'FrontBundle:Abonnements:new',  '_route' => 'abonnements_com_new',);
             }
 
-            if (0 === strpos($pathinfo, '/annonces')) {
+            if (0 === strpos($pathinfo, '/api')) {
+                // liste_commandes
+                if (0 === strpos($pathinfo, '/api/liste') && preg_match('#^/api/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_commandes')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',));
+                }
+
+                // create_commande
+                if (preg_match('#^/api/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/annonces')) {
                 // client_annonces_index
                 if ('/annonces' === $trimmedPathinfo) {
                     if ('GET' !== $canonicalMethod) {
@@ -639,16 +646,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_commandes_delete:
 
-            // liste_commandes
-            if (0 === strpos($pathinfo, '/commandes/liste') && preg_match('#^/commandes/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_commandes')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::listeAction',));
-            }
-
-            // create_commande
-            if (preg_match('#^/commandes/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::createAction',));
-            }
-
         }
 
         elseif (0 === strpos($pathinfo, '/login')) {
@@ -857,27 +854,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->redirect($rawPathinfo.'/', 'fos_message_inbox');
                 }
 
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::inboxAction',  '_route' => 'fos_message_inbox',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::inboxAction',  '_route' => 'fos_message_inbox',);
             }
 
             // fos_message_sent
             if ('/messages/sent' === $pathinfo) {
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::sentAction',  '_route' => 'fos_message_sent',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::sentAction',  '_route' => 'fos_message_sent',);
             }
 
             // fos_message_search
             if ('/messages/search' === $pathinfo) {
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::searchAction',  '_route' => 'fos_message_search',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::searchAction',  '_route' => 'fos_message_search',);
             }
 
             // fos_message_deleted
             if ('/messages/deleted' === $pathinfo) {
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::deletedAction',  '_route' => 'fos_message_deleted',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deletedAction',  '_route' => 'fos_message_deleted',);
             }
 
             // fos_message_thread_new
             if ('/messages/new' === $pathinfo) {
-                return array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::newThreadAction',  '_route' => 'fos_message_thread_new',);
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::newThreadAction',  '_route' => 'fos_message_thread_new',);
             }
 
             // fos_message_thread_delete
@@ -887,7 +884,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_fos_message_thread_delete;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_delete')), array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::deleteAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deleteAction',));
             }
             not_fos_message_thread_delete:
 
@@ -898,13 +895,13 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     goto not_fos_message_thread_undelete;
                 }
 
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_undelete')), array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::undeleteAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_undelete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::undeleteAction',));
             }
             not_fos_message_thread_undelete:
 
             // fos_message_thread_view
             if (preg_match('#^/messages/(?P<threadId>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_view')), array (  '_controller' => 'FOS\\MessageBundle\\Controller\\MessageController::threadAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_view')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::threadAction',));
             }
 
         }

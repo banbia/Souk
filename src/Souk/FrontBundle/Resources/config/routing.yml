@@ -2,6 +2,10 @@ front_homepage:
     path:     /
     defaults: { _controller: FrontBundle:Default:index }
 
+api_souk:
+    resource: "@FrontBundle/Resources/config/routing/api.yml"
+    prefix:   /mobile
+
 front_reclamations:
     resource: "@FrontBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations

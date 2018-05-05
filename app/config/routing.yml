@@ -9,11 +9,13 @@ user:
 front:
     resource: "@FrontBundle/Resources/config/routing.yml"
     prefix:   /
-
+souk_api:
+    resource: "@FrontBundle/Resources/config/routing/api.yml"
+    prefix:   /api
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-# app/config/routing.yml
+# app/config/routing.yml start fos
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
@@ -32,7 +34,7 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
-
+# fos
 
 client_commentairesAnc:
     resource: "@FrontBundle/Resources/config/routing/commentairesAnc.yml"
