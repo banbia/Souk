@@ -21,8 +21,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class AnnoncesController extends Controller
 {
 
-<<<<<<< HEAD
-=======
     /**
      * Finds and displays a annonce entity.
      *
@@ -117,32 +115,14 @@ class AnnoncesController extends Controller
 
         ));
     }
->>>>>>> origin/master
 
   /**
    * haifa-dev-start
    * new annonce
    *
    */
-
-<<<<<<< HEAD
   public function newAnnonceAction(Request $request)
   {
-=======
-
-
-    // delete  des comm de l'Anc
-    /**
-     * @Route("/delete_com/{$com}/{$annonce}", name="commentairesAnc_delete")
-     */
-    public function deleteAction($com,$annonce)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
-        $em->remove($comm);
-        $em->flush();
->>>>>>> origin/master
-
     $annonce = new Annonces();
 
     $form = $this->createForm('Souk\BackBundle\Form\AnnoncesType', $annonce);
@@ -207,70 +187,6 @@ class AnnoncesController extends Controller
     ));
   }
 
-  /**
-   * haifa-dev-end
-
-   */
-
-  /**
-   * Finds and displays a annonce entity.
-   *
-   */
-  public function showAction(Request $request, Annonces $annonce)
-  {
-    /* Nour's Work Start*/
-    $commande = new Commandes();
-    $user = $this->getUser();
-    $em = $this->getDoctrine()->getManager();
-    $form = $this->createForm('Souk\BackBundle\Form\CommandesType', $commande);
-    $form->handleRequest($request);
-    $find_com = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "annonce" => $annonce, "etat" => 0));
-    $com = count($find_com);
-    if ($form->isSubmitted() && $form->isValid()) {
-
-
-      $commande->setAnnonce($annonce);
-      //var_dump('<pre>'.$commande->getDateCom().'</pre>');die;
-      $now = new \DateTime($commande->getDateCom());
-      $commande->setDateCom($now);
-      $commande->setEtat(0);//0 => en attente
-
-      $commande->setClient($user);
-      $em->persist($commande);
-
-      $commandes_confirme = array();
-      $commandes_attente = array();
-      $commandes = array();
-      if ($this->get('security.authorization_checker')->isGranted('ROLE_CLIENT')) {
-
-        $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "etat" => 1));
-        $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "etat" => 0));
-        $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user));
-
-      } else if ($this->get('security.authorization_checker')->isGranted('ROLE_COM')) {
-
-        $commandes_attente = $em->getRepository('BackBundle:Commandes')->attentesCommandesCommercial($user->getId());
-        $commandes_confirme = $em->getRepository('BackBundle:Commandes')->confirmesCommandesCommercial($user->getId());
-        $commandes = $em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($user->getId());
-
-      }
-      $em->flush();
-      return $this->render('FrontBundle:commandes:index.html.twig', array(
-        'commandes' => $commandes,
-        'commandes_attente' => $commandes_attente,
-        'commandes_confirme' => $commandes_confirme,
-      ));
-      //return $this->redirectToRoute('commandes_show', array('id' => $commande->getId()));
-    }
-    /* Nour's Work End*/
-    return $this->render('FrontBundle:annonces:show.html.twig', array(
-      'annonce' => $annonce,
-      'commande' => $commande,
-      'form' => $form->createView(),
-      'com' => $com
-
-    ));
-  }
   // Safa Boufares  commentaire Anc
 
   // Ajout des commentaires et les listees pour une annonce
@@ -325,7 +241,17 @@ class AnnoncesController extends Controller
 
     return $this->redirectToRoute('annonces_show', array("id" => $annonce));
   }
-
+    // delete  des comm de l'Anc
+    /**
+     * @Route("/delete_com/{$com}/{$annonce}", name="commentairesAnc_delete")
+     */
+    public function deleteComAction($com,$annonce)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
+        $em->remove($comm);
+        $em->flush();
+    }
   // edit des comm de l'Anc
 
   /**

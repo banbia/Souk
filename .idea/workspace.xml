@@ -2,69 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07a02977-392c-496c-a303-ec89110e0c69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/BackBundle/Form/ReservationType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/BackBundle/Tests/Controller/ReservationControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ReservationController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/reservation.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/liste_des_participants.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/reservation/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/reservation/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/reservation/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/reservation/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Souk.iml" afterPath="$PROJECT_DIR$/.idea/Souk.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukBackBundleEntityCategories.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukUserBundleEntityUser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/47/17/e81747" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/69/06/360669" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/96/0c/520c96" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/translations/catalogue.fr.74ad548a14679603165a68a05f1f6a84f1ab7740.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/translations/catalogue.fr.74ad548a14679603165a68a05f1f6a84f1ab7740.php.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/00/0083cf0cae76f6ac5e6afa138347196f3a860a574286cb52cedb37d6515632c1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/04/04e1bf019edf1007ad1562fe67fc76a170b6683c3ee3329cec3e7a3597d79141.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/05/05730486ef9d1f7451df84ef24fd50d1faa90fe4e2684421092db9798e268472.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/0c/0c3834dd2df7b1b3674b8cf2e5971b976a1da45525e7bb2406aa7de8e9a9fe58.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/0e/0e6bab9eb76142486171fe0bdf7570b5ca0c5eccac963a2a08179ff442aa8e0b.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/0e/0eb414875f09b08aa5a518411d36547504dc45015062c0c9771b0c38b257ca40.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/10/10fb1515af67d561182faae8432260012d881bbd5cf50e3cb0bf545cc4d31e78.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/12/12a7e869bb395d67c8f10d18c9c44ef88c3eeedf707af08d4342b81a3a3ec86c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/19/19e071e1fce08dba403123c3972ebbd78337db2d208c7b164e610da82eab3f56.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/1a/1aa5859b7ff4a6572ef09a444565675b33d16a964a8fc7a4504ea447e222fb30.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/1f/1f5530bbe439b195c99033bb99efc9bc8d58508a0df92ddcd11ac755b4b61dd4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/20/20d50431fe5791678e4b32b748cdbb3f5f839db6177d105e5cd03b2cc00eb8a0.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/28/2882659252c11f039da455a71658750d2ce2909e7fd2c4755591ba37acc50c4f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/2a/2aa2e112c861a204a3798f8022404a222e1a37ae2ad288ab9c98234718622f62.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/2f/2f3f56ee7e32f8775ba207c6e040d524ced46855d055d5b02202bb2dccee27ae.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/37/37a1b3bdbea854085ebd71d17ee751715d809e6099c5ded9d6dd8a8ef3d3e8d8.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/3b/3b78a387c884716161241ec295f1888ed0369b0dc6a8cdc44d6e420d72ce29df.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/41/414da7977b7701038b5a294db859a5351983742dc7de73ee745d816e6c243d3c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/45/45aba1f9c39b6f1ed6590ff27e3b8b0ec876f6d910305e303d4f418d4c45de4c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/50/507213a77f4ce5bd741ee02a5c1863fae396719de2b783cc67ebf67793ca5a34.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/56/562fc13f37a1ad9ab765f5f887b2cd69ea937d8aa86d44a2439331a2b0ff20db.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/5c/5ca2ad4a43e2f112f3288073502fb1836cd347e91a70ab31e8ecfe40365355dc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/5e/5efc02d6bb89b06036ffaee8a6c0081111f309ef78d16a52f3590716f8f3d18b.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/67/6715e49a67b3ba3cad20395f17b1a31f4eabaa0509dd7ad837a409aa77f9e8b5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/67/677320809e3defab546a8026398c415b9b904225d2ed96e3fb0b83e169fdd537.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/67/67d9b59e983ef05c9a27f1794ebbf478b9481a708d2c02200fcb552187da5f57.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/6a/6a57c1472cf44aa8edaecc3be96d8469256375c5464c22057f24508b6f61b260.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/6e/6e244555669b1ef86f3505070b33b0333bb7c16894df981a0b9637ee609b9328.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/6f/6fae7ed0b428130bc9d3bde334fc5d7a1c400bc1fc5ee76ed78678a85e8b231f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/76/76a36f832e20aa353e27b25683104fdb5b81623302fe2182902f2dfb38eef398.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/78/7868e84da7d2801cc9ee1ee0b362493cab523c5ce7981cde9a87cda02a92724c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/99/99767cd09ee7280afd8acbf43ee0fedd4404e9a4c8bdf27a04d733be1913906c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/99/99b45c293780f2ea31cb477aa7881c4fe4f3f5755344ce956c5dd6114bd3fbe6.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/9a/9aedb5660ec67ca9eda82a2a1fb79f87ec2ea41c75cb297aca041d6dc15e54ed.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/9b/9bd263c5a83c0aab98c51b7994987870c714b14cf0261b04ec05924f59f38120.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/9f/9f2cf48c6ecfcdaea881d1b162299ccbf13f96802e61d3acd11ac4cf6faa3ab3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/a2/a20f81494dafd0c73a23e7346a51622dbb503b6c7c0c8a529009fd805df56913.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/a6/a65aa3f109cf1633e6a53e8204d43b0bde9ea6fec1a12bd1766401a325c6be61.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/a7/a7e1c2462659ff66efb8eee64707dcd67a113c42948e3e6430cc98bfb908c756.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ad/ad866d5c3d16052e4cfc6608a2358031f2d61c51a692e694b772bfc64989f512.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/b7/b77e9e77462dfddee28c4179812cb66385c25ed529f6335c09bffb2bb114a2e4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/bb/bb4243d43e51430707742ba2bcf616f245cd64cb4911021e992662a857261fb8.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/bc/bccb2c8bb8b99d87681f5bbb4d1ca3ecaef5ea78e3762e2650e53a09111ecec5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c0/c0fc8a0c62b98dd59123a998cda07fd874263842b7f2d581317eced1f8200e74.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c3/c3d1c7a8cc1d308963b10e77ebcba4839446e3c1f04a71466e032921423b207a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c4/c44e99a58b3df92dde0a2cacee5e1ec9dd1561a3e9a4a1fd17f871657dbde6d1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/cd/cdb73ff74e71ba98b13d08d89f8273bb4450e915f55429f55d475c20f764db5a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/cd/cdc9c6c34751ce48039e93886de94968c7873e6677ffd7cac9cf165036d5b4ca.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ce/ce50e943a7a20306b8537f0d55e33c08062180430942598fe84b3ec793d59140.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/cf/cf6d2430c263a606a4f36c04ad6f2091b97ae9daf4fdfc4404082fd7610ed9b3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/d1/d11dd6661b8199e0a4ba17c6c39daef5a04e10bde28830907178426ec0dbf69e.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/d6/d609f079efbb70543e6b354d35be3d02d58ead7e6c4175bc071ae9b58d29ee8f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/db/dba8dd270da784f67139d3e08d442286368dbf7d767add171503a5992966371f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/e6/e626a63e6f2814e4ca8b27ae874be4e2c4800ae0d5e1240716ef2cd4fd419ba4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/e6/e65bfa17618da92e405679e529c047d5291265872e5a0f43043442af849e63b7.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/f1/f14bbcc7adadb401315f61e0ee7e79b0d57fa40e8ffb7403b6cbef81310e0a60.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/f7/f7e5fc5da722b977b6e0af08126dff501d66851734e6d4d09b4fde727211cb15.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/BackBundle/Form/EvennementsType.php" afterPath="$PROJECT_DIR$/src/Souk/BackBundle/Form/EvennementsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/evennements.yml" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/evennements.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/public/css/style_Salsabil.css" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/public/css/style_Salsabil.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/edit.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/index.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/new.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/new.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/show.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/prod.log" afterPath="$PROJECT_DIR$/var/logs/prod.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/.travis.yml" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/phpunit.xml.dist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/tests/Doctrine/Tests/Common/Inflector/InflectorTest.php" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/tests/Doctrine/Tests/Common/Inflector/InflectorTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/tests/Doctrine/Tests/DoctrineTestCase.php" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/tests/Doctrine/Tests/DoctrineTestCase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/doctrine/inflector/tests/Doctrine/Tests/TestInit.php" afterPath="$PROJECT_DIR$/vendor/doctrine/inflector/tests/Doctrine/Tests/TestInit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/config.m4" afterPath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/config.m4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/config.w32" afterPath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/config.w32" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/php_twig.h" afterPath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/php_twig.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/twig.c" afterPath="$PROJECT_DIR$/vendor/twig/twig/ext/twig/twig.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Autoloader.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Autoloader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/CompilerInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/CompilerInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Filter/Function.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Filter/Function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Filter/Method.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Filter/Method.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Filter/Node.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Filter/Node.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/FilterCallableInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/FilterCallableInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/FilterInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/FilterInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Function/Function.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Function/Function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Function/Method.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Function/Method.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Function/Node.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Function/Node.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/FunctionCallableInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/FunctionCallableInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/FunctionInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/FunctionInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/LexerInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/LexerInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/String.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Loader/String.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/ExtensionReference.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/Expression/ExtensionReference.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/SetTemp.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Node/SetTemp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/NodeInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ParserInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/ParserInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TemplateInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TemplateInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/Function.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/Function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/Method.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/Method.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/Node.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/Test/Node.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TestCallableInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TestCallableInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TestInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TestInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParserBroker.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParserBroker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParserBrokerInterface.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/lib/Twig/TokenParserBrokerInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Node/SetTempNode.php" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Node/SetTempNode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bundles/front/css/style.css" afterPath="$PROJECT_DIR$/web/bundles/front/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bundles/front/css/style_Salsabil.css" afterPath="$PROJECT_DIR$/web/bundles/front/css/style_Salsabil.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bundles/front/css/style_safaBoufares.css" afterPath="$PROJECT_DIR$/web/bundles/front/css/style_safaBoufares.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,26 +95,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1119">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CommandesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/CommandesController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EvennementsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EvennementsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
@@ -119,10 +119,108 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-521">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnnoncesController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing_dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>show</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/show.html.twig" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -130,7 +228,60 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/blackknight467/star-rating-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/message-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpcollection/phpcollection" />
+      <path value="$PROJECT_DIR$/vendor/jms/parser-lib" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -159,17 +310,6 @@
             <path>
               <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
               <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
@@ -264,15 +404,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525521201524</updated>
-      <workItem from="1525521207322" duration="398000" />
+      <workItem from="1525521207322" duration="1197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398000" />
+    <option name="totallyTimeSpent" value="1197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -281,7 +422,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -312,14 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/CommandesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -330,6 +463,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-346">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -337,6 +478,70 @@
           <folding>
             <element signature="e#47#84#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-521">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
