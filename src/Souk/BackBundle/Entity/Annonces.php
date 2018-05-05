@@ -92,7 +92,7 @@ class Annonces
 
     public function __construct()
     {
-        $this->signals = new ArrayCollection();
+       $this->signals = new ArrayCollection();
         $this->commentaires = new ArrayCollection();
         $this->commandes = new ArrayCollection();
         $this->images = new ArrayCollection();

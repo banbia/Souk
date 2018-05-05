@@ -1,20 +1,15 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
-back_abonnements:
-    resource: "@BackBundle/Resources/config/routing/abonnements.yml"
-    prefix:   /abonnements
-
-<<<<<<< HEAD
-
 
 back_abonnements:
     resource: "@BackBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements
 
-=======
->>>>>>> origin/master
+
+
+
+back_abonnements:
+    resource: "@BackBundle/Resources/config/routing/abonnements.yml"
+    prefix:   /abonnements
+
 back_homepage:
     path:     /
     defaults: { _controller: BackBundle:Default:index }
@@ -22,8 +17,7 @@ back_homepage:
 back_reclamations:
     resource: "@BackBundle/Resources/config/routing/AdminReclamation.yml"
     prefix:   /reclamations
-<<<<<<< HEAD
-=======
+
 index:
     path:     /signals
     defaults: { _controller: BackBundle:Signals:index }
@@ -43,4 +37,3 @@ delete_ev:
 delete_anc:
     path:     /deleteAnc/{annonce}
     defaults: { _controller: BackBundle:Signals:deleteAnc }
->>>>>>> origin/master

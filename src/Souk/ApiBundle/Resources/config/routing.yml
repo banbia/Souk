@@ -4,3 +4,6 @@ api_homepage:
 get_User:
     path:     /user/{login}/{password}
     defaults: { _controller: ApiBundle:UserApi:getUser}
+get_All_Annonces:
+    path:     /allAnnonces
+    defaults: { _controller: ApiBundle:AnnoncesApi:getAllAnnonces}

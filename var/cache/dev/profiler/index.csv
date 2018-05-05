@@ -91,5 +91,3 @@ f1c5d5,::1,GET,http://localhost/souk/web/app_dev.php/api/allAnnonces,1525531668,
 7db471,::1,GET,http://localhost/souk/web/app_dev.php/api/allAnnonces,1525531743,,500
 628a6b,::1,GET,http://localhost/souk/web/app_dev.php/api/allAnnonces,1525531806,,200
 98015e,::1,GET,http://localhost/souk/web/app_dev.php/api/allAnnonces,1525531876,,200
-2e9d8a,::1,GET,http://localhost/souk/web/app_dev.php/annonces/newAnnonce,1525532366,,200
-0a0f7e,::1,GET,http://localhost/souk/web/app_dev.php/api/allAnnonces,1525532403,,200
