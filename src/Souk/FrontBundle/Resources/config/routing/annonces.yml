@@ -1,11 +1,14 @@
 client_annonces_index:
     path:     /
-    defaults: { _controller: "FrontBundle:Annonces:index" }
+    defaults: { _controller: FrontBundle:Annonces:index }
     methods:  GET
-
+annonces_index_by_categorie:
+    path:     /{categorie}
+    defaults: { categorie_controller: FrontBundle:Annonces:indexbyCategorie }
+    methods:  GET
 annonces_show:
     path:     /{id}/show
-    defaults: { _controller: "FrontBundle:Annonces:show" }
+    defaults: { _controller: FrontBundle:Annonces:show }
     methods:  [GET, POST]
 
 commentairesAnc_new:

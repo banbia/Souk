@@ -20,3 +20,13 @@ front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
 
+<<<<<<< HEAD
+commercial_annonces:
+    resource: "@FrontBundle/Resources/config/routing/annoncesCommercial.yml"
+    prefix:   /
+
+client_annonces:
+    resource: "@FrontBundle/Resources/config/routing/annonces.yml"
+    prefix:   /annonces
+=======
+>>>>>>> origin/master
