@@ -1,7 +1,8 @@
+
+
 back:
     resource: "@BackBundle/Resources/config/routing.yml"
     prefix:   /admin
-
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /user
@@ -46,20 +47,13 @@ client_commentairesAnc:
 client_commentairesEvs:
     resource: "@FrontBundle/Resources/config/routing/commentairesEvs.yml"
     prefix:   /commentairesEvs
-    
-commercial_annonces:
-    resource: "@FrontBundle/Resources/config/routing/annonces.yml"
-    prefix:   /commercial/annonces
-
-client_annonces:
-    resource: "@FrontBundle/Resources/config/routing/annonces.yml"
-    prefix:   /annonces
 categorie_annonces:
     resource: "@BackBundle/Resources/config/routing/categories.yml"
     prefix:   /admin/categories
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
+
 admin_signals_Anc:
     resource: "@BackBundle/Resources/config/routing/signalsAnc.yml"
     prefix:   /signalsAnc
@@ -73,3 +67,13 @@ client_signals_Anc:
     resource: "@FrontBundle/Resources/config/routing/signalsAnc.yml"
     prefix:   /signalsAnc
 
+<<<<<<< HEAD
+=======
+
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /messages
+api_application:
+     resource: "@ApiBundle/Resources/config/routing.yml"
+     prefix: /api
+>>>>>>> a861ba0f93e02dbdeafaca2df83529990d0f52fa

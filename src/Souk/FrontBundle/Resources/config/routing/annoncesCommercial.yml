@@ -1,0 +1,10 @@
+annonces_new:
+    path:     annonces/newAnnonce
+    defaults: { _controller: FrontBundle:Annonces:newAnnonce}
+commercial_annonces_index:
+    path:     /
+    defaults: { _controller: FrontBundle:Annonces:indexCommercial }
+    methods:  GET
+image_new:
+    path:     annonces/newAnnonce/newImage/{annonce}
+    defaults: { _controller: FrontBundle:Image:newImage}

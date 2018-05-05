@@ -38,7 +38,7 @@ class SignalsEvs
     private $dateSg;
     /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Evennements", inversedBy="signals")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=true,onDelete="CASCADE")
      */
     private $evennement;
     /**

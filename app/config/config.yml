@@ -81,6 +81,7 @@ fos_message:
     thread_class: Souk\FrontBundle\Entity\Thread
     message_class: Souk\FrontBundle\Entity\Message
 
+<<<<<<< HEAD
 knp_snappy:
     pdf:
         enabled:    true
@@ -94,3 +95,14 @@ knp_snappy:
         enabled:    true
         binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\"" #for Windows users # /usr/local/bin/wkhtmltoimage
         options:    []
+=======
+vich_uploader:
+    db_driver: orm
+    mappings:
+        product_image:
+            uri_prefix: /uploads/annonceImage
+            upload_destination: '%kernel.root_dir%/../web/uploads/annonceImage'
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+>>>>>>> a861ba0f93e02dbdeafaca2df83529990d0f52fa

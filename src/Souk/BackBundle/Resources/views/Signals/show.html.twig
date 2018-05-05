@@ -3,17 +3,18 @@
 {% block body %}
     <h2>La liste des signaux</h2>
     <br/>
-    <a href="" class="btn btn-danger pull-right"> Supprimer</a>
+    <a href="{{ path('delete_ev',{'evennement':evennement.id})}}" class="btn btn-danger pull-right"> <i class="fa fa-trash-o"></i>  Supprimer</a>
+    <br/>
+    <br/>
+
     <table  class="col-md-9 table table-condensed"  >
         <tr>
-
             <td><b>Client</b></td>
             <td><b>Contenu</b> </td>
             <td><b>Date du signale</b></td>
         </tr>
 
         {% for com in coms %}
-
             <tr>
                 <td>{{ com.client.username }}</td>
                 <td> {{ com.contenu }}</td>

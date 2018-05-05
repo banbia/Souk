@@ -1,16 +1,16 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
 {% block body %}
-    <h1>Evennements list</h1>
+    <h1>Liste des Evenements</h1>
+    <a href="{{ path('evennements_new') }}" class="btn btn-success pull-right"><i class="fa fa-plus"> </i>Nouvel evennement</a>
+    <table class="table table-striped">
+        <thead class="thead-light">
+        <tr class="table-secondary">
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
                 <th>Titre</th>
                 <th>Description</th>
-                <th>Datedeb</th>
-                <th>Datefin</th>
+                <th>Date debut</th>
+                <th>Date fin</th>
                 <th>Lieu</th>
                 <th>Prix</th>
                 <th>Etat</th>
@@ -20,32 +20,26 @@
         <tbody>
         {% for evennement in evennements %}
             <tr>
-                <td><a href="{{ path('evennements_show', { 'id': evennement.id }) }}">{{ evennement.id }}</a></td>
                 <td>{{ evennement.titre }}</td>
                 <td>{{ evennement.description }}</td>
                 <td>{% if evennement.dateDeb %}{{ evennement.dateDeb|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if evennement.dateFin %}{{ evennement.dateFin|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ evennement.lieu }}</td>
                 <td>{{ evennement.prix }}</td>
-                <td>{{ evennement.etat }}</td>
+               <td> {% if evennement.etat == 0 %} Non Disponible
+                {% elseif evennement.etat == 1 %} Disponible
+                {% endif %}
+               </td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('evennements_show', { 'id': evennement.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('evennements_edit', { 'id': evennement.id }) }}">edit</a>
-                        </li>
-                    </ul>
+
+                            <a class="btn btn-default" href="{{ path('evennements_show', { 'id': evennement.id }) }}"> <i class="fa fa-eye"> </i></a>
+
+                            <a class="btn btn-default"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"></i></a>
+
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('evennements_new') }}">Create a new evennement</a>
-        </li>
-    </ul>
 {% endblock %}

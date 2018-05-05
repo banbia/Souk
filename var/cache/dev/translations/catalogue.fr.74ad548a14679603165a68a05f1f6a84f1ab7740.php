@@ -227,6 +227,11 @@ L\'équipe
     'recipients' => 'Destinataires',
     'body' => 'Corps',
   ),
+  'VichUploaderBundle' => 
+  array (
+    'download' => 'Télécharger',
+    'form.label.delete' => 'Supprimer ?',
+  ),
 ));
 
 

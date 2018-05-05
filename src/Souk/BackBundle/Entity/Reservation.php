@@ -38,7 +38,7 @@ class Reservation
     private $client;
     /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Evennements", inversedBy="reservations")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=true,onDelete="CASCADE")
      */
     private $evennement;
 

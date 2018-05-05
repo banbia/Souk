@@ -265,6 +265,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // delete_ev
+<<<<<<< HEAD:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
                 if ('/admin/deleteEv' === $pathinfo) {
                     return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteEvAction',  '_route' => 'delete_ev',);
                 }
@@ -272,6 +273,15 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // delete_anc
                 if ('/admin/deleteAnc' === $pathinfo) {
                     return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteAncAction',  '_route' => 'delete_anc',);
+=======
+                if (0 === strpos($pathinfo, '/admin/deleteEv') && preg_match('#^/admin/deleteEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_ev')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteEvAction',));
+                }
+
+                // delete_anc
+                if (0 === strpos($pathinfo, '/admin/deleteAnc') && preg_match('#^/admin/deleteAnc/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_anc')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteAncAction',));
+>>>>>>> a861ba0f93e02dbdeafaca2df83529990d0f52fa:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
                 }
 
                 if (0 === strpos($pathinfo, '/admin/categories')) {
@@ -333,6 +343,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             if (0 === strpos($pathinfo, '/annonces')) {
+                if (0 === strpos($pathinfo, '/annonces/newAnnonce')) {
+                    // annonces_new
+                    if ('/annonces/newAnnonce' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::newAnnonceAction',  '_route' => 'annonces_new',);
+                    }
+
+                    // image_new
+                    if (0 === strpos($pathinfo, '/annonces/newAnnonce/newImage') && preg_match('#^/annonces/newAnnonce/newImage/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'image_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ImageController::newImageAction',));
+                    }
+
+                }
+
                 // client_annonces_index
                 if ('/annonces' === $trimmedPathinfo) {
                     if ('GET' !== $canonicalMethod) {
@@ -348,6 +371,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_client_annonces_index:
 
+                // annonces_index_by_categorie
+                if (preg_match('#^/annonces/(?P<categorie>[^/]++)$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_annonces_index_by_categorie;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'annonces_index_by_categorie')), array (  'categorie_controller' => 'FrontBundle:Annonces:indexbyCategorie',));
+                }
+                not_annonces_index_by_categorie:
+
                 // annonces_show
                 if (preg_match('#^/annonces/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
@@ -359,19 +393,26 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_annonces_show:
 
-                // commentairesAnc_new
-                if (0 === strpos($pathinfo, '/annonces/annonce') && preg_match('#^/annonces/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::newAction',));
+            }
+
+            elseif (0 === strpos($pathinfo, '/api')) {
+                // api_homepage
+                if ('/api' === $trimmedPathinfo) {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'api_homepage');
+                    }
+
+                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\DefaultController::indexAction',  '_route' => 'api_homepage',);
                 }
 
-                // commentairesAnc_delete
-                if (0 === strpos($pathinfo, '/annonces/delete_com') && preg_match('#^/annonces/delete_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::deleteAction',));
+                // get_User
+                if (0 === strpos($pathinfo, '/api/user') && preg_match('#^/api/user/(?P<login>[^/]++)/(?P<password>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_User')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\UserApiController::getUserAction',));
                 }
 
-                // commentairesAnc_Edit
-                if (0 === strpos($pathinfo, '/annonces/edit_com') && preg_match('#^/annonces/edit_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::editAction',));
+                // get_All_Annonces
+                if ('/api/allAnnonces' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getAllAnnoncesAction',  '_route' => 'get_All_Annonces',);
                 }
 
             }
@@ -397,7 +438,116 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/re')) {
-            if (0 === strpos($pathinfo, '/reclamations')) {
+            if (0 === strpos($pathinfo, '/reservations')) {
+                // reservation_index
+                if ('/reservations' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_reservation_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'reservation_index');
+                    }
+
+                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReservationController::indexAction',  '_route' => 'reservation_index',);
+                }
+                not_reservation_index:
+
+                // reservation_show
+                if (preg_match('#^/reservations/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_reservation_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReservationController::showAction',));
+                }
+                not_reservation_show:
+
+                // reservation_new
+                if ('/reservations/new' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_reservation_new;
+                    }
+
+                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReservationController::newAction',  '_route' => 'reservation_new',);
+                }
+                not_reservation_new:
+
+                // reservation_edit
+                if (preg_match('#^/reservations/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_reservation_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReservationController::editAction',));
+                }
+                not_reservation_edit:
+
+                // reservation_delete
+                if (preg_match('#^/reservations/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if ('DELETE' !== $canonicalMethod) {
+                        $allow[] = 'DELETE';
+                        goto not_reservation_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ReservationController::deleteAction',));
+                }
+                not_reservation_delete:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/resetting')) {
+                // fos_user_resetting_request
+                if ('/resetting/request' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_resetting_request;
+                    }
+
+                    return array (  '_controller' => 'fos_user.resetting.controller:requestAction',  '_route' => 'fos_user_resetting_request',);
+                }
+                not_fos_user_resetting_request:
+
+                // fos_user_resetting_reset
+                if (0 === strpos($pathinfo, '/resetting/reset') && preg_match('#^/resetting/reset/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_resetting_reset;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_resetting_reset')), array (  '_controller' => 'fos_user.resetting.controller:resetAction',));
+                }
+                not_fos_user_resetting_reset:
+
+                // fos_user_resetting_send_email
+                if ('/resetting/send-email' === $pathinfo) {
+                    if ('POST' !== $canonicalMethod) {
+                        $allow[] = 'POST';
+                        goto not_fos_user_resetting_send_email;
+                    }
+
+                    return array (  '_controller' => 'fos_user.resetting.controller:sendEmailAction',  '_route' => 'fos_user_resetting_send_email',);
+                }
+                not_fos_user_resetting_send_email:
+
+                // fos_user_resetting_check_email
+                if ('/resetting/check-email' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_resetting_check_email;
+                    }
+
+                    return array (  '_controller' => 'fos_user.resetting.controller:checkEmailAction',  '_route' => 'fos_user_resetting_check_email',);
+                }
+                not_fos_user_resetting_check_email:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/reclamations')) {
                 // reclamations_index
                 if ('/reclamations' === $trimmedPathinfo) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
@@ -523,53 +673,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
-            elseif (0 === strpos($pathinfo, '/resetting')) {
-                // fos_user_resetting_request
-                if ('/resetting/request' === $pathinfo) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_fos_user_resetting_request;
-                    }
-
-                    return array (  '_controller' => 'fos_user.resetting.controller:requestAction',  '_route' => 'fos_user_resetting_request',);
-                }
-                not_fos_user_resetting_request:
-
-                // fos_user_resetting_reset
-                if (0 === strpos($pathinfo, '/resetting/reset') && preg_match('#^/resetting/reset/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
-                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                        $allow = array_merge($allow, array('GET', 'POST'));
-                        goto not_fos_user_resetting_reset;
-                    }
-
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_resetting_reset')), array (  '_controller' => 'fos_user.resetting.controller:resetAction',));
-                }
-                not_fos_user_resetting_reset:
-
-                // fos_user_resetting_send_email
-                if ('/resetting/send-email' === $pathinfo) {
-                    if ('POST' !== $canonicalMethod) {
-                        $allow[] = 'POST';
-                        goto not_fos_user_resetting_send_email;
-                    }
-
-                    return array (  '_controller' => 'fos_user.resetting.controller:sendEmailAction',  '_route' => 'fos_user_resetting_send_email',);
-                }
-                not_fos_user_resetting_send_email:
-
-                // fos_user_resetting_check_email
-                if ('/resetting/check-email' === $pathinfo) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_fos_user_resetting_check_email;
-                    }
-
-                    return array (  '_controller' => 'fos_user.resetting.controller:checkEmailAction',  '_route' => 'fos_user_resetting_check_email',);
-                }
-                not_fos_user_resetting_check_email:
-
-            }
-
         }
 
         elseif (0 === strpos($pathinfo, '/commandes')) {
@@ -621,6 +724,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_commandes_edit:
 
+            // commandes_modif
+            if ('/commandes/modif' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_commandes_modif;
+                }
+
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::modifierAction',  '_route' => 'commandes_modif',);
+            }
+            not_commandes_modif:
+
             // commandes_valid
             if (preg_match('#^/commandes/(?P<id>[^/]++)/valid$#s', $pathinfo, $matches)) {
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {
@@ -655,9 +769,78 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+<<<<<<< HEAD:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
         // pdf_show
         if (0 === strpos($pathinfo, '/pdf') && preg_match('#^/pdf/(?P<commande>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'pdf_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\PDFController::pdfshowAction',));
+=======
+        elseif (0 === strpos($pathinfo, '/commentairesAnc')) {
+            // commentairesAnc_new
+            if (0 === strpos($pathinfo, '/commentairesAnc/annonce') && preg_match('#^/commentairesAnc/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::newAction',));
+            }
+
+            // commentairesAnc_delete
+            if (0 === strpos($pathinfo, '/commentairesAnc/delete_com') && preg_match('#^/commentairesAnc/delete_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::deleteAction',));
+            }
+
+            // commentairesAnc_Edit
+            if (0 === strpos($pathinfo, '/commentairesAnc/edit_com') && preg_match('#^/commentairesAnc/edit_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::editAction',));
+            }
+
+        }
+
+        // commercial_annonces_index
+        if ('' === $trimmedPathinfo) {
+            if ('GET' !== $canonicalMethod) {
+                $allow[] = 'GET';
+                goto not_commercial_annonces_index;
+            }
+
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($rawPathinfo.'/', 'commercial_annonces_index');
+            }
+
+            return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::indexCommercialAction',  '_route' => 'commercial_annonces_index',);
+        }
+        not_commercial_annonces_index:
+
+        if (0 === strpos($pathinfo, '/login')) {
+            // fos_user_security_login
+            if ('/login' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_security_login;
+                }
+
+                return array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
+            }
+            not_fos_user_security_login:
+
+            // fos_user_security_check
+            if ('/login_check' === $pathinfo) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_fos_user_security_check;
+                }
+
+                return array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
+            }
+            not_fos_user_security_check:
+
+        }
+
+        // fos_user_security_logout
+        if ('/logout' === $pathinfo) {
+            if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                $allow = array_merge($allow, array('GET', 'POST'));
+                goto not_fos_user_security_logout;
+            }
+
+            return array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
+>>>>>>> a861ba0f93e02dbdeafaca2df83529990d0f52fa:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
         }
 
         if (0 === strpos($pathinfo, '/profile')) {
@@ -811,6 +994,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_evennements_index:
 
+            // evennements_parts
+            if (preg_match('#^/evennements/(?P<id>[^/]++)/particiapants$#s', $pathinfo, $matches)) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_evennements_parts;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_parts')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::listeParAction',));
+            }
+            not_evennements_parts:
+
             // evennements_show
             if (preg_match('#^/evennements/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'evennements_show')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::showAction',));
@@ -918,6 +1112,68 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+<<<<<<< HEAD:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
+=======
+        elseif (0 === strpos($pathinfo, '/messages')) {
+            // fos_message_inbox
+            if ('/messages' === $trimmedPathinfo) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($rawPathinfo.'/', 'fos_message_inbox');
+                }
+
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::inboxAction',  '_route' => 'fos_message_inbox',);
+            }
+
+            // fos_message_sent
+            if ('/messages/sent' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::sentAction',  '_route' => 'fos_message_sent',);
+            }
+
+            // fos_message_search
+            if ('/messages/search' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::searchAction',  '_route' => 'fos_message_search',);
+            }
+
+            // fos_message_deleted
+            if ('/messages/deleted' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deletedAction',  '_route' => 'fos_message_deleted',);
+            }
+
+            // fos_message_thread_new
+            if ('/messages/new' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::newThreadAction',  '_route' => 'fos_message_thread_new',);
+            }
+
+            // fos_message_thread_delete
+            if (preg_match('#^/messages/(?P<threadId>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($requestMethod, array('POST', 'DELETE'))) {
+                    $allow = array_merge($allow, array('POST', 'DELETE'));
+                    goto not_fos_message_thread_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deleteAction',));
+            }
+            not_fos_message_thread_delete:
+
+            // fos_message_thread_undelete
+            if (preg_match('#^/messages/(?P<threadId>[^/]++)/undelete$#s', $pathinfo, $matches)) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_fos_message_thread_undelete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_undelete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::undeleteAction',));
+            }
+            not_fos_message_thread_undelete:
+
+            // fos_message_thread_view
+            if (preg_match('#^/messages/(?P<threadId>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_view')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::threadAction',));
+            }
+
+        }
+
+>>>>>>> a861ba0f93e02dbdeafaca2df83529990d0f52fa:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

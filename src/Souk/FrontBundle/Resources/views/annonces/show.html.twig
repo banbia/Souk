@@ -3,8 +3,6 @@
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
     <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
     <link href="{{ asset('bundles/front/css/flexslider.css') }}" rel="stylesheet"/>
@@ -106,21 +104,25 @@
     {# dev-haifa#}
 
 <!-- Nour's work -->
-{% if annonce.commercial.id != app.user.id %}
-    <div class="content">
-        {% if com==0 %}
-        <a href="#" class="btn left" data-toggle="modal" data-target="#newCom">
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    {% if annonce.commercial.id != app.user.id %}
+        <div class="content">
+            {% if com==0 %}
+                <a href="#" class="btn left" data-toggle="modal" data-target="#newCom">
 
-            <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Commander</span>
-        </a>
-        {% else %}
-            <a href="#" class="btn left" data-toggle="modal" data-target="#noCom">
+                    <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Commander</span>
+                </a>
 
-                <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Commander</span>
-            </a>
-        {% endif %}
-    </div>
+            {% else %}
+                <a href="#" class="btn left" data-toggle="modal" data-target="#noCom">
+
+                    <span class="right title"><span class="arrow-right"></span><span class=" fa fa-check"></span>    Commander</span>
+                </a>
+            {% endif %}
+        </div>
 {% endif %}
+{% endif %}
+
     <!-- Modal new com-->
     <div id="newCom" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -170,7 +172,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>Vus avez déjà une commande en attente pour cette annonce.</p>
+                    <p>Vous avez déjà une commande en attente pour cette annonce.</p>
 
 
                 </div>
@@ -182,24 +184,112 @@
             </div>
         </div>
     </div>
-    {{ render(controller('FrontBundle:Annonces:new', { 'annonce':annonce.id  })) }}
+    <!--- safa Boufares's work start-->
 
+    <!-- /row -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <a href="{{ path('signalsAncN_new',{'annonce':annonce.id}) }}"><i class="fa fa-flag pull-right"></i></a>
+                <br/>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- test si l'utilisateur est connecté -->
+            {{ form_start(formC) }}
+            {{ form_errors(formC.contenu) }}
+            {{ form_widget(formC.contenu, {'attr': {'class': 'comment form-control'}}) }}
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {% if is_granted("ROLE_CLIENT")  %}
+                        <button type="submit" class="btn sign pull-right"><i class="fa fa-commenting-o"></i> Commenter </button>
+
+                    {% endif %}
+                {% else %}
+                    <button type="button" class="btn sign pull-right" data-toggle="modal" data-target="#noComment">
+
+                        <i class="fa fa-commenting-o"></i> Commenter
+                    </button>
+                {% endif %}
+            {{ form_end(formC) }}
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+
+
+        {% for comn in coms %}
+            <div class="col-md-12">
+
+                <div class="one-comment">
+                    <div class="col-sm-1">
+                        <div class="thumbnail">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                        </div>
+                        <!-- /thumbnail -->
+                    </div>
+                    <!-- /col-sm-1 -->
+
+                    <div class="col-sm-5">
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading">
+                                <strong>{{ comn.client.username }}</strong> <label class="text-muted text-right"> commenté le {{ comn.dateCmt|date('D-M-Y') }} </label>
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                    {% if app.user.id  == comn.client.id %}
+                                        <a href="{{ path('commentairesAnc_delete',{'com':comn.id,'annonce':annonce.id}) }}"><i class="fa fa-trash-o"></i></a>
+                                        <a href="{{ path('commentairesAnc_Edit',{'com':comn.id,'annonce':annonce.id}) }}"><i class="fa fa-edit"></i></a>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                            <div class="panel-body">
+                                {{ comn.contenu }}
+                            </div>
+                            <!-- /panel-body -->
+                        </div>
+                        <!-- /panel panel-default -->
+                    </div>
+                    <!-- /col-sm-5 -->
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- /row -->
+    <!-- Modal no comment -->
+    <div id="noComment" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Commentaires </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="col-md-12">
+                        <p>Vous devez se connecter afin de pouvoir ajouter un  <b>commentaire</b>.</p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--- safa Boufares 's work end-->
 {% endblock body %}
 {% block js %}
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $( function() {
-            $( "#souk_backbundle_commandes_dateCom" ).datepicker({
-                altField: "#souk_backbundle_commandes_dateCom",
-                altFormat: "yy-mm-dd"
-            });
-        } );
-    </script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
     <script src="{{ asset('bundles/front/js/rating.js') }}"></script>
     <script src="{{ asset('bundles/front/js/demo.css') }}"></script>
     <script src="{{ asset('bundles/front/js/shCore.css') }}"></script>
@@ -225,4 +315,14 @@
 
     </script>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+        <script>
+        $( function() {
+            $( "#souk_backbundle_commandes_dateCom" ).datepicker({
+                altField: "#souk_backbundle_commandes_dateCom",
+                altFormat: "yy-mm-dd"
+            });
+        } );
+    </script>
 {% endblock js %}

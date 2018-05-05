@@ -1,15 +1,17 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
-{% block body %}
-    <h1>Evennement</h1>
+{% block style %}
+<link href="{{ asset('bundle/front/css/style_Salsabil.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock style %}
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ evennement.id }}</td>
-            </tr>
-            <tr>
+{% block body %}
+    <h1> Evenement </h1>
+<div class="row form-groupEvent">
+   <div class="col-md-12">
+    <table  class="table table-striped">
+        <tbody class="thead-light">
+
+            <tr >
                 <th>Titre</th>
                 <td>{{ evennement.titre }}</td>
             </tr>
@@ -18,11 +20,11 @@
                 <td>{{ evennement.description }}</td>
             </tr>
             <tr>
-                <th>Datedeb</th>
+                <th>Date debut</th>
                 <td>{% if evennement.dateDeb %}{{ evennement.dateDeb|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Datefin</th>
+                <th>Date fin</th>
                 <td>{% if evennement.dateFin %}{{ evennement.dateFin|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
@@ -31,29 +33,143 @@
             </tr>
             <tr>
                 <th>Prix</th>
-                <td>{{ evennement.prix }}</td>
+                <td>{{ evennement.prix}} DT </td>
             </tr>
-            <tr>
+            {#<tr>
                 <th>Etat</th>
                 <td>{{ evennement.etat }}</td>
-            </tr>
+            </tr>#}
         </tbody>
     </table>
+   </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('evennements_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('evennements_edit', { 'id': evennement.id }) }}">Edit</a>
-        </li>
-        <li>
-            <a href="{{ path('evennements_delete', { 'id': evennement.id }) }}">Delete</a>
+    {% if is_granted('ROLE_CLIENT') %}
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="btn btn-primary" type="submit" value="Participer" />
+    {{ form_end(form) }}
+    {% endif %}
 
-        </li>
-    </ul>
 
+    <a class="btn btn-success" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to the liste </i> </a>
+
+    {% if is_granted('ROLE_COM') %}
+        {% if evennement.commercial.id == app.user.id %}
+            <a href="{{ path('evennements_parts',{'id':evennement.id}) }}" class="btn btn-info"><i class="fa fa-list"></i> Consulter liste des partciapants </a>
+        {% endif  %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+    <a class="btn btn-warning"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"> Edit </i></a>
+    <a class="btn btn-danger"  href="{{ path('evennements_delete', { 'id': evennement.id }) }}"> <i class="fa fa-close"></i> Delete</a>
+
+    {{ form_end(form) }}
+    {% endif %}
     {{ render(controller('FrontBundle:Evennements:newEvs', { 'evennement':evennement.id  })) }}
 
+</div>
+=======
+    <!--- safa Boufares's work start-->
+        <!-- /row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <a href="{{ path('signalsEvsN_new', {'evennement' : evennement}) }}"><i class="fa fa-flag pull-right"></i></a>
+                    <br/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- test si l'utilisateur est connecté -->
+                {{ form_start(formC) }}
+                {{ form_errors(formC.contenu) }}
+                {{ form_widget(formC.contenu, {'attr': {'class': 'comment form-control'}}) }}
 
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {% if is_granted("ROLE_CLIENT")  %}
+                        <button type="submit" class="btn sign pull-right"><i class="fa fa-commenting-o"></i> Commenter </button>
+
+                    {% endif %}
+                {% else %}
+                    <button type="button" class="btn sign pull-right" data-toggle="modal" data-target="#noComment">
+
+                        <i class="fa fa-commenting-o"></i> Commenter
+                    </button>
+                {% endif %}
+               {{ form_end(formC) }}
+                <br>
+                <br>
+        </div>
+        </div>
+        <div class="row">
+            {% for com in comsEvs %}
+
+
+                <div class="col-md-12">
+
+                    <div class="one-comment">
+                        <div class="col-sm-1">
+                            <div class="thumbnail">
+                                <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                            </div>
+                            <!-- /thumbnail -->
+                        </div>
+                        <!-- /col-sm-1 -->
+
+                        <div class="col-sm-5">
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">
+                                    <strong>{{ com.client.username }}</strong> <label class="text-muted text-right"> commenté le {{ com.dateCmt|date('D-M-Y') }} </label>
+                                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                        {% if app.user.id  == com.client.id %}
+                                            <a href="{{ path('commentairesEvs_delete',{'evennement':com.evennement.id,'com':com.id}) }}"><i class="fa fa-trash-o"></i></a>
+                                            <a href="{{ path('commentairesEvs_Edit',{'evennement':com.evennement.id,'com':com.id}) }}"><i class="fa fa-edit"></i></a>
+                                        {% endif %}
+                                    {% endif %}
+                                </div>
+                                <div class="panel-body">
+                                    {{ com.contenu }}
+                                </div>
+                                <!-- /panel-body -->
+                            </div>
+                            <!-- /panel panel-default -->
+                        </div>
+                        <!-- /col-sm-5 -->
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    <!-- /row -->
+    <!-- Modal no comment -->
+    <div id="noComment" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Commentaires </h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="col-md-12">
+                        <p>Vous devez se connecter afin de pouvoir ajouter un  <b>commentaire</b>.</p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>  Fermer</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--- safa Boufares 's work end-->
 {% endblock %}
+{% block js %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock js %}
+

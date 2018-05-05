@@ -51,6 +51,14 @@ p {margin: 0;}
 .member {
 	background: #381c7b91;
 	color: #eee;
+<<<<<<< HEAD
+<<<<<<< HEAD
+	margin-right: 35px;
+=======
+margin-right:35px;
+>>>>>>> b0565a45bcb646b7ebc7c0fff1adba614fad1a90
+=======
+>>>>>>> d4d7a388452eeab3122d0563146e20417b3a9247
 	text-align: center;
 	padding: 13px;
 }
@@ -3494,4 +3502,12 @@ ul {
 	-ms-transition:.5s all;
 	transition:.5s all;
 }
+<<<<<<< HEAD
 /*-- //menu --*/
+=======
+<<<<<<< HEAD
+/*-- //menu --*/
+=======
+/*-- //menu --*/
+>>>>>>> ceaa21feb88ad4691f3b62f607ca612711bdcb83
+>>>>>>> origin/master
