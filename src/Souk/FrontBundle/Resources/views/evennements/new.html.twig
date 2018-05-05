@@ -1,7 +1,7 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
 {% block body %}
-    <h1>Evennement creation</h1>
+    <h1>Evenement creation</h1>
 
     {{ form_start(form) }}
        {#{{ form_widget(form) }}#}
@@ -42,13 +42,14 @@
     {{ form_errors(form.prix) }}
     {{ form_widget(form.prix, {'attr': {'class': 'comment form-control'}}) }}
     </div>
-</div>
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('evennements_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    <div class="col-md-6">
+
+
+
+    </div>
+</div>
+    <button type="submit" class="btn btn-success" ><i class="fa fa-check"></i>  Valider  </button>
+    <a class="btn btn-default" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to the liste </i> </a>
+    {{ form_end(form) }}
 {% endblock %}

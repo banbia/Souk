@@ -38,7 +38,7 @@ class SignalsAnc
     private $dateSg;
     /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Annonces", inversedBy="signals")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=true,onDelete="CASCADE")
      */
     private $annonce;
 

@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\DomCrawler\Image;
 
 /**
  * Annonces
@@ -119,7 +120,7 @@ class Annonces
         return $this->commandes;
     }
     /**
-     * @return Collection|Annonces[]
+     * @return Collection|Images[]
      */
     public function getImages()
     {

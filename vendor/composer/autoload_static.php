@@ -19,6 +19,10 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
     );
 
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Vich\\UploaderBundle\\' => 20,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -56,6 +60,10 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
         array (
             'Monolog\\' => 8,
         ),
+        'K' => 
+        array (
+            'Knp\\Bundle\\SnappyBundle\\' => 24,
+        ),
         'J' => 
         array (
             'JMS\\SerializerBundle\\' => 21,
@@ -73,7 +81,6 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
         array (
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
-            'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
@@ -85,6 +92,10 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
     );
 
     public static $prefixDirsPsr4 = array (
+        'Vich\\UploaderBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vich/uploader-bundle',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -185,6 +196,10 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Knp\\Bundle\\SnappyBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-snappy-bundle',
+        ),
         'JMS\\SerializerBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/jms/serializer-bundle',
@@ -208,10 +223,6 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
         'Doctrine\\Common\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
-        ),
-        'Doctrine\\Common\\Annotations\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
         ),
         'Doctrine\\Common\\' => 
         array (
@@ -275,6 +286,13 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
                 0 => __DIR__ . '/..' . '/jms/metadata/src',
             ),
         ),
+        'K' => 
+        array (
+            'Knp\\Snappy' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-snappy/src',
+            ),
+        ),
         'J' => 
         array (
             'JMS\\Serializer' => 
@@ -314,6 +332,10 @@ class ComposerStaticInit1c56b9f8baaef3511324c8a024f1eb72
             'Doctrine\\Common\\Collections\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/collections/lib',
+            ),
+            'Doctrine\\Common\\Annotations\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
             ),
         ),
     );

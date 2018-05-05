@@ -61,7 +61,7 @@ class CommentairesEvs
     }
     /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Evennements", inversedBy="commentaires")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=true,onDelete="CASCADE")
      */
     private $evennement;
 
