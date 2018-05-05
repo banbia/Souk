@@ -12,7 +12,6 @@ use Souk\BackBundle\Form\ReservationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
@@ -82,11 +81,8 @@ class EvennementsController extends Controller
      * Finds and displays a evennement entity.
      *
      */
-<<<<<<< HEAD
     public function showAction(Request $request,Evennements $evennement)
-=======
-    public function showAction(Request $request, Evennements $evennement )
->>>>>>> ceaa21feb88ad4691f3b62f607ca612711bdcb83
+
     {
         /* safa Boufare Begin*/
         //cnx bd
@@ -100,8 +96,6 @@ class EvennementsController extends Controller
         $formC = $this->createForm(CommentairesEvsType::class,$com_Evs);
 
         $formViewC=$formC->createView();
-
-<<<<<<< HEAD
         $reservation = new Reservation();
         $form = $this->createForm('Souk\BackBundle\Form\ReservationType', $reservation);
         $form->handleRequest($request);
@@ -119,33 +113,28 @@ class EvennementsController extends Controller
 
             return $this->redirectToRoute('reservation_show', array('id' => $reservation->getId()));
         }
-
+        $formC->handleRequest($request);
+         if ($formC->isSubmitted()&& $formC->isValid()) {
+             ///récupérer user
+             $user = $this->getUser();
+             $com_Evs->setDateCmt(new \DateTime('now'));
+             $com_Evs->setClient($user);
+             $com_Evs->setEvennement($evennement);
+             $cm->persist($com_Evs);
+             $cm->flush();
+             return $this->redirectToRoute('evennements_show',array("id"=>$evennement->getId()));
+         }
 
         return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
             'reservation' => $reservation,
+            'com_Evs'=>$comsEvs,
             'form' => $form->createView(),
-=======
-        $formC->handleRequest($request);
+            'formC'=>$formViewC));
 
-        if ($formC->isSubmitted()&& $formC->isValid()) {
-            ///récupérer user
-            $user = $this->getUser();
-            $com_Evs->setDateCmt(new \DateTime('now'));
-            $com_Evs->setClient($user);
-            $com_Evs->setEvennement($evennement);
-            $cm->persist($com_Evs);
-            $cm->flush();
-            return $this->redirectToRoute('evennements_show',array("id"=>$evennement->getId()));
-        }
-        /* safa Boufare End*/
-        return $this->render('FrontBundle:evennements:show.html.twig', array(
-            'evennement' => $evennement,
-            '$com_Evs'=>$comsEvs,
-            'formC'=>$formViewC,
 
->>>>>>> ceaa21feb88ad4691f3b62f607ca612711bdcb83
-        ));
+
+
     }
 
     /**
