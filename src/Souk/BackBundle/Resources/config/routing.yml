@@ -1,11 +1,3 @@
-
-back_abonnements:
-    resource: "@BackBundle/Resources/config/routing/abonnements.yml"
-    prefix:   /abonnements
-
-
-
-
 back_abonnements:
     resource: "@BackBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements
@@ -37,3 +29,6 @@ delete_ev:
 delete_anc:
     path:     /deleteAnc/{annonce}
     defaults: { _controller: BackBundle:Signals:deleteAnc }
+back_stats:
+    resource: "@BackBundle/Resources/config/routing/stats.yml"
+    prefix:   /stats
