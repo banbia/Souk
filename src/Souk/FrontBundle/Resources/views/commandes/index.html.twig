@@ -47,6 +47,11 @@
 
                                                 <i class="fa fa-times"></i>    Annuler
                                             </a>
+                                            <a href="{{ path('pdf_show',{'commande':commande.id}) }}}) }}" class="btn btn-info">
+
+                                            <i class="fa fa-file-pdf-o"></i>    PDF
+                                         </a>
+
                                     {% else %}
                                             <!-- Nour's work -->
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#noEdit">
