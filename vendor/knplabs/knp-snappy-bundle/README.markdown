@@ -1,27 +1,27 @@
 KnpSnappyBundle
 ===============
 
-[Snappy][snappy] is a PHP (5.3+) wrapper for the [wkhtmltopdf][wkhtmltopdf] conversion utility.
+[![Build Status](https://travis-ci.org/KnpLabs/KnpSnappyBundle.svg?branch=master)](https://travis-ci.org/KnpLabs/KnpSnappyBundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/KnpLabs/KnpSnappyBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/KnpLabs/KnpSnappyBundle/?branch=master)
+[![StyleCI](https://styleci.io/repos/743218/shield?branch=master)](https://styleci.io/repos/743218)
+[![knpbundles.com](http://knpbundles.com/KnpLabs/KnpSnappyBundle/badge-short)](http://knpbundles.com/KnpLabs/KnpSnappyBundle)
+
+[Snappy][snappy] is a PHP (5.6+) wrapper for the [wkhtmltopdf][wkhtmltopdf] conversion utility.
 It allows you to generate either pdf or image files from your html documents, using the webkit engine.
 
 The KnpSnappyBundle provides a simple integration for your Symfony project.
 
-[![Build Status](https://secure.travis-ci.org/KnpLabs/KnpSnappyBundle.png)](http://travis-ci.org/KnpLabs/KnpSnappyBundle)
+Current maintainer(s)
+---------------------
 
-[![knpbundles.com](http://knpbundles.com/KnpLabs/KnpSnappyBundle/badge-short)](http://knpbundles.com/KnpLabs/KnpSnappyBundle)
+* [NiR-](https://github.com/NiR-)
 
 Installation
 ------------
 
-With [composer](http://packagist.org), add:
+With [composer](http://packagist.org), require:
 
-```json
-{
-    "require": {
-        "knplabs/knp-snappy-bundle": "dev-master"
-    }
-}
-```
+`composer require knplabs/knp-snappy-bundle`
 
 Then enable it in your kernel:
 
@@ -57,7 +57,15 @@ If you want to change temporary folder which is ```sys_get_temp_dir()``` by defa
 ```yaml
 # app/config/config.yml
 knp_snappy:
-    temporary_folder: %kernel.cache_dir%/snappy
+    temporary_folder: "%kernel.cache_dir%/snappy"
+```
+
+You can also configure the timeout used by the generators with `process_timeout`:
+
+```yaml
+# app/config/config.yml
+knp_snappy:
+    process_timeout: 20 # In seconds
 ```
 
 Usage
@@ -68,13 +76,13 @@ The bundle registers two services:
  - the `knp_snappy.image` service allows you to generate images;
  - the `knp_snappy.pdf` service allows you to generate pdf files.
 
-### Generate an image from an URL
+### Generate an image from a URL
 
 ```php
 $container->get('knp_snappy.image')->generate('http://www.google.fr', '/path/to/the/image.jpg');
 ```
 
-### Generate a pdf document from an URL
+### Generate a pdf document from a URL
 
 ```php
 $container->get('knp_snappy.pdf')->generate('http://www.google.fr', '/path/to/the/file.pdf');
@@ -103,51 +111,62 @@ $this->get('knp_snappy.pdf')->generateFromHtml(
 ### Render an image as response from a controller
 
 ```php
-$html = $this->renderView('MyBundle:Foo:bar.html.twig', array(
-    'some'  => $vars
-));
+use Knp\Bundle\SnappyBundle\Snappy\Response\JpegResponse;
 
+class SomeController
+{
+    public function imageAction()
+    {
+        $html = $this->renderView('MyBundle:Foo:bar.html.twig', array(
+            'some'  => $vars
+        ));
 
-return new Response(
-    $this->get('knp_snappy.image')->getOutputFromHtml($html),
-    200,
-    array(
-        'Content-Type'          => 'image/jpg',
-        'Content-Disposition'   => 'filename="image.jpg"'
-    )
-);
+        return new JpegResponse(
+            $this->get('knp_snappy.image')->getOutputFromHtml($html),
+            'image.jpg'
+        );
+    }
+}
 ```
 
 ### Render a pdf document as response from a controller
 
 ```php
-$html = $this->renderView('MyBundle:Foo:bar.html.twig', array(
-    'some'  => $vars
-));
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 
-return new Response(
-    $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
-    200,
-    array(
-        'Content-Type'          => 'application/pdf',
-        'Content-Disposition'   => 'attachment; filename="file.pdf"'
-    )
-);
+class SomeController extends Controller
+{
+    public function pdfAction()
+    {
+        $html = $this->renderView('MyBundle:Foo:bar.html.twig', array(
+            'some'  => $vars
+        ));
+
+        return new PdfResponse(
+            $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
+            'file.pdf'
+        );
+    }
+}
 ```
 
 ### Render a pdf document with a relative url inside like css files
 
 ```php
-$pageUrl = $this->generateUrl('homepage', array(), true); // use absolute path!
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 
-return new Response(
-    $this->get('knp_snappy.pdf')->getOutput($pageUrl),
-    200,
-    array(
-        'Content-Type'          => 'application/pdf',
-        'Content-Disposition'   => 'attachment; filename="file.pdf"'
-    )
-);
+class SomeController extends Controller
+{
+    public function pdfAction()
+    {
+        $pageUrl = $this->generateUrl('homepage', array(), true); // use absolute path!
+
+        return new PdfResponse(
+            $this->get('knp_snappy.pdf')->getOutput($html),
+            'file.pdf'
+        );
+    }
+}
 ```
 
 Credits

@@ -31,8 +31,7 @@ class UserApiController extends Controller
 
       return new JsonResponse($formatted);
 
-    }
-    else{
+    }else{
 
       $formatted = $serializer->normalize($user, 'json');
       return new JsonResponse($formatted);

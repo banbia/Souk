@@ -1,0 +1,3 @@
+stats_index:
+    path:     /
+    defaults: { _controller: BackBundle:Stats:index }

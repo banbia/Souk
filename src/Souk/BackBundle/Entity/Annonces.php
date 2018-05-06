@@ -95,7 +95,6 @@ class Annonces
        $this->signals = new ArrayCollection();
         $this->commentaires = new ArrayCollection();
         $this->commandes = new ArrayCollection();
-        $this->images = new ArrayCollection();
     }
 
     /**

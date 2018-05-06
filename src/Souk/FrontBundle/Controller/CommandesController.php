@@ -131,7 +131,7 @@ class CommandesController extends Controller
                 $date = new \DateTime($date);
 
                 //$date = new \DateTime($date);
-                $date->format('Y-m-d H:i');
+                $date->format('Y-m-d');
                 $commande->setDateCom($date);
 
 
