@@ -28,18 +28,18 @@ class CommandesApiController extends Controller
 
         }
 
-        /*
-            $formatted= $serializer->normalize($annonce,'json');
-            return new JsonResponse($formatted);*/
+
         $normalizer = new ObjectNormalizer();
         $normalizer->setCircularReferenceLimit(1);
         $serializer = new Serializer([$normalizer]);
+        $serializer->normalize(new \DateTime());
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
 
         /* $serializer = new Serializer(array($normalizer), array(new JsonEncoder()));*/
         $formatted= $serializer->normalize($commandes, 'json');
+
         return new JsonResponse($formatted);
     }
     /******* crud mobile (web service) ***********************/

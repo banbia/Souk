@@ -13,3 +13,8 @@ api_commandes:
 get_All_Annonces:
     path:     /allAnnonces
     defaults: { _controller: ApiBundle:AnnoncesApi:getAllAnnonces}
+
+#service Soumaya
+api_commandes:
+    resource: "@ApiBundle/Resources/config/routing/reclamtions.yml"
+    prefix:   /reclamations
