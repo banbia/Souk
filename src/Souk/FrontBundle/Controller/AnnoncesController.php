@@ -21,12 +21,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class AnnoncesController extends Controller
 {
 
-<<<<<<< HEAD
     /**
      * Finds and displays a annonce entity.
      *
      */
-    public function showAction(Request $request,Annonces $annonce)
+    public function showAction(Request $request, Annonces $annonce)
     {
 
 
@@ -38,7 +37,7 @@ class AnnoncesController extends Controller
 
         $form = $this->createForm('Souk\BackBundle\Form\CommandesType', $commande);
         $form->handleRequest($request);
-        $find_com = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"annonce"=>$annonce,"etat"=>0));
+        $find_com = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "annonce" => $annonce, "etat" => 0));
         $com = count($find_com);
         if ($form->isSubmitted() && $form->isValid()) {
 
@@ -57,15 +56,15 @@ class AnnoncesController extends Controller
             $commandes = array();
             if ($this->get('security.authorization_checker')->isGranted('ROLE_CLIENT')) {
 
-                $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>1));
-                $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user,"etat"=>0));
-                $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
+                $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "etat" => 1));
+                $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "etat" => 0));
+                $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user));
 
-            }else if ($this->get('security.authorization_checker')->isGranted('ROLE_COM')) {
+            } else if ($this->get('security.authorization_checker')->isGranted('ROLE_COM')) {
 
                 $commandes_attente = $em->getRepository('BackBundle:Commandes')->attentesCommandesCommercial($user->getId());
                 $commandes_confirme = $em->getRepository('BackBundle:Commandes')->confirmesCommandesCommercial($user->getId());
-                $commandes=$em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($user->getId());
+                $commandes = $em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($user->getId());
 
             }
             $em->flush();
@@ -75,18 +74,18 @@ class AnnoncesController extends Controller
         /* Nour's Work End*/
         /* safa Boufare Begin*/
         //extraire la liste des commentaires d'une annonce
-        $coms = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("annonce"=>$annonce->getId()));
+        $coms = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("annonce" => $annonce->getId()));
         //ajout d'un noveau commentaire
 
-        $com_Anc =new CommentairesAnc();
+        $com_Anc = new CommentairesAnc();
 
-        $formC = $this->createForm(CommentairesAncType::class,$com_Anc);
+        $formC = $this->createForm(CommentairesAncType::class, $com_Anc);
 
-        $formViewC=$formC->createView();
+        $formViewC = $formC->createView();
 
         $formC->handleRequest($request);
 
-        if ($formC->isSubmitted()&& $formC->isValid()) {
+        if ($formC->isSubmitted() && $formC->isValid()) {
             ///récupérer user
             $user = $this->getUser();
             ///récupérer annonce
@@ -95,78 +94,13 @@ class AnnoncesController extends Controller
             $com_Anc->setAnnonce($annonce);
             $em->persist($com_Anc);
             $em->flush();
-            return $this->redirectToRoute('annonces_show',array("id"=>$annonce->getId()));
+            return $this->redirectToRoute('annonces_show', array("id" => $annonce->getId()));
         }
         /* safa Boufare End*/
 
 
 
 
-        return $this->render('FrontBundle:annonces:show.html.twig', array(
-            'annonce' => $annonce,
-            'commande' => $commande,
-            'form' => $form->createView(),
-            'com'=>$com,
-            'coms'=>$coms,
-            'formC'=>$formViewC,
-
-        ));
-=======
-  /**
-   * Finds and displays a annonce entity.
-   *
-   */
-  public function showAction(Request $request, Annonces $annonce)
-  {
-
-
-    /* Nour's Work Start*/
-    $commande = new Commandes();
-    $user = $this->getUser();
-    $em = $this->getDoctrine()->getManager();
-    $annonce = $em->getRepository('BackBundle:Annonces')->find($annonce);
-
-    $form = $this->createForm('Souk\BackBundle\Form\CommandesType', $commande);
-    $form->handleRequest($request);
-    $find_com = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "annonce" => $annonce, "etat" => 0));
-    $com = count($find_com);
-    if ($form->isSubmitted() && $form->isValid()) {
-
-
-      $commande->setAnnonce($annonce);
-      //var_dump('<pre>'.$commande->getDateCom().'</pre>');die;
-      $now = new \DateTime($commande->getDateCom());
-      $commande->setDateCom($now);
-      $commande->setEtat(0);//0 => en attente
-
-      $commande->setClient($user);
-      $em->persist($commande);
-
-      $commandes_confirme = array();
-      $commandes_attente = array();
-      $commandes = array();
-      if ($this->get('security.authorization_checker')->isGranted('ROLE_CLIENT')) {
-
-        $commandes_confirme = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "etat" => 1));
-        $commandes_attente = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user, "etat" => 0));
-        $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client" => $user));
-
-      } else if ($this->get('security.authorization_checker')->isGranted('ROLE_COM')) {
-
-        $commandes_attente = $em->getRepository('BackBundle:Commandes')->attentesCommandesCommercial($user->getId());
-        $commandes_confirme = $em->getRepository('BackBundle:Commandes')->confirmesCommandesCommercial($user->getId());
-        $commandes = $em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($user->getId());
-
-      }
-      $em->flush();
-      return $this->render('FrontBundle:commandes:index.html.twig', array(
-        'commandes' => $commandes,
-        'commandes_attente' => $commandes_attente,
-        'commandes_confirme' => $commandes_confirme,
-      ));
-      //return $this->redirectToRoute('commandes_show', array('id' => $commande->getId()));
->>>>>>> 59062ae337db9e3978c834462c51e99dd90cc5c3
-    }
     /* Nour's Work End*/
     /* safa Boufare Begin*/
     //extraire la liste des commentaires d'une annonce
@@ -194,16 +128,16 @@ class AnnoncesController extends Controller
     }
     /* safa Boufare End*/
 
+        return $this->render('FrontBundle:annonces:show.html.twig', array(
+            'annonce' => $annonce,
+            'commande' => $commande,
+            'form' => $form->createView(),
+            'com' => $com,
+            'coms' => $coms,
+            'formC' => $formViewC,
 
-    return $this->render('FrontBundle:annonces:show.html.twig', array(
-      'annonce' => $annonce,
-      'commande' => $commande,
-      'form' => $form->createView(),
-      'com' => $com,
-      'coms' => $coms,
-      'formC' => $formViewC,
+        ));
 
-    ));
   }
 
   public function deleteAction($com, $annonce)

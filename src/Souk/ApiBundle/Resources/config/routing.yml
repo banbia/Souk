@@ -1,20 +1,19 @@
 api_homepage:
     path:     /
     defaults: { _controller: ApiBundle:Default:index }
+#web service connexion
 get_User:
     path:     /user/{login}/{password}
     defaults: { _controller: ApiBundle:UserApi:getUser}
-<<<<<<< HEAD
 #web service Nour Banbia
 liste_commandes:
-    path:     /liste/{id}
-    defaults: { _controller: "FrontBundle:Commandes:liste" }
+    path:     /commandes/liste/{id}
+    defaults: { _controller: ApiBundle:CommandesApi:liste }
 
 create_commande:
-    path:     /{annonce}/{date}/{quantite}/{client}
-    defaults: { _controller: "FrontBundle:Commandes:create" }
-=======
+    path:     /commandes/new/{annonce}/{date}/{quantite}/{client}
+    defaults: { _controller: ApiBundle:CommandesApi:create }
+#web service Haifa Daoud
 get_All_Annonces:
     path:     /allAnnonces
     defaults: { _controller: ApiBundle:AnnoncesApi:getAllAnnonces}
->>>>>>> 59062ae337db9e3978c834462c51e99dd90cc5c3

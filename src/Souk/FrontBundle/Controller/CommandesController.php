@@ -6,11 +6,8 @@ use JMS\Serializer\SerializerBuilder;
 use Souk\BackBundle\Entity\Commandes;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
-<<<<<<< HEAD
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-=======
->>>>>>> 59062ae337db9e3978c834462c51e99dd90cc5c3
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -216,100 +213,5 @@ class CommandesController extends Controller
         ;
     }
 
-    /******* crud mobile (web service) ***********************/
-    public function listeAction(Request $request, $id){
-        $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('BackBundle:Commandes')->find($id);
-        var_dump($user->get('security.role_hierarchy.roles'));
-        if ($user->isGranted('ROLE_CLIENT')) {
 
-            $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
-
-        }else if ($user->roles->contains('ROLE_COM')) {
-
-            $commandes=$em
-                ->createQueryBuilder('c')
-                ->from('BackBundle:Commandes','c')
-                ->join('BackBundle:Annonces','a')
-                ->select(array('c', 'a'))
-                ->where('c.annonce=a.id and a.commercial= :user')
-                ->setParameter('user',$user)
-                ->getQuery()
-                ->getResult();
-
-        }
-
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($commandes, 'json');
-
-        return new JsonResponse($formatted);
-    }
-
-
-
-
-    public function createAction(Request $request,$annonce,$date,$quantite,$client)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $commande= new Commandes();
-        $commande->setAnnonce($annonce);
-        $commande->setClient($client);
-        $commande->setQuantite($quantite);
-        $commande->setEtat(0);
-        $commande->setDateCom(new \DateTime($date));
-
-        $em->persist($commande);
-
-        $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($commande, 'json');
-
-        return new JsonResponse($formatted);
-
-    }
-    public function modifAction(Request $request,$com,$date,$quantite)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $commande= new Commandes();
-        $commande->setId($com);
-        $commande->setQuantite($quantite);
-        $commande->setDateCom(new \DateTime($date));
-        $em->persist($commande);
-
-        $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($commande, 'json');
-
-        return new JsonResponse($formatted);
-
-    }
-    public function annulerAction(Request $request,$com)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $commande= new Commandes();
-        $commande->setId($com);
-        $em->remove($commande);
-
-        $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($commande, 'json');
-
-        return new JsonResponse($formatted);
-
-    }
-    public function confirmerAction(Request $request,$com)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $commande= new Commandes();
-        $commande->setId($com);
-        $commande->setEtat(1);
-        $em->persist($commande);
-
-        $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($commande, 'json');
-
-        return new JsonResponse($formatted);
-
-    }
 }
