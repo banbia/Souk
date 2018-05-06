@@ -5,14 +5,10 @@ api_homepage:
 get_User:
     path:     /user/{login}/{password}
     defaults: { _controller: ApiBundle:UserApi:getUser}
-#web service Nour Banbia
-liste_commandes:
-    path:     /commandes/liste/{id}
-    defaults: { _controller: ApiBundle:CommandesApi:liste }
-
-create_commande:
-    path:     /commandes/new/{annonce}/{date}/{quantite}/{client}
-    defaults: { _controller: ApiBundle:CommandesApi:create }
+#nour service
+api_commandes:
+    resource: "@ApiBundle/Resources/config/routing/commandes.yml"
+    prefix:   /commandes
 #web service Haifa Daoud
 get_All_Annonces:
     path:     /allAnnonces
