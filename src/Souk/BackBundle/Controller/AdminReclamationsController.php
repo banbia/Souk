@@ -16,7 +16,7 @@ class AdminReclamationsController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $reclamations = $em->getRepository('BackBundle:Reclamations')->findAll();
+        $reclamations = $em->createQuery("SELECT d FROM BackBundle:Reclamations d order by d.dateRec desc")->getResult();
 
         return $this->render('BackBundle:reclamations:index.html.twig', array(
             'reclamations' => $reclamations,

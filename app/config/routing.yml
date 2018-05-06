@@ -14,6 +14,12 @@ front:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+
+
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /messages
+
 # app/config/routing.yml
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

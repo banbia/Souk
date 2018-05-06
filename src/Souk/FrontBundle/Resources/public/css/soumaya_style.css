@@ -14,3 +14,15 @@
 .pShow{
     padding: 15px;
 }
+
+.btn-rechercher{
+background: white;
+    border: 2px solid #9170E4;
+    border-radius: 5px;
+}
+
+.Title{
+    width: 100%;
+    font-size:35px;
+    text-align:center;
+}

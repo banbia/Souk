@@ -30,6 +30,7 @@
         </li>
         <li>
             <a href="{{ path('commandes_edit', { 'id': commande.id }) }}">Edit</a>
+            <a href="{{ path('pdf_show',{'commande':commande.id}) }}"> pdf</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
