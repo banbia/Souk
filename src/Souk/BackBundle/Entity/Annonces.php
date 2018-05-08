@@ -54,7 +54,7 @@ class Annonces
     private $disponible;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_creation", type="date")
      */
@@ -95,7 +95,6 @@ class Annonces
        $this->signals = new ArrayCollection();
         $this->commentaires = new ArrayCollection();
         $this->commandes = new ArrayCollection();
-        $this->images = new ArrayCollection();
     }
 
     /**

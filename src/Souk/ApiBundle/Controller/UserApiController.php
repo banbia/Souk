@@ -31,6 +31,10 @@ class UserApiController extends Controller
             ->findBy(array("username" => $login));
         if (!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt())) {
 
+<<<<<<< HEAD
+=======
+    }else{
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
 
             $formatted = $serializer->normalize('erreur', 'json');
 

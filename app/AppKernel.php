@@ -21,10 +21,10 @@ class AppKernel extends Kernel
             new Souk\BackBundle\BackBundle(),
             new FOS\MessageBundle\FOSMessageBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new blackknight467\StarRatingBundle\StarRatingBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Souk\ApiBundle\ApiBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
 
         ];
 

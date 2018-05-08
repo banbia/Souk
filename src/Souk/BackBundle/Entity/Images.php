@@ -43,7 +43,7 @@ class Images
    */
   private $imageName;
   /**
-   * @var \DateTime
+   * @var \Date
    *
    * @ORM\Column(name="update_at", type="datetime",nullable=true)
    */

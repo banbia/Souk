@@ -53,14 +53,14 @@ class Evennements
     private $description;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_deb", type="date")
      */
     private $dateDeb;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_fin", type="date")
      */

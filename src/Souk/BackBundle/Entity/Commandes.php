@@ -24,7 +24,7 @@ class Commandes
     private $id;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_com", type="date")
      */

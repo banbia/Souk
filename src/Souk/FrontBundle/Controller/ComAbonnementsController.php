@@ -3,29 +3,42 @@
 namespace Souk\FrontBundle\Controller;
 
 use Souk\BackBundle\Entity\Abonnements;
+use Souk\BackBundle\Entity\HistoriqueAbs;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 class ComAbonnementsController extends Controller
 {
-
-    public function newAction(Request $request)
+    public function indexAction()
     {
-        $abonnement = new Abonnements();
-        $form = $this->createForm('Souk\BackBundle\Form\AbonnementsType', $abonnement);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $histoabo = $em->getRepository('BackBundle:HistoriqueAbs')->findBy(array('commercial'=>$user));
+        $abs = $em->getRepository('BackBundle:Abonnements')->findAll();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($abonnement);
-            $em->flush();
+        return $this->render('FrontBundle:ComAbonnement:ComAbonnement.html.twig', array(
+            'histoabo' => $histoabo,
+            'abs' => $abs,
+        ));
+    }
+    public function newAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $histoabo = $em->getRepository('BackBundle:HistoriqueAbs')->findBy(array('commercial'=>$user));
 
-            return $this->redirectToRoute('abonnements_show', array('id' => $abonnement->getId()));
-        }
+        return $this->render('BackBundle:ComAbonnement:ComAbonnement.html.twig', array(
+            'histoabo' => $histoabo,
+        ));
+    }
+    public function showAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $histoabo = $em->getRepository('BackBundle:HistoriqueAbs')->findBy(array('commercial'=>$user));
 
-        return $this->render('BackBundle:abonnements:new.html.twig', array(
-            'abonnement' => $abonnement,
-            'form' => $form->createView(),
+        return $this->render('BackBundle:ComAbonnement:ComAbonnement.html.twig', array(
+            'histoabo' => $histoabo,
         ));
     }
 }

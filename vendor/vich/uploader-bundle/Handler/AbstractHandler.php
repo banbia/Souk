@@ -3,6 +3,7 @@
 namespace Vich\UploaderBundle\Handler;
 
 use Vich\UploaderBundle\Exception\MappingNotFoundException;
+use Vich\UploaderBundle\Mapping\PropertyMapping;
 use Vich\UploaderBundle\Mapping\PropertyMappingFactory;
 use Vich\UploaderBundle\Storage\StorageInterface;
 
@@ -17,13 +18,13 @@ abstract class AbstractHandler
     protected $factory;
 
     /**
-     * @var StorageInterface $storage
+     * @var StorageInterface
      */
     protected $storage;
 
     /**
-     * @param PropertyMappingFactory $factory The mapping factory.
-     * @param StorageInterface       $storage The storage.
+     * @param PropertyMappingFactory $factory The mapping factory
+     * @param StorageInterface       $storage The storage
      */
     public function __construct(PropertyMappingFactory $factory, StorageInterface $storage)
     {
@@ -31,11 +32,18 @@ abstract class AbstractHandler
         $this->storage = $storage;
     }
 
+    /**
+     * @param object|array $obj
+     * @param string       $fieldName
+     * @param string|null  $className
+     *
+     * @return PropertyMapping|null
+     */
     protected function getMapping($obj, $fieldName, $className = null)
     {
         $mapping = $this->factory->fromField($obj, $fieldName, $className);
 
-        if ($mapping === null) {
+        if (null === $mapping) {
             throw new MappingNotFoundException(sprintf('Mapping not found for field "%s"', $fieldName));
         }
 

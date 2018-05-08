@@ -29,11 +29,13 @@ security:
             pattern: ^/
             form_login:
                 provider: fos_userbundle
-                login_path: login
+                login_path: /login
+                check_path: /login_check
                 success_handler: redirect.after.login
                 #csrf_token_generator: security.csrf.token_manager # Use form.csrf_provider instead for Symfony <2.4
             logout:       true
             anonymous:    true
+            #access_denied_handler: Souk\UserBundle\Security\AccessDeniedHandler
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
@@ -47,4 +49,12 @@ security:
             - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
             - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
             - { path: ^/admin/, role: ROLE_ADMIN }
+            - { path: ^/commandes/, role: [ROLE_CLIENT,ROLE_COM] }
+            - { path: ^/commandes/^, role: [ROLE_CLIENT,ROLE_COM] }
+            - { path: ^/messages/^, role: [ROLE_CLIENT,ROLE_COM] }
+            - { path: ^/messages/^, role: [ROLE_CLIENT,ROLE_COM] }
+            - { path: ^/reclamations/, role: [ROLE_COM] }
+            - { path: ^/reclamations/^, role: [ROLE_COM] }
+            - { path: ^/abonnements/, role: [ROLE_COM] }
+            - { path: ^/abonnements/^, role: [ROLE_COM] }
 
