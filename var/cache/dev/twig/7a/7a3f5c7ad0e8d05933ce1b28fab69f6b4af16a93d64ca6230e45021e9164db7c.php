@@ -105,11 +105,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         echo "\" class=\"active\"> Accueil</a></li>
                     <li><a href=\"";
         // line 43
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("client_annonces_index");
         echo "\"> Annonces</a></li>
                     <li><a href=\"";
         // line 44
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("client_annonces_index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_index");
         echo "\"> Evennements</a></li>
                     ";
         // line 45
@@ -571,8 +571,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class=\"toggle\"></div>
                 <ul class=\"w3nav\">
                     <li><a href=\"{{ path('front_homepage') }}\" class=\"active\"> Accueil</a></li>
-                    <li><a href=\"{{ path('evennements_index') }}\"> Annonces</a></li>
-                    <li><a href=\"{{ path('client_annonces_index') }}\"> Evennements</a></li>
+                    <li><a href=\"{{ path('client_annonces_index') }}\"> Annonces</a></li>
+                    <li><a href=\"{{ path('evennements_index') }}\"> Evennements</a></li>
                     {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
                         <li><a href=\"{{ path('fos_message_inbox') }}\">Mes Messages</a></li>
                         <li><a href=\"{{ path('commandes_index') }}\">Mes Commandes</a></li>

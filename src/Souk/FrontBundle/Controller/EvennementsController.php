@@ -128,7 +128,7 @@ class EvennementsController extends Controller
         return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
             'reservation' => $reservation,
-            'com_Evs'=>$comsEvs,
+            'comEvs'=>$comsEvs,
             'form' => $form->createView(),
             'formC'=>$formViewC));
 

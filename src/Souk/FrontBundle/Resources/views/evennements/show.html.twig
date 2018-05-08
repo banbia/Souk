@@ -64,16 +64,15 @@
 
     {{ form_end(form) }}
     {% endif %}
-    {{ render(controller('FrontBundle:Evennements:newEvs', { 'evennement':evennement.id  })) }}
 
 </div>
-=======
+
     <!--- safa Boufares's work start-->
         <!-- /row -->
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-6">
-                    <a href="{{ path('signalsEvsN_new', {'evennement' : evennement}) }}"><i class="fa fa-flag pull-right"></i></a>
+                    <a href="{{ path('signalsEvsN_new', {'evennement' : evennement.id}) }}"><i class="fa fa-flag pull-right"></i></a>
                     <br/>
                 </div>
             </div>
@@ -100,7 +99,7 @@
         </div>
         </div>
         <div class="row">
-            {% for com in comsEvs %}
+            {% for com in comEvs %}
 
 
                 <div class="col-md-12">
