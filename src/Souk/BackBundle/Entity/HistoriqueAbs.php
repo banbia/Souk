@@ -24,7 +24,7 @@ class HistoriqueAbs
     private $id;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_ab", type="date")
      */

@@ -31,7 +31,7 @@ class Reclamations
     private $contenu;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_rec", type="date")
      */

@@ -17,3 +17,17 @@ acc9de,127.0.0.1,GET,http://localhost:8000/pdf/3,1525708027,663d5f,200
 24eca7,127.0.0.1,GET,http://localhost:8000/commandes/,1525708250,,200
 c930c0,127.0.0.1,GET,http://localhost:8000/pdf/1%7D)%20%7D%7D,1525708252,200301,200
 200301,127.0.0.1,GET,http://localhost:8000/pdf/1%7D)%20%7D%7D,1525708252,,500
+6ef25e,127.0.0.1,GET,http://localhost:8000/,1525765714,,200
+890c2d,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525784923,,200
+d027e7,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525784927,,200
+60f1cd,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525784992,,200
+2a2f09,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785117,,200
+e43c20,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785443,,200
+cb3f2b,127.0.0.1,GET,http://localhost:8000/,1525785453,,200
+d58568,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785508,22f584,200
+22f584,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785508,,500
+13a220,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785632,,200
+0a5cc0,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785655,,200
+82326c,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785688,,200
+2fc5f2,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785786,,200
+c4016a,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785861,,200

@@ -31,7 +31,7 @@ class SignalsEvs
     private $contenu;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_sg", type="date")
      */

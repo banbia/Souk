@@ -54,7 +54,7 @@ class Annonces
     private $disponible;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_creation", type="date")
      */

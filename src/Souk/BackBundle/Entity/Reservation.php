@@ -24,7 +24,7 @@ class Reservation
     private $id;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_res", type="date")
      */

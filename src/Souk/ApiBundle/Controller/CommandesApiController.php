@@ -13,7 +13,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class CommandesApiController extends Controller
 {
 
-    ///se connecter à traver l'application
     public function listeAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -27,43 +26,27 @@ class CommandesApiController extends Controller
             $commandes=$em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($user->getId());
 
         }
+        $callback = function ($dateTime) {
+            return $dateTime instanceof \DateTime
+                ? $dateTime->format('Y-m-d')
+                : '';
+        };
 
 
         $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(array('client','annonce','commentaires'));
+        $normalizer->setCallbacks(array('dateCom' => $callback));
         $normalizer->setCircularReferenceLimit(1);
         $serializer = new Serializer([$normalizer]);
-        $serializer->normalize(new \DateTime());
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
 
-        /* $serializer = new Serializer(array($normalizer), array(new JsonEncoder()));*/
         $formatted= $serializer->normalize($commandes, 'json');
 
         return new JsonResponse($formatted);
     }
     /******* crud mobile (web service) ***********************/
-    /*public function listeAction(Request $request, $id){
-        $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('BackBundle:Commandes')->find($id);
-        if ($user->hasRole('ROLE_CLIENT')) {
-
-            $commandes = $em->getRepository('BackBundle:Commandes')->findBy(array("client"=>$user));
-
-        }else {
-
-            $commandes=$em->getRepository('BackBundle:Commandes')->tousCommandesCommercial($user->getId());
-
-        }
-
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($commandes, 'json');
-
-        return new JsonResponse($formatted);
-    }*/
-
-
-
 
     public function createAction(Request $request,$annonce,$date,$quantite,$client)
     {
