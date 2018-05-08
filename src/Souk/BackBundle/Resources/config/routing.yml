@@ -32,3 +32,6 @@ delete_anc:
 back_stats:
     resource: "@BackBundle/Resources/config/routing/stats.yml"
     prefix:   /stats
+categorie_annonces:
+    resource: "@BackBundle/Resources/config/routing/categories.yml"
+    prefix:   /admin/categories

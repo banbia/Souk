@@ -50,6 +50,8 @@ class EvennementsController extends Controller
             $em = $this->getDoctrine()->getManager();
             $evennement->setEtat(1);//0 disponible
             $user = $this->getUser();
+            $now = new \DateTime('NOW');
+            $evennement->setDateDeb($now);
             $evennement->setCommercial($user);
             $em->persist($evennement);
             $em->flush();
@@ -128,7 +130,11 @@ class EvennementsController extends Controller
         return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
             'reservation' => $reservation,
+<<<<<<< HEAD
             'comsEvs'=>$comsEvs,
+=======
+            'comEvs'=>$comsEvs,
+>>>>>>> 435ff1e28cbf9c8076b6664844394aa1ade83980
             'form' => $form->createView(),
             'formC'=>$formViewC));
     }
