@@ -24,7 +24,6 @@ front_pdf:
     resource: "@FrontBundle/Resources/config/routing/pdf.yml"
     prefix:   /pdf
 
-
 commercial_annonces:
     resource: "@FrontBundle/Resources/config/routing/annoncesCommercial.yml"
     prefix:   /
