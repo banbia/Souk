@@ -146,7 +146,7 @@ class AnnoncesController extends Controller
     $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
     $em->remove($comm);
     $em->flush();
-
+      return $this->redirectToRoute('annonces_show',array("annonce"=>$annonce));
   }
 
   /**
@@ -157,13 +157,6 @@ class AnnoncesController extends Controller
 
   public function newAnnonceAction(Request $request)
   {
-
-
-    // delete  des comm de l'Anc
-    /**
-     * @Route("/delete_com/{$com}/{$annonce}", name="commentairesAnc_delete")
-     */
-
     $annonce = new Annonces();
 
     $form = $this->createForm('Souk\BackBundle\Form\AnnoncesType', $annonce);
@@ -248,6 +241,7 @@ class AnnoncesController extends Controller
    */
   public function newAction(Request $request, $annonce)
   {
+      /* safa Boufare Begin*/
     //cnx bd
     $cm = $this->getDoctrine()->getManager();
     //extraire la liste des commentaires d'une annonce
@@ -305,6 +299,15 @@ class AnnoncesController extends Controller
     return $this->render('FrontBundle:annonces:edit_commantaireAnc.html.twig', array('form' => $formView, 'annonce' => $annonces));
   }
 
+    public function deleteComAncAction($com,$annonce)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
+        $em->remove($comm);
+        $em->flush();
+
+        return $this->redirectToRoute('annonces_show',array("id"=>$annonce));
+    }
   // les services web des commentaires de l'Anc
 
   public function allAction(Request $request, $id)
