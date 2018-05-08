@@ -50,6 +50,8 @@ class EvennementsController extends Controller
             $em = $this->getDoctrine()->getManager();
             $evennement->setEtat(1);//0 disponible
             $user = $this->getUser();
+            $now = new \DateTime('NOW');
+            $evennement->setDateDeb($now);
             $evennement->setCommercial($user);
             $em->persist($evennement);
             $em->flush();
