@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{ path('fos_message_inbox') }}">Mes Messages</a></li>
                         {% if is_granted('ROLE_COM') %}
 
-                            <li><a href="">Mes Abonnements</a></li>
+                            <li><a href="{{ path('abonnements_com_index') }}"> Mes Abonnements </a></li>
                         {% endif %}
                     {% endif %}
                     <li><a href="{{ path('reclamations_index') }}"> Réclamations</a></li>

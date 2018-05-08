@@ -1,0 +1,71 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+{#{% block style %}
+    <link href="{{ asset ('bundles/back/css/SafaBarka_css.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock style %}#}
+{% block body %}
+    <h1 class="text-warning"> Mes Abonnements </h1>
+
+  {#<a class="btn btn-success" href="{{ path('abonnements_new') }}"><i class="fa fa-plus"></i> Acheter une nouvelle abonnement </a>#}
+    <button id="acheter"><i class="fa fa-dollar btn-sm"></i> Acheter </button>
+    <div class="col-md-12" id="abs">
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Designation</th>
+                    <th>Description</th>
+                    <th>Prix</th>
+                    <th>Nombre de mois </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ab in abs %}
+                    <tr>
+                        <td>{{ ab.designation }}</td>
+                        <td>{{ ab.description }}</td>
+                        <td>{{ ab.prix }}</td>
+                        <td>{{ ab.nbMois }} </td>
+                        <td><a href="" class="btn btn-default btn-sm"><i class="fa fa-credit-card"></i> Demander </a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>Abonnement</th>
+            <th>Date de l'Abonnement</th>
+            <th>Etat</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for hist in histoabo %}
+            <tr>
+                <td>{{ hist.id }}</td>
+                <td>{{ hist.abonnement.designation }}</td>
+                <td>{% if hist.dateAb %}{{ hist.dateAb|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if hist.etat == 0 %} Valide
+                    {% elseif hist.etat == 1 %} Expiré
+                    {% endif %}
+                </td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
+{% block js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#abs").hide();
+            $("#acheter").click(function(){
+                $("#abs").toggle(1000);
+            });
+        });
+    </script>
+{% endblock js %}
