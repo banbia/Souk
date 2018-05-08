@@ -57,7 +57,7 @@ class User extends BaseUser implements ParticipantInterface
      */
     private $titre_commercial;
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_fin_ab", type="date", nullable=true)
      */

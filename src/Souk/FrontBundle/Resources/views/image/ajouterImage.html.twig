@@ -1,0 +1,74 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+
+
+    {% block style %}
+
+
+        <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
+
+
+    {% endblock style %}
+{% block body %}
+    {# dev-haifa#}
+
+    <ol class="breadcrumb">
+        <li><a href="{{ path('front_homepage') }}">Annonce</a></li>
+
+        <li>Ajouter une nouvelle annonce</li>
+        <li>Ajouter une photo</li>
+
+    </ol>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <!--      Wizard container        -->
+            <div class="wizard-container">
+
+                <div class="card wizard-card" data-color="orange" id="wizardProfile">
+                  {{ form_start(formImage) }}
+                    <div class="col-md-12">
+                           <div class="form-group col-md-6">
+                               {{ form_label(formImage.ImageFile) }}
+                               {{ form_errors(formImage.ImageFile) }}
+                               {{ form_widget(formImage.ImageFile, {'attr': {'class': 'form-control'}}) }}
+                           </div>
+
+                       </div>
+
+
+                   </div>
+
+
+                    <div class="col-md-12">
+                        <div class="form-group ">
+                            <button type="submit"  class="btn btn-success pull-right"><i class="fa fa-plus"></i> Ajouter</button>
+                        </div>
+                    </div>
+
+                    {{ form_end(formImage) }}
+                {#      {% block vich_image_widget %}
+       {% spaceless %}
+      <div class="vich-image">
+          {{ form_widget(formImage.file) }}
+          {% if formImage.delete is defined %}
+              {{ form_row(formImage.delete) }}
+          {% endif %}
+
+          {% if image_uri %}
+              <a href="{{ image_uri }}"><img src="{{ image_uri }}" alt="" /></a>
+          {% endif %}
+          {% if download_uri %}
+              <a href="{{ download_uri }}">{{ translation_domain is same as(false) ? download_label : download_label|trans({}, translation_domain) }}</a>
+          {% endif %}
+      </div>
+  {% endspaceless %}
+ {% endblock %}
+  #}
+</div>
+</div> <!-- wizard container -->
+</div>
+</div><!-- end row -->
+{% endblock body %}
+{% block js %}
+
+{% endblock js %}

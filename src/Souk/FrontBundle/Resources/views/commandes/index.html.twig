@@ -47,12 +47,18 @@
 
                                                 <i class="fa fa-times"></i>    Annuler
                                             </a>
+
+
                                     {% else %}
                                             <!-- Nour's work -->
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#noEdit">
 
                                                 <i class="fa fa-edit"></i>   Modifier
                                             </a>
+                                        <a href="{{ path('pdf_show',{'commande':commande.id}) }}}) }}" class="btn btn-info">
+
+                                            <i class="fa fa-file-pdf-o"></i>    PDF
+                                        </a>
                                     {% endif %}
 
 
@@ -141,6 +147,7 @@
                         <th>Titre Annonce</th>
                         <th>Catégorie Annonce</th>
                         <th>Quantite</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -150,6 +157,12 @@
                             <td>{{ commande.annonce.titre }}</td>
                             <td>{{ commande.annonce.categorie.designation }}</td>
                             <td>{{ commande.quantite }}</td>
+                            <td>
+                                <a href="{{ path('pdf_show',{'commande':commande.id}) }}}) }}" class="btn btn-info">
+
+                                    <i class="fa fa-file-pdf-o"></i>    PDF
+                                </a>
+                            </td>
 
                         </tr>
                     {% endfor %}

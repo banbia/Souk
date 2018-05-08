@@ -44,12 +44,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li><a href="{{ path('client_annonces_index') }}"> Evennements</a></li>
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         <li><a href="{{ path('fos_message_inbox') }}">Mes Messages</a></li>
-                        {% if is_granted('ROLE_COM') %}
+                        <li><a href="{{ path('commandes_index') }}">Mes Commandes</a></li>
+                        <li><a href="{{ path('reclamations_index') }}"> Réclamations</a></li>
 
+<<<<<<< HEAD
                             <li><a href="{{ path('abonnements_com_index') }}"> Mes Abonnements </a></li>
+=======
+                        {% if is_granted('ROLE_COM') %}
+                            <li><a href="">Mes Abonnements</a></li>
+>>>>>>> abc38da5dacdf6ed5f750a2875620d8a9d003d61
                         {% endif %}
                     {% endif %}
-                    <li><a href="{{ path('reclamations_index') }}"> Réclamations</a></li>
                 </ul>
                 <div class="clearfix"> </div>
             </div>

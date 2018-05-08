@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 e51e3d,127.0.0.1,GET,http://localhost:8000/,1525364243,,200
 6026c4,127.0.0.1,GET,http://localhost:8000/login,1525364269,,200
 43aa85,127.0.0.1,POST,http://localhost:8000/login_check,1525364289,,302
@@ -46,3 +47,38 @@ d8429d,127.0.0.1,GET,http://localhost:8000/abonnements/,1525449228,,200
 9acf3b,127.0.0.1,GET,http://localhost:8000/abonnements/,1525449621,,200
 3b8080,127.0.0.1,GET,http://localhost:8000/abonnements/,1525449634,,200
 82a377,127.0.0.1,GET,http://localhost:8000/,1525450344,,200
+=======
+a66805,127.0.0.1,GET,http://localhost:8000/pdf/1%7D)%20%7D%7D,1525708005,de6d1f,200
+de6d1f,127.0.0.1,GET,http://localhost:8000/pdf/1%7D)%20%7D%7D,1525708005,,500
+838636,127.0.0.1,GET,http://localhost:8000/pdf/1,1525708012,a0321a,200
+a0321a,127.0.0.1,GET,http://localhost:8000/pdf/1,1525708012,,500
+f2ac3c,127.0.0.1,GET,http://localhost:8000/pdf/1,1525708015,1f821d,200
+1f821d,127.0.0.1,GET,http://localhost:8000/pdf/1,1525708015,,500
+e1f4c0,127.0.0.1,GET,http://localhost:8000/pdf/1,1525708019,7565cc,200
+7565cc,127.0.0.1,GET,http://localhost:8000/pdf/1,1525708019,,500
+d5c521,127.0.0.1,GET,http://localhost:8000/pdf/9,1525708021,d7e0f8,200
+d7e0f8,127.0.0.1,GET,http://localhost:8000/pdf/9,1525708021,,404
+720f98,127.0.0.1,GET,http://localhost:8000/pdf/2,1525708025,937bbe,200
+937bbe,127.0.0.1,GET,http://localhost:8000/pdf/2,1525708025,,500
+acc9de,127.0.0.1,GET,http://localhost:8000/pdf/3,1525708027,663d5f,200
+663d5f,127.0.0.1,GET,http://localhost:8000/pdf/3,1525708027,,500
+97446c,127.0.0.1,GET,http://localhost:8000/pdf/1%7D)%20%7D%7D,1525708118,1402e1,200
+1402e1,127.0.0.1,GET,http://localhost:8000/pdf/1%7D)%20%7D%7D,1525708118,,500
+24eca7,127.0.0.1,GET,http://localhost:8000/commandes/,1525708250,,200
+c930c0,127.0.0.1,GET,http://localhost:8000/pdf/1%7D)%20%7D%7D,1525708252,200301,200
+200301,127.0.0.1,GET,http://localhost:8000/pdf/1%7D)%20%7D%7D,1525708252,,500
+6ef25e,127.0.0.1,GET,http://localhost:8000/,1525765714,,200
+890c2d,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525784923,,200
+d027e7,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525784927,,200
+60f1cd,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525784992,,200
+2a2f09,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785117,,200
+e43c20,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785443,,200
+cb3f2b,127.0.0.1,GET,http://localhost:8000/,1525785453,,200
+d58568,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785508,22f584,200
+22f584,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785508,,500
+13a220,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785632,,200
+0a5cc0,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785655,,200
+82326c,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785688,,200
+2fc5f2,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785786,,200
+c4016a,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1525785861,,200
+>>>>>>> abc38da5dacdf6ed5f750a2875620d8a9d003d61

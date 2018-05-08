@@ -31,7 +31,7 @@ class CommentairesEvs
     private $contenu;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_cmt", type="date")
      */

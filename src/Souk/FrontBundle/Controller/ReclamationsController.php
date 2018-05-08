@@ -1,6 +1,7 @@
 <?php
 
 namespace Souk\FrontBundle\Controller;
+
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Souk\BackBundle\Entity\Reclamations;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -14,13 +15,31 @@ class ReclamationsController extends Controller
 {
     /**
      * Lists all reclamation entities.
-     *@Route("/", name="reclamations_index")
+     * @Route("/", name="reclamations_index")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
-        $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client'=>$user));
+
+        if ($request->getMethod() == "POST") {
+            $user = $this->getUser();
+            $p = $request->get('etat');
+            if ($p != "") {
+
+                if ($p == "Accepter")
+                    $p = 1;
+                elseif ($p == "Encours")
+                    $p = 0;
+                else
+                    $p = -1;
+                $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user, 'etat' => $p));
+            } else {
+                $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
+
+            }
+        } else
+            $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
 
         return $this->render('FrontBundle:reclamations:index.html.twig', array(
             'reclamations' => $reclamations,
@@ -29,7 +48,7 @@ class ReclamationsController extends Controller
 
     /**
      * Creates a new reclamation entity.
-     *@Route("/new", name="reclamations_new")
+     * @Route("/new", name="reclamations_new")
      */
     public function newAction(Request $request)
     {
@@ -60,7 +79,7 @@ class ReclamationsController extends Controller
     }
 
     /**
-     * Finds and displays a reclamation entity.
+     * Show.
      *
      */
     public function showAction(Reclamations $reclamation)
@@ -97,6 +116,7 @@ class ReclamationsController extends Controller
 
     }
 
+
     /**
      * Deletes a reclamation entity.
      *
@@ -127,7 +147,8 @@ class ReclamationsController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('reclamations_delete', array('id' => $reclamation->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
+
+
 }

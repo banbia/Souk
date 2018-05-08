@@ -10,4 +10,5 @@ namespace Souk\BackBundle\Repository;
  */
 class ReclamationsRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }

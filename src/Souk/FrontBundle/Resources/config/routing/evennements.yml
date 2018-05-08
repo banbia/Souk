@@ -2,6 +2,10 @@ evennements_index:
     path:     /
     defaults: { _controller: "FrontBundle:Evennements:index" }
     methods:  GET
+evennements_parts:
+    path:     /{id}/particiapants
+    defaults: { _controller: "FrontBundle:Evennements:listePar" }
+    methods:  GET
 
 evennements_show:
     path:     /{id}/show

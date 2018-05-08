@@ -2,21 +2,21 @@
 
 namespace Knp\Bundle\SnappyBundle\DependencyInjection;
 
-use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
- * Configuration for the emailing bundle
+ * Configuration for the emailing bundle.
  */
 class Configuration implements ConfigurationInterface
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getConfigTreeBuilder()
     {
         $fixOptionKeys = function ($options) {
-            $fixedOptions = array();
+            $fixedOptions = [];
             foreach ($options as $key => $value) {
                 $fixedOptions[str_replace('_', '-', $key)] = $value;
             }
@@ -30,6 +30,10 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('temporary_folder')->end()
+                ->integerNode('process_timeout')
+                    ->min(1)
+                    ->info('Generator process timeout in seconds.')
+                ->end()
                 ->arrayNode('pdf')
                     ->addDefaultsIfNotSet()
                     ->children()

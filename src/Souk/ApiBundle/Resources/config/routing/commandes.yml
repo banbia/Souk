@@ -1,0 +1,8 @@
+#web service Nour Banbia
+liste_commandes:
+    path:     /liste/{id}
+    defaults: { _controller: ApiBundle:CommandesApi:liste }
+
+create_commande:
+    path:     /new/{annonce}/{date}/{quantite}/{client}
+    defaults: { _controller: ApiBundle:CommandesApi:create }

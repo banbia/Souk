@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\DomCrawler\Image;
 
 /**
  * Annonces
@@ -53,7 +54,7 @@ class Annonces
     private $disponible;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
      * @ORM\Column(name="date_creation", type="date")
      */
@@ -91,10 +92,9 @@ class Annonces
 
     public function __construct()
     {
-        $this->signals = new ArrayCollection();
+       $this->signals = new ArrayCollection();
         $this->commentaires = new ArrayCollection();
         $this->commandes = new ArrayCollection();
-        $this->images = new ArrayCollection();
     }
 
     /**
@@ -119,7 +119,7 @@ class Annonces
         return $this->commandes;
     }
     /**
-     * @return Collection|Annonces[]
+     * @return Collection|Images[]
      */
     public function getImages()
     {

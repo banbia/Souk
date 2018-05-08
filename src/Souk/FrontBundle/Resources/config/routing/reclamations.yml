@@ -1,7 +1,7 @@
 reclamations_index:
     path:     /
     defaults: { _controller: "FrontBundle:Reclamations:index" }
-    methods:  GET
+    methods:  [GET, POST]
 
 reclamations_show:
     path:     /{id}/show

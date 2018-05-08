@@ -1,15 +1,25 @@
 {% extends 'FrontBundle::layout.html.twig' %}
+
 {% block style %}
-<link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
 {% endblock style %}
+
+
 {% block body %}
 <div class="row form-controlS">
-    <h1  style="text-align:center" > Liste de reclamations</h1>
+    <div class="Title">
+     Liste des reclamation
+    </div>
     <br>
-    <a   href="{{ path('reclamations_new') }}"  class="btn btn-success pull-right"> <i class="fa fa-plus" > </i> Ajouter une reclamation </a>
-    <br>
-    <br>
-    <br>
+    <div class="col-md-3 pull-right">
+    <form method="POST"> <input type="text" name="etat"/>
+        <button type="submit"  class="btn-rechercher " ><i class="fa fa-search" ></i> </button>
+    </form>
+    </div>
+    <div class="col-md-12">
+    <a title="ajouter une nouvelle reclamation" href="{{ path('reclamations_new') }}"  class="btn btn-success pull-right"> <i class="fa fa-plus" > </i>  </a>
+    </div>
     <table class="table table-striped">
         <thead class="thead-light">
         <tr class="table-secondary">
@@ -34,7 +44,8 @@
                 </td>
                 <td>
 
-                    <a class="btn btn-default" href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}"><i class="fa fa-edit"></i> Modifier </a>
+                    <a  href="{{ path('reclamations_edit', { 'id': reclamation.id }) }}" class="btn btn-warning outline" >
+                        <i class="fa fa-edit"></i> Modifier </a>
 
                 </td>
             </tr>
