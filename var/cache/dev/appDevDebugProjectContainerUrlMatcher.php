@@ -254,6 +254,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::indexAction',  '_route' => 'index',);
                 }
 
+<<<<<<< HEAD
+=======
                 // stats_index
                 if ('/admin/stats' === $trimmedPathinfo) {
                     if (substr($pathinfo, -1) !== '/') {
@@ -263,6 +265,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'Souk\\BackBundle\\Controller\\StatsController::indexAction',  '_route' => 'stats_index',);
                 }
 
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
                 // show
                 if (0 === strpos($pathinfo, '/admin/viewEv') && preg_match('#^/admin/viewEv/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'show')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::showAction',));
@@ -336,6 +339,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
             elseif (0 === strpos($pathinfo, '/abonnements')) {
                 // abonnements_com_new
@@ -379,6 +384,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             elseif (0 === strpos($pathinfo, '/annonces')) {
 =======
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
             // abonnements_com_new
             if ('/abonnements/new' === $pathinfo) {
                 return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ComAbonnementsController::newAction',  '_route' => 'abonnements_com_new',);
@@ -398,7 +404,10 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
+<<<<<<< HEAD
+=======
 >>>>>>> abc38da5dacdf6ed5f750a2875620d8a9d003d61:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
                 // client_annonces_index
                 if ('/annonces' === $trimmedPathinfo) {
                     if ('GET' !== $canonicalMethod) {
@@ -454,12 +463,20 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // liste_commandes
+<<<<<<< HEAD
+                if (0 === strpos($pathinfo, '/api/commandes/commandes/liste') && preg_match('#^/api/commandes/commandes/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+=======
                 if (0 === strpos($pathinfo, '/api/commandes/liste') && preg_match('#^/api/commandes/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_commandes')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\CommandesApiController::listeAction',));
                 }
 
                 // create_commande
+<<<<<<< HEAD
+                if (0 === strpos($pathinfo, '/api/commandes/commandes/new') && preg_match('#^/api/commandes/commandes/new/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+=======
                 if (0 === strpos($pathinfo, '/api/commandes/new') && preg_match('#^/api/commandes/new/(?P<annonce>[^/]++)/(?P<date>[^/]++)/(?P<quantite>[^/]++)/(?P<client>[^/]++)$#s', $pathinfo, $matches)) {
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commande')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\CommandesApiController::createAction',));
                 }
 
@@ -880,6 +897,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_commercial_annonces_index:
 
+<<<<<<< HEAD
+=======
         if (0 === strpos($pathinfo, '/login')) {
             // fos_user_security_login
             if ('/login' === $pathinfo) {
@@ -916,6 +935,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_fos_user_security_logout:
 
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
         if (0 === strpos($pathinfo, '/messages')) {
             // fos_message_inbox
             if ('/messages' === $trimmedPathinfo) {
@@ -975,7 +995,47 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+<<<<<<< HEAD
+        elseif (0 === strpos($pathinfo, '/login')) {
+            // fos_user_security_login
+            if ('/login' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_security_login;
+                }
+
+                return array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
+            }
+            not_fos_user_security_login:
+
+            // fos_user_security_check
+            if ('/login_check' === $pathinfo) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_fos_user_security_check;
+                }
+
+                return array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
+            }
+            not_fos_user_security_check:
+
+        }
+
+        // fos_user_security_logout
+        if ('/logout' === $pathinfo) {
+            if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                $allow = array_merge($allow, array('GET', 'POST'));
+                goto not_fos_user_security_logout;
+            }
+
+            return array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
+        }
+        not_fos_user_security_logout:
+
+        if (0 === strpos($pathinfo, '/evennements')) {
+=======
         elseif (0 === strpos($pathinfo, '/evennements')) {
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
             // evennements_index
             if ('/evennements' === $trimmedPathinfo) {
                 if ('GET' !== $canonicalMethod) {
@@ -1109,6 +1169,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
         elseif (0 === strpos($pathinfo, '/messages')) {
             // fos_message_inbox
@@ -1171,6 +1233,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
 =======
 >>>>>>> abc38da5dacdf6ed5f750a2875620d8a9d003d61:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
+>>>>>>> e501a072b342ef776d0ad190ff3dfa13f3c82b07
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
