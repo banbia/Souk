@@ -130,11 +130,11 @@ class EvennementsController extends Controller
         return $this->render('FrontBundle:evennements:show.html.twig', array(
             'evennement' => $evennement,
             'reservation' => $reservation,
-<<<<<<< HEAD
+
             'comsEvs'=>$comsEvs,
-=======
+
             'comEvs'=>$comsEvs,
->>>>>>> 435ff1e28cbf9c8076b6664844394aa1ade83980
+
             'form' => $form->createView(),
             'formC'=>$formViewC));
     }

@@ -127,18 +127,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reclamations_index");
             echo "\"> Réclamations</a></li>
 
-<<<<<<< HEAD
+
                             <li><a href=\"";
             // line 51
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnements_com_index");
             echo "\"> Mes Abonnements </a></li>
-=======
+
                         ";
             // line 53
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_COM")) {
                 // line 54
                 echo "                            <li><a href=\"\">Mes Abonnements</a></li>
->>>>>>> abc38da5dacdf6ed5f750a2875620d8a9d003d61
+
                         ";
             }
             // line 57
@@ -585,12 +585,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href=\"{{ path('commandes_index') }}\">Mes Commandes</a></li>
                         <li><a href=\"{{ path('reclamations_index') }}\"> Réclamations</a></li>
 
-<<<<<<< HEAD
+
                             <li><a href=\"{{ path('abonnements_com_index') }}\"> Mes Abonnements </a></li>
-=======
+
                         {% if is_granted('ROLE_COM') %}
                             <li><a href=\"\">Mes Abonnements</a></li>
->>>>>>> abc38da5dacdf6ed5f750a2875620d8a9d003d61
+
                         {% endif %}
                     {% endif %}
                 </ul>
