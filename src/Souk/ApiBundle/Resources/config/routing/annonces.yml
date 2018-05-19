@@ -1,0 +1,3 @@
+get_All_Annonces:
+    path:     /allAnnonces
+    defaults: { _controller: ApiBundle:AnnoncesApi:getAllAnnonces}

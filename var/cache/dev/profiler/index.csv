@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2f0b8e,127.0.0.1,GET,http://localhost:8000/api/commandes/liste/8,1526646190,,200
 9ffc7b,127.0.0.1,GET,http://localhost:8000/api/user/haifa/haifa,1526646196,,200
 b48fba,127.0.0.1,POST,http://localhost:8000/api/user/haifa/haifa,1526646205,,200
@@ -43,3 +44,28 @@ f2c335,127.0.0.1,GET,http://localhost:8000/api/commandes/new/1/2018-05-05/2/6,15
 759555,127.0.0.1,GET,http://localhost:8000/api/commandes/new/1/2018-05-05/2/6,1526724492,,500
 d895ae,127.0.0.1,GET,http://localhost:8000/api/commandes/new/1/2018-05-05/2/6,1526724587,,200
 bb251c,127.0.0.1,GET,http://localhost:8000/api/commandes/new/1/2018-05-05/2/6,1526724635,,200
+=======
+fa07b3,127.0.0.1,GET,http://localhost:8000/evennements/new,1525805080,,200
+04d8f7,127.0.0.1,GET,http://localhost:8000/evennements/new,1525805104,,302
+93aee5,127.0.0.1,GET,http://localhost:8000/login,1525805105,,200
+83815f,127.0.0.1,POST,http://localhost:8000/login_check,1525805143,,302
+6a41bf,127.0.0.1,GET,http://localhost:8000/profile/,1525805143,,200
+e32694,127.0.0.1,GET,http://localhost:8000/profile/,1525805157,,200
+ce5d68,127.0.0.1,GET,http://localhost:8000/evennements/new,1525805173,,200
+4e0ed6,127.0.0.1,GET,http://localhost:8000/evennements/new,1525805436,,200
+906f09,127.0.0.1,GET,http://localhost:8000/evennements,1525805450,,301
+e42f5d,127.0.0.1,GET,http://localhost:8000/evennements/,1525805450,,200
+6ceb2c,127.0.0.1,GET,http://localhost:8000/evennements/new,1525805457,,200
+6cc244,127.0.0.1,GET,http://localhost:8000/evennements/,1525805511,,200
+f45311,127.0.0.1,GET,http://localhost:8000/evennements/1/show,1525805518,,200
+cf7daf,127.0.0.1,GET,http://localhost:8000/bundle/front/css/style_Salsabil.css,1525805520,71b10c,200
+71b10c,127.0.0.1,GET,http://localhost:8000/bundle/front/css/style_Salsabil.css,1525805520,,404
+a47453,127.0.0.1,GET,http://localhost:8000/bundle/front/css/style_Salsabil.css,1525805521,2fc419,200
+2fc419,127.0.0.1,GET,http://localhost:8000/bundle/front/css/style_Salsabil.css,1525805521,,404
+7104e7,127.0.0.1,GET,http://localhost:8000/evennements/1/particiapants,1525805526,22637f,200
+22637f,127.0.0.1,GET,http://localhost:8000/evennements/1/particiapants,1525805526,,404
+b6e79a,127.0.0.1,GET,http://localhost:8000/bundle/front/css/style_Salsabil.css,1525805534,2409bd,200
+2409bd,127.0.0.1,GET,http://localhost:8000/bundle/front/css/style_Salsabil.css,1525805535,,404
+3be6e1,127.0.0.1,GET,http://localhost:8000/login,1525805584,,200
+2f4e98,127.0.0.1,GET,http://localhost:8000/,1525891014,,200
+>>>>>>> f4940d4d621a78dee3783736c63804b2fe4ff646

@@ -45,7 +45,7 @@ class CommentairesAnc
     private $client;
     /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Annonces", inversedBy="commentaires")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=true,onDelete="CASCADE")
      */
     private $annonce;
 

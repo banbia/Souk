@@ -26,9 +26,7 @@ client_commentairesAnc:
 client_commentairesEvs:
     resource: "@FrontBundle/Resources/config/routing/commentairesEvs.yml"
     prefix:   /commentairesEvs
-categorie_annonces:
-    resource: "@BackBundle/Resources/config/routing/categories.yml"
-    prefix:   /admin/categories
+
 front_evennements:
     resource: "@FrontBundle/Resources/config/routing/evennements.yml"
     prefix:   /evennements
