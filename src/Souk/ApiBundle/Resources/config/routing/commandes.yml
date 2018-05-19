@@ -6,3 +6,9 @@ liste_commandes:
 create_commande:
     path:     /new/{annonce}/{date}/{quantite}/{client}
     defaults: { _controller: ApiBundle:CommandesApi:create }
+annuler_commande:
+    path:     /annuler/{com}
+    defaults: { _controller: ApiBundle:CommandesApi:annuler }
+modifier_commande:
+    path:     /modifier/{com}/{date}/{quantite}
+    defaults: { _controller: ApiBundle:CommandesApi:modif }
