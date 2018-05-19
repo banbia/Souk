@@ -1,2 +1,6 @@
 b8a3f7,127.0.0.1,GET,http://localhost:8000/api/commandes/modifier/8/2018-08-08/5,1526734736,80b04a,200
 80b04a,127.0.0.1,GET,http://localhost:8000/api/commandes/modifier/8/2018-08-08/5,1526734736,,500
+4c3a0f,127.0.0.1,GET,http://localhost:8000/api/commandes/modifier/8/2018-08-08/5,1526735091,,200
+6ebe14,127.0.0.1,GET,http://localhost:8000/api/commandes/confirmer/8,1526735167,6cf406,200
+6cf406,127.0.0.1,GET,http://localhost:8000/api/commandes/confirmer/8,1526735167,,404
+2d25d3,127.0.0.1,GET,http://localhost:8000/api/commandes/confirmer/8,1526735186,,200

@@ -12,3 +12,6 @@ annuler_commande:
 modifier_commande:
     path:     /modifier/{com}/{date}/{quantite}
     defaults: { _controller: ApiBundle:CommandesApi:modif }
+confirmer_commande:
+    path:     /confirmer/{com}
+    defaults: { _controller: ApiBundle:CommandesApi:confirmer }

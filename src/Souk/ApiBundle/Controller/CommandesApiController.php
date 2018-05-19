@@ -143,7 +143,7 @@ class CommandesApiController extends Controller
 
     }
     //confirmer commande permet de changer son etat
-    public function confirmerAction(Request $request,$com)
+    public function confirmerAction($com)
     {
         //cnx
         $em = $this->getDoctrine()->getManager();
