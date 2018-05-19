@@ -336,8 +336,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             }
 
-<<<<<<< HEAD:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
             elseif (0 === strpos($pathinfo, '/abonnements')) {
+                // abonnements_com_index
+                if ('/abonnements' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_abonnements_com_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($rawPathinfo.'/', 'abonnements_com_index');
+                    }
+
+                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ComAbonnementsController::indexAction',  '_route' => 'abonnements_com_index',);
+                }
+                not_abonnements_com_index:
+
                 // abonnements_com_new
                 if ('/abonnements/new' === $pathinfo) {
                     if ('GET' !== $canonicalMethod) {
@@ -360,31 +374,14 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_abonnements_com_show:
 
-                // abonnements_com_index
-                if ('/abonnements' === $trimmedPathinfo) {
-                    if ('GET' !== $canonicalMethod) {
-                        $allow[] = 'GET';
-                        goto not_abonnements_com_index;
-                    }
-
-                    if (substr($pathinfo, -1) !== '/') {
-                        return $this->redirect($rawPathinfo.'/', 'abonnements_com_index');
-                    }
-
-                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ComAbonnementsController::indexAction',  '_route' => 'abonnements_com_index',);
+                // abonnements_com_export
+                if ('/abonnements/export' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ComAbonnementsController::exportAction',  '_route' => 'abonnements_com_export',);
                 }
-                not_abonnements_com_index:
 
             }
 
             elseif (0 === strpos($pathinfo, '/annonces')) {
-=======
-            // abonnements_com_new
-            if ('/abonnements/new' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\ComAbonnementsController::newAction',  '_route' => 'abonnements_com_new',);
-            }
-
-            if (0 === strpos($pathinfo, '/annonces')) {
                 if (0 === strpos($pathinfo, '/annonces/newAnnonce')) {
                     // annonces_new
                     if ('/annonces/newAnnonce' === $pathinfo) {
@@ -398,7 +395,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
->>>>>>> abc38da5dacdf6ed5f750a2875620d8a9d003d61:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
                 // client_annonces_index
                 if ('/annonces' === $trimmedPathinfo) {
                     if ('GET' !== $canonicalMethod) {
@@ -1109,68 +1105,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-<<<<<<< HEAD:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
-        elseif (0 === strpos($pathinfo, '/messages')) {
-            // fos_message_inbox
-            if ('/messages' === $trimmedPathinfo) {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($rawPathinfo.'/', 'fos_message_inbox');
-                }
-
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::inboxAction',  '_route' => 'fos_message_inbox',);
-            }
-
-            // fos_message_sent
-            if ('/messages/sent' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::sentAction',  '_route' => 'fos_message_sent',);
-            }
-
-            // fos_message_search
-            if ('/messages/search' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::searchAction',  '_route' => 'fos_message_search',);
-            }
-
-            // fos_message_deleted
-            if ('/messages/deleted' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deletedAction',  '_route' => 'fos_message_deleted',);
-            }
-
-            // fos_message_thread_new
-            if ('/messages/new' === $pathinfo) {
-                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::newThreadAction',  '_route' => 'fos_message_thread_new',);
-            }
-
-            // fos_message_thread_delete
-            if (preg_match('#^/messages/(?P<threadId>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if (!in_array($requestMethod, array('POST', 'DELETE'))) {
-                    $allow = array_merge($allow, array('POST', 'DELETE'));
-                    goto not_fos_message_thread_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::deleteAction',));
-            }
-            not_fos_message_thread_delete:
-
-            // fos_message_thread_undelete
-            if (preg_match('#^/messages/(?P<threadId>[^/]++)/undelete$#s', $pathinfo, $matches)) {
-                if ('POST' !== $canonicalMethod) {
-                    $allow[] = 'POST';
-                    goto not_fos_message_thread_undelete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_undelete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::undeleteAction',));
-            }
-            not_fos_message_thread_undelete:
-
-            // fos_message_thread_view
-            if (preg_match('#^/messages/(?P<threadId>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_message_thread_view')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\MessageController::threadAction',));
-            }
-
-        }
-
-=======
->>>>>>> abc38da5dacdf6ed5f750a2875620d8a9d003d61:var/cache/dev/appDevDebugProjectContainerUrlMatcher.php
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

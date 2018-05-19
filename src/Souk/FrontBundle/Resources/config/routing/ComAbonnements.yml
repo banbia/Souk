@@ -1,3 +1,8 @@
+abonnements_com_index:
+    path:     /
+    defaults: { _controller: "FrontBundle:ComAbonnements:index" }
+    methods:  GET
+
 abonnements_com_new:
     path:     /new
     defaults: { _controller: "FrontBundle:ComAbonnements:new" }
@@ -8,7 +13,6 @@ abonnements_com_show:
     defaults: { _controller: "FrontBundle:ComAbonnements:show" }
     methods:  GET
 
-abonnements_com_index:
-    path:     /
-    defaults: { _controller: "FrontBundle:ComAbonnements:index" }
-    methods:  GET
+abonnements_com_export:
+    path:     /export
+    defaults: { _controller: "FrontBundle:ComAbonnements:export" }

@@ -48,6 +48,7 @@
                 <td>{% if hist.dateAb %}{{ hist.dateAb|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if hist.etat == 0 %} Valide
                     {% elseif hist.etat == 1 %} Expiré
+                    {% elseif hist.etat == -1 %} En attente de validation
                     {% endif %}
                 </td>
 
@@ -56,7 +57,7 @@
         </tbody>
     </table>
 
-
+    <a href="{{ path ('abonnements_com_export') }}" class="btn btn-default btn-sm"><i class="fa fa-arrow-alt-circle-down"></i> Exporter votre historiques </a>
 {% endblock %}
 {% block js %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
