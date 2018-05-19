@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new Souk\ApiBundle\ApiBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
             new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
+            new Egyg33k\CsvBundle\Egyg33kCsvBundle(),
 
         ];
 
