@@ -283,9 +283,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_anc')), array (  '_controller' => 'Souk\\BackBundle\\Controller\\SignalsController::deleteAncAction',));
                 }
 
-                if (0 === strpos($pathinfo, '/admin/categories')) {
+                if (0 === strpos($pathinfo, '/admin/admin/categories')) {
                     // categories_index
-                    if ('/admin/categories' === $trimmedPathinfo) {
+                    if ('/admin/admin/categories' === $trimmedPathinfo) {
                         if ('GET' !== $canonicalMethod) {
                             $allow[] = 'GET';
                             goto not_categories_index;
@@ -300,7 +300,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     not_categories_index:
 
                     // categories_new
-                    if ('/admin/categories/new' === $pathinfo) {
+                    if ('/admin/admin/categories/new' === $pathinfo) {
                         if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                             $allow = array_merge($allow, array('GET', 'POST'));
                             goto not_categories_new;
@@ -311,7 +311,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     not_categories_new:
 
                     // categories_edit
-                    if (preg_match('#^/admin/categories/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (preg_match('#^/admin/admin/categories/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
                         if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                             $allow = array_merge($allow, array('GET', 'POST'));
                             goto not_categories_edit;
@@ -322,7 +322,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     not_categories_edit:
 
                     // categories_delete
-                    if (preg_match('#^/admin/categories/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (preg_match('#^/admin/admin/categories/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
                         if (!in_array($canonicalMethod, array('GET', 'POST'))) {
                             $allow = array_merge($allow, array('GET', 'POST'));
                             goto not_categories_delete;
@@ -432,6 +432,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_annonces_show:
 
+                // commentairesAnc_new
+                if (0 === strpos($pathinfo, '/annonces/annonce') && preg_match('#^/annonces/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::newAction',));
+                }
+
+                // commentairesAnc_delete
+                if (0 === strpos($pathinfo, '/annonces/delete_com') && preg_match('#^/annonces/delete_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::deleteComAncAction',));
+                }
+
+                // commentairesAnc_Edit
+                if (0 === strpos($pathinfo, '/annonces/edit_com') && preg_match('#^/annonces/edit_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\AnnoncesController::editAction',));
+                }
+
             }
 
             elseif (0 === strpos($pathinfo, '/api')) {
@@ -460,7 +475,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
 
                 // get_All_Annonces
-                if ('/api/allAnnonces' === $pathinfo) {
+                if ('/api/annonces/allAnnonces' === $pathinfo) {
                     return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getAllAnnoncesAction',  '_route' => 'get_All_Annonces',);
                 }
 
@@ -795,24 +810,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::deleteAction',));
             }
             not_commandes_delete:
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/commentairesAnc')) {
-            // commentairesAnc_new
-            if (0 === strpos($pathinfo, '/commentairesAnc/annonce') && preg_match('#^/commentairesAnc/annonce/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_new')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::newAction',));
-            }
-
-            // commentairesAnc_delete
-            if (0 === strpos($pathinfo, '/commentairesAnc/delete_com') && preg_match('#^/commentairesAnc/delete_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::deleteAction',));
-            }
-
-            // commentairesAnc_Edit
-            if (0 === strpos($pathinfo, '/commentairesAnc/edit_com') && preg_match('#^/commentairesAnc/edit_com/(?P<com>[^/]++)/(?P<annonce>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesAnc_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentairesAncController::editAction',));
-            }
 
         }
 

@@ -5,6 +5,7 @@ namespace Souk\ApiBundle\Controller;
 use JMS\Serializer\SerializerBuilder;
 use Souk\BackBundle\Entity\Commandes;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
@@ -50,7 +51,11 @@ class CommandesApiController extends Controller
 
     public function createAction(Request $request,$annonce,$date,$quantite,$client)
     {
+        //connexion
         $em = $this->getDoctrine()->getManager();
+        //get annonce and client object
+        $client = $em->getRepository('UserBundle:User')->find($client);
+        $annonce = $em->getRepository('BackBundle:Annonces')->find($annonce);
         $commande= new Commandes();
         $commande->setAnnonce($annonce);
         $commande->setClient($client);
@@ -61,8 +66,23 @@ class CommandesApiController extends Controller
         $em->persist($commande);
 
         $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($commande, 'json');
+        $callback = function ($dateTime) {
+            return $dateTime instanceof \DateTime
+                ? $dateTime->format('Y-m-d')
+                : '';
+        };
+
+
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(array('client','annonce','commentaires'));
+        $normalizer->setCallbacks(array('dateCom' => $callback));
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($commande, 'json');
 
         return new JsonResponse($formatted);
 

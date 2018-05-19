@@ -10,9 +10,9 @@ api_commandes:
     resource: "@ApiBundle/Resources/config/routing/commandes.yml"
     prefix:   /commandes
 #web service Haifa Daoud
-get_All_Annonces:
-    path:     /allAnnonces
-    defaults: { _controller: ApiBundle:AnnoncesApi:getAllAnnonces}
+api_annonces:
+    resource: "@ApiBundle/Resources/config/routing/annonces.yml"
+    prefix:   /annonces
 
 #service Soumaya
 api_commandes:
