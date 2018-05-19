@@ -15,6 +15,6 @@ api_annonces:
     prefix:   /annonces
 
 #service Soumaya
-api_commandes:
+api_reclamations:
     resource: "@ApiBundle/Resources/config/routing/reclamtions.yml"
     prefix:   /reclamations
