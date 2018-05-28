@@ -410,6 +410,12 @@
     <parameter key="fos_user.security.login_manager.class">FOS\UserBundle\Security\LoginManager</parameter>
     <parameter key="fos_user.resetting.email.template">@FOSUser/Resetting/email.txt.twig</parameter>
     <parameter key="fos_user.registration.confirmation.template">@FOSUser/Registration/email.txt.twig</parameter>
+    <parameter key="fos_user.registration.confirmation.from_email" type="collection">
+      <parameter key="nourelhouda.banbia@gmail.com">Nour</parameter>
+    </parameter>
+    <parameter key="fos_user.resetting.email.from_email" type="collection">
+      <parameter key="nourelhouda.banbia@gmail.com">Nour</parameter>
+    </parameter>
     <parameter key="fos_user.storage">orm</parameter>
     <parameter key="fos_user.firewall_name">main</parameter>
     <parameter key="fos_user.model_manager_name">null</parameter>
@@ -419,9 +425,6 @@
     <parameter key="fos_user.profile.form.validation_groups" type="collection">
       <parameter>Profile</parameter>
       <parameter>Default</parameter>
-    </parameter>
-    <parameter key="fos_user.registration.confirmation.from_email" type="collection">
-      <parameter key="nourelhouda.banbia@gmail.com">Nour</parameter>
     </parameter>
     <parameter key="fos_user.registration.confirmation.enabled">false</parameter>
     <parameter key="fos_user.registration.form.type">FOS\UserBundle\Form\Type\RegistrationFormType</parameter>
@@ -435,9 +438,6 @@
     <parameter key="fos_user.change_password.form.validation_groups" type="collection">
       <parameter>ChangePassword</parameter>
       <parameter>Default</parameter>
-    </parameter>
-    <parameter key="fos_user.resetting.email.from_email" type="collection">
-      <parameter key="nourelhouda.banbia@gmail.com">Nour</parameter>
     </parameter>
     <parameter key="fos_user.resetting.retry_ttl">7200</parameter>
     <parameter key="fos_user.resetting.token_ttl">86400</parameter>
@@ -522,14 +522,14 @@
       </parameter>
     </parameter>
     <parameter key="vich_uploader.file_injector.class">Vich\UploaderBundle\Injector\FileInjector</parameter>
-    <parameter key="knp_snappy.pdf.binary">"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"</parameter>
+    <parameter key="knp_snappy.pdf.binary">/opt/lampp/htdocs/dev/souk/app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</parameter>
     <parameter key="knp_snappy.pdf.options" type="collection">
       <parameter key="no-outline">true</parameter>
       <parameter key="page-size">LETTER</parameter>
       <parameter key="encoding">UTF-8</parameter>
     </parameter>
     <parameter key="knp_snappy.pdf.env" type="collection"/>
-    <parameter key="knp_snappy.image.binary">"C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage.exe"</parameter>
+    <parameter key="knp_snappy.image.binary">/opt/lampp/htdocs/dev/souk/app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</parameter>
     <parameter key="knp_snappy.image.options" type="collection"/>
     <parameter key="knp_snappy.image.env" type="collection"/>
     <parameter key="cmen_google_charts.version">current</parameter>
@@ -813,7 +813,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>tAKzIy2ADHRHFMCdLXh8a3</argument>
+      <argument>Bo-SMfH7RE03J1Uovp2DGJ</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -823,7 +823,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>tAKzIy2ADHRHFMCdLXh8a3</argument>
+      <argument>Bo-SMfH7RE03J1Uovp2DGJ</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1526,6 +1526,7 @@
           <argument key="mn" type="collection">
             <argument>/opt/lampp/htdocs/dev/souk/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.mn.xlf</argument>
             <argument>/opt/lampp/htdocs/dev/souk/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.mn.xlf</argument>
+            <argument>/opt/lampp/htdocs/dev/souk/vendor/friendsofsymfony/user-bundle/Resources/translations/FOSUserBundle.mn.yml</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
             <argument>/opt/lampp/htdocs/dev/souk/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Latn.xlf</argument>
@@ -2789,6 +2790,7 @@
     <service id="security.http_utils" class="Symfony\Component\Security\Http\HttpUtils" public="false">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="router.default" on-invalid="null"/>
+      <argument>{^https?://%s$}i</argument>
     </service>
     <service id="security.validator.user_password" class="Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator">
       <tag name="validator.constraint_validator" alias="security.validator.user_password"/>
@@ -2931,6 +2933,9 @@
       <argument type="service" id="security.http_utils"/>
       <argument type="service" id="security.logout.success_handler"/>
       <argument></argument>
+      <call method="addHandler">
+        <argument type="service" id="security.logout.handler.csrf_token_clearing"/>
+      </call>
     </service>
     <service id="security.logout.handler.session" class="Symfony\Component\Security\Http\Logout\SessionLogoutHandler" public="false"/>
     <service id="security.logout.handler.cookie_clearing" class="Symfony\Component\Security\Http\Logout\CookieClearingLogoutHandler" public="false" abstract="true"/>
@@ -3266,6 +3271,9 @@
         <argument key="logout_path">/logout</argument>
       </argument>
       <call method="addHandler">
+        <argument type="service" id="security.logout.handler.csrf_token_clearing"/>
+      </call>
+      <call method="addHandler">
         <argument type="service" id="security.logout.handler.session"/>
       </call>
     </service>
@@ -3336,12 +3344,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5b001f8fa6cb96.25488275</argument>
+      <argument>5b0c061d0aaf97.82049674</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5b001f8fa6cb96.25488275</argument>
+      <argument>5b0c061d0aaf97.82049674</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3509,6 +3517,14 @@
       </call>
       <call method="addRuntimeLoader">
         <argument type="service" id="twig.runtime_loader"/>
+      </call>
+      <call method="addGlobal">
+        <argument>pathToWeb</argument>
+        <argument>/opt/lampp/htdocs/dev/souk/app/../web</argument>
+      </call>
+      <call method="addGlobal">
+        <argument>base_dir</argument>
+        <argument>/opt/lampp/htdocs/dev/souk/app/../web</argument>
       </call>
       <configurator service="twig.configurator.environment" method="configure"/>
     </service>
@@ -4447,6 +4463,9 @@
     <service id="fos_user.user_provider.username_email" class="FOS\UserBundle\Security\EmailUserProvider" public="false">
       <argument type="service" id="fos_user.user_manager.default"/>
     </service>
+    <service id="fos_user.user_provider.email" class="FOS\UserBundle\Security\EmailProvider" public="false">
+      <argument type="service" id="fos_user.user_manager.default"/>
+    </service>
     <service id="fos_user.security.controller" class="FOS\UserBundle\Controller\SecurityController">
       <argument type="service" id="security.csrf.token_manager" on-invalid="null"/>
       <call method="setContainer">
@@ -4825,13 +4844,69 @@
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeFromjson</argument>
             </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateTimeFromyml</argument>
+            </argument>
             <argument key="xml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeFromxml</argument>
             </argument>
+          </argument>
+          <argument key="PhpCollection\Sequence" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
             <argument key="yml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>deserializeDateTimeFromyml</argument>
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="PhpCollection\Map" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeMap</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeMap</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeMap</argument>
             </argument>
           </argument>
           <argument key="DateTimeImmutable" type="collection">
@@ -4839,27 +4914,55 @@
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeImmutableFromjson</argument>
             </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>deserializeDateTimeImmutableFromxml</argument>
-            </argument>
             <argument key="yml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeImmutableFromyml</argument>
             </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateTimeImmutableFromxml</argument>
+            </argument>
           </argument>
           <argument key="DateInterval" type="collection">
-            <argument key="json" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
-              <argument>deserializeDateIntervalFromjson</argument>
+              <argument>deserializeDateIntervalFromyml</argument>
             </argument>
             <argument key="xml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateIntervalFromxml</argument>
             </argument>
-            <argument key="yml" type="collection">
+            <argument key="json" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
-              <argument>deserializeDateIntervalFromyml</argument>
+              <argument>deserializeDateIntervalFromjson</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
             </argument>
           </argument>
           <argument key="ArrayCollection" type="collection">
@@ -4867,201 +4970,19 @@
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
             <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
-            <argument key="json" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
             <argument key="xml" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="PhpCollection\Sequence" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeSequence</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeSequence</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeSequence</argument>
-            </argument>
-          </argument>
-          <argument key="PhpCollection\Map" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeMap</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeMap</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeMap</argument>
             </argument>
           </argument>
         </argument>
         <argument key="1" type="collection">
-          <argument key="DateTime" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTime</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTime</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTime</argument>
-            </argument>
-          </argument>
-          <argument key="DateTimeImmutable" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTimeImmutable</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTimeImmutable</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTimeImmutable</argument>
-            </argument>
-          </argument>
-          <argument key="DateInterval" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateInterval</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateInterval</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateInterval</argument>
-            </argument>
-          </argument>
-          <argument key="ArrayCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-          </argument>
           <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
@@ -5069,13 +4990,13 @@
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
-            <argument key="yml" type="collection">
+            <argument key="json" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
           </argument>
           <argument key="PhpCollection\Sequence" type="collection">
-            <argument key="json" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
@@ -5083,7 +5004,7 @@
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
-            <argument key="yml" type="collection">
+            <argument key="json" type="collection">
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
@@ -5102,60 +5023,158 @@
               <argument>serializeMap</argument>
             </argument>
           </argument>
-          <argument key="Symfony\Component\Form\Form" type="collection">
+          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
             <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Symfony\Component\Form\Form" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormToxml</argument>
+              <argument>serializeFormToyml</argument>
             </argument>
             <argument key="json" type="collection">
               <argument>jms_serializer.form_error_handler</argument>
               <argument>serializeFormTojson</argument>
             </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormToyml</argument>
-            </argument>
-          </argument>
-          <argument key="Symfony\Component\Form\FormError" type="collection">
             <argument key="xml" type="collection">
               <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormErrorToxml</argument>
+              <argument>serializeFormToxml</argument>
             </argument>
+          </argument>
+          <argument key="Symfony\Component\Validator\ConstraintViolation" type="collection">
             <argument key="json" type="collection">
-              <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormErrorTojson</argument>
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationTojson</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationToxml</argument>
             </argument>
             <argument key="yml" type="collection">
-              <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormErrorToyml</argument>
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationToyml</argument>
             </argument>
           </argument>
           <argument key="Symfony\Component\Validator\ConstraintViolationList" type="collection">
-            <argument key="xml" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeListToxml</argument>
+              <argument>serializeListToyml</argument>
             </argument>
             <argument key="json" type="collection">
               <argument>jms_serializer.constraint_violation_handler</argument>
               <argument>serializeListTojson</argument>
             </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeListToyml</argument>
-            </argument>
-          </argument>
-          <argument key="Symfony\Component\Validator\ConstraintViolation" type="collection">
             <argument key="xml" type="collection">
               <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeViolationToxml</argument>
+              <argument>serializeListToxml</argument>
+            </argument>
+          </argument>
+          <argument key="Symfony\Component\Form\FormError" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormErrorToyml</argument>
             </argument>
             <argument key="json" type="collection">
-              <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeViolationTojson</argument>
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormErrorTojson</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormErrorToxml</argument>
+            </argument>
+          </argument>
+          <argument key="DateTime" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
             </argument>
             <argument key="yml" type="collection">
-              <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeViolationToyml</argument>
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
+            </argument>
+          </argument>
+          <argument key="DateInterval" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+          </argument>
+          <argument key="DateTimeImmutable" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+          </argument>
+          <argument key="ArrayCollection" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
             </argument>
           </argument>
         </argument>
@@ -5582,7 +5601,7 @@
     </service>
     <service id="knp_snappy.pdf" class="Knp\Snappy\Pdf">
       <tag name="monolog.logger" channel="snappy"/>
-      <argument>"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"</argument>
+      <argument>/opt/lampp/htdocs/dev/souk/app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</argument>
       <argument type="collection">
         <argument key="no-outline">true</argument>
         <argument key="page-size">LETTER</argument>
@@ -5595,7 +5614,7 @@
     </service>
     <service id="knp_snappy.image" class="Knp\Snappy\Image">
       <tag name="monolog.logger" channel="snappy"/>
-      <argument>"C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage.exe"</argument>
+      <argument>/opt/lampp/htdocs/dev/souk/app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</argument>
       <argument type="collection"/>
       <argument type="collection"/>
       <call method="setLogger">
@@ -5838,6 +5857,9 @@
         <argument key="Vich\UploaderBundle\Form\Type\VichImageType" type="service" id="vich_uploader.form.type.image"/>
       </argument>
     </service>
+    <service id="security.logout.handler.csrf_token_clearing" class="Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler" public="false">
+      <argument type="service" id="security.csrf.token_storage"/>
+    </service>
     <service id="monolog.logger.request" class="Symfony\Bridge\Monolog\Logger">
       <argument>request</argument>
       <call method="pushProcessor">
@@ -6059,7 +6081,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>N20o0rqlEc</argument>
       <argument>0</argument>
-      <argument>tAKzIy2ADHRHFMCdLXh8a3</argument>
+      <argument>Bo-SMfH7RE03J1Uovp2DGJ</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6067,7 +6089,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>tWjjiVzAUH</argument>
       <argument>0</argument>
-      <argument>tAKzIy2ADHRHFMCdLXh8a3</argument>
+      <argument>Bo-SMfH7RE03J1Uovp2DGJ</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6075,7 +6097,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>Xiv0t5A3Oa</argument>
       <argument>0</argument>
-      <argument>tAKzIy2ADHRHFMCdLXh8a3</argument>
+      <argument>Bo-SMfH7RE03J1Uovp2DGJ</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6083,7 +6105,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>H+nr8b0P2i</argument>
       <argument>0</argument>
-      <argument>tAKzIy2ADHRHFMCdLXh8a3</argument>
+      <argument>Bo-SMfH7RE03J1Uovp2DGJ</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

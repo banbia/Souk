@@ -1,6 +1,11 @@
-b8a3f7,127.0.0.1,GET,http://localhost:8000/api/commandes/modifier/8/2018-08-08/5,1526734736,80b04a,200
-80b04a,127.0.0.1,GET,http://localhost:8000/api/commandes/modifier/8/2018-08-08/5,1526734736,,500
-4c3a0f,127.0.0.1,GET,http://localhost:8000/api/commandes/modifier/8/2018-08-08/5,1526735091,,200
-6ebe14,127.0.0.1,GET,http://localhost:8000/api/commandes/confirmer/8,1526735167,6cf406,200
-6cf406,127.0.0.1,GET,http://localhost:8000/api/commandes/confirmer/8,1526735167,,404
-2d25d3,127.0.0.1,GET,http://localhost:8000/api/commandes/confirmer/8,1526735186,,200
+f30d11,127.0.0.1,GET,http://localhost:8000/commandes/,1527514159,,200
+cb2b9d,127.0.0.1,GET,http://localhost:8000/pdf/8%7D)%20%7D%7D,1527514161,,200
+ab258e,127.0.0.1,GET,http://localhost:8000/commandes/,1527514267,,200
+e26cc7,127.0.0.1,GET,http://localhost:8000/pdf/8,1527514269,,200
+f0b4e7,127.0.0.1,GET,http://localhost:8000/pdf/8,1527514406,,200
+f1a43b,127.0.0.1,GET,http://localhost:8000/pdf/8,1527514418,,200
+7e11d2,127.0.0.1,GET,http://localhost:8000/pdf/8,1527514421,,200
+828b06,127.0.0.1,GET,http://localhost:8000/pdf/8,1527514566,,200
+603b6b,127.0.0.1,GET,http://localhost:8000/pdf/8,1527514568,,200
+cfd2e1,127.0.0.1,GET,http://localhost:8000/pdf/8,1527514653,,200
+be9c7e,127.0.0.1,GET,http://localhost:8000/pdf/8,1527514685,,200
