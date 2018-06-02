@@ -30,3 +30,10 @@ b47e13,127.0.0.1,GET,http://localhost:8000/evennements/?page=1,1527946464,,200
 fc0861,127.0.0.1,GET,http://localhost:8000/evennements/?page=1,1527946506,,200
 848f7a,127.0.0.1,GET,http://localhost:8000/bundles/front/css/bootstrap.css.map,1527946517,e6f75d,200
 e6f75d,127.0.0.1,GET,http://localhost:8000/bundles/front/css/bootstrap.css.map,1527946517,,404
+1d782e,127.0.0.1,GET,http://localhost:8000/annonces/,1527946864,,200
+27e190,127.0.0.1,GET,http://localhost:8000/annonces/,1527947379,,200
+e93477,127.0.0.1,GET,http://localhost:8000/annonces/,1527947442,,200
+7962cb,127.0.0.1,GET,http://localhost:8000/annonces/,1527947521,,200
+368123,127.0.0.1,GET,http://localhost:8000/annonces/,1527947576,,200
+dae64f,127.0.0.1,GET,http://localhost:8000/annonces/,1527947635,,200
+aaca3d,127.0.0.1,GET,http://localhost:8000/annonces/,1527947650,,200

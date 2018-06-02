@@ -211,15 +211,26 @@ class AnnoncesController extends Controller
    * Lists all annonce entities.
    *
    */
-  public function indexAction()
+  public function indexAction(Request $request)
   {
     $em = $this->getDoctrine()->getManager();
 
     $annonces = $em->getRepository('BackBundle:Annonces')->findAll();
+    //API salsabil pagination
+      /**
+       * @var $paginator \Knp\Component\Pager\Paginator
+       */
+      $paginator  = $this->get('knp_paginator');
+      $result=$paginator->paginate(
+          $annonces,
+          $request->query->getInt('page',1),
+          $request->query->getInt('limit',2)
+      );
+
     $categories = $em->getRepository('BackBundle:Categories')->findAll();
 
     return $this->render('FrontBundle:annonces:index.html.twig', array(
-      'annonces' => $annonces,
+      'annonces' => $result,
       'categories' => $categories,
     ));
   }
