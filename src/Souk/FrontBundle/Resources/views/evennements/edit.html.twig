@@ -2,21 +2,52 @@
 
 {% block body %}
     <h1>Evennement edit</h1>
-    {##}
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+{{ form_start(edit_form) }}
+       {#{{ form_widget(form) }}#}
+<div class="col-md-12">
+    <div class="col-md-6">
 
-    <ul>
-        <li>
-            <a href="{{ path('evennements_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-    #}
+        {{ form_label(edit_form.titre) }}
+        {{ form_errors(edit_form.titre) }}
+        {{ form_widget(edit_form.titre, {'attr': {'class': 'comment form-control'}}) }}
+    </div>
+    <div class="col-md-6">
+        {{ form_label(edit_form.description) }}
+        {{ form_errors(edit_form.description) }}
+        {{ form_widget(edit_form.description, {'attr': {'class': 'comment form-control'}}) }}
+        {{ form_start(edit_form) }}
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6">
+        {{ form_label(edit_form.dateDeb) }}
+        {{ form_errors(edit_form.dateDeb) }}
+        {{ form_widget(edit_form.dateDeb, {'attr': {'class': 'form-group input-group'}}) }}
+    </div>
+    <div class="col-md-6">
+        {{ form_label(edit_form.dateFin) }}
+        {{ form_errors(edit_form.dateFin) }}
+        {{ form_widget(edit_form.dateFin, {'attr': {'class': 'form-group input-group'}}) }}
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6">
+        {{ form_label(edit_form.lieu) }}
+        {{ form_errors(edit_form.lieu) }}
+        {{ form_widget(edit_form.lieu, {'attr': {'class': 'comment form-control'}}) }}
+    </div>
+    <div class="col-md-6">
+        {{ form_label(edit_form.prix) }}
+        {{ form_errors(edit_form.prix) }}
+        {{ form_widget(edit_form.prix, {'attr': {'class': 'comment form-control'}}) }}
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="col-md-6">
+            <button type="submit" class="btn btn-default" > <i class="fa fa-trash"></i> Delete </button>
+            <a class="btn btn-success" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to the liste </i> </a>
+</div>
+</div>
+    {{ form_end(edit_form) }}
 {% endblock %}
