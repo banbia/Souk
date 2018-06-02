@@ -64,7 +64,7 @@ class __TwigTemplate_700018509575b23813b953d8a989ce27280117dde1a8f9814650c860dd7
         $context['_seq'] = twig_ensure_traversable((isset($context["parts"]) || array_key_exists("parts", $context) ? $context["parts"] : (function () { throw new Twig_Error_Runtime('Variable "parts" does not exist.', 12, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
             // line 13
-            echo "
+            echo "            
             <tr>
                 <td>";
             // line 15
@@ -89,7 +89,7 @@ class __TwigTemplate_700018509575b23813b953d8a989ce27280117dde1a8f9814650c860dd7
         <a  class=\"btn btn-default\" href=\"";
         // line 22
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_index");
-        echo "\">Back to Événements <i class=\"fa fa-backward\"> </i> </a>
+        echo "\"> Back to Événements <i class=\"fa fa-backward\"> </i> </a>
     </li>
 ";
         
@@ -129,7 +129,7 @@ class __TwigTemplate_700018509575b23813b953d8a989ce27280117dde1a8f9814650c860dd7
         </thead>
         <tbody>
         {% for p in parts %}
-
+            
             <tr>
                 <td>{{ p.dateRes|date('d-m-Y') }}</td>
                 <td>{{ p.client.prenom  }} {{ p.client.nom  }} </td>
@@ -138,7 +138,7 @@ class __TwigTemplate_700018509575b23813b953d8a989ce27280117dde1a8f9814650c860dd7
         </tbody>
     </table>
     <li>
-        <a  class=\"btn btn-default\" href=\"{{ path('evennements_index') }}\">Back to Événements <i class=\"fa fa-backward\"> </i> </a>
+        <a  class=\"btn btn-default\" href=\"{{ path('evennements_index') }}\"> Back to Événements <i class=\"fa fa-backward\"> </i> </a>
     </li>
 {% endblock %}", "FrontBundle:evennements:liste_des_participants.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/evennements/liste_des_participants.html.twig");
     }

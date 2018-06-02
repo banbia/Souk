@@ -155,8 +155,8 @@ class __TwigTemplate_0ec08412f66c1e9903eb5e94fa4f046c170c2de88b87a0e46234b293887
 
 <div class=\"col-md-12\">
     <div class=\"col-md-6\">
-            <button type=\"submit\" class=\"btn btn-default\" > <i class=\"fa fa-trash\"></i> Delete </button>
-            <a class=\"btn btn-success\" href=\"";
+        <button type=\"submit\" class=\"btn btn-success\" ><i class=\"fa fa-check\"></i>Modifier</button>
+            <a class=\"btn btn-default\" href=\"";
         // line 49
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_index");
         echo "\"><i class=\"fa fa-arrow-left\" > Back to the liste </i> </a>
@@ -239,8 +239,8 @@ class __TwigTemplate_0ec08412f66c1e9903eb5e94fa4f046c170c2de88b87a0e46234b293887
 
 <div class=\"col-md-12\">
     <div class=\"col-md-6\">
-            <button type=\"submit\" class=\"btn btn-default\" > <i class=\"fa fa-trash\"></i> Delete </button>
-            <a class=\"btn btn-success\" href=\"{{ path('evennements_index') }}\"><i class=\"fa fa-arrow-left\" > Back to the liste </i> </a>
+        <button type=\"submit\" class=\"btn btn-success\" ><i class=\"fa fa-check\"></i>Modifier</button>
+            <a class=\"btn btn-default\" href=\"{{ path('evennements_index') }}\"><i class=\"fa fa-arrow-left\" > Back to the liste </i> </a>
 </div>
 </div>
     {{ form_end(edit_form) }}
