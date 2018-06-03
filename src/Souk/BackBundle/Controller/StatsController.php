@@ -14,27 +14,21 @@ class StatsController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $anc = array();
         $cats = $em->getRepository('BackBundle:Categories')->findAll();
-        $i = 0;
+        $anc = "[";
+        $anc .= "['Catégorie','Annonces'],";
         foreach($cats as $cat){
             $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array("categorie"=>$cat));
-            $anc[$i] = array($cat->getDesignation() => count($annonces));
+            //$anc[$cat->getDesignation()] = count($annonces);
+            $anc .= "['".$cat->getDesignation()."','".count($annonces)."'],";
         }
-
+        $anc .= "]";
         $pieChart = new PieChart();
         $pieChart->getData()->setArrayToDataTable(
-            [
-                ['Categorie', 'Annonces'],
-
-                ['German',  5.85],
-                ['French',  1.66],
-                ['Italian', 0.316],
-                ['Romansh', 0.0791]
-            ]
+            $anc
         );
         $pieChart->getOptions()->setPieSliceText('label');
-        $pieChart->getOptions()->setTitle('Swiss Language Use (100 degree rotation)');
+        $pieChart->getOptions()->setTitle('Annonces par catégories');
         $pieChart->getOptions()->setPieStartAngle(100);
         $pieChart->getOptions()->setHeight(500);
         $pieChart->getOptions()->setWidth(900);

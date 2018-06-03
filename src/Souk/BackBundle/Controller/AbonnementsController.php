@@ -57,7 +57,6 @@ class AbonnementsController extends Controller
 
         }
 
-        $date = $date->format('Y-m-d');
         $p = "+".$nb." months";
         $x = strtotime($p, strtotime($date));
         $date = new \DateTime();
