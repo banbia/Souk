@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
             new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
             new Egyg33k\CsvBundle\Egyg33kCsvBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 
         ];
 

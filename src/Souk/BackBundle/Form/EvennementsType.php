@@ -21,16 +21,8 @@ class EvennementsType extends AbstractType
             ->add('dateDeb',DateType::class)
             ->add('dateFin',DateType::class)
             ->add('lieu',TextType::class)
-<<<<<<< HEAD
-            ->add('prix',TextType::class)
-            ->add('etat',TextType::class)
             ->add('prix',TextType::class);
 
-=======
-            ->add('prix',TextType::class);
-
-
->>>>>>> 435ff1e28cbf9c8076b6664844394aa1ade83980
     }/**
      * {@inheritdoc}
      */
