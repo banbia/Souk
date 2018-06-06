@@ -24,15 +24,26 @@ class EvennementsController extends Controller
      * Lists all evennement entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $evennements = $em->getRepository('BackBundle:Evennements')->findAll();
+        // Salsabil API pagination
+        //get access to paginator methods : dump(get_class($paginator));
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator  = $this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $evennements,
+            $request->query->getInt('page',1),
+            $request->query->getInt('limit',3)
+        );
 
 
         return $this->render('FrontBundle:evennements:index.html.twig', array(
-            'evennements' => $evennements,
+            'evennements' => $result,
         ));
     }
 
@@ -91,18 +102,21 @@ class EvennementsController extends Controller
         $cm = $this->getDoctrine()->getManager();
         //extraire la liste des commentaires d'un Evs
         $comsEvs = $cm->getRepository('BackBundle:CommentairesEvs')->findBy(array("evennement"=>$evennement->getId()));
-        //ajout d'un noveau commentaire Evs
 
+        //ajout d'un noveau commentaire Evs
         $com_Evs =new CommentairesEvs();
 
         $formC = $this->createForm(CommentairesEvsType::class,$com_Evs);
 
         $formViewC=$formC->createView();
+        // Salsabil Reservation
         $reservation = new Reservation();
         $form = $this->createForm('Souk\BackBundle\Form\ReservationType', $reservation);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
+            // get client
             $client = $this->getUser();
 
             $reservation->setClient($client);
@@ -152,7 +166,7 @@ class EvennementsController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('evennements_edit', array('id' => $evennement->getId()));
+            return $this->redirectToRoute('evennements_index', array('id' => $evennement->getId()));
         }
 
 

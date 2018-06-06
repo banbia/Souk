@@ -1,5 +1,5 @@
 {% extends 'FrontBundle::layout.html.twig' %}
-
+{#Salsabil' work #}
 {% block body %}
     <h1>Liste des Evenements</h1>
     <a href="{{ path('evennements_new') }}" class="btn btn-success pull-right"><i class="fa fa-plus"> </i>Nouvel evennement</a>
@@ -41,5 +41,8 @@
         {% endfor %}
         </tbody>
     </table>
-
+    {# display navigation #}
+    <div class="navigation text-center">
+        {{ knp_pagination_render(evennements) }}
+    </div>
 {% endblock %}

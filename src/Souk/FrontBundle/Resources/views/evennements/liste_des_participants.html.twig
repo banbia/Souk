@@ -13,9 +13,12 @@
 
             <tr>
                 <td>{{ p.dateRes|date('d-m-Y') }}</td>
-                <td>{{ p.client.username }}</td>
+                <td>{{ p.client.prenom  }} {{ p.client.nom  }} </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+    <li>
+        <a  class="btn btn-default" href="{{ path('evennements_index') }}"> Back to Événements <i class="fa fa-backward"> </i> </a>
+    </li>
 {% endblock %}

@@ -14,16 +14,19 @@ class StatsController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $anc = array();
         $cats = $em->getRepository('BackBundle:Categories')->findAll();
-        $i = 0;
+        $anc = array();
+        $anc[0] = array('Catégorie','Annoces');
+        $i=1;
         foreach($cats as $cat){
             $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array("categorie"=>$cat));
-            $anc[$i] = array($cat->getDesignation() => count($annonces));
+            $anc[$i] = array($cat->getDesignation(),count($annonces));
+            $i = $i+1;
         }
 
         $pieChart = new PieChart();
         $pieChart->getData()->setArrayToDataTable(
+<<<<<<< HEAD
             [
                 ['Categorie', 'Annonces'],
 
@@ -34,12 +37,18 @@ class StatsController extends Controller
         );
         $pieChart->getOptions()->setPieSliceText('label');
         $pieChart->getOptions()->setTitle('Les Annonces par rapport au categories');
+=======
+                $anc
+        );
+        $pieChart->getOptions()->setPieSliceText('label');
+        $pieChart->getOptions()->setTitle('Annonces par catégories');
+>>>>>>> b97a432330553d130cd06445c2a6c77f62c87b9a
         $pieChart->getOptions()->setPieStartAngle(100);
         $pieChart->getOptions()->setHeight(500);
         $pieChart->getOptions()->setWidth(900);
         $pieChart->getOptions()->getLegend()->setPosition('none');
 
-        $histogram = new Histogram();
+        /*$histogram = new Histogram();
         $histogram->getData()->setArrayToDataTable([
             ['Population'],
             [12000000],
@@ -60,8 +69,8 @@ class StatsController extends Controller
         $histogram->getOptions()->setColors(['#e7711c']);
         $histogram->getOptions()->getHistogram()->setLastBucketPercentile(10);
         $histogram->getOptions()->getHistogram()->setBucketSize(10000000);
-
-        return $this->render('BackBundle:Stats:index.html.twig', array('piechart' => $pieChart, 'histogram' => $histogram));
+*/
+        return $this->render('BackBundle:Stats:index.html.twig', array('piechart' => $pieChart/*, 'histogram' => $histogram*/));
 
 
     }

@@ -186,6 +186,7 @@ Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPas
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fos_user.security.interactive_login_listener" previously pointing to "fos_user.user_manager.default" to "fos_user.user_manager".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fos_user.user_provider.username" previously pointing to "fos_user.user_manager.default" to "fos_user.user_manager".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fos_user.user_provider.username_email" previously pointing to "fos_user.user_manager.default" to "fos_user.user_manager".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fos_user.user_provider.email" previously pointing to "fos_user.user_manager.default" to "fos_user.user_manager".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fos_user.util.user_manipulator" previously pointing to "fos_user.user_manager.default" to "fos_user.user_manager".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fos_user.util.password_updater" previously pointing to "security.encoder_factory.generic" to "security.encoder_factory".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fos_user.util.canonical_fields_updater" previously pointing to "fos_user.util.canonicalizer.default" to "fos_user.util.email_canonicalizer".
@@ -230,6 +231,8 @@ Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPas
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "vich_uploader.form.type.file" previously pointing to "vich_uploader.storage.file_system" to "vich_uploader.storage".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "vich_uploader.form.type.image" previously pointing to "vich_uploader.storage.file_system" to "vich_uploader.storage".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "vich_uploader.templating.helper.uploader_helper" previously pointing to "vich_uploader.storage.file_system" to "vich_uploader.storage".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "knp_paginator.helper.processor" previously pointing to "router.default" to "router".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "knp_paginator.helper.processor" previously pointing to "translator.data_collector" to "translator".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "web_profiler.controller.profiler" previously pointing to "router.default" to "router".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "web_profiler.controller.router" previously pointing to "router.default" to "router".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "web_profiler.debug_toolbar" previously pointing to "router.default" to "router".
@@ -382,7 +385,6 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "form.choice_list_factory.cached" to "form.type.choice".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "form.type_extension.form.request_handler" to "form.type_extension.form.http_foundation".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.csrf.token_generator" to "security.csrf.token_manager".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.csrf.token_storage" to "security.csrf.token_manager".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "assets._default_package" to "assets.packages".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "validator.validator_factory" to "validator.builder".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "fos_user.validator.initializer" to "validator.builder".
@@ -439,6 +441,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "debug.security.access.decision_manager.inner" to "debug.security.access.decision_manager".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.firewall.map.config.dev" to "security.firewall.map.context.dev".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.logout.success_handler.main" to "security.logout_listener.main".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.logout.handler.csrf_token_clearing" to "security.logout_listener.main".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.logout.handler.session" to "security.logout_listener.main".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "redirect.after.login" to "security.authentication.success_handler.main.form_login".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.authentication.success_handler.main.form_login" to "security.authentication.listener.form.main".
@@ -555,7 +558,6 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "form.choice_list_factory.cached"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "form.type_extension.form.request_handler"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "security.csrf.token_generator"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "security.csrf.token_storage"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "assets.empty_package"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "assets._default_package"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "templating.engine.delegating"; reason: unused.
@@ -703,6 +705,7 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fos_user.user_listener"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fos_user.validator.initializer"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fos_user.user_provider.username_email"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fos_user.user_provider.email"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fos_user.mailer.twig_swift"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fos_user.mailer.noop"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fos_message.new_thread_form.type.default"; reason: unused.
@@ -770,6 +773,7 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "twig.extension.webprofiler"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "service_locator.20ccd3ddf0f78b2202986f924e362585"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "service_locator.571a2490001bbff7367bf2201a49fc56"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "security.logout.handler.csrf_token_clearing"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "debug.event_dispatcher.inner"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "debug.controller_resolver.inner"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "debug.argument_resolver.inner"; reason: unused.

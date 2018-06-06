@@ -232,6 +232,14 @@ L\'équipe
     'download' => 'Télécharger',
     'form.label.delete' => 'Supprimer ?',
   ),
+<<<<<<< HEAD
+=======
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'Précédent',
+    'label_next' => 'Suivant',
+  ),
+>>>>>>> b97a432330553d130cd06445c2a6c77f62c87b9a
 ));
 
 
