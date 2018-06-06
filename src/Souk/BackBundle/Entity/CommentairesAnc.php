@@ -15,6 +15,13 @@ use Doctrine\Common\Collections\Collection;
 class CommentairesAnc
 {
     /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -45,7 +52,7 @@ class CommentairesAnc
     private $client;
     /**
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Annonces", inversedBy="commentaires")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=true,onDelete="CASCADE")
      */
     private $annonce;
 

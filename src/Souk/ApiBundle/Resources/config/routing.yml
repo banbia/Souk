@@ -10,14 +10,26 @@ api_commandes:
     resource: "@ApiBundle/Resources/config/routing/commandes.yml"
     prefix:   /commandes
 #web service Haifa Daoud
-get_All_Annonces:
-    path:     /allAnnonces
-    defaults: { _controller: ApiBundle:AnnoncesApi:getAllAnnonces}
-
+api_annonces:
+    resource: "@ApiBundle/Resources/config/routing/annonces.yml"
+    prefix:   /annonces
 #service Soumaya
+<<<<<<< HEAD
 #api_reclamations:
      #resource: "@ApiBundle/Resources/config/routing/reclamtion.yml"
      #prefix:   /reclamation.yml
 liste_reclamations:
     path:     /reclamations/liste/{id}
     defaults: { _controller: ApiBundle:ReclamationApi:listeRec }
+=======
+api_reclamations:
+    resource: "@ApiBundle/Resources/config/routing/reclamations.yml"
+    prefix:   /reclamations
+#service Safa
+api_commentaireAnc:
+    resource: "@ApiBundle/Resources/config/routing/commentaireAnc.yml"
+    prefix:   /commentaire
+api_commentaireEvs:
+    resource: "@ApiBundle/Resources/config/routing/commentaireEvs.yml"
+    prefix:   /commentaire
+>>>>>>> 774c7f8b1e1a154fc797224c226c03cca4959cfe

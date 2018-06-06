@@ -146,7 +146,7 @@ class AnnoncesController extends Controller
     $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
     $em->remove($comm);
     $em->flush();
-
+      return $this->redirectToRoute('annonces_show',array("annonce"=>$annonce));
   }
 
   /**
@@ -157,13 +157,6 @@ class AnnoncesController extends Controller
 
   public function newAnnonceAction(Request $request)
   {
-
-
-    // delete  des comm de l'Anc
-    /**
-     * @Route("/delete_com/{$com}/{$annonce}", name="commentairesAnc_delete")
-     */
-
     $annonce = new Annonces();
 
     $form = $this->createForm('Souk\BackBundle\Form\AnnoncesType', $annonce);
@@ -218,15 +211,26 @@ class AnnoncesController extends Controller
    * Lists all annonce entities.
    *
    */
-  public function indexAction()
+  public function indexAction(Request $request)
   {
     $em = $this->getDoctrine()->getManager();
 
     $annonces = $em->getRepository('BackBundle:Annonces')->findAll();
+    //API salsabil pagination
+      /**
+       * @var $paginator \Knp\Component\Pager\Paginator
+       */
+      $paginator  = $this->get('knp_paginator');
+      $result=$paginator->paginate(
+          $annonces,
+          $request->query->getInt('page',1),
+          $request->query->getInt('limit',2)
+      );
+
     $categories = $em->getRepository('BackBundle:Categories')->findAll();
 
     return $this->render('FrontBundle:annonces:index.html.twig', array(
-      'annonces' => $annonces,
+      'annonces' => $result,
       'categories' => $categories,
     ));
   }
@@ -248,6 +252,7 @@ class AnnoncesController extends Controller
    */
   public function newAction(Request $request, $annonce)
   {
+      /* safa Boufare Begin*/
     //cnx bd
     $cm = $this->getDoctrine()->getManager();
     //extraire la liste des commentaires d'une annonce
@@ -277,16 +282,8 @@ class AnnoncesController extends Controller
     return $this->render('FrontBundle:annonces:new_commentairesAnc.html.twig', array('coms' => $coms, 'form' => $formView, 'annonce' => $annonces));
   }
 
-
-  // delete  des comm de l'Anc
-
-
-
   // edit des comm de l'Anc
 
-  /**
-   * @Route("/Edit_com/{$com}/{$annonce}", name="commentairesAnc_Edit")
-   */
   public function editAction(Request $request, $com, $annonce)
   {
     $em = $this->getDoctrine()->getManager();
@@ -305,36 +302,16 @@ class AnnoncesController extends Controller
     return $this->render('FrontBundle:annonces:edit_commantaireAnc.html.twig', array('form' => $formView, 'annonce' => $annonces));
   }
 
-  // les services web des commentaires de l'Anc
+    public function deleteComAncAction($com,$annonce)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
+        $em->remove($comm);
+        $em->flush();
 
-  public function allAction(Request $request, $id)
-  {
-    $em = $this->getDoctrine()->getManager();
-    $user = $em->getRepository('BackBundle:CommentairesAnc')->find($id);
-
-    if ($user->hasRole('ROLE_CLIENT')) {
-
-      $com_Anc = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("client" => $user));
-
-    } else if ($user->hasRole('ROLE_COM')) {
-
-      $com_Anc = $em
-        ->createQueryBuilder('c')
-        ->from('AppBundle:CommentairesAnc', 'c')
-        ->join('AppBundle:Annonces', 'a')
-        ->select(array('c', 'a'))
-        ->where('c.annonce=a.id and a.commercial= :user')
-        ->setParameter('user', $user)
-        ->getQuery()
-        ->getResult();
-
+        return $this->redirectToRoute('annonces_show',array("id"=>$annonce));
     }
-
-    $serializer = SerializerBuilder::create()->build();
-    $formatted = $serializer->serialize($com_Anc, 'json');
-
-    return new JsonResponse($formatted);
-  }
+  // les services web des commentaires de l'Anc
 
   public function createAction(Request $request, $annonce, $date, $quantite, $client)
   {

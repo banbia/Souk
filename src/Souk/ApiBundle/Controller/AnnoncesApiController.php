@@ -4,7 +4,6 @@ namespace Souk\ApiBundle\Controller;
 
 use Souk\UserBundle\Entity\Annonces;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -31,4 +30,6 @@ class AnnoncesApiController extends Controller
     $formatted= $serializer->normalize($annonce, 'json');
     return new JsonResponse($formatted);
   }
+
+
 }

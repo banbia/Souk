@@ -57,4 +57,5 @@ security:
             - { path: ^/reclamations/^, role: [ROLE_CLIENT] }
             - { path: ^/abonnements/, role: [ROLE_COM] }
             - { path: ^/abonnements/^, role: [ROLE_COM] }
+            - { path: ^/evennements/new, role: [ROLE_COM] }
 

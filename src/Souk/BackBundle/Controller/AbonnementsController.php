@@ -56,14 +56,13 @@ class AbonnementsController extends Controller
             $date = $user->getDateFinAb();
 
         }
-        $nb = $nb+1;
-        $date = $date->format('Y-m-d');
+
         $p = "+".$nb." months";
-        //var_dump($date);
         $x = strtotime($p, strtotime($date));
-        $new = new \DateTime();
-        $new->format('Y-m-d');
-        $user->setDateFinAb($new);
+        $date = new \DateTime();
+        $date->setTimestamp($x);
+        $date->format('Y-m-d');
+        $user->setDateFinAb($date);
         $em->persist($user);
         $em->flush();
         return $this->redirectToRoute('abonnements_demandes');

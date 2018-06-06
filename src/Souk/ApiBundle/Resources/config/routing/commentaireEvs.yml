@@ -1,0 +1,12 @@
+liste_commentaireEvs:
+    path:     /commentaireEvs/{id}
+    defaults: { _controller: ApiBundle:CommentaireEvsApi:listeComEvs }
+create_commentaireEvs:
+    path:     /commentaireEvs/new/{evennement}/{contenu}/{client}
+    defaults: { _controller: ApiBundle:CommentaireEvsApi:createComEvs }
+update_commentaireEvs:
+    path:     /commentaireEvs/updete/{comEvs}/{contenu}
+    defaults: { _controller: ApiBundle:CommentaireEvsApi:modifComEvs }
+delete_commentaireEvs:
+    path:     /commentaireEvs/delete/{comEvs}
+    defaults: { _controller: ApiBundle:CommentaireEvsApi:deleteComEvs }

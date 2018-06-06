@@ -16,8 +16,8 @@ commentairesAnc_new:
     defaults: { _controller: FrontBundle:Annonces:new}
 commentairesAnc_delete:
     path:     /delete_com/{com}/{annonce}
-    defaults: { _controller: FrontBundle:Annonces:delete}
-commentairesAnc_Edit:
+    defaults: { _controller: FrontBundle:Annonces:deleteComAnc}
+commentairesAnc_edit:
     path:     /edit_com/{com}/{annonce}
     defaults: { _controller: FrontBundle:Annonces:edit}
 all:

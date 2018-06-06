@@ -5,6 +5,7 @@
 {% endblock style %}
 
 {% block body %}
+    <!--- salsabil's work -->
     <h1> Evenement </h1>
 <div class="row form-groupEvent">
    <div class="col-md-12">
@@ -42,7 +43,8 @@
         </tbody>
     </table>
    </div>
-
+    <div class="col-md-12">
+        <div class="col-md-6">
     {% if is_granted('ROLE_CLIENT') %}
     {{ form_start(form) }}
         {{ form_widget(form) }}
@@ -59,21 +61,26 @@
         {% endif  %}
         {{ form_start(form) }}
         {{ form_widget(form) }}
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-6">
     <a class="btn btn-warning"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"> Edit </i></a>
     <a class="btn btn-danger"  href="{{ path('evennements_delete', { 'id': evennement.id }) }}"> <i class="fa fa-close"></i> Delete</a>
-
+        </div>
+    </div>
     {{ form_end(form) }}
     {% endif %}
-    {{ render(controller('FrontBundle:Evennements:newEvs', { 'evennement':evennement.id  })) }}
 
 </div>
-=======
+
     <!--- safa Boufares's work start-->
         <!-- /row -->
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-6">
-                    <a href="{{ path('signalsEvsN_new', {'evennement' : evennement}) }}"><i class="fa fa-flag pull-right"></i></a>
+                    <a href="{{ path('signalsEvsN_new', {'evennement' : evennement.id}) }}"><i class="fa fa-flag pull-right"></i></a>
                     <br/>
                 </div>
             </div>
@@ -100,7 +107,7 @@
         </div>
         </div>
         <div class="row">
-            {% for com in comsEvs %}
+            {% for com in comEvs %}
 
 
                 <div class="col-md-12">
