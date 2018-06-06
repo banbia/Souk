@@ -1,9 +1,0 @@
-#web service Zammali Soumaya
-
-liste_reclamations:
-    path:     /reclamations/liste{id}
-    defaults: { _controller: ApiBundle:ReclamationApi:listeRec }
-
-new_reclamations:
-    path:     /reclamations/newR/{contenu}/{commercial}
-    defaults: { _controller: ApiBundle:ReclamationApi:newRec }

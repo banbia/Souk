@@ -53,8 +53,8 @@ security:
             - { path: ^/commandes/^, role: [ROLE_CLIENT,ROLE_COM] }
             - { path: ^/messages/^, role: [ROLE_CLIENT,ROLE_COM] }
             - { path: ^/messages/^, role: [ROLE_CLIENT,ROLE_COM] }
-            - { path: ^/reclamations/, role: [ROLE_COM] }
-            - { path: ^/reclamations/^, role: [ROLE_COM] }
+            - { path: ^/reclamations/, role: [ROLE_CLIENT] }
+            - { path: ^/reclamations/^, role: [ROLE_CLIENT] }
             - { path: ^/abonnements/, role: [ROLE_COM] }
             - { path: ^/abonnements/^, role: [ROLE_COM] }
 

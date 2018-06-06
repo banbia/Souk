@@ -18,11 +18,16 @@ class PDFController extends Controller
         $filename = 'commande';
 
         return new Response(
-            $snappy->getOutputFromHtml($html),
+            $snappy->getOutputFromHtml($html,array(
+                'default-header'=>null,
+                'encoding' => 'utf-8',
+                'images' => true,
+
+            )),
             200,
             array(
                 'Content-Type'          => 'application/pdf',
-                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"',
             )
         );
     }

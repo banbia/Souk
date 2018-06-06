@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 class AdminReclamationsController extends Controller
 {
     /**
-     * Lists all reclamation entities.
+     * Lists all reclamation.yml entities.
      * @Route("/", name="admin_reclamations_index")
      */
     public function indexAction()
@@ -25,7 +25,7 @@ class AdminReclamationsController extends Controller
 
 
     /**
-     * Displays a form to edit an existing reclamation entity.
+     * Displays a form to edit an existing reclamation.yml entity.
      *
      */
     public function editAction(Request $request, Reclamations $reclamation)
@@ -40,7 +40,7 @@ class AdminReclamationsController extends Controller
         }
 
         return $this->render('BackBundle:reclamations:edit.html.twig', array(
-            'reclamation' => $reclamation,
+            'reclamation.yml' => $reclamation,
             'edit' => $editForm->createView(),
         ));
     }

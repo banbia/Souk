@@ -15,6 +15,9 @@ get_All_Annonces:
     defaults: { _controller: ApiBundle:AnnoncesApi:getAllAnnonces}
 
 #service Soumaya
-api_commandes:
-    resource: "@ApiBundle/Resources/config/routing/reclamtions.yml"
-    prefix:   /reclamations
+#api_reclamations:
+     #resource: "@ApiBundle/Resources/config/routing/reclamtion.yml"
+     #prefix:   /reclamation.yml
+liste_reclamations:
+    path:     /reclamations/liste/{id}
+    defaults: { _controller: ApiBundle:ReclamationApi:listeRec }

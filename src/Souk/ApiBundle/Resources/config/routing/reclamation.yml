@@ -1,0 +1,7 @@
+liste_reclamations:
+    path:     liste/{id}
+    defaults: { _controller: ApiBundle:ReclamationApi:listeRec }
+
+new_reclamations:
+    path:     newR/{contenu}/{commercial}
+    defaults: { _controller: ApiBundle:ReclamationApi:newRec }

@@ -17,33 +17,20 @@ class ReclamationApiController extends Controller{
 
 
         //Crud Mobile
-    public function listeRecAction(Request $request,$id)
+    public function listeRecAction($id)
     {
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository('UserBundle:User')->find($id);
-
-        if ($request->getMethod() == "POST") {
-            $user = $this->getUser();
-            $p = $request->get('etat');
-            if ($p != "") {
-
-                if ($p == "Accepter")
-                    $p = 1;
-                elseif ($p == "Encours")
-                    $p = 0;
-                else
-                    $p = -1;
-                $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user, 'etat' => $p));
-
-            } else {
-                $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
-
-            }
-        } else
-            $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
-
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
+        $callback = function ($dateTime) {
+            return $dateTime instanceof \DateTime
+                ? $dateTime->format('Y-m-d')
+                : '';
+        };
 
         $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(array('client','commercial'));
+        $normalizer->setCallbacks(array('dateRec' => $callback));
         $normalizer->setCircularReferenceLimit(1);
         $serializer = new Serializer([$normalizer]);
         $normalizer->setCircularReferenceHandler(function ($object) {
@@ -80,18 +67,18 @@ class ReclamationApiController extends Controller{
 
     }
 
-    /*public function showRecAction(Reclamations $reclamation)
+    /*public function showRecAction(Reclamations $reclamation.yml)
     {
-        $deleteForm = $this->createDeleteForm($reclamation);
+        $deleteForm = $this->createDeleteForm($reclamation.yml);
 
         return $this->render('FrontBundle:reclamations:show.html.twig', array(
-            'reclamation' => $reclamation,
+            'reclamation.yml' => $reclamation.yml,
             'delete_form' => $deleteForm->createView(),
         ));
     }*/
 
     /**
-     * Displays a form to edit an existing reclamation entity.
+     * Displays a form to edit an existing reclamation.yml entity.
      *
      */
 
