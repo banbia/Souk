@@ -271,16 +271,8 @@ class AnnoncesController extends Controller
     return $this->render('FrontBundle:annonces:new_commentairesAnc.html.twig', array('coms' => $coms, 'form' => $formView, 'annonce' => $annonces));
   }
 
-
-  // delete  des comm de l'Anc
-
-
-
   // edit des comm de l'Anc
 
-  /**
-   * @Route("/Edit_com/{$com}/{$annonce}", name="commentairesAnc_Edit")
-   */
   public function editAction(Request $request, $com, $annonce)
   {
     $em = $this->getDoctrine()->getManager();
@@ -309,35 +301,6 @@ class AnnoncesController extends Controller
         return $this->redirectToRoute('annonces_show',array("id"=>$annonce));
     }
   // les services web des commentaires de l'Anc
-
-  public function allAction(Request $request, $id)
-  {
-    $em = $this->getDoctrine()->getManager();
-    $user = $em->getRepository('BackBundle:CommentairesAnc')->find($id);
-
-    if ($user->hasRole('ROLE_CLIENT')) {
-
-      $com_Anc = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("client" => $user));
-
-    } else if ($user->hasRole('ROLE_COM')) {
-
-      $com_Anc = $em
-        ->createQueryBuilder('c')
-        ->from('AppBundle:CommentairesAnc', 'c')
-        ->join('AppBundle:Annonces', 'a')
-        ->select(array('c', 'a'))
-        ->where('c.annonce=a.id and a.commercial= :user')
-        ->setParameter('user', $user)
-        ->getQuery()
-        ->getResult();
-
-    }
-
-    $serializer = SerializerBuilder::create()->build();
-    $formatted = $serializer->serialize($com_Anc, 'json');
-
-    return new JsonResponse($formatted);
-  }
 
   public function createAction(Request $request, $annonce, $date, $quantite, $client)
   {

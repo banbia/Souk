@@ -254,7 +254,7 @@ class EvennementsController extends Controller
         return new JsonResponse($formatted);
     }
 
-    public function newEvsSAction(Request $request,$evennement)
+    public function newEvsSAction(Request $request,$evennement,$contnu)
     {
         $em = $this->getDoctrine()->getManager();
         $com_Evs= new CommentairesEvs();

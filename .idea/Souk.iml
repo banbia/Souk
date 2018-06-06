@@ -7,26 +7,18 @@
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar://$MODULE_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
-          <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Tests/DeprecationErrorHandler/deprecation.phar/" />
-<<<<<<< HEAD
           <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-=======
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
-          <root url="phar://$MODULE_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/deprecation.phar/" />
           <root url="phar://$MODULE_DIR$/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+          <root url="phar://$MODULE_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/deprecation.phar/" />
+          <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Tests/DeprecationErrorHandler/deprecation.phar/" />
         </CLASSES>
         <SOURCES>
-          <root url="phar://$MODULE_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
-          <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Tests/DeprecationErrorHandler/deprecation.phar/" />
-<<<<<<< HEAD
           <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-=======
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
-          <root url="phar://$MODULE_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/deprecation.phar/" />
           <root url="phar://$MODULE_DIR$/composer.phar/" />
-          <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://$MODULE_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
+          <root url="phar://$MODULE_DIR$/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/deprecation.phar/" />
+          <root url="phar://$MODULE_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Tests/DeprecationErrorHandler/deprecation.phar/" />
         </SOURCES>
       </library>
     </orderEntry>

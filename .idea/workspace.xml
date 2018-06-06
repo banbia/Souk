@@ -1,37 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca701063-2f01-4215-8520-2cf6d7e9a544" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_5_9_18_7_34_PM_c.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_5_9_18_7_35_PM_s.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="5ae3dece-6f50-476a-85bc-c5829d2d802f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireAncApiController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireEvsApiController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commentaireAnc.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commentaireEvs.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_5_9_18_7_34_PM_c.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_5_9_18_7_35_PM_s.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Souk/BackBundle/Controller/SignalsAncController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Souk/BackBundle/Controller/SignalsEvsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/06/f4/6cf406" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/0f/3a/4c3a0f" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/14/be/6ebe14" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/4a/b0/80b04a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/d3/25/2d25d3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/f7/a3/b8a3f7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/00/00b373d4102d27cca7fd8a98cf4051db1c0ea91dc537b6bfe3cab6b503eea386.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/0b/0b06328fae8887a0e2d4214b19659880db90aa03adf869540aa2580c127381bc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/11/11df6e1eb27ebba60b6d00f7aafa43b698f0bc293687cbfa4bd3951bcef16216.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/12/12c266eb76c37b3b663e3a7f8e01ec9ccd3602117410a8929671e2a6577c4d38.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/15/153fa1af4feeab9a479b0f082da083178fc16e3bb68957bbc15d3442ef3e1858.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/16/16bd48073e3beaf3aa4d0ed33d2939e8b43eb0597143612aa25bedeade8e11fb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/22/22d669e80000861746b0a774e32ac6489f51beb4ddb831cf12ff598791d6a607.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/28/2871e2ffbc2d5a94caa5d5aca232cd6e7736fa22222a34ca6313075425f452d0.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/28/28e139b5328d6a27c5f61e913d2f2e27aa5e4fc5301350d9a0751ba5e86ba302.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/2d/2d6d01125a7e0fff7b0305a856d789aa0db1b5c8e84496bf3af9ffe5627ee5f0.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/35/35d0ec77e496aea27caa280aaa12384f411ed85934a39b1b976cf65d4bea7708.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/36/363a8bec194266995e8e51f9ffefd10a7251d0f50e9c60d78dd64b8c8adf5900.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/4d/4d1d060adfe0ef56807df998eee4f49f76ee9b4da74b5e7e27a0e44d2252bdef.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/4e/4efe9e91707232e0958897ebf6b40efa9682f6f6e1b53afe95aa973a82c7a07c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/55/556d679387c4ea3f1d447c3e2bcb2052b8d42b5558ecff17264469b0ef9a4233.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/59/593d349604fa190dddee02ca5efa05e7d5ee89d2c729eab165957b152026e990.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/59/59853da3acdf93583c5f2f3b6e56400405d173e0931fafde008edf5ea548941a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/59/59c40f49b49a86c3d201288d12eb22a64f67bf9c42f2402e0d8c49d34d0b70e0.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/5b/5b8f1cc4db1e02cfd9a57d44d171ec0662db20577d29409bf9d2608b117f8d32.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/5b/5be45bac5004290720be68791b32176afeb52a8f6ac877488db3eef9ff957f6d.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/63/631fdb61df7094f9261bf77abfdc978146e4e50a82c5b92e4f431a9e3175d8a9.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/6c/6c756aec984bc71f7d6150609ce47ba6d2c20d21c0c4cfb8de9ccb7a1509fe1a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/6e/6e0d36656d733a61bbbe3d9adc71e144c3130782612e501667c1709e71765d92.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/81/81e58d34399f24a4e9b97ff892febc1f2f3774db4451b545aef3fe79d769d002.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/82/8254a4bab0d0f721caa92e54fd46108a4aee788823c454db54e42f66f0a4542b.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/8a/8a79665756d99d94d2e67ce592e261dd2313c54117da319aaad0f69eb7cc206a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/95/95f77af3b912efdc273e2de8563989702d170cedf5f64f8772f20e367c55154a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/9f/9f4336433a18a4dac1a931f1a8d701729cd04b78759b4f9c476cf818ff9d4349.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/a0/a0289ae77c19b9cddec78d7859501d16817079784442ce13386e68436df74773.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/a8/a8c198f8666d41a7bf52987558e494744cda692b5ba9c5a1eb37a763bec434cb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ae/ae8151747a4b8ae03d9f66da6c0dd3fa93c6e2c73e07f7e697dadb74adbce6b2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/b5/b53dfa240ed3f1c21718e5399df7a1203a0a8fa85bd8f0b2495ff77699afeab1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/b6/b690f926742d9a0439a4a518b25fb2c9e6c9e02cf12d10e541da735877f99772.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/bb/bbe41abda7250b749fc0b2138fb981727c2eb8926161fe210c4ddaba5f73a22c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c2/c2ba7e33a9da7ac5f263e5881599cb8670c6f3abd4b949fbfaa4f3fcd38126fd.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c3/c36ec0711cf628e74eca15d942af4a986d7ce3cb148bb0bd88755535925e8edb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c4/c49d9546734e48f413b1df488c901232a1acae147a6b4a6e54bda2f00118e501.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/c9/c9311c40b8392af08ebff7c90ffc2a96ad68b71c1b695f9bf3010cefcc67db68.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/d1/d130849295379ee999cd92d0d50b18b60f9e9be26b82a04b976613389d7c5fe8.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/d1/d15225ad3777f4acc5a329fae6dfdcc3dbe8a8fc13c62b94fa7d8e6272ce10c1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/d4/d49cf73326efb32aeb74da8fe7ad34780bafd24b2cd7bc4fd2220fe021f36e56.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/d4/d4ebcee87575870d4542268f7c5c219ee0e20a0519a627ff2abef3d230eb4102.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/db/db2ee043f1d87585276c8222294cdd1eb55f28eb06643c7ae5b2ae685e16ce87.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/df/dfaca57d12227385160936534550074f15dcc42e1f2cea10f1cef9d4d5f06e42.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/e2/e2a1c23f2bf5c40fd4b9271eec213217b092bf7e2bb5ee850ea0fddf94bca14c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/e4/e42f232523291bb571064aa2440a1d40631cb66893b1992f4a2392b67038ca2c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/e9/e901002c2335d0dfc1d07f98f71e2bd20e12e07aea627c34e79198f50cf07938.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/e9/e920382225a49b2988432c6164c945f1142275d53376c1b24ddb2c31cc0a66b8.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/eb/ebd81a14938835e471891743784d27528dfaf935e4d60a64849fd8f3c2064928.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/f4/f4028046a292d8cd066ea218f32f07099fb11b229fdd24b05d26068be8a2693d.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/f5/f5106941a9144c466d648a00dc4d7041894ab4cdea2aefd080dca1d68bc9d2c9.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/f5/f54ac4d57aac9a877d5627ee8c3295f8d3649e73d924f96122dcbbc6f0f75904.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/fb/fba1bd14bcff48418630c13cf13b5f51f4b362254f31a5d08ae7739da62bd630.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ff/ff449f8f4b9d91ecb9ae65b4eff3a5c864ae381709c1363cdbd518c5454549cc.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Souk.iml" afterPath="$PROJECT_DIR$/.idea/Souk.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/BackBundle/Controller/StatsController.php" afterPath="$PROJECT_DIR$/src/Souk/BackBundle/Controller/StatsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/BackBundle/Entity/CommentairesAnc.php" afterPath="$PROJECT_DIR$/src/Souk/BackBundle/Entity/CommentairesAnc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/BackBundle/Entity/CommentairesEvs.php" afterPath="$PROJECT_DIR$/src/Souk/BackBundle/Entity/CommentairesEvs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/CommentaireEvsController.php" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/CommentaireEvsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/annonces.yml" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/annonces.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/annonces/show.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/annonces/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/annotations.map" afterPath="$PROJECT_DIR$/var/cache/dev/annotations.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/19/1960beb7d624d40c7857e2a0dd83ac5cf7a781343bab2cd4b18bf043b847c023.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/19/1960beb7d624d40c7857e2a0dd83ac5cf7a781343bab2cd4b18bf043b847c023.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/29/29d0078459579e6f66b483a3ac913293937dd23906a507517e68ab7ca0da3b4e.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/29/29d0078459579e6f66b483a3ac913293937dd23906a507517e68ab7ca0da3b4e.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/32/32f4d3c949801eda6763e38c500e6a0d24457f3176e7d201b6cdb63cf1620f91.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/32/32f4d3c949801eda6763e38c500e6a0d24457f3176e7d201b6cdb63cf1620f91.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/39/3925f0d763a1c7fd6d61d7d592fbb50e73957673fac71bdd75fc6a71346034ce.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/39/3925f0d763a1c7fd6d61d7d592fbb50e73957673fac71bdd75fc6a71346034ce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/5c/5c5f40845dbba5896bb6fc3f255fdde05bf7d7bde94d0dc592b77d49218662c0.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/5c/5c5f40845dbba5896bb6fc3f255fdde05bf7d7bde94d0dc592b77d49218662c0.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/6c/6c5074c5b7282732b5aa9c340705e10986391c3e2e1ab510f859d6c72893848f.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/6c/6c5074c5b7282732b5aa9c340705e10986391c3e2e1ab510f859d6c72893848f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/70/70ec77b7c58616a07db7926c29e4aee0c98a444f0042d58ed1477ee671be0deb.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/70/70ec77b7c58616a07db7926c29e4aee0c98a444f0042d58ed1477ee671be0deb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/72/72a1ee1e23243732241af017f9bb562bd58875d2040be6a494c3fa1f897c8840.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/72/72a1ee1e23243732241af017f9bb562bd58875d2040be6a494c3fa1f897c8840.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/7b/7bab561e14a93245f33d745d1b70a259fc059838de5e4360c513d1bc3c8da5ce.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/7b/7bab561e14a93245f33d745d1b70a259fc059838de5e4360c513d1bc3c8da5ce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/88/88c758e47ae8c5213e7bf2412c80fede578b170ce2bcb2458dbeb67a15c1eb1c.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/88/88c758e47ae8c5213e7bf2412c80fede578b170ce2bcb2458dbeb67a15c1eb1c.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/8b/8baf5cffa984a856f1c7b729ac7ff418f053f097b85e5e105586edd2efb2dac8.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/8b/8baf5cffa984a856f1c7b729ac7ff418f053f097b85e5e105586edd2efb2dac8.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/95/95b64fa32b0ec37d8249cc572b3fe3d05cf740ab9a517e84a79098fa099fef7f.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/95/95b64fa32b0ec37d8249cc572b3fe3d05cf740ab9a517e84a79098fa099fef7f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/97/97a389124e816618a5a9710f6c02422fbd4c2212418cd9e451dc34798a39d8dd.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/97/97a389124e816618a5a9710f6c02422fbd4c2212418cd9e451dc34798a39d8dd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/9d/9d178be3988d57251e307cb182c5565a8ae0adc5777fee471baae3c9ca36b3f7.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/9d/9d178be3988d57251e307cb182c5565a8ae0adc5777fee471baae3c9ca36b3f7.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/a1/a1c1c6b38fcff68ad7f3fa4c9f6a3c46b8bae827ea376c26f124058338d0bdce.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/a1/a1c1c6b38fcff68ad7f3fa4c9f6a3c46b8bae827ea376c26f124058338d0bdce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/bf/bf3896d8cb67a270995aa84026578d4b39514a713d0cb73264bd43d25c963959.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/bf/bf3896d8cb67a270995aa84026578d4b39514a713d0cb73264bd43d25c963959.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/ce/cebf397b958e20efb24135b912efb99bf02ac88ec2b4a0527880963868387b86.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ce/cebf397b958e20efb24135b912efb99bf02ac88ec2b4a0527880963868387b86.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/d3/d35a3c3898f6c943f9dbed784fe1a0b1ea68e43f103166b02ff60e63aa127933.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/d3/d35a3c3898f6c943f9dbed784fe1a0b1ea68e43f103166b02ff60e63aa127933.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/e2/e281e2b194cfc891182effeaa42420f66faefb20cc6ca8ebf012baf2eefe2423.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/e2/e281e2b194cfc891182effeaa42420f66faefb20cc6ca8ebf012baf2eefe2423.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/f8/f8381d4d5dbd9b531170011bac0444f52f00953ed403f328f61b4904ffa8a4ea.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/f8/f8381d4d5dbd9b531170011bac0444f52f00953ed403f328f61b4904ffa8a4ea.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukBackBundleEntityAnnonces.php" afterPath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukBackBundleEntityAnnonces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukUserBundleEntityUser.php" afterPath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__SoukUserBundleEntityUser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,63 +108,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ComAbonnement.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/ComAbonnement/ComAbonnement.html.twig">
+      <file leaf-file-name="StatsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/StatsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="21">
+              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HistoriqueAbs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Entity/HistoriqueAbs.php">
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="85" column="19" lean-forward="false" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="35" />
+            <state relative-caret-position="210">
+              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComAbonnements.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/ComAbonnements.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComAbonnementsController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ComAbonnementsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="69" column="49" lean-forward="false" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
-              <folding>
-                <element signature="e#47#86#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbonnementsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/AbonnementsController.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/views/Stats/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-    <leaf>
-      <file leaf-file-name="EvennementsController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stats.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing/stats.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-731">
-              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
+            <state relative-caret-position="63">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,31 +151,26 @@
       </file>
     </leaf>
   </component>
-  <component name="FrameworkCommandLineHistory">
-    <commandsHistory>
-      <command text="s server:run " />
-    </commandsHistory>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/ComAbonnement/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/ComAbonnements.yml" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/ComAbonnement/ComAbonnement.html.twig" />
-        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ComAbonnementsController.php" />
-=======
+        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/annonces.yml" />
+        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/annonces/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php" />
+        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/CommentaireEvsController.php" />
+        <option value="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php" />
         <option value="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php" />
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
+        <option value="$PROJECT_DIR$/src/Souk/BackBundle/Entity/CommentairesEvs.php" />
+        <option value="$PROJECT_DIR$/src/Souk/BackBundle/Entity/CommentairesAnc.php" />
+        <option value="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commentaireAnc.yml" />
+        <option value="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireAncApiController.php" />
+        <option value="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireEvsApiController.php" />
+        <option value="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commentaireEvs.yml" />
+        <option value="$PROJECT_DIR$/src/Souk/BackBundle/Controller/StatsController.php" />
       </list>
     </option>
   </component>
@@ -142,11 +182,11 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -162,6 +202,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,6 +213,16 @@
             <path>
               <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
               <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -185,63 +236,41 @@
               <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-<<<<<<< HEAD
               <item name="BackBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-=======
+            </path>
+            <path>
+              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="FrontBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
             </path>
             <path>
               <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
               <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-<<<<<<< HEAD
-              <item name="BackBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BackBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="egyg33k" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="egyg33k" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="csv-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-=======
               <item name="FrontBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Souk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Souk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -260,76 +289,65 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ca701063-2f01-4215-8520-2cf6d7e9a544" name="Default" comment="" />
-      <created>1525890789284</created>
+      <changelist id="5ae3dece-6f50-476a-85bc-c5829d2d802f" name="Default" comment="" />
+      <created>1526815943304</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-<<<<<<< HEAD
-      <updated>1525362268712</updated>
-      <workItem from="1525362291164" duration="2973000" />
-      <workItem from="1525371161283" duration="942000" />
-      <workItem from="1525449082508" duration="1157000" />
-      <workItem from="1525799954660" duration="956000" />
-      <workItem from="1525815798790" duration="3608000" />
-      <workItem from="1525861680557" duration="2305000" />
-      <workItem from="1526730290257" duration="24000" />
-=======
-      <updated>1525890789284</updated>
-      <workItem from="1525890792240" duration="218000" />
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
+      <updated>1526815943304</updated>
+      <workItem from="1526815949257" duration="2728000" />
+      <workItem from="1526977634227" duration="17158000" />
+      <workItem from="1527077936014" duration="2116000" />
+      <workItem from="1527156993999" duration="5141000" />
+      <workItem from="1527249998272" duration="2702000" />
+      <workItem from="1527418668234" duration="6945000" />
+      <workItem from="1527673445281" duration="2940000" />
+      <workItem from="1527940595000" duration="274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="11965000" />
-=======
-    <option name="totallyTimeSpent" value="218000" />
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
+    <option name="totallyTimeSpent" value="40004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-<<<<<<< HEAD
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3001464" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2723824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -342,388 +360,352 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/reclamations.yml">
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="546">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/views/abonnements/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="6531">
+          <caret line="311" column="7" lean-forward="false" selection-start-line="311" selection-start-column="7" selection-end-line="311" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommandesApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="987">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/ComAbonnements.yml">
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireAncApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="504">
+          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ComAbonnementsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="e#47#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ReclamationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/ComAbonnement/ComAbonnement.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="38" lean-forward="false" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/reclamations.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/ComAbonnement/ComAbonnement.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="12" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/views/abonnements/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/ComAbonnements.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ReclamationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ComAbonnementsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="e#47#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="38" lean-forward="false" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/reclamations.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/ComAbonnement/ComAbonnement.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/ComAbonnements.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="62" lean-forward="false" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ComAbonnementsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
-          <folding>
-            <element signature="e#47#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ReclamationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/FrontBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/ComAbonnement/index.html.twig" />
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/reclamations/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/UserBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/reclamations.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ReclamationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/egyg33k/csv-bundle/Egyg33kCsvBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/ComAbonnements.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/SignalsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/SignalsAncController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/AdminReclamationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-811">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1525800970158" expanded="true" signature="546:609" ph="SELECT d FRO... BackBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/views/abonnements/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Entity/HistoriqueAbs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="85" column="19" lean-forward="false" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/AbonnementsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/ComAbonnement/ComAbonnement.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/ComAbonnementsController.php">
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireEvsApiController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="69" column="49" lean-forward="false" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
-          <folding>
-            <element signature="e#47#86#0#PHP" expanded="true" />
-          </folding>
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commentaireAnc.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commentaireEvs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireEvsApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6531">
+          <caret line="311" column="7" lean-forward="false" selection-start-line="311" selection-start-column="7" selection-end-line="311" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommandesApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireAncApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/CommentaireEvsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="66" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommandesApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="170" column="1" lean-forward="false" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/annonces.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/annonces.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/annonces/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="240" column="75" lean-forward="false" selection-start-line="240" selection-start-column="75" selection-end-line="240" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing/annonces.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="24" column="54" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="24" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Entity/Commandes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3345">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/SignalsAncController.php" />
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/SignalsEvsController.php" />
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/SignalsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-944">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Form/CommandesType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/CommandesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-819">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/CommentaireEvsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/reclamations.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/ReclamationApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="47" column="30" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/AnnoncesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="76" column="13" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/FrontBundle/Controller/EvennementsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="220" column="65" lean-forward="false" selection-start-line="220" selection-start-column="54" selection-end-line="220" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commandes.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Entity/Annonces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1512">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Entity/Evennements.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1512">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommandesApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="120" column="3" lean-forward="false" selection-start-line="120" selection-start-column="3" selection-end-line="143" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Entity/CommentairesAnc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Entity/CommentairesEvs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="131" column="7" lean-forward="true" selection-start-line="131" selection-start-column="7" selection-end-line="131" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commentaireEvs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/commentaireAnc.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireEvsApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/CommentaireAncApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/config/routing/stats.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Resources/views/Stats/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Souk/BackBundle/Controller/StatsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

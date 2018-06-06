@@ -27,14 +27,13 @@ class StatsController extends Controller
             [
                 ['Categorie', 'Annonces'],
 
-                ['German',  5.85],
-                ['French',  1.66],
-                ['Italian', 0.316],
-                ['Romansh', 0.0791]
+                ['Artisanale', 1],
+                ['rustique',  2],
+
             ]
         );
         $pieChart->getOptions()->setPieSliceText('label');
-        $pieChart->getOptions()->setTitle('Swiss Language Use (100 degree rotation)');
+        $pieChart->getOptions()->setTitle('Les Annonces par rapport au categories');
         $pieChart->getOptions()->setPieStartAngle(100);
         $pieChart->getOptions()->setHeight(500);
         $pieChart->getOptions()->setWidth(900);

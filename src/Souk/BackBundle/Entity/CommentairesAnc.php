@@ -15,6 +15,13 @@ use Doctrine\Common\Collections\Collection;
 class CommentairesAnc
 {
     /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")

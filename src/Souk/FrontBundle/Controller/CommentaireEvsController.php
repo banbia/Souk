@@ -68,7 +68,7 @@ class CommentaireEvsController extends Controller
         $em = $this->getDoctrine()->getManager();
         $com_Evs = $em->getRepository('BackBundle:commentairesEvs')->find($com);
         $form=$this->createForm( CommentairesEvsType::class,$com_Evs);
-        ///récupérer evennement
+        ///récupérer evennementy
         $evennements = $em->getRepository('BackBundle:Evennements')->find($evennement);
         $formView=$form->createView();
         $form->handleRequest($request);
