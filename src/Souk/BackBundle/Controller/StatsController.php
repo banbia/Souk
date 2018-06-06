@@ -15,17 +15,18 @@ class StatsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $cats = $em->getRepository('BackBundle:Categories')->findAll();
-        $anc = "[";
-        $anc .= "['Catégorie','Annonces'],";
+        $anc = array();
+        $anc[0] = array('Catégorie','Annoces');
+        $i=1;
         foreach($cats as $cat){
             $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array("categorie"=>$cat));
-            //$anc[$cat->getDesignation()] = count($annonces);
-            $anc .= "['".$cat->getDesignation()."','".count($annonces)."'],";
+            $anc[$i] = array($cat->getDesignation(),count($annonces));
+            $i = $i+1;
         }
-        $anc .= "]";
+
         $pieChart = new PieChart();
         $pieChart->getData()->setArrayToDataTable(
-            $anc
+                $anc
         );
         $pieChart->getOptions()->setPieSliceText('label');
         $pieChart->getOptions()->setTitle('Annonces par catégories');
@@ -34,7 +35,7 @@ class StatsController extends Controller
         $pieChart->getOptions()->setWidth(900);
         $pieChart->getOptions()->getLegend()->setPosition('none');
 
-        $histogram = new Histogram();
+        /*$histogram = new Histogram();
         $histogram->getData()->setArrayToDataTable([
             ['Population'],
             [12000000],
@@ -55,8 +56,8 @@ class StatsController extends Controller
         $histogram->getOptions()->setColors(['#e7711c']);
         $histogram->getOptions()->getHistogram()->setLastBucketPercentile(10);
         $histogram->getOptions()->getHistogram()->setBucketSize(10000000);
-
-        return $this->render('BackBundle:Stats:index.html.twig', array('piechart' => $pieChart, 'histogram' => $histogram));
+*/
+        return $this->render('BackBundle:Stats:index.html.twig', array('piechart' => $pieChart/*, 'histogram' => $histogram*/));
 
 
     }
