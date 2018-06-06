@@ -26,23 +26,13 @@ class StatsController extends Controller
 
         $pieChart = new PieChart();
         $pieChart->getData()->setArrayToDataTable(
-<<<<<<< HEAD
-            [
-                ['Categorie', 'Annonces'],
 
-                ['Artisanale', 1],
-                ['rustique',  2],
-
-            ]
+            $anc
         );
         $pieChart->getOptions()->setPieSliceText('label');
         $pieChart->getOptions()->setTitle('Les Annonces par rapport au categories');
-=======
-                $anc
-        );
-        $pieChart->getOptions()->setPieSliceText('label');
-        $pieChart->getOptions()->setTitle('Annonces par catégories');
->>>>>>> b97a432330553d130cd06445c2a6c77f62c87b9a
+
+
         $pieChart->getOptions()->setPieStartAngle(100);
         $pieChart->getOptions()->setHeight(500);
         $pieChart->getOptions()->setWidth(900);

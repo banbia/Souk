@@ -1228,6 +1228,6 @@ class __TwigTemplate_f9f371e32310e5c4057dc969250f5d5540196153ae5b10af61a13a3affb
         display: none;
     }
 }
-", "@WebProfiler/Profiler/toolbar.css.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\toolbar.css.twig");
+", "@WebProfiler/Profiler/toolbar.css.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\toolbar.css.twig");
     }
 }
