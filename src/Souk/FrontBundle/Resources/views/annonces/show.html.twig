@@ -238,7 +238,7 @@
                                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                                     {% if app.user.id  == comn.client.id %}
                                         <a href="{{ path('commentairesAnc_delete',{'com':comn.id,'annonce':annonce.id}) }}"><i class="fa fa-trash-o"></i></a>
-                                        <a href="{{ path('commentairesAnc_Edit',{'com':comn.id,'annonce':annonce.id}) }}"><i class="fa fa-edit"></i></a>
+                                        <a href="{{ path('commentairesAnc_edit',{'com':comn.id,'annonce':annonce.id}) }}"><i class="fa fa-edit"></i></a>
                                     {% endif %}
                                 {% endif %}
                             </div>
