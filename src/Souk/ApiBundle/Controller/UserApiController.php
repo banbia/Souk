@@ -21,7 +21,7 @@ class UserApiController extends Controller
             return $object->getId();
         });
         $user = $this->getDoctrine()->getManager()
-            ->getRepository('FreelancerBundle:User')
+            ->getRepository('UserBundle:User')
             ->findBy(array("username" => $login));
         $passwordEncoder = $this->get('security.password_encoder');
         
