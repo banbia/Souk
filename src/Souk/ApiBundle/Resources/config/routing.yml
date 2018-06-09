@@ -14,14 +14,14 @@ api_annonces:
     resource: "@ApiBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
 #service Soumaya
-<<<<<<< HEAD
+
 #api_reclamations:
      #resource: "@ApiBundle/Resources/config/routing/reclamtion.yml"
-     #prefix:   /reclamation.yml
+     #prefix:   /reclamations.yml
 liste_reclamations:
     path:     /reclamations/liste/{id}
     defaults: { _controller: ApiBundle:ReclamationApi:listeRec }
-=======
+
 api_reclamations:
     resource: "@ApiBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations
@@ -32,4 +32,4 @@ api_commentaireAnc:
 api_commentaireEvs:
     resource: "@ApiBundle/Resources/config/routing/commentaireEvs.yml"
     prefix:   /commentaire
->>>>>>> 774c7f8b1e1a154fc797224c226c03cca4959cfe
+

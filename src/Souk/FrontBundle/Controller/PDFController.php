@@ -23,6 +23,7 @@ class PDFController extends Controller
                 'encoding' => 'utf-8',
                 'images' => true,
 
+
             )),
             200,
             array(

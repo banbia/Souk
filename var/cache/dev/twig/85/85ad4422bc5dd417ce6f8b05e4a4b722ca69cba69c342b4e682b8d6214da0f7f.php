@@ -399,6 +399,6 @@ class __TwigTemplate_872b6e79e3b922659231c43cf655f5e3a9ee4eecad1adaf1eb3eb49644a
         <div class=\"clearfix\"></div>
     </div>
 {% endblock %}
-", "FrontBundle:default:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
+", "FrontBundle:default:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
     }
 }

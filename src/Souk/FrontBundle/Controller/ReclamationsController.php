@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ReclamationsController extends Controller
 {
     /**
-     * Lists all reclamation.yml entities.
+     * Lists all reclamations.yml entities.
      * @Route("/", name="reclamations_index")
      */
     public function indexAction(Request $request)
@@ -47,7 +47,7 @@ class ReclamationsController extends Controller
     }
 
     /**
-     * Creates a new reclamation.yml entity.
+     * Creates a new reclamations.yml entity.
      * @Route("/new", name="reclamations_new")
      */
     public function newAction(Request $request)
@@ -73,7 +73,7 @@ class ReclamationsController extends Controller
         }
 
         return $this->render('FrontBundle:reclamations:new.html.twig', array(
-            'reclamation.yml' => $reclamation,
+            'reclamations.yml' => $reclamation,
             'form' => $form->createView(),
         ));
     }
@@ -87,13 +87,13 @@ class ReclamationsController extends Controller
         $deleteForm = $this->createDeleteForm($reclamation);
 
         return $this->render('FrontBundle:reclamations:show.html.twig', array(
-            'reclamation.yml' => $reclamation,
+            'reclamations.yml' => $reclamation,
             'delete_form' => $deleteForm->createView(),
         ));
     }
 
     /**
-     * Displays a form to edit an existing reclamation.yml entity.
+     * Displays a form to edit an existing reclamations.yml entity.
      *
      */
     public function editAction(Request $request, Reclamations $reclamation)
@@ -109,7 +109,7 @@ class ReclamationsController extends Controller
         }
 
         return $this->render('FrontBundle:reclamations:edit.html.twig', array(
-            'reclamation.yml' => $reclamation,
+            'reclamations.yml' => $reclamation,
             'edit' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
@@ -118,7 +118,7 @@ class ReclamationsController extends Controller
 
 
     /**
-     * Deletes a reclamation.yml entity.
+     * Deletes a reclamations.yml entity.
      *
      */
     public function deleteAction(Request $request, Reclamations $reclamation)
@@ -136,9 +136,9 @@ class ReclamationsController extends Controller
     }
 
     /**
-     * Creates a form to delete a reclamation.yml entity.
+     * Creates a form to delete a reclamations.yml entity.
      *
-     * @param Reclamations $reclamation The reclamation.yml entity
+     * @param Reclamations $reclamation The reclamations.yml entity
      *
      * @return \Symfony\Component\Form\Form The form
      */

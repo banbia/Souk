@@ -23,27 +23,23 @@ class UserApiController extends Controller
         $user = $this->getDoctrine()->getManager()
             ->getRepository('FreelancerBundle:User')
             ->findBy(array("username" => $login));
-<<<<<<< HEAD
+        $passwordEncoder = $this->get('security.password_encoder');
+
         if (!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt())) {
 
+            if ($user != null) {
+                if (!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt())) {
+                    $formatted = $serializer->normalize('erreur', 'json');
+                    return new JsonResponse($formatted);
+                } else {
+                    $formatted = $serializer->normalize($user, 'json');
+                    return new JsonResponse($formatted);
+                }
+            } else {
 
-
-=======
-        $passwordEncoder = $this->get('security.password_encoder');
-        
-        if ($user!= null){
-            if(!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt()))
-            {
                 $formatted = $serializer->normalize('erreur', 'json');
                 return new JsonResponse($formatted);
-            }else {
-                $formatted = $serializer->normalize($user, 'json');
-                return new JsonResponse($formatted);
             }
-        }else{
->>>>>>> 774c7f8b1e1a154fc797224c226c03cca4959cfe
-            $formatted = $serializer->normalize('erreur', 'json');
-            return new JsonResponse($formatted);
         }
     }
 

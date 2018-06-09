@@ -67,18 +67,18 @@ class ReclamationApiController extends Controller{
 
     }
 
-    /*public function showRecAction(Reclamations $reclamation.yml)
+    /*public function showRecAction(Reclamations $reclamations.yml)
     {
-        $deleteForm = $this->createDeleteForm($reclamation.yml);
+        $deleteForm = $this->createDeleteForm($reclamations.yml);
 
         return $this->render('FrontBundle:reclamations:show.html.twig', array(
-            'reclamation.yml' => $reclamation.yml,
+            'reclamations.yml' => $reclamations.yml,
             'delete_form' => $deleteForm->createView(),
         ));
     }*/
 
     /**
-     * Displays a form to edit an existing reclamation.yml entity.
+     * Displays a form to edit an existing reclamations.yml entity.
      *
      */
 

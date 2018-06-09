@@ -1,48 +1,36 @@
-<<<<<<< HEAD
 <!doctype html>
 <html>
+
 <head>
 <title>Commande</title>
 <meta charset="utf-8"/>
-
 </head>
+
 <body>
 <div class="row form-controlS">
-=======
+
 {% block style %}
     <link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
-<style>
-
-</style>
 {% endblock style %}
 <div class="head-pdf">
     <div class="row form-controlS">
         <div class="logo">
-            <img width="200" height="100" src="{{ pathToWeb }}/bundles/front/images/logo.png"/>
->>>>>>> 774c7f8b1e1a154fc797224c226c03cca4959cfe
-
+            <img width="200" height="100" src="{{ asset(pathToLogo) }}"/>
         </div>
+
         <div class="col-md-12" style="text-align:center "  >
-
             <h1>Votre Commande</h1>
-            <p>looooooooooooooool</p>
+            <p>Merci de choisir notre site pour commander votre commande </p>
         </div>
 
-<<<<<<< HEAD
-    <div class="logo">
-        <a href="#">
-            <img width="200" height="90" src="logo.png"/>
-
-        </a>
-    </div>
     <div class="col-md-12" >
-<table class="table table-striped">
-    <tbody class="thead-light">
-    <tr>
-    <tr>
+        <table class="table table-bordered" >
+
+        <tbody class="thead-light">
+        <tr>
         <th>Datecom</th>
         <td>{% if commande.dateCom %}{{ commande.dateCom|date('Y-m-d') }}{% endif %}</td>
-    </tr>
+        </tr>
     <tr>
         <th>Quantite</th>
         <td>{{ commande.quantite }}</td>
@@ -61,41 +49,7 @@
     </tr>
     </tbody>
 </table>
-</div>
-</div>
 </body>
 </html>
-=======
 
 
-        <div class="col-md-12" >
-    <table class="table table-striped">
-        <tbody class="thead-light">
-        <tr>
-        <tr>
-            <th>Datecom</th>
-            <td>{% if commande.dateCom %}{{ commande.dateCom|date('Y-m-d') }}{% endif %}</td>
-        </tr>
-        <tr>
-            <th>Quantite</th>
-            <td>{{ commande.quantite }}</td>
-        </tr>
-        <tr>
-            <th>Titre Annonce</th>
-            <td>{{ commande.annonce.titre }}</td>
-        </tr>
-        <tr>
-            <th>Categorie Annonce</th>
-            <td>{{ commande.annonce.categorie.designation }}</td>
-        </tr>
-        <tr>
-            <th>Etat</th>
-            <td>{% if commande.etat == 0 %} En attente {%  else %} Confirmée{% endif %}</td>
-        </tr>
-        </tbody>
-    </table>
-    </div>
-    </div>
-
-</div>
->>>>>>> 774c7f8b1e1a154fc797224c226c03cca4959cfe
