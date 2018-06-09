@@ -1,0 +1,12 @@
+liste_commentaireAnc:
+    path:     /commentaireAnc/{id}
+    defaults: { _controller: ApiBundle:CommentaireAncApi:listeComAnc }
+create_commentaireAnc:
+    path:     /commentaireAnc/new/{annonce}/{contenu}/{client}
+    defaults: { _controller: ApiBundle:CommentaireAncApi:createComAnc }
+update_commentaireAnc:
+    path:     /commentaireAnc/update/{comAnc}/{contenu}
+    defaults: { _controller: ApiBundle:CommentaireAncApi:modifComAnc }
+delete_commentaireAnc:
+    path:     /commentaireAnc/delete/{comAnc}
+    defaults: { _controller: ApiBundle:CommentaireAncApi:deleteAnc }

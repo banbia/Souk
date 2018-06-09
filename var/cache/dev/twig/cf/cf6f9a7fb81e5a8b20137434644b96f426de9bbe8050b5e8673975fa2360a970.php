@@ -287,6 +287,6 @@ class __TwigTemplate_4dd5b387871f3ef4be28ef5eb1d0942f83849b56aa6fcae8a66297679ec
         {{ knp_pagination_render(annonces) }}
     </div>
 {% endblock %}
-", "FrontBundle:annonces:index.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/index.html.twig");
+", "FrontBundle:annonces:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/index.html.twig");
     }
 }

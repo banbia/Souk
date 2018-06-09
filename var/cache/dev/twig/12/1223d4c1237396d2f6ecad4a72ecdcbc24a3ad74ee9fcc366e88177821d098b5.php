@@ -265,6 +265,6 @@ class __TwigTemplate_0b133369894528b4a06730bd7c6e420fa27d3c4d3c0a628c52bc416cf36
         </div>
     {% endspaceless %}
 {% endblock %}
-", "@VichUploader/Form/fields.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\vich\\uploader-bundle\\Resources\\views\\Form\\fields.html.twig");
+", "@VichUploader/Form/fields.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\vich\\uploader-bundle\\Resources\\views\\Form\\fields.html.twig");
     }
 }
