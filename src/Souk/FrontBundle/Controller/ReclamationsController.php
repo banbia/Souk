@@ -87,7 +87,7 @@ class ReclamationsController extends Controller
         $deleteForm = $this->createDeleteForm($reclamation);
 
         return $this->render('FrontBundle:reclamations:show.html.twig', array(
-            'reclamations.yml' => $reclamation,
+            'reclamation' => $reclamation,
             'delete_form' => $deleteForm->createView(),
         ));
     }

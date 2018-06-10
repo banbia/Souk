@@ -25,7 +25,6 @@ class UserApiController extends Controller
             ->findBy(array("username" => $login));
         $passwordEncoder = $this->get('security.password_encoder');
 
-        if (!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt())) {
 
             if ($user != null) {
                 if (!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt())) {
@@ -41,6 +40,6 @@ class UserApiController extends Controller
                 return new JsonResponse($formatted);
             }
         }
-    }
+
 
 }

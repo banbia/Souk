@@ -97,6 +97,8 @@ class ReclamationApiController extends Controller{
         return new JsonResponse($formatted);
 
     }
+
+    /******! PARTIE ADMIN !******/
     public function accepterRecAction()
     {
         $em = $this->getDoctrine()->getManager();
