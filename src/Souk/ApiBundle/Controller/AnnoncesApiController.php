@@ -32,4 +32,35 @@ class AnnoncesApiController extends Controller
   }
 
 
+///get all annonce by Id
+  public function GetAnnonceByIdAction($id )
+  {
+
+    $annonce=$this->getDoctrine()->getRepository('BackBundle:Annonces')->find($id);
+    /*
+     $formatted= $serializer->normalize($annonce,'json');
+     return new JsonResponse($formatted);*/
+    $normalizer = new ObjectNormalizer();
+
+    $callback = function ($dateTime) {
+      return $dateTime instanceof \DateTime
+        ? $dateTime->format('Y-m-d')
+        : '';
+    };
+
+
+
+    $normalizer->setIgnoredAttributes(array('client'));
+    $normalizer->setCallbacks(array('dateCreation' => $callback));
+    $normalizer->setCircularReferenceLimit(1);
+    $serializer = new Serializer([$normalizer]);
+
+    $normalizer->setCircularReferenceHandler(function ($object) {
+      return $object->getId();
+    });
+
+    /* $serializer = new Serializer(array($normalizer), array(new JsonEncoder()));*/
+    $formatted= $serializer->normalize($annonce, 'json');
+    return new JsonResponse($formatted);
+  }
 }
