@@ -20,7 +20,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="{{ asset('bundles/front/js/jquery.easydropdown.js') }}"></script>
     <!-- Add fancyBox main JS and CSS files -->
     <script src="{{ asset('bundles/front/js/jquery.magnific-popup.js') }}" type="text/javascript"></script>
-    <link href="{{ asset('bundles/front/css/magnific-popup.css') }}" rel="stylesheet" type="text/css">
+    <script src="{{ asset('bundles/front/js/jquery.magnific-popup.js') }}" type="text/javascript"></script>
+
     {% block style %}
 
     {% endblock style %}
@@ -28,6 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div class="header">
@@ -47,13 +49,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{ path('commandes_index') }}">Mes Commandes</a></li>
                         <li><a href="{{ path('reclamations_index') }}"> Réclamations</a></li>
 
+                        {% if is_granted('ROLE_COM') %}
 
                             <li><a href="{{ path('abonnements_com_index') }}"> Mes Abonnements </a></li>
 
-                        {% if is_granted('ROLE_COM') %}
-                            <li><a href="">Mes Abonnements</a></li>
 
+                            <li><a href="{{ path('commercial_annonces_index') }}">Mes Annonces</a></li>
                         {% endif %}
+
                     {% endif %}
                 </ul>
                 <div class="clearfix"> </div>
@@ -266,7 +269,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 </script>
 <!-- //smooth-scrolling-of-move-up -->
-<!-- desoslide-JavaScript -->
+<!-- de<soslide-JavaScript
 <script>
     $('#demo1_thumbs').desoSlide({
         main: {
@@ -277,6 +280,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         caption: true
     });
 </script>
+-->
 
 </body>
 </html>

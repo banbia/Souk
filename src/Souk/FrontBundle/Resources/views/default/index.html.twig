@@ -5,30 +5,49 @@
     <h3 class="m_1">Les nouveaux produits</h3>
     <div class="content_grid">
         {% for annonce in annonces %}
-            <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-                <a href="">
-                    <div class="inner_content clearfix">
-                        <div class="product_image">
-                            <img  href="{{ path('annonces_show', { 'id': annonce.id }) }}" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
+        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
+                            <a href="">
+                                <div class="inner_content clearfix">
+                                    <div class="product_image">
+                                       {# <img  href="" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>#}
+                                        <div class="slideshow-container">
+
+                                            {% for img in annonce.images %}
 
 
-                            <a href=""
-                               class="button item_add item_1"> </a>
-                            <div class="product_container">
-                                <div class="cart-left">
-                                    <p class="title">{{ annonce.titre }}</p>
+                                                <div class="mySlides fade in">
+                                                    <div class="numbertext"></div>
+                                                    <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height:300px !important;">
+
+                                                </div>
+
+                                            {% endfor %}
+
+                                            <!-- Full-width images with number and caption text -->
+
+
+                                            <!-- Next and previous buttons -->
+
+                                        </div>
+
+                                        <a href="{{ path('annonces_show', { 'id': annonce.id }) }}"
+                                           class="button fa fa-info item_1"> </a>
+                                        <div class="product_container">
+                                            <div class="cart-left">
+                                                <p class="title">{{ annonce.titre }}</p>
+                                            </div>
+                                            <span class="amount item_price">{{ annonce.prix }}</span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span class="amount item_price">{{ annonce.prix }}</span>
-                                <div class="clearfix"></div>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
 
         <div class="clearfix"></div>
-    </div>
+{% endfor %}
+</div>
+
     {# dev-haifa#}
     <h3 class="m_2">Top Produits</h3>
     <div class="content_grid">
@@ -141,3 +160,42 @@
         <div class="clearfix"></div>
     </div>
 {% endblock %}
+{% block js %}
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+    </script>
+
+{% endblock js %}

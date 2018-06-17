@@ -27,7 +27,13 @@
                             </div>
                             {% endfor %}
 
-
+                            {% for produit in produit %}
+                                <a href="{{ path('CategorieProduit',{'categorie':produit.id}) }}"
+                                   class="font-additional font-weight-normal hover-focus-color color-third text-uppercase">
+                                    <span class="pull-left">{{ produit.nomCategorie }}</span>
+                                    <span class="pull-right">(8)</span>
+                                </a>
+                            {% endfor %}
                         </div><!--/category-products-->
 
 
@@ -39,15 +45,15 @@
                 <div class="col-sm-9 padding-right">
                     <div class="features_items"><!--features_items-->
                         {% for annonce in annonces %}
-                            <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
+                           {#<div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
                                 <a href="">
                                     <div class="inner_content clearfix">
                                         <div class="product_image">
-                                            <img  href="{{ path('annonces_show', { 'id': annonce.id }) }}" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
+                                            <img  href="" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
 
 
-                                            <a href=""
-                                               class="button item_add item_1"> </a>
+                                            <a href="{{ path('annonces_show', { 'id': annonce.id }) }}"
+                                               class="button fa fa-info item_1"> </a>
                                             <div class="product_container">
                                                 <div class="cart-left">
                                                     <p class="title">{{ annonce.titre }}</p>
@@ -58,6 +64,44 @@
                                         </div>
                                     </div>
                                 </a>
+                            </div>#}
+                            <div class="col-md-4 blog-top">
+                                <div class="blog-in">
+                                    <div class="slideshow-container">
+
+                                        {% for img in annonce.images %}
+
+
+                                            <div class="mySlides fade in">
+                                                <div class="numbertext"></div>
+                                                <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%">
+
+                                            </div>
+
+                                        {% endfor %}
+
+                                        <!-- Full-width images with number and caption text -->
+
+
+                                        <!-- Next and previous buttons -->
+                                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                    </div>
+                                    <div class="blog-grid">
+                                        <h3><a  href="#">{{ annonce.titre }}</a></h3>
+                                        <div class="date">
+                                            <span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ annonce.dateCreation|date('Y-m-d') }}</span>
+                                            <a href="#" class="comments"><i class="glyphicon glyphicon-comment"></i>24</a>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <p></p>
+                                        <div class="more">
+                                            <a class="link link-yaku"href="{{ path('annonces_show', { 'id': annonce.id }) }}">
+                                                <span>Détails</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         {% endfor %}
 
