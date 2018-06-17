@@ -2,7 +2,13 @@
 {#Salsabil' work #}
 {% block body %}
     <h1>Liste des Evenements</h1>
+{% if is_granted('ROLE_COM') %}
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+
     <a href="{{ path('evennements_new') }}" class="btn btn-success pull-right"><i class="fa fa-plus"> </i>Nouvel evennement</a>
+    {{ form_end(form) }}
+{% endif %}
     <table class="table table-striped">
         <thead class="thead-light">
         <tr class="table-secondary">
@@ -14,6 +20,7 @@
                 <th>Lieu</th>
                 <th>Prix</th>
                 <th>Etat</th>
+
                 <th>Actions</th>
             </tr>
         </thead>
@@ -32,16 +39,19 @@
                </td>
                 <td>
 
-                            <a class="btn btn-default" href="{{ path('evennements_show', { 'id': evennement.id }) }}"> <i class="fa fa-eye"> </i></a>
-
+                      <a class="btn btn-default" href="{{ path('evennements_show', { 'id': evennement.id }) }}"> <i class="fa fa-eye"> </i></a>
+                    {% if is_granted('ROLE_COM') %}
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
                             <a class="btn btn-default"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"></i></a>
-
+                        {{ form_end(form) }}
+                    {% endif %}
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-    {# display navigation #}
+    {# display navigation pagination #}
     <div class="navigation text-center">
         {{ knp_pagination_render(evennements) }}
     </div>
