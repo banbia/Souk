@@ -62,17 +62,18 @@ class __TwigTemplate_f96cc9d306bbbdfe1adda44e9f93607bf0b2e7cdc2815cdeee91843a4d6
             // line 7
             echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 7, $this->source); })()), 'widget');
             echo "
+
     <a href=\"";
-            // line 8
+            // line 9
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_new");
             echo "\" class=\"btn btn-success pull-right\"><i class=\"fa fa-plus\"> </i>Nouvel evennement</a>
     ";
-            // line 9
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 9, $this->source); })()), 'form_end');
+            // line 10
+            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 10, $this->source); })()), 'form_end');
             echo "
 ";
         }
-        // line 11
+        // line 12
         echo "    <table class=\"table table-striped\">
         <thead class=\"thead-light\">
         <tr class=\"table-secondary\">
@@ -90,80 +91,80 @@ class __TwigTemplate_f96cc9d306bbbdfe1adda44e9f93607bf0b2e7cdc2815cdeee91843a4d6
         </thead>
         <tbody>
         ";
-        // line 27
+        // line 28
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["evennements"]) || array_key_exists("evennements", $context) ? $context["evennements"] : (function () { throw new Twig_Error_Runtime('Variable "evennements" does not exist.', 27, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["evennements"]) || array_key_exists("evennements", $context) ? $context["evennements"] : (function () { throw new Twig_Error_Runtime('Variable "evennements" does not exist.', 28, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["evennement"]) {
-            // line 28
+            // line 29
             echo "            <tr>
                 <td>";
-            // line 29
+            // line 30
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evennement"], "titre", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 30
+            // line 31
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evennement"], "description", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 31
+            // line 32
             if (twig_get_attribute($this->env, $this->source, $context["evennement"], "dateDeb", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evennement"], "dateDeb", array()), "Y-m-d"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 32
+            // line 33
             if (twig_get_attribute($this->env, $this->source, $context["evennement"], "dateFin", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evennement"], "dateFin", array()), "Y-m-d"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 33
+            // line 34
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evennement"], "lieu", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 34
+            // line 35
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evennement"], "prix", array()), "html", null, true);
             echo "</td>
                <td> ";
-            // line 35
+            // line 36
             if ((twig_get_attribute($this->env, $this->source, $context["evennement"], "etat", array()) == 0)) {
                 echo " Non Disponible
                 ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 36
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 37
 $context["evennement"], "etat", array()) == 1)) {
                 echo " Disponible
                 ";
             }
-            // line 38
+            // line 39
             echo "               </td>
                 <td>
 
-                            <a class=\"btn btn-default\" href=\"";
-            // line 41
+                      <a class=\"btn btn-default\" href=\"";
+            // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_show", array("id" => twig_get_attribute($this->env, $this->source, $context["evennement"], "id", array()))), "html", null, true);
             echo "\"> <i class=\"fa fa-eye\"> </i></a>
                     ";
-            // line 42
+            // line 43
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_COM")) {
-                // line 43
+                // line 44
                 echo "                    ";
-                echo                 $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 43, $this->source); })()), 'form_start');
+                echo                 $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 44, $this->source); })()), 'form_start');
                 echo "
                     ";
-                // line 44
-                echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 44, $this->source); })()), 'widget');
+                // line 45
+                echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 45, $this->source); })()), 'widget');
                 echo "
                             <a class=\"btn btn-default\"  href=\"";
-                // line 45
+                // line 46
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_edit", array("id" => twig_get_attribute($this->env, $this->source, $context["evennement"], "id", array()))), "html", null, true);
                 echo "\"> <i class=\"fa fa-edit\"></i></a>
                         ";
-                // line 46
-                echo                 $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 46, $this->source); })()), 'form_end');
+                // line 47
+                echo                 $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 47, $this->source); })()), 'form_end');
                 echo "
                     ";
             }
-            // line 48
+            // line 49
             echo "                </td>
             </tr>
         ";
@@ -171,15 +172,15 @@ $context["evennement"], "etat", array()) == 1)) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['evennement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 52
         echo "        </tbody>
     </table>
     ";
-        // line 54
+        // line 55
         echo "    <div class=\"navigation text-center\">
         ";
-        // line 55
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["evennements"]) || array_key_exists("evennements", $context) ? $context["evennements"] : (function () { throw new Twig_Error_Runtime('Variable "evennements" does not exist.', 55, $this->source); })()));
+        // line 56
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["evennements"]) || array_key_exists("evennements", $context) ? $context["evennements"] : (function () { throw new Twig_Error_Runtime('Variable "evennements" does not exist.', 56, $this->source); })()));
         echo "
     </div>
 ";
@@ -203,7 +204,7 @@ $context["evennement"], "etat", array()) == 1)) {
 
     public function getDebugInfo()
     {
-        return array (  182 => 55,  179 => 54,  175 => 51,  167 => 48,  162 => 46,  158 => 45,  154 => 44,  149 => 43,  147 => 42,  143 => 41,  138 => 38,  133 => 36,  129 => 35,  125 => 34,  121 => 33,  115 => 32,  109 => 31,  105 => 30,  101 => 29,  98 => 28,  94 => 27,  76 => 11,  71 => 9,  67 => 8,  63 => 7,  58 => 6,  56 => 5,  53 => 4,  44 => 3,  15 => 1,);
+        return array (  183 => 56,  180 => 55,  176 => 52,  168 => 49,  163 => 47,  159 => 46,  155 => 45,  150 => 44,  148 => 43,  144 => 42,  139 => 39,  134 => 37,  130 => 36,  126 => 35,  122 => 34,  116 => 33,  110 => 32,  106 => 31,  102 => 30,  99 => 29,  95 => 28,  77 => 12,  72 => 10,  68 => 9,  63 => 7,  58 => 6,  56 => 5,  53 => 4,  44 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -215,6 +216,7 @@ $context["evennement"], "etat", array()) == 1)) {
 {% if is_granted('ROLE_COM') %}
     {{ form_start(form) }}
         {{ form_widget(form) }}
+
     <a href=\"{{ path('evennements_new') }}\" class=\"btn btn-success pull-right\"><i class=\"fa fa-plus\"> </i>Nouvel evennement</a>
     {{ form_end(form) }}
 {% endif %}
@@ -248,7 +250,7 @@ $context["evennement"], "etat", array()) == 1)) {
                </td>
                 <td>
 
-                            <a class=\"btn btn-default\" href=\"{{ path('evennements_show', { 'id': evennement.id }) }}\"> <i class=\"fa fa-eye\"> </i></a>
+                      <a class=\"btn btn-default\" href=\"{{ path('evennements_show', { 'id': evennement.id }) }}\"> <i class=\"fa fa-eye\"> </i></a>
                     {% if is_granted('ROLE_COM') %}
                     {{ form_start(form) }}
                     {{ form_widget(form) }}
