@@ -3,13 +3,14 @@
 namespace Vich\UploaderBundle\EventListener\Doctrine;
 
 use Doctrine\Common\EventSubscriber;
+
 use Vich\UploaderBundle\Adapter\AdapterInterface;
 use Vich\UploaderBundle\Handler\UploadHandler;
 use Vich\UploaderBundle\Metadata\MetadataReader;
 use Vich\UploaderBundle\Util\ClassUtils;
 
 /**
- * BaseListener.
+ * BaseListener
  *
  * @author Kévin Gomez <contact@kevingomez.fr>
  */
@@ -21,27 +22,27 @@ abstract class BaseListener implements EventSubscriber
     protected $mapping;
 
     /**
-     * @var AdapterInterface
+     * @var AdapterInterface $adapter
      */
     protected $adapter;
 
     /**
-     * @var MetadataReader
+     * @var MetadataReader $metadata
      */
     protected $metadata;
 
     /**
-     * @var UploadHandler
+     * @var UploadHandler $handler
      */
     protected $handler;
 
     /**
      * Constructs a new instance of UploaderListener.
      *
-     * @param string           $mapping  The mapping name
-     * @param AdapterInterface $adapter  The adapter
-     * @param MetadataReader   $metadata The metadata reader
-     * @param UploadHandler    $handler  The upload handler
+     * @param string           $mapping  The mapping name.
+     * @param AdapterInterface $adapter  The adapter.
+     * @param MetadataReader   $metadata The metadata reader.
+     * @param UploadHandler    $handler  The upload handler.
      */
     public function __construct($mapping, AdapterInterface $adapter, MetadataReader $metadata, UploadHandler $handler)
     {
@@ -54,7 +55,7 @@ abstract class BaseListener implements EventSubscriber
     /**
      * Checks if the given object is uploadable using the current mapping.
      *
-     * @param mixed $object The object to test
+     * @param mixed $object The object to test.
      *
      * @return bool
      */
@@ -66,15 +67,15 @@ abstract class BaseListener implements EventSubscriber
     /**
      * Returns a list of uploadable fields for the given object and mapping.
      *
-     * @param mixed $object The object to use
+     * @param mixed $object The object to use.
      *
-     * @return string[] A list of field names
+     * @return array<string> A list of field names.
      */
     protected function getUploadableFields($object)
     {
         $fields = $this->metadata->getUploadableFields(ClassUtils::getClass($object), $this->mapping);
 
-        return array_map(function ($data) {
+        return array_map(function($data) {
             return $data['propertyName'];
         }, $fields);
     }

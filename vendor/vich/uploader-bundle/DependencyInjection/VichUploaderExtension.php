@@ -4,27 +4,27 @@ namespace Vich\UploaderBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Alias;
-use Symfony\Component\DependencyInjection\ChildDefinition;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\DefinitionDecorator;
-use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Reference;
+use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
 /**
+ * VichUploaderExtension.
+ *
  * @author Dustin Dobervich <ddobervich@gmail.com>
  */
 class VichUploaderExtension extends Extension
 {
     /**
-     * @var array
+     * @var array $tagMap
      */
-    protected $tagMap = [
-        'orm' => 'doctrine.event_subscriber',
-        'mongodb' => 'doctrine_mongodb.odm.event_subscriber',
-        'phpcr' => 'doctrine_phpcr.event_subscriber',
-    ];
+    protected $tagMap = array(
+        'orm'       => 'doctrine.event_subscriber',
+        'mongodb'   => 'doctrine_mongodb.odm.event_subscriber',
+        'phpcr'     => 'doctrine_phpcr.event_subscriber'
+    );
 
     /**
      * Loads the extension.
@@ -44,10 +44,10 @@ class VichUploaderExtension extends Extension
         $container->setParameter('vich_uploader.default_filename_attribute_suffix', $config['default_filename_attribute_suffix']);
         $container->setParameter('vich_uploader.mappings', $config['mappings']);
 
-        if (0 === strpos($config['storage'], '@')) {
+        if (strpos($config['storage'], '@') === 0) {
             $container->setAlias('vich_uploader.storage', substr($config['storage'], 1));
         } else {
-            $container->setAlias('vich_uploader.storage', 'vich_uploader.storage.'.$config['storage']);
+            $container->setAlias('vich_uploader.storage', 'vich_uploader.storage.' . $config['storage']);
         }
 
         $this->loadServicesFiles($container, $config);
@@ -55,34 +55,26 @@ class VichUploaderExtension extends Extension
         $this->registerCacheStrategy($container, $config);
 
         $this->registerListeners($container, $config);
-
-        $this->registerFormTheme($container);
     }
 
     protected function loadServicesFiles(ContainerBuilder $container, array $config)
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
-        $toLoad = [
+        $toLoad = array(
             'adapter.xml', 'listener.xml', 'storage.xml', 'injector.xml',
-            'mapping.xml', 'factory.xml', 'namer.xml', 'handler.xml',
-        ];
+            'templating.xml', 'mapping.xml', 'factory.xml', 'namer.xml',
+            'form.xml', 'handler.xml'
+        );
         foreach ($toLoad as $file) {
             $loader->load($file);
         }
 
-        if (in_array($config['storage'], ['gaufrette', 'flysystem'])) {
-            $loader->load($config['storage'].'.xml');
+        if (in_array($config['storage'], array('gaufrette', 'flysystem'))) {
+            $loader->load($config['storage'] . '.xml');
         }
 
-        if ($config['form']) {
-            $loader->load('form.xml');
-        }
-        if ($config['templating']) {
-            $loader->load('templating.xml');
-            $container->setAlias(UploaderHelper::class, new Alias('vich_uploader.templating.helper.uploader_helper', false));
-        }
-        if ($config['twig'] && $config['templating']) {
+        if ($config['twig']) {
             $loader->load('twig.xml');
         }
     }
@@ -92,7 +84,7 @@ class VichUploaderExtension extends Extension
         $bundles = $container->getParameter('kernel.bundles');
 
         // directories
-        $directories = [];
+        $directories = array();
         if ($config['metadata']['auto_detection']) {
             foreach ($bundles as $class) {
                 $ref = new \ReflectionClass($class);
@@ -160,16 +152,16 @@ class VichUploaderExtension extends Extension
 
     protected function registerListeners(ContainerBuilder $container, array $config)
     {
-        $servicesMap = [
-            'inject_on_load' => ['name' => 'inject', 'priority' => 0],
-            'delete_on_update' => ['name' => 'clean', 'priority' => 50],
-            'delete_on_remove' => ['name' => 'remove', 'priority' => 0],
-        ];
+        $servicesMap = array(
+            'inject_on_load'    => array('name' => 'inject', 'priority' => 0),
+            'delete_on_update'  => array('name' => 'clean', 'priority' => 50),
+            'delete_on_remove'  => array('name' => 'remove', 'priority' => 0)
+        );
 
         foreach ($config['mappings'] as $name => $mapping) {
             $driver = $mapping['db_driver'];
 
-            // create optional listeners
+            // create optionnal listeners
             foreach ($servicesMap as $configOption => $service) {
                 if (!$mapping[$configOption]) {
                     continue;
@@ -196,10 +188,9 @@ class VichUploaderExtension extends Extension
 
     protected function createNamerService(ContainerBuilder $container, $mappingName, array $mapping)
     {
-        $definitionClassname = $this->getDefinitionClassname();
-        $serviceId = sprintf('%s.%s', $mapping['namer']['service'], $mappingName);
+        $serviceId  = sprintf('%s.%s', $mapping['namer']['service'], $mappingName);
         $container->setDefinition(
-            $serviceId, new $definitionClassname($mapping['namer']['service'])
+            $serviceId, new DefinitionDecorator($mapping['namer']['service'])
         );
 
         $mapping['namer']['service'] = $serviceId;
@@ -209,29 +200,14 @@ class VichUploaderExtension extends Extension
 
     protected function createListener(ContainerBuilder $container, $name, $type, $driver, $priority = 0)
     {
-        $definitionClassname = $this->getDefinitionClassname();
         $definition = $container
-            ->setDefinition(sprintf('vich_uploader.listener.%s.%s', $type, $name), new $definitionClassname(sprintf('vich_uploader.listener.%s.%s', $type, $driver)))
+            ->setDefinition(sprintf('vich_uploader.listener.%s.%s', $type, $name), new DefinitionDecorator(sprintf('vich_uploader.listener.%s.%s', $type, $driver)))
             ->replaceArgument(0, $name)
             ->replaceArgument(1, new Reference('vich_uploader.adapter.'.$driver));
 
         // propel does not require tags to work
         if (isset($this->tagMap[$driver])) {
-            $definition->addTag($this->tagMap[$driver], ['priority' => $priority]);
+            $definition->addTag($this->tagMap[$driver], array('priority' => $priority));
         }
-    }
-
-    private function registerFormTheme(ContainerBuilder $container)
-    {
-        $resources = $container->hasParameter('twig.form.resources') ?
-            $container->getParameter('twig.form.resources') : [];
-
-        array_unshift($resources, '@VichUploader/Form/fields.html.twig');
-        $container->setParameter('twig.form.resources', $resources);
-    }
-
-    private function getDefinitionClassname(): string
-    {
-        return class_exists(ChildDefinition::class) ? ChildDefinition::class : DefinitionDecorator::class;
     }
 }

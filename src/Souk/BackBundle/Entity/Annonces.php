@@ -139,7 +139,7 @@ class Annonces
      */
     public function setCommercial($commercial)
     {
-        $this->client = $commercial;
+        $this->commercial = $commercial;
     }
 
     /**

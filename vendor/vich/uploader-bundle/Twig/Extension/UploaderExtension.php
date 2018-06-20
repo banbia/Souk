@@ -12,7 +12,7 @@ use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 class UploaderExtension extends \Twig_Extension
 {
     /**
-     * @var UploaderHelper
+     * @var UploaderHelper $helper
      */
     private $helper;
 
@@ -43,20 +43,20 @@ class UploaderExtension extends \Twig_Extension
      */
     public function getFunctions()
     {
-        return [
-            new \Twig_SimpleFunction('vich_uploader_asset', [$this, 'asset']),
-        ];
+        return array(
+            new \Twig_SimpleFunction('vich_uploader_asset', array($this, 'asset')),
+        );
     }
 
     /**
      * Gets the public path for the file associated with the uploadable
      * object.
      *
-     * @param object $obj       The object
-     * @param string $fieldName The field name
-     * @param string $className The object's class. Mandatory if $obj can't be used to determine it
+     * @param object $obj       The object.
+     * @param string $fieldName The field name.
+     * @param string $className The object's class. Mandatory if $obj can't be used to determine it.
      *
-     * @return string|null The public path or null if file not stored
+     * @return string The public path.
      */
     public function asset($obj, $fieldName, $className = null)
     {
