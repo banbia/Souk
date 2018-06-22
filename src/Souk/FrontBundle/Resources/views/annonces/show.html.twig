@@ -20,18 +20,20 @@
 
     </ol>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
 
             <div class="slideshow-container">
 
-            {% for img in Image %}
+            {% for img in Image|e %}
 
 
                 <div class="mySlides fade in">
-                    <div class="numbertext"></div>
-                    <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height:300px !important;">
+
+                    <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height:260px !important;">
 
                 </div>
+            {% else %}
+                <img src="{{ asset('uploads/annonceImage/no.png') }}" style="width:100%;height: 300px">
 
                 {% endfor %}
 

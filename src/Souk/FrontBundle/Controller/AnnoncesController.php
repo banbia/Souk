@@ -235,20 +235,21 @@ class AnnoncesController extends Controller
 
     ));
   }
-
   /**affichage  les annonces par categories  **/
-  public function indexbyCategorieAction($categorie)
+  public function listerbyCategorieAction($categorie)
   {
-    $em = $this->getDoctrine()->getManager();
 
-    $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array("categorie" => $categorie));
-    $categories = $em->getRepository('BackBundle:Categories')->findAll();
+    $em = $this->getDoctrine()->getManager();
+    $cat = $em->getRepository('BackBundle:Categories')->find($categorie);
+    $gategories = $em->getRepository('BackBundle:Categories')->findAll();
+    $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array('categorie' => $cat));
+
 
     return $this->render('FrontBundle:annonces:index.html.twig', array(
-      'annonces' => $annonces,
-      'categories' => $categories,
+      'annonces' => $annonces,'categories' => $gategories,
     ));
   }
+
 
   /**
    * Lists all annonce entities.

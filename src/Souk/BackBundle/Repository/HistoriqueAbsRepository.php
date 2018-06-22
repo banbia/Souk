@@ -12,8 +12,8 @@ class HistoriqueAbsRepository extends \Doctrine\ORM\EntityRepository
 {
   public function findAbonnementByIdUserDate($id,$dateJour)
   {
-    $sql = 'SELECT h FROM Souk\BackBundle\Entity\HistoriqueAbs   h where h.commercial =:id  and h.dateAb >=:dateJour ';
-    $query = $this->getEntityManager()->createQuery($sql)->setParameter('id',$id)->setParameter('dateJour', $dateJour->format('Y-m-d'));
+    $sql = 'SELECT h FROM Souk\BackBundle\Entity\HistoriqueAbs   h where h.commercial =:id  and h.dateAb >=:dateJour and h.etat=:idetat';
+    $query = $this->getEntityManager()->createQuery($sql)->setParameter('id',$id)->setParameter('dateJour', $dateJour->format('Y-m-d'))->setParameter('idetat', 1);
 
     return $query->execute();
 

@@ -2,10 +2,10 @@ client_annonces_index:
     path:     /
     defaults: { _controller: FrontBundle:Annonces:index }
     methods:  GET
-annonces_index_by_categorie:
-    path:    /{categorie}
-    defaults: { categorie_controller: FrontBundle:Annonces:indexbyCategorie }
-    methods:  GET
+annonces_index_by_categories:
+    path:    /categorie/{categorie}
+    defaults: { _controller: FrontBundle:Annonces:listerbyCategorie }
+
 annonces_show:
     path:     /{id}/show
     defaults: { _controller: FrontBundle:Annonces:show }
