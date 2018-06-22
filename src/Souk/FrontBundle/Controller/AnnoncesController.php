@@ -146,7 +146,6 @@ class AnnoncesController extends Controller
    * delete annonce
    *
    */
-
   public function deleteAnnonceAction($id)
   {
     $em = $this->getDoctrine()->getManager();
