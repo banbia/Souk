@@ -20,8 +20,15 @@
 
     <div class="card wizard-card" data-color="orange" id="wizardProfile">
 
+
        {% if abonnement %}
-        <a class="btn btn-success pull-right" href="{{ path('annonces_new') }}">Nouvelle Annonce</a>
+        <a class="btn btn-success pull-right"  href="{{ path('annonces_new') }}">Nouvelle Annonce</a>
+       {% else %}
+           <div class="tooltipm">           <a class="btn btn-success pull-right"     disabled>Nouvelle Annonce</a>
+               <span class="tooltiptext">Vouz devez activer votre abonnement</span>
+           </div>
+
+       {% endif %}
         <br>
 
 
@@ -62,11 +69,15 @@
 
                             </tbody>
                         </table>
-       {% else %}<Panel class="panel-warning"><i class="fa fa-warning"></i> <spam>vous devez activer votre abonnement </spam></Panel>  {% endif %}
+
 </div></div>
     </div></div>
     {# salsabil api display navigation
     <div class="navigation text-center">
         {{ knp_pagination_render(annonces) }}
     </div>#}
+{% block js %}
+    <script>    document.getElementById("button").disabled = false;</script>
+
+{% endblock js %}
 {% endblock %}

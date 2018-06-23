@@ -14,9 +14,23 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $annonces = $em->getRepository('BackBundle:Annonces')->findAll();
-        return $this->render('FrontBundle:default:index.html.twig',array(
-            'annonces' => $annonces,));
-    }
+        $annonces = $em->getRepository('BackBundle:Annonces')->findAllOrderedByDate();
+      $gategories = $em->getRepository('BackBundle:Categories')->findAll();
 
+      return $this->render('FrontBundle:default:index.html.twig',array(
+            'annonces' => $annonces,'categories' => $gategories,));
+    }
+  public function listeruserbyCategorieAction($categorie)
+  {
+
+    $em = $this->getDoctrine()->getManager();
+    $cat = $em->getRepository('BackBundle:Categories')->find($categorie);
+    $gategories = $em->getRepository('BackBundle:Categories')->findAll();
+    $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array('categorie' => $cat));
+
+
+
+    return $this->render('FrontBundle:default:index.html.twig',array(
+      'annonces' => $annonces,'categories' => $gategories,));
+  }
 }
