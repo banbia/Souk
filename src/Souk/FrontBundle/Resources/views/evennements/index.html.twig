@@ -39,10 +39,9 @@
 
                     <a class="btn btn-default" href="{{ path('evennements_show', { 'id': evennement.id }) }}"> <i class="fa fa-eye"> </i></a>
                     {% if is_granted('ROLE_COM') %}
-                        {{ form_start(form) }}
-                        {{ form_widget(form) }}
+                        
                         <a class="btn btn-default"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"></i></a>
-                        {{ form_end(form) }}
+
                     {% endif %}
                 </td>
             </tr>
