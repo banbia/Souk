@@ -49,10 +49,6 @@ class __TwigTemplate_42a903095f03cabf03eab7617e83e03cf0ea09b41fb82f5ea348876e905
     public function getSourceContext()
     {
         return new Twig_Source("<svg width=\"1792\" height=\"1792\" viewBox=\"0 0 1792 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1408 960v-128q0-26-19-45t-45-19h-320v-320q0-26-19-45t-45-19h-128q-26 0-45 19t-19 45v320h-320q-26 0-45 19t-19 45v128q0 26 19 45t45 19h320v320q0 26 19 45t45 19h128q26 0 45-19t19-45v-320h320q26 0 45-19t19-45zm256-544v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z\"/></svg>
-<<<<<<< HEAD:var/cache/dev/twig/ce/cebf397b958e20efb24135b912efb99bf02ac88ec2b4a0527880963868387b86.php
 ", "@Twig/images/icon-plus-square.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\images\\icon-plus-square.svg");
-=======
-", "@Twig/images/icon-plus-square.svg", "/opt/lampp/htdocs/dev/souk/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/images/icon-plus-square.svg");
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7:var/cache/dev/twig/4e/4efe9e91707232e0958897ebf6b40efa9682f6f6e1b53afe95aa973a82c7a07c.php
     }
 }

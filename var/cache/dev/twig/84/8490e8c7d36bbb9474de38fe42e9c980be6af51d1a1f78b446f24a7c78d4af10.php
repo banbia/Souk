@@ -61,10 +61,6 @@ class __TwigTemplate_a74ca36e5cf60a8bf34f4a950eddcdd9a87d22ca5cba48dfeaf3661e805
     C9.3,4,9,4.3,9,4.6V11.4z M9,16.4C9,16.7,9.3,17,9.6,17h1.8c0.3,0,0.6-0.3,0.6-0.6v-1.8c0-0.3-0.3-0.6-0.6-0.6H9.6
     C9.3,14,9,14.3,9,14.6V16.4z\"/>
 </svg>
-<<<<<<< HEAD:var/cache/dev/twig/84/8490e8c7d36bbb9474de38fe42e9c980be6af51d1a1f78b446f24a7c78d4af10.php
 ", "@WebProfiler/Icon/logger.svg", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
-=======
-", "@WebProfiler/Icon/logger.svg", "/opt/lampp/htdocs/dev/souk/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Icon/logger.svg");
->>>>>>> 7ae4381903dbda558144e80fd7b7bf805b4c7fa7:var/cache/dev/twig/bb/bbe41abda7250b749fc0b2138fb981727c2eb8926161fe210c4ddaba5f73a22c.php
     }
 }

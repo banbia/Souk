@@ -15,6 +15,10 @@ api_annonces:
     prefix:   /annonces
 
 #service Soumaya
-api_commandes:
-    resource: "@ApiBundle/Resources/config/routing/reclamtions.yml"
+api_reclamations:
+    resource: "@ApiBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations
+#Service SafaBenBarka
+api_abonnements:
+    resource: "@ApiBundle/Resources/config/routing/abonnements.yml"
+    prefix:   /abonnements
