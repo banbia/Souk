@@ -432,7 +432,7 @@
       <parameter>Default</parameter>
     </parameter>
     <parameter key="fos_user.registration.confirmation.enabled">false</parameter>
-    <parameter key="fos_user.registration.form.type">FOS\UserBundle\Form\Type\RegistrationFormType</parameter>
+    <parameter key="fos_user.registration.form.type">Souk\UserBundle\Form\RegistrationFormType</parameter>
     <parameter key="fos_user.registration.form.name">fos_user_registration_form</parameter>
     <parameter key="fos_user.registration.form.validation_groups" type="collection">
       <parameter>Registration</parameter>
@@ -662,6 +662,9 @@
     <service id="redirect.after.login" class="Souk\UserBundle\Redirection\AfterLoginRedirection" public="false" autowire="true" autoconfigure="true">
       <argument type="service" id="router.default"/>
     </service>
+    <service id="app.form.registration" class="UserBundle\Form\RegistrationFormType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type" alias="app_user_registration"/>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -824,7 +827,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>ZZx3bXHGeQWNWiox9QbmBf</argument>
+      <argument>AiBH89j6uhmRZFm2dVpD5E</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -834,7 +837,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>ZZx3bXHGeQWNWiox9QbmBf</argument>
+      <argument>AiBH89j6uhmRZFm2dVpD5E</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -950,7 +953,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.571a2490001bbff7367bf2201a49fc56"/>
+      <argument type="service" id="service_locator.2e98fa07fe24e18082ebf4d1818d59e3"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -3424,12 +3427,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5b2e3c6e163114.60363441</argument>
+      <argument>5b2e4f691a3130.96835777</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5b2e3c6e163114.60363441</argument>
+      <argument>5b2e4f691a3130.96835777</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -4674,7 +4677,7 @@
     <service id="fos_user.registration.form.factory" class="FOS\UserBundle\Form\Factory\FormFactory">
       <argument type="service" id="form.factory"/>
       <argument>fos_user_registration_form</argument>
-      <argument>FOS\UserBundle\Form\Type\RegistrationFormType</argument>
+      <argument>Souk\UserBundle\Form\RegistrationFormType</argument>
       <argument type="collection">
         <argument>Registration</argument>
         <argument>Default</argument>
@@ -5958,7 +5961,7 @@
         <argument key="translation.loader.yml" type="service" id="translation.loader.yml"/>
       </argument>
     </service>
-    <service id="service_locator.571a2490001bbff7367bf2201a49fc56" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.2e98fa07fe24e18082ebf4d1818d59e3" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="FOS\MessageBundle\FormType\RecipientsType" type="service" id="fos_message.recipients_selector"/>
@@ -5970,6 +5973,7 @@
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
+        <argument key="UserBundle\Form\RegistrationFormType" type="service" id="app.form.registration"/>
         <argument key="Vich\UploaderBundle\Form\Type\VichFileType" type="service" id="vich_uploader.form.type.file"/>
         <argument key="Vich\UploaderBundle\Form\Type\VichImageType" type="service" id="vich_uploader.form.type.image"/>
       </argument>
@@ -6198,7 +6202,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>N20o0rqlEc</argument>
       <argument>0</argument>
-      <argument>ZZx3bXHGeQWNWiox9QbmBf</argument>
+      <argument>AiBH89j6uhmRZFm2dVpD5E</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6206,7 +6210,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>tWjjiVzAUH</argument>
       <argument>0</argument>
-      <argument>ZZx3bXHGeQWNWiox9QbmBf</argument>
+      <argument>AiBH89j6uhmRZFm2dVpD5E</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6214,7 +6218,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>Xiv0t5A3Oa</argument>
       <argument>0</argument>
-      <argument>ZZx3bXHGeQWNWiox9QbmBf</argument>
+      <argument>AiBH89j6uhmRZFm2dVpD5E</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6222,7 +6226,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>H+nr8b0P2i</argument>
       <argument>0</argument>
-      <argument>ZZx3bXHGeQWNWiox9QbmBf</argument>
+      <argument>AiBH89j6uhmRZFm2dVpD5E</argument>
       <argument>/opt/lampp/htdocs/dev/souk/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
