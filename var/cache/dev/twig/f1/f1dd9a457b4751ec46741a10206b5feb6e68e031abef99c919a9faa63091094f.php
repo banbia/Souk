@@ -51,43 +51,43 @@ class __TwigTemplate_f96cc9d306bbbdfe1adda44e9f93607bf0b2e7cdc2815cdeee91843a4d6
 
         // line 4
         echo "    <h1>Liste des Evenements</h1>
-";
+    ";
         // line 5
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_COM")) {
             // line 6
-            echo "    ";
+            echo "        ";
             echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 6, $this->source); })()), 'form_start');
             echo "
         ";
             // line 7
             echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 7, $this->source); })()), 'widget');
             echo "
-
-    <a href=\"";
+        <input class=\"btn btn-primary\" type=\"submit\" value=\"Participer\" />
+        <a href=\"";
             // line 9
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_new");
             echo "\" class=\"btn btn-success pull-right\"><i class=\"fa fa-plus\"> </i>Nouvel evennement</a>
-    ";
+        ";
             // line 10
             echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 10, $this->source); })()), 'form_end');
             echo "
-";
+    ";
         }
         // line 12
         echo "    <table class=\"table table-striped\">
         <thead class=\"thead-light\">
         <tr class=\"table-secondary\">
 
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Date debut</th>
-                <th>Date fin</th>
-                <th>Lieu</th>
-                <th>Prix</th>
-                <th>Etat</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Date debut</th>
+            <th>Date fin</th>
+            <th>Lieu</th>
+            <th>Prix</th>
+            <th>Etat</th>
 
-                <th>Actions</th>
-            </tr>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         ";
@@ -125,21 +125,21 @@ class __TwigTemplate_f96cc9d306bbbdfe1adda44e9f93607bf0b2e7cdc2815cdeee91843a4d6
             // line 35
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evennement"], "prix", array()), "html", null, true);
             echo "</td>
-               <td> ";
+                <td> ";
             // line 36
             if ((twig_get_attribute($this->env, $this->source, $context["evennement"], "etat", array()) == 0)) {
                 echo " Non Disponible
-                ";
+                    ";
             } elseif ((twig_get_attribute($this->env, $this->source,             // line 37
 $context["evennement"], "etat", array()) == 1)) {
                 echo " Disponible
-                ";
+                    ";
             }
             // line 39
-            echo "               </td>
+            echo "                </td>
                 <td>
 
-                      <a class=\"btn btn-default\" href=\"";
+                    <a class=\"btn btn-default\" href=\"";
             // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_show", array("id" => twig_get_attribute($this->env, $this->source, $context["evennement"], "id", array()))), "html", null, true);
             echo "\"> <i class=\"fa fa-eye\"> </i></a>
@@ -147,14 +147,14 @@ $context["evennement"], "etat", array()) == 1)) {
             // line 43
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_COM")) {
                 // line 44
-                echo "                    ";
+                echo "                        ";
                 echo                 $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 44, $this->source); })()), 'form_start');
                 echo "
-                    ";
+                        ";
                 // line 45
                 echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 45, $this->source); })()), 'widget');
                 echo "
-                            <a class=\"btn btn-default\"  href=\"";
+                        <a class=\"btn btn-default\"  href=\"";
                 // line 46
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("evennements_edit", array("id" => twig_get_attribute($this->env, $this->source, $context["evennement"], "id", array()))), "html", null, true);
                 echo "\"> <i class=\"fa fa-edit\"></i></a>
@@ -213,27 +213,27 @@ $context["evennement"], "etat", array()) == 1)) {
 {#Salsabil' work #}
 {% block body %}
     <h1>Liste des Evenements</h1>
-{% if is_granted('ROLE_COM') %}
-    {{ form_start(form) }}
+    {% if is_granted('ROLE_COM') %}
+        {{ form_start(form) }}
         {{ form_widget(form) }}
-
-    <a href=\"{{ path('evennements_new') }}\" class=\"btn btn-success pull-right\"><i class=\"fa fa-plus\"> </i>Nouvel evennement</a>
-    {{ form_end(form) }}
-{% endif %}
+        <input class=\"btn btn-primary\" type=\"submit\" value=\"Participer\" />
+        <a href=\"{{ path('evennements_new') }}\" class=\"btn btn-success pull-right\"><i class=\"fa fa-plus\"> </i>Nouvel evennement</a>
+        {{ form_end(form) }}
+    {% endif %}
     <table class=\"table table-striped\">
         <thead class=\"thead-light\">
         <tr class=\"table-secondary\">
 
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Date debut</th>
-                <th>Date fin</th>
-                <th>Lieu</th>
-                <th>Prix</th>
-                <th>Etat</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Date debut</th>
+            <th>Date fin</th>
+            <th>Lieu</th>
+            <th>Prix</th>
+            <th>Etat</th>
 
-                <th>Actions</th>
-            </tr>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for evennement in evennements %}
@@ -244,17 +244,17 @@ $context["evennement"], "etat", array()) == 1)) {
                 <td>{% if evennement.dateFin %}{{ evennement.dateFin|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ evennement.lieu }}</td>
                 <td>{{ evennement.prix }}</td>
-               <td> {% if evennement.etat == 0 %} Non Disponible
-                {% elseif evennement.etat == 1 %} Disponible
-                {% endif %}
-               </td>
+                <td> {% if evennement.etat == 0 %} Non Disponible
+                    {% elseif evennement.etat == 1 %} Disponible
+                    {% endif %}
+                </td>
                 <td>
 
-                      <a class=\"btn btn-default\" href=\"{{ path('evennements_show', { 'id': evennement.id }) }}\"> <i class=\"fa fa-eye\"> </i></a>
+                    <a class=\"btn btn-default\" href=\"{{ path('evennements_show', { 'id': evennement.id }) }}\"> <i class=\"fa fa-eye\"> </i></a>
                     {% if is_granted('ROLE_COM') %}
-                    {{ form_start(form) }}
-                    {{ form_widget(form) }}
-                            <a class=\"btn btn-default\"  href=\"{{ path('evennements_edit', { 'id': evennement.id }) }}\"> <i class=\"fa fa-edit\"></i></a>
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <a class=\"btn btn-default\"  href=\"{{ path('evennements_edit', { 'id': evennement.id }) }}\"> <i class=\"fa fa-edit\"></i></a>
                         {{ form_end(form) }}
                     {% endif %}
                 </td>
