@@ -3,6 +3,7 @@
 namespace Vich\UploaderBundle\Injector;
 
 use Symfony\Component\HttpFoundation\File\File;
+
 use Vich\UploaderBundle\Mapping\PropertyMapping;
 use Vich\UploaderBundle\Storage\StorageInterface;
 
@@ -21,7 +22,7 @@ class FileInjector implements FileInjectorInterface
     /**
      * Constructs a new instance of FileInjector.
      *
-     * @param StorageInterface $storage Storage
+     * @param StorageInterface $storage Storage.
      */
     public function __construct(StorageInterface $storage)
     {
@@ -29,13 +30,13 @@ class FileInjector implements FileInjectorInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function injectFile($obj, PropertyMapping $mapping)
     {
         $path = $this->storage->resolvePath($obj, $mapping->getFilePropertyName());
 
-        if (null !== $path) {
+        if ($path !== null) {
             $mapping->setFile($obj, new File($path, false));
         }
     }

@@ -1,35 +1,54 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
-{% block body %}
-    {# dev-haifa#}
+
+    {# dev-haifa
     <h3 class="m_1">Les nouveaux produits</h3>
     <div class="content_grid">
         {% for annonce in annonces %}
-            <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-                <a href="">
-                    <div class="inner_content clearfix">
-                        <div class="product_image">
-                            <img  href="{{ path('annonces_show', { 'id': annonce.id }) }}" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
+        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
+                            <a href="">
+                                <div class="inner_content clearfix">
+                                    <div class="product_image">
+                                       {# <img  href="" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
+                                        <div class="slideshow-container">
+
+                                            {% for img in annonce.images %}
 
 
-                            <a href=""
-                               class="button item_add item_1"> </a>
-                            <div class="product_container">
-                                <div class="cart-left">
-                                    <p class="title">{{ annonce.titre }}</p>
+                                                <div class="mySlides fade in">
+                                                    <div class="numbertext"></div>
+                                                    <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height:300px !important;">
+
+                                                </div>
+
+                                            {% endfor %}
+
+                                            <!-- Full-width images with number and caption text -->
+
+
+                                            <!-- Next and previous buttons -->
+
+                                        </div>
+
+                                        <a href="{{ path('annonces_show', { 'id': annonce.id }) }}"
+                                           class="button fa fa-info item_1"> </a>
+                                        <div class="product_container">
+                                            <div class="cart-left">
+                                                <p class="title">{{ annonce.titre }}</p>
+                                            </div>
+                                            <span class="amount item_price">{{ annonce.prix }}</span>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span class="amount item_price">{{ annonce.prix }}</span>
-                                <div class="clearfix"></div>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
 
         <div class="clearfix"></div>
-    </div>
-    {# dev-haifa#}
+{% endfor %}
+</div>
+
+    {# dev-haifa
     <h3 class="m_2">Top Produits</h3>
     <div class="content_grid">
         <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
@@ -139,5 +158,116 @@
             </a>
         </div>
         <div class="clearfix"></div>
-    </div>
+    </div>#}
+    {% block style %}
+
+        <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('bundles/front/css/stylehaifa2.css') }}" rel="stylesheet"/>
+
+    {% endblock style %}
+    {% block body %}
+
+        <div class="blog">
+            <div class="container">
+
+                <div class="col-md-9 blog-header">
+                    {% for article in annonces %}
+                        <div class="col-md-4 blog-top">
+                            <div class="blog-in">
+                                <a href="#">
+
+                                    {% for img in article.images|slice(0, 1)|e %}
+
+
+                                        <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height: 200px">
+                                    {% else %}
+                                        <img src="{{ asset('uploads/annonceImage/no.png') }}" style="width:100%;height: 200px">
+
+                                    {% endfor %}
+                                </a>
+                                <div class="blog-grid">
+                                    <h3><a  href="#">{{ article.titre }}</a></h3>
+                                    <div class="date">
+                                        <span class="date-in"><i class="fa fa-calendar"> </i>  {{ article.dateCreation|date('Y-m-d') }}</span>
+                                        <a href="#" class="comments"></a>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <p></p>
+                                    <div class="more">
+                                        <a class="link link-yaku" href="{{ path('annonces_show', { 'id': article.id }) }}">
+                                            <span>Détails</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+
+
+
+
+
+
+                </div>
+                <div class="col-md-3 categories-grid">
+                    <div class="search-in animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+
+                        {#<div class="search">
+                            <form method="POST" >
+                                <input type="text" placeholder="Trouvez votre annonce" name="search" required="" >
+                                <input type="submit" value="" >
+                            </form>
+                        </div>#}
+                    </div>
+                    <div class="grid-categories animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <h4>Catégories</h4>
+                        <ul class="popular">
+
+                            {% for category in categories %}
+
+                                <li><a href="{{ path('annonces_index_by_categoriesDefault', { 'categorie': category.id }) }}">{{  category.designation }}</a></li>
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                    <div class="blog-bottom animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <h4>Nouveautés</h4>
+                        {% for article in annonces|slice(0, 1) %}
+                            <div class="product-go">
+                                {% for img in article.images|slice(0, 1)|e %}
+
+
+
+                                    <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height: 200px">
+
+                                {% else %}
+                                    <img src="{{ asset('uploads/annonceImage/no.png') }}" style="width:100%;height: 200px">
+
+                                {% endfor %}
+                                <div class="grid-product">
+                                    <a href="#" class="elit">{{ article.titre }}</a>
+                                    <p>{{ article.description }}</p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        {% endfor %}
+
+
+
+                    </div>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        {# salsabil api display navigation
+        <div class="navigation text-center">
+            {{ knp_pagination_render(annonces) }}
+        </div>#}
+
+
 {% endblock %}
+
