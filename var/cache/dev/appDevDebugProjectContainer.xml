@@ -27,6 +27,7 @@
       <parameter key="KnpSnappyBundle">Knp\Bundle\SnappyBundle\KnpSnappyBundle</parameter>
       <parameter key="CMENGoogleChartsBundle">CMEN\GoogleChartsBundle\CMENGoogleChartsBundle</parameter>
       <parameter key="Egyg33kCsvBundle">Egyg33k\CsvBundle\Egyg33kCsvBundle</parameter>
+      <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -123,6 +124,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\egyg33k\csv-bundle</parameter>
         <parameter key="namespace">Egyg33k\CsvBundle</parameter>
+      </parameter>
+      <parameter key="KnpPaginatorBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle</parameter>
+        <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -228,7 +234,6 @@
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
     <parameter key="twig.exception_listener.controller">twig.controller.exception:showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
-      <parameter>@VichUploader/Form/fields.html.twig</parameter>
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
@@ -410,6 +415,12 @@
     <parameter key="fos_user.security.login_manager.class">FOS\UserBundle\Security\LoginManager</parameter>
     <parameter key="fos_user.resetting.email.template">@FOSUser/Resetting/email.txt.twig</parameter>
     <parameter key="fos_user.registration.confirmation.template">@FOSUser/Registration/email.txt.twig</parameter>
+    <parameter key="fos_user.registration.confirmation.from_email" type="collection">
+      <parameter key="nourelhouda.banbia@gmail.com">Nour</parameter>
+    </parameter>
+    <parameter key="fos_user.resetting.email.from_email" type="collection">
+      <parameter key="nourelhouda.banbia@gmail.com">Nour</parameter>
+    </parameter>
     <parameter key="fos_user.storage">orm</parameter>
     <parameter key="fos_user.firewall_name">main</parameter>
     <parameter key="fos_user.model_manager_name">null</parameter>
@@ -419,9 +430,6 @@
     <parameter key="fos_user.profile.form.validation_groups" type="collection">
       <parameter>Profile</parameter>
       <parameter>Default</parameter>
-    </parameter>
-    <parameter key="fos_user.registration.confirmation.from_email" type="collection">
-      <parameter key="nourelhouda.banbia@gmail.com">Nour</parameter>
     </parameter>
     <parameter key="fos_user.registration.confirmation.enabled">false</parameter>
     <parameter key="fos_user.registration.form.type">FOS\UserBundle\Form\Type\RegistrationFormType</parameter>
@@ -435,9 +443,6 @@
     <parameter key="fos_user.change_password.form.validation_groups" type="collection">
       <parameter>ChangePassword</parameter>
       <parameter>Default</parameter>
-    </parameter>
-    <parameter key="fos_user.resetting.email.from_email" type="collection">
-      <parameter key="nourelhouda.banbia@gmail.com">Nour</parameter>
     </parameter>
     <parameter key="fos_user.resetting.retry_ttl">7200</parameter>
     <parameter key="fos_user.resetting.token_ttl">86400</parameter>
@@ -522,18 +527,24 @@
       </parameter>
     </parameter>
     <parameter key="vich_uploader.file_injector.class">Vich\UploaderBundle\Injector\FileInjector</parameter>
-    <parameter key="knp_snappy.pdf.binary">"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"</parameter>
+    <parameter key="knp_snappy.pdf.binary">C:\Users\ASUS PC\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</parameter>
     <parameter key="knp_snappy.pdf.options" type="collection">
       <parameter key="no-outline">true</parameter>
       <parameter key="page-size">LETTER</parameter>
       <parameter key="encoding">UTF-8</parameter>
     </parameter>
     <parameter key="knp_snappy.pdf.env" type="collection"/>
-    <parameter key="knp_snappy.image.binary">"C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage.exe"</parameter>
+    <parameter key="knp_snappy.image.binary">C:\Users\ASUS PC\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</parameter>
     <parameter key="knp_snappy.image.options" type="collection"/>
     <parameter key="knp_snappy.image.env" type="collection"/>
     <parameter key="cmen_google_charts.version">current</parameter>
     <parameter key="cmen_google_charts.language"></parameter>
+    <parameter key="knp_paginator.class">Knp\Component\Pager\Paginator</parameter>
+    <parameter key="knp_paginator.helper.processor.class">Knp\Bundle\PaginatorBundle\Helper\Processor</parameter>
+    <parameter key="knp_paginator.template.pagination">@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig</parameter>
+    <parameter key="knp_paginator.template.filtration">@KnpPaginator/Pagination/filtration.html.twig</parameter>
+    <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/sortable_link.html.twig</parameter>
+    <parameter key="knp_paginator.page_range">5</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -813,7 +824,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>YgIpHsqYN1cf4Ym1Pmu5Kb</argument>
+      <argument>aXxxBvY99zvlIGkUfSjHwR</argument>
       <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -823,7 +834,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>YgIpHsqYN1cf4Ym1Pmu5Kb</argument>
+      <argument>aXxxBvY99zvlIGkUfSjHwR</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1333,6 +1344,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.ar.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.ar.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.ar.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ar.xliff</argument>
           </argument>
           <argument key="az" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.az.xlf</argument>
@@ -1360,7 +1372,6 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.cs.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.cs.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.cs.yml</argument>
-            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.cs.yml</argument>
           </argument>
           <argument key="cy" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cy.xlf</argument>
@@ -1371,6 +1382,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.da.xlf</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.da.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.da.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.da.xliff</argument>
           </argument>
           <argument key="de" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.de.xlf</argument>
@@ -1380,6 +1392,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.de.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.de.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.de.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.de.xliff</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.el.xlf</argument>
@@ -1397,6 +1410,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.en.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.en.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.en.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.en.xliff</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.es.xlf</argument>
@@ -1406,6 +1420,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.es.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.es.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.es.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.es.xliff</argument>
           </argument>
           <argument key="et" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.et.xlf</argument>
@@ -1425,6 +1440,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fa.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fa.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.fa.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fa.xliff</argument>
           </argument>
           <argument key="fi" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fi.xlf</argument>
@@ -1441,6 +1457,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.fr.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.fr.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.fr.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fr.xliff</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.gl.xlf</argument>
@@ -1469,6 +1486,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.hu.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.hu.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.hu.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.hu.xliff</argument>
           </argument>
           <argument key="hy" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hy.xlf</argument>
@@ -1480,6 +1498,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.id.xlf</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.id.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.id.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.id.xliff</argument>
           </argument>
           <argument key="it" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.it.xlf</argument>
@@ -1489,6 +1508,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.it.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.it.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.it.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.it.xliff</argument>
           </argument>
           <argument key="ja" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ja.xlf</argument>
@@ -1509,6 +1529,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lt.xlf</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.lt.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.lt.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.lt.xliff</argument>
           </argument>
           <argument key="lv" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lv.xlf</argument>
@@ -1520,6 +1541,7 @@
           <argument key="mn" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.mn.xlf</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.mn.yml</argument>
           </argument>
           <argument key="nb" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nb.xlf</argument>
@@ -1535,6 +1557,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.nl.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.nl.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.nl.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.nl.xliff</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nn.xlf</argument>
@@ -1555,6 +1578,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.pl.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.pl.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.pl.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pl.xliff</argument>
           </argument>
           <argument key="pt" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt.xlf</argument>
@@ -1569,6 +1593,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pt_BR.xlf</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pt_BR.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pt_BR.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
           </argument>
           <argument key="ro" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ro.xlf</argument>
@@ -1576,6 +1601,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ro.xlf</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ro.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ro.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ro.xliff</argument>
           </argument>
           <argument key="ru" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ru.xlf</argument>
@@ -1586,6 +1612,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.ru.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.ru.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.ru.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ru.xliff</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sk.xlf</argument>
@@ -1626,6 +1653,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sv.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sv.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.sv.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sv.xliff</argument>
           </argument>
           <argument key="th" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.th.xlf</argument>
@@ -1646,6 +1674,7 @@
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.uk.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.uk.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.uk.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.uk.xliff</argument>
           </argument>
           <argument key="vi" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.vi.xlf</argument>
@@ -1684,6 +1713,10 @@
           <argument key="ky" type="collection">
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ky.yml</argument>
             <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ky.yml</argument>
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ky.xliff</argument>
+          </argument>
+          <argument key="sw" type="collection">
+            <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sw.xliff</argument>
           </argument>
         </argument>
       </argument>
@@ -2067,6 +2100,14 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>onKernelRequest</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.response</argument>
         <argument type="collection">
           <argument type="service" id="response_listener"/>
@@ -2212,6 +2253,14 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -2506,6 +2555,46 @@
         </argument>
         <argument>-128</argument>
       </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>before</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sortable"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.filtration"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
       <tag name="monolog.logger" channel="request"/>
@@ -2789,6 +2878,7 @@
     <service id="security.http_utils" class="Symfony\Component\Security\Http\HttpUtils" public="false">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="router.default" on-invalid="null"/>
+      <argument>{^https?://%s$}i</argument>
     </service>
     <service id="security.validator.user_password" class="Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator">
       <tag name="validator.constraint_validator" alias="security.validator.user_password"/>
@@ -2931,6 +3021,9 @@
       <argument type="service" id="security.http_utils"/>
       <argument type="service" id="security.logout.success_handler"/>
       <argument></argument>
+      <call method="addHandler">
+        <argument type="service" id="security.logout.handler.csrf_token_clearing"/>
+      </call>
     </service>
     <service id="security.logout.handler.session" class="Symfony\Component\Security\Http\Logout\SessionLogoutHandler" public="false"/>
     <service id="security.logout.handler.cookie_clearing" class="Symfony\Component\Security\Http\Logout\CookieClearingLogoutHandler" public="false" abstract="true"/>
@@ -3266,6 +3359,9 @@
         <argument key="logout_path">/logout</argument>
       </argument>
       <call method="addHandler">
+        <argument type="service" id="security.logout.handler.csrf_token_clearing"/>
+      </call>
+      <call method="addHandler">
         <argument type="service" id="security.logout.handler.session"/>
       </call>
     </service>
@@ -3336,12 +3432,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5b00159f5494a4.34624891</argument>
+      <argument>5b2e4d6fec6619.23851673</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5b00159f5494a4.34624891</argument>
+      <argument>5b2e4d6fec6619.23851673</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3498,6 +3594,9 @@
         <argument type="service" id="CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="knp_paginator.twig.extension.pagination"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.dump"/>
       </call>
       <call method="addExtension">
@@ -3509,6 +3608,14 @@
       </call>
       <call method="addRuntimeLoader">
         <argument type="service" id="twig.runtime_loader"/>
+      </call>
+      <call method="addGlobal">
+        <argument>pathToWeb</argument>
+        <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\app/../web</argument>
+      </call>
+      <call method="addGlobal">
+        <argument>base_dir</argument>
+        <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\app/../web</argument>
       </call>
       <configurator service="twig.configurator.environment" method="configure"/>
     </service>
@@ -3610,6 +3717,10 @@
       <call method="addPath">
         <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\egyg33k\csv-bundle/Resources/views</argument>
         <argument>Egyg33kCsv</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
       </call>
       <call method="addPath">
         <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
@@ -3718,7 +3829,6 @@
     </service>
     <service id="twig.form.engine" class="Symfony\Bridge\Twig\Form\TwigRendererEngine" public="false">
       <argument type="collection">
-        <argument>@VichUploader/Form/fields.html.twig</argument>
         <argument>form_div_layout.html.twig</argument>
       </argument>
       <argument type="service" id="twig"/>
@@ -3792,6 +3902,10 @@
       <call method="addPath">
         <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\egyg33k\csv-bundle/Resources/views</argument>
         <argument>Egyg33kCsv</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
       </call>
       <call method="addPath">
         <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
@@ -4213,7 +4327,6 @@
           <argument key="UserBundle">Souk\UserBundle\Entity</argument>
           <argument key="BackBundle">Souk\BackBundle\Entity</argument>
           <argument key="FOSMessageBundle">FOS\MessageBundle\Entity</argument>
-          <argument key="VichUploaderBundle">Vich\UploaderBundle\Entity</argument>
         </argument>
       </call>
       <call method="setMetadataCacheImpl">
@@ -4262,7 +4375,6 @@
         <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\src\Souk\FrontBundle\Entity</argument>
         <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\src\Souk\UserBundle\Entity</argument>
         <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\src\Souk\BackBundle\Entity</argument>
-        <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\vendor\vich\uploader-bundle\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_xml_metadata_driver" class="Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver" public="false">
@@ -4285,10 +4397,6 @@
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
         <argument>Souk\BackBundle\Entity</argument>
-      </call>
-      <call method="addDriver">
-        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
-        <argument>Vich\UploaderBundle\Entity</argument>
       </call>
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_xml_metadata_driver"/>
@@ -4445,6 +4553,9 @@
       <argument type="service" id="fos_user.user_manager.default"/>
     </service>
     <service id="fos_user.user_provider.username_email" class="FOS\UserBundle\Security\EmailUserProvider" public="false">
+      <argument type="service" id="fos_user.user_manager.default"/>
+    </service>
+    <service id="fos_user.user_provider.email" class="FOS\UserBundle\Security\EmailProvider" public="false">
       <argument type="service" id="fos_user.user_manager.default"/>
     </service>
     <service id="fos_user.security.controller" class="FOS\UserBundle\Controller\SecurityController">
@@ -4825,13 +4936,69 @@
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeFromjson</argument>
             </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateTimeFromyml</argument>
+            </argument>
             <argument key="xml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeFromxml</argument>
             </argument>
+          </argument>
+          <argument key="PhpCollection\Sequence" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
             <argument key="yml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>deserializeDateTimeFromyml</argument>
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="PhpCollection\Map" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeMap</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeMap</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeMap</argument>
             </argument>
           </argument>
           <argument key="DateTimeImmutable" type="collection">
@@ -4839,27 +5006,55 @@
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeImmutableFromjson</argument>
             </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>deserializeDateTimeImmutableFromxml</argument>
-            </argument>
             <argument key="yml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeImmutableFromyml</argument>
             </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateTimeImmutableFromxml</argument>
+            </argument>
           </argument>
           <argument key="DateInterval" type="collection">
-            <argument key="json" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
-              <argument>deserializeDateIntervalFromjson</argument>
+              <argument>deserializeDateIntervalFromyml</argument>
             </argument>
             <argument key="xml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateIntervalFromxml</argument>
             </argument>
-            <argument key="yml" type="collection">
+            <argument key="json" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
-              <argument>deserializeDateIntervalFromyml</argument>
+              <argument>deserializeDateIntervalFromjson</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
             </argument>
           </argument>
           <argument key="ArrayCollection" type="collection">
@@ -4867,201 +5062,19 @@
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
             <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
-            <argument key="json" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
             <argument key="xml" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>deserializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="PhpCollection\Sequence" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeSequence</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeSequence</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeSequence</argument>
-            </argument>
-          </argument>
-          <argument key="PhpCollection\Map" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeMap</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeMap</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.php_collection_handler</argument>
-              <argument>deserializeMap</argument>
             </argument>
           </argument>
         </argument>
         <argument key="1" type="collection">
-          <argument key="DateTime" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTime</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTime</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTime</argument>
-            </argument>
-          </argument>
-          <argument key="DateTimeImmutable" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTimeImmutable</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTimeImmutable</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateTimeImmutable</argument>
-            </argument>
-          </argument>
-          <argument key="DateInterval" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateInterval</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateInterval</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.datetime_handler</argument>
-              <argument>serializeDateInterval</argument>
-            </argument>
-          </argument>
-          <argument key="ArrayCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-          </argument>
-          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="xml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.array_collection_handler</argument>
-              <argument>serializeCollection</argument>
-            </argument>
-          </argument>
           <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
-            <argument key="json" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
@@ -5069,13 +5082,13 @@
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
-            <argument key="yml" type="collection">
+            <argument key="json" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
           </argument>
           <argument key="PhpCollection\Sequence" type="collection">
-            <argument key="json" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
@@ -5083,7 +5096,7 @@
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
-            <argument key="yml" type="collection">
+            <argument key="json" type="collection">
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
@@ -5102,60 +5115,158 @@
               <argument>serializeMap</argument>
             </argument>
           </argument>
-          <argument key="Symfony\Component\Form\Form" type="collection">
+          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
             <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Symfony\Component\Form\Form" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormToxml</argument>
+              <argument>serializeFormToyml</argument>
             </argument>
             <argument key="json" type="collection">
               <argument>jms_serializer.form_error_handler</argument>
               <argument>serializeFormTojson</argument>
             </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormToyml</argument>
-            </argument>
-          </argument>
-          <argument key="Symfony\Component\Form\FormError" type="collection">
             <argument key="xml" type="collection">
               <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormErrorToxml</argument>
+              <argument>serializeFormToxml</argument>
             </argument>
+          </argument>
+          <argument key="Symfony\Component\Validator\ConstraintViolation" type="collection">
             <argument key="json" type="collection">
-              <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormErrorTojson</argument>
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationTojson</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationToxml</argument>
             </argument>
             <argument key="yml" type="collection">
-              <argument>jms_serializer.form_error_handler</argument>
-              <argument>serializeFormErrorToyml</argument>
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationToyml</argument>
             </argument>
           </argument>
           <argument key="Symfony\Component\Validator\ConstraintViolationList" type="collection">
-            <argument key="xml" type="collection">
+            <argument key="yml" type="collection">
               <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeListToxml</argument>
+              <argument>serializeListToyml</argument>
             </argument>
             <argument key="json" type="collection">
               <argument>jms_serializer.constraint_violation_handler</argument>
               <argument>serializeListTojson</argument>
             </argument>
-            <argument key="yml" type="collection">
-              <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeListToyml</argument>
-            </argument>
-          </argument>
-          <argument key="Symfony\Component\Validator\ConstraintViolation" type="collection">
             <argument key="xml" type="collection">
               <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeViolationToxml</argument>
+              <argument>serializeListToxml</argument>
+            </argument>
+          </argument>
+          <argument key="Symfony\Component\Form\FormError" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormErrorToyml</argument>
             </argument>
             <argument key="json" type="collection">
-              <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeViolationTojson</argument>
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormErrorTojson</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormErrorToxml</argument>
+            </argument>
+          </argument>
+          <argument key="DateTime" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
             </argument>
             <argument key="yml" type="collection">
-              <argument>jms_serializer.constraint_violation_handler</argument>
-              <argument>serializeViolationToyml</argument>
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
+            </argument>
+          </argument>
+          <argument key="DateInterval" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+          </argument>
+          <argument key="DateTimeImmutable" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+          </argument>
+          <argument key="ArrayCollection" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
             </argument>
           </argument>
         </argument>
@@ -5461,7 +5572,11 @@
     <service id="vich_uploader.file_injector" class="Vich\UploaderBundle\Injector\FileInjector" public="false">
       <argument type="service" id="vich_uploader.storage.file_system"/>
     </service>
-    <service id="vich_uploader.metadata.file_locator" class="Metadata\Driver\FileLocator" public="false">
+    <service id="vich_uploader.templating.helper.uploader_helper" class="Vich\UploaderBundle\Templating\Helper\UploaderHelper">
+      <tag name="templating.helper" alias="vich_uploader"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+    </service>
+    <service id="vich_uploader.metadata.file_locator" class="Vich\UploaderBundle\Metadata\Driver\FileLocator" public="false">
       <argument type="collection"/>
     </service>
     <service id="vich_uploader.metadata_driver.annotation" class="Vich\UploaderBundle\Metadata\Driver\AnnotationDriver" public="false">
@@ -5473,7 +5588,7 @@
     <service id="vich_uploader.metadata_driver.yaml" class="Vich\UploaderBundle\Metadata\Driver\YamlDriver" public="false">
       <argument type="service" id="vich_uploader.metadata.file_locator"/>
     </service>
-    <service id="vich_uploader.metadata_driver.chain" class="Metadata\Driver\DriverChain" public="false">
+    <service id="vich_uploader.metadata_driver.chain" class="Vich\UploaderBundle\Metadata\Driver\ChainDriver" public="false">
       <argument type="collection">
         <argument type="service" id="vich_uploader.metadata_driver.annotation"/>
         <argument type="service" id="vich_uploader.metadata_driver.yaml"/>
@@ -5521,10 +5636,18 @@
     <service id="vich_uploader.namer_property" class="Vich\UploaderBundle\Naming\PropertyNamer"/>
     <service id="vich_uploader.namer_origname" class="Vich\UploaderBundle\Naming\OrignameNamer"/>
     <service id="vich_uploader.namer_hash" class="Vich\UploaderBundle\Naming\HashNamer"/>
-    <service id="vich_uploader.namer_base64" class="Vich\UploaderBundle\Naming\Base64Namer"/>
     <service id="vich_uploader.directory_namer_subdir" class="Vich\UploaderBundle\Naming\SubdirDirectoryNamer"/>
-    <service id="vich_uploader.namer_directory_property" class="Vich\UploaderBundle\Naming\PropertyDirectoryNamer">
-      <argument type="service" id="property_accessor"/>
+    <service id="vich_uploader.form.type.file" class="Vich\UploaderBundle\Form\Type\VichFileType">
+      <tag name="form.type" alias="vich_file"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="vich_uploader.form.type.image" class="Vich\UploaderBundle\Form\Type\VichImageType">
+      <tag name="form.type" alias="vich_image"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+      <argument type="service" id="translator.data_collector"/>
     </service>
     <service id="vich_uploader.download_handler" class="Vich\UploaderBundle\Handler\DownloadHandler">
       <argument type="service" id="vich_uploader.property_mapping_factory"/>
@@ -5535,25 +5658,6 @@
       <argument type="service" id="vich_uploader.storage.file_system"/>
       <argument type="service" id="vich_uploader.file_injector"/>
       <argument type="service" id="debug.event_dispatcher"/>
-    </service>
-    <service id="vich_uploader.form.type.file" class="Vich\UploaderBundle\Form\Type\VichFileType">
-      <tag name="form.type" alias="vich_file"/>
-      <argument type="service" id="vich_uploader.storage.file_system"/>
-      <argument type="service" id="vich_uploader.upload_handler"/>
-      <argument type="service" id="vich_uploader.property_mapping_factory"/>
-      <argument type="service" id="property_accessor"/>
-    </service>
-    <service id="vich_uploader.form.type.image" class="Vich\UploaderBundle\Form\Type\VichImageType">
-      <tag name="form.type" alias="vich_image"/>
-      <argument type="service" id="vich_uploader.storage.file_system"/>
-      <argument type="service" id="vich_uploader.upload_handler"/>
-      <argument type="service" id="vich_uploader.property_mapping_factory"/>
-      <argument type="service" id="property_accessor"/>
-      <argument>null</argument>
-    </service>
-    <service id="vich_uploader.templating.helper.uploader_helper" class="Vich\UploaderBundle\Templating\Helper\UploaderHelper">
-      <tag name="templating.helper" alias="vich_uploader"/>
-      <argument type="service" id="vich_uploader.storage.file_system"/>
     </service>
     <service id="vich_uploader.twig.extension.uploader" class="Vich\UploaderBundle\Twig\Extension\UploaderExtension" public="false">
       <tag name="twig.extension"/>
@@ -5582,7 +5686,7 @@
     </service>
     <service id="knp_snappy.pdf" class="Knp\Snappy\Pdf">
       <tag name="monolog.logger" channel="snappy"/>
-      <argument>"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"</argument>
+      <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</argument>
       <argument type="collection">
         <argument key="no-outline">true</argument>
         <argument key="page-size">LETTER</argument>
@@ -5595,7 +5699,7 @@
     </service>
     <service id="knp_snappy.image" class="Knp\Snappy\Image">
       <tag name="monolog.logger" channel="snappy"/>
-      <argument>"C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage.exe"</argument>
+      <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</argument>
       <argument type="collection"/>
       <argument type="collection"/>
       <call method="setLogger">
@@ -5623,6 +5727,46 @@
     </service>
     <service id="egyg33k.csv.reader" class="Egyg33k\CsvBundle\Services\Reader"/>
     <service id="egyg33k.csv.writer" class="Egyg33k\CsvBundle\Services\Writer"/>
+    <service id="knp_paginator" class="Knp\Component\Pager\Paginator" lazy="true">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <call method="setDefaultPaginatorOptions">
+        <argument type="collection">
+          <argument key="pageParameterName">page</argument>
+          <argument key="sortFieldParameterName">sort</argument>
+          <argument key="sortDirectionParameterName">direction</argument>
+          <argument key="filterFieldParameterName">filterField</argument>
+          <argument key="filterValueParameterName">filterValue</argument>
+          <argument key="distinct">true</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="knp_paginator.subscriber.paginate" class="Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sortable" class="Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.filtration" class="Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sliding_pagination" class="Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
+      <argument type="collection">
+        <argument key="defaultPaginationTemplate">@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig</argument>
+        <argument key="defaultSortableTemplate">@KnpPaginator/Pagination/sortable_link.html.twig</argument>
+        <argument key="defaultFiltrationTemplate">@KnpPaginator/Pagination/filtration.html.twig</argument>
+        <argument key="defaultPageRange">5</argument>
+      </argument>
+    </service>
+    <service id="knp_paginator.helper.processor" class="Knp\Bundle\PaginatorBundle\Helper\Processor">
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="knp_paginator.twig.extension.pagination" class="Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -5837,6 +5981,9 @@
         <argument key="Vich\UploaderBundle\Form\Type\VichFileType" type="service" id="vich_uploader.form.type.file"/>
         <argument key="Vich\UploaderBundle\Form\Type\VichImageType" type="service" id="vich_uploader.form.type.image"/>
       </argument>
+    </service>
+    <service id="security.logout.handler.csrf_token_clearing" class="Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler" public="false">
+      <argument type="service" id="security.csrf.token_storage"/>
     </service>
     <service id="monolog.logger.request" class="Symfony\Bridge\Monolog\Logger">
       <argument>request</argument>
@@ -6059,7 +6206,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>Jb+7KuLNUA</argument>
       <argument>0</argument>
-      <argument>YgIpHsqYN1cf4Ym1Pmu5Kb</argument>
+      <argument>aXxxBvY99zvlIGkUfSjHwR</argument>
       <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6067,7 +6214,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>JXwkq8YTVR</argument>
       <argument>0</argument>
-      <argument>YgIpHsqYN1cf4Ym1Pmu5Kb</argument>
+      <argument>aXxxBvY99zvlIGkUfSjHwR</argument>
       <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6075,7 +6222,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>rlll62BvUM</argument>
       <argument>0</argument>
-      <argument>YgIpHsqYN1cf4Ym1Pmu5Kb</argument>
+      <argument>aXxxBvY99zvlIGkUfSjHwR</argument>
       <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6083,7 +6230,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>pru0Jzp+bX</argument>
       <argument>0</argument>
-      <argument>YgIpHsqYN1cf4Ym1Pmu5Kb</argument>
+      <argument>aXxxBvY99zvlIGkUfSjHwR</argument>
       <argument>C:\Users\ASUS PC\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6201,6 +6348,7 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
     <service id="fos_user.doctrine_registry" alias="doctrine" public="false"/>
     <service id="FOS\UserBundle\Security\LoginManagerInterface" alias="fos_user.security.login_manager" public="false"/>
+    <service id="FOS\UserBundle\Controller\SecurityController" alias="fos_user.security.controller"/>
     <service id="FOS\UserBundle\Util\TokenGeneratorInterface" alias="fos_user.util.token_generator.default" public="false"/>
     <service id="FOS\UserBundle\Util\PasswordUpdaterInterface" alias="fos_user.util.password_updater" public="false"/>
     <service id="FOS\UserBundle\Util\CanonicalFieldsUpdater" alias="fos_user.util.canonical_fields_updater" public="false"/>
@@ -6209,6 +6357,10 @@
     <service id="fos_user.util.username_canonicalizer" alias="fos_user.util.canonicalizer.default"/>
     <service id="fos_user.util.token_generator" alias="fos_user.util.token_generator.default"/>
     <service id="fos_user.user_manager" alias="fos_user.user_manager.default"/>
+    <service id="FOS\UserBundle\Controller\ProfileController" alias="fos_user.profile.controller"/>
+    <service id="FOS\UserBundle\Controller\RegistrationController" alias="fos_user.registration.controller"/>
+    <service id="FOS\UserBundle\Controller\ChangePasswordController" alias="fos_user.change_password.controller"/>
+    <service id="FOS\UserBundle\Controller\ResettingController" alias="fos_user.resetting.controller"/>
     <service id="fos_user.mailer" alias="fos_user.mailer.default"/>
     <service id="fos_user.session" alias="session" public="false"/>
     <service id="fos_message.message_manager" alias="fos_message.message_manager.default"/>
@@ -6242,9 +6394,9 @@
     <service id="vich_uploader.storage" alias="vich_uploader.storage.file_system"/>
     <service id="vich_uploader.metadata_driver" alias="vich_uploader.metadata_driver.chain" public="false"/>
     <service id="vich_uploader.metadata.cache" alias="vich_uploader.metadata.cache.file_cache" public="false"/>
-    <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" alias="vich_uploader.templating.helper.uploader_helper" public="false"/>
     <service id="Knp\Snappy\Pdf" alias="knp_snappy.pdf"/>
     <service id="Knp\Snappy\Image" alias="knp_snappy.image"/>
+    <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.twig" public="false"/>
     <service id="console.command.symfony_bundle_securitybundle_command_userpasswordencodercommand" alias="security.console.user_password_encoder_command"/>

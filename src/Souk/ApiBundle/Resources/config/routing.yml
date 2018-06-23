@@ -17,12 +17,10 @@ api_annonces:
 api_reclamations:
     resource: "@ApiBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations
-<<<<<<< HEAD
 #Service SafaBenBarka
 api_abonnements:
     resource: "@ApiBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements
-=======
 #service Safa
 api_commentaireAnc:
     resource: "@ApiBundle/Resources/config/routing/commentaireAnc.yml"
@@ -34,4 +32,3 @@ api_commentaireEvs:
 api_evenements:
     resource: "@ApiBundle/Resources/config/routing/evenements.yml"
     prefix:   /evenements
->>>>>>> b67851bf115fb2324def67877c637d4244caabee
