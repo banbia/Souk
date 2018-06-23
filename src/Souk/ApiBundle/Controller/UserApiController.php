@@ -12,17 +12,14 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class UserApiController extends Controller
 {
 
-///se connecter à traver l'application
     public function getUserAction($login, $password)
     {
-        
         $normalizer = new ObjectNormalizer();
         $normalizer->setCircularReferenceLimit(1);
         $serializer = new   Serializer([$normalizer]);
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
-
         $user = $this->getDoctrine()->getManager()
             ->getRepository('UserBundle:User')
             ->findBy(array("username" => $login));
@@ -41,7 +38,6 @@ class UserApiController extends Controller
             $formatted = $serializer->normalize('erreur', 'json');
             return new JsonResponse($formatted);
         }
-
     }
 
 }

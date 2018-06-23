@@ -1,4 +1,0 @@
-
-liste:
-    path:     /liste
-    defaults: { _controller: ApiBundle:AbonnementApi:liste }

@@ -17,10 +17,6 @@ api_annonces:
 api_reclamations:
     resource: "@ApiBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations
-#Service SafaBenBarka
-api_abonnements:
-    resource: "@ApiBundle/Resources/config/routing/abonnements.yml"
-    prefix:   /abonnements
 #service Safa
 api_commentaireAnc:
     resource: "@ApiBundle/Resources/config/routing/commentaireAnc.yml"

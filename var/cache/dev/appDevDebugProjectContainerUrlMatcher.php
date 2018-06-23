@@ -561,24 +561,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
-<<<<<<< HEAD
-                elseif (0 === strpos($pathinfo, '/api/a')) {
-                    // api_Annonces
-                    if ('/api/annonces/all' === $pathinfo) {
-                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getAllAnnoncesAction',  '_route' => 'api_Annonces',);
-                    }
-
-                    // get_Annonce
-                    if (0 === strpos($pathinfo, '/api/annonces/AnnoncesById') && preg_match('#^/api/annonces/AnnoncesById/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::GetAnnonceByIdAction',));
-                    }
-
-                    // liste
-                    if ('/api/abonnements/liste' === $pathinfo) {
-                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::listeAction',  '_route' => 'liste',);
-                    }
-
-=======
                 // api_Annonces
                 if ('/api/annonces/all' === $pathinfo) {
                     return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getAllAnnoncesAction',  '_route' => 'api_Annonces',);
@@ -587,7 +569,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // get_Annonce
                 if (0 === strpos($pathinfo, '/api/annonces/AnnoncesById') && preg_match('#^/api/annonces/AnnoncesById/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::GetAnnonceByIdAction',));
->>>>>>> 005b4bcfd7c38bab859621197074b2c12a177c55
                 }
 
                 // liste_reclamations
@@ -603,10 +584,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // get_All_Annonces
                 if ('/api/evenements/allEvents' === $pathinfo) {
                     return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
-<<<<<<< HEAD
-=======
->>>>>>> 005b4bcfd7c38bab859621197074b2c12a177c55
->>>>>>> ce2243c2e22af92965f4aa7e3c554cd135afede8
                 }
 
             }
