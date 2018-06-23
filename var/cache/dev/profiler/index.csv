@@ -13,3 +13,5 @@ dd6cb0,127.0.0.1,POST,http://localhost:8000/api/annonces/all,1529750926,,200
 fb99ad,127.0.0.1,GET,http://localhost:8000/evennements/,1529751565,,200
 2461a0,127.0.0.1,POST,http://localhost:8000/api/user/safa/safa,1529753810,,200
 e44f21,127.0.0.1,POST,http://localhost:8000/api/evenements/allEvents,1529753817,,200
+e12c25,127.0.0.1,GET,http://localhost:8000/,1529754755,,200
+0827d6,127.0.0.1,GET,http://localhost:8000/login,1529754762,,200
