@@ -583,7 +583,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 // get_All_Annonces
                 if ('/api/evenements/allEvents' === $pathinfo) {
+<<<<<<< HEAD
                     return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
+=======
+                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
+>>>>>>> 853afd54202109ad161af32917a7716af35d3a4f
                 }
 
             }
