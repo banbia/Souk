@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 993b33,127.0.0.1,GET,http://localhost:8000/evennements/,1529763812,,200
 b9e03c,127.0.0.1,GET,http://localhost:8000/evennements/,1529763849,,200
 bff69b,127.0.0.1,GET,http://localhost:8000/evennements/,1529763898,,200
@@ -33,3 +34,46 @@ f6eaf8,127.0.0.1,GET,http://localhost:8000/evennements/,1529765546,,200
 a396d5,127.0.0.1,GET,http://localhost:8000/evennements/,1529765607,,200
 856e1c,127.0.0.1,GET,http://localhost:8000/evennements/,1529765620,,200
 6f4a8a,127.0.0.1,GET,http://localhost:8000/annonces/,1529765697,,200
+=======
+<<<<<<< HEAD
+e6d953,127.0.0.1,GET,http://localhost:8000/,1529761757,,200
+54ac71,127.0.0.1,GET,http://localhost:8000/register/,1529761790,10a9c9,200
+10a9c9,127.0.0.1,GET,http://localhost:8000/register/,1529761791,,500
+=======
+1f319b,127.0.0.1,GET,http://localhost:8000/evennements/,1529756782,86f802,200
+86f802,127.0.0.1,GET,http://localhost:8000/evennements/,1529756782,,500
+b925b8,127.0.0.1,GET,http://localhost:8000/evennements/,1529756988,d120ba,200
+d120ba,127.0.0.1,GET,http://localhost:8000/evennements/,1529756988,,500
+b1c5c4,127.0.0.1,GET,http://localhost:8000/evennements/,1529757017,bd3b8a,200
+bd3b8a,127.0.0.1,GET,http://localhost:8000/evennements/,1529757017,,500
+d514d8,127.0.0.1,GET,http://localhost:8000/,1529758236,,200
+1f6491,127.0.0.1,GET,http://localhost:8000/evennements/,1529758241,90ef2d,200
+90ef2d,127.0.0.1,GET,http://localhost:8000/evennements/,1529758241,,500
+7b0523,127.0.0.1,GET,http://localhost:8000/,1529760640,,200
+ed665f,127.0.0.1,GET,http://localhost:8000/logout,1529760696,,302
+625a18,127.0.0.1,GET,http://localhost:8000/,1529760696,,200
+3a3c50,127.0.0.1,GET,http://localhost:8000/register/,1529760698,90d06b,200
+90d06b,127.0.0.1,GET,http://localhost:8000/register/,1529760698,,500
+636b59,127.0.0.1,GET,http://localhost:8000/register/,1529760843,dcaf8c,200
+dcaf8c,127.0.0.1,GET,http://localhost:8000/register/,1529760843,,500
+a089aa,127.0.0.1,GET,http://localhost:8000/register/,1529761090,a084d9,200
+a084d9,127.0.0.1,GET,http://localhost:8000/register/,1529761090,,500
+3401f2,127.0.0.1,GET,http://localhost:8000/register/,1529761140,689f82,200
+689f82,127.0.0.1,GET,http://localhost:8000/register/,1529761140,,500
+035c87,127.0.0.1,GET,http://localhost:8000/register/,1529761157,5482fd,200
+5482fd,127.0.0.1,GET,http://localhost:8000/register/,1529761157,,500
+9d8cfe,127.0.0.1,GET,http://localhost:8000/register/,1529761357,c6e3e2,200
+c6e3e2,127.0.0.1,GET,http://localhost:8000/register/,1529761357,,500
+a61b87,127.0.0.1,GET,http://localhost:8000/register/,1529761393,c45bc4,200
+c45bc4,127.0.0.1,GET,http://localhost:8000/register/,1529761393,,500
+2b0da9,127.0.0.1,GET,http://localhost:8000/register/,1529761395,27ee24,200
+27ee24,127.0.0.1,GET,http://localhost:8000/register/,1529761395,,500
+db39cf,127.0.0.1,GET,http://localhost:8000/register/,1529761451,e2400d,200
+e2400d,127.0.0.1,GET,http://localhost:8000/register/,1529761451,,500
+3d62dc,127.0.0.1,GET,http://localhost:8000/register/,1529761562,eb27b1,200
+eb27b1,127.0.0.1,GET,http://localhost:8000/register/,1529761562,,500
+518885,127.0.0.1,GET,http://localhost:8000/register/,1529761577,aa80fa,200
+aa80fa,127.0.0.1,GET,http://localhost:8000/register/,1529761578,,500
+fcf36e,127.0.0.1,GET,http://localhost:8000/register/,1529761641,,200
+>>>>>>> 005b4bcfd7c38bab859621197074b2c12a177c55
+>>>>>>> ce2243c2e22af92965f4aa7e3c554cd135afede8
