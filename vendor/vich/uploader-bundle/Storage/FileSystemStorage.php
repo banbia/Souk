@@ -13,7 +13,7 @@ use Vich\UploaderBundle\Mapping\PropertyMapping;
 class FileSystemStorage extends AbstractStorage
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function doUpload(PropertyMapping $mapping, UploadedFile $file, $dir, $name)
     {
@@ -23,7 +23,7 @@ class FileSystemStorage extends AbstractStorage
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function doRemove(PropertyMapping $mapping, $dir, $name)
     {
@@ -33,7 +33,7 @@ class FileSystemStorage extends AbstractStorage
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function doResolvePath(PropertyMapping $mapping, $dir, $name, $relative = false)
     {
@@ -47,7 +47,7 @@ class FileSystemStorage extends AbstractStorage
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function resolveUri($obj, $mappingName, $className = null)
     {

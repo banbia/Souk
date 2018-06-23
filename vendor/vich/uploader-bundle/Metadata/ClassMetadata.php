@@ -6,23 +6,31 @@ use Metadata\ClassMetadata as BaseClassMetadata;
 
 class ClassMetadata extends BaseClassMetadata
 {
-    public $fields = [];
+    public $fields = array();
 
     public function serialize()
     {
-        return serialize([
-            $this->fields,
-            parent::serialize(),
-        ]);
+        return serialize(array(
+            $this->name,
+            $this->methodMetadata,
+            $this->propertyMetadata,
+            $this->fileResources,
+            $this->createdAt,
+            $this->fields
+        ));
     }
 
     public function unserialize($str)
     {
         list(
-            $this->fields,
-            $parentStr
-            ) = unserialize($str);
+            $this->name,
+            $this->methodMetadata,
+            $this->propertyMetadata,
+            $this->fileResources,
+            $this->createdAt,
+            $this->fields
+        ) = unserialize($str);
 
-        parent::unserialize($parentStr);
+        $this->reflection = new \ReflectionClass($this->name);
     }
 }

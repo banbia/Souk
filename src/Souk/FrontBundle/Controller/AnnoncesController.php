@@ -34,6 +34,7 @@ class AnnoncesController extends Controller
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
         $annonce = $em->getRepository('BackBundle:Annonces')->find($annonce);
+      $images = $em->getRepository('BackBundle:Images')->findBy(array("annonce" => $annonce->getId()));
 
         $form = $this->createForm('Souk\BackBundle\Form\CommandesType', $commande);
         $form->handleRequest($request);
@@ -135,18 +136,27 @@ class AnnoncesController extends Controller
             'com' => $com,
             'coms' => $coms,
             'formC' => $formViewC,
+             'Image'=>$images,
 
         ));
 
   }
-
-  public function deleteAction($com, $annonce)
+  /**
+   * haifa-dev-start
+   * delete annonce
+   *
+   */
+  public function deleteAnnonceAction($id)
   {
     $em = $this->getDoctrine()->getManager();
-    $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
-    $em->remove($comm);
+    $annonces = $em->getRepository('BackBundle:Annonces')->find($id);
+    $images = $em->getRepository('BackBundle:Images')->findBy(array("annonce" => $id));
+    foreach ($images as $img ) {
+      $em->remove($img);
+    }
+    $em->remove($annonces);
     $em->flush();
-      return $this->redirectToRoute('annonces_show',array("annonce"=>$annonce));
+    return $this->redirectToRoute('commercial_annonces_index');
   }
 
   /**
@@ -157,6 +167,7 @@ class AnnoncesController extends Controller
 
   public function newAnnonceAction(Request $request)
   {
+    $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
     $annonce = new Annonces();
 
     $form = $this->createForm('Souk\BackBundle\Form\AnnoncesType', $annonce);
@@ -178,34 +189,66 @@ class AnnoncesController extends Controller
     ));
 
   }
+/**modifier annonces*/
+  public function editAnnonceAction(Request $request,$id)
+  {
+    $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+    $em = $this->getDoctrine()->getManager();
+    $annonce = $em->getRepository('BackBundle:Annonces')->find($id);
+
+    $form = $this->createForm('Souk\BackBundle\Form\AnnoncesType', $annonce);
+    $form->handleRequest($request);
+
+    if ($form->isSubmitted() && $form->isValid()) {
+      $em = $this->getDoctrine()->getManager();
+
+      $annonce->setDateCreation(new \DateTime('now'));
+      $user = $this->getUser();
+      $annonce->setCommercial($user);
+      $em->persist($annonce);
+      $em->flush();
+      return $this->redirectToRoute('commercial_annonces_index');
+    }
+    return $this->render('FrontBundle:annonces:edit.html.twig', array(
+
+      'form' => $form->createView(),
+    ));
+
+  }
 
   /**affichage  les annonces  du commercial connecte  **/
   public function indexCommercialAction()
   {
+    $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+    $dateJour=new \DateTime('now');
+
     $em = $this->getDoctrine()->getManager();
     $user = $this->getUser();
-    $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array("commercial" => $user));
-    $categories = $em->getRepository('BackBundle:Categories')->findAll();
+    $annonces = $em->getRepository('BackBundle:Annonces')->findAllOrderedByDateCommercial($user->getId());
 
-    return $this->render('FrontBundle:annonces:index.html.twig', array(
-      'annonces' => $annonces,
-      'categories' => $categories,
+
+    $abonnement = $em->getRepository('BackBundle:HistoriqueAbs')->findAbonnementByIdUserDate($user->getId(),$dateJour);
+
+    return $this->render('FrontBundle:annonces:indexCommercial.html.twig', array(
+      'annonces' => $annonces,'abonnement'=>$abonnement,
+
     ));
   }
-
   /**affichage  les annonces par categories  **/
-  public function indexbyCategorieAction($categorie)
+  public function listerbyCategorieAction($categorie)
   {
-    $em = $this->getDoctrine()->getManager();
 
-    $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array("categorie" => $categorie));
-    $categories = $em->getRepository('BackBundle:Categories')->findAll();
+    $em = $this->getDoctrine()->getManager();
+    $cat = $em->getRepository('BackBundle:Categories')->find($categorie);
+    $gategories = $em->getRepository('BackBundle:Categories')->findAll();
+    $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array('categorie' => $cat));
+
 
     return $this->render('FrontBundle:annonces:index.html.twig', array(
-      'annonces' => $annonces,
-      'categories' => $categories,
+      'annonces' => $annonces,'categories' => $gategories,
     ));
   }
+
 
   /**
    * Lists all annonce entities.
@@ -250,6 +293,16 @@ class AnnoncesController extends Controller
   /**
    * @Route("/annonce/{$annonce}", name="commentairesAnc_new")
    */
+
+
+  public function deleteAction($com, $annonce)
+  {
+    $em = $this->getDoctrine()->getManager();
+    $comm = $em->getRepository('BackBundle:CommentairesAnc')->find($com);
+    $em->remove($comm);
+    $em->flush();
+    return $this->redirectToRoute('annonces_show',array("annonce"=>$annonce));
+  }
   public function newAction(Request $request, $annonce)
   {
       /* safa Boufare Begin*/

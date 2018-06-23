@@ -1,21 +1,77 @@
 {% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
 
-{% block body %}
-    <h1>Annonce edit</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+    <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
 
-    <ul>
-        <li>
-            <a href="{{ path('annonces_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-{% endblock %}
+
+{% endblock style %}
+    {% block body %}
+        {# dev-haifa#}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ path('commercial_annonces_index') }}">Annonce</a></li>
+
+            <li>Modifier une  annonce</li>
+
+
+        </ol>
+
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+
+                <!--      Wizard container        -->
+                <div class="wizard-container">
+
+                    <div class="card wizard-card" data-color="orange" id="wizardProfile">
+                        {{ form_start(form) }}
+                        <div class="col-md-12">
+                            <div class="form-group col-md-6">
+                                {{ form_label(form.titre) }}
+                                {{ form_errors(form.titre) }}
+                                {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(form.categorie) }}
+                                {{ form_errors(form.categorie) }}
+                                {{ form_widget(form.categorie, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group col-md-6">
+                                {{ form_label(form.prix) }}
+                                {{ form_errors(form.prix) }}
+                                {{ form_widget(form.prix, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                            <div class="form-group col-md-3">
+                                {{ form_label(form.disponible) }}
+
+                                {{ form_widget(form.disponible) }}
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group col-md-12">
+                                {{ form_label(form.description) }}
+                                {{ form_errors(form.description) }}
+                                {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group ">
+                                <button type="submit" class="btn btn-success pull-right"><i class="fa fa-plus"></i>
+                                   Modifier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{ form_end(form) }}
+
+                </div>
+            </div> <!-- wizard container -->
+        </div>
+        </div><!-- end row -->
+    {% endblock body %}
+{% block js %}
+
+{% endblock js %}

@@ -1,0 +1,3 @@
+get_All_Annonces:
+    path:     /allEvents
+    defaults: { _controller: ApiBundle:AnnoncesApi:getEvents}

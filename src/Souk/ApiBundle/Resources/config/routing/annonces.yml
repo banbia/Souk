@@ -1,5 +1,5 @@
-get_All_Annonces:
-    path:     /allAnnonces
+api_Annonces:
+    path:     /all
     defaults: { _controller: ApiBundle:AnnoncesApi:getAllAnnonces}
 get_Annonce:
     path:     /AnnoncesById/{id}

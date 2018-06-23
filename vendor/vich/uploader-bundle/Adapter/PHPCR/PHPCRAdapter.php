@@ -5,20 +5,22 @@ namespace Vich\UploaderBundle\Adapter\PHPCR;
 use Vich\UploaderBundle\Adapter\AdapterInterface;
 
 /**
+ * PHPCRAdapter.
+ *
  * @author Ben Glassman <bglassman@gmail.com>
  */
 class PHPCRAdapter implements AdapterInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getObjectFromArgs($event)
     {
-        return $event->getObject();
+        return $event->getEntity();
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function recomputeChangeSet($event)
     {
