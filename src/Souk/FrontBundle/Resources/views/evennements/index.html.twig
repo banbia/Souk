@@ -1,10 +1,65 @@
 {% extends 'FrontBundle::layout.html.twig' %}
+
 {#Salsabil' work #}
 {% block body %}
     <h1>Liste des Evenements</h1>
+    <div>
     {% if is_granted('ROLE_COM') %}
 
-        <a href="{{ path('reservation_new') }}" class="btn btn-primary"  >Participer</a>
+        <a href="{{ path('evennements_new') }}" class="btn btn-success pull-right"><i class="fa fa-plus"> </i>Nouvel evennement</a>
+    {% endif %}
+    </div>
+<div class="blog"  style="margin-bottom:15px;margin-top:60px;">
+    <div  class="container">
+
+        <div  class="col-md-10 blog-header">
+            {% for evennement in evennements %}
+                <div class="col-md-4 blog-top" style="width:30%;border: solid 4px #B40486;margin-right:2px;padding:15px; border-width: medium">
+                    <div class="blog-in">
+                        <a href="#">
+
+
+                                <img src="{{ asset('uploads/annonceImage/no.png') }}" style="width:100%;height: 200px">
+
+                        </a>
+                        <div align="center" class="blog-grid">
+                            <h3 style="color:#B40486 "> {{ evennement.titre  }}</h3>
+                            <div class="date">
+                                <span class="date-in"><i class="fa fa-calendar"> </i>  {{ evennement.dateDeb|date('Y-m-d') }}</span>
+                                <h4>{{ evennement.lieu }}</h4>
+                                <a href="#" class="comments"></a>
+                                <div class="clearfix"> </div>
+
+                            </div>
+
+                            <div class="more">
+                                <a class="btn btn-default" href="{{ path('evennements_show', { 'id': evennement.id }) }}"> <i class="fa fa-eye"> </i></a>
+                                {% if is_granted('ROLE_COM') %}
+
+                                    <a class="btn btn-default"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"></i></a>
+
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+    <div class="navigation text-center">
+        {{ knp_pagination_render(evennements) }}
+    </div>
+
+
+
+    {#
+    <h1>Liste des Evenements</h1>
+    {% if is_granted('ROLE_COM') %}
+
+
         <a href="{{ path('evennements_new') }}" class="btn btn-success pull-right"><i class="fa fa-plus"> </i>Nouvel evennement</a>
     {% endif %}
     <table class="table table-striped">
@@ -39,7 +94,7 @@
 
                     <a class="btn btn-default" href="{{ path('evennements_show', { 'id': evennement.id }) }}"> <i class="fa fa-eye"> </i></a>
                     {% if is_granted('ROLE_COM') %}
-                        
+
                         <a class="btn btn-default"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"></i></a>
 
                     {% endif %}
@@ -48,8 +103,9 @@
         {% endfor %}
         </tbody>
     </table>
-    {# display navigation pagination #}
+
     <div class="navigation text-center">
         {{ knp_pagination_render(evennements) }}
     </div>
+    #}
 {% endblock %}
