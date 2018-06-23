@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class UserApiController extends Controller
 {
 
+<<<<<<< HEAD
 ///se connecter à traver l'application
     public function getUserAction($login, $password)
     {
@@ -21,31 +22,45 @@ class UserApiController extends Controller
 
 
 
+=======
+    public function getUserAction($login, $password)
+    {
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(1);
+>>>>>>> b67851bf115fb2324def67877c637d4244caabee
         $serializer = new   Serializer([$normalizer]);
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> b67851bf115fb2324def67877c637d4244caabee
         $user = $this->getDoctrine()->getManager()
             ->getRepository('UserBundle:User')
             ->findBy(array("username" => $login));
         $passwordEncoder = $this->get('security.password_encoder');
-
-        if (!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt())) {
+        
+        if ($user!= null){
+            if(!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt()))
+            {
+                $formatted = $serializer->normalize('erreur', 'json');
+                return new JsonResponse($formatted);
+            }else {
+                $formatted = $serializer->normalize($user, 'json');
+                return new JsonResponse($formatted);
+            }
+        }else{
             $formatted = $serializer->normalize('erreur', 'json');
-
             return new JsonResponse($formatted);
-
-        } else {
-
-            $formatted = $serializer->normalize($user, 'json');
-            return new JsonResponse($formatted);
-
         }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> b67851bf115fb2324def67877c637d4244caabee
     }
 
 }

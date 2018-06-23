@@ -47,14 +47,14 @@ class Commandes
     /**
      *
      * @ORM\ManyToOne(targetEntity="Souk\BackBundle\Entity\Annonces",inversedBy="commandes")
-     * @ORM\JoinColumn(name="annonce",referencedColumnName="id",onDelete="CASCADE")
+     * @ORM\JoinColumn(name="annonce",referencedColumnName="id")
      */
     private $annonce;
 
     /**
      *
      * @ORM\ManyToOne(targetEntity="Souk\UserBundle\Entity\User",inversedBy="reservations")
-     * @ORM\JoinColumn(name="client",referencedColumnName="id",onDelete="CASCADE")
+     * @ORM\JoinColumn(name="client",referencedColumnName="id")
      */
     private $client;
 
@@ -88,6 +88,14 @@ class Commandes
     public function setAnnonce($annonce)
     {
         $this->annonce = $annonce;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     /**

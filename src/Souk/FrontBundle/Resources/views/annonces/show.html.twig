@@ -2,10 +2,10 @@
 {% block style %}
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+
     <link href="{{ asset('bundles/front/css/style_Nour.css') }}" rel="stylesheet"/>
     <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
-    <link href="{{ asset('bundles/front/css/flexslider.css') }}" rel="stylesheet"/>
+
 
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/front/css/rating.css') }}" />
 
@@ -20,30 +20,41 @@
 
     </ol>
     <div class="row">
-        <div class="col-md-5 single-right-left ">
-            <div  class="slider">
+        <div class="col-md-4">
 
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li data-thumb="{{ asset('bundles/front/images/pic1.jpg') }}">
-                            <div class="thumb-image">
-                                <img src="{{ asset('bundles/front/images/pic1.jpg') }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
-                        </li>
-                        <li data-thumb="{{ asset('bundles/front/images/pic1.jpg') }}">
-                            <div class="thumb-image">
-                                <img src="{{ asset('bundles/front/images/pic1.jpg') }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
-                        </li>
-                        <li data-thumb="{{ asset('bundles/front/images/pic1.jpg') }}">
-                            <div class="thumb-image">
-                                <img src="{{ asset('bundles/front/images/pic1.jpg') }}" data-imagezoom="true" class="img-responsive" alt=""> </div>
-                        </li>
-                    </ul>
+            <div class="slideshow-container">
+
+            {% for img in Image|e %}
 
 
-                    <div class="clearfix"></div>
+                <div class="mySlides fade in">
+
+                    <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height:260px !important;">
+
                 </div>
+            {% else %}
+                <img src="{{ asset('uploads/annonceImage/no.png') }}" style="width:100%;height: 300px">
+
+                {% endfor %}
+
+                <!-- Full-width images with number and caption text -->
+
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        </div>
+
+
+
+
+
+            </div>
+            <!--/.Carousel Wrapper-->
+
+
+
+
         <div id="sidebar" class="col-md-7 single-right-left simpleCart_shelfItem">
 
             <h3>{{ annonce.titre }}</h3>
@@ -238,7 +249,7 @@
                                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                                     {% if app.user.id  == comn.client.id %}
                                         <a href="{{ path('commentairesAnc_delete',{'com':comn.id,'annonce':annonce.id}) }}"><i class="fa fa-trash-o"></i></a>
-                                        <a href="{{ path('commentairesAnc_Edit',{'com':comn.id,'annonce':annonce.id}) }}"><i class="fa fa-edit"></i></a>
+                                        <a href="{{ path('commentairesAnc_edit',{'com':comn.id,'annonce':annonce.id}) }}"><i class="fa fa-edit"></i></a>
                                     {% endif %}
                                 {% endif %}
                             </div>
@@ -287,36 +298,12 @@
 {% endblock body %}
 {% block js %}
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-
 
     <script src="{{ asset('bundles/front/js/rating.js') }}"></script>
-    <script src="{{ asset('bundles/front/js/demo.css') }}"></script>
-    <script src="{{ asset('bundles/front/js/shCore.css') }}"></script>
-    <script src="{{ asset('bundles/front/js/jquery.mousewheel.css') }}"></script>
-
-    <!-- FlexSlider -->
-    <script defer src="../jquery.flexslider.js"></script>
-
-    <script type="text/javascript">
-        $(function(){
-            SyntaxHighlighter.all();
-        });
-        $(window).load(function(){
-            $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails",
-                start: function(slider){
-                    $('body').removeClass('loading');
-                }
-            });
-        });
 
 
-    </script>
-
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+   <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
         $( function() {
             $( "#souk_backbundle_commandes_dateCom" ).datepicker({
@@ -324,5 +311,35 @@
                 altFormat: "yy-mm-dd"
             });
         } );
-    </script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        </script>
+
 {% endblock js %}

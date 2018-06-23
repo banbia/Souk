@@ -1,32 +1,42 @@
 {% extends 'FrontBundle::layout.html.twig'  %}
-
+{% block  style %}
+<link href="{{ asset('bundle/front/css/style_Salsabil.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock style %}
 {% block body %}
-    <h1>Reservation</h1>
+<div class="  col-md-20">
+    <h1 class="row top-buffer">Reservation</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ reservation.id }}</td>
-            </tr>
-            <tr>
-                <th>Dateres</th>
-                <td>{% if reservation.dateRes %}{{ reservation.dateRes|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
+</div>
+    <div class=" big col-md-20">
+    <h2  class="row top-buffer"> Congratulation, {{ reservation.client.prenom  }} {{ reservation.client.nom}}  You are successfully registered to our Event !! </h2>
+</div>
+    <div class="big col-md-8 ">
+    <div class="col-md-6">
+        <table  class="table center-block">
 
-    <ul>
-        <li>
-            <a href="{{ path('reservation_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('reservation_edit', { 'id': reservation.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+            <thead>
+            <tr >
+
+                <th>Date Reservation</th>
+                <th>Client Name</th>
+
+            </tr>
+            </thead>
+            <tbody class="thead-light">
+
+
+                    <td> {% if reservation.dateRes %}{{ reservation.dateRes|date('Y-m-d') }}{% endif %} </td>
+                    <td> {{ reservation.client.prenom  }} {{ reservation.client.nom}}</td>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class=" col-md-12">
+
+
+    <a class="btn btn-success" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to Events liste </i> </a>
+
+
+
+</div>
 {% endblock %}

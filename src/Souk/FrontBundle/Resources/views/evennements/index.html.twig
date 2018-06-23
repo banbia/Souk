@@ -1,21 +1,28 @@
 {% extends 'FrontBundle::layout.html.twig' %}
-
+{#Salsabil' work #}
 {% block body %}
     <h1>Liste des Evenements</h1>
-    <a href="{{ path('evennements_new') }}" class="btn btn-success pull-right"><i class="fa fa-plus"> </i>Nouvel evennement</a>
+    {% if is_granted('ROLE_COM') %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="btn btn-primary" type="submit" value="Participer" />
+        <a href="{{ path('evennements_new') }}" class="btn btn-success pull-right"><i class="fa fa-plus"> </i>Nouvel evennement</a>
+        {{ form_end(form) }}
+    {% endif %}
     <table class="table table-striped">
         <thead class="thead-light">
         <tr class="table-secondary">
 
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Date debut</th>
-                <th>Date fin</th>
-                <th>Lieu</th>
-                <th>Prix</th>
-                <th>Etat</th>
-                <th>Actions</th>
-            </tr>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Date debut</th>
+            <th>Date fin</th>
+            <th>Lieu</th>
+            <th>Prix</th>
+            <th>Etat</th>
+
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for evennement in evennements %}
@@ -26,20 +33,26 @@
                 <td>{% if evennement.dateFin %}{{ evennement.dateFin|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ evennement.lieu }}</td>
                 <td>{{ evennement.prix }}</td>
-               <td> {% if evennement.etat == 0 %} Non Disponible
-                {% elseif evennement.etat == 1 %} Disponible
-                {% endif %}
-               </td>
+                <td> {% if evennement.etat == 0 %} Non Disponible
+                    {% elseif evennement.etat == 1 %} Disponible
+                    {% endif %}
+                </td>
                 <td>
 
-                            <a class="btn btn-default" href="{{ path('evennements_show', { 'id': evennement.id }) }}"> <i class="fa fa-eye"> </i></a>
-
-                            <a class="btn btn-default"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"></i></a>
-
+                    <a class="btn btn-default" href="{{ path('evennements_show', { 'id': evennement.id }) }}"> <i class="fa fa-eye"> </i></a>
+                    {% if is_granted('ROLE_COM') %}
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <a class="btn btn-default"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"></i></a>
+                        {{ form_end(form) }}
+                    {% endif %}
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
+    {# display navigation pagination #}
+    <div class="navigation text-center">
+        {{ knp_pagination_render(evennements) }}
+    </div>
 {% endblock %}

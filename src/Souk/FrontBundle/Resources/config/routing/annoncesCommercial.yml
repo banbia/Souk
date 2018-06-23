@@ -1,8 +1,14 @@
 annonces_new:
     path:     annonces/newAnnonce
     defaults: { _controller: FrontBundle:Annonces:newAnnonce}
+annonces_edit:
+    path:     annonces/editAnnonce/{id}
+    defaults: { _controller: FrontBundle:Annonces:editAnnonce}
+annonces_delete:
+     path:     annonces/deleteAnnonce/{id}
+     defaults: { _controller: FrontBundle:Annonces:deleteAnnonce}
 commercial_annonces_index:
-    path:     /
+    path:      annonces/listeannoncesComm
     defaults: { _controller: FrontBundle:Annonces:indexCommercial }
     methods:  GET
 image_new:

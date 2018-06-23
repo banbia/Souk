@@ -5,62 +5,70 @@
 {% endblock style %}
 
 {% block body %}
-    <h1> Evenement </h1>
+    <!--- salsabil's work -->
+
+    <h1  class="text-info"> Evenement </h1>
+
 <div class="row form-groupEvent">
    <div class="col-md-12">
-    <table  class="table table-striped">
+       <div class="col-md-5">
+       <img   src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
+       </div>
+       <div class="col-md-6">
+    <table  class="table center-block">
         <tbody class="thead-light">
 
             <tr >
-                <th>Titre</th>
+                <th class="text-success">Titre</th>
                 <td>{{ evennement.titre }}</td>
             </tr>
             <tr>
-                <th>Description</th>
+                <th class="text-success">Description</th>
                 <td>{{ evennement.description }}</td>
             </tr>
             <tr>
-                <th>Date debut</th>
+                <th class="text-success">Date debut</th>
                 <td>{% if evennement.dateDeb %}{{ evennement.dateDeb|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Date fin</th>
+                <th class="text-success">Date fin</th>
                 <td>{% if evennement.dateFin %}{{ evennement.dateFin|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Lieu</th>
+                <th class="text-success">Lieu</th>
                 <td>{{ evennement.lieu }}</td>
             </tr>
             <tr>
-                <th>Prix</th>
+                <th class="text-success">Prix</th>
                 <td>{{ evennement.prix}} DT </td>
             </tr>
-            {#<tr>
-                <th>Etat</th>
-                <td>{{ evennement.etat }}</td>
-            </tr>#}
+
         </tbody>
     </table>
+       </div>
    </div>
+    <div class=" col-md-12">
 
     {% if is_granted('ROLE_CLIENT') %}
     {{ form_start(form) }}
         {{ form_widget(form) }}
         <input class="btn btn-primary" type="submit" value="Participer" />
+        <a class="btn btn-success" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to the liste </i> </a>
     {{ form_end(form) }}
     {% endif %}
 
-
-    <a class="btn btn-success" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to the liste </i> </a>
-
     {% if is_granted('ROLE_COM') %}
         {% if evennement.commercial.id == app.user.id %}
+
             <a href="{{ path('evennements_parts',{'id':evennement.id}) }}" class="btn btn-info"><i class="fa fa-list"></i> Consulter liste des partciapants </a>
+            <a class="btn btn-warning"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"> Edit </i></a>
+            <a class="btn btn-danger"  href="{{ path('evennements_delete', { 'id': evennement.id }) }}"> <i class="fa fa-close"></i> Delete</a>
+            <a class="btn btn-success" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to the liste </i> </a>
         {% endif  %}
         {{ form_start(form) }}
         {{ form_widget(form) }}
-    <a class="btn btn-warning"  href="{{ path('evennements_edit', { 'id': evennement.id }) }}"> <i class="fa fa-edit"> Edit </i></a>
-    <a class="btn btn-danger"  href="{{ path('evennements_delete', { 'id': evennement.id }) }}"> <i class="fa fa-close"></i> Delete</a>
+
+    </div>
 
     {{ form_end(form) }}
     {% endif %}

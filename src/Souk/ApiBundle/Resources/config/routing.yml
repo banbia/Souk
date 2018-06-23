@@ -13,12 +13,25 @@ api_commandes:
 api_annonces:
     resource: "@ApiBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
-
 #service Soumaya
 api_reclamations:
     resource: "@ApiBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations
+<<<<<<< HEAD
 #Service SafaBenBarka
 api_abonnements:
     resource: "@ApiBundle/Resources/config/routing/abonnements.yml"
     prefix:   /abonnements
+=======
+#service Safa
+api_commentaireAnc:
+    resource: "@ApiBundle/Resources/config/routing/commentaireAnc.yml"
+    prefix:   /commentaire
+api_commentaireEvs:
+    resource: "@ApiBundle/Resources/config/routing/commentaireEvs.yml"
+    prefix:   /commentaire
+#service salsabil
+api_evenements:
+    resource: "@ApiBundle/Resources/config/routing/evenements.yml"
+    prefix:   /evenements
+>>>>>>> b67851bf115fb2324def67877c637d4244caabee

@@ -1,0 +1,83 @@
+{% extends 'FrontBundle::layout.html.twig' %}
+{% block style %}
+
+    <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
+
+{% endblock style %}
+{% block body %}
+
+
+   {# dev-haifa#}
+
+<ol class="breadcrumb">
+    <li><a href="{{ path('client_annonces_index') }}">Annonce</a></li>
+
+    <li>Liste des annonces</li>
+
+
+</ol>
+<div class="wizard-container">
+
+    <div class="card wizard-card" data-color="orange" id="wizardProfile">
+
+
+       {% if abonnement %}
+        <a class="btn btn-success pull-right"  href="{{ path('annonces_new') }}">Nouvelle Annonce</a>
+       {% else %}
+           <div class="tooltipm">           <a class="btn btn-success pull-right"     disabled>Nouvelle Annonce</a>
+               <span class="tooltiptext">Vouz devez activer votre abonnement</span>
+           </div>
+
+       {% endif %}
+        <br>
+
+
+
+                    <!-- /.box-header -->
+
+                        <table id="example2" class="table table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Idarticle</th>
+                                <th>Titre</th>
+
+                                <th>Prix</th>
+                                <th>Date</th>
+                                <th>Disponibilite</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for annonce in annonces %}
+                                <tr>
+                                    <td><a href="{{ path('annonces_show', { 'id': annonce.id }) }}">{{ annonce.id }}</a></td>
+                                    <td>{{ annonce.titre }}</td>
+
+                                    <td>{{ annonce.prix }} <span>Dinars</span></td>
+                                    <td>{% if annonce.dateCreation %}{{ annonce.dateCreation|date('Y-m-d') }}{% endif %}</td>
+                                   <td> {% if annonce.disponible %}En stock{% else %}Repture  de stock{% endif %}</td>
+                                    <td>
+
+                                        <a class="btn btn-xs btn-info"   href="{{ path('annonces_show', { 'id': annonce.id }) }}"><i class="fa fa-info"></i></a>
+
+                                        <a class="btn btn-xs btn-success"  href="{{ path('annonces_edit', { 'id': annonce.id }) }}"><i class="fa fa-pencil"></i></a>
+                                        <a class="btn btn-xs btn-danger"  href="{{ path('annonces_delete', { 'id': annonce.id }) }}"><i class="fa fa-trash"></i></a>
+
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+
+</div></div>
+    </div></div>
+    {# salsabil api display navigation
+    <div class="navigation text-center">
+        {{ knp_pagination_render(annonces) }}
+    </div>#}
+{% block js %}
+    <script>    document.getElementById("button").disabled = false;</script>
+
+{% endblock js %}
+{% endblock %}

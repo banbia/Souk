@@ -10,4 +10,5 @@ namespace Souk\BackBundle\Repository;
  */
 class AbonnementsRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }

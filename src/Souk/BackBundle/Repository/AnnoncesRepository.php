@@ -21,4 +21,25 @@ class AnnoncesRepository extends \Doctrine\ORM\EntityRepository
             ->getQuery()
             ->getResult();
     }
+  public function findByName($libelle)
+  {
+    $sql = 'SELECT a FROM Souk\BackBundle\Entity\Annonces   a where a.titre like :libelle and a.disponible = :disponible ORDER BY a.dateCreation DESC';
+    $query = $this->getEntityManager()->createQuery($sql)->setParameter('titre', '%'.$libelle.'%')->setParameter('disponible', 1);
+
+    return $query->execute();
+  }
+  public function findAllOrderedByDate()
+  {
+    $sql = 'SELECT a FROM Souk\BackBundle\Entity\Annonces  a where a.disponible = :disponible ORDER BY a.dateCreation DESC';
+    $query = $this->getEntityManager()->createQuery($sql)->setParameter('disponible', 1);
+
+    return $query->execute();
+  }
+  public function findAllOrderedByDateCommercial($user)
+  {
+    $sql = 'SELECT a FROM Souk\BackBundle\Entity\Annonces  a where a.commercial = :commercial ORDER BY a.dateCreation DESC';
+    $query = $this->getEntityManager()->createQuery($sql)->setParameter('commercial', $user);
+
+    return $query->execute();
+  }
 }
