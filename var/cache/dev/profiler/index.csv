@@ -1,22 +1,2 @@
-<<<<<<< HEAD
-abc7f2,127.0.0.1,GET,http://localhost:8000/evennements/,1529756363,fb709d,200
-fb709d,127.0.0.1,GET,http://localhost:8000/evennements/,1529756363,,500
-=======
-610a8d,127.0.0.1,GET,http://localhost:8000/,1529746227,0f6981,200
-0f6981,127.0.0.1,GET,http://localhost:8000/,1529746227,,500
-15ae5a,127.0.0.1,GET,http://localhost:8000/,1529746283,825d0d,200
-825d0d,127.0.0.1,GET,http://localhost:8000/,1529746283,,500
-bddfed,127.0.0.1,GET,http://localhost:8000/,1529746458,,200
-d40887,127.0.0.1,GET,http://localhost:8000/api/api/evenements/allEvents,1529747408,941574,200
-941574,127.0.0.1,GET,http://localhost:8000/api/api/evenements/allEvents,1529747408,,404
-9604cf,127.0.0.1,POST,http://localhost:8000/api/user/safa/safa,1529750600,,200
-f06f70,127.0.0.1,POST,http://localhost:8000/api/evenements/allEvents,1529750606,,200
-8c0ba0,127.0.0.1,POST,http://localhost:8000/api/user/safa/safa,1529750921,,200
-dd6cb0,127.0.0.1,POST,http://localhost:8000/api/annonces/all,1529750926,,200
-1e946a,127.0.0.1,POST,http://localhost:8000/api/annonces/all,1529750963,,200
-fb99ad,127.0.0.1,GET,http://localhost:8000/evennements/,1529751565,,200
-2461a0,127.0.0.1,POST,http://localhost:8000/api/user/safa/safa,1529753810,,200
-e44f21,127.0.0.1,POST,http://localhost:8000/api/evenements/allEvents,1529753817,,200
-e12c25,127.0.0.1,GET,http://localhost:8000/,1529754755,,200
-0827d6,127.0.0.1,GET,http://localhost:8000/login,1529754762,,200
->>>>>>> 853afd54202109ad161af32917a7716af35d3a4f
+1f319b,127.0.0.1,GET,http://localhost:8000/evennements/,1529756782,86f802,200
+86f802,127.0.0.1,GET,http://localhost:8000/evennements/,1529756782,,500

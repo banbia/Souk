@@ -51,25 +51,18 @@ class __TwigTemplate_509404cf0441983a79c1c344c3d26db2b5abf03c0cdf4a231478573d825
         // line 5
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
             // line 6
-            echo "        ";
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
             echo "
-        ";
-            // line 7
-            echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
-            echo "
-        <input class=\"btn btn-primary\" type=\"submit\" value=\"Participer\" />
         <a href=\"";
-            // line 9
+            // line 7
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("reservation_new");
+            echo "\" class=\"btn btn-primary\"  >Participer</a>
+        <a href=\"";
+            // line 8
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_new");
             echo "\" class=\"btn btn-success pull-right\"><i class=\"fa fa-plus\"> </i>Nouvel evennement</a>
-        ";
-            // line 10
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
-            echo "
     ";
         }
-        // line 12
+        // line 10
         echo "    <table class=\"table table-striped\">
         <thead class=\"thead-light\">
         <tr class=\"table-secondary\">
@@ -87,80 +80,80 @@ class __TwigTemplate_509404cf0441983a79c1c344c3d26db2b5abf03c0cdf4a231478573d825
         </thead>
         <tbody>
         ";
-        // line 28
+        // line 26
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["evennements"] ?? $this->getContext($context, "evennements")));
         foreach ($context['_seq'] as $context["_key"] => $context["evennement"]) {
-            // line 29
+            // line 27
             echo "            <tr>
                 <td>";
-            // line 30
+            // line 28
             echo twig_escape_filter($this->env, $this->getAttribute($context["evennement"], "titre", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 31
+            // line 29
             echo twig_escape_filter($this->env, $this->getAttribute($context["evennement"], "description", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 32
+            // line 30
             if ($this->getAttribute($context["evennement"], "dateDeb", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["evennement"], "dateDeb", array()), "Y-m-d"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 33
+            // line 31
             if ($this->getAttribute($context["evennement"], "dateFin", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["evennement"], "dateFin", array()), "Y-m-d"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 34
+            // line 32
             echo twig_escape_filter($this->env, $this->getAttribute($context["evennement"], "lieu", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 35
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute($context["evennement"], "prix", array()), "html", null, true);
             echo "</td>
                 <td> ";
-            // line 36
+            // line 34
             if (($this->getAttribute($context["evennement"], "etat", array()) == 0)) {
                 echo " Non Disponible
                     ";
-            } elseif (($this->getAttribute(            // line 37
+            } elseif (($this->getAttribute(            // line 35
 $context["evennement"], "etat", array()) == 1)) {
                 echo " Disponible
                     ";
             }
-            // line 39
+            // line 37
             echo "                </td>
                 <td>
 
                     <a class=\"btn btn-default\" href=\"";
-            // line 42
+            // line 40
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_show", array("id" => $this->getAttribute($context["evennement"], "id", array()))), "html", null, true);
             echo "\"> <i class=\"fa fa-eye\"> </i></a>
                     ";
-            // line 43
+            // line 41
             if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
-                // line 44
+                // line 42
                 echo "                        ";
                 echo                 $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
                 echo "
                         ";
-                // line 45
+                // line 43
                 echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
                 echo "
                         <a class=\"btn btn-default\"  href=\"";
-                // line 46
+                // line 44
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_edit", array("id" => $this->getAttribute($context["evennement"], "id", array()))), "html", null, true);
                 echo "\"> <i class=\"fa fa-edit\"></i></a>
                         ";
-                // line 47
+                // line 45
                 echo                 $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
                 echo "
                     ";
             }
-            // line 49
+            // line 47
             echo "                </td>
             </tr>
         ";
@@ -168,14 +161,14 @@ $context["evennement"], "etat", array()) == 1)) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['evennement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 52
+        // line 50
         echo "        </tbody>
     </table>
     ";
-        // line 55
+        // line 53
         echo "    <div class=\"navigation text-center\">
         ";
-        // line 56
+        // line 54
         echo $this->env->getExtension('Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension')->render($this->env, ($context["evennements"] ?? $this->getContext($context, "evennements")));
         echo "
     </div>
@@ -200,7 +193,7 @@ $context["evennement"], "etat", array()) == 1)) {
 
     public function getDebugInfo()
     {
-        return array (  179 => 56,  176 => 55,  172 => 52,  164 => 49,  159 => 47,  155 => 46,  151 => 45,  146 => 44,  144 => 43,  140 => 42,  135 => 39,  130 => 37,  126 => 36,  122 => 35,  118 => 34,  112 => 33,  106 => 32,  102 => 31,  98 => 30,  95 => 29,  91 => 28,  73 => 12,  68 => 10,  64 => 9,  59 => 7,  54 => 6,  52 => 5,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  172 => 54,  169 => 53,  165 => 50,  157 => 47,  152 => 45,  148 => 44,  144 => 43,  139 => 42,  137 => 41,  133 => 40,  128 => 37,  123 => 35,  119 => 34,  115 => 33,  111 => 32,  105 => 31,  99 => 30,  95 => 29,  91 => 28,  88 => 27,  84 => 26,  66 => 10,  61 => 8,  57 => 7,  54 => 6,  52 => 5,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -218,11 +211,9 @@ $context["evennement"], "etat", array()) == 1)) {
 {% block body %}
     <h1>Liste des Evenements</h1>
     {% if is_granted('ROLE_COM') %}
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input class=\"btn btn-primary\" type=\"submit\" value=\"Participer\" />
+
+        <a href=\"{{ path('reservation_new') }}\" class=\"btn btn-primary\"  >Participer</a>
         <a href=\"{{ path('evennements_new') }}\" class=\"btn btn-success pull-right\"><i class=\"fa fa-plus\"> </i>Nouvel evennement</a>
-        {{ form_end(form) }}
     {% endif %}
     <table class=\"table table-striped\">
         <thead class=\"thead-light\">
