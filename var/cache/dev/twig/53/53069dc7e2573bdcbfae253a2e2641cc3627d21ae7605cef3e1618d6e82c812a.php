@@ -211,6 +211,10 @@ class __TwigTemplate_ccb7b1c8dc4420912b6470365e3ffd83e6f5a5059907f02c1439d6fa3cd
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
+<<<<<<< HEAD
 ", "@Twig/layout.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\layout.html.twig");
+=======
+", "@Twig/layout.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\layout.html.twig");
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
     }
 }

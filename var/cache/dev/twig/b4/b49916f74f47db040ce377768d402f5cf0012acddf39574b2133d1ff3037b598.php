@@ -975,6 +975,10 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
         </script>
 
+<<<<<<< HEAD
 {% endblock js %}", "FrontBundle:annonces:show.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/show.html.twig");
+=======
+{% endblock js %}", "FrontBundle:annonces:show.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/show.html.twig");
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
     }
 }
