@@ -20,7 +20,7 @@ class DefaultController extends Controller
       return $this->render('FrontBundle:default:index.html.twig',array(
             'annonces' => $annonces,'categories' => $gategories,));
     }
-  public function listeruserbyCategorieAction($categorie)
+  public function listeruserbyCategorieAction($categorie,Request $request)
   {
 
     $em = $this->getDoctrine()->getManager();
@@ -29,8 +29,7 @@ class DefaultController extends Controller
     $annonces = $em->getRepository('BackBundle:Annonces')->findBy(array('categorie' => $cat));
 
 
-
     return $this->render('FrontBundle:default:index.html.twig',array(
-      'annonces' => $annonces,'categories' => $gategories,));
+      'categories' => $gategories,'annonces' =>$result,));
   }
 }

@@ -571,6 +571,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::GetAnnonceByIdAction',));
                 }
 
+<<<<<<< HEAD
                 if (0 === strpos($pathinfo, '/api/reclamations')) {
                     // liste_reclamations
                     if (0 === strpos($pathinfo, '/api/reclamations/liste') && preg_match('#^/api/reclamations/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
@@ -596,11 +597,25 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\CommandesApiController::accepterRecAction',  '_route' => 'confirmer_reclamations',);
                     }
 
+=======
+                // liste_reclamations
+                if (0 === strpos($pathinfo, '/api/reclamations/reclamations/liste') && preg_match('#^/api/reclamations/reclamations/liste(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::listeRecAction',));
+                }
+
+                // new_reclamations
+                if (0 === strpos($pathinfo, '/api/reclamations/reclamations/newR') && preg_match('#^/api/reclamations/reclamations/newR/(?P<contenu>[^/]++)/(?P<commercial>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'new_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::newRecAction',));
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
                 }
 
                 // get_All_Annonces
                 if ('/api/evenements/allEvents' === $pathinfo) {
+<<<<<<< HEAD
                     return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
+=======
+                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
                 }
 
             }

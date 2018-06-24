@@ -73,6 +73,9 @@ swiftmailer:
     spool: { type: memory }
 # app/config/config.yml
 fos_user:
+    registration:
+        form:
+            type: Souk\UserBundle\Form\RegistrationFormType
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: Souk\UserBundle\Entity\User

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 43af00,127.0.0.1,GET,http://localhost:8000/,1529749638,b879f1,200
 b879f1,127.0.0.1,GET,http://localhost:8000/,1529749638,,500
 d51eef,127.0.0.1,GET,http://localhost:8000/api/user/soumaya/soumaya,1529749752,6660d2,200
@@ -168,3 +169,6 @@ dd390c,127.0.0.1,POST,http://localhost:8000/api/reclamations/liste/4,1529844573,
 e931b2,127.0.0.1,GET,http://localhost:8000/,1529844730,,200
 6f2023,127.0.0.1,GET,http://localhost:8000/register/,1529844763,315bf8,200
 315bf8,127.0.0.1,GET,http://localhost:8000/register/,1529844763,,500
+=======
+f0f37a,127.0.0.1,GET,http://localhost:8000/evennements/,1529773273,,200
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
