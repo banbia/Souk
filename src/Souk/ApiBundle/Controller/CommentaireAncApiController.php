@@ -2,13 +2,13 @@
 
 namespace Souk\ApiBundle\Controller;
 
-use JMS\Serializer\SerializerBuilder;
 use Souk\BackBundle\Entity\CommentairesAnc;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\JsonResponse;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\HttpFoundation\JsonResponse;
 class CommentaireAncApiController extends Controller
 {
     /******* crud mobile (web service) ***********************/
@@ -16,14 +16,26 @@ class CommentaireAncApiController extends Controller
     public function listeComAncAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('UserBundle:User')->find($id);
-        if ($user->hasRole('ROLE_CLIENT')) {
-            $com_Anc = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("client"=>$user));
-        }
+        $annonce = $em->getRepository('BackBundle:Annonces')->find($id);
+        $com_Anc = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("annonce"=>$annonce));
+        $callback = function ($dateTime) {
+            return $dateTime instanceof \DateTime
+                ? $dateTime->format('Y-m-d')
+                : '';
+        };
+
+
         $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(array('annonce','client'));
+        $normalizer->setCallbacks(array('dateCmt' => $callback));
         $normalizer->setCircularReferenceLimit(1);
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($com_Anc, 'json');
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($com_Anc, 'json');
+
         return new JsonResponse($formatted);
     }
 

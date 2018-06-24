@@ -1,5 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d9201adf-efcc-40ee-9cd8-619bc3d5e4b4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/7a/f3/f0f37a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/souk.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/DataTransformer/UserToUsernameTransformer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/Factory/FormFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/RegistrationFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/Type/ChangePasswordFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/Type/GroupFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/Type/ProfileFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/Type/RegistrationFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/Type/ResettingFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/Type/UsernameFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/classes.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/classes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/classes.php.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/12/1289096ae1b23d84737db1fa1451162488fc1b90e36a8246aec7de89761879dd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/23/234af26a1892ae6f3d16eccbb30c2a1f6a6250e99cf962a689a461ea1d96761f.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/35/358fc0571f1069f72f3fc37982ad20f4159cb6db9654ea36e9cc70c3b3e1b3bc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/3e/3ed97cfd92cf37469f3945b50bd88fa33be5f656c5ba6d107e1bf09fc70ef52a.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/3f/3f287047663ae017edc40abadddab7fe3d02a342c6abe134525d6b46ccc7c939.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/3f/3f4c441e60b3622f0dce08cf4e674c437591ebc3386beb4ffdbe243866fe3c0d.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/41/41ee668848b2f55ddd2b963267906ad3d0ffac84a6e8cb3a9a7f211720f871af.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/50/5055a4414d889ed14e3df53cd46618643ba057cdd64ac66ddcd325e81e30ab33.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/58/58ebdb3a6186032c91a008a2db2a612b9b6880e918f1035d0cd930e1ee55fc3e.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/58/58f218b5d254ee6c35b15741f1c15f9c3bdaddfa36597867f74ed5ee48df627e.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/5a/5a15313ce51495fe046d9bd4dd4d5595af17bc88a3c7d91c2901a3c28cda2dfd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/6a/6a4340a0d40b4b8e7a6e9428c9d19619ce7ad85fa42258a534c6fc32883cf67c.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/6b/6b6df705a8e7df9419ef7b1a5bc620708bc27f1c342f275b6bd615df5cd3d0c9.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/6d/6dc9ae402a5a1b62035cc9aa7e3688cfa94c6c935308206feb8cf2fbc0a46b81.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/6f/6f0d846eb535381e7d72a4041816ab667bff450b9180f3de6ef9e9c6c52a7c8c.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/74/74f65ec6de4442d083c41eee29dd05e29a3567b4311b8fab82b41c839165e869.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/7c/7c8a82c56b3636637440221ea9d4e8598e815d689edad6fc233392b024975381.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/83/83e3b3082e1c30926580b5d06db15e863d2bf127bca10968ab7b23241f96ebce.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/85/85f7b94f7a7089f030f28f0768336e6219233b15ac7b143f9c32a1fdb633a20a.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/89/89267aee7fa2961c9bf1d7738872ee6abcebaf34b418f9bbc0d7f0800db9279a.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/95/952ed5387d35ef26619e01af432d9c3d371e0fbba9347c7ec0febc3ffd5094e6.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/a2/a25a63914ee699dddbd7a3feedfa7aac4acf97991c5f9cc9c5cacada1d504f1d.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/a2/a2afa93b0b35faf408822c97bd776bf68d583943365a31d3405317eed10390fa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/a7/a758548c0801776eeeb80990ba8835950194de68e8171a070056248e6f4b7906.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/b8/b872791c6ef18c70f261573aeb1c3204d738d1463f0fca14df136ac56d0d3589.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/b9/b9cd461a4c4bfc0d1da23868510b1cb38b4945248e80acceaae57adb341a6f75.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ba/ba8ea12d99c4945c994b6559585659fe2015a825b7417c9971b87c2095dde809.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/bb/bbb78cf9cd61b911e957fa2c5bde62ad43c9e6eac124095154aca7f9bbe16fad.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/c9/c9ded03ced2c9e82c124e5e81779ec7e31e22ecd7a7f314adcc8a06e52d6a01a.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ce/ce1c5d5569c4889b3fcd457620ecae771b1c85da03da92a410f288154e0e8be5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ce/ce9e0aedfb1d3a7c6ff2820fd2bc9c8c7c55f8abf8348b41c618cfa8437d5f8f.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/cf/cffc1c8fe69d349cff506a60b39ffef2d1c84341b2de985dd055261d6637d283.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/d5/d58499fd84e6a88b53e678dfb0d4018202938682d1325b06cc25df217621541e.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/d7/d744588753fea96838a8fa298377795e53aeb9ebd5c0c8611db073a39292a34a.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/f1/f11ba1149bbb150e867ed1b6e3d7b4c84f891ba99c84d556d02696c111213762.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/f6/f666a68d9e7cf13dbfb96467bd033608ca94b9ca592e585c85b1687d60bf09d3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ff/ff26e130715a2f029c25e342aa9217819c3d34b333709090e71447a2ed6b7246.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/.github/ISSUE_TEMPLATE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/.php_cs.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Changelog.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Command/ActivateUserCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Command/ChangePasswordCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Command/CreateUserCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Command/DeactivateUserCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Command/DemoteUserCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Command/PromoteUserCommandTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/DependencyInjection/FOSUserExtensionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Doctrine/UserManagerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/EventListener/AuthenticationListenerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/EventListener/FlashListenerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Form/Type/ChangePasswordFormTypeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Form/Type/GroupFormTypeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Form/Type/ProfileFormTypeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Form/Type/RegistrationFormTypeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Form/Type/ResettingFormTypeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Form/Type/TypeTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Form/Type/ValidatorExtensionTypeTestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Mailer/MailerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Mailer/TwigSwiftMailerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Model/UserManagerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Model/UserTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Routing/RoutingTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Security/EmailProviderTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Security/EmailUserProviderTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Security/LoginManagerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Security/UserProviderTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/TestGroup.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Util/CanonicalFieldsUpdaterTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Util/CanonicalizerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Util/PasswordUpdaterTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/Util/UserManipulatorTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Upgrade.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/phpunit.xml.dist" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Tests/TestUser.php" afterPath="$PROJECT_DIR$/src/Souk/UserBundle/Form/Factory/FactoryInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Souk.iml" afterPath="$PROJECT_DIR$/.idea/Souk.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/annonces.yml" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/annonces.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/evenements.yml" afterPath="$PROJECT_DIR$/src/Souk/ApiBundle/Resources/config/routing/evenements.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/public/css/style_Salsabil.css" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/public/css/style_Salsabil.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/annonces/index.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/annonces/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/index.html.twig" afterPath="$PROJECT_DIR$/src/Souk/FrontBundle/Resources/views/evennements/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/translations/catalogue.fr.74ad548a14679603165a68a05f1f6a84f1ab7740.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/translations/catalogue.fr.74ad548a14679603165a68a05f1f6a84f1ab7740.php.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/77/77cfa8770ec535faeb68466bdab73045e50ca017491a8748994fa46113c89bd8.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/77/77cfa8770ec535faeb68466bdab73045e50ca017491a8748994fa46113c89bd8.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/logs/dev.log" afterPath="$PROJECT_DIR$/var/logs/dev.log" />
+    </list>
+    <ignored path="$PROJECT_DIR$/vendor/cmen/google-charts-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/composer/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/collections/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/common/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/dbal/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/inflector/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/instantiator/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/lexer/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/orm/" />
+    <ignored path="$PROJECT_DIR$/vendor/egyg33k/csv-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/fig/link-util/" />
+    <ignored path="$PROJECT_DIR$/vendor/friendsofsymfony/message-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/h4cc/wkhtmltopdf-amd64/" />
+    <ignored path="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler/" />
+    <ignored path="$PROJECT_DIR$/vendor/jdorn/sql-formatter/" />
+    <ignored path="$PROJECT_DIR$/vendor/jms/metadata/" />
+    <ignored path="$PROJECT_DIR$/vendor/jms/parser-lib/" />
+    <ignored path="$PROJECT_DIR$/vendor/jms/serializer/" />
+    <ignored path="$PROJECT_DIR$/vendor/jms/serializer-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/knp-components/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/knp-snappy/" />
+    <ignored path="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/league/csv/" />
+    <ignored path="$PROJECT_DIR$/vendor/monolog/monolog/" />
+    <ignored path="$PROJECT_DIR$/vendor/paragonie/random_compat/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpcollection/phpcollection/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpoption/phpoption/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/container/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/link/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/log/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/simple-cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/sensio/distribution-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sensio/generator-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/sensiolabs/security-checker/" />
+    <ignored path="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-apcu/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-php56/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-php70/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-util/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/symfony/" />
+    <ignored path="$PROJECT_DIR$/vendor/twig/twig/" />
+    <ignored path="$PROJECT_DIR$/vendor/vich/uploader-bundle/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="AnnoncesApiController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/h4cc/wkhtmltopdf-amd64" />
+      <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/egyg33k/csv-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/message-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/jms/parser-lib" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/league/csv" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/phpcollection/phpcollection" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="175" />
     <option name="width" value="1755" />
@@ -12,11 +286,80 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9201adf-efcc-40ee-9cd8-619bc3d5e4b4" name="Default" comment="" />
+      <created>1529854940653</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529854940653</updated>
+      <workItem from="1529854959933" duration="93000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="93000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Souk/ApiBundle/Controller/AnnoncesApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
