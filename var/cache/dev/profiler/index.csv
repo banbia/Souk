@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 7ec30f,127.0.0.1,GET,http://localhost:8000/api/commentaire/commentaireAnc/6,1529840564,,200
 31b685,127.0.0.1,GET,http://localhost:8000/api/commentaire/commentaireAnc/6,1529840590,,200
 ae1429,127.0.0.1,GET,http://localhost:8000/app_dev.php/api/commentaire/commentaireAnc/6,1529840656,,200
@@ -196,3 +197,6 @@ f129ab,127.0.0.1,POST,http://localhost:8000/api/annonces/all,1529854003,,200
 66c628,127.0.0.1,POST,http://localhost:8000/api/annonces/all,1529854094,,200
 fc360d,127.0.0.1,POST,http://localhost:8000/api/annonces/all,1529854100,,200
 2a74a8,127.0.0.1,POST,http://localhost:8000/api/commentaire/commentaireAnc/6,1529854101,,200
+=======
+f0f37a,127.0.0.1,GET,http://localhost:8000/evennements/,1529773273,,200
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be

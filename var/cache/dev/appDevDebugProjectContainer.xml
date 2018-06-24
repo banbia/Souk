@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
+<<<<<<< HEAD
     <parameter key="kernel.root_dir">C:\Users\Boufares\Documents\GitHub\Souk\app</parameter>
     <parameter key="kernel.project_dir">C:\Users\Boufares\Documents\GitHub\Souk</parameter>
     <parameter key="kernel.environment">dev</parameter>
@@ -8,6 +9,15 @@
     <parameter key="kernel.name">app</parameter>
     <parameter key="kernel.cache_dir">C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev</parameter>
     <parameter key="kernel.logs_dir">C:\Users\Boufares\Documents\GitHub\Souk\var\logs</parameter>
+=======
+    <parameter key="kernel.root_dir">C:\Users\HAYFA\Documents\GitHub\Souk\app</parameter>
+    <parameter key="kernel.project_dir">C:\Users\HAYFA\Documents\GitHub\Souk</parameter>
+    <parameter key="kernel.environment">dev</parameter>
+    <parameter key="kernel.debug">true</parameter>
+    <parameter key="kernel.name">app</parameter>
+    <parameter key="kernel.cache_dir">C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">C:\Users\HAYFA\Documents\GitHub\Souk\var\logs</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
@@ -37,122 +47,218 @@
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\monolog-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\monolog-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="SwiftmailerBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\swiftmailer-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\swiftmailer-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Symfony\Bundle\SwiftmailerBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\doctrine\doctrine-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\doctrine\doctrine-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\sensio\framework-extra-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\sensio\framework-extra-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="FrontBundle" type="collection">
         <parameter key="parent">FOSMessageBundle</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\src\Souk\FrontBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\FrontBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Souk\FrontBundle</parameter>
       </parameter>
       <parameter key="FOSUserBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">FOS\UserBundle</parameter>
       </parameter>
       <parameter key="UserBundle" type="collection">
         <parameter key="parent">FOSUserBundle</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\src\Souk\UserBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\UserBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Souk\UserBundle</parameter>
       </parameter>
       <parameter key="BackBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\src\Souk\BackBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\BackBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Souk\BackBundle</parameter>
       </parameter>
       <parameter key="FOSMessageBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">FOS\MessageBundle</parameter>
       </parameter>
       <parameter key="JMSSerializerBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\jms\serializer-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\jms\serializer-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">JMS\SerializerBundle</parameter>
       </parameter>
       <parameter key="VichUploaderBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\vich\uploader-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Vich\UploaderBundle</parameter>
       </parameter>
       <parameter key="ApiBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\src\Souk\ApiBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\ApiBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Souk\ApiBundle</parameter>
       </parameter>
       <parameter key="KnpSnappyBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:/Users/Boufares/Documents/GitHub/Souk/vendor/knplabs/knp-snappy-bundle</parameter>
+=======
+        <parameter key="path">C:/Users/HAYFA/Documents/GitHub/Souk/vendor/knplabs/knp-snappy-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Knp\Bundle\SnappyBundle</parameter>
       </parameter>
       <parameter key="CMENGoogleChartsBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\cmen\google-charts-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\cmen\google-charts-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">CMEN\GoogleChartsBundle</parameter>
       </parameter>
       <parameter key="Egyg33kCsvBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\egyg33k\csv-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\egyg33k\csv-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Egyg33k\CsvBundle</parameter>
       </parameter>
       <parameter key="KnpPaginatorBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="SensioDistributionBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\sensio\distribution-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\sensio\distribution-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Sensio\Bundle\DistributionBundle</parameter>
       </parameter>
       <parameter key="SensioGeneratorBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\sensio\generator-bundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\sensio\generator-bundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Sensio\Bundle\GeneratorBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
         <parameter key="parent">null</parameter>
+<<<<<<< HEAD
         <parameter key="path">C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\WebServerBundle</parameter>
+=======
+        <parameter key="path">C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\WebServerBundle</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
     </parameter>
@@ -191,14 +297,24 @@
       <parameter>twig</parameter>
     </parameter>
     <parameter key="validator.mapping.cache.prefix"></parameter>
+<<<<<<< HEAD
     <parameter key="validator.mapping.cache.file">C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/validation.php</parameter>
+=======
+    <parameter key="validator.mapping.cache.file">C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/validation.php</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="translator.logging">true</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
+<<<<<<< HEAD
     <parameter key="profiler.storage.dsn">file:C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
     <parameter key="debug.container.dump">C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/appDevDebugProjectContainer.xml</parameter>
+=======
+    <parameter key="profiler.storage.dsn">file:C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/profiler</parameter>
+    <parameter key="debug.error_handler.throw_at">-1</parameter>
+    <parameter key="debug.container.dump">C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/appDevDebugProjectContainer.xml</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <parameter key="router.options.generator_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\PhpGeneratorDumper</parameter>
@@ -210,7 +326,11 @@
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
+<<<<<<< HEAD
     <parameter key="router.resource">C:\Users\Boufares\Documents\GitHub\Souk/app/config/routing_dev.yml</parameter>
+=======
+    <parameter key="router.resource">C:\Users\HAYFA\Documents\GitHub\Souk/app/config/routing_dev.yml</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <parameter key="router.cache_class_prefix">appDevDebugProjectContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
@@ -279,7 +399,11 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.local_domain">null</parameter>
+<<<<<<< HEAD
     <parameter key="swiftmailer.spool.default.memory.path">C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/swiftmailer/spool/default</parameter>
+=======
+    <parameter key="swiftmailer.spool.default.memory.path">C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/swiftmailer/spool/default</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -398,7 +522,11 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
+<<<<<<< HEAD
     <parameter key="doctrine.orm.proxy_dir">C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/doctrine/orm/Proxies</parameter>
+=======
+    <parameter key="doctrine.orm.proxy_dir">C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/doctrine/orm/Proxies</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -511,7 +639,11 @@
     <parameter key="vich_uploader.mappings" type="collection">
       <parameter key="product_image" type="collection">
         <parameter key="uri_prefix">/uploads/annonceImage</parameter>
+<<<<<<< HEAD
         <parameter key="upload_destination">C:\Users\Boufares\Documents\GitHub\Souk\app/../web/uploads/annonceImage</parameter>
+=======
+        <parameter key="upload_destination">C:\Users\HAYFA\Documents\GitHub\Souk\app/../web/uploads/annonceImage</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <parameter key="inject_on_load">false</parameter>
         <parameter key="delete_on_update">true</parameter>
         <parameter key="delete_on_remove">true</parameter>
@@ -527,14 +659,22 @@
       </parameter>
     </parameter>
     <parameter key="vich_uploader.file_injector.class">Vich\UploaderBundle\Injector\FileInjector</parameter>
+<<<<<<< HEAD
     <parameter key="knp_snappy.pdf.binary">C:\Users\Boufares\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</parameter>
+=======
+    <parameter key="knp_snappy.pdf.binary">C:\Users\HAYFA\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <parameter key="knp_snappy.pdf.options" type="collection">
       <parameter key="no-outline">true</parameter>
       <parameter key="page-size">LETTER</parameter>
       <parameter key="encoding">UTF-8</parameter>
     </parameter>
     <parameter key="knp_snappy.pdf.env" type="collection"/>
+<<<<<<< HEAD
     <parameter key="knp_snappy.image.binary">C:\Users\Boufares\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</parameter>
+=======
+    <parameter key="knp_snappy.image.binary">C:\Users\HAYFA\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</parameter>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <parameter key="knp_snappy.image.options" type="collection"/>
     <parameter key="knp_snappy.image.env" type="collection"/>
     <parameter key="cmen_google_charts.version">current</parameter>
@@ -706,10 +846,17 @@
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="controller_name_converter"/>
     </service>
+<<<<<<< HEAD
     <service id="2_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f" class="Symfony\Component\Config\Resource\SelfCheckingResourceChecker" public="false">
       <tag name="config_cache.resource_checker" priority="-990"/>
     </service>
     <service id="1_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f" class="Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker" public="false">
+=======
+    <service id="2_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb" class="Symfony\Component\Config\Resource\SelfCheckingResourceChecker" public="false">
+      <tag name="config_cache.resource_checker" priority="-990"/>
+    </service>
+    <service id="1_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb" class="Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker" public="false">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <tag name="config_cache.resource_checker" priority="-980"/>
       <argument type="service" id="service_container"/>
     </service>
@@ -723,6 +870,10 @@
     <service id="cache_warmer" class="Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate">
       <argument type="collection">
         <argument type="service" id="templating.cache_warmer.template_paths"/>
+<<<<<<< HEAD
+=======
+        <argument type="service" id="kernel.class_cache.cache_warmer"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <argument type="service" id="validator.mapping.cache_warmer"/>
         <argument type="service" id="translation.warmer"/>
         <argument type="service" id="router.cache_warmer"/>
@@ -733,6 +884,10 @@
       </argument>
     </service>
     <service id="kernel.class_cache.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ClassCacheCacheWarmer">
+<<<<<<< HEAD
+=======
+      <tag name="kernel.cache_warmer"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="collection">
         <argument>Symfony\Component\HttpFoundation\ParameterBag</argument>
         <argument>Symfony\Component\HttpFoundation\HeaderBag</argument>
@@ -741,7 +896,10 @@
         <argument>Symfony\Component\HttpFoundation\Request</argument>
         <argument>Symfony\Component\HttpKernel\Kernel</argument>
       </argument>
+<<<<<<< HEAD
       <deprecated>The "%service_id%" option is deprecated since version 3.3, to be removed in 4.0.</deprecated>
+=======
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="collection">
@@ -752,9 +910,15 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator">
       <argument type="service" id="kernel"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\app/Resources</argument>
       <argument type="collection">
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\app</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app/Resources</argument>
+      <argument type="collection">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
@@ -762,8 +926,13 @@
     </service>
     <service id="config_cache_factory" class="Symfony\Component\Config\ResourceCheckerConfigCacheFactory">
       <argument type="iterator">
+<<<<<<< HEAD
         <argument type="service" id="1_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f"/>
         <argument type="service" id="2_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f"/>
+=======
+        <argument type="service" id="1_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb"/>
+        <argument type="service" id="2_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </argument>
     </service>
     <service id="fragment.handler" class="Symfony\Component\HttpKernel\DependencyInjection\LazyLoadingFragmentHandler">
@@ -824,8 +993,13 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>uhUjUAKU1y6xldH-GyrJff</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>5FeU3MF8FYU9U47KIyMU+t</argument>
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -834,7 +1008,11 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>uhUjUAKU1y6xldH-GyrJff</argument>
+=======
+      <argument>5FeU3MF8FYU9U47KIyMU+t</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -854,7 +1032,11 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -890,7 +1072,11 @@
     </service>
     <service id="cache.global_clearer" class="Symfony\Component\HttpKernel\CacheClearer\Psr6CacheClearer"/>
     <service id="translator.selector" class="Symfony\Component\Translation\MessageSelector" public="false"/>
+<<<<<<< HEAD
     <service id="1_9dfeda4bdace8bcbcee66149a951f13d8dc8d5e6923a1aa67ea254b69c0a0e37" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+=======
+    <service id="1_c773d88dc0c9d9c4465ebe3564d6760399f9cfd3e6ba075c2894e496b3262faf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="session" type="service" id="session" on-invalid="ignore"/>
@@ -920,7 +1106,11 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/sessions</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/sessions</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -930,13 +1120,21 @@
     <service id="session.handler.write_check" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\WriteCheckSessionHandler" public="false"/>
     <service id="session_listener" class="Symfony\Component\HttpKernel\EventListener\SessionListener">
       <tag name="kernel.event_subscriber"/>
+<<<<<<< HEAD
       <argument type="service" id="1_9dfeda4bdace8bcbcee66149a951f13d8dc8d5e6923a1aa67ea254b69c0a0e37"/>
+=======
+      <argument type="service" id="1_c773d88dc0c9d9c4465ebe3564d6760399f9cfd3e6ba075c2894e496b3262faf"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="session.save_listener" class="Symfony\Component\HttpKernel\EventListener\SaveSessionListener">
       <tag name="kernel.event_subscriber"/>
     </service>
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy">
+<<<<<<< HEAD
       <argument type="service" id="1_1964f8d3920722791a923df21a79152fc64ede25dee90b8b2fc75253eb47ba1f"/>
+=======
+      <argument type="service" id="1_c3fd62c1c75dab59e4fd9f4ba8adc6692b9c82ffd9107a59e66d001a5fee7cf8"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="service" id="data_collector.form"/>
     </service>
     <service id="form.registry" class="Symfony\Component\Form\FormRegistry">
@@ -1184,12 +1382,20 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="templating.finder" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
       <argument type="service" id="kernel"/>
       <argument type="service" id="templating.filename_parser"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\app/Resources</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app/Resources</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="templating.cache_warmer.template_paths" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer" priority="20"/>
@@ -1213,13 +1419,22 @@
         <argument type="service" id="monolog.logger.templating" on-invalid="ignore"/>
       </call>
     </service>
+<<<<<<< HEAD
     <service id="2_cae75cbe866a38c8723c7a7beb473692f30d497ba88e3f295ecbfa304c6a77d6" class="Doctrine\Common\Cache\ApcCache" public="false">
+=======
+    <service id="2_8477f26ee26da9b5d605c4ebf86ada251d82ed4f6cbc356375b373f0dfa3a4b6" class="Doctrine\Common\Cache\ApcCache" public="false">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <call method="setNamespace">
         <argument></argument>
       </call>
     </service>
+<<<<<<< HEAD
     <service id="1_cae75cbe866a38c8723c7a7beb473692f30d497ba88e3f295ecbfa304c6a77d6" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/validation.php</argument>
+=======
+    <service id="1_8477f26ee26da9b5d605c4ebf86ada251d82ed4f6cbc356375b373f0dfa3a4b6" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/validation.php</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1238,9 +1453,15 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
+<<<<<<< HEAD
           <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/config/validation.xml</argument>
           <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/config/validation.xml</argument>
           <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/config/validation.xml</argument>
+=======
+          <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/config/validation.xml</argument>
+          <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/config/validation.xml</argument>
+          <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/config/validation.xml</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1256,13 +1477,18 @@
         </argument>
       </call>
       <call method="addXmlMapping">
+<<<<<<< HEAD
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle\DependencyInjection\Compiler/../../Resources/config/storage-validation/orm.xml</argument>
+=======
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle\DependencyInjection\Compiler/../../Resources/config/storage-validation/orm.xml</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
       <factory class="Symfony\Component\Validator\Validation" method="createValidatorBuilder"/>
     </service>
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
     </service>
@@ -1271,6 +1497,16 @@
     </service>
     <service id="validator.mapping.cache.doctrine.apc" class="Symfony\Component\Validator\Mapping\Cache\DoctrineCache" public="false">
       <argument type="service" id="2_cae75cbe866a38c8723c7a7beb473692f30d497ba88e3f295ecbfa304c6a77d6"/>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/validation.php</argument>
+      <argument type="service" id="cache.validator"/>
+    </service>
+    <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache" public="false">
+      <argument type="service" id="1_8477f26ee26da9b5d605c4ebf86ada251d82ed4f6cbc356375b373f0dfa3a4b6"/>
+    </service>
+    <service id="validator.mapping.cache.doctrine.apc" class="Symfony\Component\Validator\Mapping\Cache\DoctrineCache" public="false">
+      <argument type="service" id="2_8477f26ee26da9b5d605c4ebf86ada251d82ed4f6cbc356375b373f0dfa3a4b6"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory" public="false">
       <argument type="service" id="service_locator.d1035efbd4e2f2796cab4e77371ef95b"/>
@@ -1328,6 +1564,7 @@
         </argument>
       </argument>
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="cache_dir">C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
@@ -1717,6 +1954,397 @@
           </argument>
           <argument key="sw" type="collection">
             <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sw.xliff</argument>
+=======
+        <argument key="cache_dir">C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/translations</argument>
+        <argument key="debug">true</argument>
+        <argument key="resource_files" type="collection">
+          <argument key="af" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.af.yml</argument>
+          </argument>
+          <argument key="ar" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ar.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ar.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ar.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.ar.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.ar.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.ar.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ar.xliff</argument>
+          </argument>
+          <argument key="az" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.az.xlf</argument>
+          </argument>
+          <argument key="bg" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.bg.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.bg.yml</argument>
+          </argument>
+          <argument key="ca" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ca.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ca.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ca.yml</argument>
+          </argument>
+          <argument key="cs" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.cs.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.cs.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.cs.yml</argument>
+          </argument>
+          <argument key="cy" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cy.xlf</argument>
+          </argument>
+          <argument key="da" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.da.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.da.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.da.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.da.xliff</argument>
+          </argument>
+          <argument key="de" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.de.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.de.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.de.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.de.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.de.xliff</argument>
+          </argument>
+          <argument key="el" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.el.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.el.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.el.yml</argument>
+          </argument>
+          <argument key="en" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.en.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.en.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.en.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.en.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.en.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.en.xliff</argument>
+          </argument>
+          <argument key="es" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.es.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.es.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.es.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.es.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.es.xliff</argument>
+          </argument>
+          <argument key="et" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.et.yml</argument>
+          </argument>
+          <argument key="eu" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.eu.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.eu.yml</argument>
+          </argument>
+          <argument key="fa" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fa.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fa.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fa.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.fa.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fa.xliff</argument>
+          </argument>
+          <argument key="fi" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fi.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fi.yml</argument>
+          </argument>
+          <argument key="fr" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fr.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fr.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.fr.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.fr.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.fr.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fr.xliff</argument>
+          </argument>
+          <argument key="gl" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.gl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.gl.yml</argument>
+          </argument>
+          <argument key="he" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.he.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.he.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.he.yml</argument>
+          </argument>
+          <argument key="hr" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.hr.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.hr.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.hr.yml</argument>
+          </argument>
+          <argument key="hu" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.hu.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.hu.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.hu.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.hu.xliff</argument>
+          </argument>
+          <argument key="hy" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.hy.xlf</argument>
+          </argument>
+          <argument key="id" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.id.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.id.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.id.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.id.xliff</argument>
+          </argument>
+          <argument key="it" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.it.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.it.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.it.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.it.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.it.xliff</argument>
+          </argument>
+          <argument key="ja" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ja.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ja.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ja.yml</argument>
+          </argument>
+          <argument key="lb" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lb.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.lb.yml</argument>
+          </argument>
+          <argument key="lt" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.lt.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.lt.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.lt.xliff</argument>
+          </argument>
+          <argument key="lv" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lv.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.lv.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.lv.yml</argument>
+          </argument>
+          <argument key="mn" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.mn.yml</argument>
+          </argument>
+          <argument key="nb" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.nb.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.nb.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.nb.yml</argument>
+          </argument>
+          <argument key="nl" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.nl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.nl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.nl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.nl.xliff</argument>
+          </argument>
+          <argument key="nn" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.nn.xlf</argument>
+          </argument>
+          <argument key="no" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.no.xlf</argument>
+          </argument>
+          <argument key="pl" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.pl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.pl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.pl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pl.xliff</argument>
+          </argument>
+          <argument key="pt" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pt.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pt.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.pt.yml</argument>
+          </argument>
+          <argument key="pt_BR" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pt_BR.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pt_BR.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
+          </argument>
+          <argument key="ro" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ro.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ro.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ro.xliff</argument>
+          </argument>
+          <argument key="ru" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ru.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ru.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.ru.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\validators.ru.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.ru.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ru.xliff</argument>
+          </argument>
+          <argument key="sk" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sk.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sk.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sk.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.sk.yml</argument>
+          </argument>
+          <argument key="sl" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.sl.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.sl.yml</argument>
+          </argument>
+          <argument key="sq" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sq.xlf</argument>
+          </argument>
+          <argument key="sr_Cyrl" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sr_Cyrl.xlf</argument>
+          </argument>
+          <argument key="sr_Latn" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sr_Latn.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sr_Latn.yml</argument>
+          </argument>
+          <argument key="sv" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sv.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sv.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.sv.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sv.xliff</argument>
+          </argument>
+          <argument key="th" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.th.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.th.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.th.yml</argument>
+          </argument>
+          <argument key="tr" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.tr.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.tr.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.tr.yml</argument>
+          </argument>
+          <argument key="uk" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.uk.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.uk.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.uk.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.uk.xliff</argument>
+          </argument>
+          <argument key="vi" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.vi.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.vi.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.vi.yml</argument>
+          </argument>
+          <argument key="zh_CN" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.zh_CN.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.zh_CN.yml</argument>
+          </argument>
+          <argument key="zh_TW" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.zh_TW.xlf</argument>
+          </argument>
+          <argument key="pt_PT" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pt_PT.xlf</argument>
+          </argument>
+          <argument key="ua" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ua.xlf</argument>
+          </argument>
+          <argument key="bn" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.bn.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.bn.yml</argument>
+          </argument>
+          <argument key="bn_BD" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.bn_BD.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.bn_BD.yml</argument>
+          </argument>
+          <argument key="eo" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.eo.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.eo.yml</argument>
+          </argument>
+          <argument key="ky" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ky.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ky.yml</argument>
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ky.xliff</argument>
+          </argument>
+          <argument key="sw" type="collection">
+            <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sw.xliff</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
           </argument>
         </argument>
       </argument>
@@ -1968,7 +2596,11 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
+<<<<<<< HEAD
       <argument>file:C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/profiler</argument>
+=======
+      <argument>file:C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/profiler</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -2002,7 +2634,11 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/appDevDebugProjectContainer</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/appDevDebugProjectContainer</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
       <tag name="data_collector" template="@WebProfiler/Collector/time.html.twig" id="time" priority="330"/>
@@ -2039,7 +2675,11 @@
         <argument type="service" id="cache.annotations"/>
       </call>
     </service>
+<<<<<<< HEAD
     <service id="1_1964f8d3920722791a923df21a79152fc64ede25dee90b8b2fc75253eb47ba1f" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+=======
+    <service id="1_c3fd62c1c75dab59e4fd9f4ba8adc6692b9c82ffd9107a59e66d001a5fee7cf8" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <service id="form.type_extension.form.data_collector" class="Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension" public="false">
       <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
       <argument type="service" id="data_collector.form"/>
@@ -2083,7 +2723,11 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" public="false">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>/_profiler/open?file=%%f&amp;line=%%l#line%%l</argument>
     </service>
     <service id="debug.event_dispatcher" class="Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher">
@@ -2260,6 +2904,17 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+<<<<<<< HEAD
+=======
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -2658,9 +3313,15 @@
     </service>
     <service id="router.default" class="Symfony\Bundle\FrameworkBundle\Routing\Router" public="false">
       <argument type="service" id="service_container"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk/app/config/routing_dev.yml</argument>
       <argument type="collection">
         <argument key="cache_dir">C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk/app/config/routing_dev.yml</argument>
+      <argument type="collection">
+        <argument key="cache_dir">C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -2697,12 +3358,21 @@
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
     </service>
+<<<<<<< HEAD
     <service id="2_2a7f02e37d21a18df3c93fb69b749a3bda803a695731269f13b15cb2084c5d9d" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
     <service id="1_2a7f02e37d21a18df3c93fb69b749a3bda803a695731269f13b15cb2084c5d9d" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+=======
+    <service id="2_6a4c49ae7f7d059900db9dc0a2492415ec4ff914022513397fb682ba82d4baf1" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/annotations.php</argument>
+      <argument type="service" id="cache.annotations"/>
+      <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
+    </service>
+    <service id="1_6a4c49ae7f7d059900db9dc0a2492415ec4ff914022513397fb682ba82d4baf1" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -2716,7 +3386,11 @@
     </service>
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <argument type="service" id="annotations.reader"/>
+<<<<<<< HEAD
       <argument type="service" id="1_2a7f02e37d21a18df3c93fb69b749a3bda803a695731269f13b15cb2084c5d9d"/>
+=======
+      <argument type="service" id="1_6a4c49ae7f7d059900db9dc0a2492415ec4ff914022513397fb682ba82d4baf1"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -2726,11 +3400,19 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
       <argument type="service" id="2_2a7f02e37d21a18df3c93fb69b749a3bda803a695731269f13b15cb2084c5d9d"/>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/annotations.php</argument>
+      <argument type="service" id="cache.annotations"/>
+    </service>
+    <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
+      <argument type="service" id="2_6a4c49ae7f7d059900db9dc0a2492415ec4ff914022513397fb682ba82d4baf1"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor">
       <argument>false</argument>
@@ -3424,12 +4106,20 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
+<<<<<<< HEAD
       <argument>5b2f83945c27b9.76076685</argument>
+=======
+      <argument>5b2e7c9a396330.10987636</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+<<<<<<< HEAD
       <argument>5b2f83945c27b9.76076685</argument>
+=======
+      <argument>5b2e7c9a396330.10987636</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3514,7 +4204,11 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
+<<<<<<< HEAD
         <argument key="cache">C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/twig</argument>
+=======
+        <argument key="cache">C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/twig</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -3603,11 +4297,19 @@
       </call>
       <call method="addGlobal">
         <argument>pathToWeb</argument>
+<<<<<<< HEAD
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\app/../web</argument>
       </call>
       <call method="addGlobal">
         <argument>base_dir</argument>
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\app/../web</argument>
+=======
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app/../web</argument>
+      </call>
+      <call method="addGlobal">
+        <argument>base_dir</argument>
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app/../web</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
       <configurator service="twig.configurator.environment" method="configure"/>
     </service>
@@ -3632,14 +4334,24 @@
       <argument type="service" id="service_locator.26ac001b3ede28481ac0de703666b4d7"/>
       <argument type="service" id="templating.finder" on-invalid="ignore"/>
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
+=======
+        <argument key="C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </argument>
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\app</argument>
       <argument type="collection">
         <argument key="C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app</argument>
+      <argument type="collection">
+        <argument key="C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
@@ -3649,6 +4361,7 @@
     </service>
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader" public="false">
       <argument type="collection"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk</argument>
       <call method="addPath">
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/views</argument>
@@ -3724,6 +4437,83 @@
       </call>
       <call method="addPath">
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk</argument>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/views</argument>
+        <argument>Framework</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle/Resources/views</argument>
+        <argument>Security</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle/Resources/views</argument>
+        <argument>Twig</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\swiftmailer-bundle/Resources/views</argument>
+        <argument>Swiftmailer</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\FrontBundle/Resources/views</argument>
+        <argument>Front</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\FrontBundle/Resources/views</argument>
+        <argument>FOSMessage</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/views</argument>
+        <argument>FOSMessage</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\UserBundle/Resources/views</argument>
+        <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/views</argument>
+        <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\UserBundle/Resources/views</argument>
+        <argument>User</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\BackBundle/Resources/views</argument>
+        <argument>Back</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/views</argument>
+        <argument>VichUploader</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\ApiBundle/Resources/views</argument>
+        <argument>Api</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\egyg33k\csv-bundle/Resources/views</argument>
+        <argument>Egyg33kCsv</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
+        <argument>Debug</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/views</argument>
+        <argument>WebProfiler</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -3748,7 +4538,11 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\app</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -3831,6 +4625,7 @@
       <tag name="twig.loader"/>
       <argument type="service" id="templating.locator"/>
       <argument type="service" id="templating.name_parser"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk</argument>
       <call method="addPath">
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/views</argument>
@@ -3906,6 +4701,83 @@
       </call>
       <call method="addPath">
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk</argument>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle/Resources/views</argument>
+        <argument>Framework</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle/Resources/views</argument>
+        <argument>Security</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle/Resources/views</argument>
+        <argument>Twig</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\swiftmailer-bundle/Resources/views</argument>
+        <argument>Swiftmailer</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\FrontBundle/Resources/views</argument>
+        <argument>Front</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\FrontBundle/Resources/views</argument>
+        <argument>FOSMessage</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/views</argument>
+        <argument>FOSMessage</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\UserBundle/Resources/views</argument>
+        <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/views</argument>
+        <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\UserBundle/Resources/views</argument>
+        <argument>User</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\BackBundle/Resources/views</argument>
+        <argument>Back</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/views</argument>
+        <argument>VichUploader</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\ApiBundle/Resources/views</argument>
+        <argument>Api</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\egyg33k\csv-bundle/Resources/views</argument>
+        <argument>Egyg33kCsv</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
+        <argument>Debug</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/views</argument>
+        <argument>WebProfiler</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
     </service>
     <service id="templating.engine.twig" class="Symfony\Bundle\TwigBundle\TwigEngine" public="false">
@@ -3957,7 +4829,11 @@
     </service>
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor" public="false"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\logs/dev.log</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\logs/dev.log</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -3976,9 +4852,15 @@
       <argument>100</argument>
       <argument>true</argument>
     </service>
+<<<<<<< HEAD
     <service id="3_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff" class="Swift_Transport_Esmtp_Auth_PlainAuthenticator" public="false"/>
     <service id="2_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff" class="Swift_Transport_Esmtp_Auth_LoginAuthenticator" public="false"/>
     <service id="1_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff" class="Swift_Transport_Esmtp_Auth_CramMd5Authenticator" public="false"/>
+=======
+    <service id="3_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448" class="Swift_Transport_Esmtp_Auth_PlainAuthenticator" public="false"/>
+    <service id="2_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448" class="Swift_Transport_Esmtp_Auth_LoginAuthenticator" public="false"/>
+    <service id="1_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448" class="Swift_Transport_Esmtp_Auth_CramMd5Authenticator" public="false"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <service id="swiftmailer.mailer.abstract" class="Swift_Mailer" abstract="true">
       <argument type="service" id="swiftmailer.transport"/>
     </service>
@@ -3995,9 +4877,15 @@
     </service>
     <service id="swiftmailer.transport.authhandler.abstract" class="Swift_Transport_Esmtp_AuthHandler" public="false" abstract="true">
       <argument type="collection">
+<<<<<<< HEAD
         <argument type="service" id="1_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"/>
         <argument type="service" id="2_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"/>
         <argument type="service" id="3_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"/>
+=======
+        <argument type="service" id="1_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"/>
+        <argument type="service" id="2_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"/>
+        <argument type="service" id="3_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </argument>
     </service>
     <service id="swiftmailer.transport.eventdispatcher.abstract" class="Swift_Events_SimpleEventDispatcher" public="false" abstract="true"/>
@@ -4009,7 +4897,11 @@
     <service id="swiftmailer.transport.smtp.abstract" class="Swift_Transport_EsmtpTransport" public="false" abstract="true"/>
     <service id="swiftmailer.transport.spool.abstract" class="Swift_Transport_SpoolTransport" public="false" abstract="true"/>
     <service id="swiftmailer.spool.file.abstract" class="Swift_FileSpool" public="false" abstract="true">
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\app/../data/swiftmailer/spool</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app/../data/swiftmailer/spool</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="swiftmailer.spool.memory.abstract" class="Swift_MemorySpool" public="false" abstract="true"/>
     <service id="swiftmailer.email_sender.listener" class="Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener">
@@ -4024,9 +4916,15 @@
     <service id="swiftmailer.mailer.default.transport.eventdispatcher" class="Swift_Events_SimpleEventDispatcher" public="false"/>
     <service id="swiftmailer.mailer.default.transport.authhandler" class="Swift_Transport_Esmtp_AuthHandler" public="false">
       <argument type="collection">
+<<<<<<< HEAD
         <argument type="service" id="1_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"/>
         <argument type="service" id="2_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"/>
         <argument type="service" id="3_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"/>
+=======
+        <argument type="service" id="1_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"/>
+        <argument type="service" id="2_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"/>
+        <argument type="service" id="3_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </argument>
       <call method="setUsername">
         <argument>null</argument>
@@ -4187,13 +5085,21 @@
         <argument type="service" id="vich_uploader.listener.clean.product_image"/>
       </call>
       <call method="addEventSubscriber">
+<<<<<<< HEAD
         <argument type="service" id="vich_uploader.listener.upload.product_image"/>
+=======
+        <argument type="service" id="fos_user.user_listener"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
       <call method="addEventSubscriber">
         <argument type="service" id="vich_uploader.listener.remove.product_image"/>
       </call>
       <call method="addEventSubscriber">
+<<<<<<< HEAD
         <argument type="service" id="fos_user.user_listener"/>
+=======
+        <argument type="service" id="vich_uploader.listener.upload.product_image"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
       <call method="addEventListener">
         <argument type="collection">
@@ -4328,7 +5234,11 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
+<<<<<<< HEAD
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/doctrine/orm/Proxies</argument>
+=======
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/doctrine/orm/Proxies</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -4358,14 +5268,24 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
+<<<<<<< HEAD
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\src\Souk\FrontBundle\Entity</argument>
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\src\Souk\UserBundle\Entity</argument>
         <argument>C:\Users\Boufares\Documents\GitHub\Souk\src\Souk\BackBundle\Entity</argument>
+=======
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\FrontBundle\Entity</argument>
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\UserBundle\Entity</argument>
+        <argument>C:\Users\HAYFA\Documents\GitHub\Souk\src\Souk\BackBundle\Entity</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </argument>
     </service>
     <service id="doctrine.orm.default_xml_metadata_driver" class="Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver" public="false">
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="C:\Users\Boufares\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle\Resources\config\doctrine">FOS\MessageBundle\Entity</argument>
+=======
+        <argument key="C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle\Resources\config\doctrine">FOS\MessageBundle\Entity</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </argument>
       <call method="setGlobalBasename">
         <argument>mapping</argument>
@@ -4394,7 +5314,11 @@
             <argument type="service">
               <service class="Doctrine\Common\Persistence\Mapping\Driver\SymfonyFileLocator">
                 <argument type="collection">
+<<<<<<< HEAD
                   <argument key="C:\Users\Boufares\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle\Resources\config\doctrine-mapping">FOS\UserBundle\Model</argument>
+=======
+                  <argument key="C:\Users\HAYFA\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle\Resources\config\doctrine-mapping">FOS\UserBundle\Model</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
                 </argument>
                 <argument>.orm.xml</argument>
               </service>
@@ -4406,17 +5330,29 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
+<<<<<<< HEAD
         <argument>sf_orm_default_7121e08bd7a49ae8a8a09fb965b1461f7c6a6e5e37c13a9f7daac3bb60865db9</argument>
+=======
+        <argument>sf_orm_default_c68e6c99aee765261397d2d4ecf6418454611358133ba6b881ba29e78f44d806</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
+<<<<<<< HEAD
         <argument>sf_orm_default_7121e08bd7a49ae8a8a09fb965b1461f7c6a6e5e37c13a9f7daac3bb60865db9</argument>
+=======
+        <argument>sf_orm_default_c68e6c99aee765261397d2d4ecf6418454611358133ba6b881ba29e78f44d806</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
+<<<<<<< HEAD
         <argument>sf_orm_default_7121e08bd7a49ae8a8a09fb965b1461f7c6a6e5e37c13a9f7daac3bb60865db9</argument>
+=======
+        <argument>sf_orm_default_c68e6c99aee765261397d2d4ecf6418454611358133ba6b881ba29e78f44d806</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerAwareEntityListenerResolver">
@@ -4922,10 +5858,18 @@
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeFromjson</argument>
             </argument>
+<<<<<<< HEAD
+=======
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateTimeFromxml</argument>
+            </argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
             <argument key="yml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeFromyml</argument>
             </argument>
+<<<<<<< HEAD
             <argument key="xml" type="collection">
               <argument>jms_serializer.datetime_handler</argument>
               <argument>deserializeDateTimeFromxml</argument>
@@ -4947,6 +5891,38 @@
           </argument>
           <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
             <argument key="yml" type="collection">
+=======
+          </argument>
+          <argument key="DateTimeImmutable" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateTimeImmutableFromjson</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateTimeImmutableFromxml</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateTimeImmutableFromyml</argument>
+            </argument>
+          </argument>
+          <argument key="DateInterval" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateIntervalFromjson</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateIntervalFromxml</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>deserializeDateIntervalFromyml</argument>
+            </argument>
+          </argument>
+          <argument key="ArrayCollection" type="collection">
+            <argument key="json" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
@@ -4954,13 +5930,51 @@
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
             <argument key="json" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+<<<<<<< HEAD
+=======
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+<<<<<<< HEAD
+          </argument>
+          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
+            <argument key="yml" type="collection">
+=======
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="yml" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
           </argument>
           <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
-            <argument key="yml" type="collection">
+            <argument key="json" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
@@ -4968,10 +5982,20 @@
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
+<<<<<<< HEAD
+=======
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
             <argument key="json" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>deserializeCollection</argument>
             </argument>
+<<<<<<< HEAD
           </argument>
           <argument key="PhpCollection\Map" type="collection">
             <argument key="json" type="collection">
@@ -4980,12 +6004,41 @@
             </argument>
             <argument key="yml" type="collection">
               <argument>jms_serializer.php_collection_handler</argument>
+=======
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>deserializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="PhpCollection\Sequence" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeSequence</argument>
+            </argument>
+          </argument>
+          <argument key="PhpCollection\Map" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
               <argument>deserializeMap</argument>
             </argument>
             <argument key="xml" type="collection">
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>deserializeMap</argument>
             </argument>
+<<<<<<< HEAD
           </argument>
           <argument key="DateTimeImmutable" type="collection">
             <argument key="json" type="collection">
@@ -5061,6 +6114,58 @@
         <argument key="1" type="collection">
           <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
             <argument key="yml" type="collection">
+=======
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.php_collection_handler</argument>
+              <argument>deserializeMap</argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="1" type="collection">
+          <argument key="DateTime" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTime</argument>
+            </argument>
+          </argument>
+          <argument key="DateTimeImmutable" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateTimeImmutable</argument>
+            </argument>
+          </argument>
+          <argument key="DateInterval" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.datetime_handler</argument>
+              <argument>serializeDateInterval</argument>
+            </argument>
+          </argument>
+          <argument key="ArrayCollection" type="collection">
+            <argument key="json" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
@@ -5068,13 +6173,78 @@
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\Common\Collections\ArrayCollection" type="collection">
             <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ORM\PersistentCollection" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
+            <argument key="json" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+          </argument>
+          <argument key="Doctrine\ODM\PHPCR\PersistentCollection" type="collection">
+            <argument key="json" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.array_collection_handler</argument>
+              <argument>serializeCollection</argument>
+            </argument>
+<<<<<<< HEAD
+            <argument key="json" type="collection">
+=======
+            <argument key="yml" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
             </argument>
           </argument>
           <argument key="PhpCollection\Sequence" type="collection">
+<<<<<<< HEAD
             <argument key="yml" type="collection">
+=======
+            <argument key="json" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
@@ -5082,7 +6252,11 @@
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
+<<<<<<< HEAD
             <argument key="json" type="collection">
+=======
+            <argument key="yml" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
               <argument>jms_serializer.php_collection_handler</argument>
               <argument>serializeSequence</argument>
             </argument>
@@ -5101,6 +6275,7 @@
               <argument>serializeMap</argument>
             </argument>
           </argument>
+<<<<<<< HEAD
           <argument key="Doctrine\ODM\MongoDB\PersistentCollection" type="collection">
             <argument key="yml" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
@@ -5124,10 +6299,14 @@
               <argument>jms_serializer.form_error_handler</argument>
               <argument>serializeFormTojson</argument>
             </argument>
+=======
+          <argument key="Symfony\Component\Form\Form" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
             <argument key="xml" type="collection">
               <argument>jms_serializer.form_error_handler</argument>
               <argument>serializeFormToxml</argument>
             </argument>
+<<<<<<< HEAD
           </argument>
           <argument key="Symfony\Component\Validator\ConstraintViolation" type="collection">
             <argument key="json" type="collection">
@@ -5166,10 +6345,23 @@
               <argument>jms_serializer.form_error_handler</argument>
               <argument>serializeFormErrorTojson</argument>
             </argument>
+=======
+            <argument key="json" type="collection">
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormTojson</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormToyml</argument>
+            </argument>
+          </argument>
+          <argument key="Symfony\Component\Form\FormError" type="collection">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
             <argument key="xml" type="collection">
               <argument>jms_serializer.form_error_handler</argument>
               <argument>serializeFormErrorToxml</argument>
             </argument>
+<<<<<<< HEAD
           </argument>
           <argument key="DateTime" type="collection">
             <argument key="xml" type="collection">
@@ -5253,6 +6445,43 @@
             <argument key="json" type="collection">
               <argument>jms_serializer.array_collection_handler</argument>
               <argument>serializeCollection</argument>
+=======
+            <argument key="json" type="collection">
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormErrorTojson</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.form_error_handler</argument>
+              <argument>serializeFormErrorToyml</argument>
+            </argument>
+          </argument>
+          <argument key="Symfony\Component\Validator\ConstraintViolationList" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeListToxml</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeListTojson</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeListToyml</argument>
+            </argument>
+          </argument>
+          <argument key="Symfony\Component\Validator\ConstraintViolation" type="collection">
+            <argument key="xml" type="collection">
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationToxml</argument>
+            </argument>
+            <argument key="json" type="collection">
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationTojson</argument>
+            </argument>
+            <argument key="yml" type="collection">
+              <argument>jms_serializer.constraint_violation_handler</argument>
+              <argument>serializeViolationToyml</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
             </argument>
           </argument>
         </argument>
@@ -5261,7 +6490,11 @@
     <service id="jms_serializer.datetime_handler" class="JMS\Serializer\Handler\DateHandler">
       <tag name="jms_serializer.subscribing_handler"/>
       <argument>Y-m-d\TH:i:sP</argument>
+<<<<<<< HEAD
       <argument>Europe/Berlin</argument>
+=======
+      <argument>UTC</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>true</argument>
     </service>
     <service id="jms_serializer.array_collection_handler" class="JMS\Serializer\Handler\ArrayCollectionHandler">
@@ -5315,7 +6548,11 @@
       <argument>jms_serializer.metadata_driver</argument>
     </service>
     <service id="jms_serializer.metadata.cache.file_cache" class="Metadata\Cache\FileCache" public="false">
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/jms_serializer</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/jms_serializer</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="jms_serializer.metadata_factory" class="Metadata\MetadataFactory" public="false">
       <argument type="service" id="jms_serializer.metadata.lazy_loading_driver"/>
@@ -5582,7 +6819,11 @@
       </argument>
     </service>
     <service id="vich_uploader.metadata.cache.file_cache" class="Metadata\Cache\FileCache" public="false">
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/vich_uploader</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/vich_uploader</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="vich_uploader.metadata_factory" class="Metadata\MetadataFactory" public="false">
       <argument type="service" id="vich_uploader.metadata_driver.chain"/>
@@ -5601,7 +6842,11 @@
       <argument type="collection">
         <argument key="product_image" type="collection">
           <argument key="uri_prefix">/uploads/annonceImage</argument>
+<<<<<<< HEAD
           <argument key="upload_destination">C:\Users\Boufares\Documents\GitHub\Souk\app/../web/uploads/annonceImage</argument>
+=======
+          <argument key="upload_destination">C:\Users\HAYFA\Documents\GitHub\Souk\app/../web/uploads/annonceImage</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
           <argument key="inject_on_load">false</argument>
           <argument key="delete_on_update">true</argument>
           <argument key="delete_on_remove">true</argument>
@@ -5672,7 +6917,11 @@
     </service>
     <service id="knp_snappy.pdf" class="Knp\Snappy\Pdf">
       <tag name="monolog.logger" channel="snappy"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="collection">
         <argument key="no-outline">true</argument>
         <argument key="page-size">LETTER</argument>
@@ -5685,7 +6934,11 @@
     </service>
     <service id="knp_snappy.image" class="Knp\Snappy\Image">
       <tag name="monolog.logger" channel="snappy"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="collection"/>
       <argument type="collection"/>
       <call method="setLogger">
@@ -5794,7 +7047,11 @@
         </argument>
       </call>
     </service>
+<<<<<<< HEAD
     <service id="2_d69f724c9e675a562da87a0539963d51848f9d5e9612521fe0a69ad6fd5437d1" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+=======
+    <service id="2_a04814876c2d23bed7b338de078c9481654c363b07ba1ac176bb1d2da294e912" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>null</argument>
       <argument>UTF-8</argument>
       <argument>1</argument>
@@ -5805,7 +7062,11 @@
         </argument>
       </call>
     </service>
+<<<<<<< HEAD
     <service id="1_d69f724c9e675a562da87a0539963d51848f9d5e9612521fe0a69ad6fd5437d1" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+=======
+    <service id="1_a04814876c2d23bed7b338de078c9481654c363b07ba1ac176bb1d2da294e912" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -5882,7 +7143,11 @@
       </argument>
       <argument>bottom</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -5895,11 +7160,19 @@
       <argument>true</argument>
     </service>
     <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
+<<<<<<< HEAD
       <argument type="service" id="1_d69f724c9e675a562da87a0539963d51848f9d5e9612521fe0a69ad6fd5437d1"/>
     </service>
     <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="2_d69f724c9e675a562da87a0539963d51848f9d5e9612521fe0a69ad6fd5437d1"/>
+=======
+      <argument type="service" id="1_a04814876c2d23bed7b338de078c9481654c363b07ba1ac176bb1d2da294e912"/>
+    </service>
+    <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
+      <tag name="twig.extension"/>
+      <argument type="service" id="2_a04814876c2d23bed7b338de078c9481654c363b07ba1ac176bb1d2da294e912"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     </service>
     <service id="web_profiler.debug_toolbar" class="Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener">
       <tag name="kernel.event_subscriber"/>
@@ -5918,12 +7191,20 @@
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk/public</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk/public</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>dev</argument>
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command"/>
+<<<<<<< HEAD
       <argument>C:\Users\Boufares\Documents\GitHub\Souk/public</argument>
+=======
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk/public</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument>dev</argument>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
@@ -6182,42 +7463,76 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false" lazy="true">
+<<<<<<< HEAD
       <argument>GtRuJktgTp</argument>
       <argument>0</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>OOBq2cUTxl</argument>
+      <argument>0</argument>
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
+<<<<<<< HEAD
       <argument>yTz2Orj9zK</argument>
       <argument>0</argument>
       <argument>uhUjUAKU1y6xldH-GyrJff</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>iLPprOd1gL</argument>
+      <argument>0</argument>
+      <argument>5FeU3MF8FYU9U47KIyMU+t</argument>
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
+<<<<<<< HEAD
       <argument>RDU2vyc6J-</argument>
       <argument>0</argument>
       <argument>uhUjUAKU1y6xldH-GyrJff</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>k5aEVfvipW</argument>
+      <argument>0</argument>
+      <argument>5FeU3MF8FYU9U47KIyMU+t</argument>
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
+<<<<<<< HEAD
       <argument>9u10Uwuu4p</argument>
       <argument>0</argument>
       <argument>uhUjUAKU1y6xldH-GyrJff</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>o0fJ6PZZ-e</argument>
+      <argument>0</argument>
+      <argument>5FeU3MF8FYU9U47KIyMU+t</argument>
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
+<<<<<<< HEAD
       <argument>hF5WpgQyqV</argument>
       <argument>0</argument>
       <argument>uhUjUAKU1y6xldH-GyrJff</argument>
       <argument>C:\Users\Boufares\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+=======
+      <argument>hBw-X+yO4T</argument>
+      <argument>0</argument>
+      <argument>5FeU3MF8FYU9U47KIyMU+t</argument>
+      <argument>C:\Users\HAYFA\Documents\GitHub\Souk\var\cache\dev/pools</argument>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -6391,7 +7706,11 @@
     <service id="console.command.symfony_bundle_webserverbundle_command_serverstopcommand" alias="web_server.command.server_stop"/>
     <service id="console.command.symfony_bundle_webserverbundle_command_serverstatuscommand" alias="web_server.command.server_status"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>
+<<<<<<< HEAD
     <service id="service_locator.b8d2046fb854cde05549fb309e1a80d2" alias="1_9dfeda4bdace8bcbcee66149a951f13d8dc8d5e6923a1aa67ea254b69c0a0e37" public="false"/>
+=======
+    <service id="service_locator.b8d2046fb854cde05549fb309e1a80d2" alias="1_c773d88dc0c9d9c4465ebe3564d6760399f9cfd3e6ba075c2894e496b3262faf" public="false"/>
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
     <service id="translator.logging.inner" alias="translator.default" public="false"/>
     <service id="translator.data_collector.inner" alias="translator.logging" public="false"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher"/>
