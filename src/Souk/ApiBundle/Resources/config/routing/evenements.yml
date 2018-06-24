@@ -1,3 +1,10 @@
-get_All_Annonces:
+get_All_Evenements:
     path:     /allEvents
     defaults: { _controller: ApiBundle:EvenementsApi:getEvents}
+get_All_Evenements_by_user:
+    path:     /allEvents/user/{id}
+    defaults: { _controller: ApiBundle:EvenementsApi:getEventsbyUser}
+
+get_All_Evenements_by_id:
+    path:     /allEvents/{id}
+    defaults: { _controller: ApiBundle:EvenementsApi:getEventsbyId}

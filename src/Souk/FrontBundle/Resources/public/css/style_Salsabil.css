@@ -974,6 +974,8 @@ ul.nav.nav-pills {
         padding-left: 0em;
     }
 }
+
+
 @media(max-width:414px){
     .logo h1 {
         font-size: 2.3em;

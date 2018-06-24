@@ -561,7 +561,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
-<<<<<<< HEAD
                 elseif (0 === strpos($pathinfo, '/api/a')) {
                     // api_Annonces
                     if ('/api/annonces/all' === $pathinfo) {
@@ -578,16 +577,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::listeAction',  '_route' => 'liste',);
                     }
 
-=======
-                // api_Annonces
-                if ('/api/annonces/all' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getAllAnnoncesAction',  '_route' => 'api_Annonces',);
-                }
-
-                // get_Annonce
-                if (0 === strpos($pathinfo, '/api/annonces/AnnoncesById') && preg_match('#^/api/annonces/AnnoncesById/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::GetAnnonceByIdAction',));
->>>>>>> 005b4bcfd7c38bab859621197074b2c12a177c55
                 }
 
                 // liste_reclamations
@@ -600,13 +589,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'new_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::newRecAction',));
                 }
 
-                // get_All_Annonces
-                if ('/api/evenements/allEvents' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
-<<<<<<< HEAD
-=======
->>>>>>> 005b4bcfd7c38bab859621197074b2c12a177c55
->>>>>>> ce2243c2e22af92965f4aa7e3c554cd135afede8
+                if (0 === strpos($pathinfo, '/api/evenements/allEvents')) {
+                    // get_All_Evenements
+                    if ('/api/evenements/allEvents' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Evenements',);
+                    }
+
+                    // get_All_Evenements_by_user
+                    if (0 === strpos($pathinfo, '/api/evenements/allEvents/user') && preg_match('#^/api/evenements/allEvents/user/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_All_Evenements_by_user')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsbyUserAction',));
+                    }
+
+                    // get_All_Evenements_by_id
+                    if (preg_match('#^/api/evenements/allEvents/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_All_Evenements_by_id')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsbyIdAction',));
+                    }
+
                 }
 
             }

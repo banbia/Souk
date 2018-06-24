@@ -78,7 +78,7 @@ class __TwigTemplate_3ea14c023c9f4465db4872837b952bb20faaa936a9c54673f97232f6849
 
                                 <img src=\"";
             // line 22
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("uploads/annonceImage/no.png"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/tunis.jpg"), "html", null, true);
             echo "\" style=\"width:100%;height: 200px\">
 
                         </a>
@@ -198,7 +198,7 @@ class __TwigTemplate_3ea14c023c9f4465db4872837b952bb20faaa936a9c54673f97232f6849
                         <a href=\"#\">
 
 
-                                <img src=\"{{ asset('uploads/annonceImage/no.png') }}\" style=\"width:100%;height: 200px\">
+                                <img src=\"{{ asset('bundles/front/images/tunis.jpg') }}\" style=\"width:100%;height: 200px\">
 
                         </a>
                         <div align=\"center\" class=\"blog-grid\">

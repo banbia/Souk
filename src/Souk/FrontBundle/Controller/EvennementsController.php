@@ -26,9 +26,10 @@ class EvennementsController extends Controller
      */
     public function indexAction(Request $request)
     {
+
         $em = $this->getDoctrine()->getManager();
 
-        $evennements = $em->getRepository('BackBundle:Evennements')->findAll();
+        $evennements = $em->getRepository('BackBundle:Evennements')->findBy(array('commercial' =>$this->getUser()));
         // Salsabil API pagination
         //get access to paginator methods : dump(get_class($paginator));
         /**
