@@ -37,7 +37,7 @@ class AnnoncesApiController extends Controller
     $em = $this->getDoctrine()->getManager();
     //get commercial and categorie object
     $commercial = $em->getRepository('UserBundle:User')->find($commercial);
-    $categorie = $em->getRepository('BackBundle:Categories')->find($categorie);
+    $categorie = $em->getRepository('BackBundle:Categories')->findBy($categorie);
 
     //instance annonce
     $annonce= new Annonces();
