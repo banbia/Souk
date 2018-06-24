@@ -5,3 +5,9 @@ liste_reclamations:
 new_reclamations:
     path:     newR/{contenu}/{commercial}
     defaults: { _controller: ApiBundle:ReclamationApi:newRec }
+edit_commande:
+    path:     /edit/{rec}/{commer}/{contenu}
+    defaults: { _controller: ApiBundle:CommandesApi:modif }
+confirmer_reclamations:
+    path:     /accepter/
+    defaults: { _controller: ApiBundle:CommandesApi:accepterRec }

@@ -234,7 +234,6 @@
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
     <parameter key="twig.exception_listener.controller">twig.controller.exception:showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
-      <parameter>@VichUploader/Form/fields.html.twig</parameter>
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
@@ -825,7 +824,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>rYoPutsL0c3SldIcRye2Ux</argument>
+      <argument>v70ZG5pVeKNrCEKVms75gB</argument>
       <argument>C:\Users\Soumaya\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -835,7 +834,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>rYoPutsL0c3SldIcRye2Ux</argument>
+      <argument>v70ZG5pVeKNrCEKVms75gB</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1373,7 +1372,6 @@
             <argument>C:\Users\Soumaya\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.cs.yml</argument>
             <argument>C:\Users\Soumaya\Documents\GitHub\Souk\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.cs.yml</argument>
             <argument>C:\Users\Soumaya\Documents\GitHub\Souk\vendor\friendsofsymfony\message-bundle\FOS\MessageBundle/Resources/translations\FOSMessageBundle.cs.yml</argument>
-            <argument>C:\Users\Soumaya\Documents\GitHub\Souk\vendor\vich\uploader-bundle/Resources/translations\VichUploaderBundle.cs.yml</argument>
           </argument>
           <argument key="cy" type="collection">
             <argument>C:\Users\Soumaya\Documents\GitHub\Souk\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cy.xlf</argument>
@@ -2255,6 +2253,14 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -3426,12 +3432,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5b1baa37ae17c9.60840577</argument>
+      <argument>5b2e1fbcab7610.67572337</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5b1baa37ae17c9.60840577</argument>
+      <argument>5b2e1fbcab7610.67572337</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3820,7 +3826,6 @@
     </service>
     <service id="twig.form.engine" class="Symfony\Bridge\Twig\Form\TwigRendererEngine" public="false">
       <argument type="collection">
-        <argument>@VichUploader/Form/fields.html.twig</argument>
         <argument>form_div_layout.html.twig</argument>
       </argument>
       <argument type="service" id="twig"/>
@@ -4316,7 +4321,6 @@
           <argument key="UserBundle">Souk\UserBundle\Entity</argument>
           <argument key="BackBundle">Souk\BackBundle\Entity</argument>
           <argument key="FOSMessageBundle">FOS\MessageBundle\Entity</argument>
-          <argument key="VichUploaderBundle">Vich\UploaderBundle\Entity</argument>
         </argument>
       </call>
       <call method="setMetadataCacheImpl">
@@ -4365,7 +4369,6 @@
         <argument>C:\Users\Soumaya\Documents\GitHub\Souk\src\Souk\FrontBundle\Entity</argument>
         <argument>C:\Users\Soumaya\Documents\GitHub\Souk\src\Souk\UserBundle\Entity</argument>
         <argument>C:\Users\Soumaya\Documents\GitHub\Souk\src\Souk\BackBundle\Entity</argument>
-        <argument>C:\Users\Soumaya\Documents\GitHub\Souk\vendor\vich\uploader-bundle\Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_xml_metadata_driver" class="Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver" public="false">
@@ -4388,10 +4391,6 @@
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
         <argument>Souk\BackBundle\Entity</argument>
-      </call>
-      <call method="addDriver">
-        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
-        <argument>Vich\UploaderBundle\Entity</argument>
       </call>
       <call method="addDriver">
         <argument type="service" id="doctrine.orm.default_xml_metadata_driver"/>
@@ -5567,7 +5566,11 @@
     <service id="vich_uploader.file_injector" class="Vich\UploaderBundle\Injector\FileInjector" public="false">
       <argument type="service" id="vich_uploader.storage.file_system"/>
     </service>
-    <service id="vich_uploader.metadata.file_locator" class="Metadata\Driver\FileLocator" public="false">
+    <service id="vich_uploader.templating.helper.uploader_helper" class="Vich\UploaderBundle\Templating\Helper\UploaderHelper">
+      <tag name="templating.helper" alias="vich_uploader"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+    </service>
+    <service id="vich_uploader.metadata.file_locator" class="Vich\UploaderBundle\Metadata\Driver\FileLocator" public="false">
       <argument type="collection"/>
     </service>
     <service id="vich_uploader.metadata_driver.annotation" class="Vich\UploaderBundle\Metadata\Driver\AnnotationDriver" public="false">
@@ -5579,7 +5582,7 @@
     <service id="vich_uploader.metadata_driver.yaml" class="Vich\UploaderBundle\Metadata\Driver\YamlDriver" public="false">
       <argument type="service" id="vich_uploader.metadata.file_locator"/>
     </service>
-    <service id="vich_uploader.metadata_driver.chain" class="Metadata\Driver\DriverChain" public="false">
+    <service id="vich_uploader.metadata_driver.chain" class="Vich\UploaderBundle\Metadata\Driver\ChainDriver" public="false">
       <argument type="collection">
         <argument type="service" id="vich_uploader.metadata_driver.annotation"/>
         <argument type="service" id="vich_uploader.metadata_driver.yaml"/>
@@ -5627,10 +5630,18 @@
     <service id="vich_uploader.namer_property" class="Vich\UploaderBundle\Naming\PropertyNamer"/>
     <service id="vich_uploader.namer_origname" class="Vich\UploaderBundle\Naming\OrignameNamer"/>
     <service id="vich_uploader.namer_hash" class="Vich\UploaderBundle\Naming\HashNamer"/>
-    <service id="vich_uploader.namer_base64" class="Vich\UploaderBundle\Naming\Base64Namer"/>
     <service id="vich_uploader.directory_namer_subdir" class="Vich\UploaderBundle\Naming\SubdirDirectoryNamer"/>
-    <service id="vich_uploader.namer_directory_property" class="Vich\UploaderBundle\Naming\PropertyDirectoryNamer">
-      <argument type="service" id="property_accessor"/>
+    <service id="vich_uploader.form.type.file" class="Vich\UploaderBundle\Form\Type\VichFileType">
+      <tag name="form.type" alias="vich_file"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="vich_uploader.form.type.image" class="Vich\UploaderBundle\Form\Type\VichImageType">
+      <tag name="form.type" alias="vich_image"/>
+      <argument type="service" id="vich_uploader.storage.file_system"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+      <argument type="service" id="translator.data_collector"/>
     </service>
     <service id="vich_uploader.download_handler" class="Vich\UploaderBundle\Handler\DownloadHandler">
       <argument type="service" id="vich_uploader.property_mapping_factory"/>
@@ -5641,25 +5652,6 @@
       <argument type="service" id="vich_uploader.storage.file_system"/>
       <argument type="service" id="vich_uploader.file_injector"/>
       <argument type="service" id="debug.event_dispatcher"/>
-    </service>
-    <service id="vich_uploader.form.type.file" class="Vich\UploaderBundle\Form\Type\VichFileType">
-      <tag name="form.type" alias="vich_file"/>
-      <argument type="service" id="vich_uploader.storage.file_system"/>
-      <argument type="service" id="vich_uploader.upload_handler"/>
-      <argument type="service" id="vich_uploader.property_mapping_factory"/>
-      <argument type="service" id="property_accessor"/>
-    </service>
-    <service id="vich_uploader.form.type.image" class="Vich\UploaderBundle\Form\Type\VichImageType">
-      <tag name="form.type" alias="vich_image"/>
-      <argument type="service" id="vich_uploader.storage.file_system"/>
-      <argument type="service" id="vich_uploader.upload_handler"/>
-      <argument type="service" id="vich_uploader.property_mapping_factory"/>
-      <argument type="service" id="property_accessor"/>
-      <argument>null</argument>
-    </service>
-    <service id="vich_uploader.templating.helper.uploader_helper" class="Vich\UploaderBundle\Templating\Helper\UploaderHelper">
-      <tag name="templating.helper" alias="vich_uploader"/>
-      <argument type="service" id="vich_uploader.storage.file_system"/>
     </service>
     <service id="vich_uploader.twig.extension.uploader" class="Vich\UploaderBundle\Twig\Extension\UploaderExtension" public="false">
       <tag name="twig.extension"/>
@@ -6208,7 +6200,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>iNyqAPhxnv</argument>
       <argument>0</argument>
-      <argument>rYoPutsL0c3SldIcRye2Ux</argument>
+      <argument>v70ZG5pVeKNrCEKVms75gB</argument>
       <argument>C:\Users\Soumaya\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6216,7 +6208,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>3ejbczDjBS</argument>
       <argument>0</argument>
-      <argument>rYoPutsL0c3SldIcRye2Ux</argument>
+      <argument>v70ZG5pVeKNrCEKVms75gB</argument>
       <argument>C:\Users\Soumaya\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6224,7 +6216,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>HgaNKJl2Rg</argument>
       <argument>0</argument>
-      <argument>rYoPutsL0c3SldIcRye2Ux</argument>
+      <argument>v70ZG5pVeKNrCEKVms75gB</argument>
       <argument>C:\Users\Soumaya\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6232,7 +6224,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>rxK-uFH3BQ</argument>
       <argument>0</argument>
-      <argument>rYoPutsL0c3SldIcRye2Ux</argument>
+      <argument>v70ZG5pVeKNrCEKVms75gB</argument>
       <argument>C:\Users\Soumaya\Documents\GitHub\Souk\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -6350,6 +6342,7 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
     <service id="fos_user.doctrine_registry" alias="doctrine" public="false"/>
     <service id="FOS\UserBundle\Security\LoginManagerInterface" alias="fos_user.security.login_manager" public="false"/>
+    <service id="FOS\UserBundle\Controller\SecurityController" alias="fos_user.security.controller"/>
     <service id="FOS\UserBundle\Util\TokenGeneratorInterface" alias="fos_user.util.token_generator.default" public="false"/>
     <service id="FOS\UserBundle\Util\PasswordUpdaterInterface" alias="fos_user.util.password_updater" public="false"/>
     <service id="FOS\UserBundle\Util\CanonicalFieldsUpdater" alias="fos_user.util.canonical_fields_updater" public="false"/>
@@ -6358,6 +6351,10 @@
     <service id="fos_user.util.username_canonicalizer" alias="fos_user.util.canonicalizer.default"/>
     <service id="fos_user.util.token_generator" alias="fos_user.util.token_generator.default"/>
     <service id="fos_user.user_manager" alias="fos_user.user_manager.default"/>
+    <service id="FOS\UserBundle\Controller\ProfileController" alias="fos_user.profile.controller"/>
+    <service id="FOS\UserBundle\Controller\RegistrationController" alias="fos_user.registration.controller"/>
+    <service id="FOS\UserBundle\Controller\ChangePasswordController" alias="fos_user.change_password.controller"/>
+    <service id="FOS\UserBundle\Controller\ResettingController" alias="fos_user.resetting.controller"/>
     <service id="fos_user.mailer" alias="fos_user.mailer.default"/>
     <service id="fos_user.session" alias="session" public="false"/>
     <service id="fos_message.message_manager" alias="fos_message.message_manager.default"/>
@@ -6391,7 +6388,6 @@
     <service id="vich_uploader.storage" alias="vich_uploader.storage.file_system"/>
     <service id="vich_uploader.metadata_driver" alias="vich_uploader.metadata_driver.chain" public="false"/>
     <service id="vich_uploader.metadata.cache" alias="vich_uploader.metadata.cache.file_cache" public="false"/>
-    <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" alias="vich_uploader.templating.helper.uploader_helper" public="false"/>
     <service id="Knp\Snappy\Pdf" alias="knp_snappy.pdf"/>
     <service id="Knp\Snappy\Image" alias="knp_snappy.image"/>
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>

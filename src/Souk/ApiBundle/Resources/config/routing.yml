@@ -32,11 +32,8 @@ api_commentaireAnc:
 api_commentaireEvs:
     resource: "@ApiBundle/Resources/config/routing/commentaireEvs.yml"
     prefix:   /commentaire
-<<<<<<< HEAD
-
-=======
 #service salsabil
 api_evenements:
     resource: "@ApiBundle/Resources/config/routing/evenements.yml"
     prefix:   /evenements
->>>>>>> b67851bf115fb2324def67877c637d4244caabee
+

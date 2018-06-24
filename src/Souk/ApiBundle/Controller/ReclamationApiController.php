@@ -29,7 +29,7 @@ class ReclamationApiController extends Controller{
         };
 
         $normalizer = new ObjectNormalizer();
-        $normalizer->setIgnoredAttributes(array('client','commercial'));
+        $normalizer->setIgnoredAttributes(array('client'));
         $normalizer->setCallbacks(array('dateRec' => $callback));
         $normalizer->setCircularReferenceLimit(1);
         $serializer = new Serializer([$normalizer]);
@@ -67,35 +67,28 @@ class ReclamationApiController extends Controller{
 
     }
 
-    /*public function showRecAction(Reclamations $reclamations.yml)
-    {
-        $deleteForm = $this->createDeleteForm($reclamations.yml);
 
-        return $this->render('FrontBundle:reclamations:show.html.twig', array(
-            'reclamations.yml' => $reclamations.yml,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }*/
-
-    /**
-     * Displays a form to edit an existing reclamations.yml entity.
-     *
-     */
-
-    public function editRecAction($contenu)
+    public function editRecAction($rec,$commer,$contenu)
     {
         $em = $this->getDoctrine()->getManager();
-        $reclamations = new Reclamations();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->find($rec);
+        $reclamations->seId($rec);
+        $reclamations->setCommercial($commer);
         $reclamations->setContenu($contenu);
-        ;
         $em->persist($reclamations);
-
         $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($reclamations, 'json');
+        //retourner update => ok comme resultat json
+        $json = array("update"=>"ok");
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            //return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($json, 'json');
 
         return new JsonResponse($formatted);
-
     }
 
     /******! PARTIE ADMIN !******/
@@ -129,6 +122,7 @@ class ReclamationApiController extends Controller{
         return new JsonResponse($formatted);
 
     }
+
 
 
 }
