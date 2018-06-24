@@ -21,9 +21,7 @@ api_reclamations:
 api_commentaireAnc:
     resource: "@ApiBundle/Resources/config/routing/commentaireAnc.yml"
     prefix:   /commentaire
-api_commentaireEvs:
-    resource: "@ApiBundle/Resources/config/routing/commentaireEvs.yml"
-    prefix:   /commentaire
+
 #service salsabil
 api_evenements:
     resource: "@ApiBundle/Resources/config/routing/evenements.yml"

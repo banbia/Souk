@@ -16,19 +16,25 @@ class AnnoncesApiController extends Controller
   {
 
     $annonce=$this->getDoctrine()->getRepository('BackBundle:Annonces')->findAll();
-    /*
-    $formatted= $serializer->normalize($annonce,'json');
-    return new JsonResponse($formatted);*/
-    $normalizer = new ObjectNormalizer();
-    $normalizer->setCircularReferenceLimit(1);
-    $serializer = new Serializer([$normalizer]);
-    $normalizer->setCircularReferenceHandler(function ($object) {
-      return $object->getId();
-    });
+      $callback = function ($dateTime) {
+          return $dateTime instanceof \DateTime
+              ? $dateTime->format('Y-m-d')
+              : '';
+      };
 
-   /* $serializer = new Serializer(array($normalizer), array(new JsonEncoder()));*/
-    $formatted= $serializer->normalize($annonce, 'json');
-    return new JsonResponse($formatted);
+
+      $normalizer = new ObjectNormalizer();
+      $normalizer->setIgnoredAttributes(array('commercial','client','commandes','commentaires','signalsAnc','images'));
+      $normalizer->setCallbacks(array('dateCreation' => $callback));
+      $normalizer->setCircularReferenceLimit(1);
+      $serializer = new Serializer([$normalizer]);
+      $normalizer->setCircularReferenceHandler(function ($object) {
+          return $object->getId();
+      });
+
+      $formatted= $serializer->normalize($annonce, 'json');
+
+      return new JsonResponse($formatted);
   }
   //nouvelle annonce
   public function createAction(Request $request,$annonce,$date,$quantite,$client)
