@@ -263,6 +263,14 @@ class __TwigTemplate_12586ab1d1ce956af381898255a56fc7afc34d0a2e8b6a827fbefdc7ad6
         </div>
     </div>
     ";
+        // line 107
+        echo "    <div class=\"navigation text-center\">
+        ";
+        // line 108
+        echo $this->env->getExtension('Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension')->render($this->env, ($context["annonces"] ?? $this->getContext($context, "annonces")));
+        echo "
+    </div>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -283,7 +291,7 @@ class __TwigTemplate_12586ab1d1ce956af381898255a56fc7afc34d0a2e8b6a827fbefdc7ad6
 
     public function getDebugInfo()
     {
-        return array (  256 => 97,  245 => 92,  241 => 91,  238 => 90,  228 => 87,  220 => 84,  215 => 81,  210 => 80,  207 => 79,  203 => 78,  196 => 73,  185 => 70,  182 => 69,  178 => 68,  174 => 67,  168 => 63,  154 => 45,  140 => 37,  131 => 31,  126 => 29,  122 => 27,  112 => 24,  105 => 22,  101 => 20,  96 => 19,  90 => 15,  86 => 14,  79 => 9,  70 => 8,  57 => 5,  53 => 4,  50 => 3,  41 => 2,  11 => 1,);
+        return array (  270 => 108,  267 => 107,  256 => 97,  245 => 92,  241 => 91,  238 => 90,  228 => 87,  220 => 84,  215 => 81,  210 => 80,  207 => 79,  203 => 78,  196 => 73,  185 => 70,  182 => 69,  178 => 68,  174 => 67,  168 => 63,  154 => 45,  140 => 37,  131 => 31,  126 => 29,  122 => 27,  112 => 24,  105 => 22,  101 => 20,  96 => 19,  90 => 15,  86 => 14,  79 => 9,  70 => 8,  57 => 5,  53 => 4,  50 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -401,10 +409,10 @@ class __TwigTemplate_12586ab1d1ce956af381898255a56fc7afc34d0a2e8b6a827fbefdc7ad6
             <div class=\"clearfix\"> </div>
         </div>
     </div>
-    {# salsabil api display navigation
+    {#salsabil api display navigation#}
     <div class=\"navigation text-center\">
         {{ knp_pagination_render(annonces) }}
-    </div>#}
+    </div>
 {% endblock %}
 ", "FrontBundle:annonces:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/index.html.twig");
     }

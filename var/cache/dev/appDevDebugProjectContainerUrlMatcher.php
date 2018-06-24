@@ -561,18 +561,45 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
-                // api_Annonces
-                if ('/api/annonces/all' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getAllAnnoncesAction',  '_route' => 'api_Annonces',);
+                elseif (0 === strpos($pathinfo, '/api/annonces')) {
+                    // api_Annonces
+                    if ('/api/annonces/all' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getAllAnnoncesAction',  '_route' => 'api_Annonces',);
+                    }
+
+                    // ajouter_Annonce
+                    if (0 === strpos($pathinfo, '/api/annonces/ajouter') && preg_match('#^/api/annonces/ajouter/(?P<commercial>[^/]++)/(?P<prix>[^/]++)/(?P<categorie>[^/]++)/(?P<description>[^/]++)/(?P<titre>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajouter_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::createAction',));
+                    }
+
+                    // get_Annonce
+                    if (0 === strpos($pathinfo, '/api/annonces/AnnoncesById') && preg_match('#^/api/annonces/AnnoncesById/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::GetAnnonceByIdAction',));
+                    }
+
+                    // modifier_Annonce
+                    if (0 === strpos($pathinfo, '/api/annonces/modifier') && preg_match('#^/api/annonces/modifier/(?P<idannonces>[^/]++)/(?P<prix>[^/]++)/(?P<categorie>[^/]++)/(?P<description>[^/]++)/(?P<titre>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifier_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::modifierAction',));
+                    }
+
+                    // supprimer_Annonce
+                    if (0 === strpos($pathinfo, '/api/annonces/supprimer') && preg_match('#^/api/annonces/supprimer/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'supprimer_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::supprimerAction',));
+                    }
+
                 }
 
-                // get_Annonce
-                if (0 === strpos($pathinfo, '/api/annonces/AnnoncesById') && preg_match('#^/api/annonces/AnnoncesById/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::GetAnnonceByIdAction',));
-                }
+                elseif (0 === strpos($pathinfo, '/api/reclamations')) {
+                    // all_reclamations
+                    if ('/api/reclamations/allReclamations' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::allRecAction',  '_route' => 'all_reclamations',);
+                    }
 
-<<<<<<< HEAD
-                if (0 === strpos($pathinfo, '/api/reclamations')) {
+                    // accepter_reclamations
+                    if (0 === strpos($pathinfo, '/api/reclamations/accepter') && preg_match('#^/api/reclamations/accepter/(?P<rec>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'accepter_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::accepterRecAction',));
+                    }
+
                     // liste_reclamations
                     if (0 === strpos($pathinfo, '/api/reclamations/liste') && preg_match('#^/api/reclamations/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::listeRecAction',));
@@ -583,39 +610,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'new_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::newRecAction',));
                     }
 
-                    // edit_commande
-                    if (0 === strpos($pathinfo, '/api/reclamations/edit') && preg_match('#^/api/reclamations/edit/(?P<rec>[^/]++)/(?P<commer>[^/]++)/(?P<contenu>[^/]++)$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_commande')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\CommandesApiController::modifAction',));
+                    // edit_reclamations
+                    if (0 === strpos($pathinfo, '/api/reclamations/edit') && preg_match('#^/api/reclamations/edit/(?P<rec>[^/]++)/(?P<contenu>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::editRecAction',));
                     }
 
-                    // confirmer_reclamations
-                    if ('/api/reclamations/accepter' === $trimmedPathinfo) {
-                        if (substr($pathinfo, -1) !== '/') {
-                            return $this->redirect($rawPathinfo.'/', 'confirmer_reclamations');
-                        }
-
-                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\CommandesApiController::accepterRecAction',  '_route' => 'confirmer_reclamations',);
+                    // rejeter_reclamations
+                    if (0 === strpos($pathinfo, '/api/reclamations/rejeter') && preg_match('#^/api/reclamations/rejeter/(?P<rec>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'rejeter_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::rejeterRecAction',));
                     }
 
-=======
-                // liste_reclamations
-                if (0 === strpos($pathinfo, '/api/reclamations/reclamations/liste') && preg_match('#^/api/reclamations/reclamations/liste(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::listeRecAction',));
-                }
-
-                // new_reclamations
-                if (0 === strpos($pathinfo, '/api/reclamations/reclamations/newR') && preg_match('#^/api/reclamations/reclamations/newR/(?P<contenu>[^/]++)/(?P<commercial>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'new_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::newRecAction',));
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
                 }
 
                 // get_All_Annonces
                 if ('/api/evenements/allEvents' === $pathinfo) {
-<<<<<<< HEAD
-                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
-=======
                     return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
                 }
 
             }

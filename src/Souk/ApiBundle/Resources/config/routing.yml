@@ -14,14 +14,6 @@ api_annonces:
     resource: "@ApiBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
 #service Soumaya
-
-#api_reclamations:
-     #resource: "@ApiBundle/Resources/config/routing/reclamtion.yml"
-     #prefix:   /reclamations.yml
-liste_reclamations:
-    path:     /reclamations/liste/{id}
-    defaults: { _controller: ApiBundle:ReclamationApi:listeRec }
-
 api_reclamations:
     resource: "@ApiBundle/Resources/config/routing/reclamations.yml"
     prefix:   /reclamations

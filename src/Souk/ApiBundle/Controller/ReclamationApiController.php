@@ -13,10 +13,31 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ReclamationApiController extends Controller{
 
-    ///se connecter à traver l'application
+
+    public function allRecAction()
+    {
+
+        $reclamations=$this->getDoctrine()->getRepository('BackBundle:Reclamations')->findAll();
+
+        $callback = function ($dateTime) {
+            return $dateTime instanceof \DateTime
+                ? $dateTime->format('Y-m-d')
+                : '';
+        };
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(array('annonce','commentaires','evennements','reservations'));
+        $normalizer->setCallbacks(array('dateRec' => $callback));
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($reclamations, 'json');
+        return new JsonResponse($formatted);
+    }
 
 
-        //Crud Mobile
     public function listeRecAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -29,7 +50,7 @@ class ReclamationApiController extends Controller{
         };
 
         $normalizer = new ObjectNormalizer();
-        $normalizer->setIgnoredAttributes(array('client'));
+        $normalizer->setIgnoredAttributes(array('client','annonce','commentaires'));
         $normalizer->setCallbacks(array('dateRec' => $callback));
         $normalizer->setCircularReferenceLimit(1);
         $serializer = new Serializer([$normalizer]);
@@ -68,14 +89,13 @@ class ReclamationApiController extends Controller{
     }
 
 
-    public function editRecAction($rec,$commer,$contenu)
+    public function editRecAction($rec,$contenu)
     {
         $em = $this->getDoctrine()->getManager();
         $reclamations = $em->getRepository('BackBundle:Reclamations')->find($rec);
-        $reclamations->seId($rec);
-        $reclamations->setCommercial($commer);
+
         $reclamations->setContenu($contenu);
-        $em->persist($reclamations);
+
         $em->flush();
         //retourner update => ok comme resultat json
         $json = array("update"=>"ok");
@@ -92,35 +112,47 @@ class ReclamationApiController extends Controller{
     }
 
     /******! PARTIE ADMIN !******/
-    public function accepterRecAction()
+    public function accepterRecAction($rec)
     {
         $em = $this->getDoctrine()->getManager();
-        $reclamations = new Reclamations();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->find($rec);
         $reclamations->setEtat(1);
-        ;
-        $em->persist($reclamations);
 
         $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($reclamations, 'json');
+        //retourner delete => ok comme resultat json
+        $json = array("Accepter"=>"ok");
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            //return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($json, 'json');
 
         return new JsonResponse($formatted);
 
     }
-    public function rejeterRecAction()
+
+    public function rejeterRecAction($rec)
     {
         $em = $this->getDoctrine()->getManager();
-        $reclamations = new Reclamations();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->find($rec);
         $reclamations->setEtat(-1);
-        ;
-        $em->persist($reclamations);
 
         $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($reclamations, 'json');
+        //retourner delete => ok comme resultat json
+        $json = array("Accepter"=>"ok");
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            //return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($json, 'json');
 
         return new JsonResponse($formatted);
-
     }
 
 
