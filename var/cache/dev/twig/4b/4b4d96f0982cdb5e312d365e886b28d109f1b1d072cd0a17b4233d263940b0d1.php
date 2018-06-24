@@ -149,6 +149,10 @@ class __TwigTemplate_83892e3419f6194bd881a514dd17c6d9edc505c91ed27261d4b4cd0415a
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
+<<<<<<< HEAD
 ", "@WebProfiler/Collector/ajax.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\ajax.html.twig");
+=======
+", "@WebProfiler/Collector/ajax.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\ajax.html.twig");
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 }

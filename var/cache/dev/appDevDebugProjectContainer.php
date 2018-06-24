@@ -39,8 +39,23 @@ class appDevDebugProjectContainer extends Container
             'knp\\snappy\\pdf' => 'Knp\\Snappy\\Pdf',
         );
         $this->methodMap = array(
+<<<<<<< HEAD
             '1_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53' => 'get1Bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53Service',
             '2_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53' => 'get2Bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53Service',
+=======
+<<<<<<< HEAD
+            '1_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b' => 'get15a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05bService',
+            '2_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b' => 'get25a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05bService',
+=======
+<<<<<<< HEAD
+            '1_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f' => 'get14ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9fService',
+            '2_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f' => 'get24ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9fService',
+=======
+            '1_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb' => 'get1Ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bbService',
+            '2_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb' => 'get2Ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bbService',
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
             'annotation_reader' => 'getAnnotationReaderService',
             'annotations.cache' => 'getAnnotations_CacheService',
             'annotations.reader' => 'getAnnotations_ReaderService',
@@ -430,8 +445,23 @@ class appDevDebugProjectContainer extends Container
             'web_profiler.debug_toolbar' => 'getWebProfiler_DebugToolbarService',
         );
         $this->privates = array(
+<<<<<<< HEAD
             '1_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53' => true,
             '2_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53' => true,
+=======
+<<<<<<< HEAD
+            '1_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b' => true,
+            '2_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b' => true,
+=======
+<<<<<<< HEAD
+            '1_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f' => true,
+            '2_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f' => true,
+=======
+            '1_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb' => true,
+            '2_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb' => true,
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
             'annotations.cache' => true,
             'annotations.reader' => true,
             'app.form.registration' => true,
@@ -650,9 +680,24 @@ class appDevDebugProjectContainer extends Container
 
         $c = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder($a, $b, ($this->targetDirs[3].'\\app/Resources'));
 
+<<<<<<< HEAD
         return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, ${($_ = isset($this->services['templating.locator']) ? $this->services['templating.locator'] : $this->getTemplating_LocatorService()) && false ?: '_'}), 1 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer(${($_ = isset($this->services['validator.builder']) ? $this->services['validator.builder'] : $this->get('validator.builder')) && false ?: '_'}, (__DIR__.'/validation.php'), ${($_ = isset($this->services['cache.validator']) ? $this->services['cache.validator'] : $this->getCache_ValidatorService()) && false ?: '_'}), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TranslationsCacheWarmer(${($_ = isset($this->services['translator.default']) ? $this->services['translator.default'] : $this->get('translator.default')) && false ?: '_'}), 3 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer(${($_ = isset($this->services['router']) ? $this->services['router'] : $this->get('router')) && false ?: '_'}), 4 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer(${($_ = isset($this->services['annotations.reader']) ? $this->services['annotations.reader'] : $this->getAnnotations_ReaderService()) && false ?: '_'}, (__DIR__.'/annotations.php'), ${($_ = isset($this->services['cache.annotations']) ? $this->services['cache.annotations'] : $this->getCache_AnnotationsService()) && false ?: '_'}), 5 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer(new \Symfony\Component\DependencyInjection\ServiceLocator(array('twig' => function () {
             $f = function (\Twig\Environment $v) { return $v; }; return $f(${($_ = isset($this->services['twig']) ? $this->services['twig'] : $this->get('twig')) && false ?: '_'});
         })), $c, array(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form') => NULL)), 6 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer($this, new \Symfony\Bundle\TwigBundle\TemplateIterator($a, ($this->targetDirs[3].'\\app'), array(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form') => NULL))), 7 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer(${($_ = isset($this->services['doctrine']) ? $this->services['doctrine'] : $this->get('doctrine')) && false ?: '_'})));
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, ${($_ = isset($this->services['templating.locator']) ? $this->services['templating.locator'] : $this->getTemplating_LocatorService()) && false ?: '_'}), 1 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer(${($_ = isset($this->services['validator.builder']) ? $this->services['validator.builder'] : $this->get('validator.builder')) && false ?: '_'}, (__DIR__.'/validation.php'), ${($_ = isset($this->services['cache.validator']) ? $this->services['cache.validator'] : $this->getCache_ValidatorService()) && false ?: '_'}), 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TranslationsCacheWarmer(${($_ = isset($this->services['translator.default']) ? $this->services['translator.default'] : $this->get('translator.default')) && false ?: '_'}), 3 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer(${($_ = isset($this->services['router']) ? $this->services['router'] : $this->get('router')) && false ?: '_'}), 4 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer(${($_ = isset($this->services['annotations.reader']) ? $this->services['annotations.reader'] : $this->getAnnotations_ReaderService()) && false ?: '_'}, (__DIR__.'/annotations.php'), ${($_ = isset($this->services['cache.annotations']) ? $this->services['cache.annotations'] : $this->getCache_AnnotationsService()) && false ?: '_'}), 5 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer(new \Symfony\Component\DependencyInjection\ServiceLocator(array('twig' => function () {
+            $f = function (\Twig\Environment $v) { return $v; }; return $f(${($_ = isset($this->services['twig']) ? $this->services['twig'] : $this->get('twig')) && false ?: '_'});
+        })), $c, array(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form') => NULL)), 6 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer($this, new \Symfony\Bundle\TwigBundle\TemplateIterator($a, ($this->targetDirs[3].'\\app'), array(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form') => NULL))), 7 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer(${($_ = isset($this->services['doctrine']) ? $this->services['doctrine'] : $this->get('doctrine')) && false ?: '_'})));
+=======
+        return $this->services['cache_warmer'] = new \Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate(array(0 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer($c, ${($_ = isset($this->services['templating.locator']) ? $this->services['templating.locator'] : $this->getTemplating_LocatorService()) && false ?: '_'}), 1 => ${($_ = isset($this->services['kernel.class_cache.cache_warmer']) ? $this->services['kernel.class_cache.cache_warmer'] : $this->get('kernel.class_cache.cache_warmer')) && false ?: '_'}, 2 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer(${($_ = isset($this->services['validator.builder']) ? $this->services['validator.builder'] : $this->get('validator.builder')) && false ?: '_'}, (__DIR__.'/validation.php'), ${($_ = isset($this->services['cache.validator']) ? $this->services['cache.validator'] : $this->getCache_ValidatorService()) && false ?: '_'}), 3 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\TranslationsCacheWarmer(${($_ = isset($this->services['translator.default']) ? $this->services['translator.default'] : $this->get('translator.default')) && false ?: '_'}), 4 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer(${($_ = isset($this->services['router']) ? $this->services['router'] : $this->get('router')) && false ?: '_'}), 5 => new \Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer(${($_ = isset($this->services['annotations.reader']) ? $this->services['annotations.reader'] : $this->getAnnotations_ReaderService()) && false ?: '_'}, (__DIR__.'/annotations.php'), ${($_ = isset($this->services['cache.annotations']) ? $this->services['cache.annotations'] : $this->getCache_AnnotationsService()) && false ?: '_'}), 6 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheCacheWarmer(new \Symfony\Component\DependencyInjection\ServiceLocator(array('twig' => function () {
+            $f = function (\Twig\Environment $v) { return $v; }; return $f(${($_ = isset($this->services['twig']) ? $this->services['twig'] : $this->get('twig')) && false ?: '_'});
+        })), $c, array(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form') => NULL)), 7 => new \Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer($this, new \Symfony\Bundle\TwigBundle\TemplateIterator($a, ($this->targetDirs[3].'\\app'), array(($this->targetDirs[3].'\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form') => NULL))), 8 => new \Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer(${($_ = isset($this->services['doctrine']) ? $this->services['doctrine'] : $this->get('doctrine')) && false ?: '_'})));
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 
     /**
@@ -663,8 +708,23 @@ class appDevDebugProjectContainer extends Container
     protected function getConfigCacheFactoryService()
     {
         return $this->services['config_cache_factory'] = new \Symfony\Component\Config\ResourceCheckerConfigCacheFactory(new RewindableGenerator(function () {
+<<<<<<< HEAD
             yield 0 => ${($_ = isset($this->services['1_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53']) ? $this->services['1_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53'] : $this->get1Bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53Service()) && false ?: '_'};
             yield 1 => ${($_ = isset($this->services['2_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53']) ? $this->services['2_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53'] : $this->get2Bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53Service()) && false ?: '_'};
+=======
+<<<<<<< HEAD
+            yield 0 => ${($_ = isset($this->services['1_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b']) ? $this->services['1_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b'] : $this->get15a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05bService()) && false ?: '_'};
+            yield 1 => ${($_ = isset($this->services['2_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b']) ? $this->services['2_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b'] : $this->get25a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05bService()) && false ?: '_'};
+=======
+<<<<<<< HEAD
+            yield 0 => ${($_ = isset($this->services['1_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f']) ? $this->services['1_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f'] : $this->get14ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9fService()) && false ?: '_'};
+            yield 1 => ${($_ = isset($this->services['2_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f']) ? $this->services['2_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f'] : $this->get24ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9fService()) && false ?: '_'};
+=======
+            yield 0 => ${($_ = isset($this->services['1_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb']) ? $this->services['1_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb'] : $this->get1Ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bbService()) && false ?: '_'};
+            yield 1 => ${($_ = isset($this->services['2_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb']) ? $this->services['2_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb'] : $this->get2Ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bbService()) && false ?: '_'};
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
         }, 2));
     }
 
@@ -898,6 +958,15 @@ class appDevDebugProjectContainer extends Container
         $instance->addListener('kernel.request', array(0 => function () {
             return ${($_ = isset($this->services['debug.debug_handlers_listener']) ? $this->services['debug.debug_handlers_listener'] : $this->get('debug.debug_handlers_listener')) && false ?: '_'};
         }, 1 => 'configure'), 2048);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        $instance->addListener('console.command', array(0 => function () {
+            return ${($_ = isset($this->services['debug.debug_handlers_listener']) ? $this->services['debug.debug_handlers_listener'] : $this->get('debug.debug_handlers_listener')) && false ?: '_'};
+        }, 1 => 'configure'), 2048);
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
         $instance->addListener('kernel.request', array(0 => function () {
             return ${($_ = isset($this->services['router_listener']) ? $this->services['router_listener'] : $this->get('router_listener')) && false ?: '_'};
         }, 1 => 'onKernelRequest'), 32);
@@ -1202,9 +1271,21 @@ class appDevDebugProjectContainer extends Container
 
         $f = new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this);
         $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\CleanListener('product_image', $e, $a, $b));
+<<<<<<< HEAD
         $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\UploadListener('product_image', $e, $a, $b));
         $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\RemoveListener('product_image', $e, $a, $b));
         $f->addEventSubscriber(new \FOS\UserBundle\Doctrine\UserListener(${($_ = isset($this->services['fos_user.util.password_updater']) ? $this->services['fos_user.util.password_updater'] : $this->getFosUser_Util_PasswordUpdaterService()) && false ?: '_'}, ${($_ = isset($this->services['fos_user.util.canonical_fields_updater']) ? $this->services['fos_user.util.canonical_fields_updater'] : $this->getFosUser_Util_CanonicalFieldsUpdaterService()) && false ?: '_'}));
+=======
+<<<<<<< HEAD
+        $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\UploadListener('product_image', $e, $a, $b));
+        $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\RemoveListener('product_image', $e, $a, $b));
+        $f->addEventSubscriber(new \FOS\UserBundle\Doctrine\UserListener(${($_ = isset($this->services['fos_user.util.password_updater']) ? $this->services['fos_user.util.password_updater'] : $this->getFosUser_Util_PasswordUpdaterService()) && false ?: '_'}, ${($_ = isset($this->services['fos_user.util.canonical_fields_updater']) ? $this->services['fos_user.util.canonical_fields_updater'] : $this->getFosUser_Util_CanonicalFieldsUpdaterService()) && false ?: '_'}));
+=======
+        $f->addEventSubscriber(new \FOS\UserBundle\Doctrine\UserListener(${($_ = isset($this->services['fos_user.util.password_updater']) ? $this->services['fos_user.util.password_updater'] : $this->getFosUser_Util_PasswordUpdaterService()) && false ?: '_'}, ${($_ = isset($this->services['fos_user.util.canonical_fields_updater']) ? $this->services['fos_user.util.canonical_fields_updater'] : $this->getFosUser_Util_CanonicalFieldsUpdaterService()) && false ?: '_'}));
+        $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\RemoveListener('product_image', $e, $a, $b));
+        $f->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\UploadListener('product_image', $e, $a, $b));
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
         $f->addEventListener(array(0 => 'loadClassMetadata'), ${($_ = isset($this->services['doctrine.orm.default_listeners.attach_entity_listeners']) ? $this->services['doctrine.orm.default_listeners.attach_entity_listeners'] : $this->get('doctrine.orm.default_listeners.attach_entity_listeners')) && false ?: '_'});
 
         return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : $this->get('doctrine.dbal.connection_factory')) && false ?: '_'}->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'souk', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driverOptions' => array(), 'defaultTableOptions' => array()), $d, $f, array());
@@ -1463,7 +1544,19 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
+<<<<<<< HEAD
         $instance->setNamespace('sf_orm_default_f87896b3a43750225985ccdeaa88be4fbc72c5b09adb85699b6a18300b766da6');
+=======
+<<<<<<< HEAD
+        $instance->setNamespace('sf_orm_default_f481828ddd2fa1799298b070f72391c110b39d5530de6710be1bbc8e0a4e7fc2');
+=======
+<<<<<<< HEAD
+        $instance->setNamespace('sf_orm_default_7121e08bd7a49ae8a8a09fb965b1461f7c6a6e5e37c13a9f7daac3bb60865db9');
+=======
+        $instance->setNamespace('sf_orm_default_c68e6c99aee765261397d2d4ecf6418454611358133ba6b881ba29e78f44d806');
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 
         return $instance;
     }
@@ -1477,7 +1570,19 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
+<<<<<<< HEAD
         $instance->setNamespace('sf_orm_default_f87896b3a43750225985ccdeaa88be4fbc72c5b09adb85699b6a18300b766da6');
+=======
+<<<<<<< HEAD
+        $instance->setNamespace('sf_orm_default_f481828ddd2fa1799298b070f72391c110b39d5530de6710be1bbc8e0a4e7fc2');
+=======
+<<<<<<< HEAD
+        $instance->setNamespace('sf_orm_default_7121e08bd7a49ae8a8a09fb965b1461f7c6a6e5e37c13a9f7daac3bb60865db9');
+=======
+        $instance->setNamespace('sf_orm_default_c68e6c99aee765261397d2d4ecf6418454611358133ba6b881ba29e78f44d806');
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 
         return $instance;
     }
@@ -1491,7 +1596,19 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['doctrine_cache.providers.doctrine.orm.default_result_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
 
+<<<<<<< HEAD
         $instance->setNamespace('sf_orm_default_f87896b3a43750225985ccdeaa88be4fbc72c5b09adb85699b6a18300b766da6');
+=======
+<<<<<<< HEAD
+        $instance->setNamespace('sf_orm_default_f481828ddd2fa1799298b070f72391c110b39d5530de6710be1bbc8e0a4e7fc2');
+=======
+<<<<<<< HEAD
+        $instance->setNamespace('sf_orm_default_7121e08bd7a49ae8a8a09fb965b1461f7c6a6e5e37c13a9f7daac3bb60865db9');
+=======
+        $instance->setNamespace('sf_orm_default_c68e6c99aee765261397d2d4ecf6418454611358133ba6b881ba29e78f44d806');
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 
         return $instance;
     }
@@ -2709,7 +2826,15 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getJmsSerializer_DatetimeHandlerService()
     {
+<<<<<<< HEAD
         return $this->services['jms_serializer.datetime_handler'] = new \JMS\Serializer\Handler\DateHandler('Y-m-d\\TH:i:sP', 'Europe/Berlin', true);
+=======
+<<<<<<< HEAD
+        return $this->services['jms_serializer.datetime_handler'] = new \JMS\Serializer\Handler\DateHandler('Y-m-d\\TH:i:sP', 'Europe/Berlin', true);
+=======
+        return $this->services['jms_serializer.datetime_handler'] = new \JMS\Serializer\Handler\DateHandler('Y-m-d\\TH:i:sP', 'UTC', true);
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
     }
 
     /**
@@ -2772,7 +2897,15 @@ class appDevDebugProjectContainer extends Container
             return ${($_ = isset($this->services['jms_serializer.form_error_handler']) ? $this->services['jms_serializer.form_error_handler'] : $this->get('jms_serializer.form_error_handler')) && false ?: '_'};
         }, 'jms_serializer.php_collection_handler' => function () {
             return ${($_ = isset($this->services['jms_serializer.php_collection_handler']) ? $this->services['jms_serializer.php_collection_handler'] : $this->get('jms_serializer.php_collection_handler')) && false ?: '_'};
+<<<<<<< HEAD
         })), array(2 => array('DateTime' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromjson'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromyml'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromxml')), 'PhpCollection\\Sequence' => array('xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence'), 'json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence')), 'Doctrine\\ODM\\PHPCR\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\ODM\\MongoDB\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'PhpCollection\\Map' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap')), 'DateTimeImmutable' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromjson'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromyml'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromxml')), 'DateInterval' => array('yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromyml'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromxml'), 'json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromjson')), 'Doctrine\\ORM\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\Common\\Collections\\ArrayCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'))), 1 => array('Doctrine\\ODM\\PHPCR\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'PhpCollection\\Sequence' => array('yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence'), 'json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence')), 'PhpCollection\\Map' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap')), 'Doctrine\\ODM\\MongoDB\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Symfony\\Component\\Form\\Form' => array('yml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormToyml'), 'json' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormTojson'), 'xml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormToxml')), 'Symfony\\Component\\Validator\\ConstraintViolation' => array('json' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationTojson'), 'xml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationToxml'), 'yml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationToyml')), 'Symfony\\Component\\Validator\\ConstraintViolationList' => array('yml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListToyml'), 'json' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListTojson'), 'xml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListToxml')), 'Symfony\\Component\\Form\\FormError' => array('yml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorToyml'), 'json' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorTojson'), 'xml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorToxml')), 'DateTime' => array('xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime'), 'json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime')), 'DateInterval' => array('xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval'), 'json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval')), 'DateTimeImmutable' => array('xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable'), 'json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable')), 'ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\Common\\Collections\\ArrayCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\ORM\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')))));
+=======
+<<<<<<< HEAD
+        })), array(2 => array('DateTime' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromjson'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromyml'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromxml')), 'PhpCollection\\Sequence' => array('xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence'), 'json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence')), 'Doctrine\\ODM\\PHPCR\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\ODM\\MongoDB\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'PhpCollection\\Map' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap')), 'DateTimeImmutable' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromjson'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromyml'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromxml')), 'DateInterval' => array('yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromyml'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromxml'), 'json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromjson')), 'Doctrine\\ORM\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\Common\\Collections\\ArrayCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'))), 1 => array('Doctrine\\ODM\\PHPCR\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'PhpCollection\\Sequence' => array('yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence'), 'json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence')), 'PhpCollection\\Map' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap')), 'Doctrine\\ODM\\MongoDB\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Symfony\\Component\\Form\\Form' => array('yml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormToyml'), 'json' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormTojson'), 'xml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormToxml')), 'Symfony\\Component\\Validator\\ConstraintViolation' => array('json' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationTojson'), 'xml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationToxml'), 'yml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationToyml')), 'Symfony\\Component\\Validator\\ConstraintViolationList' => array('yml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListToyml'), 'json' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListTojson'), 'xml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListToxml')), 'Symfony\\Component\\Form\\FormError' => array('yml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorToyml'), 'json' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorTojson'), 'xml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorToxml')), 'DateTime' => array('xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime'), 'json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime')), 'DateInterval' => array('xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval'), 'json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval')), 'DateTimeImmutable' => array('xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable'), 'json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable')), 'ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\Common\\Collections\\ArrayCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\ORM\\PersistentCollection' => array('yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')))));
+=======
+        })), array(2 => array('DateTime' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromjson'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromxml'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeFromyml')), 'DateTimeImmutable' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromjson'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromxml'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateTimeImmutableFromyml')), 'DateInterval' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromjson'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromxml'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'deserializeDateIntervalFromyml')), 'ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\Common\\Collections\\ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\ORM\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\ODM\\MongoDB\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'Doctrine\\ODM\\PHPCR\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'deserializeCollection')), 'PhpCollection\\Sequence' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeSequence')), 'PhpCollection\\Map' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'deserializeMap'))), 1 => array('DateTime' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTime')), 'DateTimeImmutable' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateTimeImmutable')), 'DateInterval' => array('json' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval'), 'xml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval'), 'yml' => array(0 => 'jms_serializer.datetime_handler', 1 => 'serializeDateInterval')), 'ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\Common\\Collections\\ArrayCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\ORM\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\ODM\\MongoDB\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'Doctrine\\ODM\\PHPCR\\PersistentCollection' => array('json' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'xml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection'), 'yml' => array(0 => 'jms_serializer.array_collection_handler', 1 => 'serializeCollection')), 'PhpCollection\\Sequence' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeSequence')), 'PhpCollection\\Map' => array('json' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap'), 'xml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap'), 'yml' => array(0 => 'jms_serializer.php_collection_handler', 1 => 'serializeMap')), 'Symfony\\Component\\Form\\Form' => array('xml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormToxml'), 'json' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormTojson'), 'yml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormToyml')), 'Symfony\\Component\\Form\\FormError' => array('xml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorToxml'), 'json' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorTojson'), 'yml' => array(0 => 'jms_serializer.form_error_handler', 1 => 'serializeFormErrorToyml')), 'Symfony\\Component\\Validator\\ConstraintViolationList' => array('xml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListToxml'), 'json' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListTojson'), 'yml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeListToyml')), 'Symfony\\Component\\Validator\\ConstraintViolation' => array('xml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationToxml'), 'json' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationTojson'), 'yml' => array(0 => 'jms_serializer.constraint_violation_handler', 1 => 'serializeViolationToyml')))));
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
     }
 
     /**
@@ -2923,6 +3056,10 @@ class appDevDebugProjectContainer extends Container
      * Gets the public 'kernel.class_cache.cache_warmer' shared service.
      *
      * @return \Symfony\Bundle\FrameworkBundle\CacheWarmer\ClassCacheCacheWarmer
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
      *
      * @deprecated The "kernel.class_cache.cache_warmer" option is deprecated since version 3.3, to be removed in 4.0.
      */
@@ -2930,6 +3067,14 @@ class appDevDebugProjectContainer extends Container
     {
         @trigger_error('The "kernel.class_cache.cache_warmer" option is deprecated since version 3.3, to be removed in 4.0.', E_USER_DEPRECATED);
 
+<<<<<<< HEAD
+=======
+=======
+     */
+    protected function getKernel_ClassCache_CacheWarmerService()
+    {
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
         return $this->services['kernel.class_cache.cache_warmer'] = new \Symfony\Bundle\FrameworkBundle\CacheWarmer\ClassCacheCacheWarmer(array(0 => 'Symfony\\Component\\HttpFoundation\\ParameterBag', 1 => 'Symfony\\Component\\HttpFoundation\\HeaderBag', 2 => 'Symfony\\Component\\HttpFoundation\\FileBag', 3 => 'Symfony\\Component\\HttpFoundation\\ServerBag', 4 => 'Symfony\\Component\\HttpFoundation\\Request', 5 => 'Symfony\\Component\\HttpKernel\\Kernel'));
     }
 
@@ -3014,7 +3159,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getKnpSnappy_ImageService()
     {
+<<<<<<< HEAD
         $this->services['knp_snappy.image'] = $instance = new \Knp\Snappy\Image(($this->targetDirs[3].'\\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'), array(), array());
+=======
+        $this->services['knp_snappy.image'] = $instance = new \Knp\Snappy\Image('"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe"', array(), array());
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 
         if ($this->has('monolog.logger.snappy')) {
             $instance->setLogger(${($_ = isset($this->services['monolog.logger.snappy']) ? $this->services['monolog.logger.snappy'] : $this->get('monolog.logger.snappy', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
@@ -3030,7 +3179,11 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getKnpSnappy_PdfService()
     {
+<<<<<<< HEAD
         $this->services['knp_snappy.pdf'] = $instance = new \Knp\Snappy\Pdf(($this->targetDirs[3].'\\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'), array('no-outline' => true, 'page-size' => 'LETTER', 'encoding' => 'UTF-8'), array());
+=======
+        $this->services['knp_snappy.pdf'] = $instance = new \Knp\Snappy\Pdf('"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe"', array('no-outline' => true, 'page-size' => 'LETTER', 'encoding' => 'UTF-8'), array());
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 
         if ($this->has('monolog.logger.snappy')) {
             $instance->setLogger(${($_ = isset($this->services['monolog.logger.snappy']) ? $this->services['monolog.logger.snappy'] : $this->get('monolog.logger.snappy', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
@@ -3550,8 +3703,8 @@ class appDevDebugProjectContainer extends Container
         $t->add($m, array(0 => 'ROLE_CLIENT', 1 => 'ROLE_COM'), NULL);
         $t->add($n, array(0 => 'ROLE_CLIENT', 1 => 'ROLE_COM'), NULL);
         $t->add($n, array(0 => 'ROLE_CLIENT', 1 => 'ROLE_COM'), NULL);
-        $t->add($o, array(0 => 'ROLE_COM'), NULL);
-        $t->add($p, array(0 => 'ROLE_COM'), NULL);
+        $t->add($o, array(0 => 'ROLE_CLIENT'), NULL);
+        $t->add($p, array(0 => 'ROLE_CLIENT'), NULL);
         $t->add($q, array(0 => 'ROLE_COM'), NULL);
         $t->add($r, array(0 => 'ROLE_COM'), NULL);
         $t->add($s, array(0 => 'ROLE_COM'), NULL);
@@ -3565,7 +3718,19 @@ class appDevDebugProjectContainer extends Container
         $w = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($f, $u, array(), $a);
         $w->setOptions(array('login_path' => '/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'));
 
+<<<<<<< HEAD
         return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($t, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array()), 1 => ${($_ = isset($this->services['fos_user.user_provider.username']) ? $this->services['fos_user.user_provider.username'] : $this->getFosUser_UserProvider_UsernameService()) && false ?: '_'}), 'main', $a, $c, $d), 2 => $v, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, ${($_ = isset($this->services['security.authentication.session_strategy']) ? $this->services['security.authentication.session_strategy'] : $this->getSecurity_Authentication_SessionStrategyService()) && false ?: '_'}, $u, 'main', new \Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler(new \Souk\UserBundle\Redirection\AfterLoginRedirection($e), array('login_path' => '/login', 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false), 'main'), $w, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5b3002ef6372f7.05341449', $a, $g), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, ${($_ = isset($this->services['debug.security.access.decision_manager']) ? $this->services['debug.security.access.decision_manager'] : $this->getDebug_Security_Access_DecisionManagerService()) && false ?: '_'}, $t, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $d, $u, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $u, '/login', false), NULL, NULL, $a, false), new \Symfony\Bundle\SecurityBundle\Security\FirewallConfig('main', 'security.user_checker', 'security.request_matcher.a64d671f18e5575531d76c1d1154fdc4476cb8a79c02ed7a3469178c6d7b96b5ed4e60db', true, false, 'security.user.provider.concrete.in_memory', 'main', 'security.authentication.form_entry_point.main', NULL, NULL, array(0 => 'logout', 1 => 'form_login', 2 => 'anonymous')));
+=======
+<<<<<<< HEAD
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($t, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array()), 1 => ${($_ = isset($this->services['fos_user.user_provider.username']) ? $this->services['fos_user.user_provider.username'] : $this->getFosUser_UserProvider_UsernameService()) && false ?: '_'}), 'main', $a, $c, $d), 2 => $v, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, ${($_ = isset($this->services['security.authentication.session_strategy']) ? $this->services['security.authentication.session_strategy'] : $this->getSecurity_Authentication_SessionStrategyService()) && false ?: '_'}, $u, 'main', new \Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler(new \Souk\UserBundle\Redirection\AfterLoginRedirection($e), array('login_path' => '/login', 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false), 'main'), $w, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5b2fa2fc76d831.28168626', $a, $g), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, ${($_ = isset($this->services['debug.security.access.decision_manager']) ? $this->services['debug.security.access.decision_manager'] : $this->getDebug_Security_Access_DecisionManagerService()) && false ?: '_'}, $t, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $d, $u, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $u, '/login', false), NULL, NULL, $a, false), new \Symfony\Bundle\SecurityBundle\Security\FirewallConfig('main', 'security.user_checker', 'security.request_matcher.a64d671f18e5575531d76c1d1154fdc4476cb8a79c02ed7a3469178c6d7b96b5ed4e60db', true, false, 'security.user.provider.concrete.in_memory', 'main', 'security.authentication.form_entry_point.main', NULL, NULL, array(0 => 'logout', 1 => 'form_login', 2 => 'anonymous')));
+=======
+<<<<<<< HEAD
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($t, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array()), 1 => ${($_ = isset($this->services['fos_user.user_provider.username']) ? $this->services['fos_user.user_provider.username'] : $this->getFosUser_UserProvider_UsernameService()) && false ?: '_'}), 'main', $a, $c, $d), 2 => $v, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, ${($_ = isset($this->services['security.authentication.session_strategy']) ? $this->services['security.authentication.session_strategy'] : $this->getSecurity_Authentication_SessionStrategyService()) && false ?: '_'}, $u, 'main', new \Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler(new \Souk\UserBundle\Redirection\AfterLoginRedirection($e), array('login_path' => '/login', 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false), 'main'), $w, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5b2f83945c27b9.76076685', $a, $g), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, ${($_ = isset($this->services['debug.security.access.decision_manager']) ? $this->services['debug.security.access.decision_manager'] : $this->getDebug_Security_Access_DecisionManagerService()) && false ?: '_'}, $t, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $d, $u, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $u, '/login', false), NULL, NULL, $a, false), new \Symfony\Bundle\SecurityBundle\Security\FirewallConfig('main', 'security.user_checker', 'security.request_matcher.a64d671f18e5575531d76c1d1154fdc4476cb8a79c02ed7a3469178c6d7b96b5ed4e60db', true, false, 'security.user.provider.concrete.in_memory', 'main', 'security.authentication.form_entry_point.main', NULL, NULL, array(0 => 'logout', 1 => 'form_login', 2 => 'anonymous')));
+=======
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($t, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => new \Symfony\Component\Security\Core\User\InMemoryUserProvider(array()), 1 => ${($_ = isset($this->services['fos_user.user_provider.username']) ? $this->services['fos_user.user_provider.username'] : $this->getFosUser_UserProvider_UsernameService()) && false ?: '_'}), 'main', $a, $c, $d), 2 => $v, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $g, ${($_ = isset($this->services['security.authentication.session_strategy']) ? $this->services['security.authentication.session_strategy'] : $this->getSecurity_Authentication_SessionStrategyService()) && false ?: '_'}, $u, 'main', new \Symfony\Component\Security\Http\Authentication\CustomAuthenticationSuccessHandler(new \Souk\UserBundle\Redirection\AfterLoginRedirection($e), array('login_path' => '/login', 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false), 'main'), $w, array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'csrf_token_id' => 'authenticate', 'post_only' => true), $a, $c, NULL), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '5b2e7c9a396330.10987636', $a, $g), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, ${($_ = isset($this->services['debug.security.access.decision_manager']) ? $this->services['debug.security.access.decision_manager'] : $this->getDebug_Security_Access_DecisionManagerService()) && false ?: '_'}, $t, $g)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $d, $u, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $u, '/login', false), NULL, NULL, $a, false), new \Symfony\Bundle\SecurityBundle\Security\FirewallConfig('main', 'security.user_checker', 'security.request_matcher.a64d671f18e5575531d76c1d1154fdc4476cb8a79c02ed7a3469178c6d7b96b5ed4e60db', true, false, 'security.user.provider.concrete.in_memory', 'main', 'security.authentication.form_entry_point.main', NULL, NULL, array(0 => 'logout', 1 => 'form_login', 2 => 'anonymous')));
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 
     /**
@@ -4347,7 +4512,11 @@ class appDevDebugProjectContainer extends Container
             return ${($_ = isset($this->services['twig.form.renderer']) ? $this->services['twig.form.renderer'] : $this->get('twig.form.renderer')) && false ?: '_'};
         }))));
         $instance->addGlobal('pathToWeb', ($this->targetDirs[3].'\\app/../web'));
+<<<<<<< HEAD
         $instance->addGlobal('base_dir', ($this->targetDirs[3].'\\app/../web'));
+=======
+        $instance->addGlobal('pathToLogo', ($this->targetDirs[3].'\\app/../web/bundles/front/images/logo.png'));
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
         (new \Symfony\Bundle\TwigBundle\DependencyInjection\Configurator\EnvironmentConfigurator('F j, Y H:i', '%d days', NULL, 0, '.', ','))->configure($instance);
 
         return $instance;
@@ -4734,6 +4903,7 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+<<<<<<< HEAD
      * Gets the private '1_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53' shared service.
      *
      * @return \Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker
@@ -4751,6 +4921,53 @@ class appDevDebugProjectContainer extends Container
     protected function get2Bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53Service()
     {
         return $this->services['2_bc7810767d127784a880c98f6ada8280360c0152d75631a32e971beec47ceb53'] = new \Symfony\Component\Config\Resource\SelfCheckingResourceChecker();
+=======
+<<<<<<< HEAD
+     * Gets the private '1_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b' shared service.
+=======
+<<<<<<< HEAD
+     * Gets the private '1_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker
+     */
+    protected function get14ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9fService()
+    {
+        return $this->services['1_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f'] = new \Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker($this);
+    }
+
+    /**
+     * Gets the private '2_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f' shared service.
+     *
+     * @return \Symfony\Component\Config\Resource\SelfCheckingResourceChecker
+     */
+    protected function get24ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9fService()
+    {
+        return $this->services['2_4ea8f4561a832647894b530727a90efbf402c03ec7748f736d6f407a697b9b9f'] = new \Symfony\Component\Config\Resource\SelfCheckingResourceChecker();
+=======
+     * Gets the private '1_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb' shared service.
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+     *
+     * @return \Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker
+     */
+    protected function get15a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05bService()
+    {
+        return $this->services['1_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b'] = new \Symfony\Component\DependencyInjection\Config\ContainerParametersResourceChecker($this);
+    }
+
+    /**
+     * Gets the private '2_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b' shared service.
+     *
+     * @return \Symfony\Component\Config\Resource\SelfCheckingResourceChecker
+     */
+    protected function get25a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05bService()
+    {
+<<<<<<< HEAD
+        return $this->services['2_5a3b312de65a67bbed0536b7c2cf21064d532edcc235e05d34ce3f608d15b05b'] = new \Symfony\Component\Config\Resource\SelfCheckingResourceChecker();
+=======
+        return $this->services['2_ff17ca6931b9f84007e231cf1a943a76699676971865be4251a1958181b920bb'] = new \Symfony\Component\Config\Resource\SelfCheckingResourceChecker();
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 
     /**
@@ -4867,7 +5084,19 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_Annotations_RecorderInnerService($lazyLoad = true)
     {
+<<<<<<< HEAD
         return $this->services['cache.annotations.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('YPwBA2f-Xn', 0, 'Ogqrfsr4rBYOhEbKy+XhBm', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+<<<<<<< HEAD
+        return $this->services['cache.annotations.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('rxK-uFH3BQ', 0, 'lE9yQFm-UvMeLWUynzgmvd', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+<<<<<<< HEAD
+        return $this->services['cache.annotations.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('hF5WpgQyqV', 0, 'uhUjUAKU1y6xldH-GyrJff', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+        return $this->services['cache.annotations.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('hBw-X+yO4T', 0, '5FeU3MF8FYU9U47KIyMU+t', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 
     /**
@@ -4877,7 +5106,19 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_App_RecorderInnerService($lazyLoad = true)
     {
+<<<<<<< HEAD
         $this->services['cache.app.recorder_inner'] = $instance = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('TsonB8m7Fb', 0, (__DIR__.'/pools'));
+=======
+<<<<<<< HEAD
+        $this->services['cache.app.recorder_inner'] = $instance = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('UEgaGjrNGa', 0, (__DIR__.'/pools'));
+=======
+<<<<<<< HEAD
+        $this->services['cache.app.recorder_inner'] = $instance = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('GtRuJktgTp', 0, (__DIR__.'/pools'));
+=======
+        $this->services['cache.app.recorder_inner'] = $instance = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('OOBq2cUTxl', 0, (__DIR__.'/pools'));
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 
         if ($this->has('monolog.logger.cache')) {
             $instance->setLogger(${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
@@ -4893,7 +5134,19 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_Serializer_RecorderInnerService($lazyLoad = true)
     {
+<<<<<<< HEAD
         return $this->services['cache.serializer.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('vQVtf+LW0G', 0, 'Ogqrfsr4rBYOhEbKy+XhBm', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+<<<<<<< HEAD
+        return $this->services['cache.serializer.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('HgaNKJl2Rg', 0, 'lE9yQFm-UvMeLWUynzgmvd', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+<<<<<<< HEAD
+        return $this->services['cache.serializer.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('9u10Uwuu4p', 0, 'uhUjUAKU1y6xldH-GyrJff', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+        return $this->services['cache.serializer.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('o0fJ6PZZ-e', 0, '5FeU3MF8FYU9U47KIyMU+t', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 
     /**
@@ -4903,7 +5156,19 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_System_RecorderInnerService($lazyLoad = true)
     {
+<<<<<<< HEAD
         return $this->services['cache.system.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('4EhsdbcdN7', 0, 'Ogqrfsr4rBYOhEbKy+XhBm', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+<<<<<<< HEAD
+        return $this->services['cache.system.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('iNyqAPhxnv', 0, 'lE9yQFm-UvMeLWUynzgmvd', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+<<<<<<< HEAD
+        return $this->services['cache.system.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('yTz2Orj9zK', 0, 'uhUjUAKU1y6xldH-GyrJff', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+        return $this->services['cache.system.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('iLPprOd1gL', 0, '5FeU3MF8FYU9U47KIyMU+t', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 
     /**
@@ -4923,7 +5188,19 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_Validator_RecorderInnerService($lazyLoad = true)
     {
+<<<<<<< HEAD
         return $this->services['cache.validator.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('1CckkSYalJ', 0, 'Ogqrfsr4rBYOhEbKy+XhBm', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+<<<<<<< HEAD
+        return $this->services['cache.validator.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('3ejbczDjBS', 0, 'lE9yQFm-UvMeLWUynzgmvd', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+<<<<<<< HEAD
+        return $this->services['cache.validator.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('RDU2vyc6J-', 0, 'uhUjUAKU1y6xldH-GyrJff', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+=======
+        return $this->services['cache.validator.recorder_inner'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('k5aEVfvipW', 0, '5FeU3MF8FYU9U47KIyMU+t', (__DIR__.'/pools'), ${($_ = isset($this->services['monolog.logger.cache']) ? $this->services['monolog.logger.cache'] : $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE)) && false ?: '_'});
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 
     /**
@@ -5226,7 +5503,19 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_Provider_Anonymous_MainService()
     {
+<<<<<<< HEAD
         return $this->services['security.authentication.provider.anonymous.main'] = new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5b3002ef6372f7.05341449');
+=======
+<<<<<<< HEAD
+        return $this->services['security.authentication.provider.anonymous.main'] = new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5b2fa2fc76d831.28168626');
+=======
+<<<<<<< HEAD
+        return $this->services['security.authentication.provider.anonymous.main'] = new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5b2f83945c27b9.76076685');
+=======
+        return $this->services['security.authentication.provider.anonymous.main'] = new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('5b2e7c9a396330.10987636');
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 
     /**
@@ -5497,8 +5786,6 @@ class appDevDebugProjectContainer extends Container
         'kernel.bundles_metadata' => false,
         'router.resource' => false,
         'vich_uploader.mappings' => false,
-        'knp_snappy.pdf.binary' => false,
-        'knp_snappy.image.binary' => false,
     );
     private $dynamicParameters = array();
 
@@ -5595,7 +5882,19 @@ class appDevDebugProjectContainer extends Container
                 ),
                 'KnpSnappyBundle' => array(
                     'parent' => NULL,
+<<<<<<< HEAD
                     'path' => 'C:/Users/salsa/OneDrive/Documents/GitHub/Souk/vendor/knplabs/knp-snappy-bundle',
+=======
+<<<<<<< HEAD
+                    'path' => 'C:/Users/Soumaya/Documents/GitHub/Souk/vendor/knplabs/knp-snappy-bundle',
+=======
+<<<<<<< HEAD
+                    'path' => 'C:/Users/Boufares/Documents/GitHub/Souk/vendor/knplabs/knp-snappy-bundle',
+=======
+                    'path' => 'C:/Users/HAYFA/Documents/GitHub/Souk/vendor/knplabs/knp-snappy-bundle',
+>>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
+>>>>>>> a8467fc6d036327556add09b13385962147fa375
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
                     'namespace' => 'Knp\\Bundle\\SnappyBundle',
                 ),
                 'CMENGoogleChartsBundle' => array(
@@ -5658,8 +5957,11 @@ class appDevDebugProjectContainer extends Container
                     'db_driver' => 'orm',
                 ),
             ); break;
+<<<<<<< HEAD
             case 'knp_snappy.pdf.binary': $value = ($this->targetDirs[3].'\\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'); break;
             case 'knp_snappy.image.binary': $value = ($this->targetDirs[3].'\\app/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'); break;
+=======
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
             default: throw new InvalidArgumentException(sprintf('The dynamic parameter "%s" must be defined.', $name));
         }
         $this->loadedDynamicParameters[$name] = true;
@@ -6065,6 +6367,7 @@ class appDevDebugProjectContainer extends Container
             'jms_serializer.cache.cache_warmer.class' => 'JMS\\SerializerBundle\\Cache\\CacheWarmer',
             'vich_uploader.default_filename_attribute_suffix' => '_name',
             'vich_uploader.file_injector.class' => 'Vich\\UploaderBundle\\Injector\\FileInjector',
+            'knp_snappy.pdf.binary' => '"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe"',
             'knp_snappy.pdf.options' => array(
                 'no-outline' => true,
                 'page-size' => 'LETTER',
@@ -6073,6 +6376,7 @@ class appDevDebugProjectContainer extends Container
             'knp_snappy.pdf.env' => array(
 
             ),
+            'knp_snappy.image.binary' => '"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe"',
             'knp_snappy.image.options' => array(
 
             ),

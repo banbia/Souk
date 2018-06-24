@@ -40,7 +40,7 @@ twig:
     strict_variables: '%kernel.debug%'
     globals:
       pathToWeb: "%kernel.root_dir%/../web"
-      base_dir: "%kernel.root_dir%/../web"
+      pathToLogo: "%kernel.root_dir%/../web/bundles/front/images/logo.png"
 
 # Doctrine Configuration
 doctrine:
@@ -91,8 +91,8 @@ knp_snappy:
     pdf:
         enabled:    true
 
-        #binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\"" #for Windows users #/usr/local/bin/wkhtmltopdf
-        binary:     "%kernel.root_dir%/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64" #for Windows users #/usr/local/bin/wkhtmltopdf
+        binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\"" #for Windows users #/usr/local/bin/wkhtmltopdf
+        #binary:     "%kernel.root_dir%/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64" #for Windows users #/usr/local/bin/wkhtmltopdf
         options:
             no-outline: true
             page-size: LETTER
@@ -100,7 +100,8 @@ knp_snappy:
             encoding: UTF-8
     image:
         enabled:    true
-        binary:     "%kernel.root_dir%/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64" #for Windows users # /usr/local/bin/wkhtmltoimage
+        binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\""
+        #binary:     "%kernel.root_dir%/../vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64" #for Windows users # /usr/local/bin/wkhtmltoimage
         options:    []
 
 vich_uploader:

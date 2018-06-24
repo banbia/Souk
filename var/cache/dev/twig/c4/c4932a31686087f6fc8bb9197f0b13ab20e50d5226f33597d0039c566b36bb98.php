@@ -940,6 +940,10 @@ class __TwigTemplate_30053c507d0e825baf03532165dd724e514d076fc090dfbf99dc16c2025
         </table>
     {% endif %}
 {% endblock %}
+<<<<<<< HEAD
 ", "@WebProfiler/Collector/config.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\config.html.twig");
+=======
+", "@WebProfiler/Collector/config.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\config.html.twig");
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 }

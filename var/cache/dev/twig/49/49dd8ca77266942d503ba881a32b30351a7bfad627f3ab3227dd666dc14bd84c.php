@@ -1070,6 +1070,10 @@ class __TwigTemplate_f9401cdce756278245c9f0fb14cbc29cfb895f7ecca1814b1428e16727f
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
+<<<<<<< HEAD
 ", "@WebProfiler/Collector/request.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\request.html.twig");
+=======
+", "@WebProfiler/Collector/request.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\request.html.twig");
+>>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 }
