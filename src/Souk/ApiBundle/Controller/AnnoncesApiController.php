@@ -1,6 +1,7 @@
 <?php
 
 namespace Souk\ApiBundle\Controller;
+use Souk\BackBundle\Entity\Images;
 
 use Souk\BackBundle\Entity\Annonces;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -41,13 +42,13 @@ class AnnoncesApiController extends Controller
     return new JsonResponse($formatted);
   }
   //nouvelle annonce
-  public function createAction($commercial,$prix,$categorie,$description,$titre)
+  public function createAction($commercial,$prix,$categorie,$description,$titre,$filename)
   {
     //connexion
     $em = $this->getDoctrine()->getManager();
     //get commercial and categorie object
     $commercial = $em->getRepository('UserBundle:User')->find($commercial);
-    $categorie = $em->getRepository('BackBundle:Categories')->findBy($categorie);
+    $categorie = $em->getRepository('BackBundle:Categories')->find($categorie);
 
     //instance annonce
     $annonce= new Annonces();
@@ -65,25 +66,27 @@ class AnnoncesApiController extends Controller
     $em->persist($annonce);
 
     $em->flush();
-    //format date
-    $callback = function ($dateTime) {
-      return $dateTime instanceof \DateTime
-        ? $dateTime->format('Y-m-d')
-        : '';
-    };
 
+    //instance image
+    $image= new Images();
+    //affecter les champs
+    $image->setUpdateAt(new \DateTime('now'));
+    $image->setImageName($filename);
+    $image->setAnnonce($annonce);
+
+    $em->persist($image);
+
+    $em->flush();
 
     $normalizer = new ObjectNormalizer();
     //ne pas envoyer client,annonce,commentaires dans le retour json
-    $normalizer->setIgnoredAttributes(array('client','annonce','commentaires'));
-    $normalizer->setCallbacks(array('dateCretaion' => $callback));
-    $normalizer->setCircularReferenceLimit(1);
+
     $serializer = new Serializer([$normalizer]);
     $normalizer->setCircularReferenceHandler(function ($object) {
       return $object->getId();
     });
 
-    $formatted= $serializer->normalize($annonce, 'json');
+    $formatted= $serializer->normalize( "succes", 'json');
 
     return new JsonResponse($formatted);
 
@@ -206,3 +209,4 @@ class AnnoncesApiController extends Controller
     return new JsonResponse($formatted);
   }
 }
+
