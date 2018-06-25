@@ -30,7 +30,6 @@ commandes_valid:
 commandes_delete:
     path:     /{id}/delete
     defaults: { _controller: "FrontBundle:Commandes:delete" }
-    methods:  DELETE
 #web service
 liste_commandes:
     path:     /liste/{id}
