@@ -13,37 +13,45 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ReclamationApiController extends Controller{
 
-    ///se connecter à traver l'application
+
+    public function allRecAction()
+    {
+
+        $reclamations=$this->getDoctrine()->getRepository('BackBundle:Reclamations')->findAll();
+
+        $callback = function ($dateTime) {
+            return $dateTime instanceof \DateTime
+                ? $dateTime->format('Y-m-d')
+                : '';
+        };
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(array('annonce','commentaires','evennements','reservations'));
+        $normalizer->setCallbacks(array('dateRec' => $callback));
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($reclamations, 'json');
+        return new JsonResponse($formatted);
+    }
 
 
-        //Crud Mobile
-    public function listeRecAction(Request $request,$id)
+    public function listeRecAction($id)
     {
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository('UserBundle:User')->find($id);
-
-        if ($request->getMethod() == "POST") {
-            $user = $this->getUser();
-            $p = $request->get('etat');
-            if ($p != "") {
-
-                if ($p == "Accepter")
-                    $p = 1;
-                elseif ($p == "Encours")
-                    $p = 0;
-                else
-                    $p = -1;
-                $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user, 'etat' => $p));
-
-            } else {
-                $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
-
-            }
-        } else
-            $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
-
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
+        $callback = function ($dateTime) {
+            return $dateTime instanceof \DateTime
+                ? $dateTime->format('Y-m-d')
+                : '';
+        };
 
         $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(array('client','annonce','commentaires'));
+        $normalizer->setCallbacks(array('dateRec' => $callback));
         $normalizer->setCircularReferenceLimit(1);
         $serializer = new Serializer([$normalizer]);
         $normalizer->setCircularReferenceHandler(function ($object) {
@@ -80,66 +88,73 @@ class ReclamationApiController extends Controller{
 
     }
 
-    /*public function showRecAction(Reclamations $reclamation)
-    {
-        $deleteForm = $this->createDeleteForm($reclamation);
 
-        return $this->render('FrontBundle:reclamations:show.html.twig', array(
-            'reclamation' => $reclamation,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }*/
-
-    /**
-     * Displays a form to edit an existing reclamation entity.
-     *
-     */
-
-    public function editRecAction($contenu)
+    public function editRecAction($rec,$contenu)
     {
         $em = $this->getDoctrine()->getManager();
-        $reclamations = new Reclamations();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->find($rec);
+
         $reclamations->setContenu($contenu);
-        ;
-        $em->persist($reclamations);
 
         $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($reclamations, 'json');
+        //retourner update => ok comme resultat json
+        $json = array("update"=>"ok");
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            //return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($json, 'json');
 
         return new JsonResponse($formatted);
-
     }
-    public function accepterRecAction()
+
+    /******! PARTIE ADMIN !******/
+    public function accepterRecAction($rec)
     {
         $em = $this->getDoctrine()->getManager();
-        $reclamations = new Reclamations();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->find($rec);
         $reclamations->setEtat(1);
-        ;
-        $em->persist($reclamations);
 
         $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($reclamations, 'json');
+        //retourner delete => ok comme resultat json
+        $json = array("Accepter"=>"ok");
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            //return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($json, 'json');
 
         return new JsonResponse($formatted);
 
     }
-    public function rejeterRecAction()
+
+    public function rejeterRecAction($rec)
     {
         $em = $this->getDoctrine()->getManager();
-        $reclamations = new Reclamations();
+        $reclamations = $em->getRepository('BackBundle:Reclamations')->find($rec);
         $reclamations->setEtat(-1);
-        ;
-        $em->persist($reclamations);
 
         $em->flush();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($reclamations, 'json');
+        //retourner delete => ok comme resultat json
+        $json = array("Accepter"=>"ok");
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            //return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($json, 'json');
 
         return new JsonResponse($formatted);
-
     }
+
 
 
 }

@@ -1,7 +1,6 @@
-<!-- index.html.twig -->
-<html>
-<head></head>
-<body>
+{% extends 'BackBundle::panel.html.twig' %}
+
+{% block body %}
 <div id="div_piechart"></div>
 <div id="div_histogram"></div>
 
@@ -9,5 +8,4 @@
 <script type="text/javascript">
     {{ gc_draw([piechart], ['div_piechart']) }}
 </script>
-</body>
-</html>
+{% endblock %}

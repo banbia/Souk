@@ -4,6 +4,8 @@
 
 {% endblock style %}
 {% block body %}
+
+
     <div class="wrap">
         <h1 align="center">Mes demandes</h1>
         <div class="tab">
@@ -58,7 +60,7 @@
 
                                                 <i class="fa fa-edit"></i>   Modifier
                                             </a>
-                                        <a href="{{ path('pdf_show',{'commande':commande.id}) }}}) }}" class="btn btn-info">
+                                        <a href="{{ path('pdf_show',{'commande':commande.id}) }}" class="btn btn-info">
 
                                             <i class="fa fa-file-pdf-o"></i>    PDF
                                         </a>

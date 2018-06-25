@@ -7,12 +7,12 @@
 {% block body %}
     <!--- salsabil's work -->
 
-    <h1  class="text-info"> Evenement </h1>
+    <h1  style="color: #B40404"> Evenement </h1>
 
-<div class="row form-groupEvent">
+<div class="row form-groupEvent"style="margin-bottom:15px;margin-top:60px;">
    <div class="col-md-12">
        <div class="col-md-5">
-       <img   src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
+       <img   src="{{ asset('bundles/front/images/pic1.jpg') }}" style="width:auto%;height: 250px" class="img-responsive" alt=""/>
        </div>
        <div class="col-md-6">
     <table  class="table center-block">
@@ -47,6 +47,7 @@
     </table>
        </div>
    </div>
+</div>
     <div class=" col-md-12">
 
     {% if is_granted('ROLE_CLIENT') %}
@@ -65,15 +66,14 @@
             <a class="btn btn-danger"  href="{{ path('evennements_delete', { 'id': evennement.id }) }}"> <i class="fa fa-close"></i> Delete</a>
             <a class="btn btn-success" href="{{ path('evennements_index') }}"><i class="fa fa-arrow-left" > Back to the liste </i> </a>
         {% endif  %}
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
+
 
     </div>
 
-    {{ form_end(form) }}
+
     {% endif %}
 
-</div>
+
 
     <!--- safa Boufares's work start-->
         <!-- /row -->
