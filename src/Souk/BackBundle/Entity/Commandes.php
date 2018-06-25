@@ -6,6 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Commandes
  *
@@ -26,13 +29,20 @@ class Commandes
     /**
      * @var \Date
      *
+     * @Assert\Date()
+     * @Assert\LessThan("today")
      * @ORM\Column(name="date_com", type="date")
      */
     private $dateCom;
 
     /**
      * @var float
-     *
+     * @Assert\Range(
+     *      min = 1,
+     *      max = 50,
+     *      minMessage = "Vous devez entrez une quantité d'au moins 1 ",
+     *      maxMessage = "Vous ne pouvez pas commandez plus ce que 50"
+     * )
      * @ORM\Column(name="quantite", type="float")
      */
     private $quantite;
@@ -57,6 +67,8 @@ class Commandes
      * @ORM\JoinColumn(name="client",referencedColumnName="id")
      */
     private $client;
+
+
 
     /**
      * @return mixed

@@ -93,22 +93,24 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
     <!-- Modal content-->
 
     <p class=\"text-center text-success\" id=\"succ\"></p>
+    <p class=\"text-center text-danger\" id=\"prblm-qt\"></p>
+    <p class=\"text-center text-danger\" id=\"prblm-dt\"></p>
             <div class=\"col-md-12\">
                 <div class=\"form-group col-md-6\">
                     <label for=\"date\">Date de réception souhaitée </label>
                     <input type=\"text\" id=\"date\" class=\"form-control\" value=\"";
-        // line 22
+        // line 24
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "dateCom", array()), "Y-m-d"), "html", null, true);
         echo "\"/>
                     <input type=\"hidden\" id=\"id\" value=\"";
-        // line 23
+        // line 25
         echo twig_escape_filter($this->env, $this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "id", array()), "html", null, true);
         echo "\"/>
                 </div>
                 <div class=\"form-group col-md-6\">
                     <label for=\"quantite\">Quantité</label>
                     <input type=\"text\" id=\"quantite\" class=\"form-control\" value=\"";
-        // line 27
+        // line 29
         echo twig_escape_filter($this->env, $this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "quantite", array()), "html", null, true);
         echo "\"/>
 
@@ -118,7 +120,7 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
 
             <button type=\"button\" id=\"mod\" class=\"btn btn-default\" ><i class=\"fa fa-check\"></i>  Modifier  </button>
             <a class=\"btn btn-info\" href=\"";
-        // line 34
+        // line 36
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_index");
         echo "\"><i class=\"fa fa-edit\"></i>  Retourner à la liste</a>
 
@@ -135,7 +137,7 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
 
     }
 
-    // line 41
+    // line 43
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -144,7 +146,7 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 42
+        // line 44
         echo "    <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
     <link rel=\"stylesheet\" href=\"/resources/demos/style.css\">
     <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>
@@ -159,19 +161,19 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
     </script>
 
     <script src=\"";
-        // line 55
+        // line 57
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/js/rating.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 56
+        // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/js/demo.css"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 57
+        // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/js/shCore.css"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 58
+        // line 60
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/js/jquery.mousewheel.css"), "html", null, true);
         echo "\"></script>
 
@@ -212,26 +214,41 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
                 var id = \$(\"#id\").val();
                 var quantite = \$(\"#quantite\").val();
                 var date = \$(\"#date\").val();
+                var stop = false;
+                if(quantite.length<=0){
+                    stop = true;
+                    \$('#prblm-qt').html('Veuillez vérifier la quantité saisi');
 
-                var dataString = {};
-                dataString['id'] = id;
-                dataString['quantite'] = quantite;
-                dataString['date'] = date;
+                }
+                var now = Moment().startOf('day').toDate();
+                if (date < now) {
+                    stop = true;
+                    \$('#prblm-dt').html('La date choisie ne doit pas être ancienne');
+
+                }
+                if(stop != true){
+
+                    var dataString = {};
+                    dataString['id'] = id;
+                    dataString['quantite'] = quantite;
+                    dataString['date'] = date;
 
 
-                \$.ajax({
-                    method: 'POST',
-                    dataType: 'json',
-                    url: '";
-        // line 107
+                    \$.ajax({
+                        method: 'POST',
+                        dataType: 'json',
+                        url: '";
+        // line 122
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commandes_modif");
         echo "',
-                    data: dataString,
-                    success: function (data) {
-                        \$('#succ').html('Commande modifiée avec succès.<br/><br/>');
+                        data: dataString,
+                        success: function (data) {
+                            \$('#succ').html('Commande modifiée avec succès.<br/><br/>');
 
-                    }
-                });
+                        }
+                    });
+                }
+
 
             });
         });
@@ -259,7 +276,7 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
 
     public function getDebugInfo()
     {
-        return array (  227 => 107,  175 => 58,  171 => 57,  167 => 56,  163 => 55,  148 => 42,  139 => 41,  122 => 34,  112 => 27,  105 => 23,  101 => 22,  91 => 14,  82 => 13,  69 => 10,  64 => 8,  60 => 7,  56 => 6,  51 => 3,  42 => 2,  11 => 1,);
+        return array (  242 => 122,  177 => 60,  173 => 59,  169 => 58,  165 => 57,  150 => 44,  141 => 43,  124 => 36,  114 => 29,  107 => 25,  103 => 24,  91 => 14,  82 => 13,  69 => 10,  64 => 8,  60 => 7,  56 => 6,  51 => 3,  42 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -290,6 +307,8 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
     <!-- Modal content-->
 
     <p class=\"text-center text-success\" id=\"succ\"></p>
+    <p class=\"text-center text-danger\" id=\"prblm-qt\"></p>
+    <p class=\"text-center text-danger\" id=\"prblm-dt\"></p>
             <div class=\"col-md-12\">
                 <div class=\"form-group col-md-6\">
                     <label for=\"date\">Date de réception souhaitée </label>
@@ -368,23 +387,38 @@ class __TwigTemplate_a5fcd58535f19e886fea69ac187c22c24eb5f747cd0d119bed790cb2665
                 var id = \$(\"#id\").val();
                 var quantite = \$(\"#quantite\").val();
                 var date = \$(\"#date\").val();
+                var stop = false;
+                if(quantite.length<=0){
+                    stop = true;
+                    \$('#prblm-qt').html('Veuillez vérifier la quantité saisi');
 
-                var dataString = {};
-                dataString['id'] = id;
-                dataString['quantite'] = quantite;
-                dataString['date'] = date;
+                }
+                var now = Moment().startOf('day').toDate();
+                if (date < now) {
+                    stop = true;
+                    \$('#prblm-dt').html('La date choisie ne doit pas être ancienne');
+
+                }
+                if(stop != true){
+
+                    var dataString = {};
+                    dataString['id'] = id;
+                    dataString['quantite'] = quantite;
+                    dataString['date'] = date;
 
 
-                \$.ajax({
-                    method: 'POST',
-                    dataType: 'json',
-                    url: '{{ path('commandes_modif') }}',
-                    data: dataString,
-                    success: function (data) {
-                        \$('#succ').html('Commande modifiée avec succès.<br/><br/>');
+                    \$.ajax({
+                        method: 'POST',
+                        dataType: 'json',
+                        url: '{{ path('commandes_modif') }}',
+                        data: dataString,
+                        success: function (data) {
+                            \$('#succ').html('Commande modifiée avec succès.<br/><br/>');
 
-                    }
-                });
+                        }
+                    });
+                }
+
 
             });
         });

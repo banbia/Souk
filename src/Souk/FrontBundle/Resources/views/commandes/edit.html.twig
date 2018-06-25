@@ -16,6 +16,8 @@
     <!-- Modal content-->
 
     <p class="text-center text-success" id="succ"></p>
+    <p class="text-center text-danger" id="prblm-qt"></p>
+    <p class="text-center text-danger" id="prblm-dt"></p>
             <div class="col-md-12">
                 <div class="form-group col-md-6">
                     <label for="date">Date de réception souhaitée </label>
@@ -24,7 +26,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="quantite">Quantité</label>
-                    <input type="text" id="quantite" class="form-control" value="{{ commande.quantite }}"/>
+                    <input type="text" id="quantite" class="number form-control" value="{{ commande.quantite }}"/>
 
                 </div>
             </div>
@@ -81,9 +83,11 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $( function() {
+            var dateToday = new Date();
             $( "#date" ).datepicker({
                 altField: "#date",
-                altFormat: "yy-mm-dd"
+                altFormat: "yy-mm-dd",
+                minDate: dateToday
             });
         } );
     </script>
@@ -94,23 +98,38 @@
                 var id = $("#id").val();
                 var quantite = $("#quantite").val();
                 var date = $("#date").val();
+                var stop = false;
+                if(quantite.length<=0){
+                    stop = true;
+                    $('#prblm-qt').html('Veuillez vérifier la quantité saisi');
 
-                var dataString = {};
-                dataString['id'] = id;
-                dataString['quantite'] = quantite;
-                dataString['date'] = date;
+                }
+                var now = Moment().startOf('day').toDate();
+                if (date < now) {
+                    stop = true;
+                    $('#prblm-dt').html('La date choisie ne doit pas être ancienne');
+
+                }
+                if(stop != true){
+
+                    var dataString = {};
+                    dataString['id'] = id;
+                    dataString['quantite'] = quantite;
+                    dataString['date'] = date;
 
 
-                $.ajax({
-                    method: 'POST',
-                    dataType: 'json',
-                    url: '{{ path('commandes_modif') }}',
-                    data: dataString,
-                    success: function (data) {
-                        $('#succ').html('Commande modifiée avec succès.<br/><br/>');
+                    $.ajax({
+                        method: 'POST',
+                        dataType: 'json',
+                        url: '{{ path('commandes_modif') }}',
+                        data: dataString,
+                        success: function (data) {
+                            $('#succ').html('Commande modifiée avec succès.<br/><br/>');
 
-                    }
-                });
+                        }
+                    });
+                }
+
 
             });
         });
