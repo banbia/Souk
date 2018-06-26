@@ -297,6 +297,14 @@
     <!--- safa Boufares 's work end-->
 {% endblock body %}
 {% block js %}
+    <script>
+        function forceNumeric(){
+            var $input = $(this);
+            $input.val($input.val().replace(/[^\d]+/g,''));
+        }
+        $('#souk_backbundle_commandes_quantite').keyup(forceNumeric);
+
+    </script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <script src="{{ asset('bundles/front/js/rating.js') }}"></script>
@@ -306,9 +314,11 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
         $( function() {
+            var dateToday = new Date();
             $( "#souk_backbundle_commandes_dateCom" ).datepicker({
                 altField: "#souk_backbundle_commandes_dateCom",
-                altFormat: "yy-mm-dd"
+                altFormat: "yy-mm-dd",
+                minDate: dateToday
             });
         } );
         var slideIndex = 1;

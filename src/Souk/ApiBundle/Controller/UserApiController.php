@@ -24,20 +24,22 @@ class UserApiController extends Controller
             ->getRepository('UserBundle:User')
             ->findBy(array("username" => $login));
         $passwordEncoder = $this->get('security.password_encoder');
-        
-        if ($user!= null){
-            if(!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt()))
-            {
+
+
+            if ($user != null) {
+                if (!$passwordEncoder->isPasswordValid($user[0], $password, $user[0]->getSalt())) {
+                    $formatted = $serializer->normalize('erreur', 'json');
+                    return new JsonResponse($formatted);
+                } else {
+                    $formatted = $serializer->normalize($user, 'json');
+                    return new JsonResponse($formatted);
+                }
+            } else {
+
                 $formatted = $serializer->normalize('erreur', 'json');
                 return new JsonResponse($formatted);
-            }else {
-                $formatted = $serializer->normalize($user, 'json');
-                return new JsonResponse($formatted);
             }
-        }else{
-            $formatted = $serializer->normalize('erreur', 'json');
-            return new JsonResponse($formatted);
         }
-    }
+
 
 }

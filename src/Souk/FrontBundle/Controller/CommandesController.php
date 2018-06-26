@@ -183,16 +183,15 @@ class CommandesController extends Controller
      * Deletes a commande entity.
      *
      */
-    public function deleteAction(Request $request, Commandes $commande)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($commande);
-        $form->handleRequest($request);
+        //cnx
+        $em = $this->getDoctrine()->getManager();
+        //extraire l'objet commande
+        $commande = $em->getRepository('BackBundle:Commandes')->find($id);
+        $em->remove($commande);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($commande);
-            $em->flush();
-        }
+        $em->flush();
 
         return $this->redirectToRoute('commandes_index');
     }

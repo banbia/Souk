@@ -13,6 +13,10 @@ api_commandes:
 api_annonces:
     resource: "@ApiBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
+api_liste_categorie:
+    path: /categorie/all
+    defaults: { _controller: ApiBundle:CategorieApi:lstCategorie}
+
 #service Soumaya
 api_reclamations:
     resource: "@ApiBundle/Resources/config/routing/reclamations.yml"
@@ -26,3 +30,4 @@ api_commentaireAnc:
 api_evenements:
     resource: "@ApiBundle/Resources/config/routing/evenements.yml"
     prefix:   /evenements
+
