@@ -935,10 +935,6 @@ class __TwigTemplate_fdf063628efa48b17d27b06026015706a29cdb0b2c07d57f151c002be7a
         </table>
     {% endif %}
 {% endblock %}
-<<<<<<< HEAD
 ", "@Security/Collector/security.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle\\Resources\\views\\Collector\\security.html.twig");
-=======
-", "@Security/Collector/security.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\SecurityBundle\\Resources\\views\\Collector\\security.html.twig");
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 }

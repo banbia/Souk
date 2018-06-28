@@ -2027,10 +2027,6 @@ class __TwigTemplate_b8b42d2bda098a3b6d26e55a119525597f1e863a75fe9725eb6e73272fc
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-<<<<<<< HEAD
 ", "@WebProfiler/Collector/form.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\form.html.twig");
-=======
-", "@WebProfiler/Collector/form.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\form.html.twig");
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 }

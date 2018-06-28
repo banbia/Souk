@@ -378,23 +378,8 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.proxy_cache_warmer" to "cache_warmer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "session.attribute_bag" to "session".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "session.flash_bag" to "session".
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_c6c607b221da55673844771ec0aec0b67db1e00e49b18d3d29b2f81db0033c54" to "session_listener".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_f52debbfbb17ab05931592d06e66cb3d909b4e0a3a139db4e0e4c9f742af4d46" to "form.resolved_type_factory".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_51182c6a943573954f118683ce2f5363dc86bded7b8fe42fc795b8db300ee78c" to "session_listener".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_52bbab2f0d666e42f9b037cbb748ba76239c72c6d5a6b5e685e80f8fe653eb1f" to "form.resolved_type_factory".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_9dfeda4bdace8bcbcee66149a951f13d8dc8d5e6923a1aa67ea254b69c0a0e37" to "session_listener".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_1964f8d3920722791a923df21a79152fc64ede25dee90b8b2fc75253eb47ba1f" to "form.resolved_type_factory".
-=======
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_c773d88dc0c9d9c4465ebe3564d6760399f9cfd3e6ba075c2894e496b3262faf" to "session_listener".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_c3fd62c1c75dab59e4fd9f4ba8adc6692b9c82ffd9107a59e66d001a5fee7cf8" to "form.resolved_type_factory".
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "form.extension" to "form.registry".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "service_locator.2e98fa07fe24e18082ebf4d1818d59e3" to "form.extension".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "form.choice_list_factory.default" to "form.choice_list_factory.property_access".
@@ -405,23 +390,8 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "assets._default_package" to "assets.packages".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "validator.validator_factory" to "validator.builder".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "fos_user.validator.initializer" to "validator.builder".
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_16efea61e7edac65986dc64c250fa2bdd25781cfd3deda60aa5cc6a4db3e1d30" to "validator.mapping.cache.symfony".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_16efea61e7edac65986dc64c250fa2bdd25781cfd3deda60aa5cc6a4db3e1d30" to "validator.mapping.cache.doctrine.apc".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_12fcf59b54f8e8b3e37bdd7042b0f5e3495ee9d7b5aad5f4157badfe03af7707" to "validator.mapping.cache.symfony".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_12fcf59b54f8e8b3e37bdd7042b0f5e3495ee9d7b5aad5f4157badfe03af7707" to "validator.mapping.cache.doctrine.apc".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_cae75cbe866a38c8723c7a7beb473692f30d497ba88e3f295ecbfa304c6a77d6" to "validator.mapping.cache.symfony".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_cae75cbe866a38c8723c7a7beb473692f30d497ba88e3f295ecbfa304c6a77d6" to "validator.mapping.cache.doctrine.apc".
-=======
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_8477f26ee26da9b5d605c4ebf86ada251d82ed4f6cbc356375b373f0dfa3a4b6" to "validator.mapping.cache.symfony".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_8477f26ee26da9b5d605c4ebf86ada251d82ed4f6cbc356375b373f0dfa3a4b6" to "validator.mapping.cache.doctrine.apc".
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "service_locator.d1035efbd4e2f2796cab4e77371ef95b" to "validator.validator_factory".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "service_locator.20ccd3ddf0f78b2202986f924e362585" to "translator.default".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "translator.selector" to "translator.default".
@@ -452,19 +422,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "sensio_framework_extra.routing.loader.annot_file" to "routing.resolver".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "routing.resolver" to "routing.loader".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "annotations.dummy_registry" to "annotations.reader".
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_52a5d5735eba747e88417275f0866a1cf49722611977565f88ab53436a5d072c" to "annotations.cache".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_023d52ca89029fd8b34bcded3df78b01de3def19318d2df94c90890f8b7ad895" to "annotations.cache".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_2a7f02e37d21a18df3c93fb69b749a3bda803a695731269f13b15cb2084c5d9d" to "annotations.cache".
-=======
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_6a4c49ae7f7d059900db9dc0a2492415ec4ff914022513397fb682ba82d4baf1" to "annotations.cache".
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "cache.property_access" to "property_accessor".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.expression_language" to "security.access.expression_voter".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "service_locator.1712c3a50d1ec2c742b2ead0f03bb76c" to "security.firewall.map".
@@ -527,46 +485,16 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "service_locator.1ecb5190ba61ab773cdad8cb2cc65478" to "twig.runtime_loader".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "twig.form.engine" to "twig.form.renderer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "monolog.processor.psr_log_message" to "monolog.handler.main".
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_4afbb500bdf7d215cae2e1c3f3c40bfe55cc0eaddf9293b48a02b7f9bd0296a2" to "swiftmailer.mailer.default.transport.authhandler".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_4afbb500bdf7d215cae2e1c3f3c40bfe55cc0eaddf9293b48a02b7f9bd0296a2" to "swiftmailer.mailer.default.transport.authhandler".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "3_4afbb500bdf7d215cae2e1c3f3c40bfe55cc0eaddf9293b48a02b7f9bd0296a2" to "swiftmailer.mailer.default.transport.authhandler".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_4ce01a4ab91a8399102c600cd0e5ad1eb2834520df2a0ebe7dcc0095140f3386" to "swiftmailer.mailer.default.transport.authhandler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_4ce01a4ab91a8399102c600cd0e5ad1eb2834520df2a0ebe7dcc0095140f3386" to "swiftmailer.mailer.default.transport.authhandler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "3_4ce01a4ab91a8399102c600cd0e5ad1eb2834520df2a0ebe7dcc0095140f3386" to "swiftmailer.mailer.default.transport.authhandler".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff" to "swiftmailer.mailer.default.transport.authhandler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff" to "swiftmailer.mailer.default.transport.authhandler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "3_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff" to "swiftmailer.mailer.default.transport.authhandler".
-=======
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448" to "swiftmailer.mailer.default.transport.authhandler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448" to "swiftmailer.mailer.default.transport.authhandler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "3_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448" to "swiftmailer.mailer.default.transport.authhandler".
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "swiftmailer.transport.replacementfactory" to "swiftmailer.mailer.default.transport.buffer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.dbal.logger.chain.default" to "doctrine.dbal.default_connection.configuration".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.dbal.logger" to "doctrine.dbal.logger.chain.default".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "vich_uploader.listener.clean.product_image" to "doctrine.dbal.default_connection.event_manager".
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "vich_uploader.listener.upload.product_image" to "doctrine.dbal.default_connection.event_manager".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "vich_uploader.listener.remove.product_image" to "doctrine.dbal.default_connection.event_manager".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "fos_user.user_listener" to "doctrine.dbal.default_connection.event_manager".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "vich_uploader.listener.upload.product_image" to "doctrine.dbal.default_connection.event_manager".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "vich_uploader.listener.remove.product_image" to "doctrine.dbal.default_connection.event_manager".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "fos_user.user_listener" to "doctrine.dbal.default_connection.event_manager".
-=======
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "fos_user.user_listener" to "doctrine.dbal.default_connection.event_manager".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "vich_uploader.listener.remove.product_image" to "doctrine.dbal.default_connection.event_manager".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "vich_uploader.listener.upload.product_image" to "doctrine.dbal.default_connection.event_manager".
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.dbal.default_connection.configuration" to "doctrine.dbal.default_connection".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.dbal.default_connection.event_manager" to "doctrine.dbal.default_connection".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.default_metadata_driver" to "doctrine.orm.default_configuration".
@@ -604,35 +532,11 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput" to "CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput" to "CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "var_dumper.html_dumper" to "twig.extension.dump".
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_2c2730a7c6d14d5ee4cc5b5621f0113d13ecec7e805eb7a0e54605474b19a440" to "web_profiler.csp.handler".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_2c2730a7c6d14d5ee4cc5b5621f0113d13ecec7e805eb7a0e54605474b19a440" to "twig.extension.webprofiler".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "argument_metadata_factory" to "debug.argument_resolver.inner".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "translator.logging" to "translator".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_52a5d5735eba747e88417275f0866a1cf49722611977565f88ab53436a5d072c" to "annotation_reader".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_f5ffcbb7c1b6f8ba3f0ba3111829779e88cce7efd6973873d040c21ce4b17ee0" to "web_profiler.csp.handler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_f5ffcbb7c1b6f8ba3f0ba3111829779e88cce7efd6973873d040c21ce4b17ee0" to "twig.extension.webprofiler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "argument_metadata_factory" to "debug.argument_resolver.inner".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "translator.logging" to "translator".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_023d52ca89029fd8b34bcded3df78b01de3def19318d2df94c90890f8b7ad895" to "annotation_reader".
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_d69f724c9e675a562da87a0539963d51848f9d5e9612521fe0a69ad6fd5437d1" to "web_profiler.csp.handler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_d69f724c9e675a562da87a0539963d51848f9d5e9612521fe0a69ad6fd5437d1" to "twig.extension.webprofiler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "argument_metadata_factory" to "debug.argument_resolver.inner".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "translator.logging" to "translator".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_2a7f02e37d21a18df3c93fb69b749a3bda803a695731269f13b15cb2084c5d9d" to "annotation_reader".
-=======
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_a04814876c2d23bed7b338de078c9481654c363b07ba1ac176bb1d2da294e912" to "web_profiler.csp.handler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "2_a04814876c2d23bed7b338de078c9481654c363b07ba1ac176bb1d2da294e912" to "twig.extension.webprofiler".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "argument_metadata_factory" to "debug.argument_resolver.inner".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "translator.logging" to "translator".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "1_6a4c49ae7f7d059900db9dc0a2492415ec4ff914022513397fb682ba82d4baf1" to "annotation_reader".
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "swiftmailer.mailer.default.transport.buffer" to "swiftmailer.mailer.default.transport.real".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "swiftmailer.mailer.default.transport.authhandler" to "swiftmailer.mailer.default.transport.real".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "swiftmailer.transport.configurator.default" to "swiftmailer.mailer.default.transport.real".
@@ -645,19 +549,7 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "argument_metadata_factory"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "cache.serializer"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "translator.selector"; reason: unused.
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_c6c607b221da55673844771ec0aec0b67db1e00e49b18d3d29b2f81db0033c54"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_51182c6a943573954f118683ce2f5363dc86bded7b8fe42fc795b8db300ee78c"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_9dfeda4bdace8bcbcee66149a951f13d8dc8d5e6923a1aa67ea254b69c0a0e37"; reason: unused.
-=======
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_c773d88dc0c9d9c4465ebe3564d6760399f9cfd3e6ba075c2894e496b3262faf"; reason: unused.
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "session.flash_bag"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "session.attribute_bag"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "session.handler.write_check"; reason: unused.
@@ -673,23 +565,8 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "templating.cache_warmer.template_paths"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "templating.loader.cache"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "templating.loader.chain"; reason: unused.
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_16efea61e7edac65986dc64c250fa2bdd25781cfd3deda60aa5cc6a4db3e1d30"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_16efea61e7edac65986dc64c250fa2bdd25781cfd3deda60aa5cc6a4db3e1d30"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_12fcf59b54f8e8b3e37bdd7042b0f5e3495ee9d7b5aad5f4157badfe03af7707"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_12fcf59b54f8e8b3e37bdd7042b0f5e3495ee9d7b5aad5f4157badfe03af7707"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_cae75cbe866a38c8723c7a7beb473692f30d497ba88e3f295ecbfa304c6a77d6"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_cae75cbe866a38c8723c7a7beb473692f30d497ba88e3f295ecbfa304c6a77d6"; reason: unused.
-=======
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_8477f26ee26da9b5d605c4ebf86ada251d82ed4f6cbc356375b373f0dfa3a4b6"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_8477f26ee26da9b5d605c4ebf86ada251d82ed4f6cbc356375b373f0dfa3a4b6"; reason: unused.
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "validator.mapping.cache_warmer"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "validator.mapping.cache.symfony"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "validator.mapping.cache.doctrine.apc"; reason: unused.
@@ -705,19 +582,7 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "data_collector.time"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "data_collector.memory"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "data_collector.cache"; reason: unused.
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_f52debbfbb17ab05931592d06e66cb3d909b4e0a3a139db4e0e4c9f742af4d46"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_52bbab2f0d666e42f9b037cbb748ba76239c72c6d5a6b5e685e80f8fe653eb1f"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_1964f8d3920722791a923df21a79152fc64ede25dee90b8b2fc75253eb47ba1f"; reason: unused.
-=======
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_c3fd62c1c75dab59e4fd9f4ba8adc6692b9c82ffd9107a59e66d001a5fee7cf8"; reason: unused.
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "c66c8daa4fa4dead6a562ed2c4bdb322"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "8464c6758298cf75d30c4f689fb7886d"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "cache.property_access"; reason: unused.
@@ -729,23 +594,8 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "routing.loader.directory"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "routing.loader.service"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "router.cache_warmer"; reason: unused.
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_52a5d5735eba747e88417275f0866a1cf49722611977565f88ab53436a5d072c"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_52a5d5735eba747e88417275f0866a1cf49722611977565f88ab53436a5d072c"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_023d52ca89029fd8b34bcded3df78b01de3def19318d2df94c90890f8b7ad895"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_023d52ca89029fd8b34bcded3df78b01de3def19318d2df94c90890f8b7ad895"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_2a7f02e37d21a18df3c93fb69b749a3bda803a695731269f13b15cb2084c5d9d"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_2a7f02e37d21a18df3c93fb69b749a3bda803a695731269f13b15cb2084c5d9d"; reason: unused.
-=======
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_6a4c49ae7f7d059900db9dc0a2492415ec4ff914022513397fb682ba82d4baf1"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_6a4c49ae7f7d059900db9dc0a2492415ec4ff914022513397fb682ba82d4baf1"; reason: unused.
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "annotations.dummy_registry"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "annotations.filesystem_cache"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "annotations.cache_warmer"; reason: unused.
@@ -821,27 +671,9 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.formatter.wildfire"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.formatter.logstash"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.processor.psr_log_message"; reason: unused.
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "3_4afbb500bdf7d215cae2e1c3f3c40bfe55cc0eaddf9293b48a02b7f9bd0296a2"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_4afbb500bdf7d215cae2e1c3f3c40bfe55cc0eaddf9293b48a02b7f9bd0296a2"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_4afbb500bdf7d215cae2e1c3f3c40bfe55cc0eaddf9293b48a02b7f9bd0296a2"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "3_4ce01a4ab91a8399102c600cd0e5ad1eb2834520df2a0ebe7dcc0095140f3386"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_4ce01a4ab91a8399102c600cd0e5ad1eb2834520df2a0ebe7dcc0095140f3386"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_4ce01a4ab91a8399102c600cd0e5ad1eb2834520df2a0ebe7dcc0095140f3386"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "3_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_22d75425a50911e753e65cfcd9e276ccbff8a6b03765bf8649505bc215ec4eff"; reason: unused.
-=======
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "3_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_5a817c803ca6ab1fe497e2ce5a5a22e64e2e4a44cd7208095680ae051a042448"; reason: unused.
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "swiftmailer.transport.failover"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "swiftmailer.transport.mailinvoker"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "swiftmailer.transport.replacementfactory"; reason: unused.
@@ -937,23 +769,8 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "CMEN\GoogleChartsBundle\Twig\GoogleChartsExtension"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "twig.extension.dump"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "var_dumper.html_dumper"; reason: unused.
-<<<<<<< HEAD
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_2c2730a7c6d14d5ee4cc5b5621f0113d13ecec7e805eb7a0e54605474b19a440"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_2c2730a7c6d14d5ee4cc5b5621f0113d13ecec7e805eb7a0e54605474b19a440"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_f5ffcbb7c1b6f8ba3f0ba3111829779e88cce7efd6973873d040c21ce4b17ee0"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_f5ffcbb7c1b6f8ba3f0ba3111829779e88cce7efd6973873d040c21ce4b17ee0"; reason: unused.
-=======
-<<<<<<< HEAD
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_d69f724c9e675a562da87a0539963d51848f9d5e9612521fe0a69ad6fd5437d1"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_d69f724c9e675a562da87a0539963d51848f9d5e9612521fe0a69ad6fd5437d1"; reason: unused.
-=======
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "2_a04814876c2d23bed7b338de078c9481654c363b07ba1ac176bb1d2da294e912"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "1_a04814876c2d23bed7b338de078c9481654c363b07ba1ac176bb1d2da294e912"; reason: unused.
->>>>>>> adf65dd818e3404cc64b56e62722b5e9d69c70be
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "twig.extension.webprofiler"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "service_locator.20ccd3ddf0f78b2202986f924e362585"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "service_locator.2e98fa07fe24e18082ebf4d1818d59e3"; reason: unused.

@@ -1623,10 +1623,6 @@ class __TwigTemplate_0b8164840893ba2cdbf337d5dfe7f98c60c0fa6a4bb7ca105ea65fa37a5
         <canvas width=\"680\" height=\"\" id=\"{{ id }}\" class=\"timeline\"></canvas>
     </div>
 {% endmacro %}
-<<<<<<< HEAD
 ", "@WebProfiler/Collector/time.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\time.html.twig");
-=======
-", "@WebProfiler/Collector/time.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\time.html.twig");
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 }

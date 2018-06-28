@@ -307,14 +307,6 @@ header .container { display: flex; justify-content: space-between; }
     .hidden-xs-down { display: initial; }
     .help-link { margin-left: 30px; }
 }
-<<<<<<< HEAD
 ", "@Twig/exception.css.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\exception.css.twig");
-=======
-<<<<<<< HEAD
-", "@Twig/exception.css.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\exception.css.twig");
-=======
-", "@Twig/exception.css.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\exception.css.twig");
->>>>>>> a8467fc6d036327556add09b13385962147fa375
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
     }
 }
