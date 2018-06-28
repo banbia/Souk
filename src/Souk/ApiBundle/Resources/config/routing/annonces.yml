@@ -5,10 +5,10 @@ get_Annonce:
     path:     /AnnoncesById/{id}
     defaults: { _controller: ApiBundle:AnnoncesApi:GetAnnonceById}
 ajouter_Annonce:
-     path:     /ajouter/{commercial}/{prix}/{categorie}/{description}/{titre}
+     path:     /ajouter/{commercial}/{prix}/{categorie}/{description}/{titre}/{filename}
      defaults: { _controller: ApiBundle:AnnoncesApi:create}
 modifier_Annonce:
-     path:     /modifier/{idannonces}/{prix}/{categorie}/{description}/{titre}
+     path:     /modifier/{idannonces}/{prix}/{description}/{titre}
      defaults: { _controller: ApiBundle:AnnoncesApi:modifier}
 supprimer_Annonce:
       path:     /supprimer/{id}

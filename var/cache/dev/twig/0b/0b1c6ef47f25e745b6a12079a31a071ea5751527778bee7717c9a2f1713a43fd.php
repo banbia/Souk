@@ -127,6 +127,6 @@ class __TwigTemplate_bf4a35504fde5e9523aeb702af17f48bc16491bf3c54d30be95ede9b8e4
     </div>
 
     <!-- /row -->
-{% endblock %}", "FrontBundle:signalsAnc:signal_Anc.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/signalsAnc/signal_Anc.html.twig");
+{% endblock %}", "FrontBundle:signalsAnc:signal_Anc.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/signalsAnc/signal_Anc.html.twig");
     }
 }

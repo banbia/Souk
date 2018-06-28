@@ -400,6 +400,10 @@ class __TwigTemplate_d2a0288992fd6fd8d7aa5753c5623c92387b4f5e1cc0e8c6d1325f56aa7
 {% block body %}
     {% include '@Twig/Exception/exception.html.twig' %}
 {% endblock %}
+<<<<<<< HEAD
 ", "@Twig/Exception/exception_full.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\exception_full.html.twig");
+=======
+", "@Twig/Exception/exception_full.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\exception_full.html.twig");
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
     }
 }

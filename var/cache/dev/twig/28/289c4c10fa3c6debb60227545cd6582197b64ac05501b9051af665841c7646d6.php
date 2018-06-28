@@ -323,6 +323,6 @@ class __TwigTemplate_178b2ef024aaeff5bc6fe0b20a770f75d6be2c17ce0ab7a228267c4ce35
     {% endblock body %}
 {% block js %}
 
-{% endblock js %}", "FrontBundle:annonces:new.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/new.html.twig");
+{% endblock js %}", "FrontBundle:annonces:new.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/new.html.twig");
     }
 }

@@ -280,6 +280,6 @@ class __TwigTemplate_f4caa03df4fce914119abb0560c42028c8e3882dd424fed98559a2d955b
     </div>
 
 {% endblock %}
-", "BackBundle:Signals:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/Signals/index.html.twig");
+", "BackBundle:Signals:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/Signals/index.html.twig");
     }
 }

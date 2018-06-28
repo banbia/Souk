@@ -30,6 +30,6 @@ class DefaultController extends Controller
 
 
     return $this->render('FrontBundle:default:index.html.twig',array(
-      'categories' => $gategories,'annonces' =>$result,));
+      'categories' => $gategories,'annonces' =>$annonces,));
   }
 }

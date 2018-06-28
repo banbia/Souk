@@ -72,15 +72,15 @@ class __TwigTemplate_2823505d139aff7d6d48b9526b0e4648f593fc7e0e5b92ecbad587b101d
         // line 8
         echo "    <!--- salsabil's work -->
 
-    <h1  class=\"text-info\"> Evenement </h1>
+    <h1  style=\"color: #B40404\"> Evenement </h1>
 
-<div class=\"row form-groupEvent\">
+<div class=\"row form-groupEvent\"style=\"margin-bottom:15px;margin-top:60px;\">
    <div class=\"col-md-12\">
        <div class=\"col-md-5\">
        <img   src=\"";
         // line 15
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/images/pic1.jpg"), "html", null, true);
-        echo "\" class=\"img-responsive\" alt=\"\"/>
+        echo "\" style=\"width:auto%;height: 250px\" class=\"img-responsive\" alt=\"\"/>
        </div>
        <div class=\"col-md-6\">
     <table  class=\"table center-block\">
@@ -137,78 +137,70 @@ class __TwigTemplate_2823505d139aff7d6d48b9526b0e4648f593fc7e0e5b92ecbad587b101d
     </table>
        </div>
    </div>
+</div>
     <div class=\" col-md-12\">
 
     ";
-        // line 52
+        // line 53
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
-            // line 53
+            // line 54
             echo "    ";
             echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
             echo "
         ";
-            // line 54
+            // line 55
             echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
             echo "
         <input class=\"btn btn-primary\" type=\"submit\" value=\"Participer\" />
         <a class=\"btn btn-success\" href=\"";
-            // line 56
+            // line 57
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_index");
             echo "\"><i class=\"fa fa-arrow-left\" > Back to the liste </i> </a>
     ";
-            // line 57
+            // line 58
             echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
             echo "
     ";
         }
-        // line 59
+        // line 60
         echo "
     ";
-        // line 60
+        // line 61
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_COM")) {
-            // line 61
+            // line 62
             echo "        ";
             if (($this->getAttribute($this->getAttribute(($context["evennement"] ?? $this->getContext($context, "evennement")), "commercial", array()), "id", array()) == $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "id", array()))) {
-                // line 62
+                // line 63
                 echo "
             <a href=\"";
-                // line 63
+                // line 64
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_parts", array("id" => $this->getAttribute(($context["evennement"] ?? $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
                 echo "\" class=\"btn btn-info\"><i class=\"fa fa-list\"></i> Consulter liste des partciapants </a>
             <a class=\"btn btn-warning\"  href=\"";
-                // line 64
+                // line 65
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_edit", array("id" => $this->getAttribute(($context["evennement"] ?? $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
                 echo "\"> <i class=\"fa fa-edit\"> Edit </i></a>
             <a class=\"btn btn-danger\"  href=\"";
-                // line 65
+                // line 66
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_delete", array("id" => $this->getAttribute(($context["evennement"] ?? $this->getContext($context, "evennement")), "id", array()))), "html", null, true);
                 echo "\"> <i class=\"fa fa-close\"></i> Delete</a>
             <a class=\"btn btn-success\" href=\"";
-                // line 66
+                // line 67
                 echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("evennements_index");
                 echo "\"><i class=\"fa fa-arrow-left\" > Back to the liste </i> </a>
         ";
             }
-            // line 68
-            echo "        ";
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
-            echo "
-        ";
             // line 69
-            echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
             echo "
 
     </div>
 
-    ";
-            // line 73
-            echo             $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
-            echo "
+
     ";
         }
         // line 75
         echo "
-</div>
+
 
     <!--- safa Boufares's work start-->
         <!-- /row -->
@@ -408,7 +400,7 @@ class __TwigTemplate_2823505d139aff7d6d48b9526b0e4648f593fc7e0e5b92ecbad587b101d
 
     public function getDebugInfo()
     {
-        return array (  388 => 179,  379 => 178,  339 => 147,  323 => 137,  319 => 135,  316 => 134,  311 => 132,  306 => 131,  303 => 130,  301 => 129,  295 => 128,  276 => 111,  272 => 110,  262 => 104,  255 => 99,  252 => 98,  247 => 95,  244 => 94,  242 => 93,  237 => 91,  233 => 90,  229 => 89,  220 => 83,  210 => 75,  205 => 73,  198 => 69,  193 => 68,  188 => 66,  184 => 65,  180 => 64,  176 => 63,  173 => 62,  170 => 61,  168 => 60,  165 => 59,  160 => 57,  156 => 56,  151 => 54,  146 => 53,  144 => 52,  132 => 43,  125 => 39,  116 => 35,  107 => 31,  100 => 27,  93 => 23,  82 => 15,  73 => 8,  64 => 7,  51 => 4,  42 => 3,  11 => 1,);
+        return array (  380 => 179,  371 => 178,  331 => 147,  315 => 137,  311 => 135,  308 => 134,  303 => 132,  298 => 131,  295 => 130,  293 => 129,  287 => 128,  268 => 111,  264 => 110,  254 => 104,  247 => 99,  244 => 98,  239 => 95,  236 => 94,  234 => 93,  229 => 91,  225 => 90,  221 => 89,  212 => 83,  202 => 75,  194 => 69,  189 => 67,  185 => 66,  181 => 65,  177 => 64,  174 => 63,  171 => 62,  169 => 61,  166 => 60,  161 => 58,  157 => 57,  152 => 55,  147 => 54,  145 => 53,  132 => 43,  125 => 39,  116 => 35,  107 => 31,  100 => 27,  93 => 23,  82 => 15,  73 => 8,  64 => 7,  51 => 4,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -430,12 +422,12 @@ class __TwigTemplate_2823505d139aff7d6d48b9526b0e4648f593fc7e0e5b92ecbad587b101d
 {% block body %}
     <!--- salsabil's work -->
 
-    <h1  class=\"text-info\"> Evenement </h1>
+    <h1  style=\"color: #B40404\"> Evenement </h1>
 
-<div class=\"row form-groupEvent\">
+<div class=\"row form-groupEvent\"style=\"margin-bottom:15px;margin-top:60px;\">
    <div class=\"col-md-12\">
        <div class=\"col-md-5\">
-       <img   src=\"{{ asset('bundles/front/images/pic1.jpg') }}\" class=\"img-responsive\" alt=\"\"/>
+       <img   src=\"{{ asset('bundles/front/images/pic1.jpg') }}\" style=\"width:auto%;height: 250px\" class=\"img-responsive\" alt=\"\"/>
        </div>
        <div class=\"col-md-6\">
     <table  class=\"table center-block\">
@@ -470,6 +462,7 @@ class __TwigTemplate_2823505d139aff7d6d48b9526b0e4648f593fc7e0e5b92ecbad587b101d
     </table>
        </div>
    </div>
+</div>
     <div class=\" col-md-12\">
 
     {% if is_granted('ROLE_CLIENT') %}
@@ -488,15 +481,14 @@ class __TwigTemplate_2823505d139aff7d6d48b9526b0e4648f593fc7e0e5b92ecbad587b101d
             <a class=\"btn btn-danger\"  href=\"{{ path('evennements_delete', { 'id': evennement.id }) }}\"> <i class=\"fa fa-close\"></i> Delete</a>
             <a class=\"btn btn-success\" href=\"{{ path('evennements_index') }}\"><i class=\"fa fa-arrow-left\" > Back to the liste </i> </a>
         {% endif  %}
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
+
 
     </div>
 
-    {{ form_end(form) }}
+
     {% endif %}
 
-</div>
+
 
     <!--- safa Boufares's work start-->
         <!-- /row -->
@@ -603,6 +595,6 @@ class __TwigTemplate_2823505d139aff7d6d48b9526b0e4648f593fc7e0e5b92ecbad587b101d
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
 {% endblock js %}
 
-", "FrontBundle:evennements:show.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/evennements/show.html.twig");
+", "FrontBundle:evennements:show.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/evennements/show.html.twig");
     }
 }

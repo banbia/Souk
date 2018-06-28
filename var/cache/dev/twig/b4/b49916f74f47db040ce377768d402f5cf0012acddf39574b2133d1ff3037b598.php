@@ -131,7 +131,7 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
         if (!$context['_iterated']) {
             // line 36
             echo "                <img src=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("uploads/annonceImage/no.png"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("uploads/annonceImage/no.jpg"), "html", null, true);
             echo "\" style=\"width:100%;height: 300px\">
 
                 ";
@@ -148,21 +148,12 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
                 <a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;</a>
                 <a class=\"next\" onclick=\"plusSlides(1)\">&#10095;</a>
             </div>
-
-
-
-
-
             </div>
             <!--/.Carousel Wrapper-->
-
-
-
-
         <div id=\"sidebar\" class=\"col-md-7 single-right-left simpleCart_shelfItem\">
 
             <h3>";
-        // line 60
+        // line 51
         echo twig_escape_filter($this->env, $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "titre", array()), "html", null, true);
         echo "</h3>
             <div class=\"rating1\">
@@ -181,14 +172,14 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
             </div>
             <p>
                 <span class=\"item_price\">";
-        // line 76
+        // line 67
         echo twig_escape_filter($this->env, $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "prix", array()), "html", null, true);
         echo "</span>
 
                 <label>
 
                     ";
-        // line 80
+        // line 71
         if ($this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "disponible", array())) {
             echo "En stock";
         } else {
@@ -212,7 +203,7 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
             <div class=\"product-single-w3l\">
                 <p>
                     <i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i>";
-        // line 97
+        // line 88
         echo $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "description", array());
         echo "
                 </p>
@@ -220,27 +211,27 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
              <div class=\"product-single-w3l\">
                 <p>
             ";
-        // line 102
+        // line 93
         if ($this->getAttribute($this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "commercial", array()), "adresse", array())) {
             echo "<span class=\"phone\"><i class=\"fa fa-map-marker\"></i> ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "commercial", array()), "adresse", array()), "html", null, true);
             echo "</span>";
         }
-        // line 103
+        // line 94
         echo "            ";
         if ($this->getAttribute($this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "commercial", array()), "mobile", array())) {
             echo "<span class=\"phone\"><i class=\"fa fa-phone\"></i> ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "commercial", array()), "mobile", array()), "html", null, true);
             echo "</span>";
         }
-        // line 104
+        // line 95
         echo "            ";
         if ($this->getAttribute($this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "commercial", array()), "email", array())) {
             echo "<span class=\"phone\"><i class=\"fa fa-envelope\"></i> ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "commercial", array()), "email", array()), "html", null, true);
             echo "</span>";
         }
-        // line 105
+        // line 96
         echo "                </p>
              </div>
        </div>
@@ -248,25 +239,22 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
     </div>
     <br>
 
-
-
-    
     ";
-        // line 116
+        // line 104
         echo "
 <!-- Nour's work -->
 ";
-        // line 118
+        // line 106
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 119
+            // line 107
             echo "    ";
             if (($this->getAttribute($this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "commercial", array()), "id", array()) != $this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "id", array()))) {
-                // line 120
+                // line 108
                 echo "        <div class=\"content\">
             ";
-                // line 121
+                // line 109
                 if ((($context["com"] ?? $this->getContext($context, "com")) == 0)) {
-                    // line 122
+                    // line 110
                     echo "                <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#newCom\">
 
                     <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Commander</span>
@@ -274,25 +262,25 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
             ";
                 } else {
-                    // line 128
+                    // line 116
                     echo "                <a href=\"#\" class=\"btn left\" data-toggle=\"modal\" data-target=\"#noCom\">
 
                     <span class=\"right title\"><span class=\"arrow-right\"></span><span class=\" fa fa-check\"></span>    Commander</span>
                 </a>
             ";
                 }
-                // line 133
+                // line 121
                 echo "        </div>
 ";
             }
         }
-        // line 136
+        // line 124
         echo "
     <!-- Modal new com-->
     <div id=\"newCom\" class=\"modal fade\" role=\"dialog\">
         <div class=\"modal-dialog\">
             ";
-        // line 140
+        // line 128
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
         echo "
             <!-- Modal content-->
@@ -307,29 +295,29 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
                         <div class=\"col-md-12\">
                             <div class=\"form-group col-md-6\">
                                 ";
-        // line 152
+        // line 140
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dateCom", array()), 'label');
         echo "
                                 ";
-        // line 153
+        // line 141
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dateCom", array()), 'errors');
         echo "
                                 ";
-        // line 154
+        // line 142
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "dateCom", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                             </div>
                             <div class=\"form-group col-md-6\">
                                 ";
-        // line 157
+        // line 145
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "quantite", array()), 'label');
         echo "
                                 ";
-        // line 158
+        // line 146
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "quantite", array()), 'errors');
         echo "
                                 ";
-        // line 159
+        // line 147
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "quantite", array()), 'widget', array("attr" => array("class" => "form-control")));
         echo "
                             </div>
@@ -345,7 +333,7 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
             </div>
             ";
-        // line 172
+        // line 160
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
         </div>
@@ -380,7 +368,7 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
         <div class=\"col-md-12\">
             <div class=\"col-md-6\">
                 <a href=\"";
-        // line 204
+        // line 192
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("signalsAncN_new", array("annonce" => $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "id", array()))), "html", null, true);
         echo "\"><i class=\"fa fa-flag pull-right\"></i></a>
                 <br/>
@@ -389,39 +377,39 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
         <div class=\"col-md-6\">
             <!-- test si l'utilisateur est connecté -->
             ";
-        // line 210
+        // line 198
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["formC"] ?? $this->getContext($context, "formC")), 'form_start');
         echo "
             ";
-        // line 211
+        // line 199
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["formC"] ?? $this->getContext($context, "formC")), "contenu", array()), 'errors');
         echo "
             ";
-        // line 212
+        // line 200
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["formC"] ?? $this->getContext($context, "formC")), "contenu", array()), 'widget', array("attr" => array("class" => "comment form-control")));
         echo "
                 ";
-        // line 213
+        // line 201
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 214
+            // line 202
             echo "                    ";
             if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_CLIENT")) {
-                // line 215
+                // line 203
                 echo "                        <button type=\"submit\" class=\"btn sign pull-right\"><i class=\"fa fa-commenting-o\"></i> Commenter </button>
 
                     ";
             }
-            // line 218
+            // line 206
             echo "                ";
         } else {
-            // line 219
+            // line 207
             echo "                    <button type=\"button\" class=\"btn sign pull-right\" data-toggle=\"modal\" data-target=\"#noComment\">
 
                         <i class=\"fa fa-commenting-o\"></i> Commenter
                     </button>
                 ";
         }
-        // line 224
+        // line 212
         echo "            ";
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["formC"] ?? $this->getContext($context, "formC")), 'form_end');
         echo "
@@ -433,11 +421,11 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
 
         ";
-        // line 232
+        // line 220
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["coms"] ?? $this->getContext($context, "coms")));
         foreach ($context['_seq'] as $context["_key"] => $context["comn"]) {
-            // line 233
+            // line 221
             echo "            <div class=\"col-md-12\">
 
                 <div class=\"one-comment\">
@@ -454,35 +442,35 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
                             <div class=\"panel-heading\">
                                 <strong>";
-            // line 248
+            // line 236
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["comn"], "client", array()), "username", array()), "html", null, true);
             echo "</strong> <label class=\"text-muted text-right\"> commenté le ";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comn"], "dateCmt", array()), "D-M-Y"), "html", null, true);
             echo " </label>
                                 ";
-            // line 249
+            // line 237
             if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-                // line 250
+                // line 238
                 echo "                                    ";
                 if (($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "user", array()), "id", array()) == $this->getAttribute($this->getAttribute($context["comn"], "client", array()), "id", array()))) {
-                    // line 251
+                    // line 239
                     echo "                                        <a href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commentairesAnc_delete", array("com" => $this->getAttribute($context["comn"], "id", array()), "annonce" => $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "id", array()))), "html", null, true);
                     echo "\"><i class=\"fa fa-trash-o\"></i></a>
                                         <a href=\"";
-                    // line 252
+                    // line 240
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("commentairesAnc_edit", array("com" => $this->getAttribute($context["comn"], "id", array()), "annonce" => $this->getAttribute(($context["annonce"] ?? $this->getContext($context, "annonce")), "id", array()))), "html", null, true);
                     echo "\"><i class=\"fa fa-edit\"></i></a>
                                     ";
                 }
-                // line 254
+                // line 242
                 echo "                                ";
             }
-            // line 255
+            // line 243
             echo "                            </div>
                             <div class=\"panel-body\">
                                 ";
-            // line 257
+            // line 245
             echo twig_escape_filter($this->env, $this->getAttribute($context["comn"], "contenu", array()), "html", null, true);
             echo "
                             </div>
@@ -498,7 +486,7 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comn'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 267
+        // line 255
         echo "    </div>
 
     <!-- /row -->
@@ -539,7 +527,7 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
     }
 
-    // line 299
+    // line 287
     public function block_js($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -548,11 +536,19 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "js"));
 
-        // line 300
-        echo "    <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
+        // line 288
+        echo "    <script>
+        function forceNumeric(){
+            var \$input = \$(this);
+            \$input.val(\$input.val().replace(/[^\\d]+/g,''));
+        }
+        \$('#souk_backbundle_commandes_quantite').keyup(forceNumeric);
+
+    </script>
+    <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
 
     <script src=\"";
-        // line 302
+        // line 298
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/js/rating.js"), "html", null, true);
         echo "\"></script>
 
@@ -561,9 +557,11 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
     <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>
         <script>
         \$( function() {
+            var dateToday = new Date();
             \$( \"#souk_backbundle_commandes_dateCom\" ).datepicker({
                 altField: \"#souk_backbundle_commandes_dateCom\",
-                altFormat: \"yy-mm-dd\"
+                altFormat: \"yy-mm-dd\",
+                minDate: dateToday
             });
         } );
         var slideIndex = 1;
@@ -618,7 +616,7 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
     public function getDebugInfo()
     {
-        return array (  556 => 302,  552 => 300,  543 => 299,  502 => 267,  486 => 257,  482 => 255,  479 => 254,  474 => 252,  469 => 251,  466 => 250,  464 => 249,  458 => 248,  441 => 233,  437 => 232,  425 => 224,  418 => 219,  415 => 218,  410 => 215,  407 => 214,  405 => 213,  401 => 212,  397 => 211,  393 => 210,  384 => 204,  349 => 172,  333 => 159,  329 => 158,  325 => 157,  319 => 154,  315 => 153,  311 => 152,  296 => 140,  290 => 136,  285 => 133,  278 => 128,  270 => 122,  268 => 121,  265 => 120,  262 => 119,  260 => 118,  256 => 116,  244 => 105,  237 => 104,  230 => 103,  224 => 102,  216 => 97,  192 => 80,  185 => 76,  166 => 60,  143 => 39,  133 => 36,  124 => 32,  118 => 28,  113 => 27,  101 => 18,  97 => 17,  93 => 16,  90 => 15,  88 => 14,  79 => 13,  66 => 10,  60 => 7,  56 => 6,  51 => 3,  42 => 2,  11 => 1,);
+        return array (  552 => 298,  540 => 288,  531 => 287,  490 => 255,  474 => 245,  470 => 243,  467 => 242,  462 => 240,  457 => 239,  454 => 238,  452 => 237,  446 => 236,  429 => 221,  425 => 220,  413 => 212,  406 => 207,  403 => 206,  398 => 203,  395 => 202,  393 => 201,  389 => 200,  385 => 199,  381 => 198,  372 => 192,  337 => 160,  321 => 147,  317 => 146,  313 => 145,  307 => 142,  303 => 141,  299 => 140,  284 => 128,  278 => 124,  273 => 121,  266 => 116,  258 => 110,  256 => 109,  253 => 108,  250 => 107,  248 => 106,  244 => 104,  235 => 96,  228 => 95,  221 => 94,  215 => 93,  207 => 88,  183 => 71,  176 => 67,  157 => 51,  143 => 39,  133 => 36,  124 => 32,  118 => 28,  113 => 27,  101 => 18,  97 => 17,  93 => 16,  90 => 15,  88 => 14,  79 => 13,  66 => 10,  60 => 7,  56 => 6,  51 => 3,  42 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -666,7 +664,7 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
                 </div>
             {% else %}
-                <img src=\"{{ asset('uploads/annonceImage/no.png') }}\" style=\"width:100%;height: 300px\">
+                <img src=\"{{ asset('uploads/annonceImage/no.jpg') }}\" style=\"width:100%;height: 300px\">
 
                 {% endfor %}
 
@@ -677,17 +675,8 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
                 <a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;</a>
                 <a class=\"next\" onclick=\"plusSlides(1)\">&#10095;</a>
             </div>
-
-
-
-
-
             </div>
             <!--/.Carousel Wrapper-->
-
-
-
-
         <div id=\"sidebar\" class=\"col-md-7 single-right-left simpleCart_shelfItem\">
 
             <h3>{{ annonce.titre }}</h3>
@@ -742,9 +731,6 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
     </div>
     <br>
 
-
-
-    
     {# dev-haifa#}
 
 <!-- Nour's work -->
@@ -930,6 +916,14 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
     <!--- safa Boufares 's work end-->
 {% endblock body %}
 {% block js %}
+    <script>
+        function forceNumeric(){
+            var \$input = \$(this);
+            \$input.val(\$input.val().replace(/[^\\d]+/g,''));
+        }
+        \$('#souk_backbundle_commandes_quantite').keyup(forceNumeric);
+
+    </script>
     <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
 
     <script src=\"{{ asset('bundles/front/js/rating.js') }}\"></script>
@@ -939,9 +933,11 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
     <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>
         <script>
         \$( function() {
+            var dateToday = new Date();
             \$( \"#souk_backbundle_commandes_dateCom\" ).datepicker({
                 altField: \"#souk_backbundle_commandes_dateCom\",
-                altFormat: \"yy-mm-dd\"
+                altFormat: \"yy-mm-dd\",
+                minDate: dateToday
             });
         } );
         var slideIndex = 1;
@@ -975,6 +971,10 @@ class __TwigTemplate_0998b4507dbf5a457a83d8bcf08d80f09e999af427b9830b229afc6fa12
 
         </script>
 
+<<<<<<< HEAD
 {% endblock js %}", "FrontBundle:annonces:show.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/show.html.twig");
+=======
+{% endblock js %}", "FrontBundle:annonces:show.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/show.html.twig");
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
     }
 }

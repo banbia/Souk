@@ -36,12 +36,3 @@ commentairesEvs_delete:
 commentairesEvs_Edit:
     path:     /edit_com_Evs/{com}/{evennement}
     defaults: { _controller: FrontBundle:Evennements:editComEvs}
-all:
-    path:     /commentaire/all
-    defaults: { _controller: FrontBundle:Evennements:all}
-find_commentaire:
-    path:     /commentaire/find/{id}
-    defaults: { _controller: FrontBundle:Evennements:find}
-create_commentaire:
-    path:     /commentaire/new_Evs/{evennement}
-    defaults: { _controller: FrontBundle:Evennements:newEvsS}

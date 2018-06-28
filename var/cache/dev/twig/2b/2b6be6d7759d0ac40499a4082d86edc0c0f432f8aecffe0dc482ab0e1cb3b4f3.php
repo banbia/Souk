@@ -87,7 +87,10 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
                 <div class=\"col-md-12\">
                     <div class=\"navbar-collapse collapse \">
                         <ul id=\"menu-top\" class=\"nav navbar-nav navbar-right\">
-                            <li><a href=\"index.html\" class=\"menu-top-active\">Tableau de Bord</a></li>
+                            <li><a href=\"";
+        // line 50
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("stats_index");
+        echo "\" class=\"menu-top-active\">Tableau de Bord</a></li>
                            
                             <li><a href=\"";
         // line 52
@@ -111,7 +114,10 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_index");
         echo "\">Reclamations</a></li>
                              <li><a href=\"\">TABLES</a></li>
-                            <li><a href=\"\">BLANK PAGE</a></li>
+                            <li><a href=\"";
+        // line 61
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("index");
+        echo "\">SIGNALS</a></li>
 
                         </ul>
                     </div>
@@ -127,7 +133,7 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
             <div class=\"col-md-12\">
                 <h4 class=\"header-line\">ADMIN DASHBOARD</h4>
                 
-                            </div>
+            </div>
 
         </div>
              
@@ -218,7 +224,11 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  200 => 86,  191 => 85,  176 => 114,  171 => 112,  166 => 110,  141 => 87,  139 => 85,  111 => 60,  105 => 57,  101 => 56,  94 => 52,  78 => 39,  69 => 33,  50 => 17,  45 => 15,  40 => 13,  26 => 1,);
+=======
+        return array (  202 => 85,  193 => 84,  178 => 113,  173 => 111,  168 => 109,  143 => 86,  141 => 84,  115 => 61,  110 => 59,  104 => 56,  97 => 52,  92 => 50,  78 => 39,  69 => 33,  50 => 17,  45 => 15,  40 => 13,  26 => 1,);
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -280,7 +290,7 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
                 <div class=\"col-md-12\">
                     <div class=\"navbar-collapse collapse \">
                         <ul id=\"menu-top\" class=\"nav navbar-nav navbar-right\">
-                            <li><a href=\"index.html\" class=\"menu-top-active\">Tableau de Bord</a></li>
+                            <li><a href=\"{{ path('stats_index') }}\" class=\"menu-top-active\">Tableau de Bord</a></li>
                            
                             <li><a href=\"{{ path('abonnements_index') }}\">Abonnements</a></li>
                             <li>
@@ -292,7 +302,7 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
                             </li>
                             <li><a href=\"{{ path('admin_reclamations_index') }}\">Reclamations</a></li>
                              <li><a href=\"\">TABLES</a></li>
-                            <li><a href=\"\">BLANK PAGE</a></li>
+                            <li><a href=\"{{ path('index') }}\">SIGNALS</a></li>
 
                         </ul>
                     </div>
@@ -308,7 +318,7 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
             <div class=\"col-md-12\">
                 <h4 class=\"header-line\">ADMIN DASHBOARD</h4>
                 
-                            </div>
+            </div>
 
         </div>
              
@@ -348,6 +358,6 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
   
 </body>
 </html>
-", "BackBundle::panel.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/panel.html.twig");
+", "BackBundle::panel.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/panel.html.twig");
     }
 }

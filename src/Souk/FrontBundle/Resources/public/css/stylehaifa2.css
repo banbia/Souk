@@ -46,6 +46,7 @@ body a{
 }
 .blog-in {
     border: 1px solid #BDBCBC;
+    margin-bottom: 10px;
 }
 span.date-in{
 	float:left;

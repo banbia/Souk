@@ -270,6 +270,6 @@ class __TwigTemplate_b2e500c5fef63a386751bd3a09e1d0afe9d2bfd1bad9504ce34ae12b8ea
 {% endblock body %}
 {% block js %}
 
-{% endblock js %}", "FrontBundle:image:ajouterImage.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/image/ajouterImage.html.twig");
+{% endblock js %}", "FrontBundle:image:ajouterImage.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/image/ajouterImage.html.twig");
     }
 }

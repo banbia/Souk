@@ -212,6 +212,6 @@ class __TwigTemplate_aa2ce0f2c983cce01fcf10de00017b675d8cd7080badd530fec1fb3c8b6
 
 
 {% endblock %}
-", "BackBundle:abonnements:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/abonnements/index.html.twig");
+", "BackBundle:abonnements:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/abonnements/index.html.twig");
     }
 }

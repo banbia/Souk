@@ -100,6 +100,10 @@ class __TwigTemplate_5ab83c8c338e1c0e6ad3f6ba40a9ecc3580d814e58f4e8dc04a9c4f7b8e
 <script type=\"text/javascript\">
     {{ gc_draw([piechart], ['div_piechart']) }}
 </script>
+<<<<<<< HEAD
 {% endblock %}", "BackBundle:Stats:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/Stats/index.html.twig");
+=======
+{% endblock %}", "BackBundle:Stats:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/Stats/index.html.twig");
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
     }
 }

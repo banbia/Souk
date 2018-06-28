@@ -244,6 +244,6 @@ class __TwigTemplate_eda1acf9eee0a3a5c1344471b77c3b9e57b4d815a73c4453a2d5a97936c
         </div>
     </div>
 </div>
-", "@FOSUser/Profile/show_content.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Profile\\show_content.html.twig");
+", "@FOSUser/Profile/show_content.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Profile\\show_content.html.twig");
     }
 }

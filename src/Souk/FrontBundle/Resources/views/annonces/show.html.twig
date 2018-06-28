@@ -33,7 +33,7 @@
 
                 </div>
             {% else %}
-                <img src="{{ asset('uploads/annonceImage/no.png') }}" style="width:100%;height: 300px">
+                <img src="{{ asset('uploads/annonceImage/no.jpg') }}" style="width:100%;height: 300px">
 
                 {% endfor %}
 
@@ -44,17 +44,8 @@
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-
-
-
-
-
             </div>
             <!--/.Carousel Wrapper-->
-
-
-
-
         <div id="sidebar" class="col-md-7 single-right-left simpleCart_shelfItem">
 
             <h3>{{ annonce.titre }}</h3>
@@ -109,9 +100,6 @@
     </div>
     <br>
 
-
-
-    
     {# dev-haifa#}
 
 <!-- Nour's work -->
@@ -297,6 +285,14 @@
     <!--- safa Boufares 's work end-->
 {% endblock body %}
 {% block js %}
+    <script>
+        function forceNumeric(){
+            var $input = $(this);
+            $input.val($input.val().replace(/[^\d]+/g,''));
+        }
+        $('#souk_backbundle_commandes_quantite').keyup(forceNumeric);
+
+    </script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <script src="{{ asset('bundles/front/js/rating.js') }}"></script>
@@ -306,9 +302,11 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
         $( function() {
+            var dateToday = new Date();
             $( "#souk_backbundle_commandes_dateCom" ).datepicker({
                 altField: "#souk_backbundle_commandes_dateCom",
-                altFormat: "yy-mm-dd"
+                altFormat: "yy-mm-dd",
+                minDate: dateToday
             });
         } );
         var slideIndex = 1;

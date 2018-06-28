@@ -16,6 +16,11 @@ api_commandes:
 api_annonces:
     resource: "@ApiBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
+
+api_image:
+    path: /getImageByIdAnnonce/{id}
+    defaults: { _controller: ApiBundle:ImageApi:GetImageById}
+
 api_liste_categorie:
     path: /categorie/all
     defaults: { _controller: ApiBundle:CategorieApi:lstCategorie}
@@ -29,8 +34,18 @@ api_commentaireAnc:
     resource: "@ApiBundle/Resources/config/routing/commentaireAnc.yml"
     prefix:   /commentaire
 
+api_stats:
+    path: /stats
+    defaults: { _controller: ApiBundle:StatsApi:stats}
 #service salsabil
 api_evenements:
     resource: "@ApiBundle/Resources/config/routing/evenements.yml"
     prefix:   /evenements
 
+#Service SafaBenBarka
+api_abonnements:
+    resource: "@ApiBundle/Resources/config/routing/abonnements.yml"
+    prefix:   /abonnements
+api_rating:
+    path: /rating/{client}/{vote}/{annonces}
+    defaults: { _controller: ApiBundle:RatingApi:create}

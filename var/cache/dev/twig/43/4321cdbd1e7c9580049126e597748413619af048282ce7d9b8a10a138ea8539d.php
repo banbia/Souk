@@ -175,6 +175,6 @@ class __TwigTemplate_cc4dcf5f9ffd140b53cf5cab320432bdb004b651d0df8aebd13758c9013
 
 
 {% endblock %}
-", "BackBundle:categories:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/categories/index.html.twig");
+", "BackBundle:categories:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/categories/index.html.twig");
     }
 }

@@ -334,6 +334,6 @@ class __TwigTemplate_d642a9969a11dcc0f653f4539c33cae3743bc29665d18becff154f6ff26
 
 {% endblock js %}
 {% endblock %}
-", "FrontBundle:annonces:indexCommercial.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/indexCommercial.html.twig");
+", "FrontBundle:annonces:indexCommercial.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/indexCommercial.html.twig");
     }
 }

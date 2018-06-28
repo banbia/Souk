@@ -398,7 +398,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //menu js -->
 <!-- start-smooth-scrolling -->
 <script type=\"text/javascript\">
+
+
+
     jQuery(document).ready(function(\$) {
+
+        \$(\"input, select, textarea\").attr(\"autocomplete\", \"off\");
         \$(\".scroll\").click(function(event){
             event.preventDefault();
 
@@ -534,7 +539,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     public function getDebugInfo()
     {
-        return array (  509 => 233,  499 => 134,  490 => 133,  480 => 132,  471 => 131,  460 => 26,  451 => 25,  390 => 235,  388 => 233,  372 => 220,  312 => 163,  304 => 158,  300 => 157,  296 => 156,  292 => 155,  288 => 154,  275 => 144,  271 => 143,  267 => 142,  263 => 141,  255 => 135,  252 => 133,  250 => 131,  214 => 97,  205 => 93,  197 => 90,  190 => 85,  182 => 80,  178 => 79,  171 => 75,  162 => 70,  160 => 69,  150 => 61,  146 => 59,  141 => 57,  135 => 54,  132 => 53,  130 => 52,  125 => 50,  121 => 49,  116 => 48,  114 => 47,  110 => 46,  106 => 45,  102 => 44,  94 => 39,  81 => 28,  79 => 25,  74 => 23,  70 => 22,  65 => 20,  58 => 16,  54 => 15,  49 => 13,  45 => 12,  40 => 10,  29 => 1,);
+        return array (  514 => 233,  504 => 134,  495 => 133,  485 => 132,  476 => 131,  465 => 26,  456 => 25,  390 => 235,  388 => 233,  372 => 220,  312 => 163,  304 => 158,  300 => 157,  296 => 156,  292 => 155,  288 => 154,  275 => 144,  271 => 143,  267 => 142,  263 => 141,  255 => 135,  252 => 133,  250 => 131,  214 => 97,  205 => 93,  197 => 90,  190 => 85,  182 => 80,  178 => 79,  171 => 75,  162 => 70,  160 => 69,  150 => 61,  146 => 59,  141 => 57,  135 => 54,  132 => 53,  130 => 52,  125 => 50,  121 => 49,  116 => 48,  114 => 47,  110 => 46,  106 => 45,  102 => 44,  94 => 39,  81 => 28,  79 => 25,  74 => 23,  70 => 22,  65 => 20,  58 => 16,  54 => 15,  49 => 13,  45 => 12,  40 => 10,  29 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -792,7 +797,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //menu js -->
 <!-- start-smooth-scrolling -->
 <script type=\"text/javascript\">
+
+
+
     jQuery(document).ready(function(\$) {
+
+        \$(\"input, select, textarea\").attr(\"autocomplete\", \"off\");
         \$(\".scroll\").click(function(event){
             event.preventDefault();
 
@@ -832,6 +842,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 -->
 
 </body>
-</html>", "FrontBundle::layout.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/layout.html.twig");
+<<<<<<< HEAD
+</html>", "FrontBundle::layout.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/layout.html.twig");
+=======
+</html>", "FrontBundle::layout.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/layout.html.twig");
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe
     }
 }

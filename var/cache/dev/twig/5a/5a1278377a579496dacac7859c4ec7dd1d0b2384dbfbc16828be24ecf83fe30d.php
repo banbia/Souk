@@ -153,6 +153,6 @@ class __TwigTemplate_9c09bbfc6c38f92df94996cbc9e1cbafda02982b845baa92464f4f0ec0d
 
 {% endblock %}
 
-", "BackBundle:Signals:consulter.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/Signals/consulter.html.twig");
+", "BackBundle:Signals:consulter.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\BackBundle/Resources/views/Signals/consulter.html.twig");
     }
 }

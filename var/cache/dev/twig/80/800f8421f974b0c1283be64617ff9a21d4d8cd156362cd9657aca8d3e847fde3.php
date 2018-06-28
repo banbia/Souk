@@ -1,6 +1,6 @@
 <?php
 
-/* FrontBundle:Message:threads_list.html.twig */
+/* FOSMessageBundle:Message:threads_list.html.twig */
 class __TwigTemplate_00413badf7470dcba219e1c9cc3cc7d391b8247dc053c1c8fa1689ed400a4d1b extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -16,10 +16,10 @@ class __TwigTemplate_00413badf7470dcba219e1c9cc3cc7d391b8247dc053c1c8fa1689ed400
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:Message:threads_list.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSMessageBundle:Message:threads_list.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontBundle:Message:threads_list.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSMessageBundle:Message:threads_list.html.twig"));
 
         // line 1
         echo "<table class=\"table table-inbox table-hover\">
@@ -159,7 +159,7 @@ class __TwigTemplate_00413badf7470dcba219e1c9cc3cc7d391b8247dc053c1c8fa1689ed400
 
     public function getTemplateName()
     {
-        return "FrontBundle:Message:threads_list.html.twig";
+        return "FOSMessageBundle:Message:threads_list.html.twig";
     }
 
     public function isTraitable()
@@ -230,6 +230,6 @@ class __TwigTemplate_00413badf7470dcba219e1c9cc3cc7d391b8247dc053c1c8fa1689ed400
     </tbody>
 
 </table>
-", "FrontBundle:Message:threads_list.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/Message/threads_list.html.twig");
+", "FOSMessageBundle:Message:threads_list.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/Message/threads_list.html.twig");
     }
 }
