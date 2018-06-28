@@ -31,6 +31,9 @@ api_commentaireAnc:
     resource: "@ApiBundle/Resources/config/routing/commentaireAnc.yml"
     prefix:   /commentaire
 
+api_stats:
+    path: /stats
+    defaults: { _controller: ApiBundle:StatsApi:stats}
 #service salsabil
 api_evenements:
     resource: "@ApiBundle/Resources/config/routing/evenements.yml"

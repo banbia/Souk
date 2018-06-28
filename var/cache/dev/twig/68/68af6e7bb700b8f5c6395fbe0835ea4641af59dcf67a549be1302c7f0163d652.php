@@ -386,10 +386,6 @@ class __TwigTemplate_b5744e58bc7398cb2c8eb4b319a02a8836e47b3fa459ede332bf4922b54
         {% endfor %}
     </table>
 {% endmacro %}
-<<<<<<< HEAD
 ", "@WebProfiler/Collector/events.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\events.html.twig");
-=======
-", "@WebProfiler/Collector/events.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\events.html.twig");
->>>>>>> 492464ff2fe283bc98268bef1ff9c01b5827dce5
     }
 }
