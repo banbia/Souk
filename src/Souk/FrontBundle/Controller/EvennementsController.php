@@ -29,7 +29,13 @@ class EvennementsController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $evennements = $em->getRepository('BackBundle:Evennements')->findBy(array('commercial' =>$this->getUser()));
+      //  $evennements = $em->getRepository('BackBundle:Evennements')->findBy(array('commercial' =>$this->getUser()));
+        $user = $this->getUser();
+        if ($user = "commercial"){
+        $evennements = $em->getRepository('BackBundle:Evennements')->findAll();
+        } else {
+            $evennements = $em->getRepository('BackBundle:Evennements')->findBy(array('commercial' =>$this->getUser()));
+        }
         // Salsabil API pagination
         //get access to paginator methods : dump(get_class($paginator));
         /**

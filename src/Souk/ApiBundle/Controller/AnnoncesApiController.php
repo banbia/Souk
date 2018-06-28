@@ -93,18 +93,18 @@ class AnnoncesApiController extends Controller
   }
 
 //modifier annonce
-  public function modifierAction($idannonces,$prix,$categorie,$description,$titre)
+  public function modifierAction($idannonces,$prix,$description,$titre)
   {
     //connexion
     $em = $this->getDoctrine()->getManager();
     //get annonces and categorie object
     $annonce = $em->getRepository('BackBundle:Annonces')->find($idannonces);
-    $categorie = $em->getRepository('BackBundle:Categories')->find($categorie);
+    ///$categorie = $em->getRepository('BackBundle:Categories')->find($categorie);
 
 
     //affecter les champs
 
-    $annonce->setCategorie($categorie);
+  ///  $annonce->setCategorie($categorie);
     $annonce->setDescription($description);
     $annonce->setTitre($titre);
 
@@ -115,25 +115,15 @@ class AnnoncesApiController extends Controller
     $em->persist($annonce);
 
     $em->flush();
-    //format date
-    $callback = function ($dateTime) {
-      return $dateTime instanceof \DateTime
-        ? $dateTime->format('Y-m-d')
-        : '';
-    };
+
 
 
     $normalizer = new ObjectNormalizer();
     //ne pas envoyer client,annonce,commentaires dans le retour json
-    $normalizer->setIgnoredAttributes(array('client','annonce','commentaires'));
-    $normalizer->setCallbacks(array('dateCretaion' => $callback));
-    $normalizer->setCircularReferenceLimit(1);
     $serializer = new Serializer([$normalizer]);
-    $normalizer->setCircularReferenceHandler(function ($object) {
-      return $object->getId();
-    });
 
-    $formatted= $serializer->normalize($annonce, 'json');
+
+    $formatted= $serializer->normalize("succes", 'json');
 
     return new JsonResponse($formatted);
 
@@ -195,7 +185,7 @@ class AnnoncesApiController extends Controller
 
 
 
-    $normalizer->setIgnoredAttributes(array('client'));
+    $normalizer->setIgnoredAttributes(array('commercial','client','commandes','commentaires','signalsAnc','images'));
     $normalizer->setCallbacks(array('dateCreation' => $callback));
     $normalizer->setCircularReferenceLimit(1);
     $serializer = new Serializer([$normalizer]);

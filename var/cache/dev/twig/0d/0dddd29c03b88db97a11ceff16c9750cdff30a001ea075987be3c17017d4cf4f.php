@@ -570,6 +570,10 @@ class __TwigTemplate_f46804bf2920e07f4ac3eeec4ad0e889e83690d724b4b06a2396ad0c4a8
 #}
 {% endblock %}
 
+<<<<<<< HEAD
 ", "FrontBundle:default:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
+=======
+", "FrontBundle:default:index.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
+>>>>>>> 492464ff2fe283bc98268bef1ff9c01b5827dce5
     }
 }

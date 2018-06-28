@@ -842,6 +842,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 -->
 
 </body>
+<<<<<<< HEAD
 </html>", "FrontBundle::layout.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/layout.html.twig");
+=======
+</html>", "FrontBundle::layout.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/layout.html.twig");
+>>>>>>> 492464ff2fe283bc98268bef1ff9c01b5827dce5
     }
 }

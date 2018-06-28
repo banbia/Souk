@@ -13,6 +13,11 @@ api_commandes:
 api_annonces:
     resource: "@ApiBundle/Resources/config/routing/annonces.yml"
     prefix:   /annonces
+
+api_image:
+    path: /getImageByIdAnnonce/{id}
+    defaults: { _controller: ApiBundle:ImageApi:GetImageById}
+
 api_liste_categorie:
     path: /categorie/all
     defaults: { _controller: ApiBundle:CategorieApi:lstCategorie}

@@ -1,164 +1,7 @@
 {% extends 'FrontBundle::layout.html.twig' %}
 
 
-    {# dev-haifa
-    <h3 class="m_1">Les nouveaux produits</h3>
-    <div class="content_grid">
-        {% for annonce in annonces %}
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-                            <a href="">
-                                <div class="inner_content clearfix">
-                                    <div class="product_image">
-                                       {# <img  href="" src="{{ asset('bundles/front/images/pic1.jpg') }}" class="img-responsive" alt=""/>
-                                        <div class="slideshow-container">
-
-                                            {% for img in annonce.images %}
-
-
-                                                <div class="mySlides fade in">
-                                                    <div class="numbertext"></div>
-                                                    <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height:300px !important;">
-
-                                                </div>
-
-                                            {% endfor %}
-
-                                            <!-- Full-width images with number and caption text -->
-
-
-                                            <!-- Next and previous buttons -->
-
-                                        </div>
-
-                                        <a href="{{ path('annonces_show', { 'id': annonce.id }) }}"
-                                           class="button fa fa-info item_1"> </a>
-                                        <div class="product_container">
-                                            <div class="cart-left">
-                                                <p class="title">{{ annonce.titre }}</p>
-                                            </div>
-                                            <span class="amount item_price">{{ annonce.prix }}</span>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-        <div class="clearfix"></div>
-{% endfor %}
-</div>
-
-    {# dev-haifa
-    <h3 class="m_2">Top Produits</h3>
-    <div class="content_grid">
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic7.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$4500.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic8.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$1050.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic13.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$2000.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <h3 class="m_2">Sale Products</h3>
-    <div class="content_grid">
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-            <a href="single.html">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic10.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$99.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic11.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$60.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col_1_of_3 span_1_of_3 simpleCart_shelfItem last_1">
-            <a href="">
-                <div class="inner_content clearfix">
-                    <div class="product_image">
-                        <img src="{{ asset('bundles/front/images/pic12.jpg') }}" class="img-responsive" alt=""/>
-                        <a href="" class="button item_add item_1"> </a>
-                        <div class="product_container">
-                            <div class="cart-left">
-                                <p class="title">Lorem Ipsum 2015</p>
-                            </div>
-                            <span class="amount item_price">$900.00</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="clearfix"></div>
-    </div>#}
+    {# dev-haifa  #}
     {% block style %}
 
         <link href="{{ asset('bundles/front/css/style_haifa_daoud.css') }}" rel="stylesheet"/>
@@ -181,7 +24,7 @@
 
                                         <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height: 200px">
                                     {% else %}
-                                        <img src="{{ asset('uploads/annonceImage/no.png') }}" style="width:100%;height: 200px">
+                                        <img src="{{ asset('uploads/annonceImage/no.jpg') }}" style="width:100%;height: 200px">
 
                                     {% endfor %}
                                 </a>
@@ -244,7 +87,7 @@
                                     <img src="{{ asset('uploads/annonceImage/'~ img.imageName) }}" style="width:100%;height: 200px">
 
                                 {% else %}
-                                    <img src="{{ asset('uploads/annonceImage/no.png') }}" style="width:100%;height: 200px">
+                                    <img src="{{ asset('uploads/annonceImage/no.jpg') }}" style="width:100%;height: 200px">
 
                                 {% endfor %}
                                 <div class="grid-product">
