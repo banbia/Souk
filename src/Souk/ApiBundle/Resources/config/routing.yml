@@ -5,6 +5,9 @@ api_homepage:
 get_User:
     path:     /user/{login}/{password}
     defaults: { _controller: ApiBundle:UserApi:getUser}
+get_ALlUser:
+     path:     /userAll
+     defaults: { _controller: ApiBundle:UserApi:getListUser}
 #nour service
 api_commandes:
     resource: "@ApiBundle/Resources/config/routing/commandes.yml"

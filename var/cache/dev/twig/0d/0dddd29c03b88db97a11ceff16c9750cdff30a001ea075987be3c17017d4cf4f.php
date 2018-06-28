@@ -258,19 +258,10 @@ class __TwigTemplate_f46804bf2920e07f4ac3eeec4ad0e889e83690d724b4b06a2396ad0c4a8
                 </div>
                 <div class=\"clearfix\"> </div>
             </div>
-<<<<<<< HEAD
 
         </div>
 
         ";
-=======
-        </div>
-        ";
-        // line 270
-        echo "
-
-";
->>>>>>> a8467fc6d036327556add09b13385962147fa375
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -291,11 +282,7 @@ class __TwigTemplate_f46804bf2920e07f4ac3eeec4ad0e889e83690d724b4b06a2396ad0c4a8
 
     public function getDebugInfo()
     {
-<<<<<<< HEAD
         return array (  253 => 257,  242 => 252,  238 => 251,  235 => 250,  225 => 247,  217 => 244,  212 => 241,  207 => 240,  204 => 239,  200 => 238,  193 => 233,  182 => 230,  179 => 229,  175 => 228,  168 => 223,  154 => 205,  140 => 197,  131 => 191,  126 => 189,  122 => 187,  112 => 184,  105 => 182,  101 => 180,  96 => 179,  90 => 175,  86 => 174,  79 => 169,  70 => 168,  57 => 165,  53 => 164,  50 => 163,  41 => 162,  11 => 1,);
-=======
-        return array (  264 => 270,  253 => 257,  242 => 252,  238 => 251,  235 => 250,  225 => 247,  217 => 244,  212 => 241,  207 => 240,  204 => 239,  200 => 238,  193 => 233,  182 => 230,  179 => 229,  175 => 228,  168 => 223,  154 => 205,  140 => 197,  131 => 191,  126 => 189,  122 => 187,  112 => 184,  105 => 182,  101 => 180,  96 => 179,  90 => 175,  86 => 174,  79 => 169,  70 => 168,  57 => 165,  53 => 164,  50 => 163,  41 => 162,  11 => 1,);
->>>>>>> a8467fc6d036327556add09b13385962147fa375
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -572,7 +559,6 @@ class __TwigTemplate_f46804bf2920e07f4ac3eeec4ad0e889e83690d724b4b06a2396ad0c4a8
                 </div>
                 <div class=\"clearfix\"> </div>
             </div>
-<<<<<<< HEAD
 
         </div>
 
@@ -585,17 +571,5 @@ class __TwigTemplate_f46804bf2920e07f4ac3eeec4ad0e889e83690d724b4b06a2396ad0c4a8
 {% endblock %}
 
 ", "FrontBundle:default:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
-=======
-        </div>
-        {# salsabil api display navigation
-        <div class=\"navigation text-center\">
-            {{ knp_pagination_render(annonces) }}
-        </div>#}
-
-
-{% endblock %}
-
-", "FrontBundle:default:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
->>>>>>> a8467fc6d036327556add09b13385962147fa375
     }
 }

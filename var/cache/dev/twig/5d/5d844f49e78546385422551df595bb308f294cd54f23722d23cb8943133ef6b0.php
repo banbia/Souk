@@ -10,7 +10,6 @@ class __TwigTemplate_74c13e34a1925c491e3275c67b0b9319811c8dbeb0b29001cc47fa1097f
         $this->parent = false;
 
         $this->blocks = array(
-            'style' => array($this, 'block_style'),
         );
     }
 
@@ -27,39 +26,52 @@ class __TwigTemplate_74c13e34a1925c491e3275c67b0b9319811c8dbeb0b29001cc47fa1097f
 <html>
 
 <head>
+    <style>
+        table, td, th {
+            border: 1px solid #d0e9c6;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+
 <title>Commande</title>
 <meta charset=\"utf-8\"/>
 </head>
 
 <body>
-<div class=\"row form-controlS\">
 
-";
-        // line 12
-        $this->displayBlock('style', $context, $blocks);
-        // line 15
-        echo "<div class=\"head-pdf\">
+<div class=\"head-pdf\">
     <div class=\"row form-controlS\">
         <div class=\"logo\">
             <img width=\"200\" height=\"100\" src=\"";
-        // line 18
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(($context["pathToLogo"] ?? $this->getContext($context, "pathToLogo"))), "html", null, true);
         echo "\"/>
         </div>
 
-        <div class=\"col-md-12\" style=\"text-align:center \"  >
-            <h1>Votre Commande</h1>
-            <p>Merci de choisir notre site pour commander votre commande </p>
+        <div class=\"col-md-12\" style=\"text-align:center \" >
+            <h1>Le reçu de la commande </h1>
+            <h3>Merci de choisir notre site pour passer votre commande </h3>
         </div>
 
     <div class=\"col-md-12\" >
-        <table class=\"table table-bordered\" >
+        <table>
 
-        <tbody class=\"thead-light\">
+        <tbody>
         <tr>
-        <th>Datecom</th>
+        <th >Datecom</th>
         <td>";
-        // line 32
+        // line 46
         if ($this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "dateCom", array())) {
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "dateCom", array()), "Y-m-d"), "html", null, true);
         }
@@ -68,28 +80,28 @@ class __TwigTemplate_74c13e34a1925c491e3275c67b0b9319811c8dbeb0b29001cc47fa1097f
     <tr>
         <th>Quantite</th>
         <td>";
-        // line 36
+        // line 50
         echo twig_escape_filter($this->env, $this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "quantite", array()), "html", null, true);
         echo "</td>
     </tr>
     <tr>
         <th>Titre Annonce</th>
         <td>";
-        // line 40
+        // line 54
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "annonce", array()), "titre", array()), "html", null, true);
         echo "</td>
     </tr>
     <tr>
         <th>Categorie Annonce</th>
         <td>";
-        // line 44
+        // line 58
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "annonce", array()), "categorie", array()), "designation", array()), "html", null, true);
         echo "</td>
     </tr>
     <tr>
         <th>Etat</th>
         <td>";
-        // line 48
+        // line 62
         if (($this->getAttribute(($context["commande"] ?? $this->getContext($context, "commande")), "etat", array()) == 0)) {
             echo " En attente ";
         } else {
@@ -99,6 +111,10 @@ class __TwigTemplate_74c13e34a1925c491e3275c67b0b9319811c8dbeb0b29001cc47fa1097f
     </tr>
     </tbody>
 </table>
+    </div>
+    </div>
+</div>
+
 </body>
 </html>
 
@@ -109,28 +125,6 @@ class __TwigTemplate_74c13e34a1925c491e3275c67b0b9319811c8dbeb0b29001cc47fa1097f
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
-    // line 12
-    public function block_style($context, array $blocks = array())
-    {
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "style"));
-
-        // line 13
-        echo "    <link href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/front/css/soumaya_style.css"), "html", null, true);
-        echo "\" rel='stylesheet' type='text/css' />
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
     }
 
@@ -146,7 +140,7 @@ class __TwigTemplate_74c13e34a1925c491e3275c67b0b9319811c8dbeb0b29001cc47fa1097f
 
     public function getDebugInfo()
     {
-        return array (  125 => 13,  116 => 12,  93 => 48,  86 => 44,  79 => 40,  72 => 36,  63 => 32,  46 => 18,  41 => 15,  39 => 12,  26 => 1,);
+        return array (  105 => 62,  98 => 58,  91 => 54,  84 => 50,  75 => 46,  58 => 32,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -163,33 +157,47 @@ class __TwigTemplate_74c13e34a1925c491e3275c67b0b9319811c8dbeb0b29001cc47fa1097f
 <html>
 
 <head>
+    <style>
+        table, td, th {
+            border: 1px solid #d0e9c6;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+
 <title>Commande</title>
 <meta charset=\"utf-8\"/>
 </head>
 
 <body>
-<div class=\"row form-controlS\">
 
-{% block style %}
-    <link href=\"{{ asset('bundles/front/css/soumaya_style.css') }}\" rel='stylesheet' type='text/css' />
-{% endblock style %}
 <div class=\"head-pdf\">
     <div class=\"row form-controlS\">
         <div class=\"logo\">
             <img width=\"200\" height=\"100\" src=\"{{ asset(pathToLogo) }}\"/>
         </div>
 
-        <div class=\"col-md-12\" style=\"text-align:center \"  >
-            <h1>Votre Commande</h1>
-            <p>Merci de choisir notre site pour commander votre commande </p>
+        <div class=\"col-md-12\" style=\"text-align:center \" >
+            <h1>Le reçu de la commande </h1>
+            <h3>Merci de choisir notre site pour passer votre commande </h3>
         </div>
 
     <div class=\"col-md-12\" >
-        <table class=\"table table-bordered\" >
+        <table>
 
-        <tbody class=\"thead-light\">
+        <tbody>
         <tr>
-        <th>Datecom</th>
+        <th >Datecom</th>
         <td>{% if commande.dateCom %}{{ commande.dateCom|date('Y-m-d') }}{% endif %}</td>
         </tr>
     <tr>
@@ -210,6 +218,10 @@ class __TwigTemplate_74c13e34a1925c491e3275c67b0b9319811c8dbeb0b29001cc47fa1097f
     </tr>
     </tbody>
 </table>
+    </div>
+    </div>
+</div>
+
 </body>
 </html>
 

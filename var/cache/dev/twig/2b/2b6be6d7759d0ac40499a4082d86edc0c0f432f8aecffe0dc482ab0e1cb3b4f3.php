@@ -100,10 +100,14 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
         // line 56
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("categories_index");
         echo "\">Catégories</a></li>
+                                    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"";
+        // line 57
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("stats_index");
+        echo "\">Statistique</a></li>
                                 </ul>
                             </li>
                             <li><a href=\"";
-        // line 59
+        // line 60
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("admin_reclamations_index");
         echo "\">Reclamations</a></li>
                              <li><a href=\"\">TABLES</a></li>
@@ -131,9 +135,9 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
             <div class=\"row\">
 
               ";
-        // line 84
+        // line 85
         $this->displayBlock('body', $context, $blocks);
-        // line 86
+        // line 87
         echo "             
             </div>
             
@@ -158,17 +162,17 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src=\"";
-        // line 109
+        // line 110
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/back/admin/assets/js/jquery-1.10.2.js"), "html", null, true);
         echo "\"></script>
     <!-- BOOTSTRAP SCRIPTS  -->
     <script src=\"";
-        // line 111
+        // line 112
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/back/admin/assets/js/bootstrap.js"), "html", null, true);
         echo "\"></script>
       <!-- CUSTOM SCRIPTS  -->
     <script src=\"";
-        // line 113
+        // line 114
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/back/admin/assets/js/custom.js"), "html", null, true);
         echo "\"></script>
   
@@ -183,7 +187,7 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
 
     }
 
-    // line 84
+    // line 85
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -192,7 +196,7 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 85
+        // line 86
         echo "              ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -214,7 +218,7 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
 
     public function getDebugInfo()
     {
-        return array (  196 => 85,  187 => 84,  172 => 113,  167 => 111,  162 => 109,  137 => 86,  135 => 84,  107 => 59,  101 => 56,  94 => 52,  78 => 39,  69 => 33,  50 => 17,  45 => 15,  40 => 13,  26 => 1,);
+        return array (  200 => 86,  191 => 85,  176 => 114,  171 => 112,  166 => 110,  141 => 87,  139 => 85,  111 => 60,  105 => 57,  101 => 56,  94 => 52,  78 => 39,  69 => 33,  50 => 17,  45 => 15,  40 => 13,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -283,6 +287,7 @@ class __TwigTemplate_8d13bb50b4242972e0475cf97e14b8c97dc7699b12511f6f8ecf6c021d1
                                     <a href=\"#\" class=\"dropdown-toggle\" id=\"ddlmenuItem\" data-toggle=\"dropdown\">Paramétrages <i class=\"fa fa-angle-down\"></i></a>
                                 <ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"ddlmenuItem\">
                                     <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"{{ path('categories_index') }}\">Catégories</a></li>
+                                    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"{{ path('stats_index') }}\">Statistique</a></li>
                                 </ul>
                             </li>
                             <li><a href=\"{{ path('admin_reclamations_index') }}\">Reclamations</a></li>

@@ -123,10 +123,6 @@ class __TwigTemplate_675624b3a45c550fe9662f067f48ac80b9e3f51e1335c1fb5b91cc75237
     </div>
 
     <!-- /row -->
-<<<<<<< HEAD
 {% endblock %}", "FrontBundle:annonces:edit_commantaireAnc.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/edit_commantaireAnc.html.twig");
-=======
-{% endblock %}", "FrontBundle:annonces:edit_commantaireAnc.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/annonces/edit_commantaireAnc.html.twig");
->>>>>>> a8467fc6d036327556add09b13385962147fa375
     }
 }

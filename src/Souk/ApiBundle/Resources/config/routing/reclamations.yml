@@ -5,8 +5,8 @@ all_reclamations:
 liste_reclamations:
     path:     liste/{id}
     defaults: { _controller: ApiBundle:ReclamationApi:listeRec }
-new_reclamations:
-    path:     newR/{contenu}/{commercial}
+newRec:
+    path:     /newRec/{id_client}/{id_commercial}/{contenu}
     defaults: { _controller: ApiBundle:ReclamationApi:newRec }
 edit_reclamations:
     path:     /edit/{rec}/{contenu}

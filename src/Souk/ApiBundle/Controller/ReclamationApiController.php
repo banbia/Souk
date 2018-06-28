@@ -38,53 +38,43 @@ class ReclamationApiController extends Controller{
     }
 
 
-    public function listeRecAction($id)
+
+
+    public function newRecAction($id_client,$id_commercial,$contenu)
     {
         $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('UserBundle:User')->find($id);
-        $reclamations = $em->getRepository('BackBundle:Reclamations')->findBy(array('client' => $user));
+        $user = $em->getRepository('UserBundle:User')->find($id_client);
+        $commercial = $em->getRepository('UserBundle:User')->find($id_commercial);
+
+        $reclamations= new Reclamations();
+        //affecter les champs
+        $reclamations->setClient($user);
+        $reclamations->setCommercial($commercial);
+        $reclamations->setContenu($contenu);
+        $reclamations->setEtat(0);
+        $reclamations->setDateRec(new \DateTime('now'));
+        $em->persist($reclamations);
+
+        $em->flush();
+        //format date
         $callback = function ($dateTime) {
             return $dateTime instanceof \DateTime
                 ? $dateTime->format('Y-m-d')
                 : '';
         };
 
+
         $normalizer = new ObjectNormalizer();
-        $normalizer->setIgnoredAttributes(array('client','annonce','commentaires'));
-        $normalizer->setCallbacks(array('dateRec' => $callback));
+        $normalizer->setCallbacks(array('DateRec' => $callback));
         $normalizer->setCircularReferenceLimit(1);
         $serializer = new Serializer([$normalizer]);
         $normalizer->setCircularReferenceHandler(function ($object) {
             return $object->getId();
-
         });
 
-            $formatted= $serializer->normalize($reclamations, 'json');
-            return new JsonResponse($formatted);
-    }
+        $formatted= $serializer->normalize($reclamations, 'json');
 
-
-    public function newRecAction(Request $request,$contenu,$commercial)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $reclamations = new Reclamations();
-        $now = new \DateTime('NOW');
-        $reclamations->setDateRec($now);
-        $user = $this->getUser();
-        $reclamations->setClient($user);
-        $reclamations->setContenu($contenu);
-        $reclamations->setCommercial($commercial);
-            //0=>en attente
-            //1=>confirme par admin
-            //-1=>rejeté
-        $reclamations->setEtat(0);
-        $em->persist($reclamations);
-        $em->flush();
-
-            $serializer = SerializerBuilder::create()->build();
-            $formatted = $serializer->serialize($reclamations, 'json');
-
-            return new JsonResponse($formatted);
+        return new JsonResponse($formatted);
 
     }
 
