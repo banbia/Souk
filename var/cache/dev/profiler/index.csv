@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 96c6ab,127.0.0.1,GET,http://localhost:8000/,1530203987,,200
 2082a9,127.0.0.1,GET,http://localhost:8000/evennements/,1530203996,,200
 e414a1,127.0.0.1,GET,http://localhost:8000/evennements/2/show,1530204008,,200
@@ -152,3 +153,12 @@ e4752f,127.0.0.1,POST,http://localhost:8000/api/stats,1530221032,,200
 9d67c7,127.0.0.1,POST,http://localhost:8000/api/stats,1530221112,,200
 e666bc,127.0.0.1,GET,http://localhost:8000/admin/stats/,1530221382,,200
 bd5be9,127.0.0.1,GET,http://localhost:8000/admin/signals,1530221388,,200
+=======
+3ae70c,127.0.0.1,GET,http://localhost:8000/,1530216495,,200
+7fec3c,127.0.0.1,GET,http://localhost:8000/api/rating/4/4/1,1530216734,,200
+827b1e,127.0.0.1,POST,http://localhost:8000/api/user/admin/admin,1530217044,,200
+6dafcc,127.0.0.1,POST,http://localhost:8000/api/annonces/all,1530217050,,200
+29d67e,127.0.0.1,POST,http://localhost:8000/api/annonces/all,1530217054,,200
+79bd0f,127.0.0.1,POST,http://localhost:8000/api/commentaire/commentaireAnc/1,1530217056,,200
+df328e,127.0.0.1,POST,http://localhost:8000/api/rating/3/7/1,1530217063,,200
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe

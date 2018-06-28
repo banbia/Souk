@@ -571,6 +571,32 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
+<<<<<<< HEAD
+=======
+                elseif (0 === strpos($pathinfo, '/api/abonnements')) {
+                    // liste_ab
+                    if ('/api/abonnements/liste' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::listeAction',  '_route' => 'liste_ab',);
+                    }
+
+                    // supp_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/supprimer') && preg_match('#^/api/abonnements/supprimer/(?P<ab>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'supp_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::deleteAction',));
+                    }
+
+                    // modif_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/modifier') && preg_match('#^/api/abonnements/modifier/(?P<id_ab>[^/]++)/(?P<designation>[^/]++)/(?P<description>[^/]++)/(?P<prix>[^/]++)/(?P<nbMois>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modif_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::modifierAction',));
+                    }
+
+                    // ajout_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/new') && preg_match('#^/api/abonnements/new/(?P<designation>[^/]++)/(?P<description>[^/]++)/(?P<prix>[^/]++)/(?P<nbMois>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajout_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::createAction',));
+                    }
+
+                }
+
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe
                 // api_image
                 if (0 === strpos($pathinfo, '/api/getImageByIdAnnonce') && preg_match('#^/api/getImageByIdAnnonce/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'api_image')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ImageApiController::GetImageByIdAction',));
@@ -609,9 +635,15 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
+<<<<<<< HEAD
                 // api_stats
                 if ('/api/stats' === $pathinfo) {
                     return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\StatsApiController::statsAction',  '_route' => 'api_stats',);
+=======
+                // api_rating
+                if (0 === strpos($pathinfo, '/api/rating') && preg_match('#^/api/rating/(?P<client>[^/]++)/(?P<vote>[^/]++)/(?P<annonces>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'api_rating')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\RatingApiController::createAction',));
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe
                 }
 
                 if (0 === strpos($pathinfo, '/api/evenements/allEvents')) {

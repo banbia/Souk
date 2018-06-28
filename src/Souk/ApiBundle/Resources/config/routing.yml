@@ -39,3 +39,10 @@ api_evenements:
     resource: "@ApiBundle/Resources/config/routing/evenements.yml"
     prefix:   /evenements
 
+#Service SafaBenBarka
+api_abonnements:
+    resource: "@ApiBundle/Resources/config/routing/abonnements.yml"
+    prefix:   /abonnements
+api_rating:
+    path: /rating/{client}/{vote}/{annonces}
+    defaults: { _controller: ApiBundle:RatingApi:create}

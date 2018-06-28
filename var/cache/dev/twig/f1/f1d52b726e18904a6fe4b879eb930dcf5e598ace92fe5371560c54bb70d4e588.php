@@ -142,6 +142,10 @@ class __TwigTemplate_a7fb9dacbf5f7bae5fd236bfd006a9d40294584eac4b13e9d72e3e2e091
 {% block panel %}
     {{ render(path('_profiler_router', { token: token })) }}
 {% endblock %}
+<<<<<<< HEAD
 ", "@WebProfiler/Collector/router.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\router.html.twig");
+=======
+", "@WebProfiler/Collector/router.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\router.html.twig");
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe
     }
 }

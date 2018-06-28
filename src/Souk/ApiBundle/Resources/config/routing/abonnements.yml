@@ -1,0 +1,13 @@
+
+liste_ab:
+    path:     /liste
+    defaults: { _controller: ApiBundle:AbonnementApi:liste }
+supp_ab:
+    path:     /supprimer/{ab}
+    defaults: { _controller: ApiBundle:AbonnementApi:delete }
+modif_ab:
+    path:     /modifier/{id_ab}/{designation}/{description}/{prix}/{nbMois}
+    defaults: { _controller: ApiBundle:AbonnementApi:modifier }
+ajout_ab:
+    path:     /new/{designation}/{description}/{prix}/{nbMois}
+    defaults: { _controller: ApiBundle:AbonnementApi:create }
