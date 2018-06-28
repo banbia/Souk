@@ -1148,10 +1148,6 @@ class __TwigTemplate_ec43fe27d0801ddcb15dc97649a0c42a6a57e029646dbf14acdfd2caa51
     });
 
 /*]]>*/</script>
-<<<<<<< HEAD
-", "@WebProfiler/Profiler/base_js.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\base_js.html.twig");
-=======
-", "@WebProfiler/Profiler/base_js.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\base_js.html.twig");
->>>>>>> 771986f73e27c01caab6fe3197967e8137321c05
+", "@WebProfiler/Profiler/base_js.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\base_js.html.twig");
     }
 }

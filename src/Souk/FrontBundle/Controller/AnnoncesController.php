@@ -72,35 +72,6 @@ class AnnoncesController extends Controller
             return $this->redirectToRoute('commandes_index');
             //return $this->redirectToRoute('commandes_show', array('id' => $commande->getId()));
         }
-        /* Nour's Work End*/
-        /* safa Boufare Begin*/
-        //extraire la liste des commentaires d'une annonce
-        $coms = $em->getRepository('BackBundle:CommentairesAnc')->findBy(array("annonce" => $annonce->getId()));
-        //ajout d'un noveau commentaire
-
-        $com_Anc = new CommentairesAnc();
-
-        $formC = $this->createForm(CommentairesAncType::class, $com_Anc);
-
-        $formViewC = $formC->createView();
-
-        $formC->handleRequest($request);
-
-        if ($formC->isSubmitted() && $formC->isValid()) {
-            ///récupérer user
-            $user = $this->getUser();
-            ///récupérer annonce
-            $com_Anc->setDateCmt(new \DateTime('now'));
-            $com_Anc->setClient($user);
-            $com_Anc->setAnnonce($annonce);
-            $em->persist($com_Anc);
-            $em->flush();
-            return $this->redirectToRoute('annonces_show', array("id" => $annonce->getId()));
-        }
-        /* safa Boufare End*/
-
-
-
 
     /* Nour's Work End*/
     /* safa Boufare Begin*/
@@ -364,53 +335,5 @@ class AnnoncesController extends Controller
 
         return $this->redirectToRoute('annonces_show',array("id"=>$annonce));
     }
-  // les services web des commentaires de l'Anc
 
-  public function createAction(Request $request, $annonce, $date, $quantite, $client)
-  {
-    $em = $this->getDoctrine()->getManager();
-    $commande = new Commandes();
-    $commande->setAnnonce($annonce);
-    $commande->setClient($client);
-    $commande->setQuantite($quantite);
-    $commande->setEtat(0);
-    $commande->setDateCom(new \DateTime($date));
-
-    $em->persist($commande);
-
-    $em->flush();
-    $serializer = SerializerBuilder::create()->build();
-    $formatted = $serializer->serialize($commande, 'json');
-
-    return new JsonResponse($formatted);
-
-  }
-
-
-  public function findAction($id)
-  {
-    $com_Anc = $this->getDoctrine()->getManager()
-      ->getRepository('BackBundle:CommentairesAnc')
-      ->find($id);
-    $serializer = SerializerBuilder::create()->build();
-    $formatted = $serializer->serialize($com_Anc, 'json');
-
-    return new JsonResponse($formatted);
-  }
-
-  public function newAncAction(Request $request, $annonce)
-  {
-    $em = $this->getDoctrine()->getManager();
-    $com_Anc = new CommentairesAnc();
-    $user = $this->getUser();
-    $anonnces = $em->getRepository('BackBundle:Annonces')->find($annonce);
-    $com_Anc->setDateCmt(new \DateTime('now'));
-    $com_Anc->setClient($user);
-    $com_Anc->setAnnonce($anonnces);
-    $serializer = SerializerBuilder::create()->build();
-    $formatted = $serializer->serialize($com_Anc, 'json');
-
-    return new JsonResponse($formatted);
-
-  }
 }
