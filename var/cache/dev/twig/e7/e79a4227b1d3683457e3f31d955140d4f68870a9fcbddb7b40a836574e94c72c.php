@@ -209,10 +209,6 @@ class __TwigTemplate_c732ee87665b3a0517b728a468e3e76cf0924cce60a0825a081fbba13fa
         </div>
     {% endif %}
 {% endblock %}
-<<<<<<< HEAD
-", "@WebProfiler/Collector/exception.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\exception.html.twig");
-=======
-", "@WebProfiler/Collector/exception.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\exception.html.twig");
->>>>>>> 492464ff2fe283bc98268bef1ff9c01b5827dce5
+", "@WebProfiler/Collector/exception.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\exception.html.twig");
     }
 }

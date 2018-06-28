@@ -1669,10 +1669,6 @@ class __TwigTemplate_0219b36f4f7bd02c73d30c831d0842542c3b0c260e957a8e6cece191f54
         </tbody>
     </table>
 {% endmacro %}
-<<<<<<< HEAD
-", "@Doctrine/Collector/db.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
-=======
-", "@Doctrine/Collector/db.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
->>>>>>> 492464ff2fe283bc98268bef1ff9c01b5827dce5
+", "@Doctrine/Collector/db.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
     }
 }

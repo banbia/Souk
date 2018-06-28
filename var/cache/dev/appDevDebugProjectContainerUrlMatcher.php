@@ -550,7 +550,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
 
                     // ajouter_Annonce
-                    if (0 === strpos($pathinfo, '/api/annonces/ajouter') && preg_match('#^/api/annonces/ajouter/(?P<commercial>[^/]++)/(?P<prix>[^/]++)/(?P<categorie>[^/]++)/(?P<description>[^/]++)/(?P<titre>[^/]++)$#s', $pathinfo, $matches)) {
+                    if (0 === strpos($pathinfo, '/api/annonces/ajouter') && preg_match('#^/api/annonces/ajouter/(?P<commercial>[^/]++)/(?P<prix>[^/]++)/(?P<categorie>[^/]++)/(?P<description>[^/]++)/(?P<titre>[^/]++)/(?P<filename>[^/]++)$#s', $pathinfo, $matches)) {
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajouter_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::createAction',));
                     }
 
@@ -560,7 +560,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     }
 
                     // modifier_Annonce
-                    if (0 === strpos($pathinfo, '/api/annonces/modifier') && preg_match('#^/api/annonces/modifier/(?P<idannonces>[^/]++)/(?P<prix>[^/]++)/(?P<categorie>[^/]++)/(?P<description>[^/]++)/(?P<titre>[^/]++)$#s', $pathinfo, $matches)) {
+                    if (0 === strpos($pathinfo, '/api/annonces/modifier') && preg_match('#^/api/annonces/modifier/(?P<idannonces>[^/]++)/(?P<prix>[^/]++)/(?P<description>[^/]++)/(?P<titre>[^/]++)$#s', $pathinfo, $matches)) {
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifier_Annonce')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AnnoncesApiController::modifierAction',));
                     }
 
@@ -571,7 +571,35 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
-                elseif (0 === strpos($pathinfo, '/api/reclamations')) {
+                elseif (0 === strpos($pathinfo, '/api/abonnements')) {
+                    // liste_ab
+                    if ('/api/abonnements/liste' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::listeAction',  '_route' => 'liste_ab',);
+                    }
+
+                    // supp_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/supprimer') && preg_match('#^/api/abonnements/supprimer/(?P<ab>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'supp_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::deleteAction',));
+                    }
+
+                    // modif_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/modifier') && preg_match('#^/api/abonnements/modifier/(?P<id_ab>[^/]++)/(?P<designation>[^/]++)/(?P<description>[^/]++)/(?P<prix>[^/]++)/(?P<nbMois>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modif_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::modifierAction',));
+                    }
+
+                    // ajout_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/new') && preg_match('#^/api/abonnements/new/(?P<designation>[^/]++)/(?P<description>[^/]++)/(?P<prix>[^/]++)/(?P<nbMois>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajout_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::createAction',));
+                    }
+
+                }
+
+                // api_image
+                if (0 === strpos($pathinfo, '/api/getImageByIdAnnonce') && preg_match('#^/api/getImageByIdAnnonce/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'api_image')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ImageApiController::GetImageByIdAction',));
+                }
+
+                if (0 === strpos($pathinfo, '/api/reclamations')) {
                     // all_reclamations
                     if ('/api/reclamations/allReclamations' === $pathinfo) {
                         return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::allRecAction',  '_route' => 'all_reclamations',);
@@ -604,7 +632,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
-                elseif (0 === strpos($pathinfo, '/api/evenements/allEvents')) {
+                // api_rating
+                if (0 === strpos($pathinfo, '/api/rating') && preg_match('#^/api/rating/(?P<client>[^/]++)/(?P<vote>[^/]++)/(?P<annonces>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'api_rating')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\RatingApiController::createAction',));
+                }
+
+                if (0 === strpos($pathinfo, '/api/evenements/allEvents')) {
                     // get_All_Evenements
                     if ('/api/evenements/allEvents' === $pathinfo) {
                         return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Evenements',);
@@ -945,14 +978,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
             // commandes_delete
             if (preg_match('#^/commandes/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ('DELETE' !== $canonicalMethod) {
-                    $allow[] = 'DELETE';
-                    goto not_commandes_delete;
-                }
-
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::deleteAction',));
             }
-            not_commandes_delete:
 
         }
 
