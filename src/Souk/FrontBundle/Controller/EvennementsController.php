@@ -12,6 +12,7 @@ use Souk\BackBundle\Form\ReservationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Souk\UserBundle\Entity\User;
 
 
 /**
@@ -30,8 +31,8 @@ class EvennementsController extends Controller
         $em = $this->getDoctrine()->getManager();
 
       //  $evennements = $em->getRepository('BackBundle:Evennements')->findBy(array('commercial' =>$this->getUser()));
-        $user = $this->getUser();
-        if ($user = "commercial"){
+
+        if (($this->get('security.authorization_checker')->isGranted('ROLE_CLIENT'))){
         $evennements = $em->getRepository('BackBundle:Evennements')->findAll();
         } else {
             $evennements = $em->getRepository('BackBundle:Evennements')->findBy(array('commercial' =>$this->getUser()));

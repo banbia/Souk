@@ -8,3 +8,7 @@ get_All_Evenements_by_user:
 get_All_Evenements_by_id:
     path:     /allEvents/{id}
     defaults: { _controller: ApiBundle:EvenementsApi:getEventsbyId}
+
+create_commande:
+    path:     /new/{commercial}/{titre}/{prix}/{lieu}
+    defaults: { _controller: ApiBundle:EvenementsApi:create }
