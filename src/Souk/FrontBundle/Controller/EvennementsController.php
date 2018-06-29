@@ -253,42 +253,5 @@ class EvennementsController extends Controller
         return $this->render('FrontBundle:evennements:edit_commentaireEvs.html.twig',array('form'=>$formView,'evennement'=>$evennements));
     }
 
-    //services web pour comm Evs
 
-    public function allAction(Request $request){
-        $com_Anc = $this->getDoctrine()->getManager()
-            ->getRepository('BackBundle:commentairesEvs')
-            ->findAll();
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($com_Anc, 'json');
-
-        return new JsonResponse($formatted);
-    }
-
-    public function findAction($id)
-    {
-        $com_Anc = $this->getDoctrine()->getManager()
-            ->getRepository('BackBundle:commentairesEvs')
-            ->find($id);
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($com_Anc, 'json');
-
-        return new JsonResponse($formatted);
-    }
-
-    public function newEvsSAction(Request $request,$evennement,$contnu)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $com_Evs= new CommentairesEvs();
-        $user = $this->getUser();
-        $evennements = $em->getRepository('BackBundle:Evennements')->find($evennement);
-        $com_Evs->setDateCmt(new \DateTime('now'));
-        $com_Evs->setClient($user);
-        $com_Evs->setEvennement($evennements);
-        $serializer = SerializerBuilder::create()->build();
-        $formatted = $serializer->serialize($com_Evs, 'json');
-
-        return new JsonResponse($formatted);
-
-    }
 }

@@ -198,6 +198,10 @@ class __TwigTemplate_543226d1830f80f6b2ac3b429470514651d39b51b17ec01311fe0686bab
 
 
 {% endblock formulaire %}
-", "@FOSUser/Security/login.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Security\\login.html.twig");
+<<<<<<< HEAD
+", "@FOSUser/Security/login.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Security\\login.html.twig");
+=======
+", "@FOSUser/Security/login.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Security\\login.html.twig");
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
     }
 }

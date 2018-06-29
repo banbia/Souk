@@ -41,5 +41,20 @@ class UserApiController extends Controller
             }
         }
 
+    public function  getListUserAction(){
 
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('UserBundle:User')->findAll();
+
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setIgnoredAttributes(array('reservations','evennements','commandes','reclamations'));
+        $normalizer->setCircularReferenceLimit(1);
+        $serializer = new Serializer([$normalizer]);
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+
+        $formatted= $serializer->normalize($user, 'json');
+        return new JsonResponse($formatted);
+    }
 }

@@ -479,12 +479,29 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\DefaultController::indexAction',  '_route' => 'api_homepage',);
                 }
 
+<<<<<<< HEAD
+                if (0 === strpos($pathinfo, '/api/user')) {
+                    // get_User
+                    if (preg_match('#^/api/user/(?P<login>[^/]++)/(?P<password>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_User')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\UserApiController::getUserAction',));
+                    }
+
+                    // get_ALlUser
+                    if ('/api/userAll' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\UserApiController::getListUserAction',  '_route' => 'get_ALlUser',);
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/api/c')) {
+=======
                 // get_User
                 if (0 === strpos($pathinfo, '/api/user') && preg_match('#^/api/user/(?P<login>[^/]++)/(?P<password>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_User')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\UserApiController::getUserAction',));
                 }
 
                 if (0 === strpos($pathinfo, '/api/c')) {
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
                     if (0 === strpos($pathinfo, '/api/commandes')) {
                         // liste_commandes
                         if (0 === strpos($pathinfo, '/api/commandes/liste') && preg_match('#^/api/commandes/liste/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
@@ -566,6 +583,35 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                elseif (0 === strpos($pathinfo, '/api/abonnements')) {
+                    // liste_ab
+                    if ('/api/abonnements/liste' === $pathinfo) {
+                        return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::listeAction',  '_route' => 'liste_ab',);
+                    }
+
+                    // supp_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/supprimer') && preg_match('#^/api/abonnements/supprimer/(?P<ab>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'supp_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::deleteAction',));
+                    }
+
+                    // modif_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/modifier') && preg_match('#^/api/abonnements/modifier/(?P<id_ab>[^/]++)/(?P<designation>[^/]++)/(?P<description>[^/]++)/(?P<prix>[^/]++)/(?P<nbMois>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modif_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::modifierAction',));
+                    }
+
+                    // ajout_ab
+                    if (0 === strpos($pathinfo, '/api/abonnements/new') && preg_match('#^/api/abonnements/new/(?P<designation>[^/]++)/(?P<description>[^/]++)/(?P<prix>[^/]++)/(?P<nbMois>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajout_ab')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\AbonnementApiController::createAction',));
+                    }
+
+                }
+
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe
+>>>>>>> 35c5af559d9ea554225542e1f73c4ce964030799
                 // api_image
                 if (0 === strpos($pathinfo, '/api/getImageByIdAnnonce') && preg_match('#^/api/getImageByIdAnnonce/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                     return $this->mergeDefaults(array_replace($matches, array('_route' => 'api_image')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ImageApiController::GetImageByIdAction',));
@@ -587,9 +633,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'liste_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::listeRecAction',));
                     }
 
-                    // new_reclamations
-                    if (0 === strpos($pathinfo, '/api/reclamations/newR') && preg_match('#^/api/reclamations/newR/(?P<contenu>[^/]++)/(?P<commercial>[^/]++)$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'new_reclamations')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::newRecAction',));
+                    // newRec
+                    if (0 === strpos($pathinfo, '/api/reclamations/newRec') && preg_match('#^/api/reclamations/newRec/(?P<id_client>[^/]++)/(?P<id_commercial>[^/]++)/(?P<contenu>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'newRec')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\ReclamationApiController::newRecAction',));
                     }
 
                     // edit_reclamations
@@ -604,7 +650,23 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
                 }
 
-                elseif (0 === strpos($pathinfo, '/api/evenements/allEvents')) {
+<<<<<<< HEAD
+                // get_All_Annonces
+                if ('/api/evenements/allEvents' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Annonces',);
+=======
+<<<<<<< HEAD
+                // api_stats
+                if ('/api/stats' === $pathinfo) {
+                    return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\StatsApiController::statsAction',  '_route' => 'api_stats',);
+=======
+                // api_rating
+                if (0 === strpos($pathinfo, '/api/rating') && preg_match('#^/api/rating/(?P<client>[^/]++)/(?P<vote>[^/]++)/(?P<annonces>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'api_rating')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\RatingApiController::createAction',));
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe
+                }
+
+                if (0 === strpos($pathinfo, '/api/evenements/allEvents')) {
                     // get_All_Evenements
                     if ('/api/evenements/allEvents' === $pathinfo) {
                         return array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsAction',  '_route' => 'get_All_Evenements',);
@@ -620,6 +682,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_All_Evenements_by_id')), array (  '_controller' => 'Souk\\ApiBundle\\Controller\\EvenementsApiController::getEventsbyIdAction',));
                     }
 
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
                 }
 
                 // create_commande
@@ -952,6 +1015,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             if (preg_match('#^/commandes/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'commandes_delete')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommandesController::deleteAction',));
             }
+<<<<<<< HEAD
+=======
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/commentairesEvs/commentaire')) {
+            // all
+            if ('/commentairesEvs/commentaire/all' === $pathinfo) {
+                return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentaireEvsController::allAction',  '_route' => 'all',);
+            }
+
+            // find_commentaire
+            if (0 === strpos($pathinfo, '/commentairesEvs/commentaire/find') && preg_match('#^/commentairesEvs/commentaire/find/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'find_commentaire')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentaireEvsController::findAction',));
+            }
+
+            // create_commentaire
+            if (0 === strpos($pathinfo, '/commentairesEvs/commentaire/new_Anc') && preg_match('#^/commentairesEvs/commentaire/new_Anc/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commentaire')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\CommentaireEvsController::newEvsAction',));
+            }
+>>>>>>> 35c5af559d9ea554225542e1f73c4ce964030799
 
         }
 
@@ -1173,24 +1257,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             // commentairesEvs_Edit
             if (0 === strpos($pathinfo, '/evennements/edit_com_Evs') && preg_match('#^/evennements/edit_com_Evs/(?P<com>[^/]++)/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentairesEvs_Edit')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::editComEvsAction',));
-            }
-
-            if (0 === strpos($pathinfo, '/evennements/commentaire')) {
-                // all
-                if ('/evennements/commentaire/all' === $pathinfo) {
-                    return array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::allAction',  '_route' => 'all',);
-                }
-
-                // find_commentaire
-                if (0 === strpos($pathinfo, '/evennements/commentaire/find') && preg_match('#^/evennements/commentaire/find/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'find_commentaire')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::findAction',));
-                }
-
-                // create_commentaire
-                if (0 === strpos($pathinfo, '/evennements/commentaire/new_Evs') && preg_match('#^/evennements/commentaire/new_Evs/(?P<evennement>[^/]++)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'create_commentaire')), array (  '_controller' => 'Souk\\FrontBundle\\Controller\\EvennementsController::newEvsSAction',));
-                }
-
             }
 
         }

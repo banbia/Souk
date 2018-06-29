@@ -5,6 +5,9 @@ api_homepage:
 get_User:
     path:     /user/{login}/{password}
     defaults: { _controller: ApiBundle:UserApi:getUser}
+get_ALlUser:
+     path:     /userAll
+     defaults: { _controller: ApiBundle:UserApi:getListUser}
 #nour service
 api_commandes:
     resource: "@ApiBundle/Resources/config/routing/commandes.yml"
@@ -31,8 +34,18 @@ api_commentaireAnc:
     resource: "@ApiBundle/Resources/config/routing/commentaireAnc.yml"
     prefix:   /commentaire
 
+api_stats:
+    path: /stats
+    defaults: { _controller: ApiBundle:StatsApi:stats}
 #service salsabil
 api_evenements:
     resource: "@ApiBundle/Resources/config/routing/evenements.yml"
     prefix:   /evenements
 
+#Service SafaBenBarka
+api_abonnements:
+    resource: "@ApiBundle/Resources/config/routing/abonnements.yml"
+    prefix:   /abonnements
+api_rating:
+    path: /rating/{client}/{vote}/{annonces}
+    defaults: { _controller: ApiBundle:RatingApi:create}

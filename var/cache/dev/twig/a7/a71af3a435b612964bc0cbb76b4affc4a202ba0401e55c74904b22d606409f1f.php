@@ -400,6 +400,10 @@ class __TwigTemplate_f5f8a8df6cdadc5c7865fd3acdd843541b16962694a2de48288d38b85a6
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle\\Resources\\views\\Profiler\\dump.html.twig");
+<<<<<<< HEAD
+", "@Debug/Profiler/dump.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle\\Resources\\views\\Profiler\\dump.html.twig");
+=======
+", "@Debug/Profiler/dump.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle\\Resources\\views\\Profiler\\dump.html.twig");
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe
     }
 }

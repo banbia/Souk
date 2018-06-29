@@ -112,6 +112,6 @@ class __TwigTemplate_f93c6f92ef52582465cbf05a63eb026d7c05af3553d166f10e67d986c84
 {% block formulaire %}
 {% include \"@FOSUser/Profile/show_content.html.twig\" %}
 {% endblock formulaire %}
-", "@FOSUser/Profile/show.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Profile\\show.html.twig");
+", "@FOSUser/Profile/show.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\UserBundle\\Resources\\views\\Profile\\show.html.twig");
     }
 }

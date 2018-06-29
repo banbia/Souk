@@ -282,7 +282,15 @@ class __TwigTemplate_f46804bf2920e07f4ac3eeec4ad0e889e83690d724b4b06a2396ad0c4a8
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  253 => 100,  242 => 95,  238 => 94,  235 => 93,  225 => 90,  217 => 87,  212 => 84,  207 => 83,  204 => 82,  200 => 81,  193 => 76,  182 => 73,  179 => 72,  175 => 71,  168 => 66,  154 => 48,  140 => 40,  131 => 34,  126 => 32,  122 => 30,  112 => 27,  105 => 25,  101 => 23,  96 => 22,  90 => 18,  86 => 17,  79 => 12,  70 => 11,  57 => 8,  53 => 7,  50 => 6,  41 => 5,  11 => 1,);
+=======
+<<<<<<< HEAD
+        return array (  253 => 257,  242 => 252,  238 => 251,  235 => 250,  225 => 247,  217 => 244,  212 => 241,  207 => 240,  204 => 239,  200 => 238,  193 => 233,  182 => 230,  179 => 229,  175 => 228,  168 => 223,  154 => 205,  140 => 197,  131 => 191,  126 => 189,  122 => 187,  112 => 184,  105 => 182,  101 => 180,  96 => 179,  90 => 175,  86 => 174,  79 => 169,  70 => 168,  57 => 165,  53 => 164,  50 => 163,  41 => 162,  11 => 1,);
+=======
+        return array (  253 => 100,  242 => 95,  238 => 94,  235 => 93,  225 => 90,  217 => 87,  212 => 84,  207 => 83,  204 => 82,  200 => 81,  193 => 76,  182 => 73,  179 => 72,  175 => 71,  168 => 66,  154 => 48,  140 => 40,  131 => 34,  126 => 32,  122 => 30,  112 => 27,  105 => 25,  101 => 23,  96 => 22,  90 => 18,  86 => 17,  79 => 12,  70 => 11,  57 => 8,  53 => 7,  50 => 6,  41 => 5,  11 => 1,);
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
+>>>>>>> 35c5af559d9ea554225542e1f73c4ce964030799
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -413,6 +421,14 @@ class __TwigTemplate_f46804bf2920e07f4ac3eeec4ad0e889e83690d724b4b06a2396ad0c4a8
 #}
 {% endblock %}
 
-", "FrontBundle:default:index.html.twig", "C:\\Users\\salsa\\OneDrive\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
+<<<<<<< HEAD
+", "FrontBundle:default:index.html.twig", "C:\\Users\\Soumaya\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
+=======
+<<<<<<< HEAD
+", "FrontBundle:default:index.html.twig", "C:\\Users\\Boufares\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
+=======
+", "FrontBundle:default:index.html.twig", "C:\\Users\\ASUS PC\\Documents\\GitHub\\Souk\\src\\Souk\\FrontBundle/Resources/views/default/index.html.twig");
+>>>>>>> 96cc820aa22a3748c3cb0a2d3aaea39aea3955fe
+>>>>>>> 699416ee8165181a141789dfe3faf6461d88fbd7
     }
 }

@@ -2,33 +2,47 @@
 <html>
 
 <head>
+    <style>
+        table, td, th {
+            border: 1px solid #d0e9c6;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+        tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+
 <title>Commande</title>
 <meta charset="utf-8"/>
 </head>
 
 <body>
-<div class="row form-controlS">
 
-{% block style %}
-    <link href="{{ asset('bundles/front/css/soumaya_style.css') }}" rel='stylesheet' type='text/css' />
-{% endblock style %}
 <div class="head-pdf">
     <div class="row form-controlS">
         <div class="logo">
             <img width="200" height="100" src="{{ asset(pathToLogo) }}"/>
         </div>
 
-        <div class="col-md-12" style="text-align:center "  >
-            <h1>Votre Commande</h1>
-            <p>Merci de choisir notre site pour commander votre commande </p>
+        <div class="col-md-12" style="text-align:center " >
+            <h1>Le reçu de la commande </h1>
+            <h3>Merci de choisir notre site pour passer votre commande </h3>
         </div>
 
     <div class="col-md-12" >
-        <table class="table table-bordered" >
+        <table>
 
-        <tbody class="thead-light">
+        <tbody>
         <tr>
-        <th>Datecom</th>
+        <th >Datecom</th>
         <td>{% if commande.dateCom %}{{ commande.dateCom|date('Y-m-d') }}{% endif %}</td>
         </tr>
     <tr>
@@ -49,6 +63,10 @@
     </tr>
     </tbody>
 </table>
+    </div>
+    </div>
+</div>
+
 </body>
 </html>
 

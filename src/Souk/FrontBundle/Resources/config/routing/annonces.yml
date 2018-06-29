@@ -22,12 +22,3 @@ commentairesAnc_delete:
 commentairesAnc_edit:
     path:     /edit_com/{com}/{annonce}
     defaults: { _controller: FrontBundle:Annonces:edit}
-all:
-    path:     /commentaire/all
-    defaults: { _controller: FrontBundle:Annonces:all}
-find_commentaire:
-    path:     /commentaire/find/{id}
-    defaults: { _controller: FrontBundle:Annonces:find}
-create_commentaire:
-    path:     /commentaire/new_Anc/{annonce}
-    defaults: { _controller: FrontBundle:Annonces:newAnc}
